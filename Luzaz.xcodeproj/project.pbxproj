@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695C222F4F54B00E9F14D /* AppDelegate.swift */; };
+		CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695C422F4F54B00E9F14D /* ViewController.swift */; };
+		CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8695C622F4F54B00E9F14D /* Main.storyboard */; };
+		CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8695C922F4F54B00E9F14D /* Assets.xcassets */; };
+		CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */; };
+		CC8695D822F4F54C00E9F14D /* LuzazTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695D722F4F54C00E9F14D /* LuzazTests.swift */; };
+		CC8695E322F4F54C00E9F14D /* LuzazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695E222F4F54C00E9F14D /* LuzazUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC8695D422F4F54C00E9F14D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC8695B722F4F54B00E9F14D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC8695BE22F4F54B00E9F14D;
+			remoteInfo = Luzaz;
+		};
+		CC8695DF22F4F54C00E9F14D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC8695B722F4F54B00E9F14D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC8695BE22F4F54B00E9F14D;
+			remoteInfo = Luzaz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC8695BF22F4F54B00E9F14D /* Luzaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luzaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8695C222F4F54B00E9F14D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC8695C422F4F54B00E9F14D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC8695C722F4F54B00E9F14D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC8695C922F4F54B00E9F14D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC8695CC22F4F54B00E9F14D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC8695CE22F4F54B00E9F14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8695D322F4F54C00E9F14D /* LuzazTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuzazTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8695D722F4F54C00E9F14D /* LuzazTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuzazTests.swift; sourceTree = "<group>"; };
+		CC8695D922F4F54C00E9F14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8695DE22F4F54C00E9F14D /* LuzazUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuzazUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8695E222F4F54C00E9F14D /* LuzazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuzazUITests.swift; sourceTree = "<group>"; };
+		CC8695E422F4F54C00E9F14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC8695BC22F4F54B00E9F14D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8695D022F4F54C00E9F14D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8695DB22F4F54C00E9F14D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC8695B622F4F54B00E9F14D = {
+			isa = PBXGroup;
+			children = (
+				CC8695C122F4F54B00E9F14D /* Luzaz */,
+				CC8695D622F4F54C00E9F14D /* LuzazTests */,
+				CC8695E122F4F54C00E9F14D /* LuzazUITests */,
+				CC8695C022F4F54B00E9F14D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC8695C022F4F54B00E9F14D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC8695BF22F4F54B00E9F14D /* Luzaz.app */,
+				CC8695D322F4F54C00E9F14D /* LuzazTests.xctest */,
+				CC8695DE22F4F54C00E9F14D /* LuzazUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC8695C122F4F54B00E9F14D /* Luzaz */ = {
+			isa = PBXGroup;
+			children = (
+				CC8695C222F4F54B00E9F14D /* AppDelegate.swift */,
+				CC8695C422F4F54B00E9F14D /* ViewController.swift */,
+				CC8695C622F4F54B00E9F14D /* Main.storyboard */,
+				CC8695C922F4F54B00E9F14D /* Assets.xcassets */,
+				CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */,
+				CC8695CE22F4F54B00E9F14D /* Info.plist */,
+			);
+			path = Luzaz;
+			sourceTree = "<group>";
+		};
+		CC8695D622F4F54C00E9F14D /* LuzazTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC8695D722F4F54C00E9F14D /* LuzazTests.swift */,
+				CC8695D922F4F54C00E9F14D /* Info.plist */,
+			);
+			path = LuzazTests;
+			sourceTree = "<group>";
+		};
+		CC8695E122F4F54C00E9F14D /* LuzazUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC8695E222F4F54C00E9F14D /* LuzazUITests.swift */,
+				CC8695E422F4F54C00E9F14D /* Info.plist */,
+			);
+			path = LuzazUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC8695BE22F4F54B00E9F14D /* Luzaz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8695E722F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "Luzaz" */;
+			buildPhases = (
+				CC8695BB22F4F54B00E9F14D /* Sources */,
+				CC8695BC22F4F54B00E9F14D /* Frameworks */,
+				CC8695BD22F4F54B00E9F14D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Luzaz;
+			productName = Luzaz;
+			productReference = CC8695BF22F4F54B00E9F14D /* Luzaz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC8695D222F4F54C00E9F14D /* LuzazTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8695EA22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazTests" */;
+			buildPhases = (
+				CC8695CF22F4F54C00E9F14D /* Sources */,
+				CC8695D022F4F54C00E9F14D /* Frameworks */,
+				CC8695D122F4F54C00E9F14D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC8695D522F4F54C00E9F14D /* PBXTargetDependency */,
+			);
+			name = LuzazTests;
+			productName = LuzazTests;
+			productReference = CC8695D322F4F54C00E9F14D /* LuzazTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC8695DD22F4F54C00E9F14D /* LuzazUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8695ED22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazUITests" */;
+			buildPhases = (
+				CC8695DA22F4F54C00E9F14D /* Sources */,
+				CC8695DB22F4F54C00E9F14D /* Frameworks */,
+				CC8695DC22F4F54C00E9F14D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC8695E022F4F54C00E9F14D /* PBXTargetDependency */,
+			);
+			name = LuzazUITests;
+			productName = LuzazUITests;
+			productReference = CC8695DE22F4F54C00E9F14D /* LuzazUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC8695B722F4F54B00E9F14D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Luzaz;
+				TargetAttributes = {
+					CC8695BE22F4F54B00E9F14D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					CC8695D222F4F54C00E9F14D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC8695BE22F4F54B00E9F14D;
+					};
+					CC8695DD22F4F54C00E9F14D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC8695BE22F4F54B00E9F14D;
+					};
+				};
+			};
+			buildConfigurationList = CC8695BA22F4F54B00E9F14D /* Build configuration list for PBXProject "Luzaz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC8695B622F4F54B00E9F14D;
+			productRefGroup = CC8695C022F4F54B00E9F14D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC8695BE22F4F54B00E9F14D /* Luzaz */,
+				CC8695D222F4F54C00E9F14D /* LuzazTests */,
+				CC8695DD22F4F54C00E9F14D /* LuzazUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC8695BD22F4F54B00E9F14D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */,
+				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
+				CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8695D122F4F54C00E9F14D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8695DC22F4F54C00E9F14D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC8695BB22F4F54B00E9F14D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
+				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8695CF22F4F54C00E9F14D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8695D822F4F54C00E9F14D /* LuzazTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8695DA22F4F54C00E9F14D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8695E322F4F54C00E9F14D /* LuzazUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC8695D522F4F54C00E9F14D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC8695BE22F4F54B00E9F14D /* Luzaz */;
+			targetProxy = CC8695D422F4F54C00E9F14D /* PBXContainerItemProxy */;
+		};
+		CC8695E022F4F54C00E9F14D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC8695BE22F4F54B00E9F14D /* Luzaz */;
+			targetProxy = CC8695DF22F4F54C00E9F14D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC8695C622F4F54B00E9F14D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC8695C722F4F54B00E9F14D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC8695CC22F4F54B00E9F14D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC8695E522F4F54C00E9F14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC8695E622F4F54C00E9F14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC8695E822F4F54C00E9F14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Luzaz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.Luzaz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CC8695E922F4F54C00E9F14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Luzaz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.Luzaz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CC8695EB22F4F54C00E9F14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuzazTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luzaz.app/Luzaz";
+			};
+			name = Debug;
+		};
+		CC8695EC22F4F54C00E9F14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuzazTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luzaz.app/Luzaz";
+			};
+			name = Release;
+		};
+		CC8695EE22F4F54C00E9F14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LuzazUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Luzaz;
+			};
+			name = Debug;
+		};
+		CC8695EF22F4F54C00E9F14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LuzazUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Luzaz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC8695BA22F4F54B00E9F14D /* Build configuration list for PBXProject "Luzaz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8695E522F4F54C00E9F14D /* Debug */,
+				CC8695E622F4F54C00E9F14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC8695E722F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "Luzaz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8695E822F4F54C00E9F14D /* Debug */,
+				CC8695E922F4F54C00E9F14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC8695EA22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8695EB22F4F54C00E9F14D /* Debug */,
+				CC8695EC22F4F54C00E9F14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC8695ED22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8695EE22F4F54C00E9F14D /* Debug */,
+				CC8695EF22F4F54C00E9F14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC8695B722F4F54B00E9F14D /* Project object */;
+}
