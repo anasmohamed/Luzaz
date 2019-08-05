@@ -1,0 +1,6 @@
+framework module Pods_LuzazUITests {
+  umbrella header "Pods-LuzazUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

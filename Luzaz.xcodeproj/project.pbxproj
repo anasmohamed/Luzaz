@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
+		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
+		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
 		CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695C222F4F54B00E9F14D /* AppDelegate.swift */; };
 		CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695C422F4F54B00E9F14D /* ViewController.swift */; };
 		CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8695C622F4F54B00E9F14D /* Main.storyboard */; };
@@ -14,6 +17,33 @@
 		CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */; };
 		CC8695D822F4F54C00E9F14D /* LuzazTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695D722F4F54C00E9F14D /* LuzazTests.swift */; };
 		CC8695E322F4F54C00E9F14D /* LuzazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695E222F4F54C00E9F14D /* LuzazUITests.swift */; };
+		CC86960922F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F022F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift */; };
+		CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */; };
+		CC86960B22F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F222F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift */; };
+		CC86960C22F4F61C00E9F14D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F322F4F61C00E9F14D /* ChatViewController.swift */; };
+		CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F422F4F61C00E9F14D /* CollectionViewCellCategory.swift */; };
+		CC86960E22F4F61C00E9F14D /* FavouriteIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */; };
+		CC86960F22F4F61C00E9F14D /* HomeandMainCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F622F4F61C00E9F14D /* HomeandMainCatViewController.swift */; };
+		CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F722F4F61C00E9F14D /* HomeViewController.swift */; };
+		CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */; };
+		CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F922F4F61C00E9F14D /* LoginViewController.swift */; };
+		CC86961322F4F61C00E9F14D /* MainCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695FA22F4F61C00E9F14D /* MainCategoriesViewController.swift */; };
+		CC86961422F4F61C00E9F14D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695FB22F4F61C00E9F14D /* MenuViewController.swift */; };
+		CC86961522F4F61C00E9F14D /* MyProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695FC22F4F61C00E9F14D /* MyProductViewController.swift */; };
+		CC86961622F4F61C00E9F14D /* PopUpCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695FD22F4F61C00E9F14D /* PopUpCountryViewController.swift */; };
+		CC86961722F4F61C00E9F14D /* PopUpLanguguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695FE22F4F61C00E9F14D /* PopUpLanguguesViewController.swift */; };
+		CC86961822F4F61C00E9F14D /* ProductScreendetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695FF22F4F61C00E9F14D /* ProductScreendetailsViewController.swift */; };
+		CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960022F4F61C00E9F14D /* ProductViewController.swift */; };
+		CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960122F4F61C00E9F14D /* RegisterationStatusViewController.swift */; };
+		CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960222F4F61C00E9F14D /* SellYourItemEndViewController.swift */; };
+		CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960322F4F61C00E9F14D /* SellYourItemFifthViewController.swift */; };
+		CC86961D22F4F61C00E9F14D /* SellYourItemFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960422F4F61C00E9F14D /* SellYourItemFourthViewController.swift */; };
+		CC86961E22F4F61C00E9F14D /* SellYourItemSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960522F4F61C00E9F14D /* SellYourItemSecondViewController.swift */; };
+		CC86961F22F4F61C00E9F14D /* SellYourItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */; };
+		CC86962022F4F61C00E9F14D /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */; };
+		CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960822F4F61C00E9F14D /* TetViewController.swift */; };
+		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
+		CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0C33522F5AE09003511CD /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.debug.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.debug.xcconfig"; sourceTree = "<group>"; };
+		4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.debug.xcconfig"; sourceTree = "<group>"; };
+		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8695BF22F4F54B00E9F14D /* Luzaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luzaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8695C222F4F54B00E9F14D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8695C422F4F54B00E9F14D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +82,37 @@
 		CC8695DE22F4F54C00E9F14D /* LuzazUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuzazUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8695E222F4F54C00E9F14D /* LuzazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuzazUITests.swift; sourceTree = "<group>"; };
 		CC8695E422F4F54C00E9F14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8695F022F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllProductsUnderSubCategoriesViewController.swift; sourceTree = "<group>"; };
+		CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseAdViewController.swift; sourceTree = "<group>"; };
+		CC8695F222F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesLabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC8695F322F4F61C00E9F14D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CC8695F422F4F61C00E9F14D /* CollectionViewCellCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCategory.swift; sourceTree = "<group>"; };
+		CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteIViewController.swift; sourceTree = "<group>"; };
+		CC8695F622F4F61C00E9F14D /* HomeandMainCatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeandMainCatViewController.swift; sourceTree = "<group>"; };
+		CC8695F722F4F61C00E9F14D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC8695F922F4F61C00E9F14D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC8695FA22F4F61C00E9F14D /* MainCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoriesViewController.swift; sourceTree = "<group>"; };
+		CC8695FB22F4F61C00E9F14D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CC8695FC22F4F61C00E9F14D /* MyProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductViewController.swift; sourceTree = "<group>"; };
+		CC8695FD22F4F61C00E9F14D /* PopUpCountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpCountryViewController.swift; sourceTree = "<group>"; };
+		CC8695FE22F4F61C00E9F14D /* PopUpLanguguesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpLanguguesViewController.swift; sourceTree = "<group>"; };
+		CC8695FF22F4F61C00E9F14D /* ProductScreendetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductScreendetailsViewController.swift; sourceTree = "<group>"; };
+		CC86960022F4F61C00E9F14D /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		CC86960122F4F61C00E9F14D /* RegisterationStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterationStatusViewController.swift; sourceTree = "<group>"; };
+		CC86960222F4F61C00E9F14D /* SellYourItemEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndViewController.swift; sourceTree = "<group>"; };
+		CC86960322F4F61C00E9F14D /* SellYourItemFifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthViewController.swift; sourceTree = "<group>"; };
+		CC86960422F4F61C00E9F14D /* SellYourItemFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthViewController.swift; sourceTree = "<group>"; };
+		CC86960522F4F61C00E9F14D /* SellYourItemSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondViewController.swift; sourceTree = "<group>"; };
+		CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemViewController.swift; sourceTree = "<group>"; };
+		CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
+		CC86960822F4F61C00E9F14D /* TetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetViewController.swift; sourceTree = "<group>"; };
+		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
+		CCF0C33522F5AE09003511CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34F3A2E495180620BBEA816 /* Pods-LuzazTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.release.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luzaz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9E23ED21F7DA46284A61F3 /* Pods-Luzaz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.release.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +136,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6BCC2E1C359FB1EF78F17DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */,
+				FD9E23ED21F7DA46284A61F3 /* Pods-Luzaz.release.xcconfig */,
+				4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */,
+				E34F3A2E495180620BBEA816 /* Pods-LuzazTests.release.xcconfig */,
+				8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */,
+				56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACC209B9EF0EA9ACF910A13A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */,
+				D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */,
+				A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC8695B622F4F54B00E9F14D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +173,8 @@
 				CC8695D622F4F54C00E9F14D /* LuzazTests */,
 				CC8695E122F4F54C00E9F14D /* LuzazUITests */,
 				CC8695C022F4F54B00E9F14D /* Products */,
+				A6BCC2E1C359FB1EF78F17DA /* Pods */,
+				ACC209B9EF0EA9ACF910A13A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +191,39 @@
 		CC8695C122F4F54B00E9F14D /* Luzaz */ = {
 			isa = PBXGroup;
 			children = (
+				CC8695F022F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift */,
+				CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */,
+				CC8695F222F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift */,
+				CC8695F322F4F61C00E9F14D /* ChatViewController.swift */,
+				CC8695F422F4F61C00E9F14D /* CollectionViewCellCategory.swift */,
+				CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */,
+				CC8695F622F4F61C00E9F14D /* HomeandMainCatViewController.swift */,
+				CC8695F722F4F61C00E9F14D /* HomeViewController.swift */,
+				CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */,
+				CC8695F922F4F61C00E9F14D /* LoginViewController.swift */,
+				CC8695FA22F4F61C00E9F14D /* MainCategoriesViewController.swift */,
+				CC8695FB22F4F61C00E9F14D /* MenuViewController.swift */,
+				CC8695FC22F4F61C00E9F14D /* MyProductViewController.swift */,
+				CC8695FD22F4F61C00E9F14D /* PopUpCountryViewController.swift */,
+				CC8695FE22F4F61C00E9F14D /* PopUpLanguguesViewController.swift */,
+				CC8695FF22F4F61C00E9F14D /* ProductScreendetailsViewController.swift */,
+				CC86960022F4F61C00E9F14D /* ProductViewController.swift */,
+				CC86960122F4F61C00E9F14D /* RegisterationStatusViewController.swift */,
+				CC86960222F4F61C00E9F14D /* SellYourItemEndViewController.swift */,
+				CC86960322F4F61C00E9F14D /* SellYourItemFifthViewController.swift */,
+				CC86960422F4F61C00E9F14D /* SellYourItemFourthViewController.swift */,
+				CC86960522F4F61C00E9F14D /* SellYourItemSecondViewController.swift */,
+				CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */,
+				CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */,
+				CC86960822F4F61C00E9F14D /* TetViewController.swift */,
 				CC8695C222F4F54B00E9F14D /* AppDelegate.swift */,
 				CC8695C422F4F54B00E9F14D /* ViewController.swift */,
 				CC8695C622F4F54B00E9F14D /* Main.storyboard */,
+				CC9F8FB022F6162A00B86648 /* Media.xcassets */,
 				CC8695C922F4F54B00E9F14D /* Assets.xcassets */,
 				CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */,
 				CC8695CE22F4F54B00E9F14D /* Info.plist */,
+				CCF0C33522F5AE09003511CD /* RegisterViewController.swift */,
 			);
 			path = Luzaz;
 			sourceTree = "<group>";
@@ -132,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC8695E722F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "Luzaz" */;
 			buildPhases = (
+				532419CFD342C349FC3493AF /* [CP] Check Pods Manifest.lock */,
 				CC8695BB22F4F54B00E9F14D /* Sources */,
 				CC8695BC22F4F54B00E9F14D /* Frameworks */,
 				CC8695BD22F4F54B00E9F14D /* Resources */,
+				2E8B2E41BB2A27CE17496EB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC8695EA22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazTests" */;
 			buildPhases = (
+				26CCF250F3FDD24228761D31 /* [CP] Check Pods Manifest.lock */,
 				CC8695CF22F4F54C00E9F14D /* Sources */,
 				CC8695D022F4F54C00E9F14D /* Frameworks */,
 				CC8695D122F4F54C00E9F14D /* Resources */,
@@ -167,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC8695ED22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazUITests" */;
 			buildPhases = (
+				5D7A3125A50AD0512818009D /* [CP] Check Pods Manifest.lock */,
 				CC8695DA22F4F54C00E9F14D /* Sources */,
 				CC8695DB22F4F54C00E9F14D /* Frameworks */,
 				CC8695DC22F4F54C00E9F14D /* Resources */,
@@ -234,6 +359,7 @@
 			files = (
 				CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */,
 				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
+				CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */,
 				CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +380,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26CCF250F3FDD24228761D31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuzazTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E8B2E41BB2A27CE17496EB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luzaz/Pods-Luzaz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Luzaz/Pods-Luzaz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		532419CFD342C349FC3493AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Luzaz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D7A3125A50AD0512818009D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuzazUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CC8695BB22F4F54B00E9F14D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */,
+				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
+				CC86961722F4F61C00E9F14D /* PopUpLanguguesViewController.swift in Sources */,
+				CC86961822F4F61C00E9F14D /* ProductScreendetailsViewController.swift in Sources */,
+				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
+				CC86961422F4F61C00E9F14D /* MenuViewController.swift in Sources */,
+				CC86961622F4F61C00E9F14D /* PopUpCountryViewController.swift in Sources */,
+				CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */,
+				CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */,
+				CC86961D22F4F61C00E9F14D /* SellYourItemFourthViewController.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
+				CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */,
+				CC86960922F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift in Sources */,
+				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,
+				CC86960C22F4F61C00E9F14D /* ChatViewController.swift in Sources */,
+				CC86961522F4F61C00E9F14D /* MyProductViewController.swift in Sources */,
+				CC86960E22F4F61C00E9F14D /* FavouriteIViewController.swift in Sources */,
+				CC86961E22F4F61C00E9F14D /* SellYourItemSecondViewController.swift in Sources */,
+				CC86961F22F4F61C00E9F14D /* SellYourItemViewController.swift in Sources */,
+				CC86961322F4F61C00E9F14D /* MainCategoriesViewController.swift in Sources */,
+				CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */,
+				CC86960B22F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift in Sources */,
+				CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */,
+				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
+				CC86960F22F4F61C00E9F14D /* HomeandMainCatViewController.swift in Sources */,
+				CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */,
+				CC86962022F4F61C00E9F14D /* SubCategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +635,7 @@
 		};
 		CC8695E822F4F54C00E9F14D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Luzaz/Info.plist;
@@ -420,6 +648,7 @@
 		};
 		CC8695E922F4F54C00E9F14D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9E23ED21F7DA46284A61F3 /* Pods-Luzaz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Luzaz/Info.plist;
@@ -432,6 +661,7 @@
 		};
 		CC8695EB22F4F54C00E9F14D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +676,7 @@
 		};
 		CC8695EC22F4F54C00E9F14D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34F3A2E495180620BBEA816 /* Pods-LuzazTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +691,7 @@
 		};
 		CC8695EE22F4F54C00E9F14D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LuzazUITests/Info.plist;
@@ -473,6 +705,7 @@
 		};
 		CC8695EF22F4F54C00E9F14D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LuzazUITests/Info.plist;
@@ -503,6 +736,7 @@
 				CC8695E922F4F54C00E9F14D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC8695EA22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +745,7 @@
 				CC8695EC22F4F54C00E9F14D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC8695ED22F4F54C00E9F14D /* Build configuration list for PBXNativeTarget "LuzazUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +754,7 @@
 				CC8695EF22F4F54C00E9F14D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
