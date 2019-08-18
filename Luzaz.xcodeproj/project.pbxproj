@@ -52,6 +52,7 @@
 		CC86962022F4F61C00E9F14D /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */; };
 		CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960822F4F61C00E9F14D /* TetViewController.swift */; };
 		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
+		CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */; };
 		CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0C33522F5AE09003511CD /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
 		CC86960822F4F61C00E9F14D /* TetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetViewController.swift; sourceTree = "<group>"; };
 		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
+		CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+PresenterDelagate.swift"; sourceTree = "<group>"; };
 		CCF0C33522F5AE09003511CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34F3A2E495180620BBEA816 /* Pods-LuzazTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.release.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				CC07BFAB2309C1F200E83B0D /* OffersView.swift */,
 				CC07BFAD2309C21000E83B0D /* OffersCellView.swift */,
 				CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */,
+				CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -501,6 +505,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -567,6 +572,7 @@
 				CC86961D22F4F61C00E9F14D /* SellYourItemFourthViewController.swift in Sources */,
 				CC8365B4230869FC00A71DFC /* NetworkConstants.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
+				CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */,
 				CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */,
 				CC86960922F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift in Sources */,
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,

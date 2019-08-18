@@ -39,9 +39,9 @@ enum LuzazRouter: URLRequestConvertible {
         var httpHeaders = [String:String]()
         
         switch self {
-        case .getOffers:
-            httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
-            httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
+//        case .getOffers:
+//            httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
+//            httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
         default:
             print("Empty request headers")
         }

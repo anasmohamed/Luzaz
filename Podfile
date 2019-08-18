@@ -10,6 +10,8 @@ target 'Luzaz' do
   pod 'ObjectMapper', '~> 2.2.8'
   pod 'SDWebImage'
   pod 'AlamofireObjectMapper'
+  pod 'SwiftyJSON', '3.0.0'
+  
 
   target 'LuzazTests' do
     inherit! :search_paths

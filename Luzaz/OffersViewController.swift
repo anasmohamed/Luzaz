@@ -13,16 +13,13 @@ class OffersViewController: UIViewController,UITableViewDelegate,UITableViewData
    // @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: OffersPresenter!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        navigationItem.leftBarButtonItem = editButtonItem
-    }
+    
     
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        presenter = OffersPresenter(view: self as! OffersView)
+        presenter = OffersPresenter(view: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
