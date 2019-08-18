@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol OffersView {
+protocol OffersView :class{
     func showIndicator()
     func hideIndicator()
     func getOffersSuccess()

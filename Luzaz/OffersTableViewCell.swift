@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import SDWebImage
+class OffersTableViewCell: UITableViewCell,OffersCellView {
 
-class OffersTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var offerImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
+
         // Initialization code
     }
 
@@ -20,5 +23,8 @@ class OffersTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func displayOfferImage(offerImage: String) {
+        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), placeholderImage: UIImage(named: "back.png"))
+
+    }
 }

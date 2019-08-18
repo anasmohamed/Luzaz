@@ -10,13 +10,13 @@ import Foundation
 class OffersPresenter{
     
     private weak var view: OffersView?
-    private let OffersInteractor: OffersInteractor
+    private let offersInteractor: OffersInteractor
     private var offer: Offer?
     private var offers: [Offer]
     
     init(view: OffersView) {
         self.view = view
-        OffersInteractor = OffersInteractor()
+        offersInteractor = OffersInteractor()
         offers = [Offer]()
     }
     
@@ -26,15 +26,15 @@ class OffersPresenter{
     
     func getOffers(countryId: String) {
         view?.showIndicator()
-        OffersInteractor.getOffers(countryId: countryId) { [unowned self] (offers, error) in
+        offersInteractor.getOffers(countryId: countryId) { [unowned self] (offers, error) in
             
             self.view?.hideIndicator()
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-                guard let offers = offeres else { return }
+                guard let offers = offers else { return }
                 self.offers = offers
-                self.view?.getOffersSuccess()()
+                self.view?.getOffersSuccess()
             }
         }
     }

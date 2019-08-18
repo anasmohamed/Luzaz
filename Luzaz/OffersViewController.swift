@@ -8,9 +8,9 @@
 
 import UIKit
 
-class OffersViewController: UITableViewController {
+class OffersViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     // MARK: Outlets
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
+   // @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: OffersPresenter!
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,7 +22,7 @@ class OffersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        presenter = OffersPresenter(view: self)
+        presenter = OffersPresenter(view: self as! OffersView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +30,7 @@ class OffersViewController: UITableViewController {
         presenter.viewDidLoad()
     }
     
+    @IBOutlet weak var tableView: UITableView!
     // MARK: Actions
     /*@IBAction func addNewBarber(_ sender: UIBarButtonItem) {
      //let salonId = UserDefaults.standard.integer(forKey: "salonId")
@@ -41,12 +42,12 @@ class OffersViewController: UITableViewController {
         tableView.register(UINib(nibName: "OffersTableViewCell", bundle: nil), forCellReuseIdentifier: "OffersTableViewCell")
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.getOffersCount()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OffersTableViewCell", for: indexPath) as! BarberCell
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OffersTableViewCell", for: indexPath) as! OffersTableViewCell
         presenter.configure(cell: cell, for: indexPath.row)
         return cell
     }
