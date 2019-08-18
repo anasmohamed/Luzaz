@@ -7,6 +7,9 @@ target 'Luzaz' do
 
   # Pods for Luzaz
   pod ‘Alamofire’, ‘~>4.0’
+  pod 'ObjectMapper', '~> 2.2.8'
+  pod 'SDWebImage'
+  pod 'AlamofireObjectMapper'
 
   target 'LuzazTests' do
     inherit! :search_paths

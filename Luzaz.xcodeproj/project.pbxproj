@@ -10,6 +10,15 @@
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
 		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
+		CC07BFAC2309C1F200E83B0D /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAB2309C1F200E83B0D /* OffersView.swift */; };
+		CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAD2309C21000E83B0D /* OffersCellView.swift */; };
+		CC07BFB02309C23800E83B0D /* OffersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */; };
+		CC07BFB32309C3BD00E83B0D /* OffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFB12309C3BD00E83B0D /* OffersTableViewCell.swift */; };
+		CC07BFB42309C3BD00E83B0D /* OffersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC07BFB22309C3BD00E83B0D /* OffersTableViewCell.xib */; };
+		CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */; };
+		CC52DD01230970E900981C31 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DD00230970E900981C31 /* Offer.swift */; };
+		CC8365B2230869E000A71DFC /* LuzazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8365B1230869E000A71DFC /* LuzazRouter.swift */; };
+		CC8365B4230869FC00A71DFC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8365B3230869FC00A71DFC /* NetworkConstants.swift */; };
 		CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695C222F4F54B00E9F14D /* AppDelegate.swift */; };
 		CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695C422F4F54B00E9F14D /* ViewController.swift */; };
 		CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8695C622F4F54B00E9F14D /* Main.storyboard */; };
@@ -23,7 +32,7 @@
 		CC86960C22F4F61C00E9F14D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F322F4F61C00E9F14D /* ChatViewController.swift */; };
 		CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F422F4F61C00E9F14D /* CollectionViewCellCategory.swift */; };
 		CC86960E22F4F61C00E9F14D /* FavouriteIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */; };
-		CC86960F22F4F61C00E9F14D /* HomeandMainCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F622F4F61C00E9F14D /* HomeandMainCatViewController.swift */; };
+		CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F622F4F61C00E9F14D /* OffersViewController.swift */; };
 		CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F722F4F61C00E9F14D /* HomeViewController.swift */; };
 		CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */; };
 		CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F922F4F61C00E9F14D /* LoginViewController.swift */; };
@@ -69,6 +78,15 @@
 		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC07BFAB2309C1F200E83B0D /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
+		CC07BFAD2309C21000E83B0D /* OffersCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCellView.swift; sourceTree = "<group>"; };
+		CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersPresenter.swift; sourceTree = "<group>"; };
+		CC07BFB12309C3BD00E83B0D /* OffersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersTableViewCell.swift; sourceTree = "<group>"; };
+		CC07BFB22309C3BD00E83B0D /* OffersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersTableViewCell.xib; sourceTree = "<group>"; };
+		CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersInteractor.swift; sourceTree = "<group>"; };
+		CC52DD00230970E900981C31 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		CC8365B1230869E000A71DFC /* LuzazRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuzazRouter.swift; sourceTree = "<group>"; };
+		CC8365B3230869FC00A71DFC /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		CC8695BF22F4F54B00E9F14D /* Luzaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luzaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8695C222F4F54B00E9F14D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8695C422F4F54B00E9F14D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +106,7 @@
 		CC8695F322F4F61C00E9F14D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CC8695F422F4F61C00E9F14D /* CollectionViewCellCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCategory.swift; sourceTree = "<group>"; };
 		CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteIViewController.swift; sourceTree = "<group>"; };
-		CC8695F622F4F61C00E9F14D /* HomeandMainCatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeandMainCatViewController.swift; sourceTree = "<group>"; };
+		CC8695F622F4F61C00E9F14D /* OffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
 		CC8695F722F4F61C00E9F14D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC8695F922F4F61C00E9F14D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +184,69 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC07BFAA2309C1B900E83B0D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC07BFAB2309C1F200E83B0D /* OffersView.swift */,
+				CC07BFAD2309C21000E83B0D /* OffersCellView.swift */,
+				CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CC07BFB52309C3D700E83B0D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC07BFB12309C3BD00E83B0D /* OffersTableViewCell.swift */,
+				CC07BFB22309C3BD00E83B0D /* OffersTableViewCell.xib */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CC52DCFA23096C9900981C31 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CC52DCFB23096CF000981C31 /* Offers */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		CC52DCFB23096CF000981C31 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				CC8695F622F4F61C00E9F14D /* OffersViewController.swift */,
+				CC07BFB52309C3D700E83B0D /* TableViewCell */,
+				CC07BFAA2309C1B900E83B0D /* Presenter */,
+				CC52DCFC23096F6500981C31 /* Interactor */,
+			);
+			name = Offers;
+			sourceTree = "<group>";
+		};
+		CC52DCFC23096F6500981C31 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		CC52DCFF230970DA00981C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC52DD00230970E900981C31 /* Offer.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CC8365B0230869C300A71DFC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CC8365B1230869E000A71DFC /* LuzazRouter.swift */,
+				CC8365B3230869FC00A71DFC /* NetworkConstants.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		CC8695B622F4F54B00E9F14D = {
 			isa = PBXGroup;
 			children = (
@@ -191,13 +272,15 @@
 		CC8695C122F4F54B00E9F14D /* Luzaz */ = {
 			isa = PBXGroup;
 			children = (
+				CC52DCFF230970DA00981C31 /* Model */,
+				CC52DCFA23096C9900981C31 /* Scenes */,
+				CC8365B0230869C300A71DFC /* Network */,
 				CC8695F022F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift */,
 				CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */,
 				CC8695F222F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift */,
 				CC8695F322F4F61C00E9F14D /* ChatViewController.swift */,
 				CC8695F422F4F61C00E9F14D /* CollectionViewCellCategory.swift */,
 				CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */,
-				CC8695F622F4F61C00E9F14D /* HomeandMainCatViewController.swift */,
 				CC8695F722F4F61C00E9F14D /* HomeViewController.swift */,
 				CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */,
 				CC8695F922F4F61C00E9F14D /* LoginViewController.swift */,
@@ -357,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC07BFB42309C3BD00E83B0D /* OffersTableViewCell.xib in Resources */,
 				CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */,
 				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
 				CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */,
@@ -407,10 +491,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Luzaz/Pods-Luzaz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,13 +554,18 @@
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
 				CC86961722F4F61C00E9F14D /* PopUpLanguguesViewController.swift in Sources */,
+				CC8365B2230869E000A71DFC /* LuzazRouter.swift in Sources */,
 				CC86961822F4F61C00E9F14D /* ProductScreendetailsViewController.swift in Sources */,
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
 				CC86961422F4F61C00E9F14D /* MenuViewController.swift in Sources */,
 				CC86961622F4F61C00E9F14D /* PopUpCountryViewController.swift in Sources */,
+				CC52DD01230970E900981C31 /* Offer.swift in Sources */,
 				CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */,
+				CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */,
 				CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */,
+				CC07BFB02309C23800E83B0D /* OffersPresenter.swift in Sources */,
 				CC86961D22F4F61C00E9F14D /* SellYourItemFourthViewController.swift in Sources */,
+				CC8365B4230869FC00A71DFC /* NetworkConstants.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
 				CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */,
 				CC86960922F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift in Sources */,
@@ -484,8 +579,11 @@
 				CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */,
 				CC86960B22F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift in Sources */,
 				CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */,
+				CC07BFAC2309C1F200E83B0D /* OffersView.swift in Sources */,
+				CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */,
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
-				CC86960F22F4F61C00E9F14D /* HomeandMainCatViewController.swift in Sources */,
+				CC07BFB32309C3BD00E83B0D /* OffersTableViewCell.swift in Sources */,
+				CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */,
 				CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */,
 				CC86962022F4F61C00E9F14D /* SubCategoriesViewController.swift in Sources */,
 			);
