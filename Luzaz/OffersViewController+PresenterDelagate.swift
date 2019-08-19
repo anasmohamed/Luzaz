@@ -19,7 +19,7 @@ extension OffersViewController: OffersView {
     }
     
     func getOffersSuccess() {
-        tableView.reloadData()
+        collectionView.reloadData()
     }
     
    

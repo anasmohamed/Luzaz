@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OffersViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     // MARK: Outlets
    // @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: OffersPresenter!
@@ -27,7 +27,7 @@ class OffersViewController: UIViewController,UITableViewDelegate,UITableViewData
         presenter.viewDidLoad()
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     // MARK: Actions
     /*@IBAction func addNewBarber(_ sender: UIBarButtonItem) {
      //let salonId = UserDefaults.standard.integer(forKey: "salonId")
@@ -36,18 +36,21 @@ class OffersViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     // MARK: TableView
     func setupTableView() {
-        tableView.register(UINib(nibName: "OffersTableViewCell", bundle: nil), forCellReuseIdentifier: "OffersTableViewCell")
+        collectionView.register(UINib(nibName: "OffersCell", bundle: nil), forCellWithReuseIdentifier: "OffersCell")
+//        collectionView.register(UINib(nibName: "OffersCell", bundle: nil), forCellReuseIdentifier: "OffersCell")
     }
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.getOffersCount()
+
     }
-    
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OffersTableViewCell", for: indexPath) as! OffersTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
         presenter.configure(cell: cell, for: indexPath.row)
         return cell
     }
+ 
     
     
     
