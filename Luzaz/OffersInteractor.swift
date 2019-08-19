@@ -8,15 +8,15 @@
 
 import Foundation
 import Alamofire
-import AlamofireObjectMapper
+import SwiftyJSON
 
 class OffersInteractor {
-  
+    
     
     func getOffers(countryId: String,
-                       completionHandler: @escaping ([Offer]?, Error?) -> Void) {
+                   completionHandler: @escaping ([Offer]?, Error?) -> Void) {
         
-        Alamofire.request(LuzazRouter.getOffers(country: countryId)).responseArray {(response: DataResponse<[Offer]>) in
+        Alamofire.request(LuzazRouter.getOffers(country: countryId)).responseJSON {(response) in
             if let response = response.data {
                 print("Response Data: \(response)")
             } else {
@@ -28,7 +28,7 @@ class OffersInteractor {
                 print("Request Description: \(request.description)")
                 print("Request Debug Description: \(request.debugDescription)")
                 print("Response Request HTTP method: \(request.httpMethod!)")
-//                print("Response Request Content-Type: \(request.value(forHTTPHeaderField: NetworkingConstants.contentType)!)")
+                //                print("Response Request Content-Type: \(request.value(forHTTPHeaderField: NetworkingConstants.contentType)!)")
             } else {
                 print("Response Request: nil")
             }
@@ -44,17 +44,49 @@ class OffersInteractor {
             } else {
                 print("Response Error Code: nil")
             }
-
             let result = response.result
-            print(result)
-
             switch result {
-            case .success(let offers):
-                completionHandler(offers, nil)
+            case .success :
+                let json = JSON(result.value)
+                var offersList = [Offer]()
+                let offers = json["data"].arrayValue
+                for offer in offers
+                {
+                    let data = Offer(withJSON: offer)
+                    offersList.append(data)
+                }
+                completionHandler(offersList, nil)
             case .failure(let error):
                 completionHandler(nil, error)
             }
-        }
+
+//            if let result = response.result.value {
+//            
+//                let json = JSON(result)
+//                print("jsonnya:\(json)")
+//                var offersList = [Offer]()
+//                let offers = json["data"].arrayValue
+//                for offer in offers
+//                {
+//                    let data = Offer(withJSON: offer)
+//                    offersList.append(data)
+//                }
+//                
+//            completionHandler(offersList, nil)
+//            }
+//            else{
+//                completionHandler(nil, error)
+//            }
+            
+            
+//        }
+        //            switch result {
+        //            case .success(let offers):
+        //                completionHandler(offers, nil)
+        //            case .failure(let error):
+        //                completionHandler(nil, error)
+        //            }
     }
- 
+}
+
 }

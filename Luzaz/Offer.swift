@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import ObjectMapper
+import SwiftyJSON
 
-class Offer: Mappable {
+class Offer {
     
     var title: String?
     var description: String?
@@ -19,22 +19,29 @@ class Offer: Mappable {
     var image : String?
     var reseller_name : String?
     
-    init() {
+    init(withJSON data: JSON) {
         
+        self.title = data[NetworkingConstants.title].stringValue
+        self.description = data[NetworkingConstants.description].stringValue
+        self.price  = data[NetworkingConstants.price].stringValue
+        self.discount_prec  = data[NetworkingConstants.discount_prec].stringValue
+        self.price_after_discount  = data[NetworkingConstants.price_after_discount].stringValue
+        self.image  = data[NetworkingConstants.image].stringValue
+        self.reseller_name  = data[NetworkingConstants.reseller_name].stringValue
     }
     
-    required init(map: Map) {
-        
-    }
+//    required init(map: Map) {
+//        
+//    }
     
-    func mapping(map: Map) {
-        title <- map[NetworkingConstants.title]
-        description <- map[NetworkingConstants.description]
-        price <- map[NetworkingConstants.price]
-        discount_prec <- map[NetworkingConstants.discount_prec]
-        price_after_discount <- map[NetworkingConstants.price_after_discount]
-        image <- map[NetworkingConstants.image]
-        reseller_name <- map[NetworkingConstants.reseller_name]
-        
-    }
+//    func mapping(map: Map) {
+//        title <- map[NetworkingConstants.title]
+//        description <- map[NetworkingConstants.description]
+//        price <- map[NetworkingConstants.price]
+//        discount_prec <- map[NetworkingConstants.discount_prec]
+//        price_after_discount <- map[NetworkingConstants.price_after_discount]
+//        image <- map[NetworkingConstants.image]
+//        reseller_name <- map[NetworkingConstants.reseller_name]
+//        
+//    }
 }
