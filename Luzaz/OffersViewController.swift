@@ -10,15 +10,16 @@ import UIKit
 
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     // MARK: Outlets
-   // @IBOutlet weak var spinner: UIActivityIndicatorView!
+    // @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: OffersPresenter!
-    
+    @IBOutlet weak var collectionView: UICollectionView!
+    var delegate : CenterVCDelegate?
     
     
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupCollectionView()
         presenter = OffersPresenter(view: self)
     }
     
@@ -27,30 +28,29 @@ class OffersViewController: UIViewController,UICollectionViewDelegate,UICollecti
         presenter.viewDidLoad()
     }
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    // MARK: Actions
-    /*@IBAction func addNewBarber(_ sender: UIBarButtonItem) {
-     //let salonId = UserDefaults.standard.integer(forKey: "salonId")
-     //presenter.addBarber(salonId: salonId, barber: barber)
-     }*/
     
-    // MARK: TableView
-    func setupTableView() {
+    func setupCollectionView() {
         collectionView.register(UINib(nibName: "OffersCell", bundle: nil), forCellWithReuseIdentifier: "OffersCell")
-//        collectionView.register(UINib(nibName: "OffersCell", bundle: nil), forCellReuseIdentifier: "OffersCell")
+        
     }
     
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.getOffersCount()
-
+        
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
         presenter.configure(cell: cell, for: indexPath.row)
         return cell
     }
- 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
+        offersDetailsVC.modalTransitionStyle = .flipHorizontal
+        presenter.pushToDetails(viewController: offersDetailsVC, indexPath.row)
+        self.present(offersDetailsVC,animated:true,completion:nil)
+        
+    }
     
     
     

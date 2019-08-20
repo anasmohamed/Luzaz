@@ -49,6 +49,10 @@ class OffersPresenter{
         
         cell.displayOfferImage(offerImage: image)
     }
+    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
+       viewController.offer = offers[index]
+        
+    }
 }
 
 
