@@ -48,6 +48,7 @@ class OffersInteractor {
             switch result {
             case .success :
                 let json = JSON(result.value)
+                print(json)
                 var offersList = [Offer]()
                 let offers = json["data"].arrayValue
                 for offer in offers
