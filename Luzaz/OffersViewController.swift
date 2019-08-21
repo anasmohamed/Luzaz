@@ -41,9 +41,18 @@ class OffersViewController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
+
         presenter.configure(cell: cell, for: indexPath.row)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let kWhateverHeightYouWant = collectionView.bounds.size.height/2
+        return CGSize(width: (collectionView.bounds.size.width/2 - CGFloat(15)), height: CGFloat(kWhateverHeightYouWant - 63))
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
         offersDetailsVC.modalTransitionStyle = .flipHorizontal
@@ -51,7 +60,11 @@ class OffersViewController: UIViewController,UICollectionViewDelegate,UICollecti
         self.present(offersDetailsVC,animated:true,completion:nil)
         
     }
-    
-    
+ 
+    @IBAction func menuBtnWasPressed(_ sender: Any)
+    {
+        delegate?.toggleLeftPane()
+ 
+    }
     
 }
