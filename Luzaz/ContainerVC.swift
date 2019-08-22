@@ -26,6 +26,7 @@ var showVC : ShowWhichVC = .OffersViewController
 class ContainerVC: UIViewController {
     
     var offersViewController : OffersViewController!
+    
     var leftVC : LeftSidePanelVC!
     var centerController : UIViewController!
     var currentState : SliderOutState = .collapsed {
@@ -221,7 +222,11 @@ private extension UIStoryboard {
         
         return mainStoryboard().instantiateViewController(withIdentifier: "LeftSidePanelVC") as? LeftSidePanelVC
     }
-    
+   
+    class func CountryVC() -> CountriesViewController? {
+        
+        return mainStoryboard().instantiateViewController(withIdentifier: "CountryVC") as? CountriesViewController
+    }
     class func offersVC() -> OffersViewController? {
         
         return mainStoryboard().instantiateViewController(withIdentifier: "OffersVC") as? OffersViewController
