@@ -15,6 +15,7 @@
 		CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAD2309C21000E83B0D /* OffersCellView.swift */; };
 		CC07BFB02309C23800E83B0D /* OffersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */; };
 		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
+		CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */; };
 		CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */; };
 		CC52DD01230970E900981C31 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DD00230970E900981C31 /* Offer.swift */; };
 		CC6C6FEF230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */; };
@@ -96,6 +97,7 @@
 		CC07BFAD2309C21000E83B0D /* OffersCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCellView.swift; sourceTree = "<group>"; };
 		CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersPresenter.swift; sourceTree = "<group>"; };
 		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersInteractor.swift; sourceTree = "<group>"; };
 		CC52DD00230970E900981C31 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+CellSpaceDelegate.swift"; sourceTree = "<group>"; };
@@ -230,9 +232,18 @@
 			name = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		CC2379EC2310A79200923D59 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */,
+			);
+			name = Languages;
+			sourceTree = "<group>";
+		};
 		CC52DCFA23096C9900981C31 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CC2379EC2310A79200923D59 /* Languages */,
 				CC9482E5230F7D020058D78A /* Countries */,
 				CCE369AF230BFF8A008CAC35 /* LeftSidePanel */,
 				CC52DCFB23096CF000981C31 /* Offers */,
@@ -647,6 +658,7 @@
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
 				CC86961622F4F61C00E9F14D /* PopUpCountryViewController.swift in Sources */,
 				CCE369AC230BFD57008CAC35 /* ContainerVC.swift in Sources */,
+				CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */,
 				CC52DD01230970E900981C31 /* Offer.swift in Sources */,
 				CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */,
 				CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */,

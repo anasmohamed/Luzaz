@@ -565,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X13-2i-kB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6339.375" y="-215.49295774647888"/>
+            <point key="canvasLocation" x="-5760" y="-215"/>
         </scene>
         <!--Sub Categories View Controller-->
         <scene sceneID="v6L-D5-JJK">
@@ -662,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNm-iR-saz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5274" y="-206"/>
+            <point key="canvasLocation" x="-4963" y="-215"/>
         </scene>
         <!--Product Screendetails View Controller-->
         <scene sceneID="LW7-3r-rcQ">
@@ -1055,7 +1055,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEz-wF-1eJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5214" y="-215"/>
+            <point key="canvasLocation" x="-4935" y="-215"/>
         </scene>
         <!--Sell Your Item Second View Controller-->
         <scene sceneID="fNf-RB-q0N">
@@ -1948,7 +1948,7 @@
         <!--Countries View Controller-->
         <scene sceneID="r1y-2N-pBg">
             <objects>
-                <viewController storyboardIdentifier="LanguageVC" id="vj9-Ew-nQD" customClass="CountriesViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountriesVC" id="vj9-Ew-nQD" customClass="CountriesViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nou-Cf-rI2"/>
                         <viewControllerLayoutGuide type="bottom" id="Exi-cg-wFA"/>
@@ -1969,7 +1969,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sSB-Af-oea" id="f0f-Sa-nwK">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1993,6 +1993,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FE-dD-0YN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7888.125" y="-215.49295774647888"/>
+        </scene>
+        <!--Languages View Controller-->
+        <scene sceneID="YUP-f3-HIe">
+            <objects>
+                <viewController storyboardIdentifier="LangaugesVC" id="7GM-M6-N28" customClass="LanguagesViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7cB-q4-TyS"/>
+                        <viewControllerLayoutGuide type="bottom" id="YJM-YA-dQM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5zH-lq-ORA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sVk-ty-ojN">
+                                <rect key="frame" x="40" y="219" width="240" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QEu-I8-oKO"/>
+                                    <constraint firstAttribute="height" constant="130" id="dB0-hx-ctU"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LanguageCell" id="tAY-lQ-1QR">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tAY-lQ-1QR" id="KxH-F0-2ip">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7GM-M6-N28" id="biZ-aq-BdD"/>
+                                    <outlet property="delegate" destination="7GM-M6-N28" id="tRz-Cw-1Rq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sVk-ty-ojN" firstAttribute="centerY" secondItem="5zH-lq-ORA" secondAttribute="centerY" id="4li-I4-N8P"/>
+                            <constraint firstItem="sVk-ty-ojN" firstAttribute="centerX" secondItem="5zH-lq-ORA" secondAttribute="centerX" id="NrK-vy-DZE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMq-LW-xN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7159" y="-215"/>
         </scene>
         <!--Item-->
         <scene sceneID="uhM-rk-tgr">
@@ -2091,7 +2137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqt-hm-Bvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7111.875" y="-215.49295774647888"/>
+            <point key="canvasLocation" x="-6414" y="-215"/>
         </scene>
         <!--Product Screendetails View Controller-->
         <scene sceneID="h7M-Bv-rqb">

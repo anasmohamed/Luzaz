@@ -19,9 +19,10 @@ class OffersPresenter{
         offersInteractor = OffersInteractor()
         offers = [Offer]()
     }
-    
+
     func viewDidLoad() {
-        getOffers(countryId: "1")
+        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
+ )
     }
     
     func getOffers(countryId: String) {
