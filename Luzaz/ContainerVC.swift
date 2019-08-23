@@ -39,7 +39,7 @@ class ContainerVC: UIViewController {
     }
     
     var isHidden = false
-    let centerPanelExpandedOffset : CGFloat = 160
+    let centerPanelExpandedOffset : CGFloat = 130
     
     var tap : UITapGestureRecognizer!
     
