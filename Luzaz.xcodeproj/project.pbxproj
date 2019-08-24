@@ -52,6 +52,7 @@
 		CC86961F22F4F61C00E9F14D /* SellYourItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */; };
 		CC86962022F4F61C00E9F14D /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */; };
 		CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960822F4F61C00E9F14D /* TetViewController.swift */; };
+		CC8E91EF23116F0900F82AB2 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E91EE23116F0900F82AB2 /* LeftSidePanelVC.swift */; };
 		CC9482E7230F7D3D0058D78A /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482E6230F7D3D0058D78A /* CountriesViewController.swift */; };
 		CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482E9230F7F020058D78A /* CountryTableViewCell.swift */; };
 		CC9482EC230F7F020058D78A /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9482EA230F7F020058D78A /* CountryTableViewCell.xib */; };
@@ -64,7 +65,6 @@
 		CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC123B4230AEEFC0033BD18 /* OffersCell.swift */; };
 		CCC123B7230AEEFC0033BD18 /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC123B5230AEEFC0033BD18 /* OffersCell.xib */; };
 		CCE369AC230BFD57008CAC35 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE369AB230BFD57008CAC35 /* ContainerVC.swift */; };
-		CCE369AE230BFEDD008CAC35 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE369AD230BFEDD008CAC35 /* LeftSidePanelVC.swift */; };
 		CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE369B0230BFFB1008CAC35 /* CenterVCDelegate.swift */; };
 		CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0C33522F5AE09003511CD /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -140,6 +140,7 @@
 		CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemViewController.swift; sourceTree = "<group>"; };
 		CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
 		CC86960822F4F61C00E9F14D /* TetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetViewController.swift; sourceTree = "<group>"; };
+		CC8E91EE23116F0900F82AB2 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		CC9482E6230F7D3D0058D78A /* CountriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		CC9482E9230F7F020058D78A /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		CC9482EA230F7F020058D78A /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		CCC123B4230AEEFC0033BD18 /* OffersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
 		CCC123B5230AEEFC0033BD18 /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
 		CCE369AB230BFD57008CAC35 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
-		CCE369AD230BFEDD008CAC35 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		CCE369B0230BFFB1008CAC35 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 		CCF0C33522F5AE09003511CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -412,8 +412,8 @@
 		CCE369AF230BFF8A008CAC35 /* LeftSidePanel */ = {
 			isa = PBXGroup;
 			children = (
+				CC8E91EE23116F0900F82AB2 /* LeftSidePanelVC.swift */,
 				CCE369AB230BFD57008CAC35 /* ContainerVC.swift */,
-				CCE369AD230BFEDD008CAC35 /* LeftSidePanelVC.swift */,
 				CCE369B0230BFFB1008CAC35 /* CenterVCDelegate.swift */,
 			);
 			name = LeftSidePanel;
@@ -653,6 +653,7 @@
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
 				CC86961722F4F61C00E9F14D /* PopUpLanguguesViewController.swift in Sources */,
 				CC8365B2230869E000A71DFC /* LuzazRouter.swift in Sources */,
+				CC8E91EF23116F0900F82AB2 /* LeftSidePanelVC.swift in Sources */,
 				CC6C6FEF230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift in Sources */,
 				CC86961822F4F61C00E9F14D /* ProductScreendetailsViewController.swift in Sources */,
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
@@ -689,7 +690,6 @@
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
 				CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */,
 				CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */,
-				CCE369AE230BFEDD008CAC35 /* LeftSidePanelVC.swift in Sources */,
 				CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */,
 				CC86962022F4F61C00E9F14D /* SubCategoriesViewController.swift in Sources */,
 			);
