@@ -24,12 +24,12 @@ struct NetworkingConstants {
     static let contentType = "Content-Type"
     static let accept = "Accept"
     static let contentTypeJSON = "application/json"
-   
+    
     
     static let getOffers = "getOffers"
     static let register = "register"
     static let login = "login"
-
+    
     
     //get offers pramters
     static let country = "country"
@@ -46,13 +46,16 @@ struct NetworkingConstants {
     static let update = "update"
     
     // User Query Parameters
-    static let userId = "userId"
+    static let userId = "user_id"
     static let fullName = "name"
     static let email = "mail"
     static let phone = "phone"
     static let password = "password"
     static let rePassword = "re_password"
     static let countryId = "country_id"
+    static let token = "token"
+    static let countryNameArabic = "country_name_arabic"
+    static let countryNameEnglish = "country_name_english"
     
 }
 

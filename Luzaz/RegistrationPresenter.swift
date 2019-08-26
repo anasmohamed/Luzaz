@@ -30,7 +30,7 @@ class RegistrationPresenter {
             !isEmpty(string: password),
             !isEmpty(string: confirmPassword),
             isValidEmailAddress(emailAddressString: email),
-            isValidPhoneNumber(phoneNumberString: phone),
+           // isValidPhoneNumber(phoneNumberString: phone),
             isValidPassword(password: password),
             isValidConfrimPassword(password: password, confirmPassword: confirmPassword) {
             

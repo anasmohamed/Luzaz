@@ -15,17 +15,18 @@ class User{
     var password : String?
     var rePassword : String?
     var countryId : String?
+    var userId : String?
+    var token : String?
+    var countryEnglishName : String?
+    var countryArabicName : String?
     init()
     {}
     init(withJSON data: JSON) {
-        
-        self.fullName = data[NetworkingConstants.fullName].stringValue
-        self.phoneNumber = data[NetworkingConstants.phone].stringValue
-        self.mail  = data[NetworkingConstants.email].stringValue
-        self.password  = data[NetworkingConstants.password].stringValue
-        self.rePassword  = data[NetworkingConstants.rePassword].stringValue
+        self.userId = data[NetworkingConstants.userId].stringValue
+        self.token = data[NetworkingConstants.token].stringValue
         self.countryId  = data[NetworkingConstants.countryId].stringValue
-        
+        self.countryEnglishName = data[NetworkingConstants.countryNameEnglish].stringValue
+        self.countryArabicName = data[NetworkingConstants.countryNameArabic].stringValue
     }
     
     

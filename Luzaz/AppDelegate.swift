@@ -16,20 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let defaults = UserDefaults.standard
-        if defaults.object(forKey: "isFirstTime") == nil {
-            defaults.set("No", forKey:"isFirstTime")
-            defaults.synchronize()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
-            let viewController = storyboard.instantiateViewController(withIdentifier: "CountriesVC") as! ViewController
-            self.window?.rootViewController = viewController
-            self.window?.makeKeyAndVisible()
-        }else
-        {
-             containerVC = ContainerVC()
-             window?.rootViewController = containerVC
-             window?.makeKeyAndVisible()
-        }
+//        let defaults = UserDefaults.standard
+//        if defaults.object(forKey: "isFirstTime") == nil {
+//            defaults.set("No", forKey:"isFirstTime")
+//            defaults.synchronize()
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "CountriesVC") as! ViewController
+//            self.window?.rootViewController = viewController
+//            self.window?.makeKeyAndVisible()
+//        }else
+//        {
+//             containerVC = ContainerVC()
+//             window?.rootViewController = containerVC
+//             window?.makeKeyAndVisible()
+//        }
         
         // Override point for customization after application launch.
         //  containerVC = ContainerVC()

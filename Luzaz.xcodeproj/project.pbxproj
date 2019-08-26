@@ -61,6 +61,13 @@
 		CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482F3230F82D10058D78A /* CountryCellView.swift */; };
 		CC9482F6230F84C10058D78A /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482F5230F84C10058D78A /* CountryView.swift */; };
 		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
+		CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F5472313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift */; };
+		CCB8F54A2313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F5492313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift */; };
+		CCB8F54C2313ED620025FEA1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F54B2313ED620025FEA1 /* LoginPresenter.swift */; };
+		CCB8F54E2313ED800025FEA1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F54D2313ED800025FEA1 /* LoginView.swift */; };
+		CCB8F5502313ED800025FEA1 /* LoginViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F54F2313ED800025FEA1 /* LoginViewController+PresenterDelegate.swift */; };
+		CCB8F5522313ED800025FEA1 /* LoginViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F5512313ED800025FEA1 /* LoginViewController+TextField.swift */; };
+		CCB8F5542313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F5532313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift */; };
 		CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */; };
 		CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC123B4230AEEFC0033BD18 /* OffersCell.swift */; };
 		CCC123B7230AEEFC0033BD18 /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC123B5230AEEFC0033BD18 /* OffersCell.xib */; };
@@ -153,6 +160,13 @@
 		CC9482F3230F82D10058D78A /* CountryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCellView.swift; sourceTree = "<group>"; };
 		CC9482F5230F84C10058D78A /* CountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
+		CCB8F5472313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CCB8F5492313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		CCB8F54B2313ED620025FEA1 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		CCB8F54D2313ED800025FEA1 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CCB8F54F2313ED800025FEA1 /* LoginViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CCB8F5512313ED800025FEA1 /* LoginViewController+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextField.swift"; sourceTree = "<group>"; };
+		CCB8F5532313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+PresenterDelagate.swift"; sourceTree = "<group>"; };
 		CCC123B4230AEEFC0033BD18 /* OffersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
 		CCC123B5230AEEFC0033BD18 /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
@@ -336,7 +350,6 @@
 				CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */,
 				CC8695F722F4F61C00E9F14D /* HomeViewController.swift */,
 				CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */,
-				CC8695F922F4F61C00E9F14D /* LoginViewController.swift */,
 				CC8695FA22F4F61C00E9F14D /* MainCategoriesViewController.swift */,
 				CC8695FC22F4F61C00E9F14D /* MyProductViewController.swift */,
 				CC8695FD22F4F61C00E9F14D /* PopUpCountryViewController.swift */,
@@ -424,6 +437,12 @@
 				CCDA9B1F231312C0001525F8 /* Interactor */,
 				CCDA9B1E231312A6001525F8 /* Presenter */,
 				CCF0C33522F5AE09003511CD /* RegisterViewController.swift */,
+				CC8695F922F4F61C00E9F14D /* LoginViewController.swift */,
+				CCB8F5472313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift */,
+				CCB8F5492313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift */,
+				CCB8F54F2313ED800025FEA1 /* LoginViewController+PresenterDelegate.swift */,
+				CCB8F5512313ED800025FEA1 /* LoginViewController+TextField.swift */,
+				CCB8F5532313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -433,6 +452,8 @@
 			children = (
 				CCDA9B24231320FC001525F8 /* RegistrationPresenter.swift */,
 				CCDA9B2623132126001525F8 /* RegistrationView.swift */,
+				CCB8F54B2313ED620025FEA1 /* LoginPresenter.swift */,
+				CCB8F54D2313ED800025FEA1 /* LoginView.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -682,7 +703,10 @@
 			files = (
 				CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */,
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
+				CCB8F5522313ED800025FEA1 /* LoginViewController+TextField.swift in Sources */,
+				CCB8F54A2313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift in Sources */,
 				CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */,
+				CCB8F54C2313ED620025FEA1 /* LoginPresenter.swift in Sources */,
 				CCDA9B2723132126001525F8 /* RegistrationView.swift in Sources */,
 				CC9482F6230F84C10058D78A /* CountryView.swift in Sources */,
 				CCDA9B25231320FC001525F8 /* RegistrationPresenter.swift in Sources */,
@@ -700,6 +724,7 @@
 				CCDA9B212313133F001525F8 /* UserInteractor.swift in Sources */,
 				CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */,
 				CC52DD01230970E900981C31 /* Offer.swift in Sources */,
+				CCB8F54E2313ED800025FEA1 /* LoginView.swift in Sources */,
 				CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */,
 				CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */,
 				CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */,
@@ -712,6 +737,7 @@
 				CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */,
 				CCDA9B232313137A001525F8 /* User.swift in Sources */,
 				CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */,
+				CCB8F5542313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift in Sources */,
 				CC86960922F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift in Sources */,
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,
 				CC86960C22F4F61C00E9F14D /* ChatViewController.swift in Sources */,
@@ -720,12 +746,14 @@
 				CC86961E22F4F61C00E9F14D /* SellYourItemSecondViewController.swift in Sources */,
 				CC86961F22F4F61C00E9F14D /* SellYourItemViewController.swift in Sources */,
 				CC86961322F4F61C00E9F14D /* MainCategoriesViewController.swift in Sources */,
+				CCB8F5502313ED800025FEA1 /* LoginViewController+PresenterDelegate.swift in Sources */,
 				CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */,
 				CC86960B22F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift in Sources */,
 				CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */,
 				CC05BEAE230AF8DA006CE43D /* OffersDetailsViewController.swift in Sources */,
 				CC07BFAC2309C1F200E83B0D /* OffersView.swift in Sources */,
 				CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */,
+				CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */,
 				CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */,
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
 				CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */,
