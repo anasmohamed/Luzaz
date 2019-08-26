@@ -27,8 +27,9 @@ struct NetworkingConstants {
    
     
     static let getOffers = "getOffers"
-    
-    
+    static let register = "register"
+    static let login = "login"
+
     
     //get offers pramters
     static let country = "country"
@@ -41,7 +42,17 @@ struct NetworkingConstants {
     static let image = "image"
     static let reseller_name = "reseller_name"
     
-    //
+    // User Requests
+    static let update = "update"
+    
+    // User Query Parameters
+    static let userId = "userId"
+    static let fullName = "name"
+    static let email = "mail"
+    static let phone = "phone"
+    static let password = "password"
+    static let rePassword = "re_password"
+    static let countryId = "country_id"
     
 }
 

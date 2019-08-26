@@ -20,18 +20,18 @@ class LeftSidePanelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setIconForBtn(button: homeBtn, icon:"home")
-        setIconForBtn(button: chatBtn, icon: "chat")
-        setIconForBtn(button: catategoryBtn, icon: "catago")
-        setIconForBtn(button: favoriteBtn, icon:"favorites")
-        setIconForBtn(button: countryBtn, icon: getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
+//        setIconForBtn(button: chatBtn, icon: "chat")
+//        setIconForBtn(button: catategoryBtn, icon: "catago")
+//        setIconForBtn(button: favoriteBtn, icon:"favorites")
+//        setIconForBtn(button: countryBtn, icon: getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
         // Do any additional setup after loading the view.
     }
     func setIconForBtn(button : UIButton, icon : String)
     {
-        let icon = UIImage(named: icon)!
-        button.setImage(icon, for: .normal)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+        
+       
+
+       
     }
     
     @IBAction func languageBrnWasPressed(_ sender: Any) {
@@ -39,7 +39,8 @@ class LeftSidePanelVC: UIViewController {
         
     }
     @IBAction func countryBrnWasPressed(_ sender: Any) {
-        
+        let countryVC = storyboard?.instantiateViewController(withIdentifier: "CountryVC") as! LanguagesViewController
+        self.present(countryVC, animated: true, completion: nil)
     }
   
     @IBAction func winWithUsBtnWasPressed(_ sender: Any) {

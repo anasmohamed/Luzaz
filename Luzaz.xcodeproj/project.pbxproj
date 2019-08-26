@@ -64,6 +64,10 @@
 		CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */; };
 		CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC123B4230AEEFC0033BD18 /* OffersCell.swift */; };
 		CCC123B7230AEEFC0033BD18 /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC123B5230AEEFC0033BD18 /* OffersCell.xib */; };
+		CCDA9B212313133F001525F8 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA9B202313133F001525F8 /* UserInteractor.swift */; };
+		CCDA9B232313137A001525F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA9B222313137A001525F8 /* User.swift */; };
+		CCDA9B25231320FC001525F8 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA9B24231320FC001525F8 /* RegistrationPresenter.swift */; };
+		CCDA9B2723132126001525F8 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA9B2623132126001525F8 /* RegistrationView.swift */; };
 		CCE369AC230BFD57008CAC35 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE369AB230BFD57008CAC35 /* ContainerVC.swift */; };
 		CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE369B0230BFFB1008CAC35 /* CenterVCDelegate.swift */; };
 		CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0C33522F5AE09003511CD /* RegisterViewController.swift */; };
@@ -152,6 +156,10 @@
 		CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+PresenterDelagate.swift"; sourceTree = "<group>"; };
 		CCC123B4230AEEFC0033BD18 /* OffersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
 		CCC123B5230AEEFC0033BD18 /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
+		CCDA9B202313133F001525F8 /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		CCDA9B222313137A001525F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CCDA9B24231320FC001525F8 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		CCDA9B2623132126001525F8 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CCE369AB230BFD57008CAC35 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		CCE369B0230BFFB1008CAC35 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 		CCF0C33522F5AE09003511CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +251,7 @@
 		CC52DCFA23096C9900981C31 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CCDA9B1B2313123B001525F8 /* Authentication */,
 				CC2379EC2310A79200923D59 /* Languages */,
 				CC9482E5230F7D020058D78A /* Countries */,
 				CCE369AF230BFF8A008CAC35 /* LeftSidePanel */,
@@ -277,6 +286,7 @@
 			children = (
 				CC52DD00230970E900981C31 /* Offer.swift */,
 				CC9482F0230F81400058D78A /* Country.swift */,
+				CCDA9B222313137A001525F8 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -348,7 +358,6 @@
 				CC8695C922F4F54B00E9F14D /* Assets.xcassets */,
 				CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */,
 				CC8695CE22F4F54B00E9F14D /* Info.plist */,
-				CCF0C33522F5AE09003511CD /* RegisterViewController.swift */,
 				CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */,
 			);
 			path = Luzaz;
@@ -407,6 +416,33 @@
 				CC9482F5230F84C10058D78A /* CountryView.swift */,
 			);
 			name = Protocol;
+			sourceTree = "<group>";
+		};
+		CCDA9B1B2313123B001525F8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CCDA9B1F231312C0001525F8 /* Interactor */,
+				CCDA9B1E231312A6001525F8 /* Presenter */,
+				CCF0C33522F5AE09003511CD /* RegisterViewController.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		CCDA9B1E231312A6001525F8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCDA9B24231320FC001525F8 /* RegistrationPresenter.swift */,
+				CCDA9B2623132126001525F8 /* RegistrationView.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CCDA9B1F231312C0001525F8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CCDA9B202313133F001525F8 /* UserInteractor.swift */,
+			);
+			name = Interactor;
 			sourceTree = "<group>";
 		};
 		CCE369AF230BFF8A008CAC35 /* LeftSidePanel */ = {
@@ -647,7 +683,9 @@
 				CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */,
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
 				CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */,
+				CCDA9B2723132126001525F8 /* RegistrationView.swift in Sources */,
 				CC9482F6230F84C10058D78A /* CountryView.swift in Sources */,
+				CCDA9B25231320FC001525F8 /* RegistrationPresenter.swift in Sources */,
 				CC9482EF230F805A0058D78A /* CountryPresenter.swift in Sources */,
 				CC9482E7230F7D3D0058D78A /* CountriesViewController.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
@@ -659,6 +697,7 @@
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
 				CC86961622F4F61C00E9F14D /* PopUpCountryViewController.swift in Sources */,
 				CCE369AC230BFD57008CAC35 /* ContainerVC.swift in Sources */,
+				CCDA9B212313133F001525F8 /* UserInteractor.swift in Sources */,
 				CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */,
 				CC52DD01230970E900981C31 /* Offer.swift in Sources */,
 				CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */,
@@ -671,6 +710,7 @@
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
 				CC9482F1230F81400058D78A /* Country.swift in Sources */,
 				CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */,
+				CCDA9B232313137A001525F8 /* User.swift in Sources */,
 				CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */,
 				CC86960922F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift in Sources */,
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,

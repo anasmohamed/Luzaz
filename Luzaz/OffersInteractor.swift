@@ -61,32 +61,6 @@ class OffersInteractor {
                 completionHandler(nil, error)
             }
 
-//            if let result = response.result.value {
-//            
-//                let json = JSON(result)
-//                print("jsonnya:\(json)")
-//                var offersList = [Offer]()
-//                let offers = json["data"].arrayValue
-//                for offer in offers
-//                {
-//                    let data = Offer(withJSON: offer)
-//                    offersList.append(data)
-//                }
-//                
-//            completionHandler(offersList, nil)
-//            }
-//            else{
-//                completionHandler(nil, error)
-//            }
-            
-            
-//        }
-        //            switch result {
-        //            case .success(let offers):
-        //                completionHandler(offers, nil)
-        //            case .failure(let error):
-        //                completionHandler(nil, error)
-        //            }
     }
 }
 
