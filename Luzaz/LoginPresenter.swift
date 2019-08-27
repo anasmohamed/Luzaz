@@ -40,8 +40,8 @@ class LoginPresenter {
                     self.user = user
                     self.view?.loginSuccess(user: self.user!)
                     
-                    guard let userId = user.userId else { return }
-                  //  self.saveUserIdIntoUserDefaults(userId: userId)
+                    guard let userId = user.userId,let token = user.token else { return }
+                   self.saveUserIdIntoUserDefaults(userId: userId,token: token)
                 }
             }
         } else {
@@ -57,8 +57,9 @@ class LoginPresenter {
         return !(password.isEmpty)
     }
     
-    private func saveUserIdIntoUserDefaults(userId: Int) {
+    private func saveUserIdIntoUserDefaults(userId: String,token:String) {
         let userDefaults = UserDefaults.standard
         userDefaults.set(userId, forKey: "userId")
+        userDefaults.set(token, forKey: "token")
     }
 }

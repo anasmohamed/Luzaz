@@ -48,7 +48,7 @@ struct NetworkingConstants {
     // User Query Parameters
     static let userId = "user_id"
     static let fullName = "name"
-    static let email = "mail"
+    static let email = "email"
     static let phone = "phone"
     static let password = "password"
     static let rePassword = "re_password"
