@@ -12,7 +12,6 @@ target 'Luzaz' do
   pod 'AlamofireObjectMapper'
   pod 'SwiftyJSON', '3.0.0'
 
-
   target 'LuzazTests' do
     inherit! :search_paths
     # Pods for testing

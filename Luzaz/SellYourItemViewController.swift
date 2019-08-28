@@ -8,12 +8,14 @@
 
 import UIKit
 
-class SellYourItemViewController: UIViewController {
+class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate{
 
+    @IBOutlet weak var imageView: UIImageView!
 
     @IBOutlet weak var cityList: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
-    
+    var imagePicker = UIImagePickerController()
+
     var list = ["Cairo","Giza","Alex"]
     
     override func viewDidLoad() {
@@ -22,10 +24,18 @@ class SellYourItemViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            print("Button capture")
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
     }
+
     func numberOfComponentsInPickerView (pickerView:UIPickerView) ->Int {
         return 1
     }
@@ -42,6 +52,20 @@ class SellYourItemViewController: UIViewController {
          self.cityList.text = self.list[raw]
         self.dropDown.isHidden = true
     }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil);
+        
+    }
+//    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+//        imageView.image = image
+//        self.dismiss(animated: true, completion: { () -> Void in})
+//
+//    }
+    
     
     func textFieldDidBeginEditing(textField :UITextField)
     {

@@ -7,17 +7,19 @@
 //
 
 import Foundation
+import UIKit
 class OffersPresenter{
     
     private weak var view: OffersView?
     private let offersInteractor: OffersInteractor
     private var offer: Offer?
     private var offers: [Offer]
-    
+    private var filteredOffers : [Offer]
     init(view: OffersView) {
         self.view = view
         offersInteractor = OffersInteractor()
         offers = [Offer]()
+        filteredOffers = [Offer]()
     }
 
     func viewDidLoad() {
@@ -42,9 +44,24 @@ class OffersPresenter{
     func getOffersCount() -> Int {
         return offers.count
     }
+    func getFilteredOffersCount() -> Int {
+        return filteredOffers.count
+    }
+    func getSearchedOffer(searchText : String) {
+     filteredOffers =  offers.filter({( offer : Offer) -> Bool in
+            return (offer.title?.lowercased().contains(searchText.lowercased()))!
+        })
+
+      
+    }
     
-    func configure(cell: OffersCellView, for index: Int) {
-        let offer = offers[index]
+    func configure(cell: OffersCellView, for index: Int,isFiltering : Bool) {
+        let offer : Offer
+        if isFiltering {
+            offer = filteredOffers[index]
+        }else{
+            offer = offers[index]
+        }
         guard let image = offer.image
              else { return }
         

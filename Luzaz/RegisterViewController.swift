@@ -42,6 +42,10 @@ class RegisterViewController: UIViewController {
     }
     
     
+    @IBAction func loginBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
     override func viewDidAppear(_ animated: Bool) {
         scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+900)
     }

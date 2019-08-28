@@ -78,6 +78,7 @@
 		CCE369AC230BFD57008CAC35 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE369AB230BFD57008CAC35 /* ContainerVC.swift */; };
 		CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE369B0230BFFB1008CAC35 /* CenterVCDelegate.swift */; };
 		CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0C33522F5AE09003511CD /* RegisterViewController.swift */; };
+		CCF1BBC72316AFF000B1FA16 /* OffersVC+SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF1BBC62316AFF000B1FA16 /* OffersVC+SearchDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		CCE369AB230BFD57008CAC35 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		CCE369B0230BFFB1008CAC35 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 		CCF0C33522F5AE09003511CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CCF1BBC62316AFF000B1FA16 /* OffersVC+SearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersVC+SearchDelegate.swift"; sourceTree = "<group>"; };
 		D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34F3A2E495180620BBEA816 /* Pods-LuzazTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.release.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luzaz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +285,7 @@
 				CC07BFAA2309C1B900E83B0D /* Presenter */,
 				CC52DCFC23096F6500981C31 /* Interactor */,
 				CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */,
+				CCF1BBC62316AFF000B1FA16 /* OffersVC+SearchDelegate.swift */,
 			);
 			name = Offers;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */,
 				CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */,
 				CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */,
+				CCF1BBC72316AFF000B1FA16 /* OffersVC+SearchDelegate.swift in Sources */,
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
 				CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */,
 				CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */,

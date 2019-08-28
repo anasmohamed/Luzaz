@@ -24,11 +24,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = LoginPresenter(view: self)
-        emailTextField.leftViewMode = UITextFieldViewMode.always
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        let image = UIImage(named: "userIcon")
-        imageView.image = image
-        emailTextField.leftView = imageView
+        putImageToTextField(textField: emailTextField)
+        putImageToTextField(textField: passwordTextField)
+
         scroller.translatesAutoresizingMaskIntoConstraints = false
         scroller.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -37,6 +35,14 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func putImageToTextField(textField :UITextField) {
+        
+        textField.leftViewMode = UITextFieldViewMode.always
+        let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 20, height: 20))
+        let image = UIImage(named: "userIcon")
+        imageView.image = image
+        textField.leftView = imageView
+    }
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }

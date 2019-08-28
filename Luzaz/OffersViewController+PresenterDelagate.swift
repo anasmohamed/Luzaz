@@ -11,11 +11,11 @@ import UIKit
 extension OffersViewController: OffersView {
     
     func showIndicator() {
-       // spinner.startAnimating()
+        spinner.startAnimating()
     }
     
     func hideIndicator() {
-       // spinner.stopAnimating()
+        spinner.stopAnimating()
     }
     
     func getOffersSuccess() {

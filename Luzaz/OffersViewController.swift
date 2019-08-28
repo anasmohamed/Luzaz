@@ -10,17 +10,29 @@ import UIKit
 
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     // MARK: Outlets
-    // @IBOutlet weak var spinner: UIActivityIndicatorView!
-    private var presenter: OffersPresenter!
+     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    var presenter: OffersPresenter!
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate : CenterVCDelegate?
     
+    var searchActive : Bool = false
+    let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         presenter = OffersPresenter(view: self)
+        self.searchController.searchResultsUpdater = self
+        self.searchController.delegate = self
+        self.searchController.searchBar.delegate = self
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.dimsBackgroundDuringPresentation = true
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Word"
+        searchController.searchBar.sizeToFit()
+        searchController.searchBar.becomeFirstResponder()
+        self.navigationItem.titleView = searchController.searchBar
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,28 +48,23 @@ class OffersViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.getOffersCount()
+        if searchActive {
+            return presenter.getFilteredOffersCount()
+        }
+        else
+        {
+            return presenter.getOffersCount()
+            
+        }
         
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
-
-        presenter.configure(cell: cell, for: indexPath.row)
+        presenter.configure(cell: cell, for: indexPath.row,isFiltering: isFiltering())
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let kWhateverHeightYouWant = collectionView.bounds.size.height/2
-//        return CGSize(width: (collectionView.bounds.size.width/2 - CGFloat(15)), height: CGFloat(kWhateverHeightYouWant - 63))
-//    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // Compute the dimension of a cell for an NxN layout with space S between
-        // cells.  Take the collection view's width, subtract (N-1)*S points for
-        // the spaces between the cells, and then divide by N to find the final
-        // dimension for the cell's width and height.
-        
         let cellsAcross: CGFloat = 2
         let spaceBetweenCells: CGFloat = 1
         let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
@@ -71,11 +78,12 @@ class OffersViewController: UIViewController,UICollectionViewDelegate,UICollecti
         self.present(offersDetailsVC,animated:true,completion:nil)
         
     }
- 
+    
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
         delegate?.toggleLeftPane()
- 
+        
     }
+
     
 }
