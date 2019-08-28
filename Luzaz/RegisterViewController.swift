@@ -38,7 +38,6 @@ class RegisterViewController: UIViewController {
         scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         scroller.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         scroller.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        // Do any additional setup after loading the view.
     }
     
     

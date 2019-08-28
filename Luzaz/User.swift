@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-class User :NSCoding{
+class User :NSObject,NSCoding{
     var fullName : String?
     var phoneNumber : String?
     var mail : String?
@@ -19,7 +19,7 @@ class User :NSCoding{
     var token : String?
     var countryEnglishName : String?
     var countryArabicName : String?
-    init()
+    override init()
     {}
     init(withJSON data: JSON) {
         self.userId = data[NetworkingConstants.userId].stringValue

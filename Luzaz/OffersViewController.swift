@@ -8,31 +8,23 @@
 
 import UIKit
 
-class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,
+UISearchBarDelegate{
+    @IBOutlet weak var searchBar: UISearchBar!
     // MARK: Outlets
      @IBOutlet weak var spinner: UIActivityIndicatorView!
     var presenter: OffersPresenter!
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate : CenterVCDelegate?
-    
-    var searchActive : Bool = false
-    let searchController = UISearchController(searchResultsController: nil)
-    
+
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         presenter = OffersPresenter(view: self)
-        self.searchController.searchResultsUpdater = self
-        self.searchController.delegate = self
-        self.searchController.searchBar.delegate = self
-        self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.dimsBackgroundDuringPresentation = true
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Word"
-        searchController.searchBar.sizeToFit()
-        searchController.searchBar.becomeFirstResponder()
-        self.navigationItem.titleView = searchController.searchBar
+        searchBar.delegate = self
+
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,19 +40,30 @@ class OffersViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searchActive {
-            return presenter.getFilteredOffersCount()
-        }
-        else
-        {
-            return presenter.getOffersCount()
-            
-        }
+//        if searchActive {
+//            return presenter.getFilteredOffersCount()
+//        }
+//        else
+//        {
+//            return presenter.getOffersCount()
+//            
+//        }
+        return presenter.getFilteredOffersCount()
+    }
+    // This method updates filteredData based on the text in the Search Box
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // When there is no text, filteredData is the same as the original data
+        // When user has entered text into the search box
+        // Use the filter method to iterate over all items in the data array
+        // For each item, return true if the item should be included and false if the
+        // item should NOT be included
+       presenter.getSearchedOffer(searchText: searchText)
         
+        collectionView.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
-        presenter.configure(cell: cell, for: indexPath.row,isFiltering: isFiltering())
+        presenter.configure(cell: cell, for: indexPath.row,isFiltering:true)
         return cell
     }
     
@@ -82,7 +85,6 @@ class OffersViewController: UIViewController,UICollectionViewDelegate,UICollecti
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
         delegate?.toggleLeftPane()
-        
     }
 
     
