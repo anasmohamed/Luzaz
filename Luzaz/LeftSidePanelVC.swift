@@ -39,7 +39,7 @@ class LeftSidePanelVC: UIViewController {
         
     }
     @IBAction func countryBrnWasPressed(_ sender: Any) {
-        let countryVC = storyboard?.instantiateViewController(withIdentifier: "CountryVC") as! LanguagesViewController
+        let countryVC = storyboard?.instantiateViewController(withIdentifier: "CountryVC") as! CountriesViewController
         self.present(countryVC, animated: true, completion: nil)
     }
   

@@ -37,6 +37,7 @@ class OffersPresenter{
             } else {
                 guard let offers = offers else { return }
                 self.offers = offers
+                self.filteredOffers = offers
                 self.view?.getOffersSuccess()
             }
         }
