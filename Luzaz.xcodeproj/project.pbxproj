@@ -62,6 +62,7 @@
 		CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482F3230F82D10058D78A /* CountryCellView.swift */; };
 		CC9482F6230F84C10058D78A /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482F5230F84C10058D78A /* CountryView.swift */; };
 		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
+		CCB406C6231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */; };
 		CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F5472313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift */; };
 		CCB8F54A2313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F5492313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift */; };
 		CCB8F54C2313ED620025FEA1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F54B2313ED620025FEA1 /* LoginPresenter.swift */; };
@@ -163,6 +164,7 @@
 		CC9482F3230F82D10058D78A /* CountryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCellView.swift; sourceTree = "<group>"; };
 		CC9482F5230F84C10058D78A /* CountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
+		CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemViewController+PickerDelegate.swift"; sourceTree = "<group>"; };
 		CCB8F5472313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CCB8F5492313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		CCB8F54B2313ED620025FEA1 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 		CC52DCFA23096C9900981C31 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CCB406C4231815F50099B74E /* Sell Your Items */,
 				CCDA9B1B2313123B001525F8 /* Authentication */,
 				CC2379EC2310A79200923D59 /* Languages */,
 				CC9482E5230F7D020058D78A /* Countries */,
@@ -434,6 +437,14 @@
 				CC9482F5230F84C10058D78A /* CountryView.swift */,
 			);
 			name = Protocol;
+			sourceTree = "<group>";
+		};
+		CCB406C4231815F50099B74E /* Sell Your Items */ = {
+			isa = PBXGroup;
+			children = (
+				CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */,
+			);
+			name = "Sell Your Items";
 			sourceTree = "<group>";
 		};
 		CCDA9B1B2313123B001525F8 /* Authentication */ = {
@@ -764,6 +775,7 @@
 				CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */,
 				CCF1BBC72316AFF000B1FA16 /* OffersVC+SearchDelegate.swift in Sources */,
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
+				CCB406C6231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift in Sources */,
 				CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */,
 				CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */,
 				CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */,
