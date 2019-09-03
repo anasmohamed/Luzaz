@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,10 +14,14 @@
 		CC07BFAC2309C1F200E83B0D /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAB2309C1F200E83B0D /* OffersView.swift */; };
 		CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAD2309C21000E83B0D /* OffersCellView.swift */; };
 		CC07BFB02309C23800E83B0D /* OffersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */; };
+		CC0F9E69231D949800280C0A /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F9E68231D949800280C0A /* SellYourItemSecondViewCotroller+PickerDelegate.swift */; };
 		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
 		CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */; };
 		CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */; };
 		CC52DD01230970E900981C31 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DD00230970E900981C31 /* Offer.swift */; };
+		CC6861FD231B369D00C8F4FF /* SellYourItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */; };
+		CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */; };
+		CC686201231B386200C8F4FF /* SellYourItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */; };
 		CC6C6FEF230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */; };
 		CC7F24182316D55400A2699C /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F24172316D55400A2699C /* TextFieldIcon.swift */; };
 		CC8365B2230869E000A71DFC /* LuzazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8365B1230869E000A71DFC /* LuzazRouter.swift */; };
@@ -110,10 +114,14 @@
 		CC07BFAB2309C1F200E83B0D /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
 		CC07BFAD2309C21000E83B0D /* OffersCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCellView.swift; sourceTree = "<group>"; };
 		CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersPresenter.swift; sourceTree = "<group>"; };
+		CC0F9E68231D949800280C0A /* SellYourItemSecondViewCotroller+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemSecondViewCotroller+PickerDelegate.swift"; sourceTree = "<group>"; };
 		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersInteractor.swift; sourceTree = "<group>"; };
 		CC52DD00230970E900981C31 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemPresenter.swift; sourceTree = "<group>"; };
+		CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
+		CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemInteractor.swift; sourceTree = "<group>"; };
 		CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+CellSpaceDelegate.swift"; sourceTree = "<group>"; };
 		CC7F24172316D55400A2699C /* TextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
 		CC8365B1230869E000A71DFC /* LuzazRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuzazRouter.swift; sourceTree = "<group>"; };
@@ -260,6 +268,15 @@
 			name = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		CC0F9E67231D943600280C0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */,
+				CC0F9E68231D949800280C0A /* SellYourItemSecondViewCotroller+PickerDelegate.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		CC2379EC2310A79200923D59 /* Languages */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,8 +301,8 @@
 		CC52DCFB23096CF000981C31 /* Offers */ = {
 			isa = PBXGroup;
 			children = (
-				CC8695F622F4F61C00E9F14D /* OffersViewController.swift */,
 				CC05BEAD230AF8DA006CE43D /* OffersDetailsViewController.swift */,
+				CC8695F622F4F61C00E9F14D /* OffersViewController.swift */,
 				CC07BFB52309C3D700E83B0D /* CollectionViewCell */,
 				CC07BFAA2309C1B900E83B0D /* Presenter */,
 				CC52DCFC23096F6500981C31 /* Interactor */,
@@ -311,6 +328,23 @@
 				CCDA9B222313137A001525F8 /* User.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		CC6861FA231B362900C8F4FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		CC6861FB231B364400C8F4FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */,
+				CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 		CC8365B0230869C300A71DFC /* Network */ = {
@@ -368,8 +402,6 @@
 				CC86960222F4F61C00E9F14D /* SellYourItemEndViewController.swift */,
 				CC86960322F4F61C00E9F14D /* SellYourItemFifthViewController.swift */,
 				CC86960422F4F61C00E9F14D /* SellYourItemFourthViewController.swift */,
-				CC86960522F4F61C00E9F14D /* SellYourItemSecondViewController.swift */,
-				CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */,
 				CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */,
 				CC86960822F4F61C00E9F14D /* TetViewController.swift */,
 				CC8695C222F4F54B00E9F14D /* AppDelegate.swift */,
@@ -442,7 +474,11 @@
 		CCB406C4231815F50099B74E /* Sell Your Items */ = {
 			isa = PBXGroup;
 			children = (
-				CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */,
+				CC0F9E67231D943600280C0A /* Extensions */,
+				CC86960522F4F61C00E9F14D /* SellYourItemSecondViewController.swift */,
+				CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */,
+				CC6861FB231B364400C8F4FF /* Presenter */,
+				CC6861FA231B362900C8F4FF /* Interactor */,
 			);
 			name = "Sell Your Items";
 			sourceTree = "<group>";
@@ -580,7 +616,7 @@
 				};
 			};
 			buildConfigurationList = CC8695BA22F4F54B00E9F14D /* Build configuration list for PBXProject "Luzaz" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -741,9 +777,11 @@
 				CCDA9B212313133F001525F8 /* UserInteractor.swift in Sources */,
 				CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */,
 				CC52DD01230970E900981C31 /* Offer.swift in Sources */,
+				CC686201231B386200C8F4FF /* SellYourItemInteractor.swift in Sources */,
 				CCB8F54E2313ED800025FEA1 /* LoginView.swift in Sources */,
 				CC86960D22F4F61C00E9F14D /* CollectionViewCellCategory.swift in Sources */,
 				CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */,
+				CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */,
 				CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */,
 				CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */,
 				CC07BFB02309C23800E83B0D /* OffersPresenter.swift in Sources */,
@@ -752,6 +790,7 @@
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
 				CC9482F1230F81400058D78A /* Country.swift in Sources */,
 				CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */,
+				CC0F9E69231D949800280C0A /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */,
 				CCDA9B232313137A001525F8 /* User.swift in Sources */,
 				CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */,
 				CCB8F5542313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift in Sources */,
@@ -770,6 +809,7 @@
 				CCF0C33622F5AE09003511CD /* RegisterViewController.swift in Sources */,
 				CC05BEAE230AF8DA006CE43D /* OffersDetailsViewController.swift in Sources */,
 				CC07BFAC2309C1F200E83B0D /* OffersView.swift in Sources */,
+				CC6861FD231B369D00C8F4FF /* SellYourItemPresenter.swift in Sources */,
 				CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */,
 				CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */,
 				CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */,
@@ -880,6 +920,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -921,6 +962,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

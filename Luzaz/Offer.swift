@@ -18,7 +18,11 @@ class Offer {
     var price_after_discount: String?
     var image : String?
     var reseller_name : String?
-    
+    var city : String?
+    var itemImages : [UIImage]?
+    var category : String?
+    var subCateogry : String?
+    var brand : String?
     init(withJSON data: JSON) {
         
         self.title = data[NetworkingConstants.title].stringValue
@@ -30,6 +34,9 @@ class Offer {
         self.reseller_name  = data[NetworkingConstants.reseller_name].stringValue
     }
     
+    init() {
+        
+    }
 //    required init(map: Map) {
 //        
 //    }

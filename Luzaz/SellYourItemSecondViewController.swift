@@ -8,41 +8,28 @@
 
 import UIKit
 
-class SellYourItemSecondViewController: UIViewController {
+class SellYourItemSecondViewController: UIViewController,SellYourItemView {
 
     @IBOutlet weak var selectCategory: UITextField!
-    
+    var presenter : SellYourItemPresenter!
+
+    @IBOutlet weak var brandStackView: UIStackView!
+    @IBOutlet weak var subCategoryStackView: UIStackView!
     @IBOutlet weak var categoryDropList: UIPickerView!
     var categoryList = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
+    var subCategoryList = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
+    var brands = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        subCategoryStackView.isHidden = true
+        brandStackView.isHidden = true
+        presenter = SellYourItemPresenter(view: self)
 
-        // Do any additional setup after loading the view.
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func numberOfComponentsInPickerView (pickerView:UIPickerView) ->Int {
-        return 1
-    }
-    
-    func pickerView (pickerView:UIPickerView ,umberOfComponentsInPickerView component:Int  )->Int{
-        return categoryList.count
-    }
-    func pickerView (pickerView:UIPickerView ,titelOfRaw raw:Int , forComponent component :Int)-> String{
-        self.view.endEditing(true)
-        return categoryList[raw]
-        
-    }
-    
-    func pickerView (pickerView:UIPickerView ,didSelectedRaw raw :Int , InComponent component:Int){
-        self.selectCategory.text = self.categoryList [raw]
-        self.categoryDropList.isHidden = true
-    }
-    
+   
+
     func textFieldDidBeginEditing(textField :UITextField)
     {
         if textField == self.selectCategory{

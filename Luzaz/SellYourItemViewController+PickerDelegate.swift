@@ -15,6 +15,7 @@ extension SellYourItemViewController : UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+       
         return list.count
     }
     
@@ -23,5 +24,6 @@ extension SellYourItemViewController : UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        presenter.setItemCity(cityIndex: row)
     }
 }

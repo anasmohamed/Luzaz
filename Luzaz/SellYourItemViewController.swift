@@ -8,25 +8,25 @@
 
 import UIKit
 
-class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate{
-
+class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate,SellYourItemView{
+    
     @IBOutlet weak var cityPickerView: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
-
-    @IBOutlet weak var cityList: UITextField!
-    @IBOutlet weak var dropDown: UIPickerView!
     var imagePicker = UIImagePickerController()
-
+    var presenter : SellYourItemPresenter!
     var list = ["Cairo","Giza","Alex"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         cityPickerView.dataSource = self
         cityPickerView.delegate = self
-
-        // Do any additional setup after loading the view.
+        presenter = SellYourItemPresenter(view: self)
     }
-
+    
+    
+    @IBAction func nextButtonWasPressed(_ sender: Any) {
+        
+        
+    }
     @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             print("Button capture")
@@ -38,23 +38,23 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
             present(imagePicker, animated: true, completion: nil)
         }
     }
-//
-//    func numberOfComponentsInPickerView (pickerView:UIPickerView) ->Int {
-//        return 1
-//    }
-//
-//    func pickerView (pickerView:UIPickerView ,umberOfComponentsInPickerView component:Int  )->Int{
-//        return list.count
-//    }
-//    func pickerView (pickerView:UIPickerView ,titelOfRaw raw:Int , forComponent component :Int)-> String{
-//        self.view.endEditing(true)
-//        return list[raw]
-//    }
-//    
-//    func pickerView (pickerView:UIPickerView ,didSelectedRaw raw :Int , InComponent component:Int){
-//         self.cityList.text = self.list[raw]
-//        self.dropDown.isHidden = true
-//    }
+    //
+    //    func numberOfComponentsInPickerView (pickerView:UIPickerView) ->Int {
+    //        return 1
+    //    }
+    //
+    //    func pickerView (pickerView:UIPickerView ,umberOfComponentsInPickerView component:Int  )->Int{
+    //        return list.count
+    //    }
+    //    func pickerView (pickerView:UIPickerView ,titelOfRaw raw:Int , forComponent component :Int)-> String{
+    //        self.view.endEditing(true)
+    //        return list[raw]
+    //    }
+    //
+    //    func pickerView (pickerView:UIPickerView ,didSelectedRaw raw :Int , InComponent component:Int){
+    //         self.cityList.text = self.list[raw]
+    //        self.dropDown.isHidden = true
+    //    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
@@ -63,15 +63,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         picker.dismiss(animated: true, completion: nil);
         
     }
-
     
-    func textFieldDidBeginEditing(textField :UITextField)
-    {
-        if textField == self.cityList{
-            self.dropDown.isHidden = false
-            textField.endEditing(true)
-            
-        }
-    }
+    
     
 }
