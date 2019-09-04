@@ -15,6 +15,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var imagePicker = UIImagePickerController()
     var presenter : SellYourItemPresenter!
     var list = ["Cairo","Giza","Alex"]
+    var isCityEntered = false
     override func viewDidLoad() {
         super.viewDidLoad()
         cityPickerView.dataSource = self
@@ -24,7 +25,15 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     
     
     @IBAction func nextButtonWasPressed(_ sender: Any) {
-        
+        if isCityEntered
+        {
+            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
+            self.present(sellYourItemSecondVC,animated:true,completion: nil)
+            
+        }else
+        {
+           showError(error: "you must choose city")
+        }
         
     }
     @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
@@ -37,6 +46,15 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
             
             present(imagePicker, animated: true, completion: nil)
         }
+    }
+    func showError(error : String)
+    {
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        
+        present(alertController, animated: true, completion: nil)
     }
     //
     //    func numberOfComponentsInPickerView (pickerView:UIPickerView) ->Int {

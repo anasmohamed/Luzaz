@@ -8,7 +8,7 @@
 
 import Foundation
 protocol SellYourItemView: class {
-    //func insertItem()
+    func showError(error : String)
     
     
 }

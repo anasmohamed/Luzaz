@@ -23,6 +23,8 @@
 		CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */; };
 		CC686201231B386200C8F4FF /* SellYourItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */; };
 		CC6C6FEF230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */; };
+		CC7167C9231F014E00F0BC00 /* SellYourItemSecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7167C8231F014E00F0BC00 /* SellYourItemSecondPresenter.swift */; };
+		CC7167CB231F06EE00F0BC00 /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7167CA231F06EE00F0BC00 /* SellYourItemSecondView.swift */; };
 		CC7F24182316D55400A2699C /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F24172316D55400A2699C /* TextFieldIcon.swift */; };
 		CC8365B2230869E000A71DFC /* LuzazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8365B1230869E000A71DFC /* LuzazRouter.swift */; };
 		CC8365B4230869FC00A71DFC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8365B3230869FC00A71DFC /* NetworkConstants.swift */; };
@@ -123,6 +125,8 @@
 		CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
 		CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemInteractor.swift; sourceTree = "<group>"; };
 		CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+CellSpaceDelegate.swift"; sourceTree = "<group>"; };
+		CC7167C8231F014E00F0BC00 /* SellYourItemSecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondPresenter.swift; sourceTree = "<group>"; };
+		CC7167CA231F06EE00F0BC00 /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
 		CC7F24172316D55400A2699C /* TextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
 		CC8365B1230869E000A71DFC /* LuzazRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuzazRouter.swift; sourceTree = "<group>"; };
 		CC8365B3230869FC00A71DFC /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -272,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */,
-				CC0F9E68231D949800280C0A /* SellYourItemSecondViewCotroller+PickerDelegate.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -343,6 +346,43 @@
 			children = (
 				CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */,
 				CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CC7167C4231EFF6900F0BC00 /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */,
+				CC0F9E67231D943600280C0A /* Extensions */,
+				CC6861FB231B364400C8F4FF /* Presenter */,
+			);
+			name = FirstViewController;
+			sourceTree = "<group>";
+		};
+		CC7167C5231F004500F0BC00 /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC7167C7231F00FF00F0BC00 /* Presenter */,
+				CC86960522F4F61C00E9F14D /* SellYourItemSecondViewController.swift */,
+				CC7167C6231F007500F0BC00 /* Extenstion */,
+			);
+			name = SecondViewController;
+			sourceTree = "<group>";
+		};
+		CC7167C6231F007500F0BC00 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				CC0F9E68231D949800280C0A /* SellYourItemSecondViewCotroller+PickerDelegate.swift */,
+			);
+			name = Extenstion;
+			sourceTree = "<group>";
+		};
+		CC7167C7231F00FF00F0BC00 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC7167C8231F014E00F0BC00 /* SellYourItemSecondPresenter.swift */,
+				CC7167CA231F06EE00F0BC00 /* SellYourItemSecondView.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -474,11 +514,9 @@
 		CCB406C4231815F50099B74E /* Sell Your Items */ = {
 			isa = PBXGroup;
 			children = (
-				CC0F9E67231D943600280C0A /* Extensions */,
-				CC86960522F4F61C00E9F14D /* SellYourItemSecondViewController.swift */,
-				CC86960622F4F61C00E9F14D /* SellYourItemViewController.swift */,
-				CC6861FB231B364400C8F4FF /* Presenter */,
+				CC7167C5231F004500F0BC00 /* SecondViewController */,
 				CC6861FA231B362900C8F4FF /* Interactor */,
+				CC7167C4231EFF6900F0BC00 /* FirstViewController */,
 			);
 			name = "Sell Your Items";
 			sourceTree = "<group>";
@@ -803,6 +841,7 @@
 				CC86961F22F4F61C00E9F14D /* SellYourItemViewController.swift in Sources */,
 				CC86961322F4F61C00E9F14D /* MainCategoriesViewController.swift in Sources */,
 				CCB8F5502313ED800025FEA1 /* LoginViewController+PresenterDelegate.swift in Sources */,
+				CC7167C9231F014E00F0BC00 /* SellYourItemSecondPresenter.swift in Sources */,
 				CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */,
 				CC7F24182316D55400A2699C /* TextFieldIcon.swift in Sources */,
 				CC86960B22F4F61C00E9F14D /* CategoriesLabelCollectionViewCell.swift in Sources */,
@@ -813,6 +852,7 @@
 				CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */,
 				CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */,
 				CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */,
+				CC7167CB231F06EE00F0BC00 /* SellYourItemSecondView.swift in Sources */,
 				CCF1BBC72316AFF000B1FA16 /* OffersVC+SearchDelegate.swift in Sources */,
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
 				CCB406C6231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift in Sources */,

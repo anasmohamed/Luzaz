@@ -20,13 +20,5 @@ class SellYourItemPresenter {
     func setItemCity(cityIndex : Int)  {
         sellItem?.city = String(cityIndex)
     }
-    func setItemCategory(category : String)  {
-        sellItem?.category = category
-    }
-    func setItemSubCategory(subCategory : String) {
-        sellItem?.subCateogry = subCategory
-    }
-    func setItemBrand(brand : String) {
-        sellItem?.brand = brand
-    }
+   
 }
