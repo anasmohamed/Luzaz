@@ -23,4 +23,10 @@ class SellYourItemFourthPresenter
         sellItem?.condition = conditon
     }
     
+    func setItemTitle(title:String)  {
+        sellItem?.title = title
+    }
+    func setItemDescription(descrition: String){
+       sellItem?.description = descrition
+    }
 }

@@ -1657,6 +1657,9 @@
                                         <state key="normal" title="Next ">
                                             <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextBtnWasPressed:" destination="z6w-pi-DUc" eventType="touchUpInside" id="33Q-1f-wCz"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-5F-jpm">
                                         <rect key="frame" x="10" y="120" width="300" height="72"/>
@@ -1891,6 +1894,7 @@
                                             <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="nextBtnWasPressed:" destination="XYb-ge-qm2" eventType="touchUpInside" id="ZH8-0f-xyb"/>
                                             <segue destination="tmU-JU-MDu" kind="show" id="7in-1D-J6V"/>
                                         </connections>
                                     </button>
@@ -1935,6 +1939,10 @@
                             <constraint firstItem="gSY-rr-dFT" firstAttribute="top" secondItem="4QP-23-LEd" secondAttribute="top" id="yrw-me-D1l"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="discountTextView" destination="rnW-8A-Sgw" id="2j0-Bh-amW"/>
+                        <outlet property="priceTextView" destination="nA6-TV-8Ma" id="EMQ-Uh-ILc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5K-2t-IYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2030,6 +2038,7 @@
                                             <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="finishBtnWasPressed:" destination="tmU-JU-MDu" eventType="touchUpInside" id="qlB-tx-ogz"/>
                                             <segue destination="7zw-Tg-UGc" kind="showDetail" id="T56-aK-R3V"/>
                                         </connections>
                                     </button>
@@ -2077,6 +2086,11 @@
                             <constraint firstItem="U1u-jB-Gcu" firstAttribute="top" secondItem="crt-07-e2Q" secondAttribute="top" id="Gdp-qt-agD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextView" destination="Nec-T9-MfE" id="ARb-FQ-wRF"/>
+                        <outlet property="fullNameTextView" destination="gw9-DG-zN9" id="Aqm-Re-k88"/>
+                        <outlet property="mobileNumberTextView" destination="umo-9e-2X4" id="QTj-bl-CN1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtT-Um-q0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

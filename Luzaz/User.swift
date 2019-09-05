@@ -11,7 +11,7 @@ import SwiftyJSON
 class User :NSObject,NSCoding{
     var fullName : String?
     var phoneNumber : String?
-    var mail : String?
+    var email : String?
     var password : String?
     var rePassword : String?
     var countryId : String?
@@ -32,7 +32,7 @@ class User :NSObject,NSCoding{
     init(userId: String?, fullName: String?, email: String?, password: String?,token : String) {
         self.userId = userId
         self.fullName = fullName
-        self.mail = email
+        self.email = email
         self.password = password
         self.token = token
     }
@@ -49,7 +49,7 @@ class User :NSObject,NSCoding{
     func encode(with aCoder: NSCoder) {
         aCoder.encode(userId, forKey: "userId")
         aCoder.encode(fullName, forKey: "fullName")
-        aCoder.encode(mail, forKey: "email")
+        aCoder.encode(email, forKey: "email")
         aCoder.encode(password, forKey: "password")
         aCoder.encode(token,forKey:"token")
     }

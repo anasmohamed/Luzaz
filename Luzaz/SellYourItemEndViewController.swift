@@ -8,28 +8,36 @@
 
 import UIKit
 
-class SellYourItemEndViewController: UIViewController {
+class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
+
+   
+    @IBOutlet weak var mobileNumberTextView: UITextField!
+    @IBOutlet weak var emailTextView: UITextField!
+    @IBOutlet weak var fullNameTextView: UITextField!
+    var presenter : SellYourItemEndPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = SellYourItemEndPresenter(view: self)
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func finishBtnWasPressed(_ sender: Any) {
+        if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text?.isEmpty)! {
+            presenter.setEmail(email: emailTextView.text!)
+            presenter.setFullName(fullName: fullNameTextView.text!)
+            presenter.setMobileNumber(mobileNumber: mobileNumberTextView.text!)
+            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
+            self.present(sellYourItemSecondVC,animated:true,completion: nil)
+        }else{
+            showError(error: "You Should Enter Price")
+        }
+        
     }
-    */
-
+    func showError(error: String) {
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
 }

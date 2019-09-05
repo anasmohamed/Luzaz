@@ -16,17 +16,17 @@ extension SellYourItemFourthViewController : UIPickerViewDelegate,UIPickerViewDa
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         
-      return conditionsList.count
+        return conditionsList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-     return   conditionsList[row]
-
+        return   conditionsList[row]
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         presenter.setItemCondition(conditon: conditionsList[row])
-        
-           }
-
+        isConditionEnterd = true
+    }
+    
 }
