@@ -23,6 +23,7 @@ class Offer {
     var category : String?
     var subCateogry : String?
     var brand : String?
+    var condition : String?
     init(withJSON data: JSON) {
         
         self.title = data[NetworkingConstants.title].stringValue

@@ -23,8 +23,10 @@ class OffersPresenter{
     }
 
     func viewDidLoad() {
-        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
- )
+        
+//        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
+            getOffers(countryId: "1")
+// )
     }
     
     func getOffers(countryId: String) {

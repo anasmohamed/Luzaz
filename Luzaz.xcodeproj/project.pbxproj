@@ -19,6 +19,9 @@
 		CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */; };
 		CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */; };
 		CC52DD01230970E900981C31 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DD00230970E900981C31 /* Offer.swift */; };
+		CC5380DF23215298002E6FF8 /* SellYourItemFourthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5380DE23215298002E6FF8 /* SellYourItemFourthPresenter.swift */; };
+		CC5380E1232152E1002E6FF8 /* SellYourItemFourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5380E0232152E1002E6FF8 /* SellYourItemFourthView.swift */; };
+		CC5380E423215534002E6FF8 /* SellYourItemFourthViewCotroller+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5380E323215534002E6FF8 /* SellYourItemFourthViewCotroller+PickerDelegate.swift */; };
 		CC6861FD231B369D00C8F4FF /* SellYourItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */; };
 		CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */; };
 		CC686201231B386200C8F4FF /* SellYourItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */; };
@@ -121,6 +124,9 @@
 		CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersInteractor.swift; sourceTree = "<group>"; };
 		CC52DD00230970E900981C31 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		CC5380DE23215298002E6FF8 /* SellYourItemFourthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthPresenter.swift; sourceTree = "<group>"; };
+		CC5380E0232152E1002E6FF8 /* SellYourItemFourthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthView.swift; sourceTree = "<group>"; };
+		CC5380E323215534002E6FF8 /* SellYourItemFourthViewCotroller+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemFourthViewCotroller+PickerDelegate.swift"; sourceTree = "<group>"; };
 		CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemPresenter.swift; sourceTree = "<group>"; };
 		CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
 		CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemInteractor.swift; sourceTree = "<group>"; };
@@ -333,6 +339,40 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CC5380DB23215000002E6FF8 /* ThirdViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThirdViewController;
+			sourceTree = "<group>";
+		};
+		CC5380DC2321516F002E6FF8 /* FourthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC5380E22321532E002E6FF8 /* Extension */,
+				CC5380DD23215206002E6FF8 /* Presenter */,
+				CC86960422F4F61C00E9F14D /* SellYourItemFourthViewController.swift */,
+			);
+			name = FourthViewController;
+			sourceTree = "<group>";
+		};
+		CC5380DD23215206002E6FF8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC5380DE23215298002E6FF8 /* SellYourItemFourthPresenter.swift */,
+				CC5380E0232152E1002E6FF8 /* SellYourItemFourthView.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CC5380E22321532E002E6FF8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC5380E323215534002E6FF8 /* SellYourItemFourthViewCotroller+PickerDelegate.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		CC6861FA231B362900C8F4FF /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,7 +481,6 @@
 				CC86960122F4F61C00E9F14D /* RegisterationStatusViewController.swift */,
 				CC86960222F4F61C00E9F14D /* SellYourItemEndViewController.swift */,
 				CC86960322F4F61C00E9F14D /* SellYourItemFifthViewController.swift */,
-				CC86960422F4F61C00E9F14D /* SellYourItemFourthViewController.swift */,
 				CC86960722F4F61C00E9F14D /* SubCategoriesViewController.swift */,
 				CC86960822F4F61C00E9F14D /* TetViewController.swift */,
 				CC8695C222F4F54B00E9F14D /* AppDelegate.swift */,
@@ -514,6 +553,8 @@
 		CCB406C4231815F50099B74E /* Sell Your Items */ = {
 			isa = PBXGroup;
 			children = (
+				CC5380DC2321516F002E6FF8 /* FourthViewController */,
+				CC5380DB23215000002E6FF8 /* ThirdViewController */,
 				CC7167C5231F004500F0BC00 /* SecondViewController */,
 				CC6861FA231B362900C8F4FF /* Interactor */,
 				CC7167C4231EFF6900F0BC00 /* FirstViewController */,
@@ -799,11 +840,13 @@
 				CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */,
 				CCB8F54C2313ED620025FEA1 /* LoginPresenter.swift in Sources */,
 				CCDA9B2723132126001525F8 /* RegistrationView.swift in Sources */,
+				CC5380E423215534002E6FF8 /* SellYourItemFourthViewCotroller+PickerDelegate.swift in Sources */,
 				CC9482F6230F84C10058D78A /* CountryView.swift in Sources */,
 				CCDA9B25231320FC001525F8 /* RegistrationPresenter.swift in Sources */,
 				CC9482EF230F805A0058D78A /* CountryPresenter.swift in Sources */,
 				CC9482E7230F7D3D0058D78A /* CountriesViewController.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
+				CC5380DF23215298002E6FF8 /* SellYourItemFourthPresenter.swift in Sources */,
 				CC86961722F4F61C00E9F14D /* PopUpLanguguesViewController.swift in Sources */,
 				CC8365B2230869E000A71DFC /* LuzazRouter.swift in Sources */,
 				CC8E91EF23116F0900F82AB2 /* LeftSidePanelVC.swift in Sources */,
@@ -825,6 +868,7 @@
 				CC07BFB02309C23800E83B0D /* OffersPresenter.swift in Sources */,
 				CC86961D22F4F61C00E9F14D /* SellYourItemFourthViewController.swift in Sources */,
 				CC8365B4230869FC00A71DFC /* NetworkConstants.swift in Sources */,
+				CC5380E1232152E1002E6FF8 /* SellYourItemFourthView.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
 				CC9482F1230F81400058D78A /* Country.swift in Sources */,
 				CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */,

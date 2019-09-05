@@ -1292,7 +1292,7 @@
                                             <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="nrc-ux-lm0" kind="show" id="512-yp-feh"/>
+                                            <action selector="nextBtnWasPressed:" destination="8V6-me-z8t" eventType="touchUpInside" id="uIw-1P-T8U"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6n-Sx-8f8" userLabel="Images Stack View">
@@ -1804,6 +1804,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2G2-YU-hqh"/>
+                    <connections>
+                        <outlet property="itemDescritionTextField" destination="bGC-1y-ckL" id="V7J-jx-fUz"/>
+                        <outlet property="itemTitleTextView" destination="Jrd-pa-4q5" id="Pfh-QS-mEM"/>
+                        <outlet property="selectItemCondition" destination="Jrd-pa-4q5" id="mrI-kg-Bmv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPf-qv-s6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

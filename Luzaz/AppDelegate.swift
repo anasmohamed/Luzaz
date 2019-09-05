@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            defaults.set("No", forKey:"isFirstTime")
 //            defaults.synchronize()
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
-//            let viewController = storyboard.instantiateViewController(withIdentifier: "CountriesVC") as! ViewController
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "CountriesVC") as! CountriesViewController
 //            self.window?.rootViewController = viewController
 //            self.window?.makeKeyAndVisible()
 //        }else

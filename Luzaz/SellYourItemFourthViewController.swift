@@ -8,11 +8,16 @@
 
 import UIKit
 
-class SellYourItemFourthViewController: UIViewController {
+class SellYourItemFourthViewController: UIViewController,SellYourItemFourthView {
 
-    @IBOutlet weak var selectItemCondition: UITextField!
+    @IBOutlet weak var itemDescritionTextField: UITextView!
+  
+    @IBOutlet weak var itemTitleTextView: UITextField!
     @IBOutlet weak var conditionList: UIPickerView!
-   
+    var conditionsList = ["New","Used"]
+    var isConditionEnterd = false
+    var presenter : SellYourItemFourthPresenter!
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -20,20 +25,11 @@ class SellYourItemFourthViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func showError(error: String) {
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
