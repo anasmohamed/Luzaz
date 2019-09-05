@@ -1626,6 +1626,13 @@
                             <constraint firstItem="mek-wx-4N8" firstAttribute="top" secondItem="hJu-3D-K2v" secondAttribute="bottom" id="laz-sg-o7o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="areaTextView" destination="STA-fd-KOd" id="PBq-r6-bEk"/>
+                        <outlet property="bathroomsNumberTextView" destination="FzK-kS-z9e" id="kQR-2s-GbI"/>
+                        <outlet property="bedroomsNumberTextView" destination="Xw6-Qg-VYy" id="bsY-h1-yOz"/>
+                        <outlet property="finishedTextView" destination="Hec-YZ-OxE" id="vg5-7N-jzt"/>
+                        <outlet property="levelsTextView" destination="KBz-s1-wdJ" id="r5s-Tg-36e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFl-VT-qXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

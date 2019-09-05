@@ -28,7 +28,6 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemFifthView{
             showError(error: "You Should Enter Price")
         }
     }
-    
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
