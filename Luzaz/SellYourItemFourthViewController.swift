@@ -20,8 +20,8 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemFourthView 
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        presenter = SellYourItemFourthPresenter(view: self)
         
-        // Do any additional setup after loading the view.
     }
     
     
@@ -40,7 +40,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemFourthView 
         {
             presenter.setItemTitle(title: itemTitleTextView.text!)
             presenter.setItemDescription(descrition: itemDescritionTextField.text)
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
+            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFifthVC")as! SellYourItemFifthViewController
             self.present(sellYourItemSecondVC,animated:true,completion: nil)
             
         }else

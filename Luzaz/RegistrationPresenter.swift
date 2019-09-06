@@ -37,7 +37,7 @@ class RegistrationPresenter {
             let user = User()
             user.fullName = fullName
             user.phoneNumber = phone
-            user.mail = email
+            user.email = email
             user.password = password
             
             view?.showIndicator()

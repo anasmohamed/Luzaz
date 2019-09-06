@@ -35,12 +35,12 @@ class SellYourItemSecondViewController: UIViewController,SellYourItemSecondView 
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList
         {
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
+            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
             self.present(sellYourItemSecondVC,animated:true,completion: nil)
             
         }else
         {
-            showError(error: "you must choose city")
+            showError(error: "You Must Choose Category and SubCategory and Brand")
         }
     }
     func showError(error: String) {

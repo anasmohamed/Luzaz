@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fbp-fG-y5G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nEo-sv-AK4">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -334,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgO-Zl-c6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11823.75" y="1505.2816901408451"/>
+            <point key="canvasLocation" x="-11288" y="1507"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Xo6-Pp-2WV">
@@ -1401,7 +1401,7 @@
         <!--Sell Your Item Third View Controller-->
         <scene sceneID="A52-x4-FI0">
             <objects>
-                <viewController id="nrc-ux-lm0" customClass="SellYourItemThirdViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellYourItemThirdVC" id="nrc-ux-lm0" customClass="SellYourItemThirdViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4pI-f9-AYS"/>
                         <viewControllerLayoutGuide type="bottom" id="mek-wx-4N8"/>
@@ -1594,6 +1594,9 @@
                                                 <state key="normal" title="Next ">
                                                     <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextBtnWasPressed:" destination="nrc-ux-lm0" eventType="touchUpInside" id="PS1-KF-tV9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1641,7 +1644,7 @@
         <!--Sell Your Item Fourth View Controller-->
         <scene sceneID="wtw-97-DUJ">
             <objects>
-                <viewController id="z6w-pi-DUc" customClass="SellYourItemFourthViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellYourItemFourthVC" id="z6w-pi-DUc" customClass="SellYourItemFourthViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ya-ad-7Jr"/>
                         <viewControllerLayoutGuide type="bottom" id="Mfd-Kv-TmO"/>
@@ -1827,7 +1830,7 @@
         <!--Sell Your Item Fifth View Controller-->
         <scene sceneID="9dI-Uj-1yu">
             <objects>
-                <viewController id="XYb-ge-qm2" customClass="SellYourItemFifthViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellYourItemFifthVC" id="XYb-ge-qm2" customClass="SellYourItemFifthViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pfw-aQ-47I"/>
                         <viewControllerLayoutGuide type="bottom" id="qWh-m2-2Kl"/>
@@ -1902,7 +1905,6 @@
                                         </state>
                                         <connections>
                                             <action selector="nextBtnWasPressed:" destination="XYb-ge-qm2" eventType="touchUpInside" id="ZH8-0f-xyb"/>
-                                            <segue destination="tmU-JU-MDu" kind="show" id="7in-1D-J6V"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Discount Precentage (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rnW-8A-Sgw">
@@ -1958,7 +1960,7 @@
         <!--Sell Your Item End View Controller-->
         <scene sceneID="u2B-9U-i9b">
             <objects>
-                <viewController id="tmU-JU-MDu" customClass="SellYourItemEndViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellYourItemEndVC" id="tmU-JU-MDu" customClass="SellYourItemEndViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0e5-d5-Z9U"/>
                         <viewControllerLayoutGuide type="bottom" id="S5J-wx-sO9"/>

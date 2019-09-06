@@ -22,7 +22,7 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemFifthView{
         if !(priceTextView.text?.isEmpty)! {
             presenter.setItemPrice(price: priceTextView.text!)
             presenter.setItemPriceDiscount(discount: discountTextView.text!)
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
+            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemEndVC")as! SellYourItemEndViewController
             self.present(sellYourItemSecondVC,animated:true,completion: nil)
         }else{
             showError(error: "You Should Enter Price")
