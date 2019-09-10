@@ -13,10 +13,40 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var mobileTextField: UITextField!
+        {
+        didSet {
+            mobileTextField.tintColor = UIColor.lightGray
+            mobileTextField.setIcon(UIImage(named: "userIcon")!)
+        }
+    }
     @IBOutlet weak var conPassTextField: UITextField!
+        {
+        didSet {
+            conPassTextField.tintColor = UIColor.lightGray
+            conPassTextField.setIcon(UIImage(named: "userIcon")!)
+        }
+    }
     @IBOutlet weak var passwordTextField: UITextField!
+        {
+        didSet {
+            passwordTextField.tintColor = UIColor.lightGray
+            passwordTextField.setIcon(UIImage(named: "userIcon")!)
+        }
+    }
     @IBOutlet weak var emailTextField: UITextField!
+        {
+        didSet {
+            emailTextField.tintColor = UIColor.lightGray
+            emailTextField.setIcon(UIImage(named: "userIcon")!)
+        }
+    }
     @IBOutlet weak var userNameTextField: UITextField!
+        {
+        didSet {
+            userNameTextField.tintColor = UIColor.lightGray
+            userNameTextField.setIcon(UIImage(named: "userIcon")!)
+        }
+    }
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: RegistrationPresenter!
     

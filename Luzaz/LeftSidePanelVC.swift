@@ -46,6 +46,8 @@ class LeftSidePanelVC: UIViewController {
     @IBAction func winWithUsBtnWasPressed(_ sender: Any) {
     }
     @IBAction func sellYourItemsWasPressed(_ sender: Any) {
+        let countryVC = storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
+        self.present(countryVC, animated: true, completion: nil)
     }
     @IBAction func favoriteBtnWasPressed(_ sender: Any) {
     }
