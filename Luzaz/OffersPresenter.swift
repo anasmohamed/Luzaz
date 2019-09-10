@@ -59,12 +59,12 @@ class OffersPresenter{
     }
     
     func configure(cell: OffersCellView, for index: Int,isFiltering : Bool) {
-        let offer = filteredOffers[index]
-//        if isFiltering {
-//            offer = filteredOffers[index]
-//        }else{
-//            offer = offers[index]
-//        }
+        let offer : Offer
+        if isFiltering {
+            offer = filteredOffers[index]
+        }else{
+            offer = offers[index]
+        }
         guard let image = offer.image
              else { return }
         

@@ -9,7 +9,7 @@
 import UIKit
 
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,
-UISearchBarDelegate{
+UISearchBarDelegate,UISearchControllerDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
     // MARK: Outlets
      @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -40,15 +40,15 @@ UISearchBarDelegate{
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if searchActive {
-//            return presenter.getFilteredOffersCount()
-//        }
-//        else
-//        {
-//            return presenter.getOffersCount()
-//            
-//        }
-        return presenter.getFilteredOffersCount()
+        if !searchBarIsEmpty() {
+            return presenter.getFilteredOffersCount()
+        }
+        else
+        {
+            return presenter.getOffersCount()
+            
+        }
+        //return presenter.getFilteredOffersCount()
     }
     // This method updates filteredData based on the text in the Search Box
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -63,7 +63,7 @@ UISearchBarDelegate{
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
-        presenter.configure(cell: cell, for: indexPath.row,isFiltering:true)
+        presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
         return cell
     }
     
@@ -81,7 +81,17 @@ UISearchBarDelegate{
         self.present(offersDetailsVC,animated:true,completion:nil)
         
     }
-    
+func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+            collectionView.reloadData()
+        }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        collectionView.reloadData()
+
+    }
+        func searchBarIsEmpty() -> Bool {
+            // Returns true if the text is empty or nil
+            return searchBar.text?.isEmpty ?? true
+        }
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
         delegate?.toggleLeftPane()
