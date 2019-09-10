@@ -23,7 +23,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         setupCollectionView()
         presenter = OffersPresenter(view: self)
         searchBar.delegate = self
-
+        self.hideKeyboardWhenTappedAround()
        
     }
     

@@ -76,6 +76,7 @@
 		CC9482F1230F81400058D78A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482F0230F81400058D78A /* Country.swift */; };
 		CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482F3230F82D10058D78A /* CountryCellView.swift */; };
 		CC9482F6230F84C10058D78A /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9482F5230F84C10058D78A /* CountryView.swift */; };
+		CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */; };
 		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
 		CCB406C6231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */; };
 		CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8F5472313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift */; };
@@ -193,6 +194,7 @@
 		CC9482F0230F81400058D78A /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		CC9482F3230F82D10058D78A /* CountryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCellView.swift; sourceTree = "<group>"; };
 		CC9482F5230F84C10058D78A /* CountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboardDelagate.swift"; sourceTree = "<group>"; };
 		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
 		CCB406C5231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemViewController+PickerDelegate.swift"; sourceTree = "<group>"; };
 		CCB8F5472313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */,
 				CC8695CE22F4F54B00E9F14D /* Info.plist */,
 				CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */,
+				CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */,
 			);
 			path = Luzaz;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */,
 				CC5380F4232199D2002E6FF8 /* Appartment.swift in Sources */,
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
+				CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */,
 				CCB8F5522313ED800025FEA1 /* LoginViewController+TextField.swift in Sources */,
 				CCB8F54A2313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift in Sources */,
 				CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */,
