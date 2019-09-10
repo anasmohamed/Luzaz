@@ -19,6 +19,7 @@ class User :NSObject,NSCoding{
     var token : String?
     var countryEnglishName : String?
     var countryArabicName : String?
+    var image : String?
     override init()
     {}
     init(withJSON data: JSON) {
