@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Luzaz/LuzazRouter.swift"
-            timestampString = "588597641.257759"
+            timestampString = "589910229.705662"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "LuzazRouter"
             landmarkType = "13">
          </BreakpointContent>

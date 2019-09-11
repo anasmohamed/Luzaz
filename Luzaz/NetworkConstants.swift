@@ -29,6 +29,8 @@ struct NetworkingConstants {
     static let getOffers = "getOffers"
     static let register = "register"
     static let login = "login"
+    static let getCategories = "getCategories"
+
     
     
     //get offers pramters
@@ -56,6 +58,16 @@ struct NetworkingConstants {
     static let token = "token"
     static let countryNameArabic = "country_name_arabic"
     static let countryNameEnglish = "country_name_english"
+    
+    //GET MAIN CATEGORIES PARAMETER
+    static let mainCategoriesId = "id"
+    static let idCategory = "id_category"
+    static let categoryName = "name"
+    static let categorydescription = "description"
+    static let categorykeywords = "keywords"
+    static let categoryNameEng = "name_en"
+    static let categoryDescriptionEng = "description_en"
+    static let categoryKeywordsEng = "keywords_en"
     
 }
 
