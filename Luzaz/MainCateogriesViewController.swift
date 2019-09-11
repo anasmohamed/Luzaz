@@ -37,7 +37,7 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     
     
     func setupCollectionView() {
-        collectionView.register(UINib(nibName: "OffersCell", bundle: nil), forCellWithReuseIdentifier: "OffersCell")
+        collectionView.register(UINib(nibName: "MainCateoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainCateoriesCollectionViewCell")
         
     }
     
@@ -65,7 +65,7 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
         collectionView.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! MainCateoriesCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCateoriesCollectionViewCell", for: indexPath) as! MainCateoriesCollectionViewCell
         presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
         return cell
     }
@@ -95,9 +95,10 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
         // Returns true if the text is empty or nil
         return searchBar.text?.isEmpty ?? true
     }
-    @IBAction func menuBtnWasPressed(_ sender: Any)
-    {
+  
+    @IBAction func menuBtnWasPressed(_ sender: Any) {
         delegate?.toggleLeftPane()
+
     }
 
 }

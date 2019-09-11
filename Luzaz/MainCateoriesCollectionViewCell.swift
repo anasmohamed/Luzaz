@@ -16,6 +16,6 @@ class MainCateoriesCollectionViewCell: UICollectionViewCell,MainCategoriesCellVi
         // Initialization code
     }
     func displayMainCategoriesImage(mainCategoriesImage: String) {
-        
+        print("the name \(mainCategoriesImage)")
     }
 }

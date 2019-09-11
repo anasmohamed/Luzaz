@@ -348,6 +348,7 @@
 		CC0D3B7B2329403600C9DD70 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CC0D3B94232988ED00C9DD70 /* SubCategories */,
 				CC0D3B7C2329404A00C9DD70 /* MainCategories */,
 			);
 			name = Categories;
@@ -398,6 +399,37 @@
 				CC0D3B9123295D3800C9DD70 /* MainCateoriesCollectionViewCell.xib */,
 			);
 			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CC0D3B94232988ED00C9DD70 /* SubCategories */ = {
+			isa = PBXGroup;
+			children = (
+				CC0D3B972329893700C9DD70 /* Protocols */,
+				CC0D3B962329892700C9DD70 /* Presenter */,
+				CC0D3B952329890500C9DD70 /* Interactor */,
+			);
+			name = SubCategories;
+			sourceTree = "<group>";
+		};
+		CC0D3B952329890500C9DD70 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		CC0D3B962329892700C9DD70 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CC0D3B972329893700C9DD70 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		CC0F9E67231D943600280C0A /* Extensions */ = {
