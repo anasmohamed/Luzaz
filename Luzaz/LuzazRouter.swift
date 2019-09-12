@@ -16,6 +16,7 @@ enum LuzazRouter: URLRequestConvertible {
     case login(email: String, password: String)
     case register(user: User)
     case getMainCategories()
+    case getSubCategories(mainCategoryId: String)
     
     var path: String {
         
@@ -28,6 +29,8 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.register
         case .getMainCategories:
           return  NetworkingConstants.getCategories
+        case .getSubCategories:
+            return NetworkingConstants.getSubCategories
         }
     }
     
@@ -35,7 +38,7 @@ enum LuzazRouter: URLRequestConvertible {
         
         switch self {
         
-        case .getOffers,.login,.getMainCategories:
+        case .getOffers,.login,.getMainCategories,.getSubCategories:
             return .get
         case .register:
             return .post
@@ -89,6 +92,10 @@ enum LuzazRouter: URLRequestConvertible {
         case let .login(email,password):
             params[NetworkingConstants.email] = email
             params[NetworkingConstants.password] = password
+        case let .getSubCategories(mainCategoryid):
+            params[NetworkingConstants.category] = mainCategoryid
+            
+            
             
         default:
             print("Empty Paramter")
@@ -107,7 +114,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             

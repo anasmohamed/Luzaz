@@ -65,12 +65,11 @@ class MainCategoriesPresenter {
         }
         guard let name = category.name
             else { return }
-//
+
         cell.displayMainCategoriesImage(mainCategoriesImage:name )
     }
-//    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-//        viewController.offer = offers[index]
-//        
-//    }
+    func pushToDetails(viewController : SubCategoriesViewController, _ index : Int) {
+        viewController.mainCategoryId = categories[index].id
+    }
  
 }

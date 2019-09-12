@@ -30,6 +30,9 @@ struct NetworkingConstants {
     static let register = "register"
     static let login = "login"
     static let getCategories = "getCategories"
+    static let getSubCategories = "getSubCategories"
+
+    
 
     
     
@@ -68,6 +71,8 @@ struct NetworkingConstants {
     static let categoryNameEng = "name_en"
     static let categoryDescriptionEng = "description_en"
     static let categoryKeywordsEng = "keywords_en"
+    static let category = "category"
+
     
 }
 

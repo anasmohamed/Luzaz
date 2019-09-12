@@ -78,10 +78,10 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
-        offersDetailsVC.modalTransitionStyle = .flipHorizontal
-//        presenter.pushToDetails(viewController: offersDetailsVC, indexPath.row)
-//        self.present(offersDetailsVC,animated:true,completion:nil)
+        let subCategoriesVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoriesVC") as! SubCategoriesViewController
+        subCategoriesVC.modalTransitionStyle = .flipHorizontal
+        presenter.pushToDetails(viewController: subCategoriesVC, indexPath.row)
+        self.present(subCategoriesVC,animated:true,completion:nil)
         
     }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
