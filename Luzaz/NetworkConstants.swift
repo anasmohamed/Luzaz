@@ -31,6 +31,8 @@ struct NetworkingConstants {
     static let login = "login"
     static let getCategories = "getCategories"
     static let getSubCategories = "getSubCategories"
+    static let getConversationBuddies = "getConversationBuddies"
+
 
     
 
@@ -52,6 +54,7 @@ struct NetworkingConstants {
     
     // User Query Parameters
     static let userId = "user_id"
+    static let photo = "photo"
     static let fullName = "name"
     static let email = "email"
     static let phone = "phone"
@@ -73,6 +76,8 @@ struct NetworkingConstants {
     static let categoryKeywordsEng = "keywords_en"
     static let category = "category"
 
-    
+    //Chat Parameter
+    static let user = "user"
+
 }
 

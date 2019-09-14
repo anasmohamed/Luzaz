@@ -15,7 +15,8 @@ UISearchBarDelegate,UISearchControllerDelegate{
      @IBOutlet weak var spinner: UIActivityIndicatorView!
     var presenter: OffersPresenter!
     @IBOutlet weak var collectionView: UICollectionView!
-    var delegate : CenterVCDelegate?
+     var delegate : CenterVCDelegate?
+    
 
     // MARK: View life cycle
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         setupCollectionView()
         presenter = OffersPresenter(view: self)
         searchBar.delegate = self
+        
         self.hideKeyboardWhenTappedAround()
        
     }
@@ -52,11 +54,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
     }
     // This method updates filteredData based on the text in the Search Box
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // When there is no text, filteredData is the same as the original data
-        // When user has entered text into the search box
-        // Use the filter method to iterate over all items in the data array
-        // For each item, return true if the item should be included and false if the
-        // item should NOT be included
+       
        presenter.getSearchedOffer(searchText: searchText)
         
         collectionView.reloadData()
@@ -95,6 +93,7 @@ func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
         delegate?.toggleLeftPane()
+       
     }
 
     

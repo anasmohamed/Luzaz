@@ -18,7 +18,7 @@ class UsersChatsPresenter {
         friends = [User]()
     }
     func viewDidLoad()  {
-        getUsersChats(userId:"1")
+        getUsersChats(userId:UserDefaults.standard.string(forKey: "userId")!)
     }
     func getUsersChats(userId :String) {
         view?.showIndicator()
@@ -41,10 +41,12 @@ class UsersChatsPresenter {
     func configure(cell: UsersChatsCellView?, for index: Int) {
         let firend = friends[index]
       
-        guard let image = firend.image
-            else { return }
+        guard let name = firend.fullName,
+        let image = firend.image
+        else { return }
         
         cell?.displayUserImage(image: image)
+        cell?.displayUserName(name: name)
     }
 //    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
 //        viewController.offer = offers[index]

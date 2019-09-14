@@ -17,6 +17,8 @@ class LeftSidePanelVC: UIViewController {
     @IBOutlet weak var myProducatBtn: UIButton!
     @IBOutlet weak var catategoryBtn: UIButton!
     @IBOutlet weak var homeBtn: UIButton!
+    let appDelegate = AppDelegate.getAppDelegate()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setIconForBtn(button: homeBtn, icon:"home")
@@ -52,6 +54,9 @@ class LeftSidePanelVC: UIViewController {
     @IBAction func favoriteBtnWasPressed(_ sender: Any) {
     }
     @IBAction func chatBtnWasPressed(_ sender: Any) {
+        let userBuddiesVC = storyboard?.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+        self.present(userBuddiesVC, animated: true, completion: nil)
+        
     }
     @IBAction func myProductWasPressed(_ sender: Any) {
     }
@@ -61,6 +66,9 @@ class LeftSidePanelVC: UIViewController {
     }
     
     @IBAction func regiterLoginBtnWasPressed(_ sender: Any) {
+        appDelegate.MenuContainerVC.toggleLeftPane()
+        let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        self.present(loginVC, animated: true, completion: nil)
     }
     func getCountyIcon(countryNum : String) -> String {
         switch countryNum {

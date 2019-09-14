@@ -15,23 +15,30 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         presenter = UsersChatsPresenter(view: self)
-        presenter.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewDidLoad()
+    }
+    
     func setupTableView() {
         tableView.register(UINib(nibName: "UserChatsTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatsTableViewCell")
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        let languageVC = storyboard?.instantiateViewController(withIdentifier: "Chat") as! LanguagesViewController
-        self.present(languageVC, animated: true, completion: nil)
-        
-        
-        
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        
+//        let languageVC = storyboard?.instantiateViewController(withIdentifier: "Chat") as! LanguagesViewController
+//        self.present(languageVC, animated: true, completion: nil)
+//        
+//        
+//        
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return presenter.getUsersChatsCount()

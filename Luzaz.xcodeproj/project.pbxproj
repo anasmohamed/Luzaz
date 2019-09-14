@@ -468,7 +468,6 @@
 				CCA9EE862328001F00351F26 /* Chat */,
 				CCB406C4231815F50099B74E /* Sell Your Items */,
 				CCDA9B1B2313123B001525F8 /* Authentication */,
-				CC2379EC2310A79200923D59 /* Languages */,
 				CC9482E5230F7D020058D78A /* Countries */,
 				CCE369AF230BFF8A008CAC35 /* LeftSidePanel */,
 				CC52DCFB23096CF000981C31 /* Offers */,
@@ -815,6 +814,7 @@
 				CCB8F5512313ED800025FEA1 /* LoginViewController+TextField.swift */,
 				CCB8F5532313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift */,
 				CC7F24172316D55400A2699C /* TextFieldIcon.swift */,
+				CC2379EC2310A79200923D59 /* Languages */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";

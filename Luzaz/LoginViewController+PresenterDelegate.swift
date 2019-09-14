@@ -19,11 +19,13 @@ extension LoginViewController: LoginView {
     }
     
     func loginSuccess(user:User) {
-        let homeViewController = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+//        let homeViewController = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+//        homeViewController.delegate = ContainerVC()
         let encodeData:Data = NSKeyedArchiver.archivedData(withRootObject: user)
         UserDefaults.standard.set(encodeData, forKey:"user")
-        
-        present(homeViewController, animated: true, completion: nil)
+//        present(homeViewController, animated: true, completion: nil)
+       self.dismiss(animated: true, completion: nil)
+
     }
     
     func showError(error: String) {

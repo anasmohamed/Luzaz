@@ -23,11 +23,13 @@ class User :NSObject,NSCoding{
     override init()
     {}
     init(withJSON data: JSON) {
-        self.userId = data[NetworkingConstants.userId].stringValue
+        self.userId = data[NetworkingConstants.user].stringValue
         self.token = data[NetworkingConstants.token].stringValue
         self.countryId  = data[NetworkingConstants.countryId].stringValue
         self.countryEnglishName = data[NetworkingConstants.countryNameEnglish].stringValue
         self.countryArabicName = data[NetworkingConstants.countryNameArabic].stringValue
+        self.image = data[NetworkingConstants.photo].stringValue
+        self.fullName = data[NetworkingConstants.fullName].stringValue
     }
     
     init(userId: String?, fullName: String?, email: String?, password: String?,token : String) {
