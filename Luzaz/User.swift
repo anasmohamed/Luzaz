@@ -20,6 +20,8 @@ class User :NSObject,NSCoding{
     var countryEnglishName : String?
     var countryArabicName : String?
     var image : String?
+    var buddyId : String?
+    var buddyMail : String?
     override init()
     {}
     init(withJSON data: JSON) {
@@ -30,6 +32,9 @@ class User :NSObject,NSCoding{
         self.countryArabicName = data[NetworkingConstants.countryNameArabic].stringValue
         self.image = data[NetworkingConstants.photo].stringValue
         self.fullName = data[NetworkingConstants.fullName].stringValue
+        self.buddyId = data[NetworkingConstants.buudyId].stringValue
+        self.buddyMail = data[NetworkingConstants.buddyMail].stringValue
+        self.phoneNumber = data[NetworkingConstants.phone].stringValue
     }
     
     init(userId: String?, fullName: String?, email: String?, password: String?,token : String) {

@@ -32,6 +32,7 @@ struct NetworkingConstants {
     static let getCategories = "getCategories"
     static let getSubCategories = "getSubCategories"
     static let getConversationBuddies = "getConversationBuddies"
+    static let getConversation = "getConversation"
 
 
     
@@ -78,6 +79,18 @@ struct NetworkingConstants {
 
     //Chat Parameter
     static let user = "user"
+    static let buudyId = "id"
+    static let buddyMail = "mail"
+    
+    //CONVERSATION PARAMETER
+    static let conversationId = "id"
+    static let sender = "sender"
+    static let receiver = "receiver"
+    static let date = "date"
+    static let speech = "speech"
+    static let attachmentsArray = "attachmentsArray"
+    static let paging = "nopaging"
+
 
 }
 

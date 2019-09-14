@@ -50,6 +50,12 @@
 		CC6C6FEF230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */; };
 		CC7167C9231F014E00F0BC00 /* SellYourItemSecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7167C8231F014E00F0BC00 /* SellYourItemSecondPresenter.swift */; };
 		CC7167CB231F06EE00F0BC00 /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7167CA231F06EE00F0BC00 /* SellYourItemSecondView.swift */; };
+		CC7CA916232D44C0006C5E17 /* ConverstionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA915232D44C0006C5E17 /* ConverstionViewController.swift */; };
+		CC7CA918232D62B0006C5E17 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA917232D62B0006C5E17 /* Conversation.swift */; };
+		CC7CA91A232D6B17006C5E17 /* ConsersationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA919232D6B17006C5E17 /* ConsersationInteractor.swift */; };
+		CC7CA91C232D74A2006C5E17 /* ConversationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA91B232D74A2006C5E17 /* ConversationPresenter.swift */; };
+		CC7CA91E232D76BE006C5E17 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA91D232D76BE006C5E17 /* ConversationView.swift */; };
+		CC7CA920232D7E60006C5E17 /* ConversationViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA91F232D7E60006C5E17 /* ConversationViewController+PresenterDelegate.swift */; };
 		CC7F1493232ACEEA0074613B /* SubCategoriesViewConteroller+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F1492232ACEEA0074613B /* SubCategoriesViewConteroller+PresenterDelegate.swift */; };
 		CC7F24182316D55400A2699C /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F24172316D55400A2699C /* TextFieldIcon.swift */; };
 		CC8365B2230869E000A71DFC /* LuzazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8365B1230869E000A71DFC /* LuzazRouter.swift */; };
@@ -179,6 +185,12 @@
 		CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+CellSpaceDelegate.swift"; sourceTree = "<group>"; };
 		CC7167C8231F014E00F0BC00 /* SellYourItemSecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondPresenter.swift; sourceTree = "<group>"; };
 		CC7167CA231F06EE00F0BC00 /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
+		CC7CA915232D44C0006C5E17 /* ConverstionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverstionViewController.swift; sourceTree = "<group>"; };
+		CC7CA917232D62B0006C5E17 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		CC7CA919232D6B17006C5E17 /* ConsersationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsersationInteractor.swift; sourceTree = "<group>"; };
+		CC7CA91B232D74A2006C5E17 /* ConversationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationPresenter.swift; sourceTree = "<group>"; };
+		CC7CA91D232D76BE006C5E17 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		CC7CA91F232D7E60006C5E17 /* ConversationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConversationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CC7F1492232ACEEA0074613B /* SubCategoriesViewConteroller+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubCategoriesViewConteroller+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CC7F24172316D55400A2699C /* TextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
 		CC8365B1230869E000A71DFC /* LuzazRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuzazRouter.swift; sourceTree = "<group>"; };
@@ -505,6 +517,7 @@
 				CCDA9B222313137A001525F8 /* User.swift */,
 				CC5380F3232199D2002E6FF8 /* Appartment.swift */,
 				CC0D3B8B2329491E00C9DD70 /* Category.swift */,
+				CC7CA917232D62B0006C5E17 /* Conversation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -644,6 +657,34 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		CC7CA912232D43EB006C5E17 /* Conversions */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CA914232D440E006C5E17 /* Presenter */,
+				CC7CA913232D4405006C5E17 /* Interactor */,
+				CC7CA915232D44C0006C5E17 /* ConverstionViewController.swift */,
+				CC7CA91F232D7E60006C5E17 /* ConversationViewController+PresenterDelegate.swift */,
+			);
+			name = Conversions;
+			sourceTree = "<group>";
+		};
+		CC7CA913232D4405006C5E17 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CA919232D6B17006C5E17 /* ConsersationInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		CC7CA914232D440E006C5E17 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CA91B232D74A2006C5E17 /* ConversationPresenter.swift */,
+				CC7CA91D232D76BE006C5E17 /* ConversationView.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
 		CC8365B0230869C300A71DFC /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -762,6 +803,7 @@
 		CCA9EE862328001F00351F26 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				CC7CA912232D43EB006C5E17 /* Conversions */,
 				CCA9EE872328002A00351F26 /* UsersChats */,
 			);
 			name = Chat;
@@ -1085,6 +1127,7 @@
 				CCB8F5522313ED800025FEA1 /* LoginViewController+TextField.swift in Sources */,
 				CCB8F54A2313DD280025FEA1 /* RegistrationViewController+TextFieldDelegate.swift in Sources */,
 				CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */,
+				CC7CA91A232D6B17006C5E17 /* ConsersationInteractor.swift in Sources */,
 				CCB8F54C2313ED620025FEA1 /* LoginPresenter.swift in Sources */,
 				CC5380F623219C56002E6FF8 /* SellYourItemThirdPresenter.swift in Sources */,
 				CCDA9B2723132126001525F8 /* RegistrationView.swift in Sources */,
@@ -1095,7 +1138,9 @@
 				CC0D3B862329440500C9DD70 /* MainCategoriesView.swift in Sources */,
 				CC9482EF230F805A0058D78A /* CountryPresenter.swift in Sources */,
 				CC9482E7230F7D3D0058D78A /* CountriesViewController.swift in Sources */,
+				CC7CA91E232D76BE006C5E17 /* ConversationView.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
+				CC7CA91C232D74A2006C5E17 /* ConversationPresenter.swift in Sources */,
 				CC5380DF23215298002E6FF8 /* SellYourItemFourthPresenter.swift in Sources */,
 				CC5380EA23217DFE002E6FF8 /* SellYourItemFifthView.swift in Sources */,
 				CC08B047232813A0003132E2 /* UsersChatsCellView.swift in Sources */,
@@ -1123,6 +1168,7 @@
 				CCCED99C232AD46A00148694 /* SubCategoriesInteractor.swift in Sources */,
 				CC5380E1232152E1002E6FF8 /* SellYourItemFourthView.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
+				CC7CA918232D62B0006C5E17 /* Conversation.swift in Sources */,
 				CC9482F1230F81400058D78A /* Country.swift in Sources */,
 				CCA9EE8A232800B600351F26 /* UserChatsTableViewCell.swift in Sources */,
 				CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */,
@@ -1152,6 +1198,7 @@
 				CC6861FD231B369D00C8F4FF /* SellYourItemPresenter.swift in Sources */,
 				CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */,
 				CCB8F5482313DCCD0025FEA1 /* RegistrationViewController+PresenterDelegate.swift in Sources */,
+				CC7CA920232D7E60006C5E17 /* ConversationViewController+PresenterDelegate.swift in Sources */,
 				CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */,
 				CC08B04923281487003132E2 /* UsersChatsView.swift in Sources */,
 				CC7167CB231F06EE00F0BC00 /* SellYourItemSecondView.swift in Sources */,
@@ -1162,6 +1209,7 @@
 				CC5380F22321908A002E6FF8 /* SellYourItemThirdViewController.swift in Sources */,
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
 				CCB406C6231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift in Sources */,
+				CC7CA916232D44C0006C5E17 /* ConverstionViewController.swift in Sources */,
 				CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */,
 				CC5380E823217DA1002E6FF8 /* SellYourItemFifthPresenter.swift in Sources */,
 				CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */,
