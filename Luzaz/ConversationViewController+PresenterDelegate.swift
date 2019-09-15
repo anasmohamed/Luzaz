@@ -6,22 +6,13 @@
 //  Copyright © 1441 AH Luzaz. All rights reserved.
 //
 
+
+import UIKit
 import Foundation
-class ConversationViewController: ConversationView {
-    func showIndicator() {
-        spinner.startAnimating()
-    }
-    
-    func hideIndicator() {
-        spinner.stopAnimating()
-    }
-    
-    func getSubCategoriesSuccess() {
+extension ConverstionViewController : ConversationView {
+    func getConversationSuccess() {
         tableView.reloadData()
     }
-    
-    
-    
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         

@@ -48,8 +48,8 @@ class UsersChatsPresenter {
         cell?.displayUserImage(image: image)
         cell?.displayUserName(name: name)
     }
-//    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-//        viewController.offer = offers[index]
-//        
-//    }
+    func pushToDetails(viewController : ConverstionViewController, _ index : Int) {
+        viewController.id = String(index + 1)
+        
+    }
 }

@@ -9,8 +9,6 @@
 import Foundation
 protocol ConversationView :class{
     
-    func showIndicator()
-    func hideIndicator()
     func getConversationSuccess()
     func showError(error: String)
 }

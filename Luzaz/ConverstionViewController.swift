@@ -11,8 +11,7 @@ import UIKit
 class ConverstionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var presenter : ConversationPresenter!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
-    var mainCategoryId : String?
+    var id : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = ConversationPresenter(view : self)
@@ -20,7 +19,7 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.viewDidLoad(mainCategoryId: mainCategoryId!)
+        presenter.viewDidLoad(id: id!,paging: "nopaging")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

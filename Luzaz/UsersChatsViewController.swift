@@ -30,15 +30,17 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
         tableView.register(UINib(nibName: "UserChatsTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatsTableViewCell")
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        
-//        let languageVC = storyboard?.instantiateViewController(withIdentifier: "Chat") as! LanguagesViewController
-//        self.present(languageVC, animated: true, completion: nil)
-//        
-//        
-//        
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let backItem = UIBarButtonItem()
+//        backItem.title = "Back"
+//        navigationItem.backBarButtonItem = backItem
+        let conversationVC = storyboard?.instantiateViewController(withIdentifier: "ConverstionVC") as! ConverstionViewController
+        presenter.pushToDetails(viewController: conversationVC, indexPath.row)
+        self.present(conversationVC, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(conversationVC, animated: true)
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return presenter.getUsersChatsCount()

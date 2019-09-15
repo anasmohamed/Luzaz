@@ -19,16 +19,13 @@ class ConversationPresenter {
         conversations = [Conversation]()
     }
     
-    func viewDidLoad() {
-        
-
+    func viewDidLoad(id : String , paging:String) {
+        getConversation(id:id, paging: paging)
     }
     
     func getConversation(id: String,paging : String) {
-        view?.showIndicator()
         consersationInteractor.getConversation(id:id,paging :paging ) { [unowned self] (conversations, error) in
             
-            self.view?.hideIndicator()
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
