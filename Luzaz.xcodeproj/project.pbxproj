@@ -47,6 +47,8 @@
 		CC6861FD231B369D00C8F4FF /* SellYourItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */; };
 		CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */; };
 		CC686201231B386200C8F4FF /* SellYourItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */; };
+		CC6B8D14232E874E005D45FC /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B8D13232E874E005D45FC /* ConversationTableViewCell.swift */; };
+		CC6B8D16232E89A2005D45FC /* ConversationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B8D15232E89A2005D45FC /* ConversationCellView.swift */; };
 		CC6C6FEF230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */; };
 		CC7167C9231F014E00F0BC00 /* SellYourItemSecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7167C8231F014E00F0BC00 /* SellYourItemSecondPresenter.swift */; };
 		CC7167CB231F06EE00F0BC00 /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7167CA231F06EE00F0BC00 /* SellYourItemSecondView.swift */; };
@@ -182,6 +184,8 @@
 		CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemPresenter.swift; sourceTree = "<group>"; };
 		CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
 		CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemInteractor.swift; sourceTree = "<group>"; };
+		CC6B8D13232E874E005D45FC /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		CC6B8D15232E89A2005D45FC /* ConversationCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellView.swift; sourceTree = "<group>"; };
 		CC6C6FEE230CF03D00D421CB /* OffersViewController+CellSpaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+CellSpaceDelegate.swift"; sourceTree = "<group>"; };
 		CC7167C8231F014E00F0BC00 /* SellYourItemSecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondPresenter.swift; sourceTree = "<group>"; };
 		CC7167CA231F06EE00F0BC00 /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
@@ -620,6 +624,15 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		CC6B8D12232E8716005D45FC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC6B8D13232E874E005D45FC /* ConversationTableViewCell.swift */,
+				CC6B8D15232E89A2005D45FC /* ConversationCellView.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		CC7167C4231EFF6900F0BC00 /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +673,7 @@
 		CC7CA912232D43EB006C5E17 /* Conversions */ = {
 			isa = PBXGroup;
 			children = (
+				CC6B8D12232E8716005D45FC /* TableViewCell */,
 				CC7CA914232D440E006C5E17 /* Presenter */,
 				CC7CA913232D4405006C5E17 /* Interactor */,
 				CC7CA915232D44C0006C5E17 /* ConverstionViewController.swift */,
@@ -1121,6 +1135,7 @@
 				CC5380F0232186B5002E6FF8 /* SellYourItemEndView.swift in Sources */,
 				CC08B05123283C53003132E2 /* UsersChatsViewController+PresetnerDelegate.swift in Sources */,
 				CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */,
+				CC6B8D14232E874E005D45FC /* ConversationTableViewCell.swift in Sources */,
 				CC5380F4232199D2002E6FF8 /* Appartment.swift in Sources */,
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
 				CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */,
@@ -1177,6 +1192,7 @@
 				CCDA9B232313137A001525F8 /* User.swift in Sources */,
 				CC86961B22F4F61C00E9F14D /* SellYourItemEndViewController.swift in Sources */,
 				CC0D3B9223295D3800C9DD70 /* MainCateoriesCollectionViewCell.swift in Sources */,
+				CC6B8D16232E89A2005D45FC /* ConversationCellView.swift in Sources */,
 				CCB8F5542313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift in Sources */,
 				CC86960922F4F61C00E9F14D /* AllProductsUnderSubCategoriesViewController.swift in Sources */,
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,

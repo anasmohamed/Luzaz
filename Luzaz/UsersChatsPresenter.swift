@@ -50,6 +50,6 @@ class UsersChatsPresenter {
     }
     func pushToDetails(viewController : ConverstionViewController, _ index : Int) {
         viewController.id = String(index + 1)
-        
+        viewController.receiverId = friends[index].buddyId
     }
 }

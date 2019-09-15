@@ -9,12 +9,25 @@
 import UIKit
 
 class ConverstionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    
+    @IBOutlet weak var messageTextView: UITextField!
+    
+    
     var presenter : ConversationPresenter!
     @IBOutlet weak var tableView: UITableView!
     var id : String?
+    var userId : String?
+    var receiverId : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = ConversationPresenter(view : self)
+        self.hideKeyboardWhenTappedAround()
+        userId = UserDefaults.standard.string(forKey: "userId")
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+            
+            self.moveToBottom()
+        }
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -26,12 +39,34 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         return presenter.getConverstaionsCount()
         
     }
+    func keyboardWillShow(notify: NSNotification) {
+        
+        if let keyboardSize = (notify.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if self.view.frame.origin.y == 0 {
+                
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
     
+    func keyboardWillHide(notify: NSNotification) {
+        
+        if let keyboardSize = (notify.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if self.view.frame.origin.y != 0 {
+                
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
     
-    
+    func moveToBottom()  {
+        presenter.moveToBottom(tableView: tableView)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CoversationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CoversationCell", for: indexPath) as! ConversationTableViewCell
         presenter.configure(cell: cell, for: indexPath.row)
         
         return cell
@@ -39,7 +74,15 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+  
+    @IBAction func sendMessageBtnWasPressed(_ sender: Any) {
+        dismissKeyboard()
+        if messageTextView.text != nil && messageTextView.text != ""
+        {
+            presenter.sendMessage(user:userId! , with:receiverId! , message: messageTextView.text!)
+        }
+        moveToBottom()
 
-
-   
+    }
+    
 }

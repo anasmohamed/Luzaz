@@ -10,5 +10,7 @@ import Foundation
 protocol ConversationView :class{
     
     func getConversationSuccess()
+    func addConversationSucces()
     func showError(error: String)
 }
+

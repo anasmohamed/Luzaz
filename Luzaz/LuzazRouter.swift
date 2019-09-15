@@ -11,7 +11,7 @@ import Alamofire
 
 enum LuzazRouter: URLRequestConvertible {
     
-  
+    
     case getOffers(country:String)
     case login(email: String, password: String)
     case register(user: User)
@@ -19,6 +19,7 @@ enum LuzazRouter: URLRequestConvertible {
     case getSubCategories(mainCategoryId: String)
     case getConversationBuddies(userId : String)
     case getConversation(id: String,paging:String)
+    case addToConversation(user :String ,with : String, speech: String)
     
     var path: String {
         
@@ -30,25 +31,27 @@ enum LuzazRouter: URLRequestConvertible {
         case .register:
             return NetworkingConstants.register
         case .getMainCategories:
-          return  NetworkingConstants.getCategories
+            return  NetworkingConstants.getCategories
         case .getSubCategories:
             return NetworkingConstants.getSubCategories
         case .getConversationBuddies:
             return NetworkingConstants.getConversationBuddies
         case .getConversation:
             return NetworkingConstants.getConversation
+        case .addToConversation:
+            return NetworkingConstants.addToConversation
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation:
+            
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation:
             return .get
         case .register:
             return .post
-       
+            
         }
     }
     
@@ -57,9 +60,9 @@ enum LuzazRouter: URLRequestConvertible {
         var httpHeaders = [String:String]()
         
         switch self {
-//        case .getOffers:
-//            httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
-//            httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
+            //        case .getOffers:
+            //            httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
+        //            httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
         default:
             print("Empty request headers")
         }
@@ -72,7 +75,7 @@ enum LuzazRouter: URLRequestConvertible {
         var body = [String:Any]()
         
         switch self {
-        
+            
             
         default:
             print("Empty request body")
@@ -106,13 +109,16 @@ enum LuzazRouter: URLRequestConvertible {
         case let .getConversation(id,nopaging):
             params[NetworkingConstants.conversationId] = id
             params[NetworkingConstants.paging] = nopaging
-
             
-
+        case let .addToConversation(user ,with, speech):
+            params[NetworkingConstants.messangerId] = user
+            params[NetworkingConstants.with] = with
+            params[NetworkingConstants.senderSpeech] = speech
+            
             
         default:
             print("Empty Paramter")
-
+            
         }
         
         return params
@@ -127,13 +133,13 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             
-//        case .register, .addBarber, .addService:
-//            return try JSONEncoding.default.encode(urlRequest, with: body)
-
+            //        case .register, .addBarber, .addService:
+            //            return try JSONEncoding.default.encode(urlRequest, with: body)
+            
         }
     }
 }

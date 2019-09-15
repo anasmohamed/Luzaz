@@ -688,6 +688,9 @@
                                             <constraint firstAttribute="width" constant="46" id="jDt-Eo-svZ"/>
                                         </constraints>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendMessageBtnWasPressed:" destination="tfA-Qk-PRO" eventType="touchUpInside" id="Ia7-Fm-vvE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -703,14 +706,14 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C19-o6-VIF">
-                                <rect key="frame" x="0.0" y="20" width="320" height="498"/>
+                                <rect key="frame" x="0.0" y="71" width="320" height="447"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoversationCell" rowHeight="72" id="1xx-en-xjU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoversationCell" rowHeight="72" id="1xx-en-xjU" customClass="ConversationTableViewCell" customModule="Luzaz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1xx-en-xjU" id="FZx-UF-q03">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-sK-XWz">
@@ -723,7 +726,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="C8a-YR-gKm" secondAttribute="trailing" constant="8" id="5yr-nH-ju3"/>
                                                         <constraint firstItem="C8a-YR-gKm" firstAttribute="top" secondItem="zzt-sK-XWz" secondAttribute="top" id="DfO-le-baB"/>
@@ -761,6 +764,12 @@
                                                 <constraint firstItem="w0o-QS-EnW" firstAttribute="bottom" secondItem="FZx-UF-q03" secondAttribute="bottomMargin" id="rIY-GJ-BBt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recievedMessageLbl" destination="C8a-YR-gKm" id="Shw-HP-ONE"/>
+                                            <outlet property="recievedMessageView" destination="zzt-sK-XWz" id="qdU-hj-56g"/>
+                                            <outlet property="sentMessageLbl" destination="t2p-ZY-G3a" id="fyW-9m-nLM"/>
+                                            <outlet property="sentMessageView" destination="w0o-QS-EnW" id="3Di-Gf-2qr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -768,20 +777,50 @@
                                     <outlet property="delegate" destination="tfA-Qk-PRO" id="w3h-gL-1F4"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdb-J9-G6V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uUh-BF-FAf">
+                                        <rect key="frame" x="93" y="22" width="135" height="39"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-vh-zWp">
+                                        <rect key="frame" x="23" y="30" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Adl-h5-7d8"/>
+                                            <constraint firstAttribute="height" constant="30" id="Ijt-Wr-G83"/>
+                                        </constraints>
+                                        <state key="normal" image="menuSliderBtn"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uUh-BF-FAf" firstAttribute="centerX" secondItem="Kdb-J9-G6V" secondAttribute="centerX" id="07S-Cf-S09"/>
+                                    <constraint firstItem="uUh-BF-FAf" firstAttribute="leading" secondItem="vYe-vh-zWp" secondAttribute="trailing" constant="40" id="1XB-dL-gsz"/>
+                                    <constraint firstAttribute="height" constant="72" id="ISi-f3-ySa"/>
+                                    <constraint firstItem="vYe-vh-zWp" firstAttribute="top" secondItem="Kdb-J9-G6V" secondAttribute="top" constant="30" id="Ouu-DU-8UA"/>
+                                    <constraint firstItem="uUh-BF-FAf" firstAttribute="top" secondItem="Kdb-J9-G6V" secondAttribute="top" constant="22" id="PiI-g2-LXb"/>
+                                    <constraint firstItem="vYe-vh-zWp" firstAttribute="leading" secondItem="Kdb-J9-G6V" secondAttribute="leading" constant="23" id="lXI-qd-yj8"/>
+                                    <constraint firstAttribute="bottom" secondItem="uUh-BF-FAf" secondAttribute="bottom" constant="11" id="zae-bt-NVB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="C19-o6-VIF" secondAttribute="trailing" id="23k-yt-RCp"/>
                             <constraint firstItem="QlR-vL-3Y1" firstAttribute="top" secondItem="qw1-pT-dpN" secondAttribute="bottom" id="BIY-5o-QyX"/>
-                            <constraint firstItem="C19-o6-VIF" firstAttribute="top" secondItem="HM1-9u-zER" secondAttribute="bottom" id="QpW-4Z-plx"/>
+                            <constraint firstItem="C19-o6-VIF" firstAttribute="top" secondItem="Kdb-J9-G6V" secondAttribute="bottom" constant="-1" id="LYS-k6-gRt"/>
+                            <constraint firstItem="Kdb-J9-G6V" firstAttribute="leading" secondItem="C19-o6-VIF" secondAttribute="leading" id="clZ-pX-3tN"/>
                             <constraint firstItem="C19-o6-VIF" firstAttribute="leading" secondItem="gqA-tY-xJp" secondAttribute="leading" id="eNG-ZZ-OYA"/>
                             <constraint firstAttribute="trailing" secondItem="qw1-pT-dpN" secondAttribute="trailing" id="kDV-SJ-qCC"/>
                             <constraint firstItem="qw1-pT-dpN" firstAttribute="leading" secondItem="gqA-tY-xJp" secondAttribute="leading" id="l0p-eQ-jnH"/>
+                            <constraint firstItem="Kdb-J9-G6V" firstAttribute="top" secondItem="gqA-tY-xJp" secondAttribute="top" id="m9k-Mi-7qG"/>
+                            <constraint firstItem="Kdb-J9-G6V" firstAttribute="trailing" secondItem="C19-o6-VIF" secondAttribute="trailing" id="ocj-Fy-WrL"/>
                             <constraint firstItem="QlR-vL-3Y1" firstAttribute="top" secondItem="C19-o6-VIF" secondAttribute="bottom" constant="50" id="xCD-ME-ZyD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Ky-Y7-fap"/>
                     <connections>
+                        <outlet property="messageTextView" destination="vql-VL-4Fa" id="wk9-bE-Vdy"/>
                         <outlet property="tableView" destination="C19-o6-VIF" id="RNt-NH-kJc"/>
                     </connections>
                 </viewController>

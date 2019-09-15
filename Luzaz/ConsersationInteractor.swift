@@ -44,6 +44,7 @@ class ConsersationInteractor {
             switch result {
             case .success :
                 let json = JSON(result.value!)
+                print(json)
                 var conversationsList = [Conversation]()
                 let conversations = json["data"].arrayValue
                 for conversation in conversations
@@ -52,6 +53,54 @@ class ConsersationInteractor {
                     conversationsList.append(data)
                 }
                 completionHandler(conversationsList, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
+    func addToConversation(user: String,with : String,speech : String,
+                         completionHandler: @escaping ([String]?, Error?) -> Void) {
+        Alamofire.request(LuzazRouter.addToConversation(user: user, with: with, speech: speech)).responseJSON {(response) in
+            let result = response.result
+            if let response = response.data {
+                print("Response Data: \(response)")
+            } else {
+                print("Response Data: nil")
+            }
+            if let request = response.request {
+                print("Request Request: \(request)")
+                print("Request Description: \(request.description)")
+                print("Request Debug Description: \(request.debugDescription)")
+                
+                print("Response Request HTTP method: \(request.httpMethod!)")
+                //                print("Response Request Content-Type: \(request.value(forHTTPHeaderField: NetworkingConstants.contentType)!)")
+            } else {
+                print("Response Request: nil")
+            }
+            
+            if let responseStatusCode = response.response {
+                print("Response Status Code: \(responseStatusCode.statusCode)")
+            } else {
+                print("Response Status Code: nil")
+            }
+            
+            if let error = response.error {
+                print("Response Error Code: \(error.localizedDescription)")
+            } else {
+                print("Response Error Code: nil")
+            }
+            switch result {
+            case .success :
+                let json = JSON(result.value!)
+                print(json)
+                var speechIdList = [String]()
+                let ids = json["data"].arrayValue
+                for id in ids
+                {   let data = id.string
+                    speechIdList.append(data!)
+                }
+                completionHandler(speechIdList, nil)
             case .failure(let error):
                 completionHandler(nil, error)
             }

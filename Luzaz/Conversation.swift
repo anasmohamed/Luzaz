@@ -27,5 +27,9 @@ class Conversation {
         self.speech = data[NetworkingConstants.speech].stringValue
         self.attachmentsArray = data[NetworkingConstants.attachmentsArray].stringValue
     }
-    
+    init(sender : String, receiver  : String , speech : String) {
+        self.receiver = receiver
+        self.speech = sender
+        self.speech = speech
+    }
 }

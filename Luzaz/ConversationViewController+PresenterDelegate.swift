@@ -21,4 +21,7 @@ extension ConverstionViewController : ConversationView {
         
         present(alertController, animated: true, completion: nil)
     }
+    func addConversationSucces() {
+        tableView.reloadData()
+    }
 }
