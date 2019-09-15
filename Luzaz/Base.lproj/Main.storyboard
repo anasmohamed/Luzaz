@@ -713,7 +713,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1xx-en-xjU" id="FZx-UF-q03">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-sK-XWz">
@@ -1208,7 +1208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQh-4z-SZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3928" y="-215"/>
+            <point key="canvasLocation" x="-3298" y="-236"/>
         </scene>
         <!--My Products View Controller-->
         <scene sceneID="VkH-4q-K67">
@@ -1365,9 +1365,6 @@
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <state key="normal" title="Products"/>
-                                                                    <connections>
-                                                                        <segue destination="etk-Gf-k3d" kind="show" id="kDi-n5-hMI"/>
-                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -2359,7 +2356,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="finishBtnWasPressed:" destination="tmU-JU-MDu" eventType="touchUpInside" id="qlB-tx-ogz"/>
-                                                    <segue destination="7zw-Tg-UGc" kind="showDetail" id="T56-aK-R3V"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gw9-DG-zN9">

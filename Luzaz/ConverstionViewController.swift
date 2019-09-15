@@ -9,11 +9,7 @@
 import UIKit
 
 class ConverstionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UITextFieldDelegate{
-    
-    
     @IBOutlet weak var messageTextView: UITextField!
-    
-    
     var presenter : ConversationPresenter!
     @IBOutlet weak var tableView: UITableView!
     var id : String?
@@ -86,6 +82,8 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         if messageTextView.text != nil && messageTextView.text != ""
         {
             presenter.sendMessage(user:userId! , with:receiverId! , message: messageTextView.text!)
+        }else{
+            showError(error: "You Shoulde Write a Message")
         }
         moveToBottom()
 

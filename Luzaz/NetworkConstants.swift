@@ -77,6 +77,8 @@ struct NetworkingConstants {
     static let categoryDescriptionEng = "description_en"
     static let categoryKeywordsEng = "keywords_en"
     static let category = "category"
+    static let subcategoryId = "subcategory"
+
 
     //Chat Parameter
     static let user = "user"
