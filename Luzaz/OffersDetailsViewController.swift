@@ -22,7 +22,7 @@ func color(_ rgbColor: Int) -> UIColor{
 class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate{
     var offer : Offer!
     @IBOutlet var heartButton: FaveButton?
-
+    
     @IBOutlet weak var offerDescriptionLabel: UILabel!
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var offerTitleLabel: UILabel!
@@ -30,20 +30,20 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     var presenter: OfferDetailesPresenter!
     var token : String?
     
+    @IBAction func callBtnWasPressed(_ sender: Any) {
+    }
+    @IBOutlet weak var callBtn: UIButton!
+    @IBOutlet weak var locationLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.heartButton?.setSelected(selected: true, animated: false)
-
+        imageLable()
         print("desci\(offer.description!)")
         presenter = OfferDetailesPresenter(view: self)
         offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
-//        scroller.translatesAutoresizingMaskIntoConstraints = false
-//        scroller.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-//        scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-//        scroller.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        scroller.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         token = UserDefaults.standard.string(forKey: "token")!
         // Do any additional setup after loading the view.
     }
@@ -62,14 +62,14 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         return nil
     }
     @IBAction func addProductToFavoriteBtnWasPressed(_ sender: Any) {
-       
+        
     }
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
-         presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
+        presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 70) + offerDescriptionLabel.bounds.size.height)
+        //        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 70) + offerDescriptionLabel.bounds.size.height)
     }
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
@@ -86,6 +86,25 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         alertController.addAction(action)
         
         present(alertController, animated: true, completion: nil)
+    }
+    func imageLable()
+    {
+        let imageAttachment =  NSTextAttachment()
+        imageAttachment.image = UIImage(named:"Calander Icon")
+        //Set bound to reposition
+        let imageOffsetY:CGFloat = 8.0;
+        imageAttachment.bounds = CGRect(x: 0, y: imageOffsetY, width: 20, height: 20)
+        //Create string with attachment
+        let attachmentString = NSAttributedString(attachment: imageAttachment)
+        //Initialize mutable string
+        let completeText = NSMutableAttributedString(string: "")
+        //Add image to mutable string
+        completeText.append(attachmentString)
+        //Add your text to mutable string
+        let  textAfterIcon = NSMutableAttributedString(string: "Using attachment.bounds!")
+        completeText.append(textAfterIcon)
+        self.dateLbl.textAlignment = .left;
+        self.dateLbl.attributedText = completeText;
     }
     
 }

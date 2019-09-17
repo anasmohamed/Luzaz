@@ -35,6 +35,7 @@ class Offer {
         self.price_after_discount  = data[NetworkingConstants.price_after_discount].stringValue
         self.image  = data[NetworkingConstants.image].stringValue
         self.reseller_name  = data[NetworkingConstants.reseller_name].stringValue
+        self.date = data[NetworkingConstants.offerDate].stringValue
     }
     
     init() {

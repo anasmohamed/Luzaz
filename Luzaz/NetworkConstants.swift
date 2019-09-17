@@ -50,6 +50,7 @@ struct NetworkingConstants {
     static let image = "image"
     static let reseller_name = "reseller_name"
     static let offerId = "id"
+    static let offerDate = "date"
 
     
     // User Requests
@@ -79,6 +80,7 @@ struct NetworkingConstants {
     static let categoryKeywordsEng = "keywords_en"
     static let category = "category"
     static let subcategoryId = "subcategory"
+    
 
 
     //Chat Parameter
