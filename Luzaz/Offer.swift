@@ -24,6 +24,7 @@ class Offer {
     var subCateogry : String?
     var brand : String?
     var condition : String?
+    var date : String?
     var appartment = Appartment()
     init(withJSON data: JSON) {
         

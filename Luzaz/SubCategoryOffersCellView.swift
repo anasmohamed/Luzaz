@@ -8,5 +8,9 @@
 
 import Foundation
 protocol SubCategoryOffersCellView {
-    
+    func showProductImage(image : String)
+    func showProductName(name : String)
+    func showProductNumber(number : String)
+    func showProductDate(date : String)
+
 }

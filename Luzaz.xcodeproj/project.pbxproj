@@ -117,6 +117,7 @@
 		CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */; };
 		CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC123B4230AEEFC0033BD18 /* OffersCell.swift */; };
 		CCC123B7230AEEFC0033BD18 /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC123B5230AEEFC0033BD18 /* OffersCell.xib */; };
+		CCCD73372331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */; };
 		CCCED99A232AD43F00148694 /* SubCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */; };
 		CCCED99C232AD46A00148694 /* SubCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */; };
 		CCCED99E232AD4A900148694 /* SubCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99D232AD4A900148694 /* SubCategoriesView.swift */; };
@@ -266,6 +267,7 @@
 		CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+PresenterDelagate.swift"; sourceTree = "<group>"; };
 		CCC123B4230AEEFC0033BD18 /* OffersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
 		CCC123B5230AEEFC0033BD18 /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
+		CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubCategoryOffersViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesPresenter.swift; sourceTree = "<group>"; };
 		CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesInteractor.swift; sourceTree = "<group>"; };
 		CCCED99D232AD4A900148694 /* SubCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesView.swift; sourceTree = "<group>"; };
@@ -357,10 +359,11 @@
 		CC07DBF7232EF21D0035AAC7 /* SubCategroiesOffers */ = {
 			isa = PBXGroup;
 			children = (
-				CC07DBFE232EF6BF0035AAC7 /* TableViewCell */,
 				CC8695F022F4F61C00E9F14D /* SubCategoryOffersViewController.swift */,
+				CC07DBFE232EF6BF0035AAC7 /* TableViewCell */,
 				CC07DBF9232EF2490035AAC7 /* Interactor */,
 				CC07DBF8232EF23D0035AAC7 /* Presenter */,
+				CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */,
 			);
 			name = SubCategroiesOffers;
 			sourceTree = "<group>";
@@ -1285,6 +1288,7 @@
 				CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */,
 				CC5380E823217DA1002E6FF8 /* SellYourItemFifthPresenter.swift in Sources */,
 				CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */,
+				CCCD73372331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */,
 				CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */,
 				CC86962022F4F61C00E9F14D /* SubCategoriesViewController.swift in Sources */,
 				CC0D3B8C2329491E00C9DD70 /* Category.swift in Sources */,

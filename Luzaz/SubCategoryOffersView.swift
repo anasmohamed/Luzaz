@@ -7,6 +7,7 @@
 //
 
 import Foundation
-protocol SubCategoryOffersView {
-    
+protocol SubCategoryOffersView : class {
+    func getSubCategoryOffersSuccess()
+    func showError(error: String)
 }

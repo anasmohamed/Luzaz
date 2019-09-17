@@ -28,7 +28,12 @@ class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableV
         
     }
     
-  
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let subCategoryOffersVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoryOffersVC") as! SubCategoryOffersViewController
+        presenter.pushToDetails(viewController: subCategoryOffersVC,indexPath.row)
+        self.present(subCategoryOffersVC, animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

@@ -8,5 +8,54 @@
 
 import Foundation
 class SubCategoryOffersPresenter {
+    private weak var view: SubCategoryOffersView?
+    private let subCategoryoffersInteractor: SubCategoryOffersInteractor
+    private var subCategoryoffer: Offer?
+    private var subCategoryOffers: [Offer]
+    init(view: SubCategoryOffersView) {
+        self.view = view
+        subCategoryoffersInteractor = SubCategoryOffersInteractor()
+        subCategoryOffers = [Offer]()
+    }
     
+    func viewDidLoad(countryId :String,subCategoryId:String) {
+        
+        //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
+        getSubCategoryOffers(countryId: countryId, subCategoryId: subCategoryId)
+        // )
+    }
+    
+    func getSubCategoryOffers(countryId: String,subCategoryId : String) {
+        subCategoryoffersInteractor.getSubCategoryOffers(countryId: countryId, subcategoryId: subCategoryId) { [unowned self] (subCategoryOffers, error) in
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let subCategoryOffers = subCategoryOffers else { return }
+                self.subCategoryOffers = subCategoryOffers
+                self.view?.getSubCategoryOffersSuccess()
+            }
+        }
+    }
+    func getSubCategoryOffersCount() -> Int {
+        return subCategoryOffers.count
+    }
+    
+    func configure(cell: SubCategoryOffersCellView, for index: Int) {
+        let subCategoryoffer = subCategoryOffers[index]
+        
+        guard let image = subCategoryoffer.image
+            ,let productName = subCategoryoffer.title
+            ,let productPrice = subCategoryoffer.price
+            else { return }
+        
+        cell.showProductImage(image: image)
+        cell.showProductNumber(number: productPrice)
+        cell.showProductName(name: productName)
+        
+    }
+    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
+        viewController.offer = subCategoryOffers[index]
+        
+    }
 }

@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
+class SubCategoryOffersTableViewCell: UITableViewCell,SubCategoryOffersCellView {
+    @IBOutlet weak var productNameLbl: UILabel!
 
-class SubCategoryOffersTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var numberLbl: UILabel!
+    @IBOutlet weak var productImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -19,5 +23,16 @@ class SubCategoryOffersTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func showProductName(name: String) {
+        productNameLbl.text = name
+    }
+    func showProductDate(date: String) {
+        dateLbl.text = date
+    }
+    func showProductImage(image: String) {
+        productImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(image)"), placeholderImage: UIImage(named: "back.png"))
+    }
+    func showProductNumber(number: String) {
+        numberLbl.text = number
+    }
 }

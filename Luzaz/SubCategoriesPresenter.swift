@@ -40,13 +40,19 @@ class SubCategoriesPresenter {
         return subCategories.count
     }
     
-   
+    
     
     func configure(cell: UITableViewCell, for index: Int) {
         let category = subCategories[index]
-    
+        
         guard let name = category.name
             else { return }
         
         cell.textLabel?.text = name
-    }}
+    }
+    func pushToDetails(viewController : SubCategoryOffersViewController, _ index : Int) {
+        viewController.subCategoryId = subCategories[index].id
+        
+    }
+
+}

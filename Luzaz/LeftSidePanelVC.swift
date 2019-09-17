@@ -61,6 +61,8 @@ class LeftSidePanelVC: UIViewController {
     @IBAction func myProductWasPressed(_ sender: Any) {
     }
     @IBAction func categoriesBtnWasPressed(_ sender: Any) {
+        let categoriesVC = storyboard?.instantiateViewController(withIdentifier: "MainCategoriesVC") as! MainCateogriesViewController
+        self.present(categoriesVC, animated: true, completion: nil)
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
     }
