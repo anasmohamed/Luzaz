@@ -120,6 +120,7 @@
 		CCCD73372331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */; };
 		CCCD733923313252005823D6 /* OfferDetailesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733823313252005823D6 /* OfferDetailesPresenter.swift */; };
 		CCCD733B233133CA005823D6 /* OffersDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733A233133CA005823D6 /* OffersDetailesView.swift */; };
+		CCCD733D23315B97005823D6 /* FavImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733C23315B97005823D6 /* FavImage.swift */; };
 		CCCED99A232AD43F00148694 /* SubCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */; };
 		CCCED99C232AD46A00148694 /* SubCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */; };
 		CCCED99E232AD4A900148694 /* SubCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99D232AD4A900148694 /* SubCategoriesView.swift */; };
@@ -272,6 +273,7 @@
 		CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubCategoryOffersViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CCCD733823313252005823D6 /* OfferDetailesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailesPresenter.swift; sourceTree = "<group>"; };
 		CCCD733A233133CA005823D6 /* OffersDetailesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersDetailesView.swift; sourceTree = "<group>"; };
+		CCCD733C23315B97005823D6 /* FavImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavImage.swift; sourceTree = "<group>"; };
 		CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesPresenter.swift; sourceTree = "<group>"; };
 		CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesInteractor.swift; sourceTree = "<group>"; };
 		CCCED99D232AD4A900148694 /* SubCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesView.swift; sourceTree = "<group>"; };
@@ -814,6 +816,7 @@
 				CC8695CE22F4F54B00E9F14D /* Info.plist */,
 				CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */,
 				CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */,
+				CCCD733C23315B97005823D6 /* FavImage.swift */,
 			);
 			path = Luzaz;
 			sourceTree = "<group>";
@@ -1268,6 +1271,7 @@
 				CC86961522F4F61C00E9F14D /* MyProductViewController.swift in Sources */,
 				CC0D3B8E23294FF600C9DD70 /* MainCategoriesViewController+PresenterDelegate.swift in Sources */,
 				CC86960E22F4F61C00E9F14D /* FavouriteIViewController.swift in Sources */,
+				CCCD733D23315B97005823D6 /* FavImage.swift in Sources */,
 				CC86961E22F4F61C00E9F14D /* SellYourItemSecondViewController.swift in Sources */,
 				CC86961F22F4F61C00E9F14D /* SellYourItemViewController.swift in Sources */,
 				CCB8F5502313ED800025FEA1 /* LoginViewController+PresenterDelegate.swift in Sources */,

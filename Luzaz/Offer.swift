@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 class Offer {
-    
+    var offerId: String?
     var title: String?
     var description: String?
     var price: String?
@@ -27,7 +27,7 @@ class Offer {
     var date : String?
     var appartment = Appartment()
     init(withJSON data: JSON) {
-        
+        self.offerId = data[NetworkingConstants.offerId].stringValue
         self.title = data[NetworkingConstants.title].stringValue
         self.description = data[NetworkingConstants.description].stringValue
         self.price  = data[NetworkingConstants.price].stringValue
