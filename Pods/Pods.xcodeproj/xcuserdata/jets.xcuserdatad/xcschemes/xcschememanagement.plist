@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FaveButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,11 +57,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20BF102F5389832C2DB29BF32C3589D8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2207F1EF85DE790341108CC9928C7F61</key>
 		<dict>
 			<key>primary</key>
@@ -67,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4121973261B46A180B05BC7CB50EA82E</key>
+		<key>593E58645EC26F03DAA1A087EC7DDF13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC3FA59316A71A78879B3BDCB297E4E0</key>
+		<key>A340A6FAD60AAB7F41E84972464DD690</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB9D528224347A6E38A8A680B753734C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0A5AC6A1D45DE916875609A85C861E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

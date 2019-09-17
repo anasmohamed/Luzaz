@@ -11,6 +11,7 @@ target 'Luzaz' do
   pod 'SDWebImage'
   pod 'AlamofireObjectMapper'
   pod 'SwiftyJSON', '3.0.0'
+  pod 'FaveButton'
 
   target 'LuzazTests' do
     inherit! :search_paths

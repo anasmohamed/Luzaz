@@ -34,9 +34,8 @@ struct NetworkingConstants {
     static let getConversationBuddies = "getConversationBuddies"
     static let getConversation = "getConversation"
     static let addToConversation = "addToConversation"
+    static let addUserFavorites = "addUserFavorites"
 
-
-    
 
     
     
@@ -99,6 +98,13 @@ struct NetworkingConstants {
     static let with = "with"
     static let senderSpeech = "speech"
     static let senderAttachmentsArray = "attachmentsArray"
+    
+    //ADDUSERFAVORITES
+    static let favoriteUserToken = "Token"
+    static let favoriteUserOffer = "offer"
+
+
+    
 
 
 }

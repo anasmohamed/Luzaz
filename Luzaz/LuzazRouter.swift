@@ -21,6 +21,7 @@ enum LuzazRouter: URLRequestConvertible {
     case getConversation(id: String,paging:String)
     case addToConversation(user :String ,with : String, speech: String)
     case getSubCategoryOffers(countryId: String,subCategoryId : String)
+    case addUserFavorites(token : String, offerId : String)
     
     var path: String {
         
@@ -43,6 +44,8 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.addToConversation
         case .getSubCategoryOffers:
             return NetworkingConstants.getOffers
+        case .addUserFavorites:
+            return NetworkingConstants.addUserFavorites
         }
     }
     
@@ -50,7 +53,7 @@ enum LuzazRouter: URLRequestConvertible {
         
         switch self {
             
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites:
             return .get
         case .register,.addToConversation:
             return .post
@@ -120,7 +123,10 @@ enum LuzazRouter: URLRequestConvertible {
         case let .getSubCategoryOffers(country,subCategoryId):
             params[NetworkingConstants.country] = country
             params[NetworkingConstants.subcategoryId] = subCategoryId
-
+        case let .addUserFavorites(token,offerId):
+            params[NetworkingConstants.favoriteUserToken] = token
+            params[NetworkingConstants.favoriteUserOffer] = offerId
+            
             
         default:
             print("Empty Paramter")
@@ -139,7 +145,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             

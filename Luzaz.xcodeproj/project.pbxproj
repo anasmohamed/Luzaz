@@ -118,6 +118,8 @@
 		CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC123B4230AEEFC0033BD18 /* OffersCell.swift */; };
 		CCC123B7230AEEFC0033BD18 /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC123B5230AEEFC0033BD18 /* OffersCell.xib */; };
 		CCCD73372331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */; };
+		CCCD733923313252005823D6 /* OfferDetailesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733823313252005823D6 /* OfferDetailesPresenter.swift */; };
+		CCCD733B233133CA005823D6 /* OffersDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733A233133CA005823D6 /* OffersDetailesView.swift */; };
 		CCCED99A232AD43F00148694 /* SubCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */; };
 		CCCED99C232AD46A00148694 /* SubCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */; };
 		CCCED99E232AD4A900148694 /* SubCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99D232AD4A900148694 /* SubCategoriesView.swift */; };
@@ -268,6 +270,8 @@
 		CCC123B4230AEEFC0033BD18 /* OffersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
 		CCC123B5230AEEFC0033BD18 /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
 		CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubCategoryOffersViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CCCD733823313252005823D6 /* OfferDetailesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailesPresenter.swift; sourceTree = "<group>"; };
+		CCCD733A233133CA005823D6 /* OffersDetailesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersDetailesView.swift; sourceTree = "<group>"; };
 		CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesPresenter.swift; sourceTree = "<group>"; };
 		CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesInteractor.swift; sourceTree = "<group>"; };
 		CCCED99D232AD4A900148694 /* SubCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesView.swift; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				CC07BFAD2309C21000E83B0D /* OffersCellView.swift */,
 				CC07BFAF2309C23800E83B0D /* OffersPresenter.swift */,
 				CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */,
+				CCCD733823313252005823D6 /* OfferDetailesPresenter.swift */,
+				CCCD733A233133CA005823D6 /* OffersDetailesView.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -1125,6 +1131,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Luzaz/Pods-Luzaz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -1133,6 +1140,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -1187,6 +1195,7 @@
 			files = (
 				CC0D3B80232940EA00C9DD70 /* MainCateogriesViewController.swift in Sources */,
 				CC5380F0232186B5002E6FF8 /* SellYourItemEndView.swift in Sources */,
+				CCCD733B233133CA005823D6 /* OffersDetailesView.swift in Sources */,
 				CC08B05123283C53003132E2 /* UsersChatsViewController+PresetnerDelegate.swift in Sources */,
 				CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */,
 				CC6B8D14232E874E005D45FC /* ConversationTableViewCell.swift in Sources */,
@@ -1285,6 +1294,7 @@
 				CC86961C22F4F61C00E9F14D /* SellYourItemFifthViewController.swift in Sources */,
 				CCB406C6231816BC0099B74E /* SellYourItemViewController+PickerDelegate.swift in Sources */,
 				CC7CA916232D44C0006C5E17 /* ConverstionViewController.swift in Sources */,
+				CCCD733923313252005823D6 /* OfferDetailesPresenter.swift in Sources */,
 				CC9482EB230F7F020058D78A /* CountryTableViewCell.swift in Sources */,
 				CC5380E823217DA1002E6FF8 /* SellYourItemFifthPresenter.swift in Sources */,
 				CC86960F22F4F61C00E9F14D /* OffersViewController.swift in Sources */,
