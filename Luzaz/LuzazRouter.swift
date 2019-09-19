@@ -49,9 +49,8 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.addUserFavorites
         case .getUserOrders:
             return NetworkingConstants.getUserOrders
-            
         case .getCompetition:
-            NetworkingConstants.getCompetition
+           return NetworkingConstants.getCompetition
         }
     }
     

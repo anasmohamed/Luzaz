@@ -50,6 +50,8 @@
 		CC1CA0CC2333DCEB0003ECD0 /* CompetitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA0CB2333DCEB0003ECD0 /* CompetitionPresenter.swift */; };
 		CC1CA0CE2333DD360003ECD0 /* CompetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA0CD2333DD360003ECD0 /* CompetitionView.swift */; };
 		CC1CA0D02333DDAF0003ECD0 /* QuestionsViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA0CF2333DDAF0003ECD0 /* QuestionsViewController+PresenterDelegate.swift */; };
+		CC1CA0D2233411550003ECD0 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA0D1233411550003ECD0 /* Answer.swift */; };
+		CC1CA0D4233412330003ECD0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA0D3233412330003ECD0 /* Question.swift */; };
 		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
 		CC2379EE2310A7D000923D59 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */; };
 		CC52DCFE23096F9C00981C31 /* OffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */; };
@@ -214,6 +216,8 @@
 		CC1CA0CB2333DCEB0003ECD0 /* CompetitionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionPresenter.swift; sourceTree = "<group>"; };
 		CC1CA0CD2333DD360003ECD0 /* CompetitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionView.swift; sourceTree = "<group>"; };
 		CC1CA0CF2333DDAF0003ECD0 /* QuestionsViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuestionsViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CA0D1233411550003ECD0 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		CC1CA0D3233412330003ECD0 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CC2379ED2310A7D000923D59 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
 		CC52DCFD23096F9C00981C31 /* OffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersInteractor.swift; sourceTree = "<group>"; };
@@ -671,6 +675,8 @@
 				CC7CA917232D62B0006C5E17 /* Conversation.swift */,
 				CC0EB0B22332A4E4003B1D27 /* Order.swift */,
 				CC1CA0C72333DA6E0003ECD0 /* Competation.swift */,
+				CC1CA0D1233411550003ECD0 /* Answer.swift */,
+				CC1CA0D3233412330003ECD0 /* Question.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1318,6 +1324,7 @@
 				CC0D3B80232940EA00C9DD70 /* MainCateogriesViewController.swift in Sources */,
 				CC5380F0232186B5002E6FF8 /* SellYourItemEndView.swift in Sources */,
 				CCCD733B233133CA005823D6 /* OffersDetailesView.swift in Sources */,
+				CC1CA0D2233411550003ECD0 /* Answer.swift in Sources */,
 				CC08B05123283C53003132E2 /* UsersChatsViewController+PresetnerDelegate.swift in Sources */,
 				CC86961222F4F61C00E9F14D /* LoginViewController.swift in Sources */,
 				CC6B8D14232E874E005D45FC /* ConversationTableViewCell.swift in Sources */,
@@ -1371,6 +1378,7 @@
 				CC52DD01230970E900981C31 /* Offer.swift in Sources */,
 				CC686201231B386200C8F4FF /* SellYourItemInteractor.swift in Sources */,
 				CCB8F54E2313ED800025FEA1 /* LoginView.swift in Sources */,
+				CC1CA0D4233412330003ECD0 /* Question.swift in Sources */,
 				CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */,
 				CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */,
 				CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */,

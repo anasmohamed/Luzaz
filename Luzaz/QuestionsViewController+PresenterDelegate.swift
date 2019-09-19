@@ -11,6 +11,10 @@ import UIKit
 
 extension QuestionsViewController : CompetitionView
 {
+     func getCompetitionSuccess() {
+        tableView.reloadData()
+    }
+
     func showIndicator() {
         spinner.startAnimating()
     }
@@ -19,11 +23,7 @@ extension QuestionsViewController : CompetitionView
         spinner.stopAnimating()
     }
     
-    func getOffersSuccess() {
-        collectionView.reloadData()
-    }
-    
-    
+ 
     
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)

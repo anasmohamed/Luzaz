@@ -8,19 +8,51 @@
 
 import UIKit
 
-class QuestionsViewController: UIViewController {
+class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    private var presenter: CompetitionPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTableView()
+        presenter = CompetitionPresenter(view: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewDidLoad()
+
+    }
+    func setupTableView() {
+        tableView.register(UINib(nibName: "CompetionCell", bundle: nil), forCellReuseIdentifier: "CompetionCell")
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UserDefaults.standard.set(indexPath.row + 1 , forKey: "country")
+        
+        let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
+        self.present(languageVC, animated: true, completion: nil)
+        
+        
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return presenter.getQuestionsCount()
+        
+    }
 
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CompetionCell", for: indexPath) as! CompetionTableViewCell
+        presenter.configure(cell: cell, for: indexPath.row)
+        
+        return cell
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
 }

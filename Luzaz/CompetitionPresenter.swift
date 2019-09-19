@@ -8,69 +8,54 @@
 
 import Foundation
 class CompetitionPresenter {
-    private weak var view: OffersView?
-    private let offersInteractor: OffersInteractor
+    private weak var view: CompetitionView?
+    private let competitionInteractor: CompetitionInteractor
     private var offer: Offer?
-    private var offers: [Offer]
-    private var filteredOffers : [Offer]
-    init(view: OffersView) {
+    private var competations: [Competation]
+    //private var qustions : [Question]
+    init(view: CompetitionView) {
         self.view = view
-        offersInteractor = OffersInteractor()
-        offers = [Offer]()
-        filteredOffers = offers
+        competitionInteractor = CompetitionInteractor()
+        competations = [Competation]()
     }
     
     func viewDidLoad() {
         
-        //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
-        getOffers(countryId: "1")
-        // )
+       
+        getQuestions()
+        
     }
     
-    func getOffers(countryId: String) {
+    func getQuestions() {
         view?.showIndicator()
-        offersInteractor.getOffers(countryId: countryId) { [unowned self] (offers, error) in
+        competitionInteractor.getCompetion() { [unowned self] (competations, error) in
             
             self.view?.hideIndicator()
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-                guard let offers = offers else { return }
-                self.offers = offers
-                self.filteredOffers = offers
-                self.view?.getOffersSuccess()
+                guard let competations = competations else { return }
+                self.competations = competations
+                
+                self.view?.getCompetitionSuccess()
             }
         }
     }
-    func getOffersCount() -> Int {
-        return offers.count
+    func getQuestionsCount() -> Int {
+        return competations.count
     }
-    func getFilteredOffersCount() -> Int {
-        return filteredOffers.count
-    }
-    func getSearchedOffer(searchText : String) {
-        filteredOffers =  offers.filter({( offer : Offer) -> Bool in
-            return (offer.title?.lowercased().contains(searchText.lowercased()))!
-        })
+
+    func configure(cell: CompetionCellView, for index: Int) {
+        //let questionList = competations[index].questionsList
+//        for
+//        guard let questionText = question.questionsList[index]
+//            else { return }
         
-        
+       
     }
-    
-    func configure(cell: OffersCellView, for index: Int,isFiltering : Bool) {
-        let offer : Offer
-        if isFiltering {
-            offer = filteredOffers[index]
-        }else{
-            offer = offers[index]
-        }
-        guard let image = offer.image
-            else { return }
-        
-        cell.displayOfferImage(offerImage: image)
-    }
-    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-        viewController.offer = offers[index]
-        
-    }
+//    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
+//        viewController.offer = offers[index]
+//        
+//    }
 
 }

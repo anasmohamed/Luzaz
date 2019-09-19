@@ -48,14 +48,14 @@ class CompetitionInteractor {
             case .success :
                 let json = JSON(result.value!)
                 print(json)
-                var offersList = [Competation]()
-                let offers = json["data"].arrayValue
-                for offer in offers
+                var competationList = [Competation]()
+                let competations = json["data"].arrayValue
+                for competation in competations
                 {
-                    let data = Competation(withJSON: offer)
-                    offersList.append(data)
+                    let data = Competation(withJSON: competation)
+                    competationList.append(data)
                 }
-                completionHandler(offersList, nil)
+                completionHandler(competationList, nil)
             case .failure(let error):
                 completionHandler(nil, error)
             }

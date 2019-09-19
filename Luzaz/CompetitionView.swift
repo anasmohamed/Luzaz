@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol CompetitionView {
+protocol CompetitionView:class {
     func showIndicator()
     func hideIndicator()
     func getCompetitionSuccess()
