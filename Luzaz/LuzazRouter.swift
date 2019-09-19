@@ -22,7 +22,8 @@ enum LuzazRouter: URLRequestConvertible {
     case addToConversation(user :String ,with : String, speech: String)
     case getSubCategoryOffers(countryId: String,subCategoryId : String)
     case addUserFavorites(token : String, offerId : String)
-    
+    case getUserOrders(token : String)
+    case getCompetition
     var path: String {
         
         switch self {
@@ -46,6 +47,11 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.getOffers
         case .addUserFavorites:
             return NetworkingConstants.addUserFavorites
+        case .getUserOrders:
+            return NetworkingConstants.getUserOrders
+            
+        case .getCompetition:
+            NetworkingConstants.getCompetition
         }
     }
     
@@ -53,7 +59,7 @@ enum LuzazRouter: URLRequestConvertible {
         
         switch self {
             
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition:
             return .get
         case .register,.addToConversation:
             return .post
@@ -126,6 +132,7 @@ enum LuzazRouter: URLRequestConvertible {
         case let .addUserFavorites(token,offerId):
             params[NetworkingConstants.favoriteUserToken] = token
             params[NetworkingConstants.favoriteUserOffer] = offerId
+        case let .getUserOrders(token):             params[NetworkingConstants.userOrderToken] = token
             
             
         default:
@@ -145,7 +152,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             

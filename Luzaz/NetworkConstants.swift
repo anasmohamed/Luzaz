@@ -35,10 +35,10 @@ struct NetworkingConstants {
     static let getConversation = "getConversation"
     static let addToConversation = "addToConversation"
     static let addUserFavorites = "addUserFavorites"
+    static let getUserOrders = "getUserOrders"
+    static let getCompetition = "getCompetition"
 
 
-    
-    
     //get offers pramters
     static let country = "country"
     static let nopaging = "nopaging"
@@ -51,7 +51,7 @@ struct NetworkingConstants {
     static let reseller_name = "reseller_name"
     static let offerId = "id"
     static let offerDate = "date"
-
+    
     
     // User Requests
     static let update = "update"
@@ -81,8 +81,8 @@ struct NetworkingConstants {
     static let category = "category"
     static let subcategoryId = "subcategory"
     
-
-
+    
+    
     //Chat Parameter
     static let user = "user"
     static let buudyId = "id"
@@ -106,10 +106,22 @@ struct NetworkingConstants {
     //ADDUSERFAVORITES
     static let favoriteUserToken = "Token"
     static let favoriteUserOffer = "offer"
-
-
     
-
-
+    
+    
+    //GET USER ORDER
+    static let userOrderToken = "Token"
+    static let userOrderId = "id"
+    static let getOrderUserId = "id_user"
+    static let resellerId = "id_reseller"
+    static let orderId = "order_id"
+    static let offreId = "id_offer"
+    static let userOrderPrice = "price"
+    static let quantity = "quantity"
+    static let totalPrice = "total_price"
+    static let paymentWay = "payment_way"
+    static let idAddress = "id_address"
+    static let currency = "currency"
+    
 }
 

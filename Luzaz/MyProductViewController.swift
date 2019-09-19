@@ -2,45 +2,42 @@
 //  MyProductViewController.swift
 //  Luzaz
 //
-//  Created by Salwa on 5/1/18.
+//  Created by jets on 17/9/19.
 //  Copyright © 2018 Luzaz. All rights reserved.
 //
 
 import UIKit
 
-class MyProductViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource {
+class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    var presenter: MyProductPresenter!
 
-    @IBOutlet weak var colectionView: UICollectionView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        colectionView.delegate = self
-        colectionView.dataSource = self
-        
-        // Do any additional setup after loading the view.
+        presenter = MyProductPresenter(view : self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.getOrderCount()
+        
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let subCategoryOffersVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoryOffersVC") as! SubCategoryOffersViewController
+        //presenter.pushToDetails(viewController: subCategoryOffersVC,indexPath.row)
+        self.present(subCategoryOffersVC, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubCategoryCell", for: indexPath) as! MyProductTableViewCell
+        presenter.configure(cell: cell, for: indexPath.row)
+        
+        return cell
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
