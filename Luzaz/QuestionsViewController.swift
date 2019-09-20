@@ -25,7 +25,7 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
 
     }
     func setupTableView() {
-        tableView.register(UINib(nibName: "CompetionCell", bundle: nil), forCellReuseIdentifier: "CompetionCell")
+        tableView.register(UINib(nibName: "CompetionTableViewCell", bundle: nil), forCellReuseIdentifier: "CompetionTableViewCell")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -46,7 +46,7 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CompetionCell", for: indexPath) as! CompetionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CompetionTableViewCell", for: indexPath) as! CompetionTableViewCell
         presenter.configure(cell: cell, for: indexPath.row)
         
         return cell

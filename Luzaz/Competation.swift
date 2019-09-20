@@ -11,24 +11,38 @@ import SwiftyJSON
 class Competation {
     
     var date: String?
-    var questionsList = [Question]()
+    var questions : JSON?
     var phone : String?
     var description : String?
     var image : String?
     var title : JSON?
     var enTitle : String?
     var arTitle : String?
+    var enQuestions : [JSON]?
+    var arQuestions: [JSON]?
+    var enQuestionsList: [Question]
     init(withJSON data: JSON) {
         self.date = data["date"].stringValue
         self.image = data["image"].stringValue
         self.title = data["title"]
         self.arTitle = title?["ar"].stringValue
         self.enTitle = title?["en"].stringValue
-        let  questions = data["questions"].arrayValue
-        for question  in questions
+        self.questions = data["questions"]
+        self.enQuestions = questions?["en"].arrayValue
+        self.arQuestions = questions?["ar"].arrayValue
+        self.enQuestionsList = [Question]()
+        var arQuestionsList = [Question]()
+
+        for question in enQuestions!
         {
-            let  questionData = Question(withJson: question)
-            questionsList.append(questionData)
+            let questionData = Question(withJson: question)
+            enQuestionsList.append(questionData)
         }
+        for question in arQuestions!
+        {
+            let questionData = Question(withJson: question)
+            arQuestionsList.append(questionData)
+        }
+        
     }
 }

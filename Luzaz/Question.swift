@@ -14,6 +14,9 @@ class Question {
     var questionId : String?
     var question : String?
     var answersList = [Answer]()
+    var enQuestions : [Question]?
+    var arQuestions : [Question]?
+
     init() {
         
     }
@@ -21,6 +24,7 @@ class Question {
         self.question = data["question"].stringValue
         self.questionId = data["id"].stringValue
         let answers =  data["answers"].arrayValue
+         
         for answer in answers
         {
             let answerData = Answer(withJson: answer)

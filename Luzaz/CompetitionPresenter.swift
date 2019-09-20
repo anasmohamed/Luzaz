@@ -12,50 +12,57 @@ class CompetitionPresenter {
     private let competitionInteractor: CompetitionInteractor
     private var offer: Offer?
     private var competations: [Competation]
-    //private var qustions : [Question]
+    
+    private var qustions : [Question]
     init(view: CompetitionView) {
         self.view = view
         competitionInteractor = CompetitionInteractor()
         competations = [Competation]()
+        qustions =  [Question]()
     }
     
     func viewDidLoad() {
         
-       
+        
         getQuestions()
         
     }
     
     func getQuestions() {
         view?.showIndicator()
-        competitionInteractor.getCompetion() { [unowned self] (competations, error) in
+        competitionInteractor.getCompetion() { [unowned self] (qustions, error) in
             
             self.view?.hideIndicator()
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-                guard let competations = competations else { return }
-                self.competations = competations
+                guard let qustions = qustions else { return }
+                self.qustions = qustions
                 
                 self.view?.getCompetitionSuccess()
             }
         }
     }
     func getQuestionsCount() -> Int {
-        return competations.count
+        return qustions.count
     }
-
+    
     func configure(cell: CompetionCellView, for index: Int) {
-        //let questionList = competations[index].questionsList
-//        for
-//        guard let questionText = question.questionsList[index]
-//            else { return }
+        let question = qustions[index]
+        let answers = question.answersList
+        guard let questionText = question.question
+            
+            else { return }
         
-       
+        cell.displayFirstAnswer(firstAnswer: answers[0].answer!)
+        cell.displaySecondAnswer(secondAnswer: answers[1].answer!)
+        cell.displayThirdAnswer(thirdAnswer: answers[2].answer!)
+        cell.displayQuestion(question: questionText)
+        
     }
-//    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-//        viewController.offer = offers[index]
-//        
-//    }
-
+    //    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
+    //        viewController.offer = offers[index]
+    //
+    //    }
+    
 }
