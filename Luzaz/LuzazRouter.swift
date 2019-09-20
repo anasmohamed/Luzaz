@@ -24,6 +24,7 @@ enum LuzazRouter: URLRequestConvertible {
     case addUserFavorites(token : String, offerId : String)
     case getUserOrders(token : String)
     case getCompetition
+    case addCompetitionEnrolment(id : String,lang :String,questions : String,answers : String,firstName : String ,lastName:String,phone :String,email :String)
     var path: String {
         
         switch self {
@@ -51,6 +52,8 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.getUserOrders
         case .getCompetition:
            return NetworkingConstants.getCompetition
+        case .addCompetitionEnrolment:
+            return NetworkingConstants.addCompetitionEnrolment
         }
     }
     
@@ -58,7 +61,7 @@ enum LuzazRouter: URLRequestConvertible {
         
         switch self {
             
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition,.addCompetitionEnrolment:
             return .get
         case .register,.addToConversation:
             return .post
@@ -132,7 +135,17 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.favoriteUserToken] = token
             params[NetworkingConstants.favoriteUserOffer] = offerId
         case let .getUserOrders(token):             params[NetworkingConstants.userOrderToken] = token
-            
+        case let .addCompetitionEnrolment(id ,lang ,questions ,answers ,firstName  ,lastName,phone ,email):
+            params[NetworkingConstants.competitionId] = id
+            params[NetworkingConstants.competitionLang] = lang
+
+            params[NetworkingConstants.questions] = questions
+            params[NetworkingConstants.answers] = answers
+            params[NetworkingConstants.competitionFirstName] = firstName
+            params[NetworkingConstants.competitionLastName] = lastName
+            params[NetworkingConstants.phone] = phone
+            params[NetworkingConstants.email] = email
+
             
         default:
             print("Empty Paramter")
@@ -151,7 +164,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition,.addCompetitionEnrolment:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             
