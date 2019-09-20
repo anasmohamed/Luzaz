@@ -17,12 +17,13 @@ class CompetionTableViewCell: UITableViewCell,CompetionCellView {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func displayQuestion(question: String) {
         qustionLbl.text = question
     }
     func displayFirstAnswer(firstAnswer: String) {
         firstAnswerBtn.titleLabel?.text = firstAnswer
+        
     }
     func displaySecondAnswer(secondAnswer: String) {
        secondAnswerBtn.titleLabel?.text = secondAnswer
@@ -30,4 +31,15 @@ class CompetionTableViewCell: UITableViewCell,CompetionCellView {
     func displayThirdAnswer(thirdAnswer: String) {
         thirdAnswerBtn.titleLabel?.text = thirdAnswer
     }
+    @objc @IBAction private func logSelectedButton(radioButton : DLRadioButton) {
+        if (radioButton.isMultipleSelectionEnabled) {
+            for button in radioButton.selectedButtons() {
+                print(String(format: "%@ is selected.\n", button.titleLabel!.text!));
+            }
+        } else {
+            print(String(format: "%@ is selected.\n", radioButton.selected()!.titleLabel!.text!));
+        }
+    }
+
+    
 }

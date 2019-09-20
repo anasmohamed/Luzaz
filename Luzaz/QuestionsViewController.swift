@@ -31,10 +31,10 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UserDefaults.standard.set(indexPath.row + 1 , forKey: "country")
-        
-        let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
-        self.present(languageVC, animated: true, completion: nil)
+//        UserDefaults.standard.set(indexPath.row + 1 , forKey: "country")
+//        
+//        let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
+//        self.present(languageVC, animated: true, completion: nil)
         
         
         
@@ -57,6 +57,6 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
 
     @IBAction func answerBtnWasPressed(_ sender: Any) {
-        presenter.addCompetitionEnrolment(id:presenter.getCompetitionId() , lang: , questions: , answers: , firstName: userFristName, lastName: userLastName, phone: userPhone, email: userEmail)
+//        presenter.addCompetitionEnrolment(id:presenter.getCompetitionId() , lang: , questions:presenter.getQuestionsId , answers: , firstName: userFristName, lastName: userLastName, phone: userPhone, email: userEmail)
     }
 }

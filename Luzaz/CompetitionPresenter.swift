@@ -33,7 +33,7 @@ class CompetitionPresenter {
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-                print(code ?? <#default value#>)
+                print(code)
                 
             }
             
@@ -63,11 +63,11 @@ class CompetitionPresenter {
     }
     
     func getQuestionsId() -> String {
-        let questionsId : String?
-        for question in qustions
-        {
-          questionsId = question.questionId! + ","
-        }
+        var questionsId : String?
+//        for question in qustions
+//        {
+//          questionsId = question.questionId! + ","
+//        }
         return questionsId!
     }
     func configure(cell: CompetionCellView, for index: Int) {
