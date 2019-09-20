@@ -12,7 +12,10 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: CompetitionPresenter!
-
+    var userPhone : String?
+    var userEmail : String?
+    var userFristName : String?
+    var userLastName : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -22,7 +25,6 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewDidLoad()
-
     }
     func setupTableView() {
         tableView.register(UINib(nibName: "CompetionTableViewCell", bundle: nil), forCellReuseIdentifier: "CompetionTableViewCell")
@@ -38,7 +40,6 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return presenter.getQuestionsCount()
         
     }
@@ -55,4 +56,7 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
         return 1
     }
 
+    @IBAction func answerBtnWasPressed(_ sender: Any) {
+        presenter.addCompetitionEnrolment(id:presenter.getCompetitionId() , lang: , questions: , answers: , firstName: userFristName, lastName: userLastName, phone: userPhone, email: userEmail)
+    }
 }

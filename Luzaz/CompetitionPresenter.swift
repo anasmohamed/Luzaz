@@ -12,7 +12,7 @@ class CompetitionPresenter {
     private let competitionInteractor: CompetitionInteractor
     private var offer: Offer?
     private var competations: [Competation]
-    
+    private var competitonId : String?
     private var qustions : [Question]
     init(view: CompetitionView) {
         self.view = view
@@ -22,15 +22,27 @@ class CompetitionPresenter {
     }
     
     func viewDidLoad() {
-        
-        
         getQuestions()
-        
     }
     
+    func addCompetitionEnrolment (id:String , lang: String, questions: String, answers: String, firstName: String, lastName: String, phone: String, email: String)  {
+        view?.showIndicator()
+        competitionInteractor.addCompetitionEnrolment(id: id, lang: lang, questions: questions, answers: answers, firstName: firstName, lastName: lastName, phone: phone, email: email){
+            [unowned self] (percentage,code, error) in
+            self.view?.hideIndicator()
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                print(code ?? <#default value#>)
+                
+            }
+            
+            
+        }
+    }
     func getQuestions() {
         view?.showIndicator()
-        competitionInteractor.getCompetion() { [unowned self] (qustions, error) in
+        competitionInteractor.getCompetion() { [unowned self] (qustions,competitionId, error) in
             
             self.view?.hideIndicator()
             if let error = error {
@@ -38,7 +50,7 @@ class CompetitionPresenter {
             } else {
                 guard let qustions = qustions else { return }
                 self.qustions = qustions
-                
+                self.competitonId = competitionId
                 self.view?.getCompetitionSuccess()
             }
         }
@@ -46,7 +58,18 @@ class CompetitionPresenter {
     func getQuestionsCount() -> Int {
         return qustions.count
     }
+    func getCompetitionId() -> String? {
+        return competitonId
+    }
     
+    func getQuestionsId() -> String {
+        let questionsId : String?
+        for question in qustions
+        {
+          questionsId = question.questionId! + ","
+        }
+        return questionsId!
+    }
     func configure(cell: CompetionCellView, for index: Int) {
         let question = qustions[index]
         let answers = question.answersList

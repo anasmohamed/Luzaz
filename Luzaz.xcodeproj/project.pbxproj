@@ -141,6 +141,7 @@
 		CCCED99A232AD43F00148694 /* SubCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */; };
 		CCCED99C232AD46A00148694 /* SubCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */; };
 		CCCED99E232AD4A900148694 /* SubCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCED99D232AD4A900148694 /* SubCategoriesView.swift */; };
+		CCD994D123351B3500B63CD4 /* UserCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD994D023351B3500B63CD4 /* UserCompetitionViewController.swift */; };
 		CCDA9B212313133F001525F8 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA9B202313133F001525F8 /* UserInteractor.swift */; };
 		CCDA9B232313137A001525F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA9B222313137A001525F8 /* User.swift */; };
 		CCDA9B25231320FC001525F8 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA9B24231320FC001525F8 /* RegistrationPresenter.swift */; };
@@ -313,6 +314,7 @@
 		CCCED999232AD43F00148694 /* SubCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesPresenter.swift; sourceTree = "<group>"; };
 		CCCED99B232AD46A00148694 /* SubCategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesInteractor.swift; sourceTree = "<group>"; };
 		CCCED99D232AD4A900148694 /* SubCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesView.swift; sourceTree = "<group>"; };
+		CCD994D023351B3500B63CD4 /* UserCompetitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCompetitionViewController.swift; sourceTree = "<group>"; };
 		CCDA9B202313133F001525F8 /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		CCDA9B222313137A001525F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CCDA9B24231320FC001525F8 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 				CC1CA0BC2333BDD60003ECD0 /* TableViewCell */,
 				CC1CA0C52333D8B30003ECD0 /* QuestionsViewController.swift */,
 				CC1CA0CF2333DDAF0003ECD0 /* QuestionsViewController+PresenterDelegate.swift */,
+				CCD994D023351B3500B63CD4 /* UserCompetitionViewController.swift */,
 			);
 			name = Competions;
 			sourceTree = "<group>";
@@ -1352,6 +1355,7 @@
 				CCDA9B25231320FC001525F8 /* RegistrationPresenter.swift in Sources */,
 				CC0D3B862329440500C9DD70 /* MainCategoriesView.swift in Sources */,
 				CC9482EF230F805A0058D78A /* CountryPresenter.swift in Sources */,
+				CCD994D123351B3500B63CD4 /* UserCompetitionViewController.swift in Sources */,
 				CC1CA0C62333D8B30003ECD0 /* QuestionsViewController.swift in Sources */,
 				CC1CA0CE2333DD360003ECD0 /* CompetitionView.swift in Sources */,
 				CC0EB0BA2332B454003B1D27 /* MyProductCellView.swift in Sources */,

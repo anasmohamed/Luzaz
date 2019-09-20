@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 class Competation {
-    
+    var competitionId : String?
     var date: String?
     var questions : JSON?
     var phone : String?
@@ -22,6 +22,7 @@ class Competation {
     var arQuestions: [JSON]?
     var enQuestionsList: [Question]
     init(withJSON data: JSON) {
+        self.competitionId = data["id"].stringValue
         self.date = data["date"].stringValue
         self.image = data["image"].stringValue
         self.title = data["title"]
@@ -30,6 +31,7 @@ class Competation {
         self.questions = data["questions"]
         self.enQuestions = questions?["en"].arrayValue
         self.arQuestions = questions?["ar"].arrayValue
+        
         self.enQuestionsList = [Question]()
         var arQuestionsList = [Question]()
 

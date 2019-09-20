@@ -861,7 +861,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="IXY-42-cgh"/>
                                                     <constraint firstAttribute="height" constant="38" id="ibm-wU-pSx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="413D5277-908E-486D-AF57-870B6A636AAD"/>
+                                                <state key="normal" title="Button" image="9E997272-47B5-493B-859A-0DD80C368220"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -2775,10 +2775,10 @@
             </objects>
             <point key="canvasLocation" x="-6414" y="-215"/>
         </scene>
-        <!--View Controller-->
+        <!--User Competition View Controller-->
         <scene sceneID="skp-hc-Oqg">
             <objects>
-                <viewController id="GJz-JW-j9H" sceneMemberID="viewController">
+                <viewController id="GJz-JW-j9H" customClass="UserCompetitionViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bXp-HI-loQ"/>
                         <viewControllerLayoutGuide type="bottom" id="IxG-6y-kHM"/>
@@ -2875,6 +2875,9 @@
                                                 <state key="normal" title="Next">
                                                     <color key="titleColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextBtnWasPressed:" destination="GJz-JW-j9H" eventType="touchUpInside" id="coX-18-HNe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2928,6 +2931,12 @@
                             <constraint firstItem="I8q-2p-qfU" firstAttribute="leading" secondItem="MLb-Qd-gX9" secondAttribute="leading" id="u33-Mn-EX4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="sI2-Le-WTy" id="LOT-yO-EuR"/>
+                        <outlet property="firstNameTextField" destination="6Il-nL-aoN" id="DH5-p6-KQ9"/>
+                        <outlet property="lastNameTextField" destination="FIH-Ui-jSw" id="Z9C-fb-SUf"/>
+                        <outlet property="phoneTextField" destination="Nn7-bx-lIo" id="cgU-Wp-C86"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVX-tF-iqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2936,7 +2945,7 @@
         <!--Questions View Controller-->
         <scene sceneID="Qe6-qg-xDi">
             <objects>
-                <viewController id="xKg-Yl-Xeg" customClass="QuestionsViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionVC" id="xKg-Yl-Xeg" customClass="QuestionsViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Hy-ah-dK9"/>
                         <viewControllerLayoutGuide type="bottom" id="Sbw-3C-nJN"/>
@@ -2993,6 +3002,9 @@
                                     <constraint firstAttribute="height" constant="30" id="tlk-yB-sN2"/>
                                 </constraints>
                                 <state key="normal" title="Answer"/>
+                                <connections>
+                                    <action selector="answerBtnWasPressed:" destination="xKg-Yl-Xeg" eventType="touchUpInside" id="TNO-ht-GNe"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="99T-x6-dgk">
                                 <rect key="frame" x="0.0" y="120" width="320" height="384"/>
@@ -3453,7 +3465,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="413D5277-908E-486D-AF57-870B6A636AAD" width="128" height="128">
+        <image name="9E997272-47B5-493B-859A-0DD80C368220" width="128" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

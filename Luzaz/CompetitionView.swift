@@ -12,6 +12,5 @@ protocol CompetitionView:class {
     func hideIndicator()
     func getCompetitionSuccess()
     func showError(error: String)
-    func answerSuccess()
     
 }
