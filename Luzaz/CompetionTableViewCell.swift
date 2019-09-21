@@ -31,6 +31,11 @@ class CompetionTableViewCell: UITableViewCell,CompetionCellView {
     func displayThirdAnswer(thirdAnswer: String) {
         thirdAnswerBtn.titleLabel?.text = thirdAnswer
     }
+    
+    @IBAction func firstBtnWasPressed(_ sender: Any) {
+        print("anas")
+    }
+    
     @objc @IBAction private func logSelectedButton(radioButton : DLRadioButton) {
         if (radioButton.isMultipleSelectionEnabled) {
             for button in radioButton.selectedButtons() {

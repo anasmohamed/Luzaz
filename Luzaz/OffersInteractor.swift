@@ -100,6 +100,8 @@ class OffersInteractor {
             case .success :
                 let json = JSON(result.value!)
                 let message = json["data"].stringValue
+                print(json)
+                print(message)
                 completionHandler(message, nil)
             case .failure(let error):
                 completionHandler("", error)

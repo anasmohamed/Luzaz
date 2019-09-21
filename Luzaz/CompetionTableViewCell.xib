@@ -12,15 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompetionTableViewCell" rowHeight="114" id="KGk-i7-Jjw" customClass="CompetionTableViewCell" customModule="Luzaz" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="377" height="114"/>
+        <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CompetionTableViewCell" rowHeight="128" id="KGk-i7-Jjw" customClass="CompetionTableViewCell" customModule="Luzaz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="377" height="113"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymw-nx-9BF">
-                        <rect key="frame" x="8" y="8" width="361" height="25"/>
+                        <rect key="frame" x="8" y="8" width="42" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="I0s-mg-H67"/>
                         </constraints>
@@ -28,50 +28,66 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iL7-Tl-tBu">
-                        <rect key="frame" x="0.0" y="70" width="377" height="34"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0N-JU-KJ4">
+                        <rect key="frame" x="0.0" y="71" width="377" height="48.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cl-3g-ZpH" customClass="DLRadioButton">
-                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="34"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="thumbs-down "/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="thumbs-up"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0l-Mq-UMR" customClass="DLRadioButton">
-                                <rect key="frame" x="125.5" y="0.0" width="126" height="34"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="thumbs-down "/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="thumbs-up"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yJL-wg-9vk" customClass="DLRadioButton">
-                                <rect key="frame" x="251.5" y="0.0" width="125.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="thumbs-down"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="thumbs-up"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NTl-Gs-ej3">
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0l-Mq-UMR" customClass="DLRadioButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="34"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="3cl-3g-ZpH" id="Kid-4H-VKf"/>
+                                            <outletCollection property="otherButtons" destination="yJL-wg-9vk" id="bjG-LC-JTW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cl-3g-ZpH" customClass="DLRadioButton">
+                                        <rect key="frame" x="125.5" y="0.0" width="126" height="34"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="P0l-Mq-UMR" id="7yf-6M-Gyw"/>
+                                            <outletCollection property="otherButtons" destination="yJL-wg-9vk" id="xIV-t2-6fW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yJL-wg-9vk" customClass="DLRadioButton">
+                                        <rect key="frame" x="251.5" y="0.0" width="125.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="firstBtnWasPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ltp-I7-1U4"/>
+                                            <outletCollection property="otherButtons" destination="P0l-Mq-UMR" id="njF-Zh-5Be"/>
+                                            <outletCollection property="otherButtons" destination="3cl-3g-ZpH" id="CqN-qe-Pvo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NTl-Gs-ej3" firstAttribute="leading" secondItem="x0N-JU-KJ4" secondAttribute="leading" id="CTH-aq-EUg"/>
+                            <constraint firstItem="NTl-Gs-ej3" firstAttribute="top" secondItem="x0N-JU-KJ4" secondAttribute="top" id="L69-BI-hGc"/>
+                            <constraint firstAttribute="trailing" secondItem="NTl-Gs-ej3" secondAttribute="trailing" id="gmb-4g-M7Z"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ymw-nx-9BF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="6BE-zj-Aaq"/>
-                    <constraint firstAttribute="trailing" secondItem="iL7-Tl-tBu" secondAttribute="trailing" id="G7K-Y4-bGf"/>
-                    <constraint firstItem="ymw-nx-9BF" firstAttribute="centerX" secondItem="iL7-Tl-tBu" secondAttribute="centerX" id="VP3-93-iYV"/>
-                    <constraint firstItem="iL7-Tl-tBu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="j1u-GE-bJo"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="iL7-Tl-tBu" secondAttribute="bottom" constant="1" id="jF7-Py-CfU"/>
-                    <constraint firstItem="iL7-Tl-tBu" firstAttribute="top" secondItem="ymw-nx-9BF" secondAttribute="bottom" constant="37" id="tP9-U8-Imj"/>
+                    <constraint firstAttribute="trailing" secondItem="x0N-JU-KJ4" secondAttribute="trailing" id="OrQ-FO-o0S"/>
+                    <constraint firstItem="x0N-JU-KJ4" firstAttribute="top" secondItem="ymw-nx-9BF" secondAttribute="bottom" constant="38" id="Osf-9F-sLh"/>
+                    <constraint firstItem="x0N-JU-KJ4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aVr-Yg-P6G"/>
+                    <constraint firstItem="x0N-JU-KJ4" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="gvr-d4-mYS"/>
                     <constraint firstItem="ymw-nx-9BF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="tfY-g9-gBL"/>
                 </constraints>
             </tableViewCellContentView>
@@ -81,12 +97,7 @@
                 <outlet property="secondAnswerBtn" destination="P0l-Mq-UMR" id="gu4-U2-3hr"/>
                 <outlet property="thirdAnswerBtn" destination="yJL-wg-9vk" id="EZa-2c-Jg4"/>
             </connections>
-            <point key="canvasLocation" x="28" y="73"/>
+            <point key="canvasLocation" x="27.5" y="80"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="thumbs-down" width="16" height="16"/>
-        <image name="thumbs-down " width="16" height="16"/>
-        <image name="thumbs-up" width="16" height="16"/>
-    </resources>
 </document>
