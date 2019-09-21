@@ -12,7 +12,10 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     var presenter: MyProductPresenter!
 
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func switchCustomeTableViews(_ sender: Any) {
+        
     }
    
     override func viewDidLoad() {
@@ -20,7 +23,17 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         presenter = MyProductPresenter(view : self)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.getOrderCount()
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0 :
+            return presenter.getOrderCount()
+        case 1:
+            return presenter.getOrderCount()
+        default :
+            return presenter.getOrderCount()
+
+        }
+        
         
     }
     
@@ -33,7 +46,7 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SubCategoryCell", for: indexPath) as! MyProductTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as! MyProductTableViewCell
         presenter.configure(cell: cell, for: indexPath.row)
         
         return cell
