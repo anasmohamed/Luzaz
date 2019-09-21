@@ -12,7 +12,6 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     var presenter: MyProductPresenter!
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func switchCustomeTableViews(_ sender: Any) {
         
@@ -20,8 +19,16 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         presenter = MyProductPresenter(view : self)
+        presenter.viewDidLoad()
+
     }
+    
+    func setupTableView() {
+        tableView.register(UINib(nibName: "MyProductTableViewCell", bundle: nil), forCellReuseIdentifier: "MyProductTableViewCell")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch segmentedControl.selectedSegmentIndex
         {
@@ -39,9 +46,9 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let subCategoryOffersVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoryOffersVC") as! SubCategoryOffersViewController
-        //presenter.pushToDetails(viewController: subCategoryOffersVC,indexPath.row)
-        self.present(subCategoryOffersVC, animated: true, completion: nil)
+        let offersDetailVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
+        presenter.pushToDetails(viewController: offersDetailVC,indexPath.row)
+        self.present(offersDetailVC, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

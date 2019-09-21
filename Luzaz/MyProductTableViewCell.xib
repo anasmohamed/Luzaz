@@ -65,6 +65,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLbl" destination="rBf-Ud-dUJ" id="v3y-cd-YvT"/>
+                <outlet property="productImage" destination="L88-nc-ASn" id="gZd-qg-2Kh"/>
                 <outlet property="productNameLbl" destination="xta-Gs-bFN" id="yb0-qr-sxg"/>
                 <outlet property="productQuntityLbl" destination="3Gs-kf-pjp" id="XgB-ex-Mz5"/>
             </connections>

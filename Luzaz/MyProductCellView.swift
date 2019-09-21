@@ -10,5 +10,7 @@ import Foundation
 protocol MyProductCellView {
     func displayDate(date: String)
     func displayProductName(productName: String)
-    func displayProductQuntity(quntity :String) 
+    func displayProductQuntity(quntity :String)
+    func displayProductImage(image: String)
+
 }

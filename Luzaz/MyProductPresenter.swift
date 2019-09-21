@@ -50,12 +50,18 @@ class MyProductPresenter {
         let order = orders[index]
       
         guard let quntity = order.price
+            ,let image = order.image,
+            let title = order.title,
+        let date = order.date
             else { return }
         cell.displayProductQuntity(quntity: quntity)
+        cell.displayDate(date: date)
+        cell.displayProductImage(image: image)
+        cell.displayProductName(productName: title)
         
     }
-//    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-//        viewController.offer = offers[index]
-//        
-//    }
+    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
+        viewController.offer = orders[index]
+        
+    }
 }

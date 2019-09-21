@@ -15,7 +15,7 @@ extension MyProductViewController : MyProductView
         
     }
     func getMySellingProductsSuccess() {
-        
+      tableView.reloadData()
     }
     func showIndicator() {
         

@@ -7,11 +7,14 @@
 //
 
 import UIKit
-
+import SDWebImage
 class MyProductTableViewCell: UITableViewCell,MyProductCellView {
     @IBOutlet weak var productQuntityLbl: UILabel!
     @IBOutlet weak var productNameLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
+    
+    @IBOutlet weak var productImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,6 +27,10 @@ class MyProductTableViewCell: UITableViewCell,MyProductCellView {
     }
     func displayProductName(productName: String) {
         productNameLbl.text = productName
+    }
+    func displayProductImage(image: String)
+    {
+        productImage.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(image)"))
     }
     
 }
