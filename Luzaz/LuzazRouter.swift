@@ -20,9 +20,9 @@ enum LuzazRouter: URLRequestConvertible {
     case getConversationBuddies(userId : String)
     case getConversation(id: String,paging:String)
     case addToConversation(user :String ,with : String, speech: String)
-    case getSubCategoryOffers(countryId: String,subCategoryId : String)
+    case getSubCategoryOffers(mainCategoryId : String)
     case addUserFavorites(token : String, offerId : String)
-    case getUserOrders(token : String)
+    case getUserSelling(countryId : String,userId : String)
     case getCompetition
     case addCompetitionEnrolment(id : String,lang :String,questions : String,answers : String,firstName : String ,lastName:String,phone :String,email :String)
     var path: String {
@@ -48,8 +48,8 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.getOffers
         case .addUserFavorites:
             return NetworkingConstants.addUserFavorites
-        case .getUserOrders:
-            return NetworkingConstants.getUserOrders
+        case .getUserSelling:
+            return NetworkingConstants.getUserSelling
         case .getCompetition:
            return NetworkingConstants.getCompetition
         case .addCompetitionEnrolment:
@@ -60,8 +60,7 @@ enum LuzazRouter: URLRequestConvertible {
     var httpMethod: HTTPMethod {
         
         switch self {
-            
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition,.addCompetitionEnrolment:
+            case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment:
             return .get
         case .register,.addToConversation:
             return .post
@@ -128,13 +127,15 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.messangerId] = user
             params[NetworkingConstants.with] = with
             params[NetworkingConstants.senderSpeech] = speech
-        case let .getSubCategoryOffers(country,subCategoryId):
-            params[NetworkingConstants.country] = country
-            params[NetworkingConstants.subcategoryId] = subCategoryId
+        case let .getSubCategoryOffers(mainCategoryId):
+            params[NetworkingConstants.mainCategoriesId] = mainCategoryId
         case let .addUserFavorites(token,offerId):
             params[NetworkingConstants.favoriteUserToken] = token
             params[NetworkingConstants.favoriteUserOffer] = offerId
-        case let .getUserOrders(token):             params[NetworkingConstants.userOrderToken] = token
+        case let .getUserSelling(countryId,userId):
+            params[NetworkingConstants.countryId] = countryId
+            params[NetworkingConstants.userId] = userId
+
         case let .addCompetitionEnrolment(id ,lang ,questions ,answers ,firstName  ,lastName,phone ,email):
             params[NetworkingConstants.competitionId] = id
             params[NetworkingConstants.competitionLang] = lang
@@ -164,7 +165,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserOrders,.getCompetition,.addCompetitionEnrolment:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             

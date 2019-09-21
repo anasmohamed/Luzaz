@@ -1064,11 +1064,11 @@
 		CCEE2CAD233271F80086771B /* MyProducts */ = {
 			isa = PBXGroup;
 			children = (
-				CC0EB0B42332AF25003B1D27 /* TableViewCell */,
 				CC8695FC22F4F61C00E9F14D /* MyProductViewController.swift */,
+				CCEE2CB0233272E40086771B /* MyProductViewController+PresenterDelegate.swift */,
+				CC0EB0B42332AF25003B1D27 /* TableViewCell */,
 				CCEE2CAF2332721E0086771B /* Interactor */,
 				CCEE2CAE233272120086771B /* Presenter */,
-				CCEE2CB0233272E40086771B /* MyProductViewController+PresenterDelegate.swift */,
 			);
 			name = MyProducts;
 			sourceTree = "<group>";

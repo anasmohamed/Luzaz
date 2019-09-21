@@ -12,24 +12,24 @@ class MyProductPresenter {
     
     private weak var view: MyProductView?
     private let myProductInteractor: MyProductInteractor
-    private var order: Order?
-    private var orders: [Order]
+    private var order: Offer?
+    private var orders: [Offer]
     init(view: MyProductView) {
         self.view = view
         myProductInteractor = MyProductInteractor()
-        orders = [Order]()
+        orders = [Offer]()
     }
     
     func viewDidLoad() {
         
         //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
-        getOrders(token: "1")
+        getOrders(countryId:UserDefaults.standard.string(forKey: "country")!, userId:UserDefaults.standard.string(forKey: "userId")!)
         // )
     }
     
-    func getOrders(token: String) {
+    func getOrders(countryId: String,userId:String) {
         view?.showIndicator()
-        myProductInteractor.getUserOrders(token: token) { [unowned self] (orders, error) in
+        myProductInteractor.getUserOrders(countryId:countryId , userId:userId) { [unowned self] (orders, error) in
             
             self.view?.hideIndicator()
             if let error = error {
@@ -49,7 +49,7 @@ class MyProductPresenter {
     func configure(cell: MyProductCellView, for index: Int) {
         let order = orders[index]
       
-        guard let quntity = order.quantity
+        guard let quntity = order.price
             else { return }
         cell.displayProductQuntity(quntity: quntity)
         

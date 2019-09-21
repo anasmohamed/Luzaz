@@ -861,7 +861,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="IXY-42-cgh"/>
                                                     <constraint firstAttribute="height" constant="38" id="ibm-wU-pSx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="8E63779E-4B3A-4428-89EF-F0F041ED9A34"/>
+                                                <state key="normal" title="Button" image="07E5523E-C2C3-4819-AC92-F60BFABF3417"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -1078,10 +1078,10 @@
             </objects>
             <point key="canvasLocation" x="-4963" y="-215"/>
         </scene>
-        <!--My Products View Controller-->
+        <!--My Product View Controller-->
         <scene sceneID="VkH-4q-K67">
             <objects>
-                <viewController id="OIU-46-ISU" customClass="MyProductsViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OIU-46-ISU" customClass="MyProductViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ulZ-sw-xw0"/>
                         <viewControllerLayoutGuide type="bottom" id="eYk-W7-YxR"/>
@@ -1122,6 +1122,9 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchCustomeTableViews:" destination="OIU-46-ISU" eventType="valueChanged" id="2cq-Wz-69c"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-rG-cN6">
                                 <rect key="frame" x="0.0" y="96" width="320" height="472"/>
@@ -1136,6 +1139,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OIU-46-ISU" id="fOT-MH-b2T"/>
+                                    <outlet property="delegate" destination="OIU-46-ISU" id="S65-Yf-Eag"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1152,6 +1159,9 @@
                             <constraint firstItem="FlB-yX-Se7" firstAttribute="top" secondItem="ulZ-sw-xw0" secondAttribute="bottom" constant="48" id="uIm-EJ-27y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="oyy-rG-cN6" id="b3k-gb-NT0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jf-jv-Br5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3014,7 +3024,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jvi-HL-s3Z" id="nvq-UE-hLv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3252,7 +3262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6T-Gf-Ppu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8578" y="634"/>
+            <point key="canvasLocation" x="-8484" y="634"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BmY-dL-5RB">
@@ -3465,7 +3475,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8E63779E-4B3A-4428-89EF-F0F041ED9A34" width="128" height="128">
+        <image name="07E5523E-C2C3-4819-AC92-F60BFABF3417" width="128" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

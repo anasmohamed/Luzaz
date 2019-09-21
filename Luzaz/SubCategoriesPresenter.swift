@@ -50,8 +50,8 @@ class SubCategoriesPresenter {
         
         cell.textLabel?.text = name
     }
-    func pushToDetails(viewController : SubCategoryOffersViewController, _ index : Int) {
-        viewController.subCategoryId = subCategories[index].id
+    func pushToDetails(viewController : SubCategoryOffersViewController, _ mainCategoryId : String) {
+        viewController.mainCategoryId = mainCategoryId
         
     }
 

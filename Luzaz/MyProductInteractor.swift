@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class MyProductInteractor {
-    func getUserOrders(token: String,
-                   completionHandler: @escaping ([Order]?, Error?) -> Void) {
-        Alamofire.request(LuzazRouter.getUserOrders(token: token)).responseJSON {(response) in
+    func getUserOrders(countryId: String, userId : String,
+                   completionHandler: @escaping ([Offer]?, Error?) -> Void) {
+        Alamofire.request(LuzazRouter.getUserSelling(countryId:countryId,userId:userId )).responseJSON {(response) in
             
             if let response = response.data {
                 print("Response Data: \(response)")
@@ -48,11 +48,11 @@ class MyProductInteractor {
             case .success :
                 let json = JSON(result.value!)
                 print(json)
-                var ordersList = [Order]()
+                var ordersList = [Offer]()
                 let orders = json["data"].arrayValue
                 for order in orders
                 {
-                    let data = Order(withJSON: order)
+                    let data = Offer(withJSON: order)
                     ordersList.append(data)
                 }
                 completionHandler(ordersList, nil)

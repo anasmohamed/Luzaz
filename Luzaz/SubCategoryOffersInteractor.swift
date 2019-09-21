@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class SubCategoryOffersInteractor {
-    func getSubCategoryOffers(countryId: String,subcategoryId : String,
+    func getSubCategoryOffers(mainCategoryId : String,
                    completionHandler: @escaping ([Offer]?, Error?) -> Void) {
-        Alamofire.request(LuzazRouter.getSubCategoryOffers(countryId: countryId,subCategoryId : subcategoryId)).responseJSON {(response) in
+        Alamofire.request(LuzazRouter.getSubCategoryOffers(mainCategoryId :mainCategoryId)).responseJSON {(response) in
             
             if let response = response.data {
                 print("Response Data: \(response)")

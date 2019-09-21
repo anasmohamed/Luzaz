@@ -11,6 +11,9 @@ import UIKit
 class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var presenter: MyProductPresenter!
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBAction func switchCustomeTableViews(_ sender: Any) {
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()

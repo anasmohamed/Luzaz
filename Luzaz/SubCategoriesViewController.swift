@@ -31,7 +31,7 @@ class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let subCategoryOffersVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoryOffersVC") as! SubCategoryOffersViewController
-        presenter.pushToDetails(viewController: subCategoryOffersVC,indexPath.row)
+        presenter.pushToDetails(viewController: subCategoryOffersVC,mainCategoryId!)
         self.present(subCategoryOffersVC, animated: true, completion: nil)
     }
     

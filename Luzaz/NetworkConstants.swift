@@ -35,7 +35,7 @@ struct NetworkingConstants {
     static let getConversation = "getConversation"
     static let addToConversation = "addToConversation"
     static let addUserFavorites = "addUserFavorites"
-    static let getUserOrders = "getUserOrders"
+    static let getUserSelling = "getOffers"
     static let getCompetition = "getCompetition"
     static let addCompetitionEnrolment = "addCompetitionEnrolment"
 

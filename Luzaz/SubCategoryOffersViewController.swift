@@ -13,19 +13,17 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var subCategoryId : String?
-    var counrtyId : String?
+    var mainCategoryId : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         presenter = SubCategoryOffersPresenter(view: self)
-        counrtyId = UserDefaults.standard.string(forKey: "country")
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.viewDidLoad(countryId: counrtyId!,subCategoryId: subCategoryId!)
+        presenter.viewDidLoad(mainCategoryId: mainCategoryId!)
     }
     
     func setupTableView() {
