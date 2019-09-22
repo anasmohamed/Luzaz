@@ -17,6 +17,10 @@ extension MyProductViewController : MyProductView
     func getMySellingProductsSuccess() {
       tableView.reloadData()
     }
+    func getMyOrdersSuccess() {
+        tableView.reloadData()
+
+    }
     func showIndicator() {
         
     }

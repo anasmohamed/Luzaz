@@ -12,6 +12,9 @@ class CompetionTableViewCell: UITableViewCell,CompetionCellView {
     @IBOutlet weak var secondAnswerBtn: DLRadioButton!
     @IBOutlet weak var thirdAnswerBtn: DLRadioButton!
     @IBOutlet weak var firstAnswerBtn: DLRadioButton!
+    var indexPath : IndexPath!
+    weak var delegate : QuestionsViewController?
+    
     @IBOutlet weak var qustionLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,9 +34,15 @@ class CompetionTableViewCell: UITableViewCell,CompetionCellView {
     func displayThirdAnswer(thirdAnswer: String) {
         thirdAnswerBtn.titleLabel?.text = thirdAnswer
     }
+    @IBAction func thirdAnswerBtnWasPressed(_ sender: Any) {
+        delegate?.thirdAnswerBtnWasPressed(cellIndex: indexPath)
+    }
     
+    @IBAction func secondAnswerBtnWasPressed(_ sender: Any) {
+        delegate?.secondAnswerBtnWasPressed(cellIndex: indexPath)
+    }
     @IBAction func firstBtnWasPressed(_ sender: Any) {
-        print("anas")
+        delegate?.thirdAnswerBtnWasPressed(cellIndex: indexPath)
     }
     
     @objc @IBAction private func logSelectedButton(radioButton : DLRadioButton) {
@@ -47,4 +56,9 @@ class CompetionTableViewCell: UITableViewCell,CompetionCellView {
     }
 
     
+}
+protocol CompetationTableViewCellDelegate :class{
+    func thirdAnswerBtnWasPressed(cellIndex:IndexPath)
+    func secondAnswerBtnWasPressed(cellIndex:IndexPath)
+    func firstAnswerBtnWasPressed(cellIndex:IndexPath)
 }

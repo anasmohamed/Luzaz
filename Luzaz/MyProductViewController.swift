@@ -33,11 +33,11 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         switch segmentedControl.selectedSegmentIndex
         {
         case 0 :
-            return presenter.getOrderCount()
+            return presenter.getSellsCount()
         case 1:
-            return presenter.getOrderCount()
+            return presenter.getOrdersCount()
         default :
-            return presenter.getOrderCount()
+            return presenter.getSellsCount()
 
         }
         

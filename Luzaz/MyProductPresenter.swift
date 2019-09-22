@@ -12,24 +12,27 @@ class MyProductPresenter {
     
     private weak var view: MyProductView?
     private let myProductInteractor: MyProductInteractor
-    private var order: Offer?
-    private var orders: [Offer]
+    private var sell: Offer?
+    private var sells: [Offer]
+    private var orders: [Order]
+
     init(view: MyProductView) {
         self.view = view
         myProductInteractor = MyProductInteractor()
-        orders = [Offer]()
+        sells = [Offer]()
+        orders = [Order]()
     }
     
     func viewDidLoad() {
         
         //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
-        getOrders(countryId:UserDefaults.standard.string(forKey: "country")!, userId:UserDefaults.standard.string(forKey: "userId")!)
+        getSells(countryId:UserDefaults.standard.string(forKey: "country")!, userId:UserDefaults.standard.string(forKey: "userId")!)
         // )
     }
-    
-    func getOrders(countryId: String,userId:String) {
+    func getOrders(token: String)
+    {
         view?.showIndicator()
-        myProductInteractor.getUserOrders(countryId:countryId , userId:userId) { [unowned self] (orders, error) in
+        myProductInteractor.getUserOrders(token: token) { [unowned self] (orders, error) in
             
             self.view?.hideIndicator()
             if let error = error {
@@ -37,22 +40,40 @@ class MyProductPresenter {
             } else {
                 guard let orders = orders else { return }
                 self.orders = orders
+                self.view?.getMyOrdersSuccess()
+            }
+        }
+
+        
+    }
+    func getSells(countryId: String,userId:String) {
+        view?.showIndicator()
+        myProductInteractor.getUserSelling(countryId:countryId , userId:userId) { [unowned self] (sells, error) in
+            
+            self.view?.hideIndicator()
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let sells = sells else { return }
+                self.sells = sells
                 self.view?.getMySellingProductsSuccess()
             }
         }
     }
-    func getOrderCount() -> Int {
+    func getSellsCount() -> Int {
+        return sells.count
+    }
+    func getOrdersCount() -> Int {
         return orders.count
     }
-
     
     func configure(cell: MyProductCellView, for index: Int) {
-        let order = orders[index]
+        let sell = sells[index]
       
-        guard let quntity = order.price
-            ,let image = order.image,
-            let title = order.title,
-        let date = order.date
+        guard let quntity = sell.price
+            ,let image = sell.image,
+            let title = sell.title,
+        let date = sell.date
             else { return }
         cell.displayProductQuntity(quntity: quntity)
         cell.displayDate(date: date)
@@ -60,8 +81,9 @@ class MyProductPresenter {
         cell.displayProductName(productName: title)
         
     }
+    
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-        viewController.offer = orders[index]
+        viewController.offer = sells[index]
         
     }
 }

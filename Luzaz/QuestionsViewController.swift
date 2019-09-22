@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CompetationTableViewCellDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: CompetitionPresenter!
@@ -55,7 +55,16 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    func firstAnswerBtnWasPressed(cellIndex: IndexPath) {
+        print("anas")
+    }
+    func secondAnswerBtnWasPressed(cellIndex: IndexPath) {
+        print("ali")
 
+    }
+    func thirdAnswerBtnWasPressed(cellIndex: IndexPath) {
+        print("ahmed")
+    }
     @IBAction func answerBtnWasPressed(_ sender: Any) {
 //        presenter.addCompetitionEnrolment(id:presenter.getCompetitionId() , lang: , questions:presenter.getQuestionsId , answers: , firstName: userFristName, lastName: userLastName, phone: userPhone, email: userEmail)
     }

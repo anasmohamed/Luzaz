@@ -11,5 +11,6 @@ protocol MyProductView : class{
     func showIndicator()
     func hideIndicator()
     func getMySellingProductsSuccess()
+    func getMyOrdersSuccess()
     func showError(error: String)
 }

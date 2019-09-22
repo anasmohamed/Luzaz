@@ -134,6 +134,8 @@
 		CCBAB860230A040500B33A36 /* OffersViewController+PresenterDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */; };
 		CCC123B6230AEEFC0033BD18 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC123B4230AEEFC0033BD18 /* OffersCell.swift */; };
 		CCC123B7230AEEFC0033BD18 /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC123B5230AEEFC0033BD18 /* OffersCell.xib */; };
+		CCCD13952337A699003A0BFB /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD13932337A699003A0BFB /* OrderTableViewCell.swift */; };
+		CCCD13962337A699003A0BFB /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCD13942337A699003A0BFB /* OrderTableViewCell.xib */; };
 		CCCD73372331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */; };
 		CCCD733923313252005823D6 /* OfferDetailesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733823313252005823D6 /* OfferDetailesPresenter.swift */; };
 		CCCD733B233133CA005823D6 /* OffersDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733A233133CA005823D6 /* OffersDetailesView.swift */; };
@@ -307,6 +309,8 @@
 		CCBAB85F230A040500B33A36 /* OffersViewController+PresenterDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+PresenterDelagate.swift"; sourceTree = "<group>"; };
 		CCC123B4230AEEFC0033BD18 /* OffersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
 		CCC123B5230AEEFC0033BD18 /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
+		CCCD13932337A699003A0BFB /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		CCCD13942337A699003A0BFB /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		CCCD73362331092D005823D6 /* SubCategoryOffersViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubCategoryOffersViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CCCD733823313252005823D6 /* OfferDetailesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailesPresenter.swift; sourceTree = "<group>"; };
 		CCCD733A233133CA005823D6 /* OffersDetailesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersDetailesView.swift; sourceTree = "<group>"; };
@@ -1014,6 +1018,15 @@
 			name = "Sell Your Items";
 			sourceTree = "<group>";
 		};
+		CCCD13922337A65B003A0BFB /* OrderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CCCD13932337A699003A0BFB /* OrderTableViewCell.swift */,
+				CCCD13942337A699003A0BFB /* OrderTableViewCell.xib */,
+			);
+			name = OrderTableViewCell;
+			sourceTree = "<group>";
+		};
 		CCDA9B1B2313123B001525F8 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -1064,6 +1077,7 @@
 		CCEE2CAD233271F80086771B /* MyProducts */ = {
 			isa = PBXGroup;
 			children = (
+				CCCD13922337A65B003A0BFB /* OrderTableViewCell */,
 				CC8695FC22F4F61C00E9F14D /* MyProductViewController.swift */,
 				CCEE2CB0233272E40086771B /* MyProductViewController+PresenterDelegate.swift */,
 				CC0EB0B42332AF25003B1D27 /* TableViewCell */,
@@ -1213,6 +1227,7 @@
 				CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */,
 				CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */,
 				CC07DC02232EF6F90035AAC7 /* SubCategoryOffersTableViewCell.xib in Resources */,
+				CCCD13962337A699003A0BFB /* OrderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1408,6 +1423,7 @@
 				CC0D3B9223295D3800C9DD70 /* MainCateoriesCollectionViewCell.swift in Sources */,
 				CC6B8D16232E89A2005D45FC /* ConversationCellView.swift in Sources */,
 				CCB8F5542313ED800025FEA1 /* LoginViewController+TextFieldDelegate.swift in Sources */,
+				CCCD13952337A699003A0BFB /* OrderTableViewCell.swift in Sources */,
 				CC86960922F4F61C00E9F14D /* SubCategoryOffersViewController.swift in Sources */,
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,
 				CC86960C22F4F61C00E9F14D /* UsersChatsViewController.swift in Sources */,
