@@ -73,7 +73,7 @@ enum LuzazRouter: URLRequestConvertible {
     
     var httpHeaders: HTTPHeaders {
         
-        var httpHeaders = [String:String]()
+        let httpHeaders = [String:String]()
         
         switch self {
             //        case .getOffers:
@@ -88,7 +88,7 @@ enum LuzazRouter: URLRequestConvertible {
     
     var body: [String: Any] {
         
-        var body = [String:Any]()
+        let body = [String:Any]()
         
         switch self {
             
