@@ -39,6 +39,10 @@ struct NetworkingConstants {
     static let getCompetition = "getCompetition"
     static let addCompetitionEnrolment = "addCompetitionEnrolment"
     static let getUserOrders = "getUserOrders"
+    static let deleteUserFavorite = "deleteUserFavorite"
+    static let getUserFavorites = "getUserFavorites"
+
+
 
     //get offers pramters
     static let country = "country"
@@ -135,6 +139,16 @@ struct NetworkingConstants {
     static let competitionPhone = "phone"
     static let competitionEmail = "email"
 
+    
+    //DELETE OFFER PARAMTERS
+    static let offerToken = "Token"
+    static let deleteOfferId = "offer"
+    
+    
+    //GET FAVORITE
+
+
+    
     
 }
 
