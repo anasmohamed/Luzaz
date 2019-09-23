@@ -7,19 +7,21 @@
 //
 
 import UIKit
-import DLRadioButton
 class CompetionTableViewCell: UITableViewCell,CompetionCellView {
-    @IBOutlet weak var secondAnswerBtn: DLRadioButton!
-    @IBOutlet weak var thirdAnswerBtn: DLRadioButton!
-    @IBOutlet weak var firstAnswerBtn: DLRadioButton!
+ 
+    @IBOutlet weak var secondAnswerBtn: SSRadioButton!
+    @IBOutlet weak var thirdAnswerBtn: SSRadioButton!
+    @IBOutlet weak var firstAnswerBtn: SSRadioButton!
     var indexPath : IndexPath!
     weak var delegate : QuestionsViewController?
-    
+    var radioButtonController: SSRadioButtonsController?
     @IBOutlet weak var qustionLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
+   
+    
     
     func displayQuestion(question: String) {
         qustionLbl.text = question
@@ -45,16 +47,16 @@ class CompetionTableViewCell: UITableViewCell,CompetionCellView {
         delegate?.thirdAnswerBtnWasPressed(cellIndex: indexPath)
     }
     
-    @objc @IBAction private func logSelectedButton(radioButton : DLRadioButton) {
-        if (radioButton.isMultipleSelectionEnabled) {
-            for button in radioButton.selectedButtons() {
-                print(String(format: "%@ is selected.\n", button.titleLabel!.text!));
-            }
-        } else {
-            print(String(format: "%@ is selected.\n", radioButton.selected()!.titleLabel!.text!));
-        }
-    }
-
+//    @objc @IBAction private func logSelectedButton(radioButton : DLRadioButton) {
+//        if (radioButton.isMultipleSelectionEnabled) {
+//            for button in radioButton.selectedButtons() {
+//                print(String(format: "%@ is selected.\n", button.titleLabel!.text!));
+//            }
+//        } else {
+//            print(String(format: "%@ is selected.\n", radioButton.selected()!.titleLabel!.text!));
+//        }
+//    }
+//
     
 }
 protocol CompetationTableViewCellDelegate :class{

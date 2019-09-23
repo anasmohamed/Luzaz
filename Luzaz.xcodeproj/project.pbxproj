@@ -67,6 +67,9 @@
 		CC5380F4232199D2002E6FF8 /* Appartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5380F3232199D2002E6FF8 /* Appartment.swift */; };
 		CC5380F623219C56002E6FF8 /* SellYourItemThirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5380F523219C56002E6FF8 /* SellYourItemThirdPresenter.swift */; };
 		CC5380F923219D19002E6FF8 /* SellYourItemThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5380F823219D19002E6FF8 /* SellYourItemThirdView.swift */; };
+		CC57507623384DEA00BBBE63 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507323384DEA00BBBE63 /* SSRadioButton.swift */; };
+		CC57507723384DEA00BBBE63 /* SSRadioButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */; };
+		CC57507823384DEA00BBBE63 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */; };
 		CC6861FD231B369D00C8F4FF /* SellYourItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */; };
 		CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */; };
 		CC686201231B386200C8F4FF /* SellYourItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */; };
@@ -236,6 +239,9 @@
 		CC5380F3232199D2002E6FF8 /* Appartment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appartment.swift; sourceTree = "<group>"; };
 		CC5380F523219C56002E6FF8 /* SellYourItemThirdPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdPresenter.swift; sourceTree = "<group>"; };
 		CC5380F823219D19002E6FF8 /* SellYourItemThirdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdView.swift; sourceTree = "<group>"; };
+		CC57507323384DEA00BBBE63 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonModel.swift; sourceTree = "<group>"; };
+		CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		CC6861FC231B369D00C8F4FF /* SellYourItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemPresenter.swift; sourceTree = "<group>"; };
 		CC6861FE231B36FE00C8F4FF /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
 		CC686200231B386200C8F4FF /* SellYourItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemInteractor.swift; sourceTree = "<group>"; };
@@ -769,6 +775,23 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		CC57507123384D2200BBBE63 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		CC57507223384DEA00BBBE63 /* SSRadioButtonController */ = {
+			isa = PBXGroup;
+			children = (
+				CC57507323384DEA00BBBE63 /* SSRadioButton.swift */,
+				CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */,
+				CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */,
+			);
+			path = SSRadioButtonController;
+			sourceTree = "<group>";
+		};
 		CC6861FA231B362900C8F4FF /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -874,6 +897,7 @@
 			isa = PBXGroup;
 			children = (
 				CC8695C122F4F54B00E9F14D /* Luzaz */,
+				CC57507123384D2200BBBE63 /* New Group */,
 				CC8695D622F4F54C00E9F14D /* LuzazTests */,
 				CC8695E122F4F54C00E9F14D /* LuzazUITests */,
 				CC8695C022F4F54B00E9F14D /* Products */,
@@ -895,6 +919,7 @@
 		CC8695C122F4F54B00E9F14D /* Luzaz */ = {
 			isa = PBXGroup;
 			children = (
+				CC57507223384DEA00BBBE63 /* SSRadioButtonController */,
 				CC52DCFF230970DA00981C31 /* Model */,
 				CC52DCFA23096C9900981C31 /* Scenes */,
 				CC8365B0230869C300A71DFC /* Network */,
@@ -1356,6 +1381,7 @@
 				CC1CA0CA2333DB470003ECD0 /* CompetitionInteractor.swift in Sources */,
 				CC1CA0D02333DDAF0003ECD0 /* QuestionsViewController+PresenterDelegate.swift in Sources */,
 				CC9482F4230F82D10058D78A /* CountryCellView.swift in Sources */,
+				CC57507823384DEA00BBBE63 /* SSRadioButtonsController.swift in Sources */,
 				CC7CA91A232D6B17006C5E17 /* ConsersationInteractor.swift in Sources */,
 				CCB8F54C2313ED620025FEA1 /* LoginPresenter.swift in Sources */,
 				CC5380F623219C56002E6FF8 /* SellYourItemThirdPresenter.swift in Sources */,
@@ -1378,6 +1404,7 @@
 				CC07DC04232EF7260035AAC7 /* SubCategoryOffersCellView.swift in Sources */,
 				CC7CA91E232D76BE006C5E17 /* ConversationView.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
+				CC57507623384DEA00BBBE63 /* SSRadioButton.swift in Sources */,
 				CCEE2CB1233272E40086771B /* MyProductViewController+PresenterDelegate.swift in Sources */,
 				CC7CA91C232D74A2006C5E17 /* ConversationPresenter.swift in Sources */,
 				CC5380DF23215298002E6FF8 /* SellYourItemFourthPresenter.swift in Sources */,
@@ -1399,6 +1426,7 @@
 				CCB8F54E2313ED800025FEA1 /* LoginView.swift in Sources */,
 				CC1CA0D4233412330003ECD0 /* Question.swift in Sources */,
 				CCE369B1230BFFB1008CAC35 /* CenterVCDelegate.swift in Sources */,
+				CC57507723384DEA00BBBE63 /* SSRadioButtonModel.swift in Sources */,
 				CC6861FF231B36FE00C8F4FF /* SellYourItemView.swift in Sources */,
 				CC07BFAE2309C21000E83B0D /* OffersCellView.swift in Sources */,
 				CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */,
