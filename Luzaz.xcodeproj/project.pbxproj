@@ -30,7 +30,6 @@
 		CC8695D822F4F54C00E9F14D /* LuzazTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695D722F4F54C00E9F14D /* LuzazTests.swift */; };
 		CC8695E322F4F54C00E9F14D /* LuzazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695E222F4F54C00E9F14D /* LuzazUITests.swift */; };
 		CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */; };
-		CC86960E22F4F61C00E9F14D /* FavouriteIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */; };
 		CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F722F4F61C00E9F14D /* HomeViewController.swift */; };
 		CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */; };
 		CC86961822F4F61C00E9F14D /* ProductScreendetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8695FF22F4F61C00E9F14D /* ProductScreendetailsViewController.swift */; };
@@ -216,7 +215,6 @@
 		CC8695E222F4F54C00E9F14D /* LuzazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuzazUITests.swift; sourceTree = "<group>"; };
 		CC8695E422F4F54C00E9F14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseAdViewController.swift; sourceTree = "<group>"; };
-		CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteIViewController.swift; sourceTree = "<group>"; };
 		CC8695F722F4F61C00E9F14D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC8695FF22F4F61C00E9F14D /* ProductScreendetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductScreendetailsViewController.swift; sourceTree = "<group>"; };
@@ -495,7 +493,6 @@
 				CCD9BE2E2339111E002B9201 /* Model */,
 				CC57507223384DEA00BBBE63 /* SSRadioButtonController */,
 				CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */,
-				CC8695F522F4F61C00E9F14D /* FavouriteIViewController.swift */,
 				CC8695F722F4F61C00E9F14D /* HomeViewController.swift */,
 				CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */,
 				CC8695FF22F4F61C00E9F14D /* ProductScreendetailsViewController.swift */,
@@ -1493,7 +1490,6 @@
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,
 				CCD9BF57233930DF002B9201 /* OffersViewController+CellSpaceDelegate.swift in Sources */,
 				CCD9BF28233930DF002B9201 /* ConsersationInteractor.swift in Sources */,
-				CC86960E22F4F61C00E9F14D /* FavouriteIViewController.swift in Sources */,
 				CCD9BF34233930DF002B9201 /* UsersChatsViewController+PresetnerDelegate.swift in Sources */,
 				CCD9BF0E233930DF002B9201 /* RegistrationViewController+TextFieldDelegate.swift in Sources */,
 				CCD9BF0C233930DF002B9201 /* RegisterViewController.swift in Sources */,
