@@ -41,6 +41,7 @@ struct NetworkingConstants {
     static let getUserOrders = "getUserOrders"
     static let deleteUserFavorite = "deleteUserFavorite"
     static let getUserFavorites = "getUserFavorites"
+    static let logoutUser = "logoutUser"
 
 
 
@@ -147,7 +148,8 @@ struct NetworkingConstants {
     
     //GET FAVORITE
 
-
+    //LOGOUT USER
+    static let logoutUserParameter = "user"
     
     
 }
