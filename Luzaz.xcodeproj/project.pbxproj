@@ -14,6 +14,127 @@
 		CC0C7B9923395B9C0086D21F /* FavoriteOffersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C7B9823395B9C0086D21F /* FavoriteOffersPresenter.swift */; };
 		CC0C7B9B23395CA50086D21F /* FavoriteOffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C7B9A23395CA50086D21F /* FavoriteOffersInteractor.swift */; };
 		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
+		CC1CE1F52339949100C2A6B9 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE13F2339949000C2A6B9 /* UserInteractor.swift */; };
+		CC1CE1F62339949100C2A6B9 /* LoginViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1402339949000C2A6B9 /* LoginViewController+PresenterDelegate.swift */; };
+		CC1CE1F72339949100C2A6B9 /* LoginViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1412339949000C2A6B9 /* LoginViewController+TextField.swift */; };
+		CC1CE1F82339949100C2A6B9 /* LoginViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1422339949000C2A6B9 /* LoginViewController+TextFieldDelegate.swift */; };
+		CC1CE1F92339949100C2A6B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1432339949000C2A6B9 /* LoginViewController.swift */; };
+		CC1CE1FA2339949100C2A6B9 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1452339949000C2A6B9 /* LoginPresenter.swift */; };
+		CC1CE1FB2339949100C2A6B9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1462339949000C2A6B9 /* LoginView.swift */; };
+		CC1CE1FC2339949100C2A6B9 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1472339949000C2A6B9 /* RegistrationPresenter.swift */; };
+		CC1CE1FD2339949100C2A6B9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1482339949000C2A6B9 /* RegistrationView.swift */; };
+		CC1CE1FE2339949100C2A6B9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1492339949000C2A6B9 /* RegisterViewController.swift */; };
+		CC1CE1FF2339949100C2A6B9 /* RegistrationViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE14A2339949000C2A6B9 /* RegistrationViewController+PresenterDelegate.swift */; };
+		CC1CE2002339949100C2A6B9 /* RegistrationViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE14B2339949000C2A6B9 /* RegistrationViewController+TextFieldDelegate.swift */; };
+		CC1CE2012339949100C2A6B9 /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE14C2339949000C2A6B9 /* TextFieldIcon.swift */; };
+		CC1CE2022339949100C2A6B9 /* MainCateoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1502339949000C2A6B9 /* MainCateoriesCollectionViewCell.swift */; };
+		CC1CE2032339949100C2A6B9 /* MainCateoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE1512339949000C2A6B9 /* MainCateoriesCollectionViewCell.xib */; };
+		CC1CE2042339949100C2A6B9 /* MainCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1532339949000C2A6B9 /* MainCategoriesInteractor.swift */; };
+		CC1CE2052339949100C2A6B9 /* MainCategoriesViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1542339949000C2A6B9 /* MainCategoriesViewController+PresenterDelegate.swift */; };
+		CC1CE2062339949100C2A6B9 /* MainCateogriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1552339949000C2A6B9 /* MainCateogriesViewController.swift */; };
+		CC1CE2072339949100C2A6B9 /* MainCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1572339949000C2A6B9 /* MainCategoriesPresenter.swift */; };
+		CC1CE2082339949100C2A6B9 /* MainCategoriesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1592339949000C2A6B9 /* MainCategoriesCellView.swift */; };
+		CC1CE2092339949100C2A6B9 /* MainCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE15A2339949000C2A6B9 /* MainCategoriesView.swift */; };
+		CC1CE20A2339949100C2A6B9 /* SubCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE15D2339949000C2A6B9 /* SubCategoriesInteractor.swift */; };
+		CC1CE20B2339949100C2A6B9 /* SubCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE15F2339949000C2A6B9 /* SubCategoriesPresenter.swift */; };
+		CC1CE20C2339949100C2A6B9 /* SubCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1612339949000C2A6B9 /* SubCategoriesView.swift */; };
+		CC1CE20D2339949100C2A6B9 /* SubCategoriesViewConteroller+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1622339949000C2A6B9 /* SubCategoriesViewConteroller+PresenterDelegate.swift */; };
+		CC1CE20E2339949100C2A6B9 /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1632339949000C2A6B9 /* SubCategoriesViewController.swift */; };
+		CC1CE20F2339949100C2A6B9 /* SubCategoryOffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1662339949000C2A6B9 /* SubCategoryOffersInteractor.swift */; };
+		CC1CE2102339949100C2A6B9 /* SubCategoryOffersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1682339949000C2A6B9 /* SubCategoryOffersPresenter.swift */; };
+		CC1CE2112339949100C2A6B9 /* SubCategoryOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1692339949000C2A6B9 /* SubCategoryOffersView.swift */; };
+		CC1CE2122339949100C2A6B9 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE16A2339949000C2A6B9 /* SubCategoryOffersViewController+PresenterDelegate.swift */; };
+		CC1CE2132339949100C2A6B9 /* SubCategoryOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE16B2339949000C2A6B9 /* SubCategoryOffersViewController.swift */; };
+		CC1CE2142339949100C2A6B9 /* SubCategoryOffersCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE16D2339949000C2A6B9 /* SubCategoryOffersCellView.swift */; };
+		CC1CE2152339949100C2A6B9 /* SubCategoryOffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE16E2339949000C2A6B9 /* SubCategoryOffersTableViewCell.swift */; };
+		CC1CE2162339949100C2A6B9 /* SubCategoryOffersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE16F2339949000C2A6B9 /* SubCategoryOffersTableViewCell.xib */; };
+		CC1CE2172339949100C2A6B9 /* ConversationViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1722339949000C2A6B9 /* ConversationViewController+PresenterDelegate.swift */; };
+		CC1CE2182339949100C2A6B9 /* ConverstionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1732339949000C2A6B9 /* ConverstionViewController.swift */; };
+		CC1CE2192339949100C2A6B9 /* ConsersationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1752339949000C2A6B9 /* ConsersationInteractor.swift */; };
+		CC1CE21A2339949100C2A6B9 /* ConversationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1772339949000C2A6B9 /* ConversationPresenter.swift */; };
+		CC1CE21B2339949100C2A6B9 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1782339949000C2A6B9 /* ConversationView.swift */; };
+		CC1CE21C2339949100C2A6B9 /* ConversationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE17A2339949000C2A6B9 /* ConversationCellView.swift */; };
+		CC1CE21D2339949100C2A6B9 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE17B2339949000C2A6B9 /* ConversationTableViewCell.swift */; };
+		CC1CE21E2339949100C2A6B9 /* UsersChatsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE17E2339949000C2A6B9 /* UsersChatsInteractor.swift */; };
+		CC1CE21F2339949100C2A6B9 /* UsersChatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1802339949000C2A6B9 /* UsersChatsPresenter.swift */; };
+		CC1CE2202339949100C2A6B9 /* UsersChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1812339949000C2A6B9 /* UsersChatsView.swift */; };
+		CC1CE2212339949100C2A6B9 /* UserChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1832339949000C2A6B9 /* UserChatsTableViewCell.swift */; };
+		CC1CE2222339949100C2A6B9 /* UserChatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE1842339949000C2A6B9 /* UserChatsTableViewCell.xib */; };
+		CC1CE2232339949100C2A6B9 /* UsersChatsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1852339949000C2A6B9 /* UsersChatsCellView.swift */; };
+		CC1CE2242339949100C2A6B9 /* UsersChatsViewController+PresetnerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1862339949000C2A6B9 /* UsersChatsViewController+PresetnerDelegate.swift */; };
+		CC1CE2252339949100C2A6B9 /* UsersChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1872339949000C2A6B9 /* UsersChatsViewController.swift */; };
+		CC1CE2262339949100C2A6B9 /* CompetitionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE18A2339949000C2A6B9 /* CompetitionInteractor.swift */; };
+		CC1CE2272339949100C2A6B9 /* CompetitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE18C2339949000C2A6B9 /* CompetitionPresenter.swift */; };
+		CC1CE2282339949100C2A6B9 /* CompetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE18D2339949000C2A6B9 /* CompetitionView.swift */; };
+		CC1CE2292339949100C2A6B9 /* QuestionsViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE18E2339949000C2A6B9 /* QuestionsViewController+PresenterDelegate.swift */; };
+		CC1CE22A2339949100C2A6B9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE18F2339949000C2A6B9 /* QuestionsViewController.swift */; };
+		CC1CE22B2339949100C2A6B9 /* CompetionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1912339949000C2A6B9 /* CompetionCellView.swift */; };
+		CC1CE22C2339949100C2A6B9 /* CompetionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1922339949000C2A6B9 /* CompetionTableViewCell.swift */; };
+		CC1CE22D2339949100C2A6B9 /* CompetionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE1932339949000C2A6B9 /* CompetionTableViewCell.xib */; };
+		CC1CE22E2339949100C2A6B9 /* UserCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1942339949000C2A6B9 /* UserCompetitionViewController.swift */; };
+		CC1CE22F2339949100C2A6B9 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1962339949000C2A6B9 /* CountriesViewController.swift */; };
+		CC1CE2302339949100C2A6B9 /* CountryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1982339949000C2A6B9 /* CountryPresenter.swift */; };
+		CC1CE2312339949100C2A6B9 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1992339949000C2A6B9 /* CountryView.swift */; };
+		CC1CE2322339949100C2A6B9 /* CountryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE19B2339949000C2A6B9 /* CountryCellView.swift */; };
+		CC1CE2332339949100C2A6B9 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE19C2339949000C2A6B9 /* CountryTableViewCell.swift */; };
+		CC1CE2342339949100C2A6B9 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE19D2339949000C2A6B9 /* CountryTableViewCell.xib */; };
+		CC1CE2352339949100C2A6B9 /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE19F2339949000C2A6B9 /* LanguagesViewController.swift */; };
+		CC1CE2362339949100C2A6B9 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1A12339949000C2A6B9 /* CenterVCDelegate.swift */; };
+		CC1CE2372339949100C2A6B9 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1A22339949000C2A6B9 /* ContainerVC.swift */; };
+		CC1CE2382339949100C2A6B9 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1A32339949000C2A6B9 /* LeftSidePanelVC.swift */; };
+		CC1CE2392339949100C2A6B9 /* MyProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1A62339949000C2A6B9 /* MyProductInteractor.swift */; };
+		CC1CE23A2339949100C2A6B9 /* MyProductViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1A72339949000C2A6B9 /* MyProductViewController+PresenterDelegate.swift */; };
+		CC1CE23B2339949100C2A6B9 /* MyProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1A82339949000C2A6B9 /* MyProductViewController.swift */; };
+		CC1CE23C2339949100C2A6B9 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1AA2339949000C2A6B9 /* OrderTableViewCell.swift */; };
+		CC1CE23D2339949100C2A6B9 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE1AB2339949000C2A6B9 /* OrderTableViewCell.xib */; };
+		CC1CE23E2339949100C2A6B9 /* MyProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1AD2339949000C2A6B9 /* MyProductPresenter.swift */; };
+		CC1CE23F2339949100C2A6B9 /* MyProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1AE2339949000C2A6B9 /* MyProductView.swift */; };
+		CC1CE2402339949100C2A6B9 /* MyProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1B02339949000C2A6B9 /* MyProductCellView.swift */; };
+		CC1CE2412339949100C2A6B9 /* MyProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1B12339949000C2A6B9 /* MyProductTableViewCell.swift */; };
+		CC1CE2422339949100C2A6B9 /* MyProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE1B22339949000C2A6B9 /* MyProductTableViewCell.xib */; };
+		CC1CE2432339949100C2A6B9 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1B52339949000C2A6B9 /* OffersCell.swift */; };
+		CC1CE2442339949100C2A6B9 /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE1B62339949000C2A6B9 /* OffersCell.xib */; };
+		CC1CE2452339949100C2A6B9 /* OffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1B82339949000C2A6B9 /* OffersInteractor.swift */; };
+		CC1CE2462339949100C2A6B9 /* OffersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1B92339949000C2A6B9 /* OffersDetailsViewController.swift */; };
+		CC1CE2472339949100C2A6B9 /* OffersViewController+PresenterDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1BA2339949000C2A6B9 /* OffersViewController+PresenterDelagate.swift */; };
+		CC1CE2482339949100C2A6B9 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1BB2339949000C2A6B9 /* OffersViewController.swift */; };
+		CC1CE2492339949100C2A6B9 /* OfferDetailesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1BD2339949000C2A6B9 /* OfferDetailesPresenter.swift */; };
+		CC1CE24A2339949100C2A6B9 /* OffersCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1BE2339949000C2A6B9 /* OffersCellView.swift */; };
+		CC1CE24B2339949100C2A6B9 /* OffersDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1BF2339949000C2A6B9 /* OffersDetailesView.swift */; };
+		CC1CE24C2339949100C2A6B9 /* OffersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1C02339949000C2A6B9 /* OffersPresenter.swift */; };
+		CC1CE24D2339949100C2A6B9 /* OffersVC+SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1C12339949000C2A6B9 /* OffersVC+SearchDelegate.swift */; };
+		CC1CE24E2339949100C2A6B9 /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1C22339949000C2A6B9 /* OffersView.swift */; };
+		CC1CE24F2339949100C2A6B9 /* OffersViewController+CellSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1C32339949000C2A6B9 /* OffersViewController+CellSpaceDelegate.swift */; };
+		CC1CE2502339949100C2A6B9 /* SellYourItemEndPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1C82339949000C2A6B9 /* SellYourItemEndPresenter.swift */; };
+		CC1CE2512339949100C2A6B9 /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1C92339949000C2A6B9 /* SellYourItemEndView.swift */; };
+		CC1CE2522339949100C2A6B9 /* SellYourItemEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1CA2339949000C2A6B9 /* SellYourItemEndViewController.swift */; };
+		CC1CE2532339949100C2A6B9 /* SellYourItemFifthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1CD2339949000C2A6B9 /* SellYourItemFifthPresenter.swift */; };
+		CC1CE2542339949100C2A6B9 /* SellYourItemFifthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1CE2339949000C2A6B9 /* SellYourItemFifthView.swift */; };
+		CC1CE2552339949100C2A6B9 /* SellYourItemFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1CF2339949000C2A6B9 /* SellYourItemFifthViewController.swift */; };
+		CC1CE2562339949100C2A6B9 /* SellYourItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1D22339949000C2A6B9 /* SellYourItemPresenter.swift */; };
+		CC1CE2572339949100C2A6B9 /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1D32339949000C2A6B9 /* SellYourItemView.swift */; };
+		CC1CE2582339949100C2A6B9 /* SellYourItemViewController+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1D42339949000C2A6B9 /* SellYourItemViewController+PickerDelegate.swift */; };
+		CC1CE2592339949100C2A6B9 /* SellYourItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1D52339949000C2A6B9 /* SellYourItemViewController.swift */; };
+		CC1CE25A2339949100C2A6B9 /* SellYourItemFourthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1D82339949000C2A6B9 /* SellYourItemFourthPresenter.swift */; };
+		CC1CE25B2339949100C2A6B9 /* SellYourItemFourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1D92339949000C2A6B9 /* SellYourItemFourthView.swift */; };
+		CC1CE25C2339949100C2A6B9 /* SellYourItemFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1DA2339949100C2A6B9 /* SellYourItemFourthViewController.swift */; };
+		CC1CE25D2339949100C2A6B9 /* SellYourItemFourthViewCotroller+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1DB2339949100C2A6B9 /* SellYourItemFourthViewCotroller+PickerDelegate.swift */; };
+		CC1CE25E2339949100C2A6B9 /* SellYourItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1DD2339949100C2A6B9 /* SellYourItemInteractor.swift */; };
+		CC1CE25F2339949100C2A6B9 /* SellYourItemSecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1E02339949100C2A6B9 /* SellYourItemSecondPresenter.swift */; };
+		CC1CE2602339949100C2A6B9 /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1E12339949100C2A6B9 /* SellYourItemSecondView.swift */; };
+		CC1CE2612339949100C2A6B9 /* SellYourItemSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1E22339949100C2A6B9 /* SellYourItemSecondViewController.swift */; };
+		CC1CE2622339949100C2A6B9 /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1E32339949100C2A6B9 /* SellYourItemSecondViewCotroller+PickerDelegate.swift */; };
+		CC1CE2632339949100C2A6B9 /* SellYourItemThirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1E62339949100C2A6B9 /* SellYourItemThirdPresenter.swift */; };
+		CC1CE2642339949100C2A6B9 /* SellYourItemThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1E72339949100C2A6B9 /* SellYourItemThirdView.swift */; };
+		CC1CE2652339949100C2A6B9 /* SellYourItemThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1E82339949100C2A6B9 /* SellYourItemThirdViewController.swift */; };
+		CC1CE2662339949100C2A6B9 /* FavoriteOffersViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1EA2339949100C2A6B9 /* FavoriteOffersViewController+PresenterDelegate.swift */; };
+		CC1CE2672339949100C2A6B9 /* FavoriteOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1EB2339949100C2A6B9 /* FavoriteOffersViewController.swift */; };
+		CC1CE2682339949100C2A6B9 /* FavoriteOffersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1ED2339949100C2A6B9 /* FavoriteOffersInteractor.swift */; };
+		CC1CE2692339949100C2A6B9 /* FavoriteOffersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1EF2339949100C2A6B9 /* FavoriteOffersPresenter.swift */; };
+		CC1CE26A2339949100C2A6B9 /* FavoriteOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1F02339949100C2A6B9 /* FavoriteOffersView.swift */; };
+		CC1CE26B2339949100C2A6B9 /* FavoriteOffersCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1F22339949100C2A6B9 /* FavoriteOffersCellView.swift */; };
+		CC1CE26C2339949100C2A6B9 /* FavoriteOffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CE1F32339949100C2A6B9 /* FavoriteOffersTableViewCell.swift */; };
+		CC1CE26D2339949100C2A6B9 /* FavoriteOffersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE1F42339949100C2A6B9 /* FavoriteOffersTableViewCell.xib */; };
 		CC57507623384DEA00BBBE63 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507323384DEA00BBBE63 /* SSRadioButton.swift */; };
 		CC57507723384DEA00BBBE63 /* SSRadioButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */; };
 		CC57507823384DEA00BBBE63 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */; };
@@ -192,7 +313,128 @@
 		CC0C7B9623395A300086D21F /* FavoriteOffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersViewController.swift; sourceTree = "<group>"; };
 		CC0C7B9823395B9C0086D21F /* FavoriteOffersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersPresenter.swift; sourceTree = "<group>"; };
 		CC0C7B9A23395CA50086D21F /* FavoriteOffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersInteractor.swift; sourceTree = "<group>"; };
+		CC1CE13F2339949000C2A6B9 /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1402339949000C2A6B9 /* LoginViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1412339949000C2A6B9 /* LoginViewController+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextField.swift"; sourceTree = "<group>"; };
+		CC1CE1422339949000C2A6B9 /* LoginViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1432339949000C2A6B9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC1CE1452339949000C2A6B9 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1462339949000C2A6B9 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CC1CE1472339949000C2A6B9 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1482339949000C2A6B9 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		CC1CE1492339949000C2A6B9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CC1CE14A2339949000C2A6B9 /* RegistrationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE14B2339949000C2A6B9 /* RegistrationViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE14C2339949000C2A6B9 /* TextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
+		CC1CE1502339949000C2A6B9 /* MainCateoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCateoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC1CE1512339949000C2A6B9 /* MainCateoriesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCateoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		CC1CE1532339949000C2A6B9 /* MainCategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoriesInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1542339949000C2A6B9 /* MainCategoriesViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainCategoriesViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1552339949000C2A6B9 /* MainCateogriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCateogriesViewController.swift; sourceTree = "<group>"; };
+		CC1CE1572339949000C2A6B9 /* MainCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoriesPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1592339949000C2A6B9 /* MainCategoriesCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoriesCellView.swift; sourceTree = "<group>"; };
+		CC1CE15A2339949000C2A6B9 /* MainCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoriesView.swift; sourceTree = "<group>"; };
+		CC1CE15D2339949000C2A6B9 /* SubCategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesInteractor.swift; sourceTree = "<group>"; };
+		CC1CE15F2339949000C2A6B9 /* SubCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1612339949000C2A6B9 /* SubCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesView.swift; sourceTree = "<group>"; };
+		CC1CE1622339949000C2A6B9 /* SubCategoriesViewConteroller+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubCategoriesViewConteroller+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1632339949000C2A6B9 /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
+		CC1CE1662339949000C2A6B9 /* SubCategoryOffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryOffersInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1682339949000C2A6B9 /* SubCategoryOffersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryOffersPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1692339949000C2A6B9 /* SubCategoryOffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryOffersView.swift; sourceTree = "<group>"; };
+		CC1CE16A2339949000C2A6B9 /* SubCategoryOffersViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubCategoryOffersViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE16B2339949000C2A6B9 /* SubCategoryOffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryOffersViewController.swift; sourceTree = "<group>"; };
+		CC1CE16D2339949000C2A6B9 /* SubCategoryOffersCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryOffersCellView.swift; sourceTree = "<group>"; };
+		CC1CE16E2339949000C2A6B9 /* SubCategoryOffersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoryOffersTableViewCell.swift; sourceTree = "<group>"; };
+		CC1CE16F2339949000C2A6B9 /* SubCategoryOffersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubCategoryOffersTableViewCell.xib; sourceTree = "<group>"; };
+		CC1CE1722339949000C2A6B9 /* ConversationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConversationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1732339949000C2A6B9 /* ConverstionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverstionViewController.swift; sourceTree = "<group>"; };
+		CC1CE1752339949000C2A6B9 /* ConsersationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsersationInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1772339949000C2A6B9 /* ConversationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1782339949000C2A6B9 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		CC1CE17A2339949000C2A6B9 /* ConversationCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellView.swift; sourceTree = "<group>"; };
+		CC1CE17B2339949000C2A6B9 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CC1CE17E2339949000C2A6B9 /* UsersChatsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersChatsInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1802339949000C2A6B9 /* UsersChatsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersChatsPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1812339949000C2A6B9 /* UsersChatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersChatsView.swift; sourceTree = "<group>"; };
+		CC1CE1832339949000C2A6B9 /* UserChatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatsTableViewCell.swift; sourceTree = "<group>"; };
+		CC1CE1842339949000C2A6B9 /* UserChatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserChatsTableViewCell.xib; sourceTree = "<group>"; };
+		CC1CE1852339949000C2A6B9 /* UsersChatsCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersChatsCellView.swift; sourceTree = "<group>"; };
+		CC1CE1862339949000C2A6B9 /* UsersChatsViewController+PresetnerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsersChatsViewController+PresetnerDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1872339949000C2A6B9 /* UsersChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersChatsViewController.swift; sourceTree = "<group>"; };
+		CC1CE18A2339949000C2A6B9 /* CompetitionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionInteractor.swift; sourceTree = "<group>"; };
+		CC1CE18C2339949000C2A6B9 /* CompetitionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionPresenter.swift; sourceTree = "<group>"; };
+		CC1CE18D2339949000C2A6B9 /* CompetitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionView.swift; sourceTree = "<group>"; };
+		CC1CE18E2339949000C2A6B9 /* QuestionsViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuestionsViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE18F2339949000C2A6B9 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		CC1CE1912339949000C2A6B9 /* CompetionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetionCellView.swift; sourceTree = "<group>"; };
+		CC1CE1922339949000C2A6B9 /* CompetionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetionTableViewCell.swift; sourceTree = "<group>"; };
+		CC1CE1932339949000C2A6B9 /* CompetionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompetionTableViewCell.xib; sourceTree = "<group>"; };
+		CC1CE1942339949000C2A6B9 /* UserCompetitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCompetitionViewController.swift; sourceTree = "<group>"; };
+		CC1CE1962339949000C2A6B9 /* CountriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
+		CC1CE1982339949000C2A6B9 /* CountryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1992339949000C2A6B9 /* CountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		CC1CE19B2339949000C2A6B9 /* CountryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCellView.swift; sourceTree = "<group>"; };
+		CC1CE19C2339949000C2A6B9 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		CC1CE19D2339949000C2A6B9 /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
+		CC1CE19F2339949000C2A6B9 /* LanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
+		CC1CE1A12339949000C2A6B9 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
+		CC1CE1A22339949000C2A6B9 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		CC1CE1A32339949000C2A6B9 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
+		CC1CE1A62339949000C2A6B9 /* MyProductInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1A72339949000C2A6B9 /* MyProductViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyProductViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1A82339949000C2A6B9 /* MyProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductViewController.swift; sourceTree = "<group>"; };
+		CC1CE1AA2339949000C2A6B9 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		CC1CE1AB2339949000C2A6B9 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		CC1CE1AD2339949000C2A6B9 /* MyProductPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1AE2339949000C2A6B9 /* MyProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductView.swift; sourceTree = "<group>"; };
+		CC1CE1B02339949000C2A6B9 /* MyProductCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductCellView.swift; sourceTree = "<group>"; };
+		CC1CE1B12339949000C2A6B9 /* MyProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductTableViewCell.swift; sourceTree = "<group>"; };
+		CC1CE1B22339949000C2A6B9 /* MyProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProductTableViewCell.xib; sourceTree = "<group>"; };
+		CC1CE1B52339949000C2A6B9 /* OffersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
+		CC1CE1B62339949000C2A6B9 /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
+		CC1CE1B82339949000C2A6B9 /* OffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1B92339949000C2A6B9 /* OffersDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersDetailsViewController.swift; sourceTree = "<group>"; };
+		CC1CE1BA2339949000C2A6B9 /* OffersViewController+PresenterDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+PresenterDelagate.swift"; sourceTree = "<group>"; };
+		CC1CE1BB2339949000C2A6B9 /* OffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		CC1CE1BD2339949000C2A6B9 /* OfferDetailesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailesPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1BE2339949000C2A6B9 /* OffersCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCellView.swift; sourceTree = "<group>"; };
+		CC1CE1BF2339949000C2A6B9 /* OffersDetailesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersDetailesView.swift; sourceTree = "<group>"; };
+		CC1CE1C02339949000C2A6B9 /* OffersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1C12339949000C2A6B9 /* OffersVC+SearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersVC+SearchDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1C22339949000C2A6B9 /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
+		CC1CE1C32339949000C2A6B9 /* OffersViewController+CellSpaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+CellSpaceDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1C82339949000C2A6B9 /* SellYourItemEndPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1C92339949000C2A6B9 /* SellYourItemEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
+		CC1CE1CA2339949000C2A6B9 /* SellYourItemEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndViewController.swift; sourceTree = "<group>"; };
+		CC1CE1CD2339949000C2A6B9 /* SellYourItemFifthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1CE2339949000C2A6B9 /* SellYourItemFifthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthView.swift; sourceTree = "<group>"; };
+		CC1CE1CF2339949000C2A6B9 /* SellYourItemFifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthViewController.swift; sourceTree = "<group>"; };
+		CC1CE1D22339949000C2A6B9 /* SellYourItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1D32339949000C2A6B9 /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
+		CC1CE1D42339949000C2A6B9 /* SellYourItemViewController+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemViewController+PickerDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1D52339949000C2A6B9 /* SellYourItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemViewController.swift; sourceTree = "<group>"; };
+		CC1CE1D82339949000C2A6B9 /* SellYourItemFourthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1D92339949000C2A6B9 /* SellYourItemFourthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthView.swift; sourceTree = "<group>"; };
+		CC1CE1DA2339949100C2A6B9 /* SellYourItemFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthViewController.swift; sourceTree = "<group>"; };
+		CC1CE1DB2339949100C2A6B9 /* SellYourItemFourthViewCotroller+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemFourthViewCotroller+PickerDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1DD2339949100C2A6B9 /* SellYourItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1E02339949100C2A6B9 /* SellYourItemSecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1E12339949100C2A6B9 /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
+		CC1CE1E22339949100C2A6B9 /* SellYourItemSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondViewController.swift; sourceTree = "<group>"; };
+		CC1CE1E32339949100C2A6B9 /* SellYourItemSecondViewCotroller+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemSecondViewCotroller+PickerDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1E62339949100C2A6B9 /* SellYourItemThirdPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1E72339949100C2A6B9 /* SellYourItemThirdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdView.swift; sourceTree = "<group>"; };
+		CC1CE1E82339949100C2A6B9 /* SellYourItemThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdViewController.swift; sourceTree = "<group>"; };
+		CC1CE1EA2339949100C2A6B9 /* FavoriteOffersViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavoriteOffersViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		CC1CE1EB2339949100C2A6B9 /* FavoriteOffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersViewController.swift; sourceTree = "<group>"; };
+		CC1CE1ED2339949100C2A6B9 /* FavoriteOffersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersInteractor.swift; sourceTree = "<group>"; };
+		CC1CE1EF2339949100C2A6B9 /* FavoriteOffersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersPresenter.swift; sourceTree = "<group>"; };
+		CC1CE1F02339949100C2A6B9 /* FavoriteOffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersView.swift; sourceTree = "<group>"; };
+		CC1CE1F22339949100C2A6B9 /* FavoriteOffersCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersCellView.swift; sourceTree = "<group>"; };
+		CC1CE1F32339949100C2A6B9 /* FavoriteOffersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersTableViewCell.swift; sourceTree = "<group>"; };
+		CC1CE1F42339949100C2A6B9 /* FavoriteOffersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteOffersTableViewCell.xib; sourceTree = "<group>"; };
 		CC57507323384DEA00BBBE63 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonModel.swift; sourceTree = "<group>"; };
 		CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
@@ -435,6 +677,638 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		CC1CE13C2339949000C2A6B9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE13D2339949000C2A6B9 /* Authentication */,
+				CC1CE14D2339949000C2A6B9 /* Categories */,
+				CC1CE1702339949000C2A6B9 /* Chat */,
+				CC1CE1882339949000C2A6B9 /* Competition */,
+				CC1CE1952339949000C2A6B9 /* Countries */,
+				CC1CE19E2339949000C2A6B9 /* Languages */,
+				CC1CE1A02339949000C2A6B9 /* LeftSidePanel */,
+				CC1CE1A42339949000C2A6B9 /* MyProducts */,
+				CC1CE1B32339949000C2A6B9 /* Offers */,
+				CC1CE1C42339949000C2A6B9 /* Profile */,
+				CC1CE1C52339949000C2A6B9 /* SellYourItems */,
+				CC1CE1E92339949100C2A6B9 /* UserFavorites */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		CC1CE13D2339949000C2A6B9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE13E2339949000C2A6B9 /* Interactor */,
+				CC1CE1402339949000C2A6B9 /* LoginViewController+PresenterDelegate.swift */,
+				CC1CE1412339949000C2A6B9 /* LoginViewController+TextField.swift */,
+				CC1CE1422339949000C2A6B9 /* LoginViewController+TextFieldDelegate.swift */,
+				CC1CE1432339949000C2A6B9 /* LoginViewController.swift */,
+				CC1CE1442339949000C2A6B9 /* Presenter */,
+				CC1CE1492339949000C2A6B9 /* RegisterViewController.swift */,
+				CC1CE14A2339949000C2A6B9 /* RegistrationViewController+PresenterDelegate.swift */,
+				CC1CE14B2339949000C2A6B9 /* RegistrationViewController+TextFieldDelegate.swift */,
+				CC1CE14C2339949000C2A6B9 /* TextFieldIcon.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CC1CE13E2339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE13F2339949000C2A6B9 /* UserInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1442339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1452339949000C2A6B9 /* LoginPresenter.swift */,
+				CC1CE1462339949000C2A6B9 /* LoginView.swift */,
+				CC1CE1472339949000C2A6B9 /* RegistrationPresenter.swift */,
+				CC1CE1482339949000C2A6B9 /* RegistrationView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE14D2339949000C2A6B9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE14E2339949000C2A6B9 /* MainCategories */,
+				CC1CE15B2339949000C2A6B9 /* SubCategories */,
+				CC1CE1642339949000C2A6B9 /* SubCategroiesOffers */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		CC1CE14E2339949000C2A6B9 /* MainCategories */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE14F2339949000C2A6B9 /* CollectionViewCell */,
+				CC1CE1522339949000C2A6B9 /* Interactor */,
+				CC1CE1542339949000C2A6B9 /* MainCategoriesViewController+PresenterDelegate.swift */,
+				CC1CE1552339949000C2A6B9 /* MainCateogriesViewController.swift */,
+				CC1CE1562339949000C2A6B9 /* Presenter */,
+				CC1CE1582339949000C2A6B9 /* Protocols */,
+			);
+			path = MainCategories;
+			sourceTree = "<group>";
+		};
+		CC1CE14F2339949000C2A6B9 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1502339949000C2A6B9 /* MainCateoriesCollectionViewCell.swift */,
+				CC1CE1512339949000C2A6B9 /* MainCateoriesCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE1522339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1532339949000C2A6B9 /* MainCategoriesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1562339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1572339949000C2A6B9 /* MainCategoriesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1582339949000C2A6B9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1592339949000C2A6B9 /* MainCategoriesCellView.swift */,
+				CC1CE15A2339949000C2A6B9 /* MainCategoriesView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CC1CE15B2339949000C2A6B9 /* SubCategories */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE15C2339949000C2A6B9 /* Interactor */,
+				CC1CE15E2339949000C2A6B9 /* Presenter */,
+				CC1CE1602339949000C2A6B9 /* Protocols */,
+				CC1CE1622339949000C2A6B9 /* SubCategoriesViewConteroller+PresenterDelegate.swift */,
+				CC1CE1632339949000C2A6B9 /* SubCategoriesViewController.swift */,
+			);
+			path = SubCategories;
+			sourceTree = "<group>";
+		};
+		CC1CE15C2339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE15D2339949000C2A6B9 /* SubCategoriesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE15E2339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE15F2339949000C2A6B9 /* SubCategoriesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1602339949000C2A6B9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1612339949000C2A6B9 /* SubCategoriesView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CC1CE1642339949000C2A6B9 /* SubCategroiesOffers */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1652339949000C2A6B9 /* Interactor */,
+				CC1CE1672339949000C2A6B9 /* Presenter */,
+				CC1CE1692339949000C2A6B9 /* SubCategoryOffersView.swift */,
+				CC1CE16A2339949000C2A6B9 /* SubCategoryOffersViewController+PresenterDelegate.swift */,
+				CC1CE16B2339949000C2A6B9 /* SubCategoryOffersViewController.swift */,
+				CC1CE16C2339949000C2A6B9 /* TableViewCell */,
+			);
+			path = SubCategroiesOffers;
+			sourceTree = "<group>";
+		};
+		CC1CE1652339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1662339949000C2A6B9 /* SubCategoryOffersInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1672339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1682339949000C2A6B9 /* SubCategoryOffersPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE16C2339949000C2A6B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE16D2339949000C2A6B9 /* SubCategoryOffersCellView.swift */,
+				CC1CE16E2339949000C2A6B9 /* SubCategoryOffersTableViewCell.swift */,
+				CC1CE16F2339949000C2A6B9 /* SubCategoryOffersTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE1702339949000C2A6B9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1712339949000C2A6B9 /* Conversation */,
+				CC1CE17C2339949000C2A6B9 /* UserChats */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		CC1CE1712339949000C2A6B9 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1722339949000C2A6B9 /* ConversationViewController+PresenterDelegate.swift */,
+				CC1CE1732339949000C2A6B9 /* ConverstionViewController.swift */,
+				CC1CE1742339949000C2A6B9 /* Interactor */,
+				CC1CE1762339949000C2A6B9 /* Presenter */,
+				CC1CE1792339949000C2A6B9 /* TableViewCell */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		CC1CE1742339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1752339949000C2A6B9 /* ConsersationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1762339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1772339949000C2A6B9 /* ConversationPresenter.swift */,
+				CC1CE1782339949000C2A6B9 /* ConversationView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1792339949000C2A6B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE17A2339949000C2A6B9 /* ConversationCellView.swift */,
+				CC1CE17B2339949000C2A6B9 /* ConversationTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE17C2339949000C2A6B9 /* UserChats */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE17D2339949000C2A6B9 /* Interactor */,
+				CC1CE17F2339949000C2A6B9 /* Presenter */,
+				CC1CE1822339949000C2A6B9 /* TableViewCell */,
+				CC1CE1862339949000C2A6B9 /* UsersChatsViewController+PresetnerDelegate.swift */,
+				CC1CE1872339949000C2A6B9 /* UsersChatsViewController.swift */,
+			);
+			path = UserChats;
+			sourceTree = "<group>";
+		};
+		CC1CE17D2339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE17E2339949000C2A6B9 /* UsersChatsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE17F2339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1802339949000C2A6B9 /* UsersChatsPresenter.swift */,
+				CC1CE1812339949000C2A6B9 /* UsersChatsView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1822339949000C2A6B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1832339949000C2A6B9 /* UserChatsTableViewCell.swift */,
+				CC1CE1842339949000C2A6B9 /* UserChatsTableViewCell.xib */,
+				CC1CE1852339949000C2A6B9 /* UsersChatsCellView.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE1882339949000C2A6B9 /* Competition */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1892339949000C2A6B9 /* Interactor */,
+				CC1CE18B2339949000C2A6B9 /* Presenter */,
+				CC1CE18E2339949000C2A6B9 /* QuestionsViewController+PresenterDelegate.swift */,
+				CC1CE18F2339949000C2A6B9 /* QuestionsViewController.swift */,
+				CC1CE1902339949000C2A6B9 /* TableViewCell */,
+				CC1CE1942339949000C2A6B9 /* UserCompetitionViewController.swift */,
+			);
+			path = Competition;
+			sourceTree = "<group>";
+		};
+		CC1CE1892339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE18A2339949000C2A6B9 /* CompetitionInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE18B2339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE18C2339949000C2A6B9 /* CompetitionPresenter.swift */,
+				CC1CE18D2339949000C2A6B9 /* CompetitionView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1902339949000C2A6B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1912339949000C2A6B9 /* CompetionCellView.swift */,
+				CC1CE1922339949000C2A6B9 /* CompetionTableViewCell.swift */,
+				CC1CE1932339949000C2A6B9 /* CompetionTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE1952339949000C2A6B9 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1962339949000C2A6B9 /* CountriesViewController.swift */,
+				CC1CE1972339949000C2A6B9 /* Presenter */,
+				CC1CE19A2339949000C2A6B9 /* TableViewCell */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		CC1CE1972339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1982339949000C2A6B9 /* CountryPresenter.swift */,
+				CC1CE1992339949000C2A6B9 /* CountryView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE19A2339949000C2A6B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE19B2339949000C2A6B9 /* CountryCellView.swift */,
+				CC1CE19C2339949000C2A6B9 /* CountryTableViewCell.swift */,
+				CC1CE19D2339949000C2A6B9 /* CountryTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE19E2339949000C2A6B9 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE19F2339949000C2A6B9 /* LanguagesViewController.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		CC1CE1A02339949000C2A6B9 /* LeftSidePanel */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1A12339949000C2A6B9 /* CenterVCDelegate.swift */,
+				CC1CE1A22339949000C2A6B9 /* ContainerVC.swift */,
+				CC1CE1A32339949000C2A6B9 /* LeftSidePanelVC.swift */,
+			);
+			path = LeftSidePanel;
+			sourceTree = "<group>";
+		};
+		CC1CE1A42339949000C2A6B9 /* MyProducts */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1A52339949000C2A6B9 /* Interactor */,
+				CC1CE1A72339949000C2A6B9 /* MyProductViewController+PresenterDelegate.swift */,
+				CC1CE1A82339949000C2A6B9 /* MyProductViewController.swift */,
+				CC1CE1A92339949000C2A6B9 /* OrderTableViewCell */,
+				CC1CE1AC2339949000C2A6B9 /* Presenter */,
+				CC1CE1AF2339949000C2A6B9 /* TableViewCell */,
+			);
+			path = MyProducts;
+			sourceTree = "<group>";
+		};
+		CC1CE1A52339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1A62339949000C2A6B9 /* MyProductInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1A92339949000C2A6B9 /* OrderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1AA2339949000C2A6B9 /* OrderTableViewCell.swift */,
+				CC1CE1AB2339949000C2A6B9 /* OrderTableViewCell.xib */,
+			);
+			path = OrderTableViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE1AC2339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1AD2339949000C2A6B9 /* MyProductPresenter.swift */,
+				CC1CE1AE2339949000C2A6B9 /* MyProductView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1AF2339949000C2A6B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1B02339949000C2A6B9 /* MyProductCellView.swift */,
+				CC1CE1B12339949000C2A6B9 /* MyProductTableViewCell.swift */,
+				CC1CE1B22339949000C2A6B9 /* MyProductTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE1B32339949000C2A6B9 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1B42339949000C2A6B9 /* CollectionViewCell */,
+				CC1CE1B72339949000C2A6B9 /* Interactor */,
+				CC1CE1B92339949000C2A6B9 /* OffersDetailsViewController.swift */,
+				CC1CE1BA2339949000C2A6B9 /* OffersViewController+PresenterDelagate.swift */,
+				CC1CE1BB2339949000C2A6B9 /* OffersViewController.swift */,
+				CC1CE1BC2339949000C2A6B9 /* Presenter */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		CC1CE1B42339949000C2A6B9 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1B52339949000C2A6B9 /* OffersCell.swift */,
+				CC1CE1B62339949000C2A6B9 /* OffersCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CC1CE1B72339949000C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1B82339949000C2A6B9 /* OffersInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1BC2339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1BD2339949000C2A6B9 /* OfferDetailesPresenter.swift */,
+				CC1CE1BE2339949000C2A6B9 /* OffersCellView.swift */,
+				CC1CE1BF2339949000C2A6B9 /* OffersDetailesView.swift */,
+				CC1CE1C02339949000C2A6B9 /* OffersPresenter.swift */,
+				CC1CE1C12339949000C2A6B9 /* OffersVC+SearchDelegate.swift */,
+				CC1CE1C22339949000C2A6B9 /* OffersView.swift */,
+				CC1CE1C32339949000C2A6B9 /* OffersViewController+CellSpaceDelegate.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1C42339949000C2A6B9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CC1CE1C52339949000C2A6B9 /* SellYourItems */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1C62339949000C2A6B9 /* EndViewController */,
+				CC1CE1CB2339949000C2A6B9 /* FifthViewController */,
+				CC1CE1D02339949000C2A6B9 /* FirstViewController */,
+				CC1CE1D62339949000C2A6B9 /* FourthViewController */,
+				CC1CE1DC2339949100C2A6B9 /* Interactor */,
+				CC1CE1DE2339949100C2A6B9 /* SecondViewController */,
+				CC1CE1E42339949100C2A6B9 /* ThirdViewController */,
+			);
+			path = SellYourItems;
+			sourceTree = "<group>";
+		};
+		CC1CE1C62339949000C2A6B9 /* EndViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1C72339949000C2A6B9 /* Presenter */,
+				CC1CE1CA2339949000C2A6B9 /* SellYourItemEndViewController.swift */,
+			);
+			path = EndViewController;
+			sourceTree = "<group>";
+		};
+		CC1CE1C72339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1C82339949000C2A6B9 /* SellYourItemEndPresenter.swift */,
+				CC1CE1C92339949000C2A6B9 /* SellYourItemEndView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1CB2339949000C2A6B9 /* FifthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1CC2339949000C2A6B9 /* Presenter */,
+				CC1CE1CF2339949000C2A6B9 /* SellYourItemFifthViewController.swift */,
+			);
+			path = FifthViewController;
+			sourceTree = "<group>";
+		};
+		CC1CE1CC2339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1CD2339949000C2A6B9 /* SellYourItemFifthPresenter.swift */,
+				CC1CE1CE2339949000C2A6B9 /* SellYourItemFifthView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1D02339949000C2A6B9 /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1D12339949000C2A6B9 /* Presenter */,
+				CC1CE1D42339949000C2A6B9 /* SellYourItemViewController+PickerDelegate.swift */,
+				CC1CE1D52339949000C2A6B9 /* SellYourItemViewController.swift */,
+			);
+			path = FirstViewController;
+			sourceTree = "<group>";
+		};
+		CC1CE1D12339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1D22339949000C2A6B9 /* SellYourItemPresenter.swift */,
+				CC1CE1D32339949000C2A6B9 /* SellYourItemView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1D62339949000C2A6B9 /* FourthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1D72339949000C2A6B9 /* Presenter */,
+				CC1CE1DA2339949100C2A6B9 /* SellYourItemFourthViewController.swift */,
+				CC1CE1DB2339949100C2A6B9 /* SellYourItemFourthViewCotroller+PickerDelegate.swift */,
+			);
+			path = FourthViewController;
+			sourceTree = "<group>";
+		};
+		CC1CE1D72339949000C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1D82339949000C2A6B9 /* SellYourItemFourthPresenter.swift */,
+				CC1CE1D92339949000C2A6B9 /* SellYourItemFourthView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1DC2339949100C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1DD2339949100C2A6B9 /* SellYourItemInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1DE2339949100C2A6B9 /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1DF2339949100C2A6B9 /* Presenter */,
+				CC1CE1E22339949100C2A6B9 /* SellYourItemSecondViewController.swift */,
+				CC1CE1E32339949100C2A6B9 /* SellYourItemSecondViewCotroller+PickerDelegate.swift */,
+			);
+			path = SecondViewController;
+			sourceTree = "<group>";
+		};
+		CC1CE1DF2339949100C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1E02339949100C2A6B9 /* SellYourItemSecondPresenter.swift */,
+				CC1CE1E12339949100C2A6B9 /* SellYourItemSecondView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1E42339949100C2A6B9 /* ThirdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1E52339949100C2A6B9 /* Presenter */,
+				CC1CE1E82339949100C2A6B9 /* SellYourItemThirdViewController.swift */,
+			);
+			path = ThirdViewController;
+			sourceTree = "<group>";
+		};
+		CC1CE1E52339949100C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1E62339949100C2A6B9 /* SellYourItemThirdPresenter.swift */,
+				CC1CE1E72339949100C2A6B9 /* SellYourItemThirdView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1E92339949100C2A6B9 /* UserFavorites */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1EA2339949100C2A6B9 /* FavoriteOffersViewController+PresenterDelegate.swift */,
+				CC1CE1EB2339949100C2A6B9 /* FavoriteOffersViewController.swift */,
+				CC1CE1EC2339949100C2A6B9 /* Interactor */,
+				CC1CE1EE2339949100C2A6B9 /* Presenter */,
+				CC1CE1F12339949100C2A6B9 /* TableViewCell */,
+			);
+			path = UserFavorites;
+			sourceTree = "<group>";
+		};
+		CC1CE1EC2339949100C2A6B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1ED2339949100C2A6B9 /* FavoriteOffersInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1CE1EE2339949100C2A6B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1EF2339949100C2A6B9 /* FavoriteOffersPresenter.swift */,
+				CC1CE1F02339949100C2A6B9 /* FavoriteOffersView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1CE1F12339949100C2A6B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CE1F22339949100C2A6B9 /* FavoriteOffersCellView.swift */,
+				CC1CE1F32339949100C2A6B9 /* FavoriteOffersTableViewCell.swift */,
+				CC1CE1F42339949100C2A6B9 /* FavoriteOffersTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		CC57507123384D2200BBBE63 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +1425,7 @@
 		CCD9BE432339175B002B9201 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CC1CE13C2339949000C2A6B9 /* Scenes */,
 				CC0C7B93233959BD0086D21F /* UserFavorites */,
 				CCD9BE5F233930DE002B9201 /* Authentication */,
 				CCD9BE70233930DE002B9201 /* Categories */,
@@ -1254,8 +2129,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD9BF11233930DF002B9201 /* MainCateoriesCollectionViewCell.xib in Resources */,
+				CC1CE2032339949100C2A6B9 /* MainCateoriesCollectionViewCell.xib in Resources */,
+				CC1CE22D2339949100C2A6B9 /* CompetionTableViewCell.xib in Resources */,
+				CC1CE2222339949100C2A6B9 /* UserChatsTableViewCell.xib in Resources */,
 				CC8049EE2339777D00CAD0C3 /* FavoriteOffersTableViewCell.xib in Resources */,
 				CCD9BF4A233930DF002B9201 /* MyProductTableViewCell.xib in Resources */,
+				CC1CE23D2339949100C2A6B9 /* OrderTableViewCell.xib in Resources */,
+				CC1CE2422339949100C2A6B9 /* MyProductTableViewCell.xib in Resources */,
+				CC1CE2442339949100C2A6B9 /* OffersCell.xib in Resources */,
 				CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */,
 				CCD9BF4C233930DF002B9201 /* OffersCell.xib in Resources */,
 				CCD9BF32233930DF002B9201 /* UserChatsTableViewCell.xib in Resources */,
@@ -1264,9 +2145,12 @@
 				CCD9BF3B233930DF002B9201 /* CountryTableViewCell.xib in Resources */,
 				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
 				CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */,
+				CC1CE2342339949100C2A6B9 /* CountryTableViewCell.xib in Resources */,
+				CC1CE26D2339949100C2A6B9 /* FavoriteOffersTableViewCell.xib in Resources */,
 				CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */,
 				CCD9BE582339175B002B9201 /* CompetionTableViewCell.xib in Resources */,
 				CCD9BF24233930DF002B9201 /* SubCategoryOffersTableViewCell.xib in Resources */,
+				CC1CE2162339949100C2A6B9 /* SubCategoryOffersTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1379,9 +2263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD9BF07233930DF002B9201 /* LoginPresenter.swift in Sources */,
+				CC1CE2102339949100C2A6B9 /* SubCategoryOffersPresenter.swift in Sources */,
+				CC1CE2052339949100C2A6B9 /* MainCategoriesViewController+PresenterDelegate.swift in Sources */,
 				CC8049F02339851A00CAD0C3 /* FavoriteOffersViewController+PresenterDelegate.swift in Sources */,
 				CCD9BE542339175B002B9201 /* QuestionsViewController+PresenterDelegate.swift in Sources */,
 				CCD9BF3F233930DF002B9201 /* LeftSidePanelVC.swift in Sources */,
+				CC1CE23E2339949100C2A6B9 /* MyProductPresenter.swift in Sources */,
 				CCD9BF4E233930DF002B9201 /* OffersDetailsViewController.swift in Sources */,
 				CCD9BF2B233930DF002B9201 /* ConversationCellView.swift in Sources */,
 				CCD9BF65233930DF002B9201 /* SellYourItemFourthViewController.swift in Sources */,
@@ -1393,122 +2280,225 @@
 				CCD9BF3C233930DF002B9201 /* LanguagesViewController.swift in Sources */,
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
 				CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */,
+				CC1CE2522339949100C2A6B9 /* SellYourItemEndViewController.swift in Sources */,
 				CCD9BE3C2339111E002B9201 /* Competation.swift in Sources */,
 				CCD9BF5A233930DF002B9201 /* SellYourItemEndViewController.swift in Sources */,
 				CCD9BE592339175C002B9201 /* UserCompetitionViewController.swift in Sources */,
+				CC1CE22C2339949100C2A6B9 /* CompetionTableViewCell.swift in Sources */,
 				CCD9BF6D233930DF002B9201 /* SellYourItemThirdView.swift in Sources */,
 				CCD9BF18233930DF002B9201 /* SubCategoriesInteractor.swift in Sources */,
 				CCD9BF19233930DF002B9201 /* SubCategoriesPresenter.swift in Sources */,
+				CC1CE2602339949100C2A6B9 /* SellYourItemSecondView.swift in Sources */,
 				CCD9BF16233930DF002B9201 /* MainCategoriesCellView.swift in Sources */,
 				CC57507823384DEA00BBBE63 /* SSRadioButtonsController.swift in Sources */,
 				CC0C7B9923395B9C0086D21F /* FavoriteOffersPresenter.swift in Sources */,
 				CCD9BF5E233930DF002B9201 /* SellYourItemFifthViewController.swift in Sources */,
+				CC1CE1FC2339949100C2A6B9 /* RegistrationPresenter.swift in Sources */,
+				CC1CE2012339949100C2A6B9 /* TextFieldIcon.swift in Sources */,
+				CC1CE2002339949100C2A6B9 /* RegistrationViewController+TextFieldDelegate.swift in Sources */,
 				CCD9BE3D2339111E002B9201 /* Conversation.swift in Sources */,
 				CCD9BF0D233930DF002B9201 /* RegistrationViewController+PresenterDelegate.swift in Sources */,
+				CC1CE2112339949100C2A6B9 /* SubCategoryOffersView.swift in Sources */,
+				CC1CE2512339949100C2A6B9 /* SellYourItemEndView.swift in Sources */,
 				CCD9BF36233930DF002B9201 /* CountriesViewController.swift in Sources */,
+				CC1CE2432339949100C2A6B9 /* OffersCell.swift in Sources */,
 				CCD9BF13233930DF002B9201 /* MainCategoriesViewController+PresenterDelegate.swift in Sources */,
 				CCD9BF1C233930DF002B9201 /* SubCategoriesViewController.swift in Sources */,
 				CCD9BF20233930DF002B9201 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */,
 				CCD9BE5E233930C8002B9201 /* NetworkConstants.swift in Sources */,
+				CC1CE20C2339949100C2A6B9 /* SubCategoriesView.swift in Sources */,
+				CC1CE2682339949100C2A6B9 /* FavoriteOffersInteractor.swift in Sources */,
 				CCD9BF49233930DF002B9201 /* MyProductTableViewCell.swift in Sources */,
+				CC1CE2642339949100C2A6B9 /* SellYourItemThirdView.swift in Sources */,
 				CCD9BE522339175B002B9201 /* CompetitionPresenter.swift in Sources */,
 				CCD9BF2E233930DF002B9201 /* UsersChatsInteractor.swift in Sources */,
+				CC1CE2482339949100C2A6B9 /* OffersViewController.swift in Sources */,
 				CCD9BF40233930DF002B9201 /* MyProductInteractor.swift in Sources */,
 				CCD9BF5D233930DF002B9201 /* SellYourItemFifthView.swift in Sources */,
 				CCD9BF0A233930DF002B9201 /* RegistrationView.swift in Sources */,
 				CC8049EC2339777D00CAD0C3 /* FavoriteOffersCellView.swift in Sources */,
 				CCD9BF66233930DF002B9201 /* SellYourItemFourthViewCotroller+PickerDelegate.swift in Sources */,
+				CC1CE2552339949100C2A6B9 /* SellYourItemFifthViewController.swift in Sources */,
+				CC1CE2612339949100C2A6B9 /* SellYourItemSecondViewController.swift in Sources */,
 				CCD9BF15233930DF002B9201 /* MainCategoriesPresenter.swift in Sources */,
+				CC1CE2572339949100C2A6B9 /* SellYourItemView.swift in Sources */,
 				CCD9BF04233930DF002B9201 /* LoginViewController+TextField.swift in Sources */,
+				CC1CE2362339949100C2A6B9 /* CenterVCDelegate.swift in Sources */,
+				CC1CE25D2339949100C2A6B9 /* SellYourItemFourthViewCotroller+PickerDelegate.swift in Sources */,
+				CC1CE2402339949100C2A6B9 /* MyProductCellView.swift in Sources */,
 				CCD9BE532339175B002B9201 /* CompetitionView.swift in Sources */,
 				CCD9BF1E233930DF002B9201 /* SubCategoryOffersPresenter.swift in Sources */,
+				CC1CE2202339949100C2A6B9 /* UsersChatsView.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
+				CC1CE2132339949100C2A6B9 /* SubCategoryOffersViewController.swift in Sources */,
 				CCD9BF30233930DF002B9201 /* UsersChatsView.swift in Sources */,
 				CC57507623384DEA00BBBE63 /* SSRadioButton.swift in Sources */,
+				CC1CE1F72339949100C2A6B9 /* LoginViewController+TextField.swift in Sources */,
+				CC1CE2022339949100C2A6B9 /* MainCateoriesCollectionViewCell.swift in Sources */,
+				CC1CE1FA2339949100C2A6B9 /* LoginPresenter.swift in Sources */,
+				CC1CE2692339949100C2A6B9 /* FavoriteOffersPresenter.swift in Sources */,
 				CCD9BF41233930DF002B9201 /* MyProductViewController+PresenterDelegate.swift in Sources */,
 				CCD9BE5D233930C8002B9201 /* LuzazRouter.swift in Sources */,
 				CCD9BF62233930DF002B9201 /* SellYourItemViewController.swift in Sources */,
 				CC86961822F4F61C00E9F14D /* ProductScreendetailsViewController.swift in Sources */,
+				CC1CE2212339949100C2A6B9 /* UserChatsTableViewCell.swift in Sources */,
 				CCD9BF6E233930DF002B9201 /* SellYourItemThirdViewController.swift in Sources */,
+				CC1CE2462339949100C2A6B9 /* OffersDetailsViewController.swift in Sources */,
+				CC1CE2492339949100C2A6B9 /* OfferDetailesPresenter.swift in Sources */,
+				CC1CE2412339949100C2A6B9 /* MyProductTableViewCell.swift in Sources */,
 				CCD9BF53233930DF002B9201 /* OffersDetailesView.swift in Sources */,
 				CCD9BF05233930DF002B9201 /* LoginViewController+TextFieldDelegate.swift in Sources */,
 				CCD9BF29233930DF002B9201 /* ConversationPresenter.swift in Sources */,
+				CC1CE2082339949100C2A6B9 /* MainCategoriesCellView.swift in Sources */,
+				CC1CE2252339949100C2A6B9 /* UsersChatsViewController.swift in Sources */,
 				CCD9BF25233930DF002B9201 /* ConversationViewController+PresenterDelegate.swift in Sources */,
+				CC1CE21D2339949100C2A6B9 /* ConversationTableViewCell.swift in Sources */,
+				CC1CE2142339949100C2A6B9 /* SubCategoryOffersCellView.swift in Sources */,
 				CCD9BF50233930DF002B9201 /* OffersViewController.swift in Sources */,
+				CC1CE25E2339949100C2A6B9 /* SellYourItemInteractor.swift in Sources */,
 				CCD9BF39233930DF002B9201 /* CountryCellView.swift in Sources */,
+				CC1CE23A2339949100C2A6B9 /* MyProductViewController+PresenterDelegate.swift in Sources */,
 				CCD9BF22233930DF002B9201 /* SubCategoryOffersCellView.swift in Sources */,
+				CC1CE20F2339949100C2A6B9 /* SubCategoryOffersInteractor.swift in Sources */,
+				CC1CE26C2339949100C2A6B9 /* FavoriteOffersTableViewCell.swift in Sources */,
+				CC1CE21A2339949100C2A6B9 /* ConversationPresenter.swift in Sources */,
+				CC1CE2652339949100C2A6B9 /* SellYourItemThirdViewController.swift in Sources */,
+				CC1CE2062339949100C2A6B9 /* MainCateogriesViewController.swift in Sources */,
+				CC1CE2472339949100C2A6B9 /* OffersViewController+PresenterDelagate.swift in Sources */,
 				CCD9BF5B233930DF002B9201 /* SellYourItemFifthPresenter.swift in Sources */,
+				CC1CE25B2339949100C2A6B9 /* SellYourItemFourthView.swift in Sources */,
 				CCD9BF33233930DF002B9201 /* UsersChatsCellView.swift in Sources */,
 				CCD9BF2A233930DF002B9201 /* ConversationView.swift in Sources */,
+				CC1CE2292339949100C2A6B9 /* QuestionsViewController+PresenterDelegate.swift in Sources */,
 				CCD9BF4F233930DF002B9201 /* OffersViewController+PresenterDelagate.swift in Sources */,
+				CC1CE24A2339949100C2A6B9 /* OffersCellView.swift in Sources */,
 				CCD9BF68233930DF002B9201 /* SellYourItemSecondPresenter.swift in Sources */,
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
+				CC1CE2502339949100C2A6B9 /* SellYourItemEndPresenter.swift in Sources */,
 				CCD9BE392339111E002B9201 /* Answer.swift in Sources */,
 				CCD9BF1F233930DF002B9201 /* SubCategoryOffersView.swift in Sources */,
 				CCD9BF03233930DF002B9201 /* LoginViewController+PresenterDelegate.swift in Sources */,
+				CC1CE2312339949100C2A6B9 /* CountryView.swift in Sources */,
+				CC1CE1F82339949100C2A6B9 /* LoginViewController+TextFieldDelegate.swift in Sources */,
 				CCD9BF3E233930DF002B9201 /* ContainerVC.swift in Sources */,
 				CCD9BE402339111E002B9201 /* Order.swift in Sources */,
+				CC1CE20A2339949100C2A6B9 /* SubCategoriesInteractor.swift in Sources */,
+				CC1CE2242339949100C2A6B9 /* UsersChatsViewController+PresetnerDelegate.swift in Sources */,
+				CC1CE2042339949100C2A6B9 /* MainCategoriesInteractor.swift in Sources */,
 				CCD9BE512339175B002B9201 /* CompetitionInteractor.swift in Sources */,
+				CC1CE2302339949100C2A6B9 /* CountryPresenter.swift in Sources */,
 				CCD9BF14233930DF002B9201 /* MainCateogriesViewController.swift in Sources */,
 				CCD9BF12233930DF002B9201 /* MainCategoriesInteractor.swift in Sources */,
 				CCD9BF1D233930DF002B9201 /* SubCategoryOffersInteractor.swift in Sources */,
+				CC1CE1F92339949100C2A6B9 /* LoginViewController.swift in Sources */,
+				CC1CE21E2339949100C2A6B9 /* UsersChatsInteractor.swift in Sources */,
+				CC1CE24E2339949100C2A6B9 /* OffersView.swift in Sources */,
+				CC1CE2622339949100C2A6B9 /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */,
 				CC57507723384DEA00BBBE63 /* SSRadioButtonModel.swift in Sources */,
 				CCD9BF0F233930DF002B9201 /* TextFieldIcon.swift in Sources */,
 				CCD9BF3A233930DF002B9201 /* CountryTableViewCell.swift in Sources */,
+				CC1CE2322339949100C2A6B9 /* CountryCellView.swift in Sources */,
+				CC1CE2122339949100C2A6B9 /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */,
+				CC1CE2592339949100C2A6B9 /* SellYourItemViewController.swift in Sources */,
+				CC1CE2282339949100C2A6B9 /* CompetitionView.swift in Sources */,
+				CC1CE2152339949100C2A6B9 /* SubCategoryOffersTableViewCell.swift in Sources */,
+				CC1CE22F2339949100C2A6B9 /* CountriesViewController.swift in Sources */,
 				CCD9BE412339111E002B9201 /* Question.swift in Sources */,
+				CC1CE2532339949100C2A6B9 /* SellYourItemFifthPresenter.swift in Sources */,
+				CC1CE26B2339949100C2A6B9 /* FavoriteOffersCellView.swift in Sources */,
 				CCD9BF43233930DF002B9201 /* OrderTableViewCell.swift in Sources */,
 				CCD9BF5F233930DF002B9201 /* SellYourItemPresenter.swift in Sources */,
 				CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */,
+				CC1CE21F2339949100C2A6B9 /* UsersChatsPresenter.swift in Sources */,
 				CCD9BF1B233930DF002B9201 /* SubCategoriesViewConteroller+PresenterDelegate.swift in Sources */,
+				CC1CE22A2339949100C2A6B9 /* QuestionsViewController.swift in Sources */,
 				CCD9BE572339175B002B9201 /* CompetionTableViewCell.swift in Sources */,
 				CCD9BF2C233930DF002B9201 /* ConversationTableViewCell.swift in Sources */,
+				CC1CE23F2339949100C2A6B9 /* MyProductView.swift in Sources */,
+				CC1CE1FB2339949100C2A6B9 /* LoginView.swift in Sources */,
+				CC1CE21C2339949100C2A6B9 /* ConversationCellView.swift in Sources */,
 				CCD9BF35233930DF002B9201 /* UsersChatsViewController.swift in Sources */,
 				CC8049DF233972BE00CAD0C3 /* FavoriteOffersView.swift in Sources */,
+				CC1CE26A2339949100C2A6B9 /* FavoriteOffersView.swift in Sources */,
+				CC1CE2662339949100C2A6B9 /* FavoriteOffersViewController+PresenterDelegate.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
 				CCD9BF48233930DF002B9201 /* MyProductCellView.swift in Sources */,
 				CCD9BF69233930DF002B9201 /* SellYourItemSecondView.swift in Sources */,
+				CC1CE23B2339949100C2A6B9 /* MyProductViewController.swift in Sources */,
 				CC0C7B9B23395CA50086D21F /* FavoriteOffersInteractor.swift in Sources */,
 				CCD9BE3A2339111E002B9201 /* Appartment.swift in Sources */,
 				CCD9BF1A233930DF002B9201 /* SubCategoriesView.swift in Sources */,
+				CC1CE1F62339949100C2A6B9 /* LoginViewController+PresenterDelegate.swift in Sources */,
+				CC1CE2542339949100C2A6B9 /* SellYourItemFifthView.swift in Sources */,
 				CCD9BF09233930DF002B9201 /* RegistrationPresenter.swift in Sources */,
+				CC1CE20D2339949100C2A6B9 /* SubCategoriesViewConteroller+PresenterDelegate.swift in Sources */,
 				CCD9BF06233930DF002B9201 /* LoginViewController.swift in Sources */,
+				CC1CE2452339949100C2A6B9 /* OffersInteractor.swift in Sources */,
+				CC1CE21B2339949100C2A6B9 /* ConversationView.swift in Sources */,
 				CCD9BF67233930DF002B9201 /* SellYourItemInteractor.swift in Sources */,
 				CCD9BE562339175B002B9201 /* CompetionCellView.swift in Sources */,
+				CC1CE25F2339949100C2A6B9 /* SellYourItemSecondPresenter.swift in Sources */,
 				CC0C7B9723395A300086D21F /* FavoriteOffersViewController.swift in Sources */,
 				CCD9BF6C233930DF002B9201 /* SellYourItemThirdPresenter.swift in Sources */,
 				CCD9BF59233930DF002B9201 /* SellYourItemEndView.swift in Sources */,
 				CCD9BF58233930DF002B9201 /* SellYourItemEndPresenter.swift in Sources */,
 				CCD9BF4B233930DF002B9201 /* OffersCell.swift in Sources */,
+				CC1CE2372339949100C2A6B9 /* ContainerVC.swift in Sources */,
+				CC1CE20E2339949100C2A6B9 /* SubCategoriesViewController.swift in Sources */,
+				CC1CE1FD2339949100C2A6B9 /* RegistrationView.swift in Sources */,
+				CC1CE2232339949100C2A6B9 /* UsersChatsCellView.swift in Sources */,
 				CCD9BF63233930DF002B9201 /* SellYourItemFourthPresenter.swift in Sources */,
 				CCD9BF52233930DF002B9201 /* OffersCellView.swift in Sources */,
 				CCD9BF38233930DF002B9201 /* CountryView.swift in Sources */,
 				CCD9BF60233930DF002B9201 /* SellYourItemView.swift in Sources */,
 				CCD9BF17233930DF002B9201 /* MainCategoriesView.swift in Sources */,
 				CCD9BF45233930DF002B9201 /* MyProductPresenter.swift in Sources */,
+				CC1CE23C2339949100C2A6B9 /* OrderTableViewCell.swift in Sources */,
+				CC1CE24F2339949100C2A6B9 /* OffersViewController+CellSpaceDelegate.swift in Sources */,
+				CC1CE2352339949100C2A6B9 /* LanguagesViewController.swift in Sources */,
+				CC1CE22B2339949100C2A6B9 /* CompetionCellView.swift in Sources */,
+				CC1CE2332339949100C2A6B9 /* CountryTableViewCell.swift in Sources */,
 				CC8049ED2339777D00CAD0C3 /* FavoriteOffersTableViewCell.swift in Sources */,
 				CCD9BE422339111E002B9201 /* User.swift in Sources */,
+				CC1CE2272339949100C2A6B9 /* CompetitionPresenter.swift in Sources */,
+				CC1CE2172339949100C2A6B9 /* ConversationViewController+PresenterDelegate.swift in Sources */,
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,
+				CC1CE2562339949100C2A6B9 /* SellYourItemPresenter.swift in Sources */,
+				CC1CE1F52339949100C2A6B9 /* UserInteractor.swift in Sources */,
 				CCD9BF57233930DF002B9201 /* OffersViewController+CellSpaceDelegate.swift in Sources */,
 				CCD9BF28233930DF002B9201 /* ConsersationInteractor.swift in Sources */,
 				CCD9BF34233930DF002B9201 /* UsersChatsViewController+PresetnerDelegate.swift in Sources */,
 				CCD9BF0E233930DF002B9201 /* RegistrationViewController+TextFieldDelegate.swift in Sources */,
+				CC1CE2582339949100C2A6B9 /* SellYourItemViewController+PickerDelegate.swift in Sources */,
+				CC1CE22E2339949100C2A6B9 /* UserCompetitionViewController.swift in Sources */,
 				CCD9BF0C233930DF002B9201 /* RegisterViewController.swift in Sources */,
 				CCD9BF10233930DF002B9201 /* MainCateoriesCollectionViewCell.swift in Sources */,
 				CCCD733D23315B97005823D6 /* FavImage.swift in Sources */,
 				CCD9BF6B233930DF002B9201 /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */,
+				CC1CE1FE2339949100C2A6B9 /* RegisterViewController.swift in Sources */,
+				CC1CE24B2339949100C2A6B9 /* OffersDetailesView.swift in Sources */,
 				CCD9BF4D233930DF002B9201 /* OffersInteractor.swift in Sources */,
 				CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */,
+				CC1CE2672339949100C2A6B9 /* FavoriteOffersViewController.swift in Sources */,
 				CCD9BF31233930DF002B9201 /* UserChatsTableViewCell.swift in Sources */,
 				CCD9BF46233930DF002B9201 /* MyProductView.swift in Sources */,
+				CC1CE2382339949100C2A6B9 /* LeftSidePanelVC.swift in Sources */,
+				CC1CE2182339949100C2A6B9 /* ConverstionViewController.swift in Sources */,
 				CCD9BF55233930DF002B9201 /* OffersVC+SearchDelegate.swift in Sources */,
 				CCD9BF08233930DF002B9201 /* LoginView.swift in Sources */,
 				CCD9BF37233930DF002B9201 /* CountryPresenter.swift in Sources */,
+				CC1CE2192339949100C2A6B9 /* ConsersationInteractor.swift in Sources */,
 				CCD9BE3F2339111E002B9201 /* Offer.swift in Sources */,
 				CCD9BF23233930DF002B9201 /* SubCategoryOffersTableViewCell.swift in Sources */,
 				CCD9BF51233930DF002B9201 /* OfferDetailesPresenter.swift in Sources */,
 				CCD9BE3E2339111E002B9201 /* Country.swift in Sources */,
+				CC1CE2262339949100C2A6B9 /* CompetitionInteractor.swift in Sources */,
 				CCD9BE552339175B002B9201 /* QuestionsViewController.swift in Sources */,
 				CCD9BF56233930DF002B9201 /* OffersView.swift in Sources */,
+				CC1CE24C2339949100C2A6B9 /* OffersPresenter.swift in Sources */,
+				CC1CE2392339949100C2A6B9 /* MyProductInteractor.swift in Sources */,
+				CC1CE24D2339949100C2A6B9 /* OffersVC+SearchDelegate.swift in Sources */,
+				CC1CE2072339949100C2A6B9 /* MainCategoriesPresenter.swift in Sources */,
 				CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */,
 				CCD9BF3D233930DF002B9201 /* CenterVCDelegate.swift in Sources */,
 				CCD9BF61233930DF002B9201 /* SellYourItemViewController+PickerDelegate.swift in Sources */,
@@ -1516,6 +2506,12 @@
 				CCD9BE3B2339111E002B9201 /* Category.swift in Sources */,
 				CCD9BF64233930DF002B9201 /* SellYourItemFourthView.swift in Sources */,
 				CCD9BF54233930DF002B9201 /* OffersPresenter.swift in Sources */,
+				CC1CE1FF2339949100C2A6B9 /* RegistrationViewController+PresenterDelegate.swift in Sources */,
+				CC1CE25C2339949100C2A6B9 /* SellYourItemFourthViewController.swift in Sources */,
+				CC1CE2092339949100C2A6B9 /* MainCategoriesView.swift in Sources */,
+				CC1CE2632339949100C2A6B9 /* SellYourItemThirdPresenter.swift in Sources */,
+				CC1CE25A2339949100C2A6B9 /* SellYourItemFourthPresenter.swift in Sources */,
+				CC1CE20B2339949100C2A6B9 /* SubCategoriesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
