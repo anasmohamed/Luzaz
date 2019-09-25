@@ -21,6 +21,9 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oQb-3h-ZHI">
                         <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="108" id="GaE-U0-iEm"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3M-2K-Lfj">
                         <rect key="frame" x="116" y="8" width="42" height="21"/>
@@ -39,7 +42,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAF-Nf-ApQ">
-                        <rect key="frame" x="116" y="75" width="42" height="21"/>
+                        <rect key="frame" x="116" y="69" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -47,19 +50,18 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="m3M-2K-Lfj" firstAttribute="leading" secondItem="oQb-3h-ZHI" secondAttribute="trailing" constant="8" id="5cq-h1-6W4"/>
-                    <constraint firstItem="DAF-Nf-ApQ" firstAttribute="top" secondItem="VZk-Ty-sRU" secondAttribute="bottom" constant="9" id="AXX-VZ-haC"/>
                     <constraint firstItem="7b8-dQ-1yL" firstAttribute="leading" secondItem="oQb-3h-ZHI" secondAttribute="trailing" constant="8" id="DTI-wr-rCU"/>
+                    <constraint firstItem="DAF-Nf-ApQ" firstAttribute="top" secondItem="VZk-Ty-sRU" secondAttribute="bottom" constant="3" id="FlH-9v-ODb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="VZk-Ty-sRU" secondAttribute="trailing" constant="6" id="Idl-jN-uFh"/>
                     <constraint firstItem="DAF-Nf-ApQ" firstAttribute="leading" secondItem="VZk-Ty-sRU" secondAttribute="leading" id="JAv-tn-zET"/>
                     <constraint firstAttribute="topMargin" secondItem="m3M-2K-Lfj" secondAttribute="top" id="MBU-xe-9LF"/>
-                    <constraint firstItem="DAF-Nf-ApQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="116" id="Qcf-YT-rxf"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="DAF-Nf-ApQ" secondAttribute="bottom" constant="3" id="UDE-eg-NYO"/>
                     <constraint firstItem="oQb-3h-ZHI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iOI-1Y-osl"/>
                     <constraint firstItem="DAF-Nf-ApQ" firstAttribute="leading" secondItem="oQb-3h-ZHI" secondAttribute="trailing" constant="8" id="j1l-yh-7tF"/>
                     <constraint firstItem="7b8-dQ-1yL" firstAttribute="top" secondItem="m3M-2K-Lfj" secondAttribute="bottom" constant="6" id="mXi-5D-qlm"/>
                     <constraint firstItem="VZk-Ty-sRU" firstAttribute="top" secondItem="7b8-dQ-1yL" secondAttribute="bottom" constant="8" symbolic="YES" id="qwG-rF-hgV"/>
+                    <constraint firstItem="DAF-Nf-ApQ" firstAttribute="top" secondItem="VZk-Ty-sRU" secondAttribute="top" constant="5" id="r5j-A1-0IU"/>
+                    <constraint firstItem="VZk-Ty-sRU" firstAttribute="leading" secondItem="oQb-3h-ZHI" secondAttribute="trailing" constant="8" id="rJ9-Hh-zE9"/>
                     <constraint firstItem="oQb-3h-ZHI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vz8-vC-OUs"/>
-                    <constraint firstItem="DAF-Nf-ApQ" firstAttribute="top" secondItem="VZk-Ty-sRU" secondAttribute="bottom" constant="9" id="wSu-Rr-Sy6"/>
                     <constraint firstAttribute="bottom" secondItem="oQb-3h-ZHI" secondAttribute="bottom" id="xAu-3V-9Ls"/>
                 </constraints>
             </tableViewCellContentView>

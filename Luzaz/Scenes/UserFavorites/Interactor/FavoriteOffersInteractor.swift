@@ -53,7 +53,7 @@ class FavoriteOffersInteractor
                 let offers = json["data"].arrayValue
                 for offer in offers
                 {
-                    let data = Offer(withJSON: offer)
+                    let data = Offer(withJSON: offer["details"])
                     offersList.append(data)
                 }
                 completionHandler(offersList, nil)
