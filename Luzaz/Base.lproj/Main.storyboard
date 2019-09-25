@@ -861,7 +861,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="IXY-42-cgh"/>
                                                     <constraint firstAttribute="height" constant="38" id="ibm-wU-pSx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="91E754E0-10F7-451B-A93D-0777787B5773"/>
+                                                <state key="normal" title="Button" image="305EC2E5-005C-47CA-8C40-370332ECC32C"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -2447,6 +2447,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countryLbl" destination="4Mo-FT-Bct" id="Vz3-7M-Yxo"/>
                         <outlet property="countyImageView" destination="MAC-K5-87g" id="NZv-Eu-51Q"/>
                         <outlet property="emailLbl" destination="3i0-BI-jox" id="ts4-6B-Zg9"/>
                         <outlet property="phoneLbl" destination="Re6-r7-Rt1" id="UMG-AH-ZUX"/>
@@ -2460,7 +2461,7 @@
         <!--Change Password View Controller-->
         <scene sceneID="AhV-B8-18A">
             <objects>
-                <viewController id="gXq-Fe-ZYv" customClass="ChangePasswordViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordVC" id="gXq-Fe-ZYv" customClass="ChangePasswordViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZeU-mc-w9a"/>
                         <viewControllerLayoutGuide type="bottom" id="YP0-LG-den"/>
@@ -2469,6 +2470,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ssy-Dz-hIq">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9t-RG-tT0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                 <subviews>
@@ -2537,7 +2541,9 @@
                             <constraint firstItem="K9t-RG-tT0" firstAttribute="top" secondItem="g6n-3J-dbl" secondAttribute="top" id="K2l-7A-VzB"/>
                             <constraint firstAttribute="trailing" secondItem="K9t-RG-tT0" secondAttribute="trailing" id="Lfh-TF-i4z"/>
                             <constraint firstItem="GM9-GB-pzR" firstAttribute="centerX" secondItem="g6n-3J-dbl" secondAttribute="centerX" id="SiN-gx-C9D"/>
+                            <constraint firstItem="Ssy-Dz-hIq" firstAttribute="centerY" secondItem="g6n-3J-dbl" secondAttribute="centerY" id="Y6R-cj-MfX"/>
                             <constraint firstItem="gIS-YI-xpW" firstAttribute="top" secondItem="g6n-3J-dbl" secondAttribute="top" constant="176" id="Zyx-Hm-dwG"/>
+                            <constraint firstItem="Ssy-Dz-hIq" firstAttribute="centerX" secondItem="g6n-3J-dbl" secondAttribute="centerX" id="gJo-jH-Td8"/>
                             <constraint firstItem="gIS-YI-xpW" firstAttribute="leading" secondItem="g6n-3J-dbl" secondAttribute="leading" constant="10" id="oxY-Rc-Zln"/>
                             <constraint firstItem="GM9-GB-pzR" firstAttribute="top" secondItem="JnZ-o1-sZe" secondAttribute="bottom" constant="37" id="sQ2-mp-UIs"/>
                             <constraint firstAttribute="trailing" secondItem="gIS-YI-xpW" secondAttribute="trailing" constant="10" id="wnu-97-Dc4"/>
@@ -2546,6 +2552,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="gIS-YI-xpW" id="JEN-WU-7kD"/>
                         <outlet property="rePasswordTextField" destination="JnZ-o1-sZe" id="Bb7-DP-WAP"/>
+                        <outlet property="spinner" destination="Ssy-Dz-hIq" id="voy-fm-zlb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZg-CE-JSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3746,7 +3753,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="91E754E0-10F7-451B-A93D-0777787B5773" width="128" height="128">
+        <image name="305EC2E5-005C-47CA-8C40-370332ECC32C" width="128" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

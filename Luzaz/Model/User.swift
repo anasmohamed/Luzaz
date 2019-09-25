@@ -37,12 +37,13 @@ class User :NSObject,NSCoding{
         self.phoneNumber = data[NetworkingConstants.phone].stringValue
     }
     
-    init(userId: String?, fullName: String?, email: String?, password: String?,token : String) {
+    init(userId: String?, fullName: String?, email: String?, password: String?,token : String,phone: String) {
         self.userId = userId
         self.fullName = fullName
         self.email = email
         self.password = password
         self.token = token
+        self.phoneNumber = phone
     }
     required convenience init(coder aDecoder: NSCoder) {
         let userId = aDecoder.decodeObject(forKey: "userId") as! String?
@@ -51,7 +52,10 @@ class User :NSObject,NSCoding{
         let email = aDecoder.decodeObject(forKey: "email") as! String?
         let password = aDecoder.decodeObject(forKey: "password") as! String?
         let token = aDecoder.decodeObject(forKey: "token") as! String?
-        self.init(userId: userId, fullName: fullName, email: email, password: password,token: token!)
+        let phone = aDecoder.decodeObject(forKey: "phone") as! String?
+
+            self.init(userId: userId, fullName: fullName, email: email, password: password,token: token!,phone: phone!)
+        
     }
     
     func encode(with aCoder: NSCoder) {
@@ -60,6 +64,7 @@ class User :NSObject,NSCoding{
         aCoder.encode(email, forKey: "email")
         aCoder.encode(password, forKey: "password")
         aCoder.encode(token,forKey:"token")
+        aCoder.encode(token,forKey:"phone")
     }
     
     

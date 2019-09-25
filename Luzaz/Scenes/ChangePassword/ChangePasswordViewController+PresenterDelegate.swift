@@ -20,6 +20,8 @@ extension ChangePasswordViewController : ChangePasswordView
     
     func changePasswordSuccess(message:String) {
         showError(error:message)
+//        dismiss(animated: true, completion: nil)
+
     }
     
     

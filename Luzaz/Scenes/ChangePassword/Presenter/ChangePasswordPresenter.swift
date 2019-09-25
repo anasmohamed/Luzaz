@@ -30,7 +30,7 @@ class ChangePasswordPresenter {
             } else {
                 guard let message = message else { return }
                 self.message = message
-                self.view?.changePasswordSuccess(message)
+                self.view?.changePasswordSuccess(message: message)
             }
         }
         

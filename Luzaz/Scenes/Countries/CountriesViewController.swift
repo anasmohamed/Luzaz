@@ -10,7 +10,8 @@ import UIKit
 
 class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CountryView {
     private var presenter: CountryPresenter!
-    
+    let prefs = UserDefaults.standard
+
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
