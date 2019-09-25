@@ -43,11 +43,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swl-Gf-ZSp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-y2-gdv">
-                                        <rect key="frame" x="10" y="97" width="151" height="452"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-y2-gdv">
+                                        <rect key="frame" x="10" y="94" width="151" height="458"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-CA-Lvh">
-                                                <rect key="frame" x="0.0" y="0.0" width="151" height="381"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="151" height="387"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WX-Cy-81v">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="40"/>
@@ -57,48 +57,120 @@
                                                             <action selector="regiterLoginBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ebm-xs-RoB"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twD-eN-N97">
-                                                        <rect key="frame" x="0.0" y="50" width="151" height="34"/>
-                                                        <inset key="imageEdgeInsets" minX="-20" minY="9" maxX="37" maxY="18"/>
-                                                        <state key="normal" title="Home"/>
-                                                        <connections>
-                                                            <action selector="homeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ov-FV-1LP"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9v-Gc-MTc">
-                                                        <rect key="frame" x="0.0" y="94" width="151" height="40"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                                        <state key="normal" title="Catagories"/>
-                                                        <connections>
-                                                            <action selector="categoriesBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SDX-cy-T5b"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-Fb-KQ3">
-                                                        <rect key="frame" x="0.0" y="144" width="151" height="40"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                                        <state key="normal" title="My Products"/>
-                                                        <connections>
-                                                            <action selector="myProductWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JID-1h-uib"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-vc-GMc">
-                                                        <rect key="frame" x="0.0" y="194" width="151" height="40"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                                        <state key="normal" title="Chats"/>
-                                                        <connections>
-                                                            <action selector="chatBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QfR-Qx-i4w"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXo-EP-bF8">
-                                                        <rect key="frame" x="0.0" y="244" width="151" height="40"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                                        <state key="normal" title="Favorites"/>
-                                                        <connections>
-                                                            <action selector="favoriteBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9R6-lb-afn"/>
-                                                        </connections>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhL-e6-bp5">
+                                                        <rect key="frame" x="0.0" y="50" width="151" height="40"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home Icon" translatesAutoresizingMaskIntoConstraints="NO" id="TcD-ls-65o">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="cLJ-B2-bWQ"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twD-eN-N97">
+                                                                <rect key="frame" x="30" y="0.0" width="121" height="40"/>
+                                                                <inset key="imageEdgeInsets" minX="-20" minY="9" maxX="37" maxY="18"/>
+                                                                <state key="normal" title="Home">
+                                                                    <color key="titleColor" red="0.58824852750000001" green="0.054192789249999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="homeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ov-FV-1LP"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="JlS-DE-dqf"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maw-LQ-Pjx">
+                                                        <rect key="frame" x="0.0" y="100" width="151" height="40"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="665-cY-eHG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="Dh6-d0-um9"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9v-Gc-MTc">
+                                                                <rect key="frame" x="30" y="0.0" width="121" height="40"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                                <state key="normal" title="Catagories"/>
+                                                                <connections>
+                                                                    <action selector="categoriesBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SDX-cy-T5b"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="cYY-j5-m5D"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EF-uH-S7O">
+                                                        <rect key="frame" x="0.0" y="150" width="151" height="40"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="737-e5-Zc1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="PMT-nl-DDJ"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-Fb-KQ3">
+                                                                <rect key="frame" x="30" y="0.0" width="121" height="40"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                                <state key="normal" title="My Products"/>
+                                                                <connections>
+                                                                    <action selector="myProductWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JID-1h-uib"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="CQo-1N-Gat"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXc-1Y-gUe">
+                                                        <rect key="frame" x="0.0" y="200" width="151" height="40"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-aX-TJr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="8EX-Pb-Ygk"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-vc-GMc">
+                                                                <rect key="frame" x="30" y="0.0" width="121" height="40"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                                <state key="normal" title="Chats"/>
+                                                                <connections>
+                                                                    <action selector="chatBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QfR-Qx-i4w"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="a2O-Ud-NVd"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLI-gE-T7t">
+                                                        <rect key="frame" x="0.0" y="250" width="151" height="40"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ral-XQ-y6s">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="3NH-EG-Eay"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXo-EP-bF8">
+                                                                <rect key="frame" x="30" y="0.0" width="121" height="40"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                                <state key="normal" title="Favorites"/>
+                                                                <connections>
+                                                                    <action selector="favoriteBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9R6-lb-afn"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="MGY-Xl-P8g"/>
+                                                        </constraints>
+                                                    </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0T-EP-yWp">
-                                                        <rect key="frame" x="0.0" y="294" width="151" height="40"/>
+                                                        <rect key="frame" x="0.0" y="300" width="151" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <state key="normal" title="Sell Your Items"/>
                                                         <connections>
@@ -106,7 +178,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-X1-4Bn">
-                                                        <rect key="frame" x="0.0" y="344" width="151" height="37"/>
+                                                        <rect key="frame" x="0.0" y="350" width="151" height="37"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                         <state key="normal" title="Win With Us"/>
                                                         <connections>
@@ -116,7 +188,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OyH-Gj-R9d">
-                                                <rect key="frame" x="0.0" y="385" width="151" height="67"/>
+                                                <rect key="frame" x="0.0" y="391" width="151" height="67"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0R-vk-BaP">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="30"/>
@@ -861,7 +933,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="IXY-42-cgh"/>
                                                     <constraint firstAttribute="height" constant="38" id="ibm-wU-pSx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="AC4E4BA2-1AE9-4B99-8EE2-1F31002D1FF6"/>
+                                                <state key="normal" title="Button" image="3C0B48BE-364C-435B-B0AA-0C03D22EB6EF"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -3753,7 +3825,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AC4E4BA2-1AE9-4B99-8EE2-1F31002D1FF6" width="128" height="128">
+        <image name="3C0B48BE-364C-435B-B0AA-0C03D22EB6EF" width="128" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -4921,6 +4993,7 @@ AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAABDqk
         <image name="Details Icon active color" width="66" height="66"/>
         <image name="Details Icon on footer" width="66" height="66"/>
         <image name="Finish Icon" width="66" height="61"/>
+        <image name="Home Icon" width="66" height="60"/>
         <image name="Logo" width="445" height="106"/>
         <image name="Photo Icon" width="86" height="64"/>
         <image name="Photo Icon on Footer" width="86" height="64"/>
