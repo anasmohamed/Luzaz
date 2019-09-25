@@ -19,6 +19,7 @@ class LeftSidePanelVC: UIViewController {
     @IBOutlet weak var homeBtn: UIButton!
     let appDelegate = AppDelegate.getAppDelegate()
 
+    @IBOutlet weak var countryImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setIconForBtn(button: homeBtn, icon:"home")
