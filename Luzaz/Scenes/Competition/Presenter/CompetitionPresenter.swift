@@ -62,13 +62,23 @@ class CompetitionPresenter {
         return competitonId
     }
     
-    func getQuestionsId() -> String {
-        var questionsId : String?
-//        for question in qustions
-//        {
-//          questionsId = question.questionId! + ","
-//        }
-        return questionsId!
+//    func getQuestionsId() -> String {
+//        var questionsId : String?
+////        for question in qustions
+////        {
+////          questionsId = question.questionId! + ","
+////        }
+//        return questionsId!
+//    }
+    func getQuestions(index : Int) -> String {
+        return qustions[index].question!
+    }
+    func getAnswer(index:Int) -> [Answer]
+    {
+        return qustions[index].answersList
+    }
+    func getQuestionId(index : Int) ->String{
+        return qustions[index].questionId!
     }
     func configure(cell: CompetionCellView, for index: Int) {
         let question = qustions[index]

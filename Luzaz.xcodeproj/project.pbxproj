@@ -155,6 +155,7 @@
 		CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960822F4F61C00E9F14D /* TetViewController.swift */; };
 		CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */; };
 		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
+		CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2DC9233BD4CC00F6F82A /* CompetitionViewController.swift */; };
 		CCCD733D23315B97005823D6 /* FavImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733C23315B97005823D6 /* FavImage.swift */; };
 		CCD9BE392339111E002B9201 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9BE2F2339111E002B9201 /* Answer.swift */; };
 		CCD9BE3A2339111E002B9201 /* Appartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9BE302339111E002B9201 /* Appartment.swift */; };
@@ -349,6 +350,7 @@
 		CC86960822F4F61C00E9F14D /* TetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetViewController.swift; sourceTree = "<group>"; };
 		CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboardDelagate.swift"; sourceTree = "<group>"; };
 		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
+		CCAB2DC9233BD4CC00F6F82A /* CompetitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		CCCD733C23315B97005823D6 /* FavImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavImage.swift; sourceTree = "<group>"; };
 		CCD9BE2F2339111E002B9201 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		CCD9BE302339111E002B9201 /* Appartment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appartment.swift; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 				CC7268F2233AC612006B61DD /* QuestionsViewController.swift */,
 				CC7268F3233AC612006B61DD /* TableViewCell */,
 				CC7268F7233AC613006B61DD /* UserCompetitionViewController.swift */,
+				CCAB2DC9233BD4CC00F6F82A /* CompetitionViewController.swift */,
 			);
 			path = Competition;
 			sourceTree = "<group>";
@@ -1543,6 +1546,7 @@
 				CC72697F233AC613006B61DD /* ConversationCellView.swift in Sources */,
 				CC7269B0233AC614006B61DD /* OffersVC+SearchDelegate.swift in Sources */,
 				CC7269C1233AC614006B61DD /* SellYourItemInteractor.swift in Sources */,
+				CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */,
 				CC72698A233AC613006B61DD /* CompetitionPresenter.swift in Sources */,
 				CC7269C8233AC614006B61DD /* SellYourItemThirdViewController.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,

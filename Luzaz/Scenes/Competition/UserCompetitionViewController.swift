@@ -19,22 +19,22 @@ class UserCompetitionViewController: UIViewController {
     
     
     @IBAction func nextBtnWasPressed(_ sender: Any) {
-        let questionVC = storyboard?.instantiateViewController(withIdentifier: "QuestionVC") as! QuestionsViewController
-        if  !(emailTextField.text?.isEmpty)! ||
-            !(firstNameTextField.text?.isEmpty)! ||
-            !(phoneTextField.text?.isEmpty)! ||
-            !(lastNameTextField.text?.isEmpty)!
-        {
-            questionVC.userPhone = phoneTextField.text
-            questionVC.userEmail = emailTextField.text
-            questionVC.userFristName = firstNameTextField.text
-            questionVC.userLastName = lastNameTextField.text
-            self.present(questionVC, animated: true, completion: nil)
-        }else
-        {
-            
-        }
-        
+//        let questionVC = storyboard?.instantiateViewController(withIdentifier: "QuestionVC") as! QuestionsViewController
+//        if  !(emailTextField.text?.isEmpty)! ||
+//            !(firstNameTextField.text?.isEmpty)! ||
+//            !(phoneTextField.text?.isEmpty)! ||
+//            !(lastNameTextField.text?.isEmpty)!
+//        {
+//            questionVC.userPhone = phoneTextField.text
+//            questionVC.userEmail = emailTextField.text
+//            questionVC.userFristName = firstNameTextField.text
+//            questionVC.userLastName = lastNameTextField.text
+//            self.present(questionVC, animated: true, completion: nil)
+//        }else
+//        {
+//            
+//        }
+//        
        
     }
     
