@@ -28,6 +28,7 @@ enum LuzazRouter: URLRequestConvertible {
     case getUserOrders(token : String)
     case logoutUser(user : String)
     case getUserFavorites(token : String)
+    case setPasswordByToken(token:String,password : String,rePassword:String)
     var path: String {
         
         switch self {
@@ -63,13 +64,15 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.getUserFavorites
         case .logoutUser:
             return NetworkingConstants.logoutUser
+        case .setPasswordByToken:
+            return NetworkingConstants.setPasswordByToken
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken:
             return .get
         case .register,.addToConversation:
             return .post
@@ -162,7 +165,10 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.token] = token
         case let  .logoutUser(user):
             params[NetworkingConstants.logoutUserParameter] = user
-
+        case let .setPasswordByToken(token, password, rePassword):
+            params[NetworkingConstants.changePasswordToken] = token
+            params[NetworkingConstants.changePasswordNewPassword] = password
+            params[NetworkingConstants.changePasswordConPassword] = rePassword
         default:
             print("Empty Paramter")
             
@@ -180,7 +186,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             

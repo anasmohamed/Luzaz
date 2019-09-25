@@ -21,6 +21,7 @@ class QuestionsViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        tableView.allowsSelection = false;
 
         presenter = CompetitionPresenter(view: self)
         radioButtonController = SSRadioButtonsController()

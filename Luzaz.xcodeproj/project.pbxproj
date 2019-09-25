@@ -168,6 +168,11 @@
 		CCD9BE422339111E002B9201 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9BE382339111E002B9201 /* User.swift */; };
 		CCD9BE5D233930C8002B9201 /* LuzazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9BE5B233930C8002B9201 /* LuzazRouter.swift */; };
 		CCD9BE5E233930C8002B9201 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9BE5C233930C8002B9201 /* NetworkConstants.swift */; };
+		CCE49926233B5B430030959D /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49925233B5B430030959D /* ChangePasswordViewController.swift */; };
+		CCE49928233B5B6A0030959D /* ChangePasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49927233B5B6A0030959D /* ChangePasswordInteractor.swift */; };
+		CCE4992A233B5CE30030959D /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49929233B5CE30030959D /* ChangePasswordPresenter.swift */; };
+		CCE4992C233B5D040030959D /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4992B233B5D040030959D /* ChangePasswordView.swift */; };
+		CCE4992E233B5F0B0030959D /* ChangePasswordViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4992D233B5F0A0030959D /* ChangePasswordViewController+PresenterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -357,6 +362,11 @@
 		CCD9BE382339111E002B9201 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CCD9BE5B233930C8002B9201 /* LuzazRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuzazRouter.swift; sourceTree = "<group>"; };
 		CCD9BE5C233930C8002B9201 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		CCE49925233B5B430030959D /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		CCE49927233B5B6A0030959D /* ChangePasswordInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordInteractor.swift; sourceTree = "<group>"; };
+		CCE49929233B5CE30030959D /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
+		CCE4992B233B5D040030959D /* ChangePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		CCE4992D233B5F0A0030959D /* ChangePasswordViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34F3A2E495180620BBEA816 /* Pods-LuzazTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.release.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luzaz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -434,6 +444,7 @@
 		CC72689F233AC612006B61DD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CCE49922233B5B1F0030959D /* ChangePassword */,
 				CC7268A0233AC612006B61DD /* Authentication */,
 				CC7268B0233AC612006B61DD /* Categories */,
 				CC7268D3233AC612006B61DD /* Chat */,
@@ -1178,6 +1189,34 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CCE49922233B5B1F0030959D /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				CCE49923233B5B1F0030959D /* Interactor */,
+				CCE49924233B5B1F0030959D /* Presenter */,
+				CCE49925233B5B430030959D /* ChangePasswordViewController.swift */,
+				CCE4992D233B5F0A0030959D /* ChangePasswordViewController+PresenterDelegate.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		CCE49923233B5B1F0030959D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CCE49927233B5B6A0030959D /* ChangePasswordInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CCE49924233B5B1F0030959D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCE49929233B5CE30030959D /* ChangePasswordPresenter.swift */,
+				CCE4992B233B5D040030959D /* ChangePasswordView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1415,11 +1454,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC72696B233AC613006B61DD /* MainCategoriesCellView.swift in Sources */,
+				CCE4992A233B5CE30030959D /* ChangePasswordPresenter.swift in Sources */,
 				CC7269BE233AC614006B61DD /* SellYourItemFourthView.swift in Sources */,
 				CC726965233AC613006B61DD /* MainCateoriesCollectionViewCell.swift in Sources */,
 				CC726992233AC613006B61DD /* CountriesViewController.swift in Sources */,
 				CC814900233ACA3800F71A2B /* ProfileView.swift in Sources */,
 				CC726986233AC613006B61DD /* UsersChatsCellView.swift in Sources */,
+				CCE4992C233B5D040030959D /* ChangePasswordView.swift in Sources */,
 				CC7269C5233AC614006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */,
 				CC726984233AC613006B61DD /* UserChatsTableViewCell.swift in Sources */,
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
@@ -1440,9 +1481,11 @@
 				CCD9BE3D2339111E002B9201 /* Conversation.swift in Sources */,
 				CC726973233AC613006B61DD /* SubCategoryOffersPresenter.swift in Sources */,
 				CC7269AA233AC614006B61DD /* OffersViewController+PresenterDelagate.swift in Sources */,
+				CCE4992E233B5F0B0030959D /* ChangePasswordViewController+PresenterDelegate.swift in Sources */,
 				CC7269AC233AC614006B61DD /* OfferDetailesPresenter.swift in Sources */,
 				CC7269CA233AC614006B61DD /* FavoriteOffersViewController.swift in Sources */,
 				CC7269B6233AC614006B61DD /* SellYourItemFifthPresenter.swift in Sources */,
+				CCE49928233B5B6A0030959D /* ChangePasswordInteractor.swift in Sources */,
 				CC72699A233AC613006B61DD /* ContainerVC.swift in Sources */,
 				CCD9BE5E233930C8002B9201 /* NetworkConstants.swift in Sources */,
 				CC726988233AC613006B61DD /* UsersChatsViewController.swift in Sources */,
@@ -1524,6 +1567,7 @@
 				CCD9BE422339111E002B9201 /* User.swift in Sources */,
 				CC726976233AC613006B61DD /* SubCategoryOffersViewController.swift in Sources */,
 				CC86961022F4F61C00E9F14D /* HomeViewController.swift in Sources */,
+				CCE49926233B5B430030959D /* ChangePasswordViewController.swift in Sources */,
 				CC726975233AC613006B61DD /* SubCategoryOffersViewController+PresenterDelegate.swift in Sources */,
 				CC72696A233AC613006B61DD /* MainCategoriesPresenter.swift in Sources */,
 				CC726999233AC613006B61DD /* CenterVCDelegate.swift in Sources */,

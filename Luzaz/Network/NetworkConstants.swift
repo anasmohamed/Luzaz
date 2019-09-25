@@ -42,6 +42,8 @@ struct NetworkingConstants {
     static let deleteUserFavorite = "deleteUserFavorite"
     static let getUserFavorites = "getUserFavorites"
     static let logoutUser = "logoutUser"
+    static let setPasswordByToken = "setPasswordByToken"
+
 
 
 
@@ -150,6 +152,16 @@ struct NetworkingConstants {
 
     //LOGOUT USER
     static let logoutUserParameter = "user"
+    
+    
+    //setPasswordByToken Parameter
+    static let changePasswordToken = "Token"
+    static let changePasswordNewPassword = "password"
+    static let changePasswordConPassword = "re_password"
+
+
+    
+    
     
     
 }
