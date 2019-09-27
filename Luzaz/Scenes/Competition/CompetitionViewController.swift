@@ -15,20 +15,25 @@ class CompetitionViewController: UIViewController, CompetitionView{
     @IBOutlet weak var quetionsNumber: UILabel!
     @IBOutlet weak var optionThreeBtn: UIButton!
     private var presenter: CompetitionPresenter!
-    var questionId : String?
+    var questionId : [String] = []
     var questionCounter: Int = 0
-    var answerId : String?
-    
+    var answerId : [String] = []
+    var userPhone : String?
+    var userEmail : String?
+    var userFristName : String?
+    var userLastName : String?
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter = CompetitionPresenter(view: self)
+        answerId = [String]()
+        questionId = [String]()
     }
     func displayFirstOption(firstOption: String)
     {
-        optionOneBtn.titleLabel?.text = firstOption
+        optionOneBtn.setTitle(firstOption, for: UIControlState.normal)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,11 +41,11 @@ class CompetitionViewController: UIViewController, CompetitionView{
     }
     func displaySecondOption(secondOption: String)
     {
-        optionTwoBtn.titleLabel?.text = secondOption
+        optionTwoBtn.setTitle(secondOption, for: UIControlState.normal)
     }
     func displayThreeOption(threeOption: String)
     {
-        optionThreeBtn.titleLabel?.text = threeOption
+        optionThreeBtn.setTitle(threeOption, for: UIControlState.normal)
     }
     
     func displayQuestion(question: String)
@@ -48,7 +53,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
         questionLbl.text = question
     }
     func updateQuestion(){
-        if questionCounter < presenter.getQuestionsCount()
+        if questionCounter < presenter.getQuestionsCount() - 1
         {
             displayQuestion(question: presenter.getQuestions(index: questionCounter))
             
@@ -56,23 +61,32 @@ class CompetitionViewController: UIViewController, CompetitionView{
             displaySecondOption(secondOption:presenter.getAnswer(index: questionCounter)[1].answer!)
             displayThreeOption(threeOption:presenter.getAnswer(index: questionCounter)[2].answer!)
             updateUI()
-            questionId = presenter.getQuestionId(index: questionCounter)
-            
-            print("\(questionId)")
+            questionId.append(presenter.getQuestionId(index: questionCounter))
+           // questionId.joined(separator: ",")
+        }else{
+            presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:"en",questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName: userFristName!,lastName: userLastName!,phone: userPhone!,email: userEmail!)
+
+
         }
         
     }
     @IBAction func answerBtnWasPressed(_ sender: UIButton) {
+        answerId.append(presenter.getAnswer(index: questionCounter)[sender.tag].answerId!)
+
         questionCounter += 1
+
         updateQuestion()
-        answerId = presenter.getAnswer(index: questionCounter)[sender.tag].answerId
-        print("\(answerId)")
     }
     func updateUI(){
         quetionsNumber.text = "\(questionCounter + 1)/\(presenter.getQuestionsCount())"
         
     }
     func getCompetitionSuccess() {
+        displayQuestion(question: presenter.getQuestions(index: questionCounter))
+        displayFirstOption(firstOption:presenter.getAnswer(index: questionCounter)[0].answer!)
+        displaySecondOption(secondOption:presenter.getAnswer(index: questionCounter)[1].answer!)
+     displayThreeOption(threeOption:presenter.getAnswer(index: questionCounter)[2].answer!)
+        updateUI()
     }
     
     func showIndicator() {
