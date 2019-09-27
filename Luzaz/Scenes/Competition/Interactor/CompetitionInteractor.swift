@@ -62,7 +62,7 @@ class CompetitionInteractor {
     }
     func addCompetitionEnrolment(id:String , lang: String, questions: String, answers: String, firstName: String, lastName: String, phone: String, email: String,
         completionHandler: @escaping (String?,String?, Error?) -> Void) {
-        Alamofire.request(LuzazRouter.addCompetitionEnrolment(id:id , lang: lang, questions: questions, answers:answers , firstName: firstName, lastName: lastName, phone: phone, email: email)).responseJSON {(response) in
+        Alamofire.request(LuzazRouter.addCompetitionEnrolment(id:id , lang: lang, questions: questions,answers:answers , firstName: firstName,lastName:lastName, phone: phone, email: email)).responseJSON {(response) in
             
             if let response = response.data {
                 print("Response Data: \(response)")
@@ -101,8 +101,8 @@ class CompetitionInteractor {
                 //                let competation = json
 //                let data = Competation(withJSON: competation)
 //                competationList.append(data)
-
-                completionHandler("","", nil)
+let description = json["description"].stringValue
+                completionHandler(description,"", nil)
             case .failure(let error):
                 completionHandler(nil,nil, error)
             }

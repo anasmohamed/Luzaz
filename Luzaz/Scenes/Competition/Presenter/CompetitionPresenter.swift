@@ -33,8 +33,7 @@ class CompetitionPresenter {
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-                print(code)
-                
+                self.view?.showError(error:percentage!)
             }
             
             

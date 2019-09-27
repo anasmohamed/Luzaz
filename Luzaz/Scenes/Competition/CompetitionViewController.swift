@@ -26,7 +26,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         presenter = CompetitionPresenter(view: self)
         answerId = [String]()
         questionId = [String]()
@@ -53,7 +53,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
         questionLbl.text = question
     }
     func updateQuestion(){
-        if questionCounter < presenter.getQuestionsCount() - 1
+        if questionCounter < presenter.getQuestionsCount()
         {
             displayQuestion(question: presenter.getQuestions(index: questionCounter))
             
@@ -64,7 +64,9 @@ class CompetitionViewController: UIViewController, CompetitionView{
             questionId.append(presenter.getQuestionId(index: questionCounter))
            // questionId.joined(separator: ",")
         }else{
-            presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:"en",questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName: userFristName!,lastName: userLastName!,phone: userPhone!,email: userEmail!)
+            presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:"en",questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName:
+                
+                "anas",lastName: "mohamed",phone: "0112233444",email: "anasmohamed@gmail.com")
 
 
         }

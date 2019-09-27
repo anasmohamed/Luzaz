@@ -29,6 +29,7 @@ enum LuzazRouter: URLRequestConvertible {
     case logoutUser(user : String)
     case getUserFavorites(token : String)
     case setPasswordByToken(token:String,password : String,rePassword:String)
+//    case addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String)
     var path: String {
         
         switch self {
@@ -148,7 +149,7 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.countryId] = countryId
             params[NetworkingConstants.userId] = userId
             
-        case let .addCompetitionEnrolment(id ,lang ,questions ,answers ,firstName  ,lastName,phone ,email):
+        case let .addCompetitionEnrolment(id ,lang ,questions ,answers ,firstName ,lastName,phone ,email):
             params[NetworkingConstants.competitionId] = id
             params[NetworkingConstants.competitionLang] = lang
             

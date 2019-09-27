@@ -47,6 +47,8 @@ class LeftSidePanelVC: UIViewController {
     }
   
     @IBAction func winWithUsBtnWasPressed(_ sender: Any) {
+        let competitionVC = storyboard?.instantiateViewController(withIdentifier: "") as! CountriesViewController
+        self.present(competitionVC, animated: true, completion: nil)
     }
     @IBAction func sellYourItemsWasPressed(_ sender: Any) {
         let countryVC = storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController

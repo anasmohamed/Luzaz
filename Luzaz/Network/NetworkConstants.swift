@@ -43,7 +43,7 @@ struct NetworkingConstants {
     static let getUserFavorites = "getUserFavorites"
     static let logoutUser = "logoutUser"
     static let setPasswordByToken = "setPasswordByToken"
-
+    static let addUserOffer = "addUserOffer"
 
 
 
@@ -161,8 +161,27 @@ struct NetworkingConstants {
 
 
     
-    
-    
-    
+    //addUserOffer Paramter
+    static let addUserOfferToken = "Token"
+    static let addUserOfferPrivacyPolicy = "privacy_policy"
+    static let addUserOfferIdGovernate = "id_governate"
+    static let addUserOfferIdCategory = "id_category"
+    static let addUserOfferIdSubCategory = "id_sub_category"
+    static let addUserOfferTitle = "title"
+    static let addUserOfferIdBrand = "id_brand"
+    static let addUserOfferOfferType = "offer_type"
+    static let addUserOfferDecription = "decription"
+    static let addUserOfferPrice = "price"
+    static let addUserOfferDiscount_prec = "discount_prec"
+    static let addUserOfferReseller_name = "reseller_name"
+    static let addUserOfferReseller_phone = "reseller_phone"
+    static let addUserOfferReseller_mail = "reseller_mail"
+    static let addUserOfferContact_type = "contact_type"
+    static let addUserOfferImage = "image"
+    static let addUserOfferAlbum = "album"
+    static let addUserOfferAttr = "attr"
+    static let addUserOfferAttrValues = "attr_values"
+    static let addUserOfferYoutubeLink = "youtube_link"
+
 }
 
