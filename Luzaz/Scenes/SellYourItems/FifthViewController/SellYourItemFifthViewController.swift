@@ -13,17 +13,42 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
 
     @IBOutlet weak var discountTextView: UITextField!
     var presenter : SellYourItemPresenter!
+    var offerImage : UIImage?
+    var city : String?
+    var category : String?
+    var subCategory : String?
+    var brand : String?
+    var condition : String?
+    var offerTitle: String?
+    var offerDescription: String?
+    var location : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
+        self.hideKeyboardWhenTappedAround()
+
     }
  
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if !(priceTextView.text?.isEmpty)! {
             presenter.setItemPrice(price: priceTextView.text!)
             presenter.setItemPriceDiscount(discount: discountTextView.text!)
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemEndVC")as! SellYourItemEndViewController
-            self.present(sellYourItemSecondVC,animated:true,completion: nil)
+            let sellYourItemEndVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemEndVC")as! SellYourItemEndViewController
+            sellYourItemEndVC.brand = brand
+            sellYourItemEndVC.category = category
+            sellYourItemEndVC.city = city
+         
+            sellYourItemEndVC.offerDescription = offerDescription
+            sellYourItemEndVC.offerImage = offerImage
+            sellYourItemEndVC.subCategory = subCategory
+            sellYourItemEndVC.price = priceTextView.text!
+            sellYourItemEndVC.discount = discountTextView.text!
+            sellYourItemEndVC.offerTitle = offerTitle
+//            sellYourItemEndVC.location = location
+            sellYourItemEndVC.condition = condition
+            sellYourItemEndVC.offerDescription = offerDescription
+            self.present(sellYourItemEndVC,animated:true,completion: nil)
         }else{
             showError(error: "You Should Enter Price")
         }

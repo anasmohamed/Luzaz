@@ -24,7 +24,7 @@ extension SellYourItemViewController : UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        presenter.setItemCity(cityIndex: row)
+        cityIndex = String(row)
         isCityEntered = true
     }
 }

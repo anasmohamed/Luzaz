@@ -15,10 +15,16 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     @IBOutlet weak var bathroomsNumberTextView: UITextField!
     @IBOutlet weak var bedroomsNumberTextView: UITextField!
     var presenter : SellYourItemPresenter!
-
+    var offerImage : UIImage?
+    var city : String?
+    var category : String?
+    var subCategory : String?
+    var brand : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
+        self.hideKeyboardWhenTappedAround()
+
     }
     
     

@@ -16,11 +16,15 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var presenter : SellYourItemPresenter!
     var list = ["Cairo","Giza","Alex"]
     var isCityEntered = false
+    var cityIndex : String?
+    var offerImage: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         cityPickerView.dataSource = self
         cityPickerView.delegate = self
         presenter = SellYourItemPresenter(view: self)
+        self.hideKeyboardWhenTappedAround()
+
     }
     
     
@@ -28,6 +32,8 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         if isCityEntered
         {
             let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
+            sellYourItemSecondVC.city = cityIndex
+            sellYourItemSecondVC.offerImage = offerImage
             self.present(sellYourItemSecondVC,animated:true,completion: nil)
             
         }else
@@ -76,6 +82,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
+            offerImage = image
             presenter.setOfferImage(image: image)
         }
         

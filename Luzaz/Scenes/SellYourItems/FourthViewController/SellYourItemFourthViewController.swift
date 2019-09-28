@@ -16,12 +16,20 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
     var conditionsList = ["New","Used"]
     var isConditionEnterd = false
     var presenter : SellYourItemPresenter!
-    
+    var offerImage : UIImage?
+    var city : String?
+    var category : String?
+    var subCategory : String?
+    var brand : String?
+    var offerCondition :String?
+    var offerTitle: String?
+    var offerLocation : String?
+    var offreDescription: String?
     override func viewDidLoad() {
         
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
-        
+       self.hideKeyboardWhenTappedAround()
     }
     
     
@@ -40,8 +48,19 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
         {
             presenter.setItemTitle(title: itemTitleTextView.text!)
             presenter.setItemDescription(descrition: itemDescritionTextField.text)
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFifthVC")as! SellYourItemFifthViewController
-            self.present(sellYourItemSecondVC,animated:true,completion: nil)
+            let sellYourItemFifthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFifthVC")as! SellYourItemFifthViewController
+            sellYourItemFifthVC.brand = brand
+            sellYourItemFifthVC.category = category
+            sellYourItemFifthVC.city = city
+            sellYourItemFifthVC.location = offerLocation
+            sellYourItemFifthVC.offerDescription = itemDescritionTextField.text
+            sellYourItemFifthVC.offerImage = offerImage
+            sellYourItemFifthVC.subCategory = subCategory
+            sellYourItemFifthVC.condition  = offerCondition
+            
+            sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
+            
+            self.present(sellYourItemFifthVC,animated:true,completion: nil)
             
         }else
         {

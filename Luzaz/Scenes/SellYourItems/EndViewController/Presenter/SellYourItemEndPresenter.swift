@@ -11,11 +11,10 @@ import UIKit
 class SellYourItemPresenter {
     private weak var view: SellYourItemView?
     private let sellYourItemInteractor: SellYourItemInteractor
-    private var user: User?
     private var sellItem : Offer?
+     
     init(view: SellYourItemView) {
         self.view = view
-        user = User()
         sellItem = Offer()
         sellYourItemInteractor = SellYourItemInteractor()
     }
@@ -90,8 +89,8 @@ class SellYourItemPresenter {
         return (sellItem?.brand)!
     }
     
-    func addUserOffer()
+    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage?])
     {
-        sellYourItemInteractor.addUserOffer(token:UserDefaults.standard.string(forKey: "token")! , privacy_policy: "1", id_governate: (sellItem?.city)!, id_category: (sellItem?.category)!, id_sub_category: (sellItem?.subCateogry)!, attr: "", attr_values: "", title: (sellItem?.title)!, id_brand: (sellItem?.brand)!, offer_type: (sellItem?.condition)!, decription: (sellItem?.description)!, price: (sellItem?.price)!, discount_prec: (sellItem?.discount_prec)!, youtube_link: "", reseller_name: (sellItem?.reseller_name)!, reseller_phone: (sellItem?.reseller_phone)!, reseller_mail: (sellItem?.reseller_mail)!, contact_type: "phone", image:(sellItem?.offerImage)! , album: [nil])
+        sellYourItemInteractor.addUserOffer(token:token , privacy_policy: privacy_policy, id_governate:id_governate, id_category: id_category, id_sub_category: id_sub_category, attr: "", attr_values: "", title: title, id_brand: id_brand, offer_type:offer_type , decription: decription, price: price, discount_prec: discount_prec, youtube_link: "", reseller_name: reseller_name, reseller_phone: reseller_phone, reseller_mail: reseller_mail, contact_type: "phone", image:image, album: [nil])
     }
 }

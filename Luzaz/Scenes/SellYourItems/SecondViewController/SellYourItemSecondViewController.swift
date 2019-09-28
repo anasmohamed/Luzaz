@@ -23,20 +23,30 @@ class SellYourItemSecondViewController: UIViewController,SellYourItemView {
     var categoryList = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
     var subCategoryList = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
     var brands = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
+    var offerImage : UIImage?
+    var city : String?
+    var category : String?
+    var subCategory : String?
+    var brand : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         subCategoryStackView.isHidden = true
         brandStackView.isHidden = true
         presenter = SellYourItemPresenter(view: self)
-
+        self.hideKeyboardWhenTappedAround()
 
     }
 
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList
         {
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
-            self.present(sellYourItemSecondVC,animated:true,completion: nil)
+            let sellYourItemFourthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
+            sellYourItemFourthVC.city = city
+            sellYourItemFourthVC.offerImage = offerImage
+            sellYourItemFourthVC.category = category
+            sellYourItemFourthVC.subCategory = subCategory
+            sellYourItemFourthVC.brand = brand
+            self.present(sellYourItemFourthVC,animated:true,completion: nil)
             
         }else
         {
