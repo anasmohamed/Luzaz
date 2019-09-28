@@ -108,24 +108,14 @@
 		CC7269B3233AC614006B61DD /* SellYourItemEndPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72692B233AC613006B61DD /* SellYourItemEndPresenter.swift */; };
 		CC7269B4233AC614006B61DD /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72692C233AC613006B61DD /* SellYourItemEndView.swift */; };
 		CC7269B5233AC614006B61DD /* SellYourItemEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72692D233AC613006B61DD /* SellYourItemEndViewController.swift */; };
-		CC7269B6233AC614006B61DD /* SellYourItemFifthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726930233AC613006B61DD /* SellYourItemFifthPresenter.swift */; };
-		CC7269B7233AC614006B61DD /* SellYourItemFifthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726931233AC613006B61DD /* SellYourItemFifthView.swift */; };
 		CC7269B8233AC614006B61DD /* SellYourItemFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726932233AC613006B61DD /* SellYourItemFifthViewController.swift */; };
-		CC7269B9233AC614006B61DD /* SellYourItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726935233AC613006B61DD /* SellYourItemPresenter.swift */; };
-		CC7269BA233AC614006B61DD /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726936233AC613006B61DD /* SellYourItemView.swift */; };
 		CC7269BB233AC614006B61DD /* SellYourItemViewController+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726937233AC613006B61DD /* SellYourItemViewController+PickerDelegate.swift */; };
 		CC7269BC233AC614006B61DD /* SellYourItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726938233AC613006B61DD /* SellYourItemViewController.swift */; };
-		CC7269BD233AC614006B61DD /* SellYourItemFourthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72693B233AC613006B61DD /* SellYourItemFourthPresenter.swift */; };
-		CC7269BE233AC614006B61DD /* SellYourItemFourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72693C233AC613006B61DD /* SellYourItemFourthView.swift */; };
 		CC7269BF233AC614006B61DD /* SellYourItemFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72693D233AC613006B61DD /* SellYourItemFourthViewController.swift */; };
 		CC7269C0233AC614006B61DD /* SellYourItemFourthViewCotroller+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72693E233AC613006B61DD /* SellYourItemFourthViewCotroller+PickerDelegate.swift */; };
 		CC7269C1233AC614006B61DD /* SellYourItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726940233AC613006B61DD /* SellYourItemInteractor.swift */; };
-		CC7269C2233AC614006B61DD /* SellYourItemSecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726943233AC613006B61DD /* SellYourItemSecondPresenter.swift */; };
-		CC7269C3233AC614006B61DD /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726944233AC613006B61DD /* SellYourItemSecondView.swift */; };
 		CC7269C4233AC614006B61DD /* SellYourItemSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726945233AC613006B61DD /* SellYourItemSecondViewController.swift */; };
 		CC7269C5233AC614006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726946233AC613006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift */; };
-		CC7269C6233AC614006B61DD /* SellYourItemThirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726949233AC613006B61DD /* SellYourItemThirdPresenter.swift */; };
-		CC7269C7233AC614006B61DD /* SellYourItemThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72694A233AC613006B61DD /* SellYourItemThirdView.swift */; };
 		CC7269C8233AC614006B61DD /* SellYourItemThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72694B233AC613006B61DD /* SellYourItemThirdViewController.swift */; };
 		CC7269C9233AC614006B61DD /* FavoriteOffersViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72694D233AC613006B61DD /* FavoriteOffersViewController+PresenterDelegate.swift */; };
 		CC7269CA233AC614006B61DD /* FavoriteOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72694E233AC613006B61DD /* FavoriteOffersViewController.swift */; };
@@ -297,24 +287,14 @@
 		CC72692B233AC613006B61DD /* SellYourItemEndPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndPresenter.swift; sourceTree = "<group>"; };
 		CC72692C233AC613006B61DD /* SellYourItemEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
 		CC72692D233AC613006B61DD /* SellYourItemEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndViewController.swift; sourceTree = "<group>"; };
-		CC726930233AC613006B61DD /* SellYourItemFifthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthPresenter.swift; sourceTree = "<group>"; };
-		CC726931233AC613006B61DD /* SellYourItemFifthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthView.swift; sourceTree = "<group>"; };
 		CC726932233AC613006B61DD /* SellYourItemFifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthViewController.swift; sourceTree = "<group>"; };
-		CC726935233AC613006B61DD /* SellYourItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemPresenter.swift; sourceTree = "<group>"; };
-		CC726936233AC613006B61DD /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
 		CC726937233AC613006B61DD /* SellYourItemViewController+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemViewController+PickerDelegate.swift"; sourceTree = "<group>"; };
 		CC726938233AC613006B61DD /* SellYourItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemViewController.swift; sourceTree = "<group>"; };
-		CC72693B233AC613006B61DD /* SellYourItemFourthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthPresenter.swift; sourceTree = "<group>"; };
-		CC72693C233AC613006B61DD /* SellYourItemFourthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthView.swift; sourceTree = "<group>"; };
 		CC72693D233AC613006B61DD /* SellYourItemFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFourthViewController.swift; sourceTree = "<group>"; };
 		CC72693E233AC613006B61DD /* SellYourItemFourthViewCotroller+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemFourthViewCotroller+PickerDelegate.swift"; sourceTree = "<group>"; };
 		CC726940233AC613006B61DD /* SellYourItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemInteractor.swift; sourceTree = "<group>"; };
-		CC726943233AC613006B61DD /* SellYourItemSecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondPresenter.swift; sourceTree = "<group>"; };
-		CC726944233AC613006B61DD /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
 		CC726945233AC613006B61DD /* SellYourItemSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondViewController.swift; sourceTree = "<group>"; };
 		CC726946233AC613006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemSecondViewCotroller+PickerDelegate.swift"; sourceTree = "<group>"; };
-		CC726949233AC613006B61DD /* SellYourItemThirdPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdPresenter.swift; sourceTree = "<group>"; };
-		CC72694A233AC613006B61DD /* SellYourItemThirdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdView.swift; sourceTree = "<group>"; };
 		CC72694B233AC613006B61DD /* SellYourItemThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemThirdViewController.swift; sourceTree = "<group>"; };
 		CC72694D233AC613006B61DD /* FavoriteOffersViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavoriteOffersViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CC72694E233AC613006B61DD /* FavoriteOffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteOffersViewController.swift; sourceTree = "<group>"; };
@@ -943,57 +923,27 @@
 		CC72692E233AC613006B61DD /* FifthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CC72692F233AC613006B61DD /* Presenter */,
 				CC726932233AC613006B61DD /* SellYourItemFifthViewController.swift */,
 			);
 			path = FifthViewController;
 			sourceTree = "<group>";
 		};
-		CC72692F233AC613006B61DD /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CC726930233AC613006B61DD /* SellYourItemFifthPresenter.swift */,
-				CC726931233AC613006B61DD /* SellYourItemFifthView.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		CC726933233AC613006B61DD /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CC726934233AC613006B61DD /* Presenter */,
 				CC726937233AC613006B61DD /* SellYourItemViewController+PickerDelegate.swift */,
 				CC726938233AC613006B61DD /* SellYourItemViewController.swift */,
 			);
 			path = FirstViewController;
 			sourceTree = "<group>";
 		};
-		CC726934233AC613006B61DD /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CC726935233AC613006B61DD /* SellYourItemPresenter.swift */,
-				CC726936233AC613006B61DD /* SellYourItemView.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		CC726939233AC613006B61DD /* FourthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CC72693A233AC613006B61DD /* Presenter */,
 				CC72693D233AC613006B61DD /* SellYourItemFourthViewController.swift */,
 				CC72693E233AC613006B61DD /* SellYourItemFourthViewCotroller+PickerDelegate.swift */,
 			);
 			path = FourthViewController;
-			sourceTree = "<group>";
-		};
-		CC72693A233AC613006B61DD /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CC72693B233AC613006B61DD /* SellYourItemFourthPresenter.swift */,
-				CC72693C233AC613006B61DD /* SellYourItemFourthView.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		CC72693F233AC613006B61DD /* Interactor */ = {
@@ -1007,38 +957,18 @@
 		CC726941233AC613006B61DD /* SecondViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CC726942233AC613006B61DD /* Presenter */,
 				CC726945233AC613006B61DD /* SellYourItemSecondViewController.swift */,
 				CC726946233AC613006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift */,
 			);
 			path = SecondViewController;
 			sourceTree = "<group>";
 		};
-		CC726942233AC613006B61DD /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CC726943233AC613006B61DD /* SellYourItemSecondPresenter.swift */,
-				CC726944233AC613006B61DD /* SellYourItemSecondView.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		CC726947233AC613006B61DD /* ThirdViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CC726948233AC613006B61DD /* Presenter */,
 				CC72694B233AC613006B61DD /* SellYourItemThirdViewController.swift */,
 			);
 			path = ThirdViewController;
-			sourceTree = "<group>";
-		};
-		CC726948233AC613006B61DD /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CC726949233AC613006B61DD /* SellYourItemThirdPresenter.swift */,
-				CC72694A233AC613006B61DD /* SellYourItemThirdView.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		CC72694C233AC613006B61DD /* UserFavorites */ = {
@@ -1458,7 +1388,6 @@
 			files = (
 				CC72696B233AC613006B61DD /* MainCategoriesCellView.swift in Sources */,
 				CCE4992A233B5CE30030959D /* ChangePasswordPresenter.swift in Sources */,
-				CC7269BE233AC614006B61DD /* SellYourItemFourthView.swift in Sources */,
 				CC726965233AC613006B61DD /* MainCateoriesCollectionViewCell.swift in Sources */,
 				CC726992233AC613006B61DD /* CountriesViewController.swift in Sources */,
 				CC814900233ACA3800F71A2B /* ProfileView.swift in Sources */,
@@ -1470,7 +1399,6 @@
 				CC7269A6233AC614006B61DD /* OffersCell.swift in Sources */,
 				CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */,
 				CC7269CD233AC614006B61DD /* FavoriteOffersView.swift in Sources */,
-				CC7269C3233AC614006B61DD /* SellYourItemSecondView.swift in Sources */,
 				CCD9BE3C2339111E002B9201 /* Competation.swift in Sources */,
 				CC72698B233AC613006B61DD /* CompetitionView.swift in Sources */,
 				CC57507823384DEA00BBBE63 /* SSRadioButtonsController.swift in Sources */,
@@ -1487,7 +1415,6 @@
 				CCE4992E233B5F0B0030959D /* ChangePasswordViewController+PresenterDelegate.swift in Sources */,
 				CC7269AC233AC614006B61DD /* OfferDetailesPresenter.swift in Sources */,
 				CC7269CA233AC614006B61DD /* FavoriteOffersViewController.swift in Sources */,
-				CC7269B6233AC614006B61DD /* SellYourItemFifthPresenter.swift in Sources */,
 				CCE49928233B5B6A0030959D /* ChangePasswordInteractor.swift in Sources */,
 				CC72699A233AC613006B61DD /* ContainerVC.swift in Sources */,
 				CCD9BE5E233930C8002B9201 /* NetworkConstants.swift in Sources */,
@@ -1516,7 +1443,6 @@
 				CC726968233AC613006B61DD /* MainCategoriesViewController+PresenterDelegate.swift in Sources */,
 				CC7269AF233AC614006B61DD /* OffersPresenter.swift in Sources */,
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
-				CC7269B9233AC614006B61DD /* SellYourItemPresenter.swift in Sources */,
 				CC7269A9233AC614006B61DD /* OffersDetailsViewController.swift in Sources */,
 				CC72699B233AC613006B61DD /* LeftSidePanelVC.swift in Sources */,
 				CC72695F233AC613006B61DD /* RegistrationPresenter.swift in Sources */,
@@ -1532,13 +1458,11 @@
 				CC72698C233AC613006B61DD /* QuestionsViewController+PresenterDelegate.swift in Sources */,
 				CC7269A8233AC614006B61DD /* OffersInteractor.swift in Sources */,
 				CC726974233AC613006B61DD /* SubCategoryOffersView.swift in Sources */,
-				CC7269B7233AC614006B61DD /* SellYourItemFifthView.swift in Sources */,
 				CC57507723384DEA00BBBE63 /* SSRadioButtonModel.swift in Sources */,
 				CC726970233AC613006B61DD /* SubCategoriesViewConteroller+PresenterDelegate.swift in Sources */,
 				CC7269BF233AC614006B61DD /* SellYourItemFourthViewController.swift in Sources */,
 				CCD9BE412339111E002B9201 /* Question.swift in Sources */,
 				CC72697A233AC613006B61DD /* ConversationViewController+PresenterDelegate.swift in Sources */,
-				CC7269BD233AC614006B61DD /* SellYourItemFourthPresenter.swift in Sources */,
 				CC72697C233AC613006B61DD /* ConsersationInteractor.swift in Sources */,
 				CC86960A22F4F61C00E9F14D /* BrowseAdViewController.swift in Sources */,
 				CC72698D233AC613006B61DD /* QuestionsViewController.swift in Sources */,
@@ -1557,11 +1481,9 @@
 				CC726969233AC613006B61DD /* MainCateogriesViewController.swift in Sources */,
 				CC72695C233AC613006B61DD /* LoginViewController.swift in Sources */,
 				CC72697B233AC613006B61DD /* ConverstionViewController.swift in Sources */,
-				CC7269C7233AC614006B61DD /* SellYourItemThirdView.swift in Sources */,
 				CC7269BC233AC614006B61DD /* SellYourItemViewController.swift in Sources */,
 				CC7269B5233AC614006B61DD /* SellYourItemEndViewController.swift in Sources */,
 				CC72699C233AC613006B61DD /* MyProductInteractor.swift in Sources */,
-				CC7269C6233AC614006B61DD /* SellYourItemThirdPresenter.swift in Sources */,
 				CC7269B2233AC614006B61DD /* OffersViewController+CellSpaceDelegate.swift in Sources */,
 				CC72697D233AC613006B61DD /* ConversationPresenter.swift in Sources */,
 				CC72698E233AC613006B61DD /* CompetionCellView.swift in Sources */,
@@ -1583,7 +1505,6 @@
 				CC7269CE233AC614006B61DD /* FavoriteOffersCellView.swift in Sources */,
 				CC7269AE233AC614006B61DD /* OffersDetailesView.swift in Sources */,
 				CC726996233AC613006B61DD /* CountryTableViewCell.swift in Sources */,
-				CC7269C2233AC614006B61DD /* SellYourItemSecondPresenter.swift in Sources */,
 				CC726961233AC613006B61DD /* RegisterViewController.swift in Sources */,
 				CCD9BE3F2339111E002B9201 /* Offer.swift in Sources */,
 				CC7269B4233AC614006B61DD /* SellYourItemEndView.swift in Sources */,
@@ -1603,7 +1524,6 @@
 				CC726980233AC613006B61DD /* ConversationTableViewCell.swift in Sources */,
 				CC726995233AC613006B61DD /* CountryCellView.swift in Sources */,
 				CC726994233AC613006B61DD /* CountryView.swift in Sources */,
-				CC7269BA233AC614006B61DD /* SellYourItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

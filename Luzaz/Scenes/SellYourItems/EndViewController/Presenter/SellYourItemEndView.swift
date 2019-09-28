@@ -7,6 +7,6 @@
 //
 
 import Foundation
-protocol SellYourItemEndView :class{
+protocol SellYourItemView :class{
     func showError(error : String)
 }

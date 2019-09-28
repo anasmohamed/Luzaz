@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SellYourItemFifthViewController: UIViewController , SellYourItemFifthView{
+class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     @IBOutlet weak var priceTextView: UITextField!
 
     @IBOutlet weak var discountTextView: UITextField!
-    var presenter : SellYourItemFifthPresenter!
+    var presenter : SellYourItemPresenter!
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = SellYourItemFifthPresenter(view: self)
+        presenter = SellYourItemPresenter(view: self)
     }
  
     @IBAction func nextBtnWasPressed(_ sender: Any) {

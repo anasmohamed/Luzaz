@@ -8,19 +8,19 @@
 
 import UIKit
 
-class SellYourItemFourthViewController: UIViewController,SellYourItemFourthView {
+class SellYourItemFourthViewController: UIViewController,SellYourItemView {
     
     @IBOutlet weak var itemDescritionTextField: UITextView!
     @IBOutlet weak var itemTitleTextView: UITextField!
     @IBOutlet weak var conditionList: UIPickerView!
     var conditionsList = ["New","Used"]
     var isConditionEnterd = false
-    var presenter : SellYourItemFourthPresenter!
+    var presenter : SellYourItemPresenter!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        presenter = SellYourItemFourthPresenter(view: self)
+        presenter = SellYourItemPresenter(view: self)
         
     }
     

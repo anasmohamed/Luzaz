@@ -76,6 +76,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
+            presenter.setOfferImage(image: image)
         }
         
         picker.dismiss(animated: true, completion: nil);

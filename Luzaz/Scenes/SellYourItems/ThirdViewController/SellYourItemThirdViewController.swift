@@ -8,16 +8,17 @@
 
 import UIKit
 
-class SellYourItemThirdViewController: UIViewController,SellYourItemThirdView {
+class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     @IBOutlet weak var finishedTextView: UITextField!
     @IBOutlet weak var levelsTextView: UITextField!
     @IBOutlet weak var areaTextView: UITextField!
     @IBOutlet weak var bathroomsNumberTextView: UITextField!
     @IBOutlet weak var bedroomsNumberTextView: UITextField!
-    
+    var presenter : SellYourItemPresenter!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        presenter = SellYourItemPresenter(view: self)
     }
     
     

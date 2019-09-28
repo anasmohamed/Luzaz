@@ -8,17 +8,18 @@
 
 import UIKit
 
-class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
+class SellYourItemEndViewController: UIViewController,SellYourItemView {
 
    
     @IBOutlet weak var mobileNumberTextView: UITextField!
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var fullNameTextView: UITextField!
-    var presenter : SellYourItemEndPresenter!
-
+    var presenter : SellYourItemPresenter!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = SellYourItemEndPresenter(view: self)
+        presenter = SellYourItemPresenter(view: self)
 
     }
     
@@ -27,8 +28,9 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
             presenter.setEmail(email: emailTextView.text!)
             presenter.setFullName(fullName: fullNameTextView.text!)
             presenter.setMobileNumber(mobileNumber: mobileNumberTextView.text!)
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
-            self.present(sellYourItemSecondVC,animated:true,completion: nil)
+            presenter.addUserOffer()
+//            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
+//            self.present(sellYourItemSecondVC,animated:true,completion: nil)
         }else{
             showError(error: "You Should Enter Price")
         }

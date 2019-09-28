@@ -10,28 +10,39 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class SellYourItemInteractor {
-    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage])
+    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage?])
     {
         
         
         let pageUrl = NetworkingConstants.baseURL + NetworkingConstants.addUserOffer
-        var parameters = [
-            "id": "2",
-            ]
+        var parameters = [NetworkingConstants.addUserOfferToken: token]
         
         
         // add addtionial parameters
         
         
         
-        parameters["heading"] = "Veenaay Heading"
-        parameters["warranty"] = "12"
-        parameters["warranty_type"] = "Y"
+        parameters[NetworkingConstants.addUserOfferPrivacyPolicy] = privacy_policy
+        parameters[NetworkingConstants.addUserOfferIdGovernate] = id_governate
+        parameters[NetworkingConstants.addUserOfferIdCategory] = id_category
         
-        parameters["price"] = "22.00"
-        parameters["currency"] = "EUR"
-        parameters["date_time"] = "2017-12-30"
-        parameters["description"] = "this is test entry"
+        parameters[NetworkingConstants.addUserOfferIdSubCategory] = id_sub_category
+        parameters[NetworkingConstants.addUserOfferAttr] = attr
+        parameters[NetworkingConstants.addUserOfferAttrValues] = attr_values
+        parameters[NetworkingConstants.addUserOfferTitle] = title
+        parameters[NetworkingConstants.addUserOfferIdBrand] = id_brand
+        parameters[NetworkingConstants.addUserOfferOfferType] = offer_type
+        parameters[NetworkingConstants.addUserOfferDecription] = decription
+        
+        parameters[NetworkingConstants.addUserOfferPrice] = price
+        parameters[NetworkingConstants.discount_prec] = discount_prec
+        parameters[NetworkingConstants.addUserOfferYoutubeLink] = youtube_link
+        parameters[NetworkingConstants.addUserOfferReseller_name] = reseller_name
+        
+        parameters[NetworkingConstants.addUserOfferReseller_phone]  = reseller_phone
+        parameters[NetworkingConstants.addUserOfferReseller_mail] = reseller_mail
+        parameters[NetworkingConstants.addUserOfferContact_type] = contact_type
+        let imageData = UIImagePNGRepresentation(image)
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             for (key, value) in parameters {
                 multipartFormData.append(value.data(using: .utf8)!, withName: key)

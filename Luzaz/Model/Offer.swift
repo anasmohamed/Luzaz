@@ -25,6 +25,9 @@ class Offer {
     var brand : String?
     var condition : String?
     var date : String?
+    var reseller_mail : String?
+    var reseller_phone : String?
+    var offerImage : UIImage?
     var appartment = Appartment()
     init(withJSON data: JSON) {
         self.offerId = data[NetworkingConstants.offerId].stringValue

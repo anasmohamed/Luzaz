@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SellYourItemSecondViewController: UIViewController,SellYourItemSecondView {
+class SellYourItemSecondViewController: UIViewController,SellYourItemView {
 
     @IBOutlet weak var selectCategory: UITextField!
-    var presenter : SellYourItemSecondPresenter!
+    var presenter : SellYourItemPresenter!
 
     var isChooseFromCategoryList = false
     var isChooseFromSubCategoryList = false
@@ -27,7 +27,7 @@ class SellYourItemSecondViewController: UIViewController,SellYourItemSecondView 
         super.viewDidLoad()
         subCategoryStackView.isHidden = true
         brandStackView.isHidden = true
-        presenter = SellYourItemSecondPresenter(view: self)
+        presenter = SellYourItemPresenter(view: self)
 
 
     }

@@ -8,11 +8,11 @@
 
 import Foundation
 class SellYourItemFifthPresenter {
-    private weak var view: SellYourItemFifthView?
+    private weak var view: SellYourItemView?
     private let sellYourItemInteractor: SellYourItemInteractor
     private var sellItem: Offer?
     
-    init(view: SellYourItemFifthView) {
+    init(view: SellYourItemView) {
         self.view = view
         sellItem = Offer()
         sellYourItemInteractor = SellYourItemInteractor()
