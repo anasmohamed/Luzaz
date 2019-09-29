@@ -40,9 +40,14 @@ class SubCategoriesPresenter {
         return subCategories.count
     }
     
-    func getSubCategoriesName(row: Int)
+    func getSubCategoriesName(row: Int)->String
     {
-        return subCategories
+        return subCategories[row].name!
+    }
+    
+    func getSubCategoriesId(row: Int)->String
+    {
+        return subCategories[row].id!
     }
     
     func configure(cell: UITableViewCell, for index: Int) {

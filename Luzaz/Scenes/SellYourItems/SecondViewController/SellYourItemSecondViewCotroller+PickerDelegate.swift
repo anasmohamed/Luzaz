@@ -23,7 +23,7 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
             return subCategoryPresenter.getSubCategoriesCount()
             
         }else{
-            return brands.count
+            return brandsPresenter.getBrandsCount()
         }
         
     }
@@ -34,10 +34,10 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
             return presenter.getMainCategoryName(row: row)
         }else if pickerView.tag == 2
         {
-            return subCategoryList[row]
+            return subCategoryPresenter.getSubCategoriesName(row: row)
             
         }else{
-            return brands[row]
+            return brandsPresenter.getBrandsNams(row: row)
         }
     }
     
@@ -51,13 +51,11 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
         else if pickerView.tag == 2
         {
             brandStackView.isHidden = false
-           
-            subCategory = subCategoryList[row]
+            subCategory = subCategoryPresenter.getSubCategoriesId(row: row)
             isChooseFromSubCategoryList = true
         }
         else{
-            presenter.setItemBrand(brand: brands[row])
-            brand = brands[row]
+            brand = brandsPresenter.getBrandsId(row: row)
             isChooseFrombrandList = true
             
         }
