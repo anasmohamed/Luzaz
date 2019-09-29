@@ -10,6 +10,7 @@ import UIKit
 
 class SellYourItemEndViewController: UIViewController,SellYourItemView {
 
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
    
     @IBOutlet weak var mobileNumberTextView: UITextField!
     @IBOutlet weak var emailTextView: UITextField!

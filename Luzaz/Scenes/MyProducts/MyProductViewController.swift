@@ -10,35 +10,72 @@ import UIKit
 
 class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var presenter: MyProductPresenter!
-
+    
+    @IBAction func segmentedControlActionChanged(_ sender: Any) {
+        tableView.reloadData()
+    }
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func switchCustomeTableViews(_ sender: Any) {
         
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         presenter = MyProductPresenter(view : self)
+        displayBackground()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter.viewDidLoad()
-
     }
-    
     func setupTableView() {
+        
         tableView.register(UINib(nibName: "MyProductTableViewCell", bundle: nil), forCellReuseIdentifier: "MyProductTableViewCell")
+        tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderTableViewCell")
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func displayBackground()
+    {
         switch segmentedControl.selectedSegmentIndex
         {
+            
+        case 0 :
+            if presenter.getSellsCount() == 0
+            {
+                drowImageInTableBackgound()
+            }
+            
+        case 1:
+            if  presenter.getOrdersCount() == 0
+            {
+                drowImageInTableBackgound()
+
+            }
+        default: break
+        }
+    }
+   func drowImageInTableBackgound()
+    {
+        UIGraphicsBeginImageContext(self.tableView.frame.size);
+        UIImage(named: "nothingtoShow")?.draw(in: self.view.bounds)
+        let backImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext();
+        self.tableView.backgroundColor = UIColor(patternImage: backImage)
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        switch segmentedControl.selectedSegmentIndex
+        {
+            
         case 0 :
             return presenter.getSellsCount()
         case 1:
             return presenter.getOrdersCount()
         default :
             return presenter.getSellsCount()
-
+            
         }
         
         
@@ -52,15 +89,36 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch segmentedControl.selectedSegmentIndex
+        {
+            
+        case 0 :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as! MyProductTableViewCell
+            presenter.configure(cell: cell, for: indexPath.row)
+            
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
+            presenter.configure(cell: cell, for: indexPath.row)
+            
+            return cell
+        default :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
+            presenter.configure(cell: cell, for: indexPath.row)
+            
+            return cell
+            
+        }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as! MyProductTableViewCell
-        presenter.configure(cell: cell, for: indexPath.row)
+
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as! MyProductTableViewCell
+//        presenter.configure(cell: cell, for: indexPath.row)
         
-        return cell
+//        return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-
+    
+    
 }

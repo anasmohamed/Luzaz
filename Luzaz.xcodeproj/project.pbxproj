@@ -144,6 +144,7 @@
 		CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960022F4F61C00E9F14D /* ProductViewController.swift */; };
 		CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960122F4F61C00E9F14D /* RegisterationStatusViewController.swift */; };
 		CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960822F4F61C00E9F14D /* TetViewController.swift */; };
+		CC8B2F79234144B900784348 /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B2F78234144B900784348 /* OrderCellView.swift */; };
 		CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */; };
 		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
 		CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2DC9233BD4CC00F6F82A /* CompetitionViewController.swift */; };
@@ -330,6 +331,7 @@
 		CC86960022F4F61C00E9F14D /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		CC86960122F4F61C00E9F14D /* RegisterationStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterationStatusViewController.swift; sourceTree = "<group>"; };
 		CC86960822F4F61C00E9F14D /* TetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetViewController.swift; sourceTree = "<group>"; };
+		CC8B2F78234144B900784348 /* OrderCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCellView.swift; sourceTree = "<group>"; };
 		CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboardDelagate.swift"; sourceTree = "<group>"; };
 		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
 		CCAB2DC9233BD4CC00F6F82A /* CompetitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
@@ -803,6 +805,7 @@
 			children = (
 				CC72690D233AC613006B61DD /* OrderTableViewCell.swift */,
 				CC72690E233AC613006B61DD /* OrderTableViewCell.xib */,
+				CC8B2F78234144B900784348 /* OrderCellView.swift */,
 			);
 			path = OrderTableViewCell;
 			sourceTree = "<group>";
@@ -1438,6 +1441,7 @@
 				CC7269AF233AC614006B61DD /* OffersPresenter.swift in Sources */,
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
 				CC7269A9233AC614006B61DD /* OffersDetailsViewController.swift in Sources */,
+				CC8B2F79234144B900784348 /* OrderCellView.swift in Sources */,
 				CC72699B233AC613006B61DD /* LeftSidePanelVC.swift in Sources */,
 				CC72695F233AC613006B61DD /* RegistrationPresenter.swift in Sources */,
 				CC7269A2233AC613006B61DD /* MyProductView.swift in Sources */,

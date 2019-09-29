@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nEo-sv-AK4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OIU-46-ISU">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -983,7 +983,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="IXY-42-cgh"/>
                                                     <constraint firstAttribute="height" constant="38" id="ibm-wU-pSx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="66DC22AB-883A-4B83-9E32-F002889B6165"/>
+                                                <state key="normal" title="Button" image="4D0CC735-9183-4F21-BE7F-DA6A50F24381"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -1245,6 +1245,7 @@
                                     <segment title="Second"/>
                                 </segments>
                                 <connections>
+                                    <action selector="segmentedControlActionChanged:" destination="OIU-46-ISU" eventType="valueChanged" id="KbD-Eq-ziS"/>
                                     <action selector="switchCustomeTableViews:" destination="OIU-46-ISU" eventType="valueChanged" id="2cq-Wz-69c"/>
                                 </connections>
                             </segmentedControl>
@@ -2407,6 +2408,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xrL-7H-gBw">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky1-RJ-hbV">
                                 <rect key="frame" x="0.0" y="70" width="320" height="40"/>
                                 <constraints>
@@ -2537,18 +2541,21 @@
                             <constraint firstAttribute="trailing" secondItem="Ab6-fp-RTp" secondAttribute="trailing" id="Aqx-HC-zXD"/>
                             <constraint firstItem="S5J-wx-sO9" firstAttribute="top" secondItem="U1u-jB-Gcu" secondAttribute="bottom" constant="46" id="LvS-1K-efs"/>
                             <constraint firstAttribute="trailing" secondItem="hVc-AO-br8" secondAttribute="trailing" id="Qe4-Wh-S6u"/>
+                            <constraint firstItem="xrL-7H-gBw" firstAttribute="centerX" secondItem="crt-07-e2Q" secondAttribute="centerX" id="bnx-3f-PUN"/>
                             <constraint firstItem="hvL-tp-uNz" firstAttribute="width" secondItem="crt-07-e2Q" secondAttribute="width" id="en3-Hs-cn5"/>
                             <constraint firstItem="ky1-RJ-hbV" firstAttribute="top" secondItem="Ab6-fp-RTp" secondAttribute="bottom" id="hku-vq-Rur"/>
                             <constraint firstItem="U1u-jB-Gcu" firstAttribute="top" secondItem="Ab6-fp-RTp" secondAttribute="bottom" constant="38" id="iR5-em-CWQ"/>
                             <constraint firstItem="hvL-tp-uNz" firstAttribute="height" secondItem="crt-07-e2Q" secondAttribute="height" constant="-154" id="tZU-sL-wmR"/>
                             <constraint firstAttribute="trailing" secondItem="ky1-RJ-hbV" secondAttribute="trailing" id="uLJ-oL-cw6"/>
                             <constraint firstItem="hVc-AO-br8" firstAttribute="leading" secondItem="crt-07-e2Q" secondAttribute="leading" id="vRc-Ca-Nbh"/>
+                            <constraint firstItem="xrL-7H-gBw" firstAttribute="centerY" secondItem="crt-07-e2Q" secondAttribute="centerY" id="zMN-F7-j2G"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextView" destination="Nec-T9-MfE" id="ARb-FQ-wRF"/>
                         <outlet property="fullNameTextView" destination="gw9-DG-zN9" id="Aqm-Re-k88"/>
                         <outlet property="mobileNumberTextView" destination="umo-9e-2X4" id="QTj-bl-CN1"/>
+                        <outlet property="spinner" destination="xrL-7H-gBw" id="aZ7-zp-lsb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtT-Um-q0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4051,7 +4058,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="66DC22AB-883A-4B83-9E32-F002889B6165" width="128" height="128">
+        <image name="4D0CC735-9183-4F21-BE7F-DA6A50F24381" width="128" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

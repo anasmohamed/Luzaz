@@ -25,9 +25,11 @@ class MyProductPresenter {
     
     func viewDidLoad() {
         
-        //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
+       
         getSells(countryId:UserDefaults.standard.string(forKey: "country")!, userId:UserDefaults.standard.string(forKey: "userId")!)
-        // )
+        
+        getOrders(token: UserDefaults.standard.string(forKey: "token")!)
+    
     }
     func getOrders(token: String)
     {
@@ -79,6 +81,20 @@ class MyProductPresenter {
         cell.displayDate(date: date)
         cell.displayProductImage(image: image)
         cell.displayProductName(productName: title)
+        
+    }
+    func configure(cell: OrderCellView, for index: Int) {
+        let order = orders[index]
+        
+        guard let price = order.price
+            ,let totalPrice = order.total_price,
+            let quntity = order.quantity
+            
+            else { return }
+        cell.displayProductPrice(price: price)
+//        cell.displayDate(date: date)
+        cell.displayProductTotalPrice(productTotalPrice:totalPrice )
+        cell.displayProductQuntity(quntity: quntity)
         
     }
     
