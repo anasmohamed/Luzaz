@@ -303,6 +303,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wSu-3D-wYv">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vCc-1p-9Vd">
                                 <rect key="frame" x="0.0" y="20" width="320" height="47"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -501,12 +504,14 @@
                             <constraint firstAttribute="trailing" secondItem="Aoi-XR-GXM" secondAttribute="trailing" id="Xms-r4-hT1"/>
                             <constraint firstItem="Aoi-XR-GXM" firstAttribute="top" secondItem="vCc-1p-9Vd" secondAttribute="bottom" id="XvH-1a-QC8"/>
                             <constraint firstItem="2Lh-tH-4Ps" firstAttribute="leading" secondItem="N37-xV-9aW" secondAttribute="leading" id="cE9-zl-qtC"/>
+                            <constraint firstItem="wSu-3D-wYv" firstAttribute="centerY" secondItem="N37-xV-9aW" secondAttribute="centerY" id="cIz-nE-qxv"/>
                             <constraint firstAttribute="trailing" secondItem="2Lh-tH-4Ps" secondAttribute="trailing" id="hO9-ly-iOH"/>
                             <constraint firstItem="vCc-1p-9Vd" firstAttribute="top" secondItem="Wc2-WY-zC2" secondAttribute="bottom" id="iC5-Qi-GIU"/>
                             <constraint firstItem="vCc-1p-9Vd" firstAttribute="leading" secondItem="2Lh-tH-4Ps" secondAttribute="leading" id="iUx-NV-17G"/>
                             <constraint firstItem="vCc-1p-9Vd" firstAttribute="trailing" secondItem="2Lh-tH-4Ps" secondAttribute="trailing" id="lBy-c3-op5"/>
                             <constraint firstItem="vCc-1p-9Vd" firstAttribute="centerX" secondItem="Aoi-XR-GXM" secondAttribute="centerX" id="lhu-3m-4e4"/>
                             <constraint firstItem="Aoi-XR-GXM" firstAttribute="leading" secondItem="N37-xV-9aW" secondAttribute="leading" id="n4E-Xf-puI"/>
+                            <constraint firstItem="wSu-3D-wYv" firstAttribute="centerX" secondItem="N37-xV-9aW" secondAttribute="centerX" id="wbQ-wy-41J"/>
                             <constraint firstItem="p3T-V4-3i3" firstAttribute="leading" secondItem="N37-xV-9aW" secondAttribute="leading" id="y8D-HN-YBw"/>
                         </constraints>
                     </view>
@@ -514,6 +519,7 @@
                     <connections>
                         <outlet property="cityPickerView" destination="Bai-04-2xV" id="1fy-NM-N67"/>
                         <outlet property="imageView" destination="hRj-66-Zb7" id="ZUv-Lx-vnd"/>
+                        <outlet property="spinner" destination="wSu-3D-wYv" id="ZJT-Fx-ULZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgO-Zl-c6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -977,7 +983,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="IXY-42-cgh"/>
                                                     <constraint firstAttribute="height" constant="38" id="ibm-wU-pSx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="F8D43693-48D4-4CD4-A6B7-07E0ABAA6D21"/>
+                                                <state key="normal" title="Button" image="66DC22AB-883A-4B83-9E32-F002889B6165"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -1375,6 +1381,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DKs-nV-fpG">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe Your Item " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwy-ar-czW">
                                 <rect key="frame" x="0.0" y="70" width="320" height="37"/>
                                 <constraints>
@@ -1567,7 +1576,9 @@
                             <constraint firstItem="xBF-a0-d4J" firstAttribute="top" secondItem="f6n-Sx-8f8" secondAttribute="bottom" id="bhf-uR-iGL"/>
                             <constraint firstItem="iwy-ar-czW" firstAttribute="top" secondItem="4Av-L0-VxL" secondAttribute="bottom" id="br5-hK-vUN"/>
                             <constraint firstItem="oQr-o3-vaz" firstAttribute="width" secondItem="nTC-8B-c9C" secondAttribute="width" id="chi-mT-7jh"/>
+                            <constraint firstItem="DKs-nV-fpG" firstAttribute="centerX" secondItem="nTC-8B-c9C" secondAttribute="centerX" id="eg4-TK-sbX"/>
                             <constraint firstItem="oQr-o3-vaz" firstAttribute="height" secondItem="nTC-8B-c9C" secondAttribute="height" id="fa7-Lz-GZV"/>
+                            <constraint firstItem="DKs-nV-fpG" firstAttribute="centerY" secondItem="nTC-8B-c9C" secondAttribute="centerY" id="fqp-bB-ebN"/>
                             <constraint firstItem="xBF-a0-d4J" firstAttribute="top" secondItem="1Uo-7o-x1R" secondAttribute="bottom" constant="50" id="gGb-JB-vO3"/>
                             <constraint firstAttribute="trailing" secondItem="1Uo-7o-x1R" secondAttribute="trailing" id="gen-AM-Va2"/>
                             <constraint firstAttribute="trailing" secondItem="4Av-L0-VxL" secondAttribute="trailing" id="jFQ-Rw-3Po"/>
@@ -1579,6 +1590,7 @@
                         <outlet property="CategoryDropList" destination="r9K-pN-qeD" id="4Tu-RN-LAH"/>
                         <outlet property="brandPickerView" destination="dNh-mb-Kxm" id="1cP-vS-Quh"/>
                         <outlet property="brandStackView" destination="8s3-r0-ICD" id="Jgg-20-Zpe"/>
+                        <outlet property="spinner" destination="DKs-nV-fpG" id="8JE-Xo-bHu"/>
                         <outlet property="subCategoryPickerView" destination="mGx-3h-jDT" id="oVH-cK-Ww2"/>
                         <outlet property="subCategoryStackView" destination="m1X-T1-3wa" id="Jl5-ne-3Y9"/>
                     </connections>
@@ -4039,11 +4051,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow on footer between icons" width="81" height="24"/>
-        <image name="Chat Icon" width="71" height="51"/>
-        <image name="Details Icon active color" width="66" height="66"/>
-        <image name="Details Icon on footer" width="66" height="66"/>
-        <image name="F8D43693-48D4-4CD4-A6B7-07E0ABAA6D21" width="128" height="128">
+        <image name="66DC22AB-883A-4B83-9E32-F002889B6165" width="128" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -5207,6 +5215,10 @@ TwABDlcAAQ5kAAEOaQABDmsAAQ5tAAEOcgABDnoAAQ59AAEOggABDooAAQ6NAAEOnwABDqIAAQ6nAAAA
 AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAABDqk
 </mutableData>
         </image>
+        <image name="Arrow on footer between icons" width="81" height="24"/>
+        <image name="Chat Icon" width="71" height="51"/>
+        <image name="Details Icon active color" width="66" height="66"/>
+        <image name="Details Icon on footer" width="66" height="66"/>
         <image name="Finish Icon" width="66" height="61"/>
         <image name="Home Icon" width="66" height="60"/>
         <image name="Logo" width="445" height="106"/>

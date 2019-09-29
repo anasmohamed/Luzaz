@@ -172,7 +172,7 @@ class SellYourItemInteractor {
                 let brands = json["data"].arrayValue
                 for brand in brands
                 {
-                    let data = Brands(withJSON:brand)
+                    let data = Brands(withJson:brand)
                     brandsList.append(data)
                 }
                 completionHandler(brandsList, nil)

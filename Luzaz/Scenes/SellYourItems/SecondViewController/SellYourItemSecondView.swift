@@ -10,5 +10,6 @@ import Foundation
 protocol SellYourItemSecondView:class {
     func getBrandsSuccess()
     func showError(error : String)
-
+    func showIndicator()
+    func hideIndicator()
 }

@@ -10,5 +10,8 @@ import Foundation
 protocol SellYourItemFirstView:class {
     func getGovernoratesSuccess()
     func showError(error : String)
+    func showIndicator()
+    func hideIndicator()
+    
 
 }

@@ -27,6 +27,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var brands = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
     var offerImage : UIImage?
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var brandPickerView: UIPickerView!
     @IBOutlet weak var subCategoryPickerView: UIPickerView!
     var city : String?
@@ -54,10 +55,10 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         brandPickerView.reloadAllComponents()
     }
     func showIndicator() {
-        
+        spinner.startAnimating()
     }
     func hideIndicator() {
-        
+        spinner.stopAnimating()
     }
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList

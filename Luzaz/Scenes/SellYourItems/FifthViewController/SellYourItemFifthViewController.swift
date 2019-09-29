@@ -32,8 +32,7 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
  
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if !(priceTextView.text?.isEmpty)! {
-            presenter.setItemPrice(price: priceTextView.text!)
-            presenter.setItemPriceDiscount(discount: discountTextView.text!)
+           
             let sellYourItemEndVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemEndVC")as! SellYourItemEndViewController
             sellYourItemEndVC.brand = brand
             sellYourItemEndVC.category = category

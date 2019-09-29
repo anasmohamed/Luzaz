@@ -36,10 +36,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemView {
     
     @IBAction func finishBtnWasPressed(_ sender: Any) {
         if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text?.isEmpty)! {
-            presenter.setEmail(email: emailTextView.text!)
-            presenter.setFullName(fullName: fullNameTextView.text!)
-            presenter.setMobileNumber(mobileNumber: mobileNumberTextView.text!)
-            presenter.addUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:"",attr_values:"",title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:"",price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:"phone",image: offerImage!,album:[nil])
+ presenter.addUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:"",attr_values:"",title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:"",price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:"phone",image: offerImage!,album:[nil])
 //            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
 //            self.present(sellYourItemSecondVC,animated:true,completion: nil)
         }else{

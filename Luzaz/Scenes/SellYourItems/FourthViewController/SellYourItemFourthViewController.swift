@@ -46,8 +46,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
         
         if isConditionEnterd &&  !(itemTitleTextView.text?.isEmpty)!
         {
-            presenter.setItemTitle(title: itemTitleTextView.text!)
-            presenter.setItemDescription(descrition: itemDescritionTextField.text)
+          
             let sellYourItemFifthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFifthVC")as! SellYourItemFifthViewController
             sellYourItemFifthVC.brand = brand
             sellYourItemFifthVC.category = category

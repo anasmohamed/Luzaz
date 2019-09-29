@@ -68,8 +68,10 @@ class SellYourItemPresenter {
     
     func getBrands(gategory: String)
     {
+        secondView?.showIndicator()
         sellYourItemInteractor?.getBrands(gategory: gategory) { [unowned self] (brands, error) in
-            
+            self.secondView?.hideIndicator()
+
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
@@ -82,8 +84,11 @@ class SellYourItemPresenter {
 
     func getGovernorates(country: String)
     {
-        sellYourItemInteractor?.getGovernorates(country: country) { [unowned self] (governorates, error) in
-            
+         firstView?.showIndicator()
+        sellYourItemInteractor?.getGovernorates(country: country) {
+            [unowned self] (governorates, error) in
+            self.firstView?.hideIndicator()
+
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {

@@ -9,6 +9,14 @@
 import UIKit
 
 class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate,SellYourItemFirstView{
+    internal func showIndicator() {
+        spinner.startAnimating()
+    }
+    func hideIndicator() {
+        spinner.stopAnimating()
+    }
+
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBOutlet weak var cityPickerView: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
@@ -92,7 +100,6 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
             offerImage = image
-            presenter.setOfferImage(image: image)
         }
         
         picker.dismiss(animated: true, completion: nil);

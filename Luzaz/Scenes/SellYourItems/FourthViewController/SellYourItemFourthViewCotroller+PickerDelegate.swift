@@ -25,7 +25,7 @@ extension SellYourItemFourthViewController : UIPickerViewDelegate,UIPickerViewDa
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        presenter.setItemCondition(conditon: conditionsList[row])
+       
         offerCondition = conditionsList[row]
         isConditionEnterd = true
     }

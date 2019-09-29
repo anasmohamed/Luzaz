@@ -11,7 +11,7 @@ import SwiftyJSON
 class  Brands{
     var name : String?
     var id  :String?
-    init(withJson data : json) {
+    init(withJson data : JSON) {
         self.name = data["name"].stringValue
         self.id = data["id"].stringValue
     }
