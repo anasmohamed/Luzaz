@@ -10,59 +10,33 @@ import Foundation
 import UIKit
 class SellYourItemPresenter {
     private weak var view: SellYourItemView?
-    private let sellYourItemInteractor: SellYourItemInteractor
+    private weak var firstView: SellYourItemFirstView?
+    private weak var secondView: SellYourItemSecondView?
+    private let sellYourItemInteractor: SellYourItemInteractor?
     private var sellItem : Offer?
-     
+    private var governorates : [Governorates]?
+    private var gategories : [Category]?
+    private var brands : [Brands]?
+
     init(view: SellYourItemView) {
         self.view = view
         sellItem = Offer()
+        governorates = [Governorates]()
         sellYourItemInteractor = SellYourItemInteractor()
     }
-    
-    func setEmail(email : String)  {
-        sellItem?.reseller_mail = email
-    }
-    func setFullName(fullName : String)  {
-        sellItem?.reseller_name? = fullName
-    }
-    func setMobileNumber(mobileNumber : String)  {
-        sellItem?.reseller_phone = mobileNumber
-    }
-    func setItemPrice(price : String)  {
-        sellItem?.price = price
-    }
-    func setItemPriceDiscount(discount : String)  {
-        sellItem?.discount_prec = discount
-    }
-    func setItemCity(cityIndex : Int)  {
-        sellItem?.city = String(cityIndex)
-    }
-    
-    func setItemCondition(conditon: String)  {
-        sellItem?.condition = conditon
-    }
-    
-    func setItemTitle(title:String)  {
-        sellItem?.title = title
-    }
-    func setItemDescription(descrition: String){
-        sellItem?.description = descrition
-    }
-    func setItemCategory(category : String)  {
-        sellItem?.category = category
-    }
-    func setItemSubCategory(subCategory : String) {
-        sellItem?.subCateogry = subCategory
-    }
-    func setItemBrand(brand : String) {
-        sellItem?.brand = brand
-    }
-    func setOfferImage(image : UIImage)
-    {
-        sellItem?.offerImage = image
-    }
+    init(view:SellYourItemSecondView ) {
+        self.secondView = view
+        brands = [Brands]()
+        sellYourItemInteractor = SellYourItemInteractor()
 
-    func setAppartmentArea(area : String)  {
+    }
+    init(view:SellYourItemFirstView) {
+        self.firstView = view
+        sellYourItemInteractor = SellYourItemInteractor()
+        governorates = [Governorates]()
+
+    }
+         func setAppartmentArea(area : String)  {
         sellItem?.appartment.area = area
     }
     func setAppartmentLevels(levels : String)  {
@@ -88,9 +62,61 @@ class SellYourItemPresenter {
     func getItemBrand() -> String {
         return (sellItem?.brand)!
     }
+    func  viewDidLoad()  {
+        getGovernorates(country:UserDefaults.standard.string(forKey: "country")!)
+    }
     
+    func getBrands(gategory: String)
+    {
+        sellYourItemInteractor?.getBrands(gategory: gategory) { [unowned self] (brands, error) in
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let brands = brands else { return }
+                self.brands = brands
+                self.secondView?.getBrandsSuccess()
+            }
+        }
+    }
+
+    func getGovernorates(country: String)
+    {
+        sellYourItemInteractor?.getGovernorates(country: country) { [unowned self] (governorates, error) in
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let governorates = governorates else { return }
+                self.governorates = governorates
+                self.firstView?.getGovernoratesSuccess()
+            }
+        }
+        
+        
+    }
+    func getBrandsCount() ->Int  {
+        return (brands?.count)!
+    }
+    func  getBrandsId(row:Int) -> String {
+        return brands![row].id!
+    }
+    func getBrandsNams(row: Int) -> String {
+        return brands![row].name!
+    }
+    func getGovernoratesCount() ->Int {
+        return (governorates?.count)!
+    }
+    func getGovernoratesName(row : Int) -> String  {
+        return governorates![row].name!
+    }
+    func getGovernoratesId(row: Int)-> String
+    {
+        return governorates![row].id!
+
+    }
     func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage?])
     {
-        sellYourItemInteractor.addUserOffer(token:token , privacy_policy: privacy_policy, id_governate:id_governate, id_category: id_category, id_sub_category: id_sub_category, attr: "", attr_values: "", title: title, id_brand: id_brand, offer_type:offer_type , decription: decription, price: price, discount_prec: discount_prec, youtube_link: "", reseller_name: reseller_name, reseller_phone: reseller_phone, reseller_mail: reseller_mail, contact_type: "phone", image:image, album: [nil])
+        sellYourItemInteractor?.addUserOffer(token:token , privacy_policy: privacy_policy, id_governate:id_governate, id_category: id_category, id_sub_category: id_sub_category, attr: "", attr_values: "", title: title, id_brand: id_brand, offer_type:offer_type , decription: decription, price: price, discount_prec: discount_prec, youtube_link: "", reseller_name: reseller_name, reseller_phone: reseller_phone, reseller_mail: reseller_mail, contact_type: "phone", image:image, album: [nil])
     }
 }

@@ -48,6 +48,13 @@ class MainCategoriesPresenter {
     func getFilteredMainCategoriesCount() -> Int {
         return filteredCategories.count
     }
+    func getMainCategoryName(row : Int) -> String {
+        return categories[row].name!
+    }
+    func getMainCategoryId(row : Int) -> String {
+        return categories[row].id!
+
+    }
     func getSearchedCategories(searchText : String) {
         filteredCategories =  categories.filter({( category : Category) -> Bool in
             return (category.name?.lowercased().contains(searchText.lowercased()))!

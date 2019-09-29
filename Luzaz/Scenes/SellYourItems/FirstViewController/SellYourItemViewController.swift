@@ -8,25 +8,30 @@
 
 import UIKit
 
-class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate,SellYourItemView{
+class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate,SellYourItemFirstView{
     
     @IBOutlet weak var cityPickerView: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
     var imagePicker = UIImagePickerController()
     var presenter : SellYourItemPresenter!
-    var list = ["Cairo","Giza","Alex"]
     var isCityEntered = false
     var cityIndex : String?
     var offerImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cityPickerView.dataSource = self
         cityPickerView.delegate = self
         presenter = SellYourItemPresenter(view: self)
+        
         self.hideKeyboardWhenTappedAround()
+        
 
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.viewDidLoad()
+    }
     
     @IBAction func nextButtonWasPressed(_ sender: Any) {
         if isCityEntered
@@ -41,6 +46,9 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
            showError(error: "you must choose city")
         }
         
+    }
+    func getGovernoratesSuccess() {
+        cityPickerView.reloadAllComponents()
     }
     @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
@@ -62,6 +70,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         
         present(alertController, animated: true, completion: nil)
     }
+   
     //
     //    func numberOfComponentsInPickerView (pickerView:UIPickerView) ->Int {
     //        return 1

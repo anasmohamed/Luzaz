@@ -8,11 +8,13 @@
 
 import UIKit
 
-class SellYourItemSecondViewController: UIViewController,SellYourItemView {
+class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubCategoriesView,SellYourItemSecondView {
 
     @IBOutlet weak var selectCategory: UITextField!
-    var presenter : SellYourItemPresenter!
-
+    var presenter : MainCategoriesPresenter!
+    var subCategoryPresenter: SubCategoriesPresenter!
+    var brandsPresenter : SellYourItemPresenter!
+    
     var isChooseFromCategoryList = false
     var isChooseFromSubCategoryList = false
     var isChooseFrombrandList = false
@@ -24,6 +26,9 @@ class SellYourItemSecondViewController: UIViewController,SellYourItemView {
     var subCategoryList = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
     var brands = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
     var offerImage : UIImage?
+    
+    @IBOutlet weak var brandPickerView: UIPickerView!
+    @IBOutlet weak var subCategoryPickerView: UIPickerView!
     var city : String?
     var category : String?
     var subCategory : String?
@@ -32,11 +37,28 @@ class SellYourItemSecondViewController: UIViewController,SellYourItemView {
         super.viewDidLoad()
         subCategoryStackView.isHidden = true
         brandStackView.isHidden = true
-        presenter = SellYourItemPresenter(view: self)
+        presenter = MainCategoriesPresenter(view: self)
+        subCategoryPresenter = SubCategoriesPresenter(view :self)
+        brandsPresenter = SellYourItemPresenter(view :self)
         self.hideKeyboardWhenTappedAround()
 
     }
+    func getMainCategoriesSuccess() {
+        categoryDropList.reloadAllComponents()
 
+    }
+    func getSubCategoriesSuccess() {
+        subCategoryPickerView.reloadAllComponents()
+    }
+    func getBrandsSuccess() {
+        brandPickerView.reloadAllComponents()
+    }
+    func showIndicator() {
+        
+    }
+    func hideIndicator() {
+        
+    }
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList
         {

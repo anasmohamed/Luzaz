@@ -77,4 +77,110 @@ class SellYourItemInteractor {
             }
             
         }    }
+    
+    func getGovernorates(country: String,
+                         completionHandler: @escaping ([Governorates]?, Error?) -> Void) {
+        Alamofire.request(LuzazRouter.getGovernorates(country: country)).responseJSON {(response) in
+            
+            if let response = response.data {
+                print("Response Data: \(response)")
+            } else {
+                print("Response Data: nil")
+            }
+            if let request = response.request {
+                print("Request Request: \(request)")
+                print("Request Description: \(request.description)")
+                print("Request Debug Description: \(request.debugDescription)")
+                
+                print("Response Request HTTP method: \(request.httpMethod!)")
+                //                print("Response Request Content-Type: \(request.value(forHTTPHeaderField: NetworkingConstants.contentType)!)")
+            } else {
+                print("Response Request: nil")
+            }
+            
+            if let responseStatusCode = response.response {
+                print("Response Status Code: \(responseStatusCode.statusCode)")
+            } else {
+                print("Response Status Code: nil")
+            }
+            
+            if let error = response.error {
+                print("Response Error Code: \(error.localizedDescription)")
+            } else {
+                print("Response Error Code: nil")
+            }
+            
+            
+            let result = response.result
+            switch result {
+            case .success :
+                let json = JSON(result.value!)
+                print(json)
+                var governoratesList = [Governorates]()
+                let governorates = json["data"].arrayValue
+                for governorate in governorates
+                {
+                    let data = Governorates(withJSON:governorate)
+                    governoratesList.append(data)
+                }
+                completionHandler(governoratesList, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
+    func getBrands(gategory: String,
+                         completionHandler: @escaping ([Brands]?, Error?) -> Void) {
+        Alamofire.request(LuzazRouter.getBrands(gategory:gategory)).responseJSON {(response) in
+            
+            if let response = response.data {
+                print("Response Data: \(response)")
+            } else {
+                print("Response Data: nil")
+            }
+            if let request = response.request {
+                print("Request Request: \(request)")
+                print("Request Description: \(request.description)")
+                print("Request Debug Description: \(request.debugDescription)")
+                
+                print("Response Request HTTP method: \(request.httpMethod!)")
+                //                print("Response Request Content-Type: \(request.value(forHTTPHeaderField: NetworkingConstants.contentType)!)")
+            } else {
+                print("Response Request: nil")
+            }
+            
+            if let responseStatusCode = response.response {
+                print("Response Status Code: \(responseStatusCode.statusCode)")
+            } else {
+                print("Response Status Code: nil")
+            }
+            
+            if let error = response.error {
+                print("Response Error Code: \(error.localizedDescription)")
+            } else {
+                print("Response Error Code: nil")
+            }
+            
+            
+            let result = response.result
+            switch result {
+            case .success :
+                let json = JSON(result.value!)
+                print(json)
+                var brandsList = [Brands]()
+                let brands = json["data"].arrayValue
+                for brand in brands
+                {
+                    let data = Brands(withJSON:brand)
+                    brandsList.append(data)
+                }
+                completionHandler(brandsList, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+            
+        }
+    }
+
 }

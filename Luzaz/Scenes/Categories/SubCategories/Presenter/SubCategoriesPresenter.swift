@@ -40,7 +40,10 @@ class SubCategoriesPresenter {
         return subCategories.count
     }
     
-    
+    func getSubCategoriesName(row: Int)
+    {
+        return subCategories
+    }
     
     func configure(cell: UITableViewCell, for index: Int) {
         let category = subCategories[index]

@@ -10,10 +10,11 @@
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
 		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
+		CC0F0CD02340F356000F6C4A /* Governorates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CCF2340F356000F6C4A /* Governorates.swift */; };
+		CC0F0CD22340F663000F6C4A /* SellYourItemFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */; };
+		CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */; };
+		CC0F0CD7234114BC000F6C4A /* Brands.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD6234114BC000F6C4A /* Brands.swift */; };
 		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
-		CC57507623384DEA00BBBE63 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507323384DEA00BBBE63 /* SSRadioButton.swift */; };
-		CC57507723384DEA00BBBE63 /* SSRadioButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */; };
-		CC57507823384DEA00BBBE63 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */; };
 		CC726958233AC613006B61DD /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A2233AC612006B61DD /* UserInteractor.swift */; };
 		CC726959233AC613006B61DD /* LoginViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */; };
 		CC72695A233AC613006B61DD /* LoginViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A4233AC612006B61DD /* LoginViewController+TextField.swift */; };
@@ -189,10 +190,11 @@
 		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0F0CCF2340F356000F6C4A /* Governorates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Governorates.swift; sourceTree = "<group>"; };
+		CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SellYourItemFirstView.swift; path = ../EndViewController/Presenter/SellYourItemFirstView.swift; sourceTree = "<group>"; };
+		CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
+		CC0F0CD6234114BC000F6C4A /* Brands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brands.swift; sourceTree = "<group>"; };
 		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		CC57507323384DEA00BBBE63 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
-		CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonModel.swift; sourceTree = "<group>"; };
-		CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		CC7268A2233AC612006B61DD /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CC7268A4233AC612006B61DD /* LoginViewController+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextField.swift"; sourceTree = "<group>"; };
@@ -411,16 +413,6 @@
 			children = (
 			);
 			name = "New Group";
-			sourceTree = "<group>";
-		};
-		CC57507223384DEA00BBBE63 /* SSRadioButtonController */ = {
-			isa = PBXGroup;
-			children = (
-				CC57507323384DEA00BBBE63 /* SSRadioButton.swift */,
-				CC57507423384DEA00BBBE63 /* SSRadioButtonModel.swift */,
-				CC57507523384DEA00BBBE63 /* SSRadioButtonsController.swift */,
-			);
-			path = SSRadioButtonController;
 			sourceTree = "<group>";
 		};
 		CC72689F233AC612006B61DD /* Scenes */ = {
@@ -895,8 +887,8 @@
 				CC72692E233AC613006B61DD /* FifthViewController */,
 				CC726933233AC613006B61DD /* FirstViewController */,
 				CC726939233AC613006B61DD /* FourthViewController */,
-				CC72693F233AC613006B61DD /* Interactor */,
 				CC726941233AC613006B61DD /* SecondViewController */,
+				CC72693F233AC613006B61DD /* Interactor */,
 				CC726947233AC613006B61DD /* ThirdViewController */,
 			);
 			path = SellYourItems;
@@ -931,6 +923,7 @@
 		CC726933233AC613006B61DD /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */,
 				CC726937233AC613006B61DD /* SellYourItemViewController+PickerDelegate.swift */,
 				CC726938233AC613006B61DD /* SellYourItemViewController.swift */,
 			);
@@ -959,6 +952,7 @@
 			children = (
 				CC726945233AC613006B61DD /* SellYourItemSecondViewController.swift */,
 				CC726946233AC613006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift */,
+				CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */,
 			);
 			path = SecondViewController;
 			sourceTree = "<group>";
@@ -1056,7 +1050,6 @@
 				CC72689F233AC612006B61DD /* Scenes */,
 				CCD9BE5A233930C8002B9201 /* Network */,
 				CCD9BE2E2339111E002B9201 /* Model */,
-				CC57507223384DEA00BBBE63 /* SSRadioButtonController */,
 				CC8695F122F4F61C00E9F14D /* BrowseAdViewController.swift */,
 				CC8695F722F4F61C00E9F14D /* HomeViewController.swift */,
 				CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */,
@@ -1109,6 +1102,8 @@
 				CCD9BE362339111E002B9201 /* Order.swift */,
 				CCD9BE372339111E002B9201 /* Question.swift */,
 				CCD9BE382339111E002B9201 /* User.swift */,
+				CC0F0CCF2340F356000F6C4A /* Governorates.swift */,
+				CC0F0CD6234114BC000F6C4A /* Brands.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1387,6 +1382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC72696B233AC613006B61DD /* MainCategoriesCellView.swift in Sources */,
+				CC0F0CD7234114BC000F6C4A /* Brands.swift in Sources */,
 				CCE4992A233B5CE30030959D /* ChangePasswordPresenter.swift in Sources */,
 				CC726965233AC613006B61DD /* MainCateoriesCollectionViewCell.swift in Sources */,
 				CC726992233AC613006B61DD /* CountriesViewController.swift in Sources */,
@@ -1401,7 +1397,6 @@
 				CC7269CD233AC614006B61DD /* FavoriteOffersView.swift in Sources */,
 				CCD9BE3C2339111E002B9201 /* Competation.swift in Sources */,
 				CC72698B233AC613006B61DD /* CompetitionView.swift in Sources */,
-				CC57507823384DEA00BBBE63 /* SSRadioButtonsController.swift in Sources */,
 				CC72696E233AC613006B61DD /* SubCategoriesPresenter.swift in Sources */,
 				CC72699E233AC613006B61DD /* MyProductViewController.swift in Sources */,
 				CC7269B3233AC614006B61DD /* SellYourItemEndPresenter.swift in Sources */,
@@ -1423,7 +1418,6 @@
 				CC7269A4233AC613006B61DD /* MyProductTableViewCell.swift in Sources */,
 				CC72699F233AC613006B61DD /* OrderTableViewCell.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
-				CC57507623384DEA00BBBE63 /* SSRadioButton.swift in Sources */,
 				CC726960233AC613006B61DD /* RegistrationView.swift in Sources */,
 				CCD9BE5D233930C8002B9201 /* LuzazRouter.swift in Sources */,
 				CC8148FE233AC99100F71A2B /* ProfilePresenter.swift in Sources */,
@@ -1458,7 +1452,6 @@
 				CC72698C233AC613006B61DD /* QuestionsViewController+PresenterDelegate.swift in Sources */,
 				CC7269A8233AC614006B61DD /* OffersInteractor.swift in Sources */,
 				CC726974233AC613006B61DD /* SubCategoryOffersView.swift in Sources */,
-				CC57507723384DEA00BBBE63 /* SSRadioButtonModel.swift in Sources */,
 				CC726970233AC613006B61DD /* SubCategoriesViewConteroller+PresenterDelegate.swift in Sources */,
 				CC7269BF233AC614006B61DD /* SellYourItemFourthViewController.swift in Sources */,
 				CCD9BE412339111E002B9201 /* Question.swift in Sources */,
@@ -1473,9 +1466,11 @@
 				CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */,
 				CC72698A233AC613006B61DD /* CompetitionPresenter.swift in Sources */,
 				CC7269C8233AC614006B61DD /* SellYourItemThirdViewController.swift in Sources */,
+				CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
 				CCD9BE3A2339111E002B9201 /* Appartment.swift in Sources */,
 				CC7269CF233AC614006B61DD /* FavoriteOffersTableViewCell.swift in Sources */,
+				CC0F0CD22340F663000F6C4A /* SellYourItemFirstView.swift in Sources */,
 				CC726982233AC613006B61DD /* UsersChatsPresenter.swift in Sources */,
 				CC7269C9233AC614006B61DD /* FavoriteOffersViewController+PresenterDelegate.swift in Sources */,
 				CC726969233AC613006B61DD /* MainCateogriesViewController.swift in Sources */,
@@ -1489,6 +1484,7 @@
 				CC72698E233AC613006B61DD /* CompetionCellView.swift in Sources */,
 				CC726998233AC613006B61DD /* LanguagesViewController.swift in Sources */,
 				CC7269D4233AC68B006B61DD /* ProfileInteractor.swift in Sources */,
+				CC0F0CD02340F356000F6C4A /* Governorates.swift in Sources */,
 				CC726972233AC613006B61DD /* SubCategoryOffersInteractor.swift in Sources */,
 				CCD9BE422339111E002B9201 /* User.swift in Sources */,
 				CC726976233AC613006B61DD /* SubCategoryOffersViewController.swift in Sources */,

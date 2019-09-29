@@ -44,6 +44,8 @@ struct NetworkingConstants {
     static let logoutUser = "logoutUser"
     static let setPasswordByToken = "setPasswordByToken"
     static let addUserOffer = "addUserOffer"
+    static let getGovernorates = "getGovernorates"
+    static let getBrands = "getBrands"
 
 
 
@@ -182,6 +184,14 @@ struct NetworkingConstants {
     static let addUserOfferAttr = "attr"
     static let addUserOfferAttrValues = "attr_values"
     static let addUserOfferYoutubeLink = "youtube_link"
+    
+    
+    //getGovernorates Parameter
+    static let getGovernoratesCountry = "country"
+    
+    //getBrands Parameter
+    static let  getBrandsCategory = "category"
+
 
 }
 

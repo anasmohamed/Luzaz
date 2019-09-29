@@ -16,15 +16,16 @@ extension SellYourItemViewController : UIPickerViewDelegate,UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
        
-        return list.count
+        return presenter.getGovernoratesCount()
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return list[row]
+        
+        return presenter.getGovernoratesName(row: row)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        cityIndex = String(row)
+        cityIndex = presenter.getGovernoratesId(row: row)
         isCityEntered = true
     }
 }

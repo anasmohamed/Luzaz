@@ -17,10 +17,10 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         if pickerView.tag == 1
         {
-            return categoryList.count
+            return presenter.getMainCategoriesCount()
         }else if pickerView.tag == 2
         {
-            return subCategoryList.count
+            return subCategoryPresenter.getSubCategoriesCount()
             
         }else{
             return brands.count
@@ -31,7 +31,7 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1
         {
-            return categoryList[row]
+            return presenter.getMainCategoryName(row: row)
         }else if pickerView.tag == 2
         {
             return subCategoryList[row]
@@ -45,14 +45,13 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
         if pickerView.tag == 1
         {
             subCategoryStackView.isHidden = false
-            presenter.setItemCategory(category: categoryList[row])
-            category = categoryList[row]
+            category = presenter.getMainCategoryId(row: row)
             isChooseFromCategoryList = true
         }
         else if pickerView.tag == 2
         {
             brandStackView.isHidden = false
-            presenter.setItemSubCategory(subCategory: subCategoryList[row])
+           
             subCategory = subCategoryList[row]
             isChooseFromSubCategoryList = true
         }
