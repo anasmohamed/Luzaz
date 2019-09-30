@@ -39,9 +39,10 @@ class RegistrationPresenter {
             user.phoneNumber = phone
             user.email = email
             user.password = password
-            
+            user.rePassword = confirmPassword
+            user.countryId = UserDefaults.standard.string(forKey: "country")!
             view?.showIndicator()
-            userInteractor?.register(user: user) { [unowned self] error in
+            userInteractor?.register(user: user) { [unowned self] (message,error) in
                 
                 self.view?.hideIndicator()
                 if let error = error {

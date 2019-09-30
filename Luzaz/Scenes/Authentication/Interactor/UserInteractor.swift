@@ -70,10 +70,10 @@ class UserInteractor {
     }
     //
     func register(user: User,
-                  completionHandler: @escaping (Error?) -> Void) {
+                  completionHandler: @escaping (String?,Error?) -> Void) {
         
         Alamofire.request(LuzazRouter.register(user: user)).responseJSON {
-            (response: DataResponse<Any>) in
+            (response) in
             if let response = response.data {
                 print("Response Data: \(response)")
             } else {
@@ -105,11 +105,20 @@ class UserInteractor {
 
             let result = response.result
             print(result)
+            
             switch result {
             case .success:
-                completionHandler(nil)
+                let json = JSON(result.value)
+                print(json)
+                
+                if json["code"].stringValue == "1" {
+                    completionHandler(nil, nil)
+                } else {
+                    let jsonUser = json["data"].object
+                    print(jsonUser)}
+                completionHandler("",nil)
             case .failure(let error):
-                completionHandler(error)
+                completionHandler("",error)
             }
         }
     }

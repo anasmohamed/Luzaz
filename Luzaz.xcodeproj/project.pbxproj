@@ -15,6 +15,7 @@
 		CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */; };
 		CC0F0CD7234114BC000F6C4A /* Brands.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD6234114BC000F6C4A /* Brands.swift */; };
 		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
+		CC1DA8F6234261D700A0C5D9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */; };
 		CC726958233AC613006B61DD /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A2233AC612006B61DD /* UserInteractor.swift */; };
 		CC726959233AC613006B61DD /* LoginViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */; };
 		CC72695A233AC613006B61DD /* LoginViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A4233AC612006B61DD /* LoginViewController+TextField.swift */; };
@@ -196,6 +197,7 @@
 		CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
 		CC0F0CD6234114BC000F6C4A /* Brands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brands.swift; sourceTree = "<group>"; };
 		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		CC7268A2233AC612006B61DD /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CC7268A4233AC612006B61DD /* LoginViewController+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextField.swift"; sourceTree = "<group>"; };
@@ -1070,6 +1072,7 @@
 				CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */,
 				CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */,
 				CCCD733C23315B97005823D6 /* FavImage.swift */,
+				CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */,
 			);
 			path = Luzaz;
 			sourceTree = "<group>";
@@ -1516,6 +1519,7 @@
 				CC7269B8233AC614006B61DD /* SellYourItemFifthViewController.swift in Sources */,
 				CC726987233AC613006B61DD /* UsersChatsViewController+PresetnerDelegate.swift in Sources */,
 				CC726964233AC613006B61DD /* TextFieldIcon.swift in Sources */,
+				CC1DA8F6234261D700A0C5D9 /* RoundButton.swift in Sources */,
 				CC726989233AC613006B61DD /* CompetitionInteractor.swift in Sources */,
 				CCD9BE3B2339111E002B9201 /* Category.swift in Sources */,
 				CC7269A3233AC613006B61DD /* MyProductCellView.swift in Sources */,

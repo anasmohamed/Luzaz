@@ -22,17 +22,16 @@ func color(_ rgbColor: Int) -> UIColor{
 class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate{
     var offer : Offer!
     @IBOutlet var heartButton: FaveButton?
-    
+    @IBOutlet weak var sellerNameLbl: UILabel!
+    @IBOutlet weak var addToChatBtn: UIButton!
+    @IBOutlet weak var callBtn: UIButton!
     @IBOutlet weak var offerDescriptionLabel: UILabel!
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var offerTitleLabel: UILabel!
     @IBOutlet weak var offerImageView: UIImageView!
     var presenter: OfferDetailesPresenter!
     var token : String?
-    
-    @IBAction func callBtnWasPressed(_ sender: Any) {
-    }
-    @IBOutlet weak var callBtn: UIButton!
+   
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     override func viewDidLoad() {
@@ -45,6 +44,8 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
         token = UserDefaults.standard.string(forKey: "token")!
+  
+        
         // Do any additional setup after loading the view.
     }
     
@@ -61,15 +62,17 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         }
         return nil
     }
-    @IBAction func addProductToFavoriteBtnWasPressed(_ sender: Any) {
-        
-    }
+  
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.height - 70) + offerDescriptionLabel.bounds.size.height)
+        super.viewDidAppear(animated)
+        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+900)
+        sellerNameLbl.text = offer.reseller_name
+
+       
     }
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
@@ -87,6 +90,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         
         present(alertController, animated: true, completion: nil)
     }
+   
     func imageLable()
     {
         let imageAttachment =  NSTextAttachment()
@@ -107,4 +111,30 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         self.dateLbl.attributedText = completeText;
     }
     
+    @IBAction func addToChatBtnWasPressed(_ sender: Any) {
+        print("anas")
+
+    }
+    
+    @IBAction func callBtnWasPressed(_ sender: Any) {
+        
+        print("anas")
+        //        print("anas")
+        //        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
+        //            if #available(iOS 10, *) {
+        //                UIApplication.shared.open(url)
+        //            } else {
+        //                UIApplication.shared.openURL(url)
+    }
+//    @IBAction func callBtnWasPressed(_ sender: Any) {
+//        print("anas")
+//        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
+//            if #available(iOS 10, *) {
+//                UIApplication.shared.open(url)
+//            } else {
+//                UIApplication.shared.openURL(url)
+//            }
+//    }
+    
+//       }
 }
