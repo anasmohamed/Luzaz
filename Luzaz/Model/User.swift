@@ -35,6 +35,7 @@ class User :NSObject,NSCoding{
         self.buddyId = data[NetworkingConstants.buudyId].stringValue
         self.buddyMail = data[NetworkingConstants.buddyMail].stringValue
         self.phoneNumber = data[NetworkingConstants.phone].stringValue
+        
     }
     
     init(userId: String?, fullName: String?, email: String?, password: String?,token : String,phone: String) {

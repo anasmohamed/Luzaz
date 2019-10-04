@@ -26,17 +26,19 @@ class RegistrationPresenter {
                   confirmPassword: String) {
         
         if !isEmpty(string: fullName),
-            !isEmpty(string: phone),
+           
             !isEmpty(string: password),
             !isEmpty(string: confirmPassword),
             isValidEmailAddress(emailAddressString: email),
            // isValidPhoneNumber(phoneNumberString: phone),
             isValidPassword(password: password),
             isValidConfrimPassword(password: password, confirmPassword: confirmPassword) {
-            
+           
             let user = User()
+            if !isEmpty(string: phone){
+                user.phoneNumber = phone
+            }
             user.fullName = fullName
-            user.phoneNumber = phone
             user.email = email
             user.password = password
             user.rePassword = confirmPassword

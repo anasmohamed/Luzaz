@@ -31,7 +31,9 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBOutlet weak var offerImageView: UIImageView!
     var presenter: OfferDetailesPresenter!
     var token : String?
-   
+    
+    
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     override func viewDidLoad() {
@@ -44,11 +46,17 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
         token = UserDefaults.standard.string(forKey: "token")!
-  
+        if offer.contactType == "1"
+        {
+            callBtn.isHidden = true
+        }
         
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     let colors = [
         DotColors(first: color(0x7DC2F4), second: color(0xE2264D)),
         DotColors(first: color(0xF8CC61), second: color(0x9BDFBA)),
@@ -62,7 +70,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         }
         return nil
     }
-  
+    
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
     }
@@ -71,8 +79,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         super.viewDidAppear(animated)
         scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+900)
         sellerNameLbl.text = offer.reseller_name
-
-       
+        
     }
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
@@ -90,7 +97,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         
         present(alertController, animated: true, completion: nil)
     }
-   
+    
     func imageLable()
     {
         let imageAttachment =  NSTextAttachment()
@@ -111,30 +118,35 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         self.dateLbl.attributedText = completeText;
     }
     
-    @IBAction func addToChatBtnWasPressed(_ sender: Any) {
-        print("anas")
-
+    
+    @IBAction func chatWithSellerBtnWasPressed(_ sender: Any) {
+        let conversationVC = storyboard?.instantiateViewController(withIdentifier: "ConverstionVC") as! ConverstionViewController
+        conversationVC.id = offer.reseller_id
+        self.present(conversationVC, animated: true, completion: nil)
+        
     }
     
     @IBAction func callBtnWasPressed(_ sender: Any) {
         
         print("anas")
         //        print("anas")
+        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+        //    @IBAction func callBtnWasPressed(_ sender: Any) {
+        //        print("anas")
         //        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
         //            if #available(iOS 10, *) {
         //                UIApplication.shared.open(url)
         //            } else {
         //                UIApplication.shared.openURL(url)
-    }
-//    @IBAction func callBtnWasPressed(_ sender: Any) {
-//        print("anas")
-//        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
-//            if #available(iOS 10, *) {
-//                UIApplication.shared.open(url)
-//            } else {
-//                UIApplication.shared.openURL(url)
-//            }
-//    }
-    
-//       }
+        //            }
+        //    }
+        
+        //       }
 }

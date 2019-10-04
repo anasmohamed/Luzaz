@@ -205,9 +205,9 @@
 		CC7268A6233AC612006B61DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC7268A8233AC612006B61DD /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		CC7268A9233AC612006B61DD /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		CC7268AA233AC612006B61DD /* RegistrationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		CC7268AA233AC612006B61DD /* RegistrationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationPresenter.swift; path = Presenter/RegistrationPresenter.swift; sourceTree = "<group>"; };
 		CC7268AB233AC612006B61DD /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
-		CC7268AC233AC612006B61DD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CC7268AC233AC612006B61DD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ../RegisterViewController.swift; sourceTree = "<group>"; };
 		CC7268AD233AC612006B61DD /* RegistrationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		CC7268AE233AC612006B61DD /* RegistrationViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		CC7268AF233AC612006B61DD /* TextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
@@ -424,13 +424,13 @@
 			children = (
 				CCE49922233B5B1F0030959D /* ChangePassword */,
 				CC7268A0233AC612006B61DD /* Authentication */,
+				CC726907233AC613006B61DD /* MyProducts */,
 				CC7268B0233AC612006B61DD /* Categories */,
 				CC7268D3233AC612006B61DD /* Chat */,
 				CC7268EB233AC612006B61DD /* Competition */,
 				CC7268F8233AC613006B61DD /* Countries */,
 				CC726901233AC613006B61DD /* Languages */,
 				CC726903233AC613006B61DD /* LeftSidePanel */,
-				CC726907233AC613006B61DD /* MyProducts */,
 				CC726916233AC613006B61DD /* Offers */,
 				CC726927233AC613006B61DD /* Profile */,
 				CC726928233AC613006B61DD /* SellYourItems */,
@@ -447,8 +447,8 @@
 				CC7268A4233AC612006B61DD /* LoginViewController+TextField.swift */,
 				CC7268A5233AC612006B61DD /* LoginViewController+TextFieldDelegate.swift */,
 				CC7268A6233AC612006B61DD /* LoginViewController.swift */,
+				CC7268AA233AC612006B61DD /* RegistrationPresenter.swift */,
 				CC7268A7233AC612006B61DD /* Presenter */,
-				CC7268AC233AC612006B61DD /* RegisterViewController.swift */,
 				CC7268AD233AC612006B61DD /* RegistrationViewController+PresenterDelegate.swift */,
 				CC7268AE233AC612006B61DD /* RegistrationViewController+TextFieldDelegate.swift */,
 				CC7268AF233AC612006B61DD /* TextFieldIcon.swift */,
@@ -467,9 +467,9 @@
 		CC7268A7233AC612006B61DD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CC7268AC233AC612006B61DD /* RegisterViewController.swift */,
 				CC7268A8233AC612006B61DD /* LoginPresenter.swift */,
 				CC7268A9233AC612006B61DD /* LoginView.swift */,
-				CC7268AA233AC612006B61DD /* RegistrationPresenter.swift */,
 				CC7268AB233AC612006B61DD /* RegistrationView.swift */,
 			);
 			path = Presenter;

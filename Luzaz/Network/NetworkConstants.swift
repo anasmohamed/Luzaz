@@ -60,6 +60,10 @@ struct NetworkingConstants {
     static let price_after_discount = "price_after_discount"
     static let image = "image"
     static let reseller_name = "reseller_name"
+    static let reseller_phone = "reseller_phone"
+    static let reseller_mail = "reseller_mail"
+    static let reseller_id = "id_user"
+
     static let offerId = "id"
     static let offerDate = "date"
     

@@ -27,7 +27,9 @@ class Offer {
     var date : String?
     var reseller_mail : String?
     var reseller_phone : String?
+    var reseller_id : String?
     var offerImage : UIImage?
+    var contactType : String?
     var appartment = Appartment()
     init(withJSON data: JSON) {
         self.offerId = data[NetworkingConstants.offerId].stringValue
@@ -39,6 +41,11 @@ class Offer {
         self.image  = data[NetworkingConstants.image].stringValue
         self.reseller_name  = data[NetworkingConstants.reseller_name].stringValue
         self.date = data[NetworkingConstants.offerDate].stringValue
+        self.reseller_phone = data[NetworkingConstants.reseller_phone].stringValue
+        self.reseller_mail = data[NetworkingConstants.reseller_mail].stringValue
+        self.reseller_id = data[NetworkingConstants.reseller_id].stringValue
+        self.contactType = data[NetworkingConstants.contentType].stringValue
+
     }
     
     init() {
