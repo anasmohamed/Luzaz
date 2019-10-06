@@ -35,6 +35,8 @@ class User :NSObject,NSCoding{
         self.buddyId = data[NetworkingConstants.buudyId].stringValue
         self.buddyMail = data[NetworkingConstants.buddyMail].stringValue
         self.phoneNumber = data[NetworkingConstants.phone].stringValue
+        self.email = data[NetworkingConstants.email].stringValue
+        
         
     }
     
@@ -65,7 +67,7 @@ class User :NSObject,NSCoding{
         aCoder.encode(email, forKey: "email")
         aCoder.encode(password, forKey: "password")
         aCoder.encode(token,forKey:"token")
-        aCoder.encode(token,forKey:"phone")
+        aCoder.encode(phoneNumber,forKey:"phone")
     }
     
     

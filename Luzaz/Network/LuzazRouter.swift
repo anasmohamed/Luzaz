@@ -127,7 +127,7 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.countryId] = user.countryId
             params[NetworkingConstants.fullName] = user.fullName
             params[NetworkingConstants.phone] = user.phoneNumber
-            params[NetworkingConstants.email] = user.email
+            params[NetworkingConstants.mail] = user.email
             params[NetworkingConstants.password] = user.password
             params[NetworkingConstants.rePassword] = user.rePassword
         case let .login(email,password):

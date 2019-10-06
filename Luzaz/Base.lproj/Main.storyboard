@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nl7-IF-Byw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fbp-fG-y5G">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -283,6 +283,7 @@
                         <outlet property="favoriteBtn" destination="WXo-EP-bF8" id="zZb-Gd-6x6"/>
                         <outlet property="homeBtn" destination="twD-eN-N97" id="J5p-sU-ZJT"/>
                         <outlet property="myProducatBtn" destination="8IV-Fb-KQ3" id="Vrl-Bz-xds"/>
+                        <outlet property="registerBtn" destination="3WX-Cy-81v" id="WlE-Wh-g19"/>
                         <outlet property="sellBtn" destination="j0T-EP-yWp" id="ARE-fO-AUa"/>
                         <outlet property="winBtn" destination="b3h-X1-4Bn" id="WGW-jW-BcZ"/>
                     </connections>
@@ -983,7 +984,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="IXY-42-cgh"/>
                                                     <constraint firstAttribute="height" constant="38" id="ibm-wU-pSx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="BDE78D62-AA96-4403-AE97-24063E59DA95"/>
+                                                <state key="normal" title="Button" image="19CC6285-D023-4BA5-A6AB-174DCCF026EC"/>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -2642,7 +2643,7 @@
         <!--Profile View Controller-->
         <scene sceneID="97r-Fs-YOl">
             <objects>
-                <viewController id="Al5-UE-J81" customClass="ProfileViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="Al5-UE-J81" customClass="ProfileViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aHp-Im-Ib5"/>
                         <viewControllerLayoutGuide type="bottom" id="FIM-He-ZZa"/>
@@ -2663,7 +2664,7 @@
                                             <constraint firstAttribute="height" constant="30" id="858-iR-9cm"/>
                                             <constraint firstAttribute="width" constant="30" id="qcH-7a-Nrj"/>
                                         </constraints>
-                                        <state key="normal" image="menuSliderBtn"/>
+                                        <state key="normal" image="back-arrow"/>
                                         <connections>
                                             <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="d8B-AV-764"/>
                                         </connections>
@@ -2863,7 +2864,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Uj8-Nt-Iou"/>
                                             <constraint firstAttribute="width" constant="30" id="hxu-JE-Dgk"/>
                                         </constraints>
-                                        <state key="normal" image="menuSliderBtn"/>
+                                        <state key="normal" image="back-arrow"/>
                                         <connections>
                                             <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="zgW-Ee-IeI"/>
                                         </connections>
@@ -4117,8 +4118,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow on footer between icons" width="81" height="24"/>
-        <image name="BDE78D62-AA96-4403-AE97-24063E59DA95" width="128" height="128">
+        <image name="19CC6285-D023-4BA5-A6AB-174DCCF026EC" width="128" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -5282,6 +5282,7 @@ TwABDlcAAQ5kAAEOaQABDmsAAQ5tAAEOcgABDnoAAQ59AAEOggABDooAAQ6NAAEOnwABDqIAAQ6nAAAA
 AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAABDqk
 </mutableData>
         </image>
+        <image name="Arrow on footer between icons" width="81" height="24"/>
         <image name="Chat Icon" width="71" height="51"/>
         <image name="Details Icon active color" width="66" height="66"/>
         <image name="Details Icon on footer" width="66" height="66"/>

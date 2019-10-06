@@ -28,8 +28,8 @@ class ProfileViewController: UIViewController,ProfileView {
         prefs.removeObject(forKey:"fullName")
         prefs.removeObject(forKey:"email")
         prefs.removeObject(forKey:"password")
-       dismiss(animated: true, completion: nil)
-
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        present(loginVC, animated: true, completion: nil)
     }
     func showError(error: String) {
         
@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController,ProfileView {
     }
     @IBAction func logutBtnWasPressed(_ sender: Any) {
         presenter.logoutUser(user:UserDefaults.standard.string(forKey: "userId")!)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,9 @@ class ProfileViewController: UIViewController,ProfileView {
         userName = UserDefaults.standard.string(forKey: "fullName")!
         email = UserDefaults.standard.string(forKey: "email")!
         phone = UserDefaults.standard.string(forKey: "phone")!
+        emailLbl.text = email
+        userNameLbl.text = userName
+        phoneLbl.text = phone
         getCountryImage()
     }
     func getCountryImage()

@@ -20,8 +20,8 @@ extension ChangePasswordViewController : ChangePasswordView
     
     func changePasswordSuccess(message:String) {
         showError(error:message)
-//        dismiss(animated: true, completion: nil)
-
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        present(loginVC, animated: true, completion: nil)
     }
     
     

@@ -1128,8 +1128,8 @@
 			children = (
 				CCE49923233B5B1F0030959D /* Interactor */,
 				CCE49924233B5B1F0030959D /* Presenter */,
-				CCE49925233B5B430030959D /* ChangePasswordViewController.swift */,
 				CCE4992D233B5F0A0030959D /* ChangePasswordViewController+PresenterDelegate.swift */,
+				CCE49925233B5B430030959D /* ChangePasswordViewController.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";

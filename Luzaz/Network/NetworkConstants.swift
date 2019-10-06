@@ -75,7 +75,7 @@ struct NetworkingConstants {
     static let userId = "user_id"
     static let photo = "photo"
     static let fullName = "name"
-    static let email = "mail"
+    static let email = "email"
     static let phone = "phone"
     static let password = "password"
     static let rePassword = "re_password"
@@ -83,7 +83,8 @@ struct NetworkingConstants {
     static let token = "token"
     static let countryNameArabic = "country_name_arabic"
     static let countryNameEnglish = "country_name_english"
-    
+    static let mail = "mail"
+
     //GET MAIN CATEGORIES PARAMETER
     static let mainCategoriesId = "id"
     static let idCategory = "id_category"
