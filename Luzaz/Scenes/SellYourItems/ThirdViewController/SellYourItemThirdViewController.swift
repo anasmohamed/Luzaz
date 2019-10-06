@@ -19,6 +19,11 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     var city : String?
     var category : String?
     var subCategory : String?
+    var bathrooms : String?
+    var bedrooms: String?
+    var area : String?
+    var finished :String?
+    var level : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
@@ -36,11 +41,22 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if !(finishedTextView.text?.isEmpty)! && !(levelsTextView.text?.isEmpty)! && !(areaTextView.text?.isEmpty)! && !(bathroomsNumberTextView.text?.isEmpty)! && !(bedroomsNumberTextView.text?.isEmpty)!
         {
+            bedrooms = bedroomsNumberTextView.text
+            bathrooms = bathroomsNumberTextView.text
+            area = areaTextView.text
+            level = levelsTextView.text
+            finished = finishedTextView.text
             let sellYourItemFourthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
             sellYourItemFourthVC.city = city
             sellYourItemFourthVC.offerImage = offerImage
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
+            sellYourItemFourthVC.area = area
+            sellYourItemFourthVC.bedrooms = bedrooms
+            sellYourItemFourthVC.bathrooms = bathrooms
+            sellYourItemFourthVC.finished = finished
+            sellYourItemFourthVC.level = level
+
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             
         }else

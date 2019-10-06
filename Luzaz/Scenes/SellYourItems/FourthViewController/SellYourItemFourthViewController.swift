@@ -25,6 +25,11 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
     var offerTitle: String?
     var offerLocation : String?
     var offreDescription: String?
+    var bathrooms : String?
+    var bedrooms: String?
+    var area : String?
+    var finished :String?
+    var level : String?
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -58,7 +63,14 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
             sellYourItemFifthVC.condition  = offerCondition
             
             sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
-            
+            if !(bedrooms?.isEmpty)!
+            {
+                sellYourItemFifthVC.area = area
+                sellYourItemFifthVC.bedrooms = bedrooms
+                sellYourItemFifthVC.bathrooms = bathrooms
+                sellYourItemFifthVC.level = level
+                sellYourItemFifthVC.finished = finished
+            }
             self.present(sellYourItemFifthVC,animated:true,completion: nil)
             
         }else

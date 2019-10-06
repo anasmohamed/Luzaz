@@ -22,7 +22,11 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var offerTitle: String?
     var offerDescription: String?
     var location : String?
-    
+    var bathrooms : String?
+    var bedrooms: String?
+    var area : String?
+    var finished :String?
+    var level : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
@@ -37,7 +41,6 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
             sellYourItemEndVC.brand = brand
             sellYourItemEndVC.category = category
             sellYourItemEndVC.city = city
-         
             sellYourItemEndVC.offerDescription = offerDescription
             sellYourItemEndVC.offerImage = offerImage
             sellYourItemEndVC.subCategory = subCategory

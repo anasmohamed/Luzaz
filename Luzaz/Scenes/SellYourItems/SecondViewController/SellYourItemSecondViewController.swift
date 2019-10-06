@@ -34,6 +34,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var category : String?
     var subCategory : String?
     var brand : String?
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         subCategoryStackView.isHidden = true
