@@ -20,6 +20,9 @@ class ChangePasswordViewController: UIViewController {
         presenter = ChangePasswordPresenter(view:self)
     }
 
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true,completion: nil)
+    }
     @IBAction func changePasswordBtnWasPressed(_ sender: Any) {
         if !((passwordTextField.text?.isEmpty)! && (rePasswordTextField.text?.isEmpty)!){
             presenter.setPasswordByToken(token:UserDefaults.standard.string(forKey: "token")! , password: passwordTextField.text!, rePassword: rePasswordTextField.text!)

@@ -41,6 +41,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         presenter = MainCategoriesPresenter(view: self)
         subCategoryPresenter = SubCategoriesPresenter(view :self)
         brandsPresenter = SellYourItemPresenter(view :self)
+        presenter.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
 
     }
@@ -70,7 +71,15 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.brand = brand
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
-            
+        }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && category == "2"
+        {
+            let sellYourItemThirdVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemThirdVC")as! SellYourItemThirdViewController
+            sellYourItemThirdVC.city = city
+            sellYourItemThirdVC.offerImage = offerImage
+            sellYourItemThirdVC.category = category
+            sellYourItemThirdVC.subCategory = subCategory
+            self.present(sellYourItemThirdVC,animated:true,completion: nil)
+        
         }else
         {
             showError(error: "You Must Choose Category and SubCategory and Brand")

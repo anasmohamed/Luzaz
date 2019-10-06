@@ -47,12 +47,18 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
             subCategoryStackView.isHidden = false
             category = presenter.getMainCategoryId(row: row)
             isChooseFromCategoryList = true
+            subCategoryPresenter.getSubCategories(mainCategoryId:category!)
         }
         else if pickerView.tag == 2
         {
-            brandStackView.isHidden = false
+            if category != "2"{
+                brandStackView.isHidden = false
+                brandsPresenter.getBrands(gategory: category!)
+
+            }
             subCategory = subCategoryPresenter.getSubCategoriesId(row: row)
             isChooseFromSubCategoryList = true
+
         }
         else{
             brand = brandsPresenter.getBrandsId(row: row)

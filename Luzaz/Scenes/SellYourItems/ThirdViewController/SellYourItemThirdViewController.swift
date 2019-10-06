@@ -19,7 +19,6 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     var city : String?
     var category : String?
     var subCategory : String?
-    var brand : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
@@ -37,8 +36,12 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if !(finishedTextView.text?.isEmpty)! && !(levelsTextView.text?.isEmpty)! && !(areaTextView.text?.isEmpty)! && !(bathroomsNumberTextView.text?.isEmpty)! && !(bedroomsNumberTextView.text?.isEmpty)!
         {
-            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
-            self.present(sellYourItemSecondVC,animated:true,completion: nil)
+            let sellYourItemFourthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
+            sellYourItemFourthVC.city = city
+            sellYourItemFourthVC.offerImage = offerImage
+            sellYourItemFourthVC.category = category
+            sellYourItemFourthVC.subCategory = subCategory
+            self.present(sellYourItemFourthVC,animated:true,completion: nil)
             
         }else
         {
