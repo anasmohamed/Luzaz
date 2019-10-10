@@ -13,6 +13,7 @@ target 'Luzaz' do
   pod 'SwiftyJSON', '3.0.0'
   pod 'FaveButton'
   pod 'DLRadioButton', '~> 1.4'
+
   target 'LuzazTests' do
     inherit! :search_paths
     # Pods for testing

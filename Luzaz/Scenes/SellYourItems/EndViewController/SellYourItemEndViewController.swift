@@ -53,9 +53,11 @@ class SellYourItemEndViewController: UIViewController,SellYourItemView {
         if !(bedrooms?.isEmpty)!{
         attributesValues = "\(bedrooms),\(bathrooms),\(area),\(level),\(finished)"}
         else{
-        attributesValues = ""
+           attributesValues = ""
         }
-    
+        if brand == nil{
+            brand = ""
+        }
         
     }
     
