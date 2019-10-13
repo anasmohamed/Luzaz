@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import OpalImagePicker
 class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate,SellYourItemFirstView{
     internal func showIndicator() {
         spinner.startAnimating()
@@ -58,16 +58,25 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     func getGovernoratesSuccess() {
         cityPickerView.reloadAllComponents()
     }
+    
     @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            print("Button capture")
-            
-            imagePicker.delegate = self
-            imagePicker.sourceType = .savedPhotosAlbum
-            imagePicker.allowsEditing = false
-            
-            present(imagePicker, animated: true, completion: nil)
-        }
+        let imagePicker = OpalImagePickerController()
+        presentOpalImagePickerController(imagePicker, animated: true,
+                                         select: { (assets) in
+                                            //Select Assets
+                                            print(assets)
+        }, cancel: {
+            //Cancel
+        })
+//        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+//            print("Button capture")
+//            
+//            imagePicker.delegate = self
+//            imagePicker.sourceType = .savedPhotosAlbum
+//            imagePicker.allowsEditing = false
+//            
+//            present(imagePicker, animated: true, completion: nil)
+//        }
     }
     func showError(error : String)
     {
@@ -96,16 +105,8 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     //         self.cityList.text = self.list[raw]
     //        self.dropDown.isHidden = true
     //    }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
-            offerImage = image
-        }
-        
-        picker.dismiss(animated: true, completion: nil);
-        
-    }
     
+   
     
     
 }

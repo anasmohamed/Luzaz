@@ -7,12 +7,12 @@ target 'Luzaz' do
 
   # Pods for Luzaz
   pod ‘Alamofire’, ‘~>4.0’
-  pod 'ObjectMapper', '~> 2.2.8'
   pod 'SDWebImage'
-  pod 'AlamofireObjectMapper'
   pod 'SwiftyJSON', '3.0.0'
   pod 'FaveButton'
   pod 'DLRadioButton', '~> 1.4'
+  pod 'OpalImagePicker', '~> 1.7.1'
+  
   target 'LuzazTests' do
     inherit! :search_paths
     # Pods for testing

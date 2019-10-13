@@ -63,14 +63,14 @@ class ContainerVC: UIViewController {
         if let con = centerController
         {
             con.view.removeFromSuperview()
-            con.removeFromParentViewController()
+            con.removeFromParent()
         }
         
         centerController = presentingController
         
         view.addSubview(centerController.view)
-        addChildViewController(centerController)
-        centerController.didMove(toParentViewController: self)
+        addChild(centerController)
+        centerController.didMove(toParent: self)
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
@@ -84,7 +84,7 @@ class ContainerVC: UIViewController {
 
 extension ContainerVC : CenterVCDelegate {
     
-    func toggleLeftPane() {
+    @objc func toggleLeftPane() {
         
         let notAlreadyExpanded = (currentState != .leftPanelExpanded)
         
@@ -107,8 +107,8 @@ extension ContainerVC : CenterVCDelegate {
     func addChildSidePanelViewController(_ sidePanelController: LeftSidePanelVC) {
         
         view.insertSubview(sidePanelController.view, at: 0)
-        addChildViewController(sidePanelController)
-        sidePanelController.didMove(toParentViewController: self)
+        addChild(sidePanelController)
+        sidePanelController.didMove(toParent: self)
     }
     
     func animateLeftPanel(shouldExpand: Bool) {

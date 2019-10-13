@@ -42,7 +42,7 @@ class SellYourItemInteractor {
         parameters[NetworkingConstants.addUserOfferReseller_phone]  = reseller_phone
         parameters[NetworkingConstants.addUserOfferReseller_mail] = reseller_mail
         parameters[NetworkingConstants.addUserOfferContact_type] = contact_type
-        let imageData = UIImagePNGRepresentation(image)
+        let imageData = image.pngData()
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             for (key, value) in parameters {
                 multipartFormData.append(value.data(using: .utf8)!, withName: key)

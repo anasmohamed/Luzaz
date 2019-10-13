@@ -33,7 +33,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
     }
     func displayFirstOption(firstOption: String)
     {
-        optionOneBtn.setTitle(firstOption, for: UIControlState.normal)
+        optionOneBtn.setTitle(firstOption, for: UIControl.State.normal)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,11 +41,11 @@ class CompetitionViewController: UIViewController, CompetitionView{
     }
     func displaySecondOption(secondOption: String)
     {
-        optionTwoBtn.setTitle(secondOption, for: UIControlState.normal)
+        optionTwoBtn.setTitle(secondOption, for: UIControl.State.normal)
     }
     func displayThreeOption(threeOption: String)
     {
-        optionThreeBtn.setTitle(threeOption, for: UIControlState.normal)
+        optionThreeBtn.setTitle(threeOption, for: UIControl.State.normal)
     }
     
     func displayQuestion(question: String)

@@ -20,12 +20,12 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         presenter = ConversationPresenter(view : self)
         self.hideKeyboardWhenTappedAround()
         userId = UserDefaults.standard.string(forKey: "userId")
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         
         tableView.estimatedRowHeight = 300
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
             
             self.moveToBottom()
@@ -41,9 +41,9 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         return presenter.getConverstaionsCount()
         
     }
-    func keyboardWillShow(notify: NSNotification) {
+    @objc func keyboardWillShow(notify: NSNotification) {
         
-        if let keyboardSize = (notify.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        if let keyboardSize = (notify.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             
             if self.view.frame.origin.y == 0 {
                 
@@ -52,9 +52,9 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         }
     }
     
-    func keyboardWillHide(notify: NSNotification) {
+    @objc func keyboardWillHide(notify: NSNotification) {
         
-        if let keyboardSize = (notify.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        if let keyboardSize = (notify.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             
             if self.view.frame.origin.y != 0 {
                 
