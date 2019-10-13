@@ -10,6 +10,7 @@ import UIKit
 
 class SellYourItemFourthViewController: UIViewController,SellYourItemView {
     
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var itemDescritionTextField: UITextView!
     @IBOutlet weak var itemTitleTextView: UITextField!
     @IBOutlet weak var conditionList: UIPickerView!
