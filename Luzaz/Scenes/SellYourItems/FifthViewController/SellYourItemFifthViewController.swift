@@ -27,6 +27,8 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var area : String?
     var finished :String?
     var level : String?
+    var long : String?
+    var lat : String?
     var isApartment : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,8 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
             sellYourItemEndVC.price = priceTextView.text!
             sellYourItemEndVC.discount = discountTextView.text!
             sellYourItemEndVC.offerTitle = offerTitle
+            sellYourItemEndVC.long = long
+            sellYourItemEndVC.lat = lat
 //            sellYourItemEndVC.location = location
             sellYourItemEndVC.condition = condition
             sellYourItemEndVC.offerDescription = offerDescription

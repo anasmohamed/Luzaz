@@ -182,6 +182,8 @@ struct NetworkingConstants {
     static let addUserOfferPrice = "price"
     static let addUserOfferDiscount_prec = "discount_prec"
     static let addUserOfferReseller_name = "reseller_name"
+    static let addUserOfferLat = "lat"
+    static let addUserOfferLong = "lng"
     static let addUserOfferReseller_phone = "reseller_phone"
     static let addUserOfferReseller_mail = "reseller_mail"
     static let addUserOfferContact_type = "contact_type"

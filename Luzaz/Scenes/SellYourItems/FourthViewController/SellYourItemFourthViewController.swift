@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class SellYourItemFourthViewController: UIViewController,SellYourItemView {
+class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLocationManagerDelegate{
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var itemDescritionTextField: UITextView!
@@ -31,13 +34,48 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
     var area : String?
     var finished :String?
     var level : String?
+    var long : String = ""
+    var lat : String = ""
     override func viewDidLoad() {
         
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
-       self.hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        let longTapGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap))
+        mapView.addGestureRecognizer(longTapGesture)
+    }
+    @objc func longTap(sender: UIGestureRecognizer){
+        if sender.state == .began {
+            let locationInView = sender.location(in: mapView)
+            let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
+            addAnnotation(location: locationOnMap)
+            print(locationOnMap.latitude)
+            
+            lat = String(locationOnMap.latitude)
+            long = String(locationOnMap.longitude)
+            
+        }
     }
     
+    func addAnnotation(location: CLLocationCoordinate2D){
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = "Some Title"
+        annotation.subtitle = "Some Subtitle"
+        self.mapView.addAnnotation(annotation)
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        long = String(locValue.longitude)
+        lat = String(locValue.latitude)
+    }
     
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
@@ -52,7 +90,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
         
         if isConditionEnterd &&  !(itemTitleTextView.text?.isEmpty)!
         {
-          
+            
             let sellYourItemFifthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFifthVC")as! SellYourItemFifthViewController
             sellYourItemFifthVC.brand = brand
             sellYourItemFifthVC.category = category
@@ -62,7 +100,8 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
             sellYourItemFifthVC.offerImage = offerImage
             sellYourItemFifthVC.subCategory = subCategory
             sellYourItemFifthVC.condition  = offerCondition
-            
+            sellYourItemFifthVC.lat = lat
+            sellYourItemFifthVC.long = long
             sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
             if !(bedrooms?.isEmpty)!
             {

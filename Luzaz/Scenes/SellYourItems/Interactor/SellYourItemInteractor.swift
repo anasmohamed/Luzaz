@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class SellYourItemInteractor {
-    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage?])
+    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage?],lat:String,long:String)
     {
         
         
@@ -38,7 +38,8 @@ class SellYourItemInteractor {
         parameters[NetworkingConstants.discount_prec] = discount_prec
         parameters[NetworkingConstants.addUserOfferYoutubeLink] = youtube_link
         parameters[NetworkingConstants.addUserOfferReseller_name] = reseller_name
-        
+        parameters[NetworkingConstants.addUserOfferLong] = long
+        parameters[NetworkingConstants.addUserOfferLat] = lat
         parameters[NetworkingConstants.addUserOfferReseller_phone]  = reseller_phone
         parameters[NetworkingConstants.addUserOfferReseller_mail] = reseller_mail
         parameters[NetworkingConstants.addUserOfferContact_type] = contact_type

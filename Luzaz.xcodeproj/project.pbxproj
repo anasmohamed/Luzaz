@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
+		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
 		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
 		CC0F0CD02340F356000F6C4A /* Governorates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CCF2340F356000F6C4A /* Governorates.swift */; };
@@ -188,6 +189,7 @@
 
 /* Begin PBXFileReference section */
 		100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.debug.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.debug.xcconfig"; sourceTree = "<group>"; };
+		357A200723534566003BBF36 /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -940,6 +942,7 @@
 			children = (
 				CC72693D233AC613006B61DD /* SellYourItemFourthViewController.swift */,
 				CC72693E233AC613006B61DD /* SellYourItemFourthViewCotroller+PickerDelegate.swift */,
+				357A200723534566003BBF36 /* MapViewDelegate.swift */,
 			);
 			path = FourthViewController;
 			sourceTree = "<group>";
@@ -1395,6 +1398,7 @@
 				CCE4992C233B5D040030959D /* ChangePasswordView.swift in Sources */,
 				CC7269C5233AC614006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift in Sources */,
 				CC726984233AC613006B61DD /* UserChatsTableViewCell.swift in Sources */,
+				357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */,
 				CC86961A22F4F61C00E9F14D /* RegisterationStatusViewController.swift in Sources */,
 				CC7269A6233AC614006B61DD /* OffersCell.swift in Sources */,
 				CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */,
