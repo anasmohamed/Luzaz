@@ -71,6 +71,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView {
                 sellYourItemFifthVC.bathrooms = bathrooms
                 sellYourItemFifthVC.level = level
                 sellYourItemFifthVC.finished = finished
+                sellYourItemFifthVC.isApartment = true
             }
             self.present(sellYourItemFifthVC,animated:true,completion: nil)
             

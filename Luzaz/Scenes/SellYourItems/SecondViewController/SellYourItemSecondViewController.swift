@@ -72,7 +72,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.brand = brand
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
-        }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && category == "2"
+        }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && category == "8"
         {
             let sellYourItemThirdVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemThirdVC")as! SellYourItemThirdViewController
             sellYourItemThirdVC.city = city

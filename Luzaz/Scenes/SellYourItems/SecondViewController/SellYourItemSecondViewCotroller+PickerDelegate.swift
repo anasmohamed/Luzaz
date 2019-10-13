@@ -51,7 +51,7 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
         }
         else if pickerView.tag == 2
         {
-            if category != "2"{
+            if category != "8"{
                 brandStackView.isHidden = false
                 brandsPresenter.getBrands(gategory: category!)
 
