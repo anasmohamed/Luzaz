@@ -9,7 +9,7 @@
 import UIKit
 
 class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubCategoriesView,SellYourItemSecondView {
-
+    
     @IBOutlet weak var selectCategory: UITextField!
     var presenter : MainCategoriesPresenter!
     var subCategoryPresenter: SubCategoriesPresenter!
@@ -18,13 +18,10 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var isChooseFromCategoryList = false
     var isChooseFromSubCategoryList = false
     var isChooseFrombrandList = false
-
+    
     @IBOutlet weak var brandStackView: UIStackView!
     @IBOutlet weak var subCategoryStackView: UIStackView!
     @IBOutlet weak var categoryDropList: UIPickerView!
-    var categoryList = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
-    var subCategoryList = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
-    var brands = ["Cars" , "Properties" , "Babies" , "Mobile Phones & Accessories" ,"Pets" , "Jobs"]
     var offerImage : UIImage?
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -34,7 +31,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var category : String?
     var subCategory : String?
     var brand : String?
-   
+    var attributeList : [CategoryAttributes]?
     override func viewDidLoad() {
         super.viewDidLoad()
         subCategoryStackView.isHidden = true
@@ -44,11 +41,11 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         brandsPresenter = SellYourItemPresenter(view :self)
         presenter.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
+        
     }
     func getMainCategoriesSuccess() {
         categoryDropList.reloadAllComponents()
-
+        
     }
     func getSubCategoriesSuccess() {
         subCategoryPickerView.reloadAllComponents()
@@ -71,16 +68,18 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.brand = brand
+            
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
         }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && category == "8"
         {
-            let sellYourItemThirdVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemThirdVC")as! SellYourItemThirdViewController
-            sellYourItemThirdVC.city = city
-            sellYourItemThirdVC.offerImage = offerImage
-            sellYourItemThirdVC.category = category
-            sellYourItemThirdVC.subCategory = subCategory
+            let sellYourItemThirdVC = storyboard?.instantiateViewController(withIdentifier:"PropertiesDetailsVC")as! PropertiesDetailsViewController
+//            sellYourItemThirdVC.city = city
+//            sellYourItemThirdVC.offerImage = offerImage
+//            sellYourItemThirdVC.category = category
+//            sellYourItemThirdVC.subCategory = subCategory
+            sellYourItemThirdVC.attributeList = attributeList
             self.present(sellYourItemThirdVC,animated:true,completion: nil)
-        
+            
         }else
         {
             showError(error: "You Must Choose Category and SubCategory and Brand")
@@ -94,7 +93,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         
         present(alertController, animated: true, completion: nil)
     }
-
+    
     func textFieldDidBeginEditing(textField :UITextField)
     {
         if textField == self.selectCategory{
@@ -102,7 +101,6 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             textField.endEditing(true)
             
         }
-
-
-}
+        
+    }
 }

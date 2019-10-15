@@ -17,6 +17,7 @@ class Category{
     var nameEng : String?
     var descriptionEng : String?
     var keywordsEng : String?
+    var attributesList = [CategoryAttributes]()
     init() {
         
     }
@@ -30,9 +31,15 @@ class Category{
         self.keywords  = data[NetworkingConstants.categorykeywords].stringValue
         self.nameEng  = data[NetworkingConstants.categoryNameEng].stringValue
         self.keywordsEng  = data[NetworkingConstants.categoryKeywordsEng].stringValue
-      
+        let attributes = data[NetworkingConstants.categoryAttributes].arrayValue
+        for attribute in attributes
+        {
+            let attributeData = CategoryAttributes(withJson: attribute)
+            attributesList.append(attributeData)
+            
+        }
     }
     
-
+    
     
 }

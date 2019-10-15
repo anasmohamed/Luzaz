@@ -36,6 +36,8 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     var level : String?
     var long : String = ""
     var lat : String = ""
+    var numberOfRooms : String?
+    var villa: String?
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -56,7 +58,6 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
             addAnnotation(location: locationOnMap)
             print(locationOnMap.latitude)
-            
             lat = String(locationOnMap.latitude)
             long = String(locationOnMap.longitude)
             

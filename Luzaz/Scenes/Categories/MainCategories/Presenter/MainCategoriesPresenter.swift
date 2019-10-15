@@ -55,6 +55,10 @@ class MainCategoriesPresenter {
         return categories[row].id!
 
     }
+    func getGategoryAttributesId(row : Int) ->[CategoryAttributes]  {
+        return categories[row].attributesList
+        
+    }
     func getSearchedCategories(searchText : String) {
         filteredCategories =  categories.filter({( category : Category) -> Bool in
             return (category.name?.lowercased().contains(searchText.lowercased()))!

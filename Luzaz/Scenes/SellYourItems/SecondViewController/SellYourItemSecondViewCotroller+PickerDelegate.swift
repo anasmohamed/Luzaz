@@ -46,6 +46,7 @@ extension SellYourItemSecondViewController : UIPickerViewDelegate,UIPickerViewDa
         {
             subCategoryStackView.isHidden = false
             category = presenter.getMainCategoryId(row: row)
+            attributeList = presenter.getGategoryAttributesId(row: row)
             isChooseFromCategoryList = true
             subCategoryPresenter.getSubCategories(mainCategoryId:category!)
         }

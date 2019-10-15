@@ -95,6 +95,7 @@ struct NetworkingConstants {
     static let categoryDescriptionEng = "description_en"
     static let categoryKeywordsEng = "keywords_en"
     static let category = "category"
+    static let categoryAttributes = "attributes"
     static let subcategoryId = "subcategory"
     
     
