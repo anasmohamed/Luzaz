@@ -39,24 +39,31 @@ class SellYourItemEndViewController: UIViewController,SellYourItemView {
     var attributesValues:String?
     var long : String?
     var lat : String?
+    var attributeValues : [String]?
+    var attributeIds: [String]?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
         self.hideKeyboardWhenTappedAround()
-        phoneNumber =  UserDefaults.standard.string(forKey: "phone")!
-        if (phoneNumber?.isEmpty)!
+        guard let  phoneNumber =  UserDefaults.standard.string(forKey: "phone")
+       
+        else {
+            return    }
+        
+        if (phoneNumber.isEmpty)
         {
             contactType = "1"
         }else
         {
             contactType = "3"
         }
-        attributes = "bedrooms,bathrooms,area,level,finish"
-        if !(bedrooms?.isEmpty)!{
-            attributesValues = "\(bedrooms),\(bathrooms),\(area),\(level),\(finished)"}
-        else{
-            attributesValues = ""
-        }
+        
+        //        attributes = "bedrooms,bathrooms,area,level,finish"
+        //        if !(bedrooms?.isEmpty)!{
+        //            attributesValues = "\(bedrooms),\(bathrooms),\(area),\(level),\(finished)"}
+        //        else{
+        //            attributesValues = ""
+        //        }
         if brand == nil{
             brand = ""
         }
@@ -65,7 +72,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemView {
     
     @IBAction func finishBtnWasPressed(_ sender: Any) {
         if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text?.isEmpty)! {
-            presenter.addUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:attributes!,attr_values:attributesValues!,title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:"",price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:contactType!,image: offerImage!,album:[nil],lat: lat ?? "",long: long ?? "")
+            presenter.addUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:(attributeIds?.joined(separator: ","))!,attr_values:(attributeValues?.joined(separator: ","))!,title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:"",price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:contactType!,image: offerImage!,album:[nil],lat: lat ?? "",long: long ?? "")
             //            let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
             //            self.present(sellYourItemSecondVC,animated:true,completion: nil)
         }else{

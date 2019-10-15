@@ -8,12 +8,10 @@
 
 import UIKit
 
-class PropertiesDetailsViewController: UIViewController,SellYourItemView {
+class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UITextFieldDelegate{
     @IBOutlet weak var villaTextView: UITextField!
-    
     @IBOutlet weak var numberOfRoomsTextView: UITextField!
     var presenter : SellYourItemPresenter!
-    
     @IBOutlet weak var mainView: UIView!
     var offerImage : UIImage?
     var city : String?
@@ -22,8 +20,8 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView {
     var numberOfRooms : String?
     var villa: String?
     var attributeList : [CategoryAttributes]?
-    var attributeValues : [String]?
-    var attributeIds: [String]?
+    var attributeValues = [String]()
+    var attributeIds = [String]()
     var superStackView = UIStackView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +36,11 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView {
         for attr in attributeList!
         {
             createStackView(text: attr.name_en!)
-            attributeIds?.append(attr.attributeId!)
+            attributeIds.append(attr.attributeId!)
         }
         superStackView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 20).isActive = true
         superStackView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -10).isActive = true
         superStackView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 10).isActive = true
-        
-
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -73,8 +69,8 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView {
         textField.autocapitalizationType = UITextAutocapitalizationType.words
         stackView.addArrangedSubview(textField)
         textField.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
-        attributeValues?.append(textField.text!)
-        
+      
+        textField.delegate = self
     }
     func createLabel(stackView : UIStackView,title : String) {
         let label = UILabel()
@@ -87,23 +83,29 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView {
         stackView.addArrangedSubview(label)
         
     }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !(textField.text?.isEmpty)!
+        {
+            attributeValues.append(textField.text!)
+        }
+    }
     func setupLayout() {
         // Stack View
         
     }
+    
     @IBAction func nextBtnWasPressed(_ sender: Any) {
-        if !(villaTextView.text?.isEmpty)! && !(numberOfRoomsTextView.text?.isEmpty)! 
+        if ((attributeIds.count == attributeValues.count) && !attributeValues.isEmpty)
         {
-            villa = villaTextView.text
-            numberOfRooms = numberOfRoomsTextView.text
+            
             
             let sellYourItemFourthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
             sellYourItemFourthVC.city = city
             sellYourItemFourthVC.offerImage = offerImage
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
-            sellYourItemFourthVC.villa = villa
-            sellYourItemFourthVC.numberOfRooms = numberOfRooms
+            sellYourItemFourthVC.attributeValues = attributeValues
+            sellYourItemFourthVC.attributeIds = attributeIds
             
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             

@@ -36,8 +36,9 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     var level : String?
     var long : String = ""
     var lat : String = ""
-    var numberOfRooms : String?
-    var villa: String?
+    var attributeValues : [String]?
+    var attributeIds: [String]?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -104,14 +105,11 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             sellYourItemFifthVC.lat = lat
             sellYourItemFifthVC.long = long
             sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
-            if !(bedrooms?.isEmpty)!
+            if !(attributeIds?.isEmpty)!
             {
-                sellYourItemFifthVC.area = area
-                sellYourItemFifthVC.bedrooms = bedrooms
-                sellYourItemFifthVC.bathrooms = bathrooms
-                sellYourItemFifthVC.level = level
-                sellYourItemFifthVC.finished = finished
-                sellYourItemFifthVC.isApartment = true
+                sellYourItemFifthVC.attributeValues = attributeValues
+                sellYourItemFifthVC.attributeIds = attributeIds
+               
             }
             self.present(sellYourItemFifthVC,animated:true,completion: nil)
             

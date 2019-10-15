@@ -518,6 +518,7 @@
                     <connections>
                         <outlet property="cityPickerView" destination="Bai-04-2xV" id="1fy-NM-N67"/>
                         <outlet property="imageView" destination="hRj-66-Zb7" id="ZUv-Lx-vnd"/>
+                        <outlet property="nextBtn" destination="aqW-iv-JDb" id="24J-Ab-ASK"/>
                         <outlet property="spinner" destination="wSu-3D-wYv" id="ZJT-Fx-ULZ"/>
                     </connections>
                 </viewController>
@@ -1636,6 +1637,7 @@
                         <outlet property="CategoryDropList" destination="r9K-pN-qeD" id="4Tu-RN-LAH"/>
                         <outlet property="brandPickerView" destination="dNh-mb-Kxm" id="1cP-vS-Quh"/>
                         <outlet property="brandStackView" destination="8s3-r0-ICD" id="Jgg-20-Zpe"/>
+                        <outlet property="nextBtn" destination="GCh-YC-HrO" id="yhJ-GP-dl1"/>
                         <outlet property="spinner" destination="DKs-nV-fpG" id="8JE-Xo-bHu"/>
                         <outlet property="subCategoryPickerView" destination="mGx-3h-jDT" id="oVH-cK-Ww2"/>
                         <outlet property="subCategoryStackView" destination="m1X-T1-3wa" id="Jl5-ne-3Y9"/>
@@ -4210,7 +4212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDN-Mk-W5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8929" y="1502"/>
+            <point key="canvasLocation" x="-9090" y="1502"/>
         </scene>
     </scenes>
     <resources>

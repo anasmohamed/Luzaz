@@ -32,7 +32,10 @@ class SubCategoriesPresenter {
             } else {
                 guard let subCategories = subCategories else { return }
                 self.subCategories = subCategories
-                self.view?.getSubCategoriesSuccess()
+               
+                    self.view?.getSubCategoriesSuccess()
+
+                
             }
         }
     }

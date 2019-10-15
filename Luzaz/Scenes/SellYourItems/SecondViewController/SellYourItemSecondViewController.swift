@@ -32,6 +32,8 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var subCategory : String?
     var brand : String?
     var attributeList : [CategoryAttributes]?
+    
+    @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         subCategoryStackView.isHidden = true
@@ -51,7 +53,15 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         subCategoryPickerView.reloadAllComponents()
     }
     func getBrandsSuccess() {
+        brandStackView.isHidden = false
+        isChooseFrombrandList = true
         brandPickerView.reloadAllComponents()
+        
+    }
+   func getBrandsEmpty()
+    {
+        isChooseFrombrandList = true
+        brandStackView.isHidden = true
     }
     func showIndicator() {
         spinner.startAnimating()
@@ -60,7 +70,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         spinner.stopAnimating()
     }
     @IBAction func nextBtnWasPressed(_ sender: Any) {
-        if isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList
+        if isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList && (attributeList?.isEmpty)!
         {
             let sellYourItemFourthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFourthVC")as! SellYourItemFourthViewController
             sellYourItemFourthVC.city = city
@@ -68,15 +78,14 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.brand = brand
-            
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
-        }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && category == "8"
+        }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList && !(attributeList?.isEmpty)!
         {
-            let sellYourItemThirdVC = storyboard?.instantiateViewController(withIdentifier:"PropertiesDetailsVC")as! PropertiesDetailsViewController
-//            sellYourItemThirdVC.city = city
-//            sellYourItemThirdVC.offerImage = offerImage
-//            sellYourItemThirdVC.category = category
-//            sellYourItemThirdVC.subCategory = subCategory
+            let sellYourItemThirdVC = storyboard?.instantiateViewController(withIdentifier:"PropertiesDetailsVC") as! PropertiesDetailsViewController
+            sellYourItemThirdVC.city = city
+            sellYourItemThirdVC.offerImage = offerImage
+            sellYourItemThirdVC.category = category
+            sellYourItemThirdVC.subCategory = subCategory
             sellYourItemThirdVC.attributeList = attributeList
             self.present(sellYourItemThirdVC,animated:true,completion: nil)
             

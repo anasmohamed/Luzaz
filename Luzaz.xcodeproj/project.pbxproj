@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
-		357EDF702353B6D100FF55B3 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
+		3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
 		35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
@@ -900,7 +900,6 @@
 				CC726929233AC613006B61DD /* EndViewController */,
 				CC72692E233AC613006B61DD /* FifthViewController */,
 				CC726933233AC613006B61DD /* FirstViewController */,
-				CC726939233AC613006B61DD /* FourthViewController */,
 				CC726941233AC613006B61DD /* SecondViewController */,
 				CC72693F233AC613006B61DD /* Interactor */,
 				CC726947233AC613006B61DD /* ThirdViewController */,
@@ -965,6 +964,7 @@
 		CC726941233AC613006B61DD /* SecondViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC726939233AC613006B61DD /* FourthViewController */,
 				CC726945233AC613006B61DD /* SellYourItemSecondViewController.swift */,
 				CC726946233AC613006B61DD /* SellYourItemSecondViewCotroller+PickerDelegate.swift */,
 				CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */,
@@ -1397,6 +1397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */,
 				CC72696B233AC613006B61DD /* MainCategoriesCellView.swift in Sources */,
 				CC0F0CD7234114BC000F6C4A /* Brands.swift in Sources */,
 				CCE4992A233B5CE30030959D /* ChangePasswordPresenter.swift in Sources */,
@@ -1488,7 +1489,6 @@
 				CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
 				CCD9BE3A2339111E002B9201 /* Appartment.swift in Sources */,
-				357EDF702353B6D100FF55B3 /* PropertiesDetailsViewController.swift in Sources */,
 				CC7269CF233AC614006B61DD /* FavoriteOffersTableViewCell.swift in Sources */,
 				CC0F0CD22340F663000F6C4A /* SellYourItemFirstView.swift in Sources */,
 				CC726982233AC613006B61DD /* UsersChatsPresenter.swift in Sources */,

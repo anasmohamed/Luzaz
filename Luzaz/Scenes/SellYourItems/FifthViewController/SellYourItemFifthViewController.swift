@@ -30,6 +30,8 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var long : String?
     var lat : String?
     var isApartment : Bool = false
+    var attributeValues : [String]?
+    var attributeIds: [String]?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
@@ -55,13 +57,12 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
 //            sellYourItemEndVC.location = location
             sellYourItemEndVC.condition = condition
             sellYourItemEndVC.offerDescription = offerDescription
-            if isApartment
+            if !(attributeIds?.isEmpty)!
             {
-                sellYourItemEndVC.area = area
-                sellYourItemEndVC.bedrooms = bedrooms
-                sellYourItemEndVC.bathrooms = bathrooms
-                sellYourItemEndVC.level = level
-                sellYourItemEndVC.finished = finished            }
+                sellYourItemEndVC.attributeIds = attributeIds
+                sellYourItemEndVC.attributeValues = attributeValues
+               
+            }
             self.present(sellYourItemEndVC,animated:true,completion: nil)
         }else{
             showError(error: "You Should Enter Price")

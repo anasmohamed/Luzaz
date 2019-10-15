@@ -77,7 +77,11 @@ class SellYourItemPresenter {
             } else {
                 guard let brands = brands else { return }
                 self.brands = brands
+                if !brands.isEmpty{
                 self.secondView?.getBrandsSuccess()
+                }else{
+                    self.secondView?.getBrandsEmpty()
+                }
             }
         }
     }

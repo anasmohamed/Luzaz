@@ -55,7 +55,7 @@ class MainCategoriesPresenter {
         return categories[row].id!
 
     }
-    func getGategoryAttributesId(row : Int) ->[CategoryAttributes]  {
+    func getGategoryAttributes(row : Int) ->[CategoryAttributes]  {
         return categories[row].attributesList
         
     }

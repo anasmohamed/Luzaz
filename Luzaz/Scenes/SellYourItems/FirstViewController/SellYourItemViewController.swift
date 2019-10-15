@@ -26,6 +26,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var cityIndex : String?
     var offerImage: UIImage?
     
+    @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         cityPickerView.dataSource = self
