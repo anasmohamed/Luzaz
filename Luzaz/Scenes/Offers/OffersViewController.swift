@@ -16,7 +16,11 @@ UISearchBarDelegate,UISearchControllerDelegate{
     var presenter: OffersPresenter!
     @IBOutlet weak var collectionView: UICollectionView!
      var delegate : CenterVCDelegate?
-    
+    private var layoutOption: LayoutOption = .largeGrid {
+        didSet {
+            setupLayout(with: view.bounds.size)
+        }
+    }
 
     // MARK: View life cycle
     override func viewDidLoad() {
@@ -24,11 +28,56 @@ UISearchBarDelegate,UISearchControllerDelegate{
         setupCollectionView()
         presenter = OffersPresenter(view: self)
         searchBar.delegate = self
-        
+        setupLayout(with: view.bounds.size)
         self.hideKeyboardWhenTappedAround()
        
     }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            self.layoutOption = .smallGrid
+
+        } else {
+            self.layoutOption = .largeGrid
+
+        }
+        setupLayout(with: size)
+    }
     
+    
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setupLayout(with: view.bounds.size)
+    }
+    private func setupLayout(with containerSize: CGSize) {
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        switch layoutOption {
+        
+            
+        case .largeGrid, .smallGrid:
+            let minItemWidth: CGFloat
+            if layoutOption == .smallGrid {
+                minItemWidth = 120
+            } else {
+                minItemWidth = 160
+            }
+            
+            let numberOfCell = containerSize.width / minItemWidth
+            let width = floor((numberOfCell / floor(numberOfCell)) * minItemWidth)
+            let height = ceil(width * (4.0 / 3.0))
+            
+            flowLayout.minimumInteritemSpacing = 10
+            flowLayout.minimumLineSpacing = 10
+            flowLayout.itemSize = CGSize(width: width, height: height)
+            flowLayout.sectionInset = .zero
+        }
+        
+        collectionView.reloadData()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewDidLoad()
@@ -60,18 +109,26 @@ UISearchBarDelegate,UISearchControllerDelegate{
         collectionView.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
-        presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
-        return cell
+        switch layoutOption {
+        case .largeGrid:
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
+           presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
+           return cell
+        case .smallGrid:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
+            presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
+            return cell
+        }
+      
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellsAcross: CGFloat = 2
-        let spaceBetweenCells: CGFloat = 1
-        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-        return CGSize(width: dim, height: dim)
-    }
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let cellsAcross: CGFloat = 2
+//        let spaceBetweenCells: CGFloat = 1
+//        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
+//        return CGSize(width: dim, height: dim)
+//    }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
         offersDetailsVC.modalTransitionStyle = .flipHorizontal
@@ -92,7 +149,7 @@ func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         }
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
-        delegate?.toggleLeftPane()
+        AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
        
     }
 

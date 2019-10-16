@@ -66,15 +66,15 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
     func getCountyIcon(countryNum : Int) -> String {
         switch countryNum {
         case 0:
-            return "egypt-flag-round-icon-16"
+            return "egypt"
         case 1:
-            return "united-states-of-america-flag-round-icon-16"
+            return "usa"
         case 2:
-            return "united-arab-emirates-flag-round-icon-16"
+            return "emirates"
         case 3:
-            return "saudi-arabia-flag-round-icon-16"
+            return "saudi_arabia"
         default:
-            return "libya-flag-round-icon-16"
+            return "libya"
         }
     }
 }

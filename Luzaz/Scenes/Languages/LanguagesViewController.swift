@@ -23,6 +23,7 @@ class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewD
         if isLeftSideController == false {
             
             let languageVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+
             self.present(languageVC, animated: true, completion: nil)
         }else
         {

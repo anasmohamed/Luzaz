@@ -28,12 +28,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     var offerCondition :String?
     var offerTitle: String?
     var offerLocation : String?
-    var offreDescription: String?
-    var bathrooms : String?
-    var bedrooms: String?
-    var area : String?
-    var finished :String?
-    var level : String?
+    var offerDescription: String = ""
     var long : String = ""
     var lat : String = ""
     var attributeValues : [String]?
@@ -97,7 +92,6 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             sellYourItemFifthVC.brand = brand
             sellYourItemFifthVC.category = category
             sellYourItemFifthVC.city = city
-            sellYourItemFifthVC.location = offerLocation
             sellYourItemFifthVC.offerDescription = itemDescritionTextField.text
             sellYourItemFifthVC.offerImage = offerImage
             sellYourItemFifthVC.subCategory = subCategory
@@ -105,6 +99,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             sellYourItemFifthVC.lat = lat
             sellYourItemFifthVC.long = long
             sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
+            sellYourItemFifthVC.offerDescription = offerDescription
             if !(attributeIds?.isEmpty)!
             {
                 sellYourItemFifthVC.attributeValues = attributeValues

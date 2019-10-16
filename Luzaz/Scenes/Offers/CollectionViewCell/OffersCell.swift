@@ -13,7 +13,8 @@ class OffersCell: UICollectionViewCell,OffersCellView {
     @IBOutlet weak var offerImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+        self.layer.cornerRadius = 10 //customize yourself
+        self.layer.masksToBounds = true
         // Initialization code
     }
     func displayOfferImage(offerImage: String) {

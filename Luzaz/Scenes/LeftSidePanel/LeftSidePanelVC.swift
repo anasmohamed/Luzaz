@@ -20,31 +20,24 @@ class LeftSidePanelVC: UIViewController {
     @IBOutlet weak var catategoryBtn: UIButton!
     @IBOutlet weak var homeBtn: UIButton!
     let appDelegate = AppDelegate.getAppDelegate()
-    var token : String?
+    var token : String = ""
     @IBOutlet weak var countryImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setIconForBtn(button: homeBtn, icon:"home")
-        token = UserDefaults.standard.string(forKey: "token")
-        if (token?.isEmpty)!{
+        countryImageView.image = UIImage(named:getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
+        if UserDefaults.standard.string(forKey: "token") != nil
+        {
+            token = UserDefaults.standard.string(forKey: "token")!
+        }
+        if (token.isEmpty){
             registerBtn.setTitle("Register/Login", for: .normal)
         }
         else{
-registerBtn.setTitle("my profile", for: .normal)
+            registerBtn.setTitle("my profile", for: .normal)
         }
-        //        setIconForBtn(button: chatBtn, icon: "chat")
-        //        setIconForBtn(button: catategoryBtn, icon: "catago")
-        //        setIconForBtn(button: favoriteBtn, icon:"favorites")
-        //        setIconForBtn(button: countryBtn, icon: getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
-        // Do any additional setup after loading the view.
-    }
-    func setIconForBtn(button : UIButton, icon : String)
-    {
-        
-        
-        
         
     }
+    
     
     @IBAction func languageBrnWasPressed(_ sender: Any) {
         let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
@@ -59,38 +52,44 @@ registerBtn.setTitle("my profile", for: .normal)
     }
     
     @IBAction func winWithUsBtnWasPressed(_ sender: Any) {
-        if !(token?.isEmpty)!{
+        if !(token.isEmpty){
             let competitionVC = storyboard?.instantiateViewController(withIdentifier: "") as! CountriesViewController
             self.present(competitionVC, animated: true, completion: nil)
         }else{
+            appDelegate.MenuContainerVC.toggleLeftPane()
             showError(error: "you should login")
         }
     }
     @IBAction func sellYourItemsWasPressed(_ sender: Any) {
-        if !(token?.isEmpty)!{
+        if !(token.isEmpty){
             let countryVC = storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
             self.present(countryVC, animated: true, completion: nil)
         }
         else{
+            appDelegate.MenuContainerVC.toggleLeftPane()
+            
             showError(error: "you should login")
             
         }
     }
     @IBAction func favoriteBtnWasPressed(_ sender: Any) {
-        if !(token?.isEmpty)! {
+        if !(token.isEmpty) {
             let favoriteVC = storyboard?.instantiateViewController(withIdentifier: "FavoriteVC") as! SellYourItemViewController
             self.present(favoriteVC, animated: true, completion: nil)
         }else
-        {
+        {            appDelegate.MenuContainerVC.toggleLeftPane()
+            
             showError(error: "you should login")
         }
     }
     @IBAction func chatBtnWasPressed(_ sender: Any) {
-        if !(token?.isEmpty)!{
+        if !(token.isEmpty){
             let userBuddiesVC = storyboard?.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
             self.present(userBuddiesVC, animated: true, completion: nil)
         }
         else{
+            appDelegate.MenuContainerVC.toggleLeftPane()
+            
             showError(error: "you should login")
         }
     }
@@ -105,7 +104,7 @@ registerBtn.setTitle("my profile", for: .normal)
     
     @IBAction func regiterLoginBtnWasPressed(_ sender: Any) {
         appDelegate.MenuContainerVC.toggleLeftPane()
-        if (token?.isEmpty)! {
+        if (token.isEmpty) {
             registerBtn.titleLabel?.text = "Register/login"
             let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
             self.present(loginVC, animated: true, completion: nil)
@@ -126,15 +125,15 @@ registerBtn.setTitle("my profile", for: .normal)
     func getCountyIcon(countryNum : String) -> String {
         switch countryNum {
         case "1":
-            return "egypt-flag-round-icon-16"
+            return "egypt"
         case "2":
-            return "united-states-of-america-flag-round-icon-16"
+            return "usa"
         case "3":
-            return "united-arab-emirates-flag-round-icon-16"
+            return "emirates"
         case "4":
-            return "saudi-arabia-flag-round-icon-16"
+            return "saudi_arabia"
         default:
-            return "libya-flag-round-icon-16"
+            return "libya"
         }
     }
 }

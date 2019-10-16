@@ -20,16 +20,10 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var brand : String?
     var condition : String?
     var offerTitle: String?
-    var offerDescription: String?
-    var location : String?
-    var bathrooms : String?
-    var bedrooms: String?
-    var area : String?
-    var finished :String?
+    var offerDescription: String = ""
     var level : String?
     var long : String?
     var lat : String?
-    var isApartment : Bool = false
     var attributeValues : [String]?
     var attributeIds: [String]?
     override func viewDidLoad() {
@@ -54,7 +48,6 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
             sellYourItemEndVC.offerTitle = offerTitle
             sellYourItemEndVC.long = long
             sellYourItemEndVC.lat = lat
-//            sellYourItemEndVC.location = location
             sellYourItemEndVC.condition = condition
             sellYourItemEndVC.offerDescription = offerDescription
             if !(attributeIds?.isEmpty)!

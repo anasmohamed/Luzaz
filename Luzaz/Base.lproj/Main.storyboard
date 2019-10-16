@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8V6-me-z8t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fbp-fG-y5G">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -3254,19 +3254,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-mE-flh">
-                                <rect key="frame" x="40" y="186.5" width="240" height="195"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-mE-flh">
+                                <rect key="frame" x="20" y="184" width="280" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="NNQ-vP-7Xl"/>
-                                    <constraint firstAttribute="height" constant="195" id="zc4-hW-45O"/>
+                                    <constraint firstAttribute="height" constant="200" id="zc4-hW-45O"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryTableViewCell" id="sSB-Af-oea">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryTableViewCell" rowHeight="54" id="sSB-Af-oea">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sSB-Af-oea" id="f0f-Sa-nwK">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3280,6 +3279,8 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SVZ-mE-flh" firstAttribute="centerX" secondItem="xyA-zQ-7bv" secondAttribute="centerX" id="CYN-7S-1CE"/>
+                            <constraint firstItem="SVZ-mE-flh" firstAttribute="leading" secondItem="xyA-zQ-7bv" secondAttribute="leading" constant="20" id="GVP-Sl-zqP"/>
+                            <constraint firstAttribute="trailing" secondItem="SVZ-mE-flh" secondAttribute="trailing" constant="20" id="ekc-Rq-e8T"/>
                             <constraint firstItem="SVZ-mE-flh" firstAttribute="centerY" secondItem="xyA-zQ-7bv" secondAttribute="centerY" id="jGE-KY-Yg7"/>
                         </constraints>
                     </view>

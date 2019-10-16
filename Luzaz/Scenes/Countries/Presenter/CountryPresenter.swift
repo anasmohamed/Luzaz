@@ -15,11 +15,12 @@ class CountryPresenter {
     
     init(view: CountryView) {
         self.view = view
-        egypt = Country(name: "Egypt",image: "egypt-flag-round-icon-16")
-        libya = Country(name: "Libya",image: "libya-flag-round-icon-16")
-        USA = Country(name: "USA",image: "united-states-of-america-flag-round-icon-16")
-        emirates = Country(name: "Emirates",image: "united-arab-emirates-flag-round-icon-16")
-        saudi = Country(name: "Saudi Arabia",image: "saudi-arabia-flag-round-icon-16")
+       
+        egypt = Country(name: "Egypt",image: "egypt")
+        libya = Country(name: "Libya",image: "libya")
+        USA = Country(name: "USA",image: "usa")
+        emirates = Country(name: "Emirates",image: "emirates")
+        saudi = Country(name: "Saudi Arabia",image: "saudi_arabia")
         countries = [Country]()
     }
     

@@ -51,11 +51,7 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
             sellYourItemFourthVC.offerImage = offerImage
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
-            sellYourItemFourthVC.area = area
-            sellYourItemFourthVC.bedrooms = bedrooms
-            sellYourItemFourthVC.bathrooms = bathrooms
-            sellYourItemFourthVC.finished = finished
-            sellYourItemFourthVC.level = level
+         
 
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             
