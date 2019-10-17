@@ -1144,7 +1144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X13-2i-kB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5760" y="-215.49295774647888"/>
+            <point key="canvasLocation" x="-4762.5" y="-215.49295774647888"/>
         </scene>
         <!--Sub Categories View Controller-->
         <scene sceneID="v6L-D5-JJK">
@@ -1241,7 +1241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNm-iR-saz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4963" y="-215"/>
+            <point key="canvasLocation" x="-3965.625" y="-215.49295774647888"/>
         </scene>
         <!--My Product View Controller-->
         <scene sceneID="VkH-4q-K67">
@@ -1414,7 +1414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEz-wF-1eJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4070.625" y="-215.49295774647888"/>
+            <point key="canvasLocation" x="-3073.125" y="-215.49295774647888"/>
         </scene>
         <!--Sell Your Item Second View Controller-->
         <scene sceneID="fNf-RB-q0N">
@@ -3333,10 +3333,11 @@
                             <constraint firstItem="sVk-ty-ojN" firstAttribute="centerX" secondItem="5zH-lq-ORA" secondAttribute="centerX" id="NrK-vy-DZE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZSu-j0-wSL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMq-LW-xN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7159" y="-215"/>
+            <point key="canvasLocation" x="-6163.125" y="-215.49295774647888"/>
         </scene>
         <!--Item-->
         <scene sceneID="uhM-rk-tgr">
@@ -3442,7 +3443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqt-hm-Bvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6414" y="-215"/>
+            <point key="canvasLocation" x="-5416.875" y="-215.49295774647888"/>
         </scene>
         <!--User Competition View Controller-->
         <scene sceneID="skp-hc-Oqg">

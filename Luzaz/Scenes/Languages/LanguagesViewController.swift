@@ -10,6 +10,7 @@ import UIKit
 
 class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var isLeftSideController = false
+    //var offersViewController : OffersViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +23,11 @@ class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewD
         UserDefaults.standard.set(cell?.textLabel?.text, forKey: "language")
         if isLeftSideController == false {
             
-            let languageVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
-            languageVC.delegate = AppDelegate.getAppDelegate().MenuContainerVC
+            let  languageVC = ContainerVC()
+//            let languageVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+            
+            //languageVC!.delegate = AppDelegate.getAppDelegate().MenuContainerVC
+
             self.present(languageVC, animated: true, completion: nil)
         }else
         {

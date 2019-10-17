@@ -217,7 +217,7 @@ extension ContainerVC : CenterVCDelegate {
     }
 }
 
-private extension UIStoryboard {
+extension UIStoryboard {
     
     class func mainStoryboard() -> UIStoryboard {
         
