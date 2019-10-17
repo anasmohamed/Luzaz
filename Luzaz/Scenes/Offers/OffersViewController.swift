@@ -149,8 +149,7 @@ func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         }
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
-        AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
-       
+delegate?.toggleLeftPane()
     }
 
     

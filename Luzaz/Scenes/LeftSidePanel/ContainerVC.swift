@@ -11,13 +11,12 @@ import UIKit
 import QuartzCore
 
 enum SliderOutState {
-    
     case collapsed
     case leftPanelExpanded
 }
 
 enum ShowWhichVC {
-    
+    case CountriesViewController
     case OffersViewController
 }
 
@@ -26,6 +25,7 @@ var showVC : ShowWhichVC = .OffersViewController
 class ContainerVC: UIViewController {
     
     var offersViewController : OffersViewController!
+    var countriesViewController : CountriesViewController!
     var leftVC : LeftSidePanelVC!
     var centerController : UIViewController!
     var currentState : SliderOutState = .collapsed {
@@ -34,10 +34,8 @@ class ContainerVC: UIViewController {
             shouldShowShadowForCenterViewController(status: shouldShowShadow)
         }
     }
-    
     var isHidden = false
     let centerPanelExpandedOffset : CGFloat = 130
-    
     var tap : UITapGestureRecognizer!
     
     override func viewDidLoad() {
@@ -51,14 +49,31 @@ class ContainerVC: UIViewController {
         var presentingController : UIViewController
         
         showVC = screen
-        
-        if offersViewController == nil
-        {
-            offersViewController = UIStoryboard.offersVC()
-            offersViewController.delegate = self
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            defaults.synchronize()
+            
+            if countriesViewController == nil
+            {
+                countriesViewController = UIStoryboard.countriesVC()
+                countriesViewController.delegate = self
+                offersViewController = UIStoryboard.offersVC()
+                offersViewController.delegate = self
+            }
+            presentingController = countriesViewController
+            
+        }else{
+            if offersViewController == nil
+            {
+                offersViewController = UIStoryboard.offersVC()
+                offersViewController.delegate = self
+            }
+            presentingController = offersViewController
+            
         }
         
-        presentingController = offersViewController
+        
         
         if let con = centerController
         {
@@ -67,7 +82,6 @@ class ContainerVC: UIViewController {
         }
         
         centerController = presentingController
-        
         view.addSubview(centerController.view)
         addChild(centerController)
         centerController.didMove(toParent: self)
@@ -111,7 +125,7 @@ extension ContainerVC : CenterVCDelegate {
         sidePanelController.didMove(toParent: self)
     }
     
-    func animateLeftPanel(shouldExpand: Bool) {
+    @objc func animateLeftPanel(shouldExpand: Bool) {
         
         if shouldExpand
         {
@@ -155,10 +169,10 @@ extension ContainerVC : CenterVCDelegate {
         
         self.centerController.view.addSubview(whiteCoverView)
         UIView.animate(withDuration: 0.2)
-            {
-                whiteCoverView.alpha = 0.75
+        {
+            whiteCoverView.alpha = 0.75
         }
-        tap = UITapGestureRecognizer(target: self, action: #selector(toggleLeftPane))
+        tap = UITapGestureRecognizer(target: self, action:#selector(animateLeftPanel(shouldExpand:)))
         tap.numberOfTapsRequired = 1
         self.centerController.view.addGestureRecognizer(tap)
     }
@@ -182,7 +196,7 @@ extension ContainerVC : CenterVCDelegate {
             }
         }
     }
-
+    
     func shouldShowShadowForCenterViewController(status : Bool) {
         
         if status == true
@@ -214,7 +228,7 @@ private extension UIStoryboard {
         
         return mainStoryboard().instantiateViewController(withIdentifier: "LeftSidePanelVC") as? LeftSidePanelVC
     }
-   
+    
     class func CountryVC() -> CountriesViewController? {
         
         return mainStoryboard().instantiateViewController(withIdentifier: "CountryVC") as? CountriesViewController
@@ -222,5 +236,9 @@ private extension UIStoryboard {
     class func offersVC() -> OffersViewController? {
         
         return mainStoryboard().instantiateViewController(withIdentifier: "OffersVC") as? OffersViewController
+    }
+    class func countriesVC() -> CountriesViewController? {
+        
+        return mainStoryboard().instantiateViewController(withIdentifier: "CountriesVC") as? CountriesViewController
     }
 }

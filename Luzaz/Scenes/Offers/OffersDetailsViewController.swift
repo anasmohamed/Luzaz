@@ -45,7 +45,15 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
-        token = UserDefaults.standard.string(forKey: "token")!
+        
+        if ((UserDefaults.standard.string(forKey: "token")) != nil)
+        {
+          token =  UserDefaults.standard.string(forKey: "token")!
+        }
+        else
+        {
+            token = ""
+        }
         if offer.contactType == "1"
         {
             callBtn.isHidden = true

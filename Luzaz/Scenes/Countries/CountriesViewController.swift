@@ -10,6 +10,8 @@ import UIKit
 
 class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CountryView {
     private var presenter: CountryPresenter!
+    var delegate : CenterVCDelegate?
+
     let prefs = UserDefaults.standard
     var isLeftSideController = false
     var countryImage : UIImageView?
