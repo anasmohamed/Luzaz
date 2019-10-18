@@ -12,6 +12,8 @@ class SellYourItemPresenter {
     private weak var view: SellYourItemView?
     private weak var firstView: SellYourItemFirstView?
     private weak var secondView: SellYourItemSecondView?
+    private weak var endView: SellYourItemEndView?
+
     private let sellYourItemInteractor: SellYourItemInteractor?
     private var sellItem : Offer?
     private var governorates : [Governorates]?
@@ -37,21 +39,14 @@ class SellYourItemPresenter {
         
     }
   
-    func setAppartmentArea(area : String)  {
-        sellItem?.appartment.area = area
+    init(view:SellYourItemEndView) {
+        self.endView = view
+        sellYourItemInteractor = SellYourItemInteractor()
+        
+        
     }
-    func setAppartmentLevels(levels : String)  {
-        sellItem?.appartment.levels = levels
-    }
-    func setAppartmentBedrooms(bedrooms: String)  {
-        sellItem?.appartment.bedrooms = bedrooms
-    }
-    func setAppartmentBathrooms(bathrooms: String)  {
-        sellItem?.appartment.bathrooms = bathrooms
-    }
-    func setAppartmentFinish(finish : String) {
-        sellItem?.appartment.finished = finish
-    }
+    
+  
     func getOfferCity()->String
     {
         return (sellItem?.city)!
@@ -127,16 +122,16 @@ class SellYourItemPresenter {
     }
     func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage],lat:String,long : String,spinner :UIActivityIndicatorView)
     {
+        self.endView?.showSpinner()
         sellYourItemInteractor?.addUserOffer(token:token , privacy_policy: privacy_policy, id_governate:id_governate, id_category: id_category, id_sub_category: id_sub_category, attr: attr, attr_values:attr_values, title: title, id_brand: id_brand, offer_type:offer_type , decription: decription, price: price, discount_prec: discount_prec, youtube_link: "", reseller_name: reseller_name, reseller_phone: reseller_phone, reseller_mail: reseller_mail, contact_type: contact_type, image: image, album: album,lat:lat,long:long ){
-            self.view?.showSpinner()
             [unowned self] (message, error) in
-            self.view?.hideSpinner()
+            self.endView?.hideSpinner()
             
             if let error = error {
-                self.view?.showError(error: error.localizedDescription)
+                self.endView?.showError(error: error.localizedDescription)
             } else {
                 guard let message = message else { return }
-                self.view?.offerAddedSuccessfully(message:message)
+                self.endView?.offerAddedSuccessfully(message:message)
             }
         }
     }

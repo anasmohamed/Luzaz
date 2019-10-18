@@ -9,6 +9,7 @@
 import UIKit
 
 class SellYourItemFifthViewController: UIViewController , SellYourItemView{
+  
     @IBOutlet weak var priceTextView: UITextField!
 
     @IBOutlet weak var discountTextView: UITextField!

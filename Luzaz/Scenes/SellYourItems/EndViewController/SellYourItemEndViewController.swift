@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SellYourItemEndViewController: UIViewController,SellYourItemView {
+class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     func offerAddedSuccessfully(message: String) {
         showError(error: message)
     }

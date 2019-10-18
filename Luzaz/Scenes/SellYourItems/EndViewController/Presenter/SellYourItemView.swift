@@ -9,7 +9,5 @@
 import Foundation
 protocol SellYourItemView :class{
     func showError(error : String)
-    func offerAddedSuccessfully(message :String)
-    func showSpinner()
-    func hideSpinner()
+    
 }

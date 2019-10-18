@@ -9,6 +9,8 @@
 import UIKit
 
 class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UITextFieldDelegate{
+  
+    
     @IBOutlet weak var villaTextView: UITextField!
     @IBOutlet weak var numberOfRoomsTextView: UITextField!
     var presenter : SellYourItemPresenter!
