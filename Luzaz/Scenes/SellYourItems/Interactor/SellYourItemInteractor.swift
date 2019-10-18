@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import UIKit
 class SellYourItemInteractor {
-    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage],lat:String,long:String,spinner : UIActivityIndicatorView)
+    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage],lat:String,long:String,completionHandler: @escaping (String?, Error?) -> Void)
     {
         
         
@@ -62,28 +62,20 @@ class SellYourItemInteractor {
                 upload.uploadProgress(closure: { (Progress) in
                     
                     print("Upload Progress: \(Progress.fractionCompleted)")
-                    spinner.startAnimating()
                     
                 })
                 
                 
                 upload.responseJSON { response in
-                    spinner.stopAnimating()
-                   
-                    //self.delegate?.showSuccessAlert()
-                    print(response.request)  // original URL request
-                    print(response.response) // URL response
-                    print(response.data)     // server data
-                    print(response.result)   // result of response serialization
-                    //                        self.showSuccesAlert()
-                    //self.removeImage("frame", fileExtension: "txt")
+               
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
                 }
-                
+                completionHandler("Offer has been added", nil)
+
             case .failure(let encodingError):
-                //self.delegate?.showFailAlert()
+                completionHandler("", encodingError)
                 print(encodingError)
             }
             

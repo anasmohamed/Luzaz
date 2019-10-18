@@ -114,7 +114,7 @@
 		CC7269B1233AC614006B61DD /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726925233AC613006B61DD /* OffersView.swift */; };
 		CC7269B2233AC614006B61DD /* OffersViewController+CellSpaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726926233AC613006B61DD /* OffersViewController+CellSpaceDelegate.swift */; };
 		CC7269B3233AC614006B61DD /* SellYourItemEndPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72692B233AC613006B61DD /* SellYourItemEndPresenter.swift */; };
-		CC7269B4233AC614006B61DD /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72692C233AC613006B61DD /* SellYourItemEndView.swift */; };
+		CC7269B4233AC614006B61DD /* SellYourItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72692C233AC613006B61DD /* SellYourItemView.swift */; };
 		CC7269B5233AC614006B61DD /* SellYourItemEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72692D233AC613006B61DD /* SellYourItemEndViewController.swift */; };
 		CC7269B8233AC614006B61DD /* SellYourItemFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726932233AC613006B61DD /* SellYourItemFifthViewController.swift */; };
 		CC7269BB233AC614006B61DD /* SellYourItemViewController+PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC726937233AC613006B61DD /* SellYourItemViewController+PickerDelegate.swift */; };
@@ -302,7 +302,7 @@
 		CC726925233AC613006B61DD /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
 		CC726926233AC613006B61DD /* OffersViewController+CellSpaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OffersViewController+CellSpaceDelegate.swift"; sourceTree = "<group>"; };
 		CC72692B233AC613006B61DD /* SellYourItemEndPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndPresenter.swift; sourceTree = "<group>"; };
-		CC72692C233AC613006B61DD /* SellYourItemEndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
+		CC72692C233AC613006B61DD /* SellYourItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemView.swift; sourceTree = "<group>"; };
 		CC72692D233AC613006B61DD /* SellYourItemEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemEndViewController.swift; sourceTree = "<group>"; };
 		CC726932233AC613006B61DD /* SellYourItemFifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemFifthViewController.swift; sourceTree = "<group>"; };
 		CC726937233AC613006B61DD /* SellYourItemViewController+PickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SellYourItemViewController+PickerDelegate.swift"; sourceTree = "<group>"; };
@@ -924,7 +924,7 @@
 			isa = PBXGroup;
 			children = (
 				CC72692B233AC613006B61DD /* SellYourItemEndPresenter.swift */,
-				CC72692C233AC613006B61DD /* SellYourItemEndView.swift */,
+				CC72692C233AC613006B61DD /* SellYourItemView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1531,7 +1531,7 @@
 				CC726996233AC613006B61DD /* CountryTableViewCell.swift in Sources */,
 				CC726961233AC613006B61DD /* RegisterViewController.swift in Sources */,
 				CCD9BE3F2339111E002B9201 /* Offer.swift in Sources */,
-				CC7269B4233AC614006B61DD /* SellYourItemEndView.swift in Sources */,
+				CC7269B4233AC614006B61DD /* SellYourItemView.swift in Sources */,
 				CC72697E233AC613006B61DD /* ConversationView.swift in Sources */,
 				CCD9BE3E2339111E002B9201 /* Country.swift in Sources */,
 				CC726971233AC613006B61DD /* SubCategoriesViewController.swift in Sources */,

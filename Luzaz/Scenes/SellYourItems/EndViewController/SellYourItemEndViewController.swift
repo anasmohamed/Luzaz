@@ -9,9 +9,20 @@
 import UIKit
 
 class SellYourItemEndViewController: UIViewController,SellYourItemView {
+    func offerAddedSuccessfully(message: String) {
+        showError(error: message)
+    }
+    
+    func showSpinner() {
+        spinner.startAnimating()
+    }
+    
+    func hideSpinner() {
+      spinner.stopAnimating()
+    }
+    
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
-    
     @IBOutlet weak var mobileNumberTextView: UITextField!
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var fullNameTextView: UITextField!
@@ -69,6 +80,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemView {
         }
         
     }
+    
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
