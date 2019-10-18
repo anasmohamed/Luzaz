@@ -26,6 +26,7 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var lat : String?
     var attributeValues : [String]?
     var attributeIds: [String]?
+    var offerAlbum = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
@@ -50,6 +51,7 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
             sellYourItemEndVC.lat = lat
             sellYourItemEndVC.condition = condition
             sellYourItemEndVC.offerDescription = offerDescription
+            sellYourItemEndVC.offerAlbum = offerAlbum
             if !(attributeIds?.isEmpty)!
             {
                 sellYourItemEndVC.attributeIds = attributeIds

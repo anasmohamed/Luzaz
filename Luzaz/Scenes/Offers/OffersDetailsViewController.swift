@@ -45,7 +45,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
-        
+        dateLbl.text = offer.date
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
           token =  UserDefaults.standard.string(forKey: "token")!
@@ -85,7 +85,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+900)
+        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+700)
         sellerNameLbl.text = offer.reseller_name
         
     }
@@ -138,7 +138,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         
         print("anas")
         //        print("anas")
-        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
+        if let url = URL(string: "tel://\(String(describing: offer.reseller_phone))"), UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10, *) {
                 UIApplication.shared.open(url)
             } else {

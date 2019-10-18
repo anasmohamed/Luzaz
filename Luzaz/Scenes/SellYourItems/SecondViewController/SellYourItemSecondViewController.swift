@@ -32,7 +32,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var subCategory : String?
     var brand : String?
     var attributeList : [CategoryAttributes]?
-    
+    var offerAlbum = [UIImage]()
     @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +78,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.brand = brand
+            sellYourItemFourthVC.offerAlbum = offerAlbum
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
         }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList && !(attributeList?.isEmpty)!
         {
@@ -87,6 +88,8 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemThirdVC.category = category
             sellYourItemThirdVC.subCategory = subCategory
             sellYourItemThirdVC.attributeList = attributeList
+            sellYourItemThirdVC.offerAlbum = offerAlbum
+
             self.present(sellYourItemThirdVC,animated:true,completion: nil)
             
         }else

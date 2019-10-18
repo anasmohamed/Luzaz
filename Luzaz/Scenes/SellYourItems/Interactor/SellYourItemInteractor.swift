@@ -9,8 +9,9 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import UIKit
 class SellYourItemInteractor {
-    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage?],lat:String,long:String)
+    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage],lat:String,long:String,spinner : UIActivityIndicatorView)
     {
         
         
@@ -33,7 +34,6 @@ class SellYourItemInteractor {
         parameters[NetworkingConstants.addUserOfferIdBrand] = id_brand
         parameters[NetworkingConstants.addUserOfferOfferType] = offer_type
         parameters[NetworkingConstants.addUserOfferDecription] = decription
-        
         parameters[NetworkingConstants.addUserOfferPrice] = price
         parameters[NetworkingConstants.discount_prec] = discount_prec
         parameters[NetworkingConstants.addUserOfferYoutubeLink] = youtube_link
@@ -43,12 +43,16 @@ class SellYourItemInteractor {
         parameters[NetworkingConstants.addUserOfferReseller_phone]  = reseller_phone
         parameters[NetworkingConstants.addUserOfferReseller_mail] = reseller_mail
         parameters[NetworkingConstants.addUserOfferContact_type] = contact_type
-        let imageData = image.pngData()
+        let imageData = image.jpegData(compressionQuality: 0.6)
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             for (key, value) in parameters {
                 multipartFormData.append(value.data(using: .utf8)!, withName: key)
             }
-            
+            for (albumImage) in album {
+                if  let imageData = albumImage.jpegData(compressionQuality:0.6) {
+                    multipartFormData.append(imageData, withName: "album", fileName: "album.jpeg", mimeType: "image/jpeg")
+                }
+            }
             multipartFormData.append(imageData!, withName: "image", fileName: "offer_image.jpeg", mimeType: "image/jpeg")
         }, to: pageUrl)
         { (result) in
@@ -56,10 +60,16 @@ class SellYourItemInteractor {
             case .success(let upload, _, _):
                 
                 upload.uploadProgress(closure: { (Progress) in
+                    
                     print("Upload Progress: \(Progress.fractionCompleted)")
+                    spinner.startAnimating()
+                    
                 })
                 
+                
                 upload.responseJSON { response in
+                    spinner.stopAnimating()
+                   
                     //self.delegate?.showSuccessAlert()
                     print(response.request)  // original URL request
                     print(response.response) // URL response

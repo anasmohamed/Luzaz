@@ -8,34 +8,36 @@
 
 import UIKit
 import OpalImagePicker
-class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate,SellYourItemFirstView{
+class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,SellYourItemFirstView,OpalImagePickerControllerDelegate{
     internal func showIndicator() {
         spinner.startAnimating()
     }
     func hideIndicator() {
         spinner.stopAnimating()
     }
-
+    
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBOutlet weak var cityPickerView: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
-    var imagePicker = UIImagePickerController()
+    var imagePicker = OpalImagePickerController()
     var presenter : SellYourItemPresenter!
     var isCityEntered = false
     var cityIndex : String?
     var offerImage: UIImage?
-    
+    var offerAlbum = [UIImage]()
+    var isPhotoChoosen = false
     @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         cityPickerView.dataSource = self
         cityPickerView.delegate = self
         presenter = SellYourItemPresenter(view: self)
-        
+        imagePicker.maximumSelectionsAllowed = 5
+        imagePicker.imagePickerDelegate = self
         self.hideKeyboardWhenTappedAround()
         
-
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -43,41 +45,42 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     }
     
     @IBAction func nextButtonWasPressed(_ sender: Any) {
-        if isCityEntered
+        if isCityEntered && isPhotoChoosen
         {
             let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
             sellYourItemSecondVC.city = cityIndex
             sellYourItemSecondVC.offerImage = offerImage
+            
+            sellYourItemSecondVC.offerAlbum = offerAlbum
             self.present(sellYourItemSecondVC,animated:true,completion: nil)
             
         }else
         {
-           showError(error: "you must choose city")
+            showError(error: "you must choose city and photo")
         }
         
     }
     func getGovernoratesSuccess() {
         cityPickerView.reloadAllComponents()
     }
-    
+    func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage])
+    {
+        offerImage = images[0]
+        imageView.image = images[0]
+        offerAlbum = Array(images[1..<images.count])
+        isPhotoChoosen = true
+        imagePicker.dismiss(animated: true, completion: nil)
+
+        
+    }
+    func imagePickerDidCancel(_ picker: OpalImagePickerController)
+    {
+        isPhotoChoosen = false
+
+    }
     @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
-        let imagePicker = OpalImagePickerController()
-        presentOpalImagePickerController(imagePicker, animated: true,
-                                         select: { (assets) in
-                                            //Select Assets
-                                            print(assets)
-        }, cancel: {
-            //Cancel
-        })
-//        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-//            print("Button capture")
-//            
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = .savedPhotosAlbum
-//            imagePicker.allowsEditing = false
-//            
-//            present(imagePicker, animated: true, completion: nil)
-//        }
+        present(imagePicker, animated: true, completion: nil)
+  
     }
     func showError(error : String)
     {
@@ -88,26 +91,9 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         
         present(alertController, animated: true, completion: nil)
     }
-   
-    //
-    //    func numberOfComponentsInPickerView (pickerView:UIPickerView) ->Int {
-    //        return 1
-    //    }
-    //
-    //    func pickerView (pickerView:UIPickerView ,umberOfComponentsInPickerView component:Int  )->Int{
-    //        return list.count
-    //    }
-    //    func pickerView (pickerView:UIPickerView ,titelOfRaw raw:Int , forComponent component :Int)-> String{
-    //        self.view.endEditing(true)
-    //        return list[raw]
-    //    }
-    //
-    //    func pickerView (pickerView:UIPickerView ,didSelectedRaw raw :Int , InComponent component:Int){
-    //         self.cityList.text = self.list[raw]
-    //        self.dropDown.isHidden = true
-    //    }
     
-   
+  
+    
     
     
 }

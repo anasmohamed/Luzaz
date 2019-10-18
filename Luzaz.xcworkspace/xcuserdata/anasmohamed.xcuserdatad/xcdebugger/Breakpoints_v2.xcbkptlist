@@ -2,4 +2,22 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Luzaz/Scenes/SellYourItems/Interactor/SellYourItemInteractor.swift"
+            timestampString = "593106955.833877"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "addUserOffer(token:privacy_policy:id_governate:id_category:id_sub_category:attr:attr_values:title:id_brand:offer_type:decription:price:discount_prec:youtube_link:reseller_name:reseller_phone:reseller_mail:contact_type:image:album:lat:long:spinner:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

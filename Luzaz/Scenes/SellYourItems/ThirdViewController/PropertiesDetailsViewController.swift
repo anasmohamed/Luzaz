@@ -23,6 +23,7 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     var attributeValues = [String]()
     var attributeIds = [String]()
     var superStackView = UIStackView()
+    var offerAlbum = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)

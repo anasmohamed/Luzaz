@@ -33,7 +33,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     var lat : String = ""
     var attributeValues : [String]?
     var attributeIds: [String]?
-    
+    var offerAlbum = [UIImage]()
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -100,6 +100,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             sellYourItemFifthVC.long = long
             sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
             sellYourItemFifthVC.offerDescription = offerDescription
+            sellYourItemFifthVC.offerAlbum = offerAlbum
             if !(attributeIds?.isEmpty)!
             {
                 sellYourItemFifthVC.attributeValues = attributeValues

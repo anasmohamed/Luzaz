@@ -63,7 +63,7 @@ class SellYourItemPresenter {
         return (sellItem?.brand)!
     }
     func  viewDidLoad()  {
-        //getGovernorates(country:UserDefaults.standard.string(forKey: "country")!)
+        getGovernorates(country:UserDefaults.standard.string(forKey: "country")!)
     }
     
     func getBrands(gategory: String)
@@ -124,8 +124,8 @@ class SellYourItemPresenter {
         return governorates![row].id!
         
     }
-    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage?],lat:String,long : String)
+    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage],lat:String,long : String,spinner :UIActivityIndicatorView)
     {
-        sellYourItemInteractor?.addUserOffer(token:token , privacy_policy: privacy_policy, id_governate:"45", id_category: id_category, id_sub_category: id_sub_category, attr: "", attr_values: "", title: title, id_brand: id_brand, offer_type:offer_type , decription: decription, price: price, discount_prec: discount_prec, youtube_link: "", reseller_name: reseller_name, reseller_phone: reseller_phone, reseller_mail: reseller_mail, contact_type: contact_type, image: UIImage(named: "back-arrow")!, album: [nil],lat:lat,long:long)
+        sellYourItemInteractor?.addUserOffer(token:token , privacy_policy: privacy_policy, id_governate:id_governate, id_category: id_category, id_sub_category: id_sub_category, attr: attr, attr_values:attr_values, title: title, id_brand: id_brand, offer_type:offer_type , decription: decription, price: price, discount_prec: discount_prec, youtube_link: "", reseller_name: reseller_name, reseller_phone: reseller_phone, reseller_mail: reseller_mail, contact_type: contact_type, image: image, album: album,lat:lat,long:long,spinner: spinner)
     }
 }
