@@ -55,7 +55,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemView {
         
      
         if brand == nil{
-            brand = ""
+            brand = "0"
         }
         
     }

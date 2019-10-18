@@ -85,7 +85,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         
-        if isConditionEnterd &&  !(itemTitleTextView.text?.isEmpty)!
+        if isConditionEnterd &&  !(itemTitleTextView.text?.isEmpty)! && !(itemDescritionTextField.text.isEmpty)
         {
             
             let sellYourItemFifthVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemFifthVC")as! SellYourItemFifthViewController
@@ -99,7 +99,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             sellYourItemFifthVC.lat = lat
             sellYourItemFifthVC.long = long
             sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
-            sellYourItemFifthVC.offerDescription = offerDescription
+            sellYourItemFifthVC.offerDescription = itemDescritionTextField.text!
             sellYourItemFifthVC.offerAlbum = offerAlbum
             if !(attributeIds?.isEmpty)!
             {

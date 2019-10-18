@@ -171,7 +171,7 @@ struct NetworkingConstants {
 
     
     //addUserOffer Paramter
-    static let addUserOfferToken = "Token"
+    static let addUserOfferToken = "token"
     static let addUserOfferPrivacyPolicy = "privacy_policy"
     static let addUserOfferIdGovernate = "id_governate"
     static let addUserOfferIdCategory = "id_category"
@@ -179,7 +179,7 @@ struct NetworkingConstants {
     static let addUserOfferTitle = "title"
     static let addUserOfferIdBrand = "id_brand"
     static let addUserOfferOfferType = "offer_type"
-    static let addUserOfferDecription = "decription"
+    static let addUserOfferDecription = "description"
     static let addUserOfferPrice = "price"
     static let addUserOfferDiscount_prec = "discount_prec"
     static let addUserOfferReseller_name = "reseller_name"
