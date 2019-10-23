@@ -37,7 +37,16 @@ class LeftSidePanelVC: UIViewController {
         }
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (token.isEmpty){
+            registerBtn.setTitle("Register/Login", for: .normal)
+        }
+        else{
+            registerBtn.setTitle("my profile", for: .normal)
+        }
+        
+    }
     
     @IBAction func languageBrnWasPressed(_ sender: Any) {
         let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
@@ -53,7 +62,7 @@ class LeftSidePanelVC: UIViewController {
     
     @IBAction func winWithUsBtnWasPressed(_ sender: Any) {
         if !(token.isEmpty){
-            let competitionVC = storyboard?.instantiateViewController(withIdentifier: "") as! CountriesViewController
+            let competitionVC = storyboard?.instantiateViewController(withIdentifier: "UserCompetitionVC") as! UserCompetitionViewController
             self.present(competitionVC, animated: true, completion: nil)
         }else{
             appDelegate.MenuContainerVC.toggleLeftPane()
@@ -94,12 +103,25 @@ class LeftSidePanelVC: UIViewController {
         }
     }
     @IBAction func myProductWasPressed(_ sender: Any) {
+        if !(token.isEmpty){
+                let myProductsVC = storyboard?.instantiateViewController(withIdentifier: "MyProductsVC") as! MyProductViewController
+            myProductsVC.modalPresentationStyle = .fullScreen
+                self.present(myProductsVC, animated: true, completion: nil)
+            }
+            else{
+                appDelegate.MenuContainerVC.toggleLeftPane()
+                
+                showError(error: "you should login")
+            }
     }
     @IBAction func categoriesBtnWasPressed(_ sender: Any) {
         let categoriesVC = storyboard?.instantiateViewController(withIdentifier: "MainCategoriesVC") as! MainCateogriesViewController
         self.present(categoriesVC, animated: true, completion: nil)
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
+        let homeViewController = ContainerVC()
+            
+              present(homeViewController, animated: true, completion: nil)
     }
     
     @IBAction func regiterLoginBtnWasPressed(_ sender: Any) {

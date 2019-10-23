@@ -154,7 +154,6 @@
 		CC86962122F4F61C00E9F14D /* TetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86960822F4F61C00E9F14D /* TetViewController.swift */; };
 		CC8B2F79234144B900784348 /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8B2F78234144B900784348 /* OrderCellView.swift */; };
 		CC98EF4C2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */; };
-		CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F8FB022F6162A00B86648 /* Media.xcassets */; };
 		CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2DC9233BD4CC00F6F82A /* CompetitionViewController.swift */; };
 		CCCD733D23315B97005823D6 /* FavImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD733C23315B97005823D6 /* FavImage.swift */; };
 		CCD9BE392339111E002B9201 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9BE2F2339111E002B9201 /* Answer.swift */; };
@@ -349,7 +348,6 @@
 		CC86960822F4F61C00E9F14D /* TetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetViewController.swift; sourceTree = "<group>"; };
 		CC8B2F78234144B900784348 /* OrderCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCellView.swift; sourceTree = "<group>"; };
 		CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboardDelagate.swift"; sourceTree = "<group>"; };
-		CC9F8FB022F6162A00B86648 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../Downloads/Luzaz 5/Luzaz/Media.xcassets"; sourceTree = "<group>"; };
 		CCAB2DC9233BD4CC00F6F82A /* CompetitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		CCCD733C23315B97005823D6 /* FavImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavImage.swift; sourceTree = "<group>"; };
 		CCD9BE2F2339111E002B9201 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
@@ -1076,8 +1074,8 @@
 				3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */,
 				35A40FDE2356024C004D5619 /* StackViewBackground.swift */,
 				CC8695F722F4F61C00E9F14D /* HomeViewController.swift */,
-				CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */,
 				CC8695FF22F4F61C00E9F14D /* ProductScreendetailsViewController.swift */,
+				CC8695F822F4F61C00E9F14D /* ImageCollectionViewCell.swift */,
 				CC86960022F4F61C00E9F14D /* ProductViewController.swift */,
 				CC86960122F4F61C00E9F14D /* RegisterationStatusViewController.swift */,
 				CC86960822F4F61C00E9F14D /* TetViewController.swift */,
@@ -1085,7 +1083,6 @@
 				CC8695C422F4F54B00E9F14D /* ViewController.swift */,
 				CC8695C622F4F54B00E9F14D /* Main.storyboard */,
 				CC8695C922F4F54B00E9F14D /* Assets.xcassets */,
-				CC9F8FB022F6162A00B86648 /* Media.xcassets */,
 				CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */,
 				CC8695CE22F4F54B00E9F14D /* Info.plist */,
 				CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */,
@@ -1263,6 +1260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1291,7 +1289,6 @@
 				CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */,
 				CC726997233AC613006B61DD /* CountryTableViewCell.xib in Resources */,
 				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
-				CC9F8FB122F6162A00B86648 /* Media.xcassets in Resources */,
 				CC7269D0233AC614006B61DD /* FavoriteOffersTableViewCell.xib in Resources */,
 				CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */,
 				CC726985233AC613006B61DD /* UserChatsTableViewCell.xib in Resources */,
