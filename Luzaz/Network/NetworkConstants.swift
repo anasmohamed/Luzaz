@@ -46,8 +46,9 @@ struct NetworkingConstants {
     static let addUserOffer = "addUserOffer"
     static let getGovernorates = "getGovernorates"
     static let getBrands = "getBrands"
-    
+    static let deleteOffer = "deleteOffer"
 
+    
 
 
     //get offers pramters
@@ -153,7 +154,7 @@ struct NetworkingConstants {
 
     
     //DELETE OFFER PARAMTERS
-    static let offerToken = "Token"
+    static let offerToken = "token"
     static let deleteOfferId = "offer"
     
     
@@ -200,6 +201,8 @@ struct NetworkingConstants {
     
     //getBrands Parameter
     static let  getBrandsCategory = "category"
+
+  
 
 
 }

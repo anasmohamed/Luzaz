@@ -62,13 +62,37 @@ class MyProductPresenter {
             }
         }
     }
+    func deleteOffer(token: String , offer: String)  {
+        myProductInteractor.deleteOffer(token: token, offer: offer){
+            [unowned self] (message, error) in
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard message != nil else { return }
+                self.view?.offerDeletedSuccessfuly(message:message ?? "")
+            }
+            
+        }
+    }
     func getSellsCount() -> Int {
         return sells.count
     }
     func getOrdersCount() -> Int {
         return orders.count
     }
-    
+    func deleteItem(index:Int,selectedSegmentIndex:Int)
+    {
+        if selectedSegmentIndex == 0
+        
+        {
+        sells.remove(at: index)
+        }
+        else
+        {
+            orders.remove(at: index)
+        }
+    }
     func configure(cell: MyProductCellView, for index: Int) {
         let sell = sells[index]
       
@@ -98,6 +122,15 @@ class MyProductPresenter {
         
     }
     
+    func getOfferId(index: Int,segmentControlIndex : Int) -> String{
+        if segmentControlIndex == 0
+        {
+            return sells[index].offerId ?? ""
+        }else{
+            return orders[index].offreId ?? ""
+
+        }
+    }
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
         viewController.offer = sells[index]
         

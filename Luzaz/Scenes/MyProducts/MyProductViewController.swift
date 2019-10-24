@@ -10,7 +10,7 @@ import UIKit
 
 class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var presenter: MyProductPresenter!
-    
+    var token : String!
     @IBAction func segmentedControlActionChanged(_ sender: Any) {
         tableView.reloadData()
     }
@@ -25,6 +25,7 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         setupTableView()
         presenter = MyProductPresenter(view : self)
         displayBackground()
+        token = UserDefaults.standard.string(forKey: "token")!
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -51,18 +52,38 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
             if  presenter.getOrdersCount() == 0
             {
                 drowImageInTableBackgound()
-
+                
             }
         default: break
         }
     }
-   func drowImageInTableBackgound()
+    func drowImageInTableBackgound()
     {
-        UIGraphicsBeginImageContext(self.tableView.frame.size);
-        UIImage(named: "nothingtoShow")?.draw(in: self.view.bounds)
-        let backImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext();
-        self.tableView.backgroundColor = UIColor(patternImage: backImage)
+        let backgroundImage = UIImage(named: "nothingtoShow")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let offerId : String!
+            switch segmentedControl.selectedSegmentIndex
+            {
+            case 0:
+                offerId =   presenter.getOfferId(index:indexPath.row , segmentControlIndex:0)
+                presenter.deleteItem(index: indexPath.row,selectedSegmentIndex:0)
+
+            case 1:
+                offerId =   presenter.getOfferId(index:indexPath.row , segmentControlIndex:1)
+                presenter.deleteItem(index: indexPath.row,selectedSegmentIndex:1)
+
+            default:
+                offerId =     presenter.getOfferId(index:indexPath.row , segmentControlIndex:1)
+                
+            }
+            presenter.deleteOffer(token:token,offer: offerId)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -110,11 +131,11 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
             
         }
         
-
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as! MyProductTableViewCell
-//        presenter.configure(cell: cell, for: indexPath.row)
         
-//        return cell
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as! MyProductTableViewCell
+        //        presenter.configure(cell: cell, for: indexPath.row)
+        
+        //        return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

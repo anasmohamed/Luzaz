@@ -50,6 +50,7 @@ class LeftSidePanelVC: UIViewController {
     
     @IBAction func languageBrnWasPressed(_ sender: Any) {
         let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
+        languageVC.modalPresentationStyle = .fullScreen
         self.present(languageVC, animated: true, completion: nil)
         
     }
@@ -57,12 +58,14 @@ class LeftSidePanelVC: UIViewController {
         let countryVC = storyboard?.instantiateViewController(withIdentifier: "CountriesVC") as! CountriesViewController
         countryVC.isLeftSideController = true
         countryVC.countryImage = countryImageView
+        countryVC.modalPresentationStyle = .fullScreen
         self.present(countryVC, animated: true, completion: nil)
     }
     
     @IBAction func winWithUsBtnWasPressed(_ sender: Any) {
         if !(token.isEmpty){
             let competitionVC = storyboard?.instantiateViewController(withIdentifier: "UserCompetitionVC") as! UserCompetitionViewController
+            competitionVC.modalPresentationStyle = .fullScreen
             self.present(competitionVC, animated: true, completion: nil)
         }else{
             appDelegate.MenuContainerVC.toggleLeftPane()
@@ -71,8 +74,9 @@ class LeftSidePanelVC: UIViewController {
     }
     @IBAction func sellYourItemsWasPressed(_ sender: Any) {
         if !(token.isEmpty){
-            let countryVC = storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
-            self.present(countryVC, animated: true, completion: nil)
+            let sellYourItemVC = storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
+            sellYourItemVC.modalPresentationStyle = .fullScreen
+            self.present(sellYourItemVC, animated: true, completion: nil)
         }
         else{
             appDelegate.MenuContainerVC.toggleLeftPane()
@@ -84,6 +88,7 @@ class LeftSidePanelVC: UIViewController {
     @IBAction func favoriteBtnWasPressed(_ sender: Any) {
         if !(token.isEmpty) {
             let favoriteVC = storyboard?.instantiateViewController(withIdentifier: "FavoriteVC") as! SellYourItemViewController
+            favoriteVC.modalPresentationStyle = .fullScreen
             self.present(favoriteVC, animated: true, completion: nil)
         }else
         {            appDelegate.MenuContainerVC.toggleLeftPane()
@@ -94,6 +99,7 @@ class LeftSidePanelVC: UIViewController {
     @IBAction func chatBtnWasPressed(_ sender: Any) {
         if !(token.isEmpty){
             let userBuddiesVC = storyboard?.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+            userBuddiesVC.modalPresentationStyle = .fullScreen
             self.present(userBuddiesVC, animated: true, completion: nil)
         }
         else{
@@ -116,11 +122,12 @@ class LeftSidePanelVC: UIViewController {
     }
     @IBAction func categoriesBtnWasPressed(_ sender: Any) {
         let categoriesVC = storyboard?.instantiateViewController(withIdentifier: "MainCategoriesVC") as! MainCateogriesViewController
+        categoriesVC.modalPresentationStyle = .fullScreen
         self.present(categoriesVC, animated: true, completion: nil)
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
         let homeViewController = ContainerVC()
-            
+        homeViewController.modalPresentationStyle = .fullScreen
               present(homeViewController, animated: true, completion: nil)
     }
     
@@ -129,10 +136,12 @@ class LeftSidePanelVC: UIViewController {
         if (token.isEmpty) {
             registerBtn.titleLabel?.text = "Register/login"
             let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
         }else{
             registerBtn.titleLabel?.text = "my profile"
             let profileVC = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+            profileVC.modalPresentationStyle = .fullScreen
             self.present(profileVC, animated: true, completion: nil)
         }
     }
