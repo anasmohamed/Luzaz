@@ -52,6 +52,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
             sellYourItemSecondVC.offerImage = offerImage
             
             sellYourItemSecondVC.offerAlbum = offerAlbum
+            sellYourItemSecondVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemSecondVC,animated:true,completion: nil)
             
         }else

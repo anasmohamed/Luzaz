@@ -59,6 +59,7 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
                 sellYourItemEndVC.attributeValues = attributeValues
                
             }
+            sellYourItemEndVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemEndVC,animated:true,completion: nil)
         }else{
             showError(error: "You Should Enter Price")

@@ -51,7 +51,7 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
             sellYourItemFourthVC.offerImage = offerImage
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
-         
+            sellYourItemFourthVC.modalPresentationStyle = .fullScreen
 
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             

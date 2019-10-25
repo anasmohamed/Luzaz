@@ -107,6 +107,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
                 sellYourItemFifthVC.attributeIds = attributeIds
                
             }
+            sellYourItemFifthVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemFifthVC,animated:true,completion: nil)
             
         }else

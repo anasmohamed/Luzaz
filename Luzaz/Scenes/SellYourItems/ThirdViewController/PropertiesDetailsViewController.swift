@@ -109,7 +109,7 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.attributeValues = attributeValues
             sellYourItemFourthVC.attributeIds = attributeIds
-            
+            sellYourItemFourthVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             
         }else

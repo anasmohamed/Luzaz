@@ -71,8 +71,9 @@ class SellYourItemInteractor {
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
+                    completionHandler("Offer has been added", nil)
+
                 }
-                completionHandler("Offer has been added", nil)
 
             case .failure(let encodingError):
                 completionHandler("", encodingError)

@@ -79,6 +79,8 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.brand = brand
             sellYourItemFourthVC.offerAlbum = offerAlbum
+            sellYourItemFourthVC.modalPresentationStyle = .fullScreen
+
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
         }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList && !(attributeList?.isEmpty)!
         {
@@ -89,7 +91,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemThirdVC.subCategory = subCategory
             sellYourItemThirdVC.attributeList = attributeList
             sellYourItemThirdVC.offerAlbum = offerAlbum
-
+            sellYourItemThirdVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemThirdVC,animated:true,completion: nil)
             
         }else
