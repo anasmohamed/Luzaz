@@ -9,9 +9,22 @@
 import Foundation
 import UIKit
 extension FavoriteOffersViewController : FavoriteOffersView{
-    func showError(error: String) {
-        
+    func offerDeletedSuccessfuly(message: String) {
+        showALert(message: "Offer Deleted Successfully", title: "Seccess")
     }
+    
+    func showError(error: String) {
+        showALert(message: error, title:"Error")
+    }
+    func showALert(message : String,title: String)
+      {
+          let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+          
+          let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+          alertController.addAction(action)
+          
+          present(alertController, animated: true, completion: nil)
+      }
     func getFavoriteOffersSuccess() {
         tableView.reloadData()
     }

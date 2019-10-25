@@ -50,6 +50,8 @@ struct NetworkingConstants {
 
     
 
+    
+
 
     //get offers pramters
     static let country = "country"
@@ -122,13 +124,13 @@ struct NetworkingConstants {
     static let senderAttachmentsArray = "attachmentsArray"
     
     //ADDUSERFAVORITES
-    static let favoriteUserToken = "Token"
+    static let favoriteUserToken = "token"
     static let favoriteUserOffer = "offer"
     
     
     
     //GET USER ORDER
-    static let userOrderToken = "Token"
+    static let userOrderToken = "token"
     static let userOrderId = "id"
     static let getOrderUserId = "id_user"
     static let resellerId = "id_reseller"
@@ -203,7 +205,9 @@ struct NetworkingConstants {
     static let  getBrandsCategory = "category"
 
   
-
+    //deleteUserFavorite parameter
+    static let  deleteFavriteOfferToken = "token"
+    static let  deleteFavriteOfferId = "offer"
 
 }
 

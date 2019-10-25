@@ -22,6 +22,8 @@ class LeftSidePanelVC: UIViewController {
     let appDelegate = AppDelegate.getAppDelegate()
     var token : String = ""
     @IBOutlet weak var countryImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         countryImageView.image = UIImage(named:getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
@@ -87,7 +89,7 @@ class LeftSidePanelVC: UIViewController {
     }
     @IBAction func favoriteBtnWasPressed(_ sender: Any) {
         if !(token.isEmpty) {
-            let favoriteVC = storyboard?.instantiateViewController(withIdentifier: "FavoriteVC") as! SellYourItemViewController
+            let favoriteVC = storyboard?.instantiateViewController(withIdentifier: "FavoriteVC") as! FavoriteOffersViewController
             favoriteVC.modalPresentationStyle = .fullScreen
             self.present(favoriteVC, animated: true, completion: nil)
         }else

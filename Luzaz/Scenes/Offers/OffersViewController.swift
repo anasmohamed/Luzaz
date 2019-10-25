@@ -132,6 +132,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
         offersDetailsVC.modalTransitionStyle = .flipHorizontal
+        offersDetailsVC.modalPresentationStyle = .fullScreen
         presenter.pushToDetails(viewController: offersDetailsVC, indexPath.row)
         self.present(offersDetailsVC,animated:true,completion:nil)
         

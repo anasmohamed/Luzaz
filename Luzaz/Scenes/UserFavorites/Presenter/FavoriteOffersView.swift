@@ -12,4 +12,5 @@ protocol FavoriteOffersView:class {
     func hideIndicator()
     func getFavoriteOffersSuccess()
     func showError(error: String)
+    func offerDeletedSuccessfuly(message:String)
 }

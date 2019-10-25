@@ -323,19 +323,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="f40-EL-8g2">
-                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="VCt-4D-vxU">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-zJ-VYC">
-                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
+                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="BXW-sc-XO1">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="kpF-Rm-c5L">
-                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="dvp-KP-SRW">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>
@@ -826,7 +826,8 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C19-o6-VIF">
                                 <rect key="frame" x="0.0" y="71" width="320" height="447"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoversationCell" rowHeight="72" id="1xx-en-xjU" customClass="ConversationTableViewCell" customModule="Luzaz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="72"/>
@@ -963,7 +964,7 @@
                                 <rect key="frame" x="0.0" y="67" width="320" height="501"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n06-Wx-dUZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="501"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Fb-OjG">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1032,7 +1033,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="callBtnWasPressed:" destination="Y8y-At-cul" eventType="touchUpInside" id="OVh-MM-TFE"/>
                                                     <action selector="chatWithSellerBtnWasPressed:" destination="Y8y-At-cul" eventType="touchUpInside" id="56v-m9-sWp"/>
                                                 </connections>
                                             </button>
@@ -1073,7 +1073,9 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="n06-Wx-dUZ" secondAttribute="trailing" id="2pl-r9-lSl"/>
                                     <constraint firstItem="n06-Wx-dUZ" firstAttribute="leading" secondItem="v8M-Lf-drS" secondAttribute="leading" id="7h9-Z8-1UQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="n06-Wx-dUZ" secondAttribute="bottom" constant="-1519" id="XVk-a2-2LI"/>
+                                    <constraint firstItem="n06-Wx-dUZ" firstAttribute="height" secondItem="v8M-Lf-drS" secondAttribute="height" id="EyO-5O-Dmo"/>
+                                    <constraint firstAttribute="bottom" secondItem="n06-Wx-dUZ" secondAttribute="bottom" constant="1" id="XVk-a2-2LI"/>
+                                    <constraint firstItem="n06-Wx-dUZ" firstAttribute="width" secondItem="v8M-Lf-drS" secondAttribute="width" id="g4B-1h-zYZ"/>
                                     <constraint firstItem="n06-Wx-dUZ" firstAttribute="top" secondItem="v8M-Lf-drS" secondAttribute="top" id="g7a-ql-27S"/>
                                 </constraints>
                             </scrollView>
@@ -1092,12 +1094,15 @@
                                             <action selector="backBtnWasPressed:" destination="Y8y-At-cul" eventType="touchUpInside" id="gHD-cD-OVY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-kw-kOS" customClass="FaveButton" customModule="FaveButton">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-kw-kOS" customClass="FaveButton" customModule="FaveButton">
                                         <rect key="frame" x="273" y="22" width="39" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="heart">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addToFavorite:" destination="Y8y-At-cul" eventType="touchUpInside" id="w6u-jX-oVw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1112,19 +1117,18 @@
                             <constraint firstAttribute="trailing" secondItem="v8M-Lf-drS" secondAttribute="trailing" id="8Yu-hg-Q2h"/>
                             <constraint firstAttribute="trailing" secondItem="SlM-eX-4QP" secondAttribute="trailing" id="Pwm-eh-Md2"/>
                             <constraint firstItem="SlM-eX-4QP" firstAttribute="leading" secondItem="sCH-zn-2QQ" secondAttribute="leading" id="TtC-AE-ml2"/>
-                            <constraint firstItem="n06-Wx-dUZ" firstAttribute="width" secondItem="sCH-zn-2QQ" secondAttribute="width" id="WcK-rV-Tw2"/>
                             <constraint firstItem="v8M-Lf-drS" firstAttribute="leading" secondItem="sCH-zn-2QQ" secondAttribute="leading" id="f1S-nz-Iyn"/>
                             <constraint firstItem="v8M-Lf-drS" firstAttribute="top" secondItem="AfE-su-5KP" secondAttribute="bottom" constant="67" id="kWf-8o-N9Y"/>
                             <constraint firstItem="v8M-Lf-drS" firstAttribute="bottom" secondItem="rm6-z8-hIw" secondAttribute="top" id="rsx-hp-ajV"/>
-                            <constraint firstItem="n06-Wx-dUZ" firstAttribute="height" secondItem="sCH-zn-2QQ" secondAttribute="height" constant="1432" id="zRP-vL-rWQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="2qI-Wn-yPB"/>
                     <connections>
-                        <outlet property="contentView" destination="n06-Wx-dUZ" id="iFW-5z-hdX"/>
+                        <outlet property="contentView" destination="n06-Wx-dUZ" id="gPS-hY-o2y"/>
                         <outlet property="dateLbl" destination="0VB-qS-LC0" id="7Hq-AU-gG9"/>
                         <outlet property="locationLbl" destination="zZU-Ee-t2r" id="onZ-uS-tWS"/>
                         <outlet property="offerDescriptionLabel" destination="b5S-ki-LAj" id="ELx-8G-ub5"/>
+                        <outlet property="offerFavotriteBtn" destination="Ztp-kw-kOS" id="ps6-6D-PMq"/>
                         <outlet property="offerImageView" destination="KLj-Fb-OjG" id="akn-WY-IQR"/>
                         <outlet property="offerTitleLabel" destination="nAb-wp-7Iw" id="XG2-Mq-a9f"/>
                         <outlet property="scroller" destination="v8M-Lf-drS" id="LGs-jA-PHz"/>
@@ -1577,19 +1581,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="LeQ-Of-VCE">
-                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="uv1-E5-6QC">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="xHP-TT-Hm8">
-                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
+                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-wn-Tcm">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="kGS-nf-qVG">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>
@@ -1920,6 +1924,7 @@
                                         </constraints>
                                         <state key="normal" image="menuSliderBtn"/>
                                         <connections>
+                                            <action selector="backBtnWasPressed:" destination="Z4o-56-0eC" eventType="touchUpInside" id="Nrp-0E-TvC"/>
                                             <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="Qx2-S3-LAl"/>
                                         </connections>
                                     </button>
@@ -2306,19 +2311,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="r9V-6b-sj4">
-                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-kx-BYH">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="WGf-hD-yF9">
-                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
+                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="nEL-2C-89B">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="K5a-kC-0am">
-                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="CsE-Jd-Ql7">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>
@@ -2474,19 +2479,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="0Dy-pM-3Jz">
-                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="sNN-At-bGK">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="LVj-33-CYD">
-                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
+                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="vah-7U-dxV">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-kV-wNm">
-                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finish" translatesAutoresizingMaskIntoConstraints="NO" id="0GW-zv-hyH">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>
@@ -3729,8 +3734,9 @@
                                             <constraint firstAttribute="width" constant="30" id="6cG-g4-LY8"/>
                                             <constraint firstAttribute="height" constant="30" id="OyP-X2-tdc"/>
                                         </constraints>
-                                        <state key="normal" image="menuSliderBtn"/>
+                                        <state key="normal" image="back-arrow"/>
                                         <connections>
+                                            <action selector="backBtnWasPressed:" destination="T0W-kP-NI5" eventType="touchUpInside" id="vxO-r5-R89"/>
                                             <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="ZbP-zx-dvI"/>
                                         </connections>
                                     </button>
@@ -4106,19 +4112,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="2ip-fA-C6v">
-                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="d83-7S-Y57">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="hhr-8z-aTl">
-                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
+                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="NLy-rX-kG9">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="HBj-E5-Ndy">
-                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
+                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="VV3-gO-GMI">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>

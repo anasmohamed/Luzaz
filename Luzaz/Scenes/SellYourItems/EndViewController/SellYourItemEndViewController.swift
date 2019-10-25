@@ -11,6 +11,10 @@ import UIKit
 class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     func offerAddedSuccessfully(message: String) {
         showError(error: message)
+        let offersVC = storyboard?.instantiateViewController(withIdentifier: "OfferVC") as! OffersViewController
+        offersVC.modalPresentationStyle = .fullScreen
+        self.present(offersVC,animated:true,completion:nil)
+        
     }
     
     func showSpinner() {
@@ -85,6 +89,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
+        
         present(alertController, animated: true, completion: nil)
     }
 }

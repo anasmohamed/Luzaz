@@ -14,6 +14,11 @@ class CompetitionViewController: UIViewController, CompetitionView{
     @IBOutlet weak var optionOneBtn: UIButton!
     @IBOutlet weak var quetionsNumber: UILabel!
     @IBOutlet weak var optionThreeBtn: UIButton!
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     private var presenter: CompetitionPresenter!
     var questionId : [String] = []
     var questionCounter: Int = 0

@@ -32,6 +32,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     var presenter: OfferDetailesPresenter!
     var token : String?
     
+    @IBOutlet weak var offerFavotriteBtn: FaveButton!
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var locationLbl: UILabel!
@@ -46,13 +47,18 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
         dateLbl.text = offer.date
+        locationLbl.text = offer.governorate
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
           token =  UserDefaults.standard.string(forKey: "token")!
+            offerFavotriteBtn.isHidden = false
+            
         }
         else
         {
             token = ""
+            offerFavotriteBtn.isHidden = false
+
         }
         if offer.contactType == "1"
         {
@@ -61,6 +67,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         
         // Do any additional setup after loading the view.
     }
+   
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -79,13 +86,17 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         return nil
     }
     
+    @IBAction func addToFavorite(_ sender: Any) {
+        presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
+    }
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+700)
+        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+100)
+//        contentView.size.height = UIScreen.main.bounds.height+offerDescriptionLabel.frame.height + 100
         sellerNameLbl.text = offer.reseller_name
         
     }
@@ -130,6 +141,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBAction func chatWithSellerBtnWasPressed(_ sender: Any) {
         let conversationVC = storyboard?.instantiateViewController(withIdentifier: "ConverstionVC") as! ConverstionViewController
         conversationVC.id = offer.reseller_id
+        conversationVC.modalPresentationStyle = .fullScreen
         self.present(conversationVC, animated: true, completion: nil)
         
     }
@@ -137,15 +149,41 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBAction func callBtnWasPressed(_ sender: Any) {
         
         print("anas")
-        //        print("anas")
-        if let url = URL(string: "tel://\(String(describing: offer.reseller_phone))"), UIApplication.shared.canOpenURL(url) {
-            if #available(iOS 10, *) {
-                UIApplication.shared.open(url)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
+
+        makePhoneCall(phoneNumber: offer.reseller_phone!)
+//           UIApplication.shared.canOpenURL(url) {
+//              if #available(iOS 10, *) {
+//                UIApplication.shared.open(url, options: [:], completionHandler:nil)
+//               } else {
+//                   UIApplication.shared.openURL(url)
+//               }
+//           } else {
+//                    // add error message here
+//           }
+//        }
+//
     }
+      func makePhoneCall(phoneNumber: String) {
+
+              if let phoneURL = NSURL(string: ("tel://" + phoneNumber)) {
+
+                  let alert = UIAlertController(title: ("Call " + phoneNumber + "?"), message: nil, preferredStyle: .alert)
+                  alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
+                      UIApplication.shared.open(phoneURL as URL, options: [:], completionHandler: nil)
+                  }))
+
+                  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                  self.present(alert, animated: true, completion: nil)
+              }
+          }
+//        if let url = URL(string: "tel://\(String(describing: offer.reseller_phone))"), UIApplication.shared.canOpenURL(url) {
+//            if #available(iOS 10, *) {
+//                UIApplication.shared.open(url)
+//            } else {
+//                UIApplication.shared.openURL(url)
+//            }
+//        }
+//    }
         //    @IBAction func callBtnWasPressed(_ sender: Any) {
         //        print("anas")
         //        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {

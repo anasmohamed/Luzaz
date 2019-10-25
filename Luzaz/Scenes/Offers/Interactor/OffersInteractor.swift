@@ -65,7 +65,7 @@ class OffersInteractor {
             
         }
     }
-    func addProductToFavorite(token : String,offerId : String,completionHandler: @escaping (String, Error?) -> Void) {
+    func addProductToFavorite(token : String,offerId : String,completionHandler: @escaping (String?, Error?) -> Void) {
         Alamofire.request(LuzazRouter.addUserFavorites(token: token, offerId: offerId)).responseJSON {(response) in
             
             if let response = response.data {

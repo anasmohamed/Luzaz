@@ -23,10 +23,9 @@ class OfferDetailesPresenter {
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-              //  guard let message = message
-                //    else { return }
+                guard message != nil else { return }
               
-                self.view?.addProductToFavoriteSuccess(message: message)
+                self.view?.addProductToFavoriteSuccess(message: message ?? "")
             }
         }
     }
