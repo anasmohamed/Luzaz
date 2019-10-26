@@ -46,4 +46,9 @@ class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableV
         return 1
     }
 
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
+        dismiss(animated: true, completion: nil)
+        
+    }
 }

@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController,ProfileView {
         prefs.removeObject(forKey:"fullName")
         prefs.removeObject(forKey:"email")
         prefs.removeObject(forKey:"password")
-        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
         present(loginVC, animated: true, completion: nil)
     }
     func showError(error: String) {
@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController,ProfileView {
 
     @IBAction func changePasswordBtnWasPressed(_ sender: Any) {
         let changePasswordVC = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordViewController
+        changePasswordVC.modalPresentationStyle = .fullScreen
     present(changePasswordVC, animated: true, completion: nil)
         
     }

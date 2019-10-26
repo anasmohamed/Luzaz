@@ -14,7 +14,10 @@ class UserCompetitionViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     
-    
+    var firstName : String?
+    var lastName: String?
+    var email : String?
+    var phone :String?
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -57,10 +60,16 @@ class UserCompetitionViewController: UIViewController {
             questionVC.userEmail = emailTextField.text
             questionVC.userFristName = firstNameTextField.text
             questionVC.userLastName = lastNameTextField.text
+            
             self.present(questionVC, animated: true, completion: nil)
         }else
         {
-            
+            let alertController = UIAlertController(title: "Error", message: "you should enter all data ", preferredStyle: .alert)
+                   
+                   let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                   alertController.addAction(action)
+                   
+                   present(alertController, animated: true, completion: nil)
         }
         
        

@@ -103,7 +103,8 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
                case .default:
                 
                 let offersVC = ContainerVC()
-                                        self.present(offersVC,animated:true,completion:nil)
+                offersVC.modalPresentationStyle = .fullScreen
+                self.present(offersVC,animated:true,completion:nil)
                case .cancel:
                    print("cancel")
 

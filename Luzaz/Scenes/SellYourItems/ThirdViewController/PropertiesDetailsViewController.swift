@@ -66,9 +66,6 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     
     func createTextField(stackView : UIStackView) {
         let textField = UITextField()
-        textField.textAlignment = NSTextAlignment.center
-        textField.textColor = UIColor.blue
-        textField.borderStyle = UITextField.BorderStyle.line
         textField.autocapitalizationType = UITextAutocapitalizationType.words
         stackView.addArrangedSubview(textField)
         textField.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true

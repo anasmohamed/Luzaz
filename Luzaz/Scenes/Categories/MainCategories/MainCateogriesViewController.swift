@@ -79,9 +79,9 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let subCategoriesVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoriesVC") as! SubCategoriesViewController
-        subCategoriesVC.modalTransitionStyle = .flipHorizontal
+        subCategoriesVC.modalPresentationStyle = .fullScreen
         presenter.pushToDetails(viewController: subCategoriesVC, indexPath.row)
-        self.present(subCategoriesVC,animated:true,completion:nil)
+        self.present(subCategoriesVC,animated: true, completion: nil)
         
     }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -97,8 +97,8 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     }
   
     @IBAction func menuBtnWasPressed(_ sender: Any) {
-        delegate?.toggleLeftPane()
-
+        AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
+     dismiss(animated: true, completion: nil)
     }
 
 }

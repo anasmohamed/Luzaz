@@ -3,22 +3,4 @@
    uuid = "90345EA3-9669-4894-967C-5035D6C025C1"
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "77A51F0F-7BB7-43E6-B99D-9E5655130B9D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Luzaz/Scenes/SellYourItems/EndViewController/Presenter/SellYourItemEndPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "addUserOffer(token:privacy_policy:id_governate:id_category:id_sub_category:attr:attr_values:title:id_brand:offer_type:decription:price:discount_prec:youtube_link:reseller_name:reseller_phone:reseller_mail:contact_type:image:album:lat:long:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>

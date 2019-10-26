@@ -48,5 +48,7 @@ class CountryPresenter {
         cell.displayCountryImage(image: image)
         cell.displayCountryName(name: name)
     }
-    
+    func  getCountryName(index : Int) -> String {
+        return countries[index].name ?? "1"
+    }
 }

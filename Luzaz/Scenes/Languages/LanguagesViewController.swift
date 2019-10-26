@@ -24,6 +24,7 @@ class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewD
         if isLeftSideController == false {
             
             let  languageVC = ContainerVC()
+            languageVC.modalPresentationStyle = .fullScreen
 //            let languageVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
             
             //languageVC!.delegate = AppDelegate.getAppDelegate().MenuContainerVC

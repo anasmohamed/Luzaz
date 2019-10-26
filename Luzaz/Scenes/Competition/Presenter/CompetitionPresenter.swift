@@ -31,9 +31,9 @@ class CompetitionPresenter {
             [unowned self] (percentage,code, error) in
             self.view?.hideIndicator()
             if let error = error {
-                self.view?.showError(error: error.localizedDescription)
+                self.view?.showError(error: "Error",content : error.localizedDescription)
             } else {
-                self.view?.showError(error:percentage!)
+                self.view?.showError(error:"Success",content :percentage!)
             }
             
             
@@ -45,7 +45,7 @@ class CompetitionPresenter {
             
             self.view?.hideIndicator()
             if let error = error {
-                self.view?.showError(error: error.localizedDescription)
+                self.view?.showError(error: "Error",content:error.localizedDescription )
             } else {
                 guard let qustions = qustions else { return }
                 self.qustions = qustions

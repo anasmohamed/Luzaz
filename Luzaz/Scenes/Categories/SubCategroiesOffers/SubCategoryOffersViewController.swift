@@ -27,7 +27,7 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
     }
     
     func setupTableView() {
-        tableView.register(UINib(nibName: "SubCategoryOfferCell", bundle: nil), forCellReuseIdentifier: "SubCategoryOfferCell")
+        tableView.register(UINib(nibName: "SubCategoryOffersTableViewCell", bundle: nil), forCellReuseIdentifier: "SubCategoryOffersTableViewCell")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -60,4 +60,9 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
         tableView.reloadData()
     }
     
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
+        dismiss(animated: true, completion: nil)
+    }
 }
