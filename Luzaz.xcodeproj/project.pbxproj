@@ -12,6 +12,7 @@
 		3581962123572D390029D669 /*  CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */; };
 		35819623235738390029D669 /* LayoutOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35819622235738390029D669 /* LayoutOption.swift */; };
 		358A4DFB235A7B1000ABB014 /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */; };
+		358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */; };
 		3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
 		35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */; };
@@ -199,6 +200,7 @@
 		3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CustomCollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
 		35819622235738390029D669 /* LayoutOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOption.swift; sourceTree = "<group>"; };
 		358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
+		358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidePanelVC.swift; sourceTree = "<group>"; };
 		35A40FDE2356024C004D5619 /* StackViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackground.swift; sourceTree = "<group>"; };
 		35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAttributes.swift; sourceTree = "<group>"; };
 		4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -789,6 +791,7 @@
 				CC726904233AC613006B61DD /* CenterVCDelegate.swift */,
 				CC726905233AC613006B61DD /* ContainerVC.swift */,
 				CC726906233AC613006B61DD /* LeftSidePanelVC.swift */,
+				358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */,
 			);
 			path = LeftSidePanel;
 			sourceTree = "<group>";
@@ -1546,6 +1549,7 @@
 				CC726964233AC613006B61DD /* TextFieldIcon.swift in Sources */,
 				CC1DA8F6234261D700A0C5D9 /* RoundButton.swift in Sources */,
 				CC726989233AC613006B61DD /* CompetitionInteractor.swift in Sources */,
+				358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */,
 				CCD9BE3B2339111E002B9201 /* Category.swift in Sources */,
 				CC7269A3233AC613006B61DD /* MyProductCellView.swift in Sources */,
 				CC726958233AC613006B61DD /* UserInteractor.swift in Sources */,
