@@ -47,9 +47,9 @@ struct NetworkingConstants {
     static let getGovernorates = "getGovernorates"
     static let getBrands = "getBrands"
     static let deleteOffer = "deleteOffer"
+    static let getUser = "getUser"
 
     
-
     
 
 
@@ -208,6 +208,10 @@ struct NetworkingConstants {
     //deleteUserFavorite parameter
     static let  deleteFavriteOfferToken = "token"
     static let  deleteFavriteOfferId = "offer"
+    
+    //GET USER PARAMTERS
+    static let  getUserId = "id"
+
 
 }
 

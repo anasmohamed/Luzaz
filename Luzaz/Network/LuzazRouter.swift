@@ -31,9 +31,11 @@ enum LuzazRouter: URLRequestConvertible {
     case setPasswordByToken(token:String,password : String,rePassword:String)
     case deleteOffer(token : String , offer: String)
     case deleteFavoriteOffer(token : String , offer: String)
-    //    case addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String)
+    case getUser(id:String)
     case getGovernorates(country:String)
     case getBrands(gategory: String)
+    
+    
     var path: String {
         
         switch self {
@@ -79,13 +81,15 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.deleteOffer
         case .deleteFavoriteOffer:
             return NetworkingConstants.deleteUserFavorite
+        case .getUser:
+            return NetworkingConstants.getUser
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer,.getUser:
             return .get
         case .addToConversation:
             return .post
@@ -193,6 +197,9 @@ enum LuzazRouter: URLRequestConvertible {
         case let .deleteFavoriteOffer(token, offer):
             params[NetworkingConstants.offerToken] = token
             params[NetworkingConstants.deleteOfferId] = offer
+        case let .getUser(id):
+            params[NetworkingConstants.getUserId] = id
+
             
         default:
             print("Empty Paramter")
@@ -211,7 +218,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             
