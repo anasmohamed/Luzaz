@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+import MOLH
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
     
     var window: UIWindow?
     fileprivate var containerVC = ContainerVC()
@@ -17,21 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         return containerVC
     }
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-       
         
-            window?.rootViewController = containerVC
-            window?.makeKeyAndVisible()
-        
-        
-        // Override point for customization after application launch.
-        // window?.rootViewController = containerVC
-        // window?.makeKeyAndVisible()
+//        MOLHLanguage.setDefaultLanguage("en")
+        MOLH.shared.activate(true)
+        MOLH.shared.specialKeyWords = ["Cancel","Done"]
+        window?.rootViewController = containerVC
+        window?.makeKeyAndVisible()
         return true
     }
-    
+    func reset() {
+//        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+//        let stry = UIStoryboard(name: "Main", bundle: nil)
+//        rootviewcontroller.rootViewController = stry.instantiateViewController(withIdentifier: "Con")
+        window?.rootViewController = containerVC
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

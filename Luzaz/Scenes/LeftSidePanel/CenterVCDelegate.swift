@@ -8,7 +8,9 @@
 
 import Foundation
 protocol CenterVCDelegate {
+    func togglePane()
     func toggleLeftPane()
+    func toggleRightPane()
     func addLeftPanelViewController()
     func animateLeftPanel(shouldExpand : Bool)
 }

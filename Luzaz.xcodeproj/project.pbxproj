@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
+		3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3576F68D2368CD9600E3AB38 /* Localizable.strings */; };
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
 		3581962123572D390029D669 /*  CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */; };
 		35819623235738390029D669 /* LayoutOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35819622235738390029D669 /* LayoutOption.swift */; };
@@ -22,7 +23,6 @@
 		CC0F0CD22340F663000F6C4A /* SellYourItemFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */; };
 		CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */; };
 		CC0F0CD7234114BC000F6C4A /* Brands.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD6234114BC000F6C4A /* Brands.swift */; };
-		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
 		CC1DA8F6234261D700A0C5D9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */; };
 		CC726958233AC613006B61DD /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A2233AC612006B61DD /* UserInteractor.swift */; };
 		CC726959233AC613006B61DD /* LoginViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */; };
@@ -195,6 +195,10 @@
 
 /* Begin PBXFileReference section */
 		100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.debug.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.debug.xcconfig"; sourceTree = "<group>"; };
+		3576F6892368CC6F00E3AB38 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/Main.strings"; sourceTree = "<group>"; };
+		3576F68A2368CC7100E3AB38 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3576F68C2368CD9600E3AB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3576F68E2368CDB500E3AB38 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		357A200723534566003BBF36 /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesDetailsViewController.swift; sourceTree = "<group>"; };
 		3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CustomCollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
@@ -211,7 +215,6 @@
 		CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SellYourItemFirstView.swift; path = ../EndViewController/Presenter/SellYourItemFirstView.swift; sourceTree = "<group>"; };
 		CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
 		CC0F0CD6234114BC000F6C4A /* Brands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brands.swift; sourceTree = "<group>"; };
-		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		CC7268A2233AC612006B61DD /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
@@ -1088,7 +1091,7 @@
 				CC8695C922F4F54B00E9F14D /* Assets.xcassets */,
 				CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */,
 				CC8695CE22F4F54B00E9F14D /* Info.plist */,
-				CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */,
+				3576F68D2368CD9600E3AB38 /* Localizable.strings */,
 				CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */,
 				CCCD733C23315B97005823D6 /* FavImage.swift */,
 				CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */,
@@ -1266,6 +1269,7 @@
 				English,
 				en,
 				Base,
+				"ar-EG",
 			);
 			mainGroup = CC8695B622F4F54B00E9F14D;
 			productRefGroup = CC8695C022F4F54B00E9F14D /* Products */;
@@ -1289,7 +1293,7 @@
 				CC726966233AC613006B61DD /* MainCateoriesCollectionViewCell.xib in Resources */,
 				CC7269A7233AC614006B61DD /* OffersCell.xib in Resources */,
 				CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */,
-				CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */,
+				3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */,
 				CC726997233AC613006B61DD /* CountryTableViewCell.xib in Resources */,
 				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
 				CC7269D0233AC614006B61DD /* FavoriteOffersTableViewCell.xib in Resources */,
@@ -1592,10 +1596,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3576F68D2368CD9600E3AB38 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3576F68C2368CD9600E3AB38 /* en */,
+				3576F68E2368CDB500E3AB38 /* ar-EG */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CC8695C622F4F54B00E9F14D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CC8695C722F4F54B00E9F14D /* Base */,
+				3576F6892368CC6F00E3AB38 /* ar-EG */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1604,6 +1618,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CC8695CC22F4F54B00E9F14D /* Base */,
+				3576F68A2368CC7100E3AB38 /* ar-EG */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

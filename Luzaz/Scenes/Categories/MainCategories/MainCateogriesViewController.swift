@@ -9,8 +9,8 @@
 import UIKit
 
 class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UISearchBarDelegate ,UISearchControllerDelegate{
-
-   
+    
+    
     
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -95,10 +95,10 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
         // Returns true if the text is empty or nil
         return searchBar.text?.isEmpty ?? true
     }
-  
+    
     @IBAction func menuBtnWasPressed(_ sender: Any) {
-        AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
-     dismiss(animated: true, completion: nil)
+        AppDelegate.getAppDelegate().MenuContainerVC.togglePane()
+        dismiss(animated: true, completion: nil)
     }
-
+    
 }

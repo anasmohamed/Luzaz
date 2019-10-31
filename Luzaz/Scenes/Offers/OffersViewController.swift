@@ -7,21 +7,21 @@
 //
 
 import UIKit
-
+import MOLH
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,
 UISearchBarDelegate,UISearchControllerDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
     // MARK: Outlets
-     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     var presenter: OffersPresenter!
     @IBOutlet weak var collectionView: UICollectionView!
-     var delegate : CenterVCDelegate?
+    var delegate : CenterVCDelegate?
     private var layoutOption: LayoutOption = .largeGrid {
         didSet {
             setupLayout(with: view.bounds.size)
         }
     }
-
+    var language : String?
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +30,17 @@ UISearchBarDelegate,UISearchControllerDelegate{
         searchBar.delegate = self
         setupLayout(with: view.bounds.size)
         self.hideKeyboardWhenTappedAround()
-       
+        language = MOLHLanguage.currentAppleLanguage()
+        
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         if UIDevice.current.orientation.isLandscape {
             self.layoutOption = .smallGrid
-
+            
         } else {
             self.layoutOption = .largeGrid
-
+            
         }
         setupLayout(with: size)
     }
@@ -56,7 +57,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         }
         
         switch layoutOption {
-        
+            
             
         case .largeGrid, .smallGrid:
             let minItemWidth: CGFloat
@@ -103,32 +104,32 @@ UISearchBarDelegate,UISearchControllerDelegate{
     }
     // This method updates filteredData based on the text in the Search Box
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       
-       presenter.getSearchedOffer(searchText: searchText)
+        
+        presenter.getSearchedOffer(searchText: searchText)
         
         collectionView.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch layoutOption {
         case .largeGrid:
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
-           presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
-           return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
+            presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
+            return cell
         case .smallGrid:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
             presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty())
             return cell
         }
-      
+        
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let cellsAcross: CGFloat = 2
-//        let spaceBetweenCells: CGFloat = 1
-//        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-//        return CGSize(width: dim, height: dim)
-//    }
-
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //        let cellsAcross: CGFloat = 2
+    //        let spaceBetweenCells: CGFloat = 1
+    //        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
+    //        return CGSize(width: dim, height: dim)
+    //    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
         offersDetailsVC.modalTransitionStyle = .flipHorizontal
@@ -137,21 +138,19 @@ UISearchBarDelegate,UISearchControllerDelegate{
         self.present(offersDetailsVC,animated:true,completion:nil)
         
     }
-func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-            collectionView.reloadData()
-        }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        collectionView.reloadData()
+    }
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         collectionView.reloadData()
-
+        
     }
-        func searchBarIsEmpty() -> Bool {
-            // Returns true if the text is empty or nil
-            return searchBar.text?.isEmpty ?? true
-        }
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchBar.text?.isEmpty ?? true
+    }
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
-delegate?.toggleLeftPane()
+        delegate?.togglePane()
     }
-
-    
 }
