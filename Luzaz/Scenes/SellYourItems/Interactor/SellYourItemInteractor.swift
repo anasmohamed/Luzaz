@@ -17,16 +17,9 @@ class SellYourItemInteractor {
         
         let pageUrl = NetworkingConstants.baseURL + NetworkingConstants.addUserOffer
         var parameters = [NetworkingConstants.addUserOfferToken: token]
-        
-        
-        // add addtionial parameters
-        
-        
-        
         parameters[NetworkingConstants.addUserOfferPrivacyPolicy] = privacy_policy
         parameters[NetworkingConstants.addUserOfferIdGovernate] = id_governate
         parameters[NetworkingConstants.addUserOfferIdCategory] = id_category
-        
         parameters[NetworkingConstants.addUserOfferIdSubCategory] = id_sub_category
         parameters[NetworkingConstants.addUserOfferAttr] = attr
         parameters[NetworkingConstants.addUserOfferAttrValues] = attr_values
@@ -133,6 +126,53 @@ class SellYourItemInteractor {
             }
             
         }
+    }
+    func updateOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,lat:String,long:String,completionHandler: @escaping (String?, Error?) -> Void)
+    {
+        Alamofire.request(LuzazRouter.updateOffer(token: token, privacy_policy:privacy_policy , id_governate: id_governate, id_category:id_category , id_sub_category: id_sub_category, attr:attr , attr_values:attr_values , title:title , id_brand:id_brand , offer_type:offer_type , decription: decription, price:price , discount_prec:discount_prec , youtube_link:youtube_link , reseller_name: reseller_name, reseller_phone:reseller_phone , reseller_mail: reseller_mail, contact_type: contact_type, lat:lat , long:long )).responseJSON{(response)in
+            if let response = response.data {
+                           print("Response Data: \(response)")
+                       } else {
+                           print("Response Data: nil")
+                       }
+                       if let request = response.request {
+                           print("Request Request: \(request)")
+                           print("Request Description: \(request.description)")
+                           print("Request Debug Description: \(request.debugDescription)")
+                           
+                           print("Response Request HTTP method: \(request.httpMethod!)")
+                           //                print("Response Request Content-Type: \(request.value(forHTTPHeaderField: NetworkingConstants.contentType)!)")
+                       } else {
+                           print("Response Request: nil")
+                       }
+                       
+                       if let responseStatusCode = response.response {
+                           print("Response Status Code: \(responseStatusCode.statusCode)")
+                       } else {
+                           print("Response Status Code: nil")
+                       }
+                       
+                       if let error = response.error {
+                           print("Response Error Code: \(error.localizedDescription)")
+                       } else {
+                           print("Response Error Code: nil")
+                       }
+                       
+                       
+                       let result = response.result
+                       switch result {
+                       case .success :
+                           let json = JSON(result.value!)
+                           print(json)
+                          
+                           let message = json["data"].stringValue
+                           completionHandler(message, nil)
+                       case .failure(let error):
+                           completionHandler(nil, error)
+                       }
+            
+        }
+               
     }
     func getBrands(gategory: String,
                          completionHandler: @escaping ([Brands]?, Error?) -> Void) {

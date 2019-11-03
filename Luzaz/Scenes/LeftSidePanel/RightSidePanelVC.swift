@@ -69,7 +69,7 @@ class RightSidePanelVC: UIViewController {
             competitionVC.modalPresentationStyle = .fullScreen
             self.present(competitionVC, animated: true, completion: nil)
         }else{
-            appDelegate.MenuContainerVC.toggleLeftPane()
+            appDelegate.MenuContainerVC.togglePane()
             showError(error: "you should login")
         }
     }
@@ -80,7 +80,7 @@ class RightSidePanelVC: UIViewController {
             self.present(sellYourItemVC, animated: true, completion: nil)
         }
         else{
-            appDelegate.MenuContainerVC.toggleLeftPane()
+            appDelegate.MenuContainerVC.togglePane()
             
             showError(error: "you should login")
             
@@ -92,7 +92,7 @@ class RightSidePanelVC: UIViewController {
             favoriteVC.modalPresentationStyle = .fullScreen
             self.present(favoriteVC, animated: true, completion: nil)
         }else
-        {            appDelegate.MenuContainerVC.toggleLeftPane()
+        {            appDelegate.MenuContainerVC.togglePane()
             
             showError(error: "you should login")
         }
@@ -104,7 +104,7 @@ class RightSidePanelVC: UIViewController {
             self.present(userBuddiesVC, animated: true, completion: nil)
         }
         else{
-            appDelegate.MenuContainerVC.toggleLeftPane()
+            appDelegate.MenuContainerVC.togglePane()
             
             showError(error: "you should login")
         }
@@ -116,7 +116,7 @@ class RightSidePanelVC: UIViewController {
             self.present(myProductsVC, animated: true, completion: nil)
         }
         else{
-            appDelegate.MenuContainerVC.toggleLeftPane()
+            appDelegate.MenuContainerVC.togglePane()
             
             showError(error: "you should login")
         }
@@ -135,12 +135,12 @@ class RightSidePanelVC: UIViewController {
     @IBAction func regiterLoginBtnWasPressed(_ sender: Any) {
         appDelegate.MenuContainerVC.toggleLeftPane()
         if (token.isEmpty) {
-            registerBtn.titleLabel?.text = "Register/login"
+            registerBtn.titleLabel?.text = "تسجيل الدخول"
             let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
         }else{
-            registerBtn.titleLabel?.text = "my profile"
+            registerBtn.titleLabel?.text = "الصفحة الشخصية"
             let profileVC = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
             profileVC.modalPresentationStyle = .fullScreen
             self.present(profileVC, animated: true, completion: nil)

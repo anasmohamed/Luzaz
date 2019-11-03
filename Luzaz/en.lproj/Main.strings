@@ -63,7 +63,7 @@
 "Bdz-Fz-bP1.normalTitle" = "Have Account Login";
 
 /* Class = "UILabel"; text = "Win With US"; ObjectID = "CBL-jY-owI"; */
-"CBL-jY-owI.text" = "اربح معنا";
+"CBL-jY-owI.text" = "Win With US";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "DIx-uh-6E1"; */
 "DIx-uh-6E1.placeholder" = "Password";
@@ -108,7 +108,7 @@
 "IA0-1g-7kL.text" = "Forget Your Password";
 
 /* Class = "UILabel"; text = "Win With US"; ObjectID = "Idn-nd-sdh"; */
-"Idn-nd-sdh.text" = "اربح معنا";
+"Idn-nd-sdh.text" = "Win With US";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "JIe-fE-CnQ"; */
 "JIe-fE-CnQ.normalTitle" = "Login";
@@ -192,7 +192,7 @@
 "aqW-iv-JDb.normalTitle" = "Next ";
 
 /* Class = "UIButton"; normalTitle = "Win With Us"; ObjectID = "b3h-X1-4Bn"; */
-"b3h-X1-4Bn.normalTitle" = "آربح معنا";
+"b3h-X1-4Bn.normalTitle" = "Win With Us";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "b5S-ki-LAj"; */
 "b5S-ki-LAj.text" = "Label";

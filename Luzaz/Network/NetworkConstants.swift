@@ -48,7 +48,7 @@ struct NetworkingConstants {
     static let getBrands = "getBrands"
     static let deleteOffer = "deleteOffer"
     static let getUser = "getUser"
-
+    static let updateOfferOffer = "updateOfferOffer"
     
     
 

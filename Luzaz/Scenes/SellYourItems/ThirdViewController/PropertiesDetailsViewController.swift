@@ -21,6 +21,8 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     var subCategory : String?
     var numberOfRooms : String?
     var villa: String?
+    var isEditProduct : Bool = false
+
     var attributeList : [CategoryAttributes]?
     var attributeValues = [String]()
     var attributeIds = [String]()

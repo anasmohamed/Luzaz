@@ -114,38 +114,6 @@
             endingLineNumber = "189"
             landmarkName = "animateRightPanel(shouldExpand:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "57CBC0A4-248F-4FE5-8D16-63D0BAA61D68 - 231dc54421127a1a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Luzaz.ContainerVC.animateRightPanel(shouldExpand: Swift.Bool) -&gt; ()"
-                  moduleName = "Luzaz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anasmohamed/Desktop/Luzaz/Luzaz/Scenes/LeftSidePanel/ContainerVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
-                  offsetFromSymbolStart = "1004">
-               </Location>
-               <Location
-                  uuid = "57CBC0A4-248F-4FE5-8D16-63D0BAA61D68 - 987eee6e7eea1a82"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Luzaz.ContainerVC.animateRightPanel(shouldExpand: Swift.Bool) -&gt; ()"
-                  moduleName = "Luzaz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anasmohamed/Desktop/Luzaz/Luzaz/Scenes/LeftSidePanel/ContainerVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "190"
-                  endingLineNumber = "190"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

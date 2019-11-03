@@ -9,6 +9,11 @@
 import UIKit
 
 class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
+    func updateOfferSuccessfully(message: String) {
+        showAlert(content:message, title: "Success")
+
+    }
+    
     func offerAddedSuccessfully(message: String) {
         showAlert(content:message, title: "Success")
         
@@ -22,7 +27,8 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var fullNameTextView: UITextField!
     var presenter : SellYourItemPresenter!
-    
+    var isEditProduct : Bool = false
+
     var offerImage : UIImage?
     var city : String?
     var category : String?
@@ -74,10 +80,14 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
        }
        
     @IBAction func finishBtnWasPressed(_ sender: Any) {
-        if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text?.isEmpty)! {
+        if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text?.isEmpty )! {
             presenter.addUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:(attributeIds?.joined(separator: ","))!,attr_values:(attributeValues?.joined(separator: ","))!,title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:offerDescription,price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:contactType!,image:offerImage!,album:offerAlbum,lat: lat ?? "",long: long ?? "")
                        
-        }else{
+        }else if(!(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text!.isEmpty && isEditProduct))
+        {
+             presenter.updateUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:(attributeIds?.joined(separator: ","))!,attr_values:(attributeValues?.joined(separator: ","))!,title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:offerDescription,price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:contactType!,lat: lat ?? "",long: long ?? "")
+        }
+        else{
             showError(error: "You Should Enter Price")
         }
         
@@ -86,6 +96,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     func showError(error: String) {
         showAlert(content: error, title: "Error")
     }
+    
    func showAlert(content:String,title:String)
     {
 //        let alertController = UIAlertController(title: title, message: content, preferredStyle: .alert)

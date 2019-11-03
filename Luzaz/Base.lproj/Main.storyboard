@@ -2478,19 +2478,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="0Dy-pM-3Jz">
-                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
+                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="sNN-At-bGK">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="LVj-33-CYD">
-                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
+                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="vah-7U-dxV">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="1Fx-kV-wNm">
-                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
+                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finish" translatesAutoresizingMaskIntoConstraints="NO" id="0GW-zv-hyH">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>

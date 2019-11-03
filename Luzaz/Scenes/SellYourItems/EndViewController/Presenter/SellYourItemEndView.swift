@@ -12,4 +12,6 @@ protocol SellYourItemEndView:class {
     func offerAddedSuccessfully(message :String)
     func showSpinner()
     func hideSpinner()
+    func updateOfferSuccessfully(message:String)
+  
 }

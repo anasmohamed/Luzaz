@@ -195,10 +195,11 @@
 
 /* Begin PBXFileReference section */
 		100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.debug.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.debug.xcconfig"; sourceTree = "<group>"; };
-		3576F6892368CC6F00E3AB38 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/Main.strings"; sourceTree = "<group>"; };
-		3576F68A2368CC7100E3AB38 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		3576F68C2368CD9600E3AB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3576F68E2368CDB500E3AB38 /* ar-EG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-EG"; path = "ar-EG.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		357A152B236B6B5A008EF2D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		357A152C236B6BD9008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		357A152D236B6BDA008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		357A152E236B6BDA008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		357A200723534566003BBF36 /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesDetailsViewController.swift; sourceTree = "<group>"; };
 		3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CustomCollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
@@ -1269,7 +1270,7 @@
 				English,
 				en,
 				Base,
-				"ar-EG",
+				ar,
 			);
 			mainGroup = CC8695B622F4F54B00E9F14D;
 			productRefGroup = CC8695C022F4F54B00E9F14D /* Products */;
@@ -1600,7 +1601,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3576F68C2368CD9600E3AB38 /* en */,
-				3576F68E2368CDB500E3AB38 /* ar-EG */,
+				357A152E236B6BDA008EF2D5 /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1609,7 +1610,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CC8695C722F4F54B00E9F14D /* Base */,
-				3576F6892368CC6F00E3AB38 /* ar-EG */,
+				357A152B236B6B5A008EF2D5 /* en */,
+				357A152C236B6BD9008EF2D5 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1618,7 +1620,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CC8695CC22F4F54B00E9F14D /* Base */,
-				3576F68A2368CC7100E3AB38 /* ar-EG */,
+				357A152D236B6BDA008EF2D5 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

@@ -9,6 +9,7 @@
 import UIKit
 
 class SellYourItemFifthViewController: UIViewController , SellYourItemView{
+    
   
     @IBOutlet weak var priceTextView: UITextField!
 
@@ -25,6 +26,8 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var level : String?
     var long : String?
     var lat : String?
+    var isEditProduct : Bool = false
+
     var attributeValues : [String]?
     var attributeIds: [String]?
     var offerAlbum = [UIImage]()

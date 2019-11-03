@@ -34,7 +34,7 @@ enum LuzazRouter: URLRequestConvertible {
     case getUser(id:String)
     case getGovernorates(country:String)
     case getBrands(gategory: String)
-    
+    case updateOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,lat:String,long:String)
     
     var path: String {
         
@@ -83,13 +83,15 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.deleteUserFavorite
         case .getUser:
             return NetworkingConstants.getUser
+        case .updateOffer:
+            return NetworkingConstants.updateOfferOffer
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer,.getUser:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer:
             return .get
         case .addToConversation:
             return .post
@@ -199,8 +201,27 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.deleteOfferId] = offer
         case let .getUser(id):
             params[NetworkingConstants.getUserId] = id
-
-            
+        case let .updateOffer(token, privacy_policy, id_governate, id_category, id_sub_category, attr, attr_values, title, id_brand, offer_type, decription, price, discount_prec, youtube_link, reseller_name, reseller_phone, reseller_mail, contact_type,lat,long):
+            params[NetworkingConstants.addUserOfferToken] = token
+            params[NetworkingConstants.addUserOfferPrivacyPolicy] = privacy_policy
+            params[NetworkingConstants.addUserOfferIdGovernate] = id_governate
+            params[NetworkingConstants.addUserOfferIdCategory] = id_category
+            params[NetworkingConstants.addUserOfferIdSubCategory] = id_sub_category
+            params[NetworkingConstants.addUserOfferAttr] = attr
+            params[NetworkingConstants.addUserOfferAttrValues] = attr_values
+            params[NetworkingConstants.addUserOfferTitle] = title
+            params[NetworkingConstants.addUserOfferIdBrand] = id_brand
+            params[NetworkingConstants.addUserOfferOfferType] = offer_type
+            params[NetworkingConstants.addUserOfferDecription] = decription
+            params[NetworkingConstants.addUserOfferPrice] = price
+            params[NetworkingConstants.discount_prec] = discount_prec
+            params[NetworkingConstants.addUserOfferYoutubeLink] = youtube_link
+            params[NetworkingConstants.addUserOfferReseller_name] = reseller_name
+            params[NetworkingConstants.addUserOfferLong] = long
+            params[NetworkingConstants.addUserOfferLat] = lat
+            params[NetworkingConstants.addUserOfferReseller_phone]  = reseller_phone
+            params[NetworkingConstants.addUserOfferReseller_mail] = reseller_mail
+            params[NetworkingConstants.addUserOfferContact_type] = contact_type
         default:
             print("Empty Paramter")
             
@@ -218,7 +239,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             

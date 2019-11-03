@@ -66,24 +66,14 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let offerId : String!
-            switch segmentedControl.selectedSegmentIndex
-            {
-            case 0:
-                offerId =   presenter.getOfferId(index:indexPath.row , segmentControlIndex:0)
-                presenter.deleteItem(index: indexPath.row,selectedSegmentIndex:0)
-
-            case 1:
-                offerId =   presenter.getOfferId(index:indexPath.row , segmentControlIndex:1)
-                presenter.deleteItem(index: indexPath.row,selectedSegmentIndex:1)
-
-            default:
-                offerId =     presenter.getOfferId(index:indexPath.row , segmentControlIndex:1)
-                
-            }
-            presenter.deleteOffer(token:token,offer: offerId)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
         }
+    }
+    
+    
+    private func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        return true
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -102,10 +92,45 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let more = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+            let sellYourItemVC = self.storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
+                 sellYourItemVC.modalPresentationStyle = .fullScreen
+            
+                 self.present(sellYourItemVC, animated: true, completion: nil)
+        }
+        more.backgroundColor = .lightGray
+        
+        let favorite = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            let offerId : String!
+            switch self.segmentedControl.selectedSegmentIndex
+            {
+            case 0:
+                offerId =   self.presenter.getOfferId(index:index.row , segmentControlIndex:0)
+                self.presenter.deleteItem(index: index.row,selectedSegmentIndex:0)
+                
+            case 1:
+                offerId =   self.presenter.getOfferId(index:index.row , segmentControlIndex:1)
+                self.presenter.deleteItem(index: index.row,selectedSegmentIndex:1)
+                
+            default:
+                offerId =     self.presenter.getOfferId(index:index.row , segmentControlIndex:1)
+                
+            }
+            
+            self.presenter.deleteOffer(token:self.token,offer: offerId)
+            self.tableView.deleteRows(at: [index], with: .automatic)
+        }
+        favorite.backgroundColor = .orange
+        
+        
+        return [favorite,more]
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let offersDetailVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
         presenter.pushToDetails(viewController: offersDetailVC,indexPath.row)
+        offersDetailVC.modalPresentationStyle = .fullScreen
         self.present(offersDetailVC, animated: true, completion: nil)
     }
     

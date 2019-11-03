@@ -30,6 +30,8 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var city : String?
     var category : String?
     var subCategory : String?
+    var isEditProduct : Bool = false
+
     var brand : String?
     var attributeList : [CategoryAttributes]?
     var offerAlbum = [UIImage]()

@@ -21,6 +21,8 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     var isConditionEnterd = false
     var presenter : SellYourItemPresenter!
     var offerImage : UIImage?
+    var isEditProduct : Bool = false
+
     var city : String?
     var category : String?
     var subCategory : String?

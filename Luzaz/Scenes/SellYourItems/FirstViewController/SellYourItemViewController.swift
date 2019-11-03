@@ -24,6 +24,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var presenter : SellYourItemPresenter!
     var isCityEntered = false
     var cityIndex : String?
+    var isEditProduct : Bool = false
     var offerImage: UIImage?
     var offerAlbum = [UIImage]()
     var isPhotoChoosen = false
