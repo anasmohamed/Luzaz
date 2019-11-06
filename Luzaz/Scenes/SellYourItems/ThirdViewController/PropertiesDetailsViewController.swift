@@ -105,6 +105,7 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
             sellYourItemFourthVC.city = city
             sellYourItemFourthVC.offerImage = offerImage
             sellYourItemFourthVC.category = category
+            sellYourItemFourthVC.isEditProduct = isEditProduct
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.attributeValues = attributeValues
             sellYourItemFourthVC.attributeIds = attributeIds

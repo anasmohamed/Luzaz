@@ -93,16 +93,19 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        var offerId : String!
         let more = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             let sellYourItemVC = self.storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
-                 sellYourItemVC.modalPresentationStyle = .fullScreen
-            
-                 self.present(sellYourItemVC, animated: true, completion: nil)
+             offerId = self.presenter.getOfferId(index:index.row , segmentControlIndex:0)
+            sellYourItemVC.modalPresentationStyle = .fullScreen
+            sellYourItemVC.isEditProduct = true
+            sellYourItemVC.cityName = self.presenter.getOfferCity(index: index.row)
+            self.present(sellYourItemVC, animated: true, completion: nil)
         }
         more.backgroundColor = .lightGray
         
         let favorite = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-            let offerId : String!
+            
             switch self.segmentedControl.selectedSegmentIndex
             {
             case 0:

@@ -22,6 +22,7 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     var bathrooms : String?
     var bedrooms: String?
     var area : String?
+    var isEditProduct : Bool = false
     var finished :String?
     var level : String?
     override func viewDidLoad() {
@@ -52,7 +53,7 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
             sellYourItemFourthVC.category = category
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.modalPresentationStyle = .fullScreen
-
+            sellYourItemFourthVC.isEditProduct = isEditProduct
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             
         }else

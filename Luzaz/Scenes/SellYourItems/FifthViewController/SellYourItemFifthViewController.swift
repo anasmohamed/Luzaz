@@ -56,6 +56,7 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
             sellYourItemEndVC.condition = condition
             sellYourItemEndVC.offerDescription = offerDescription
             sellYourItemEndVC.offerAlbum = offerAlbum
+            sellYourItemEndVC.isEditProduct = isEditProduct
             if !(attributeIds?.isEmpty)!
             {
                 sellYourItemEndVC.attributeIds = attributeIds

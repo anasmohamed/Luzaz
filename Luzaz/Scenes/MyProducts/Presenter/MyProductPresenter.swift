@@ -81,6 +81,7 @@ class MyProductPresenter {
     func getOrdersCount() -> Int {
         return orders.count
     }
+  
     func deleteItem(index:Int,selectedSegmentIndex:Int)
     {
         if selectedSegmentIndex == 0
@@ -121,7 +122,10 @@ class MyProductPresenter {
         cell.displayProductQuntity(quntity: quntity)
         
     }
-    
+    func getOfferCity(index:Int) -> String
+    {
+        return sells[index].governorate!
+    }
     func getOfferId(index: Int,segmentControlIndex : Int) -> String{
         if segmentControlIndex == 0
         {

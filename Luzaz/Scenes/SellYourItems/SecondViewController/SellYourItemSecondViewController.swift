@@ -90,6 +90,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemThirdVC.city = city
             sellYourItemThirdVC.offerImage = offerImage
             sellYourItemThirdVC.category = category
+            sellYourItemThirdVC.isEditProduct = isEditProduct
             sellYourItemThirdVC.subCategory = subCategory
             sellYourItemThirdVC.attributeList = attributeList
             sellYourItemThirdVC.offerAlbum = offerAlbum

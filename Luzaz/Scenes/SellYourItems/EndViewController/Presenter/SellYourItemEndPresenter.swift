@@ -19,7 +19,7 @@ class SellYourItemPresenter {
     private var governorates : [Governorates]?
     private var gategories : [Category]?
     private var brands : [Brands]?
-    
+    var isFirst = true
     init(view: SellYourItemView) {
         self.view = view
         sellItem = Offer()
@@ -129,7 +129,19 @@ class SellYourItemPresenter {
     func getGovernoratesCount() ->Int {
         return (governorates?.count)!
     }
-    func getGovernoratesName(row : Int) -> String  {
+    func getGovernoratesName(row : Int,city:String) -> String  {
+        if city != "" && isFirst{
+            var id : String = "0"
+            if governorates![row].name == city
+            {
+                id = governorates![row].id!
+                self.governorates?.remove(at: row)
+                
+            }
+            isFirst = false
+            let newGovernorate = Governorates(id: id,name: city)
+            governorates?.insert(newGovernorate, at: 0)
+        }
         return governorates![row].name!
     }
     func getGovernoratesId(row: Int)-> String

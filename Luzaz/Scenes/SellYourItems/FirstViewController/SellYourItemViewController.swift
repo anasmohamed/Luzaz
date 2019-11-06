@@ -28,6 +28,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var offerImage: UIImage?
     var offerAlbum = [UIImage]()
     var isPhotoChoosen = false
+    var cityName : String?
     @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
             let sellYourItemSecondVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemSecondVC")as! SellYourItemSecondViewController
             sellYourItemSecondVC.city = cityIndex
             sellYourItemSecondVC.offerImage = offerImage
-            
+            sellYourItemSecondVC.isEditProduct = isEditProduct
             sellYourItemSecondVC.offerAlbum = offerAlbum
             sellYourItemSecondVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemSecondVC,animated:true,completion: nil)

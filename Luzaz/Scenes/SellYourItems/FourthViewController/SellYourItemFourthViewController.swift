@@ -103,6 +103,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             sellYourItemFifthVC.offerTitle = itemTitleTextView.text!
             sellYourItemFifthVC.offerDescription = itemDescritionTextField.text!
             sellYourItemFifthVC.offerAlbum = offerAlbum
+            sellYourItemFifthVC.isEditProduct = isEditProduct
             if !(attributeIds?.isEmpty)!
             {
                 sellYourItemFifthVC.attributeValues = attributeValues
