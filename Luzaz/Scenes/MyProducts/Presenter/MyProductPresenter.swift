@@ -15,7 +15,7 @@ class MyProductPresenter {
     private var sell: Offer?
     private var sells: [Offer]
     private var orders: [Order]
-
+    
     init(view: MyProductView) {
         self.view = view
         myProductInteractor = MyProductInteractor()
@@ -25,11 +25,11 @@ class MyProductPresenter {
     
     func viewDidLoad() {
         
-       
+        
         getSells(countryId:UserDefaults.standard.string(forKey: "country")!, userId:UserDefaults.standard.string(forKey: "userId")!)
         
         getOrders(token: UserDefaults.standard.string(forKey: "token")!)
-    
+        
     }
     func getOrders(token: String)
     {
@@ -45,7 +45,7 @@ class MyProductPresenter {
                 self.view?.getMyOrdersSuccess()
             }
         }
-
+        
         
     }
     func getSells(countryId: String,userId:String) {
@@ -81,13 +81,13 @@ class MyProductPresenter {
     func getOrdersCount() -> Int {
         return orders.count
     }
-  
+    
     func deleteItem(index:Int,selectedSegmentIndex:Int)
     {
         if selectedSegmentIndex == 0
-        
+            
         {
-        sells.remove(at: index)
+            sells.remove(at: index)
         }
         else
         {
@@ -96,11 +96,11 @@ class MyProductPresenter {
     }
     func configure(cell: MyProductCellView, for index: Int) {
         let sell = sells[index]
-      
+        
         guard let quntity = sell.price
             ,let image = sell.image,
             let title = sell.title,
-        let date = sell.date
+            let date = sell.date
             else { return }
         cell.displayProductQuntity(quntity: quntity)
         cell.displayDate(date: date)
@@ -117,7 +117,7 @@ class MyProductPresenter {
             
             else { return }
         cell.displayProductPrice(price: price)
-//        cell.displayDate(date: date)
+        //        cell.displayDate(date: date)
         cell.displayProductTotalPrice(productTotalPrice:totalPrice )
         cell.displayProductQuntity(quntity: quntity)
         
@@ -126,15 +126,37 @@ class MyProductPresenter {
     {
         return sells[index].governorate!
     }
+    func getCategory(index:Int) -> String
+    {
+        return sells[index].category ?? ""
+    }
+    func getSubCategory(index:Int)-> String
+    {
+        return sells[index].subCateogry ?? ""
+    }
+    func getBrand(index:Int)-> String
+    {
+        return sells[index].brand ?? ""
+    }
+    func getCondition(index:Int)-> String
+    {
+        return sells[index].condition ?? ""
+    }
+    func getTitle(index:Int)-> String
+    {
+        return sells[index].title ?? ""
+    }
+    
     func getOfferId(index: Int,segmentControlIndex : Int) -> String{
         if segmentControlIndex == 0
         {
             return sells[index].offerId ?? ""
         }else{
             return orders[index].offreId ?? ""
-
+            
         }
     }
+    
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
         viewController.offer = sells[index]
         

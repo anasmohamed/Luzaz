@@ -129,6 +129,7 @@ class SellYourItemPresenter {
     func getGovernoratesCount() ->Int {
         return (governorates?.count)!
     }
+   
     func getGovernoratesName(row : Int,city:String) -> String  {
         if city != "" && isFirst{
             var id : String = "0"
