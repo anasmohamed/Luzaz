@@ -167,7 +167,7 @@ struct NetworkingConstants {
     
     
     //setPasswordByToken Parameter
-    static let changePasswordToken = "Token"
+    static let changePasswordToken = "token"
     static let changePasswordNewPassword = "password"
     static let changePasswordConPassword = "re_password"
 
@@ -212,6 +212,6 @@ struct NetworkingConstants {
     //GET USER PARAMTERS
     static let  getUserId = "id"
 
-
+   
 }
 

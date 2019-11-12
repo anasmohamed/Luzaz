@@ -29,6 +29,19 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var offerAlbum = [UIImage]()
     var isPhotoChoosen = false
     var cityName : String?
+    var incomeBrand :String?
+    var incomeCategory:String?
+    var incomeSubCategory :String?
+    var incomeCodition:String?
+    var incomeDiscription :String?
+    var incomeYoutubelink:String?
+    var incomeTitle:String?
+    var incomePrice :String?
+    var incomeDiscount:String?
+    var incomeSellerName:String?
+    var incomeSellerPhone:String?
+    var incomeSellerMail:String?
+
     @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +67,22 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
             sellYourItemSecondVC.offerImage = offerImage
             sellYourItemSecondVC.isEditProduct = isEditProduct
             sellYourItemSecondVC.offerAlbum = offerAlbum
+            if isEditProduct{
+                sellYourItemSecondVC.incomeBrand = incomeBrand
+                sellYourItemSecondVC.incomePrice = incomePrice
+                sellYourItemSecondVC.incomeTitle = incomeTitle
+                sellYourItemSecondVC.incomeCategory = incomeCategory
+                sellYourItemSecondVC.incomeCodition = incomeCodition
+                sellYourItemSecondVC.incomeDiscount = incomeDiscount
+                sellYourItemSecondVC.incomeSellerMail = incomeSellerMail
+                sellYourItemSecondVC.incomeSellerName = incomeSellerName
+                sellYourItemSecondVC.incomeSellerPhone = incomeSellerPhone
+                sellYourItemSecondVC.incomeDiscription = incomeDiscription
+                sellYourItemSecondVC.incomeYoutubelink = incomeYoutubelink
+                sellYourItemSecondVC.incomeSubCategory = incomeSubCategory
+                sellYourItemSecondVC.isEditProduct = isEditProduct
+                
+            }
             sellYourItemSecondVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemSecondVC,animated:true,completion: nil)
             

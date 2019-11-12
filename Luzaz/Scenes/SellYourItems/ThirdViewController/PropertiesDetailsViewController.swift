@@ -23,6 +23,17 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     var villa: String?
     var isEditProduct : Bool = false
 
+    
+    var incomeCodition:String?
+    var incomeDiscription :String?
+    var incomeYoutubelink:String?
+    var incomeTitle:String?
+    var incomePrice :String?
+    var incomeDiscount:String?
+    var incomeSellerName:String?
+    var incomeSellerPhone:String?
+    var incomeSellerMail:String?
+    
     var attributeList : [CategoryAttributes]?
     var attributeValues = [String]()
     var attributeIds = [String]()
@@ -113,6 +124,7 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.attributeValues = attributeValues
             sellYourItemFourthVC.attributeIds = attributeIds
+            sellYourItemFourthVC.isEditProduct = isEditProduct
             sellYourItemFourthVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             

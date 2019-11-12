@@ -9,6 +9,11 @@
 import UIKit
 
 class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     var presenter: MyProductPresenter!
     var token : String!
     @IBAction func segmentedControlActionChanged(_ sender: Any) {

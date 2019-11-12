@@ -22,7 +22,20 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     var presenter : SellYourItemPresenter!
     var offerImage : UIImage?
     var isEditProduct : Bool = false
-
+    var cityName : String?
+      var incomeBrand :String?
+      var incomeCategory:String?
+      var incomeSubCategory :String?
+      var incomeCodition:String?
+      var incomeDiscription :String?
+      var incomeYoutubelink:String?
+      var incomeTitle:String?
+      var incomePrice :String?
+      var incomeDiscount:String?
+      var incomeSellerName:String?
+      var incomeSellerPhone:String?
+      var incomeSellerMail:String?
+    
     var city : String?
     var category : String?
     var subCategory : String?
@@ -46,6 +59,13 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+        }
+        if isEditProduct
+        {
+            itemDescritionTextField.text = incomeDiscription
+            itemTitleTextView.text = incomeTitle
+            
+            
         }
         let longTapGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap))
         mapView.addGestureRecognizer(longTapGesture)
@@ -104,6 +124,15 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             sellYourItemFifthVC.offerDescription = itemDescritionTextField.text!
             sellYourItemFifthVC.offerAlbum = offerAlbum
             sellYourItemFifthVC.isEditProduct = isEditProduct
+            if isEditProduct
+            {
+                sellYourItemFifthVC.incomePrice = incomePrice
+                sellYourItemFifthVC.incomeDiscount = incomeDiscount
+                sellYourItemFifthVC.incomeSellerMail = incomeSellerMail
+                sellYourItemFifthVC.incomeSellerName = incomeSellerName
+                sellYourItemFifthVC.incomeSellerPhone = incomeSellerPhone
+                sellYourItemFifthVC.isEditProduct = isEditProduct
+            }
             if !(attributeIds?.isEmpty)!
             {
                 sellYourItemFifthVC.attributeValues = attributeValues

@@ -127,6 +127,50 @@ class SellYourItemInteractor {
             
         }
     }
+    func updateOfferImages()
+    {
+        
+    }
+    func updateOfferImage(token:String,offerId:String,image :UIImage)
+    {
+        let pageUrl = NetworkingConstants.baseURL + NetworkingConstants.addUserOffer
+              var parameters = [NetworkingConstants.addUserOfferToken: token]
+        parameters[NetworkingConstants.favoriteUserOffer] = offerId
+            
+        let imageData = image.jpegData(compressionQuality: 0.6)
+               Alamofire.upload(multipartFormData: { (multipartFormData) in
+                   for (key, value) in parameters {
+                       multipartFormData.append(value.data(using: .utf8)!, withName: key)
+                   }
+                  
+                   multipartFormData.append(imageData!, withName: "image", fileName: "offer_image.jpeg", mimeType: "image/jpeg")
+               }, to: pageUrl)
+               { (result) in
+                   switch result {
+                   case .success(let upload, _, _):
+                       
+                       upload.uploadProgress(closure: { (Progress) in
+                           
+                           print("Upload Progress: \(Progress.fractionCompleted)")
+                           
+                       })
+                       
+                       
+                       upload.responseJSON { response in
+                      
+                           if let JSON = response.result.value {
+                               print("JSON: \(JSON)")
+                           }
+                          
+
+                       }
+
+                   case .failure(let encodingError):
+                       print(encodingError)
+                   }
+                   
+               }
+    }
     func updateOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,lat:String,long:String,completionHandler: @escaping (String?, Error?) -> Void)
     {
         Alamofire.request(LuzazRouter.updateOffer(token: token, privacy_policy:privacy_policy , id_governate: id_governate, id_category:id_category , id_sub_category: id_sub_category, attr:attr , attr_values:attr_values , title:title , id_brand:id_brand , offer_type:offer_type , decription: decription, price:price , discount_prec:discount_prec , youtube_link:youtube_link , reseller_name: reseller_name, reseller_phone:reseller_phone , reseller_mail: reseller_mail, contact_type: contact_type, lat:lat , long:long )).responseJSON{(response)in

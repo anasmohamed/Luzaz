@@ -147,6 +147,35 @@ class MyProductPresenter {
         return sells[index].title ?? ""
     }
     
+    func getDescription(index:Int) ->String
+    {
+        return sells[index].description ?? ""
+    }
+    
+    func getPrice(index:Int) ->String
+    {
+        return sells[index].price ?? ""
+    }
+    
+     func getDescount(index:Int) ->String
+     {
+         return sells[index].discount_prec ?? ""
+     }
+    
+     func getSellerMail(index:Int) ->String
+     {
+         return sells[index].reseller_mail ?? ""
+     }
+    
+     func getSellerPhone(index:Int) ->String
+     {
+         return sells[index].reseller_phone ?? ""
+     }
+    
+     func getSellerName(index:Int) ->String
+     {
+         return sells[index].reseller_name ?? ""
+     }
     func getOfferId(index: Int,segmentControlIndex : Int) -> String{
         if segmentControlIndex == 0
         {

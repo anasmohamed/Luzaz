@@ -31,7 +31,20 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var category : String?
     var subCategory : String?
     var isEditProduct : Bool = false
-
+    
+    var cityName : String?
+    var incomeBrand :String?
+    var incomeCategory:String?
+    var incomeSubCategory :String?
+    var incomeCodition:String?
+    var incomeDiscription :String?
+    var incomeYoutubelink:String?
+    var incomeTitle:String?
+    var incomePrice :String?
+    var incomeDiscount:String?
+    var incomeSellerName:String?
+    var incomeSellerPhone:String?
+    var incomeSellerMail:String?
     var brand : String?
     var attributeList : [CategoryAttributes]?
     var offerAlbum = [UIImage]()
@@ -60,7 +73,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         brandPickerView.reloadAllComponents()
         
     }
-   func getBrandsEmpty()
+    func getBrandsEmpty()
     {
         isChooseFrombrandList = true
         brandStackView.isHidden = true
@@ -81,8 +94,20 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.brand = brand
             sellYourItemFourthVC.offerAlbum = offerAlbum
+            if isEditProduct{
+                sellYourItemFourthVC.incomePrice = incomePrice
+                sellYourItemFourthVC.incomeTitle = incomeTitle
+                sellYourItemFourthVC.incomeCodition = incomeCodition
+                sellYourItemFourthVC.incomeDiscount = incomeDiscount
+                sellYourItemFourthVC.incomeSellerMail = incomeSellerMail
+                sellYourItemFourthVC.incomeSellerName = incomeSellerName
+                sellYourItemFourthVC.incomeSellerPhone = incomeSellerPhone
+                sellYourItemFourthVC.incomeDiscription = incomeDiscription
+                sellYourItemFourthVC.incomeYoutubelink = incomeYoutubelink
+                sellYourItemFourthVC.isEditProduct = isEditProduct
+            }
             sellYourItemFourthVC.modalPresentationStyle = .fullScreen
-
+            
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
         }else if  isChooseFromCategoryList && isChooseFromSubCategoryList && isChooseFrombrandList && !(attributeList?.isEmpty)!
         {
@@ -94,7 +119,20 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
             sellYourItemThirdVC.subCategory = subCategory
             sellYourItemThirdVC.attributeList = attributeList
             sellYourItemThirdVC.offerAlbum = offerAlbum
+            if isEditProduct{
+                sellYourItemThirdVC.incomePrice = incomePrice
+                sellYourItemThirdVC.incomeTitle = incomeTitle
+                sellYourItemThirdVC.incomeCodition = incomeCodition
+                sellYourItemThirdVC.incomeDiscount = incomeDiscount
+                sellYourItemThirdVC.incomeSellerMail = incomeSellerMail
+                sellYourItemThirdVC.incomeSellerName = incomeSellerName
+                sellYourItemThirdVC.incomeSellerPhone = incomeSellerPhone
+                sellYourItemThirdVC.incomeDiscription = incomeDiscription
+                sellYourItemThirdVC.incomeYoutubelink = incomeYoutubelink
+                sellYourItemThirdVC.isEditProduct = isEditProduct
+            }
             sellYourItemThirdVC.modalPresentationStyle = .fullScreen
+            
             self.present(sellYourItemThirdVC,animated:true,completion: nil)
             
         }else

@@ -13,6 +13,8 @@ class MainCategoriesPresenter {
     private var category: Offer?
     private var categories: [Category]
     private var filteredCategories : [Category]
+    var isFirst = true
+
     init(view: MainCategoriesView) {
         self.view = view
         mainCategoriesInteractor = MainCategoriesInteractor()
@@ -42,6 +44,7 @@ class MainCategoriesPresenter {
             }
         }
     }
+      
     func getMainCategoriesCount() -> Int {
         return categories.count
     }
@@ -74,7 +77,7 @@ class MainCategoriesPresenter {
         }else{
             category = categories[index]
         }
-        guard let name = category.name
+        guard let name = category.nameEng
             else { return }
 
         cell.displayMainCategoriesImage(mainCategoriesImage:name )

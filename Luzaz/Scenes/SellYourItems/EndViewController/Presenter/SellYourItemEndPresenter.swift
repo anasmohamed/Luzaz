@@ -145,6 +145,7 @@ class SellYourItemPresenter {
         }
         return governorates![row].name!
     }
+
     func getGovernoratesId(row: Int)-> String
     {
         return governorates![row].id!
