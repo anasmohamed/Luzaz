@@ -185,7 +185,10 @@ class MyProductPresenter {
             
         }
     }
-    
+    func getOfferImage(index : Int) -> String
+    {
+        return sells[index].image ?? ""
+    }
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
         viewController.offer = sells[index]
         

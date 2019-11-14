@@ -8,6 +8,7 @@
 
 import UIKit
 import OpalImagePicker
+import SDWebImage
 class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,SellYourItemFirstView,OpalImagePickerControllerDelegate{
     internal func showIndicator() {
         spinner.startAnimating()
@@ -29,6 +30,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var offerAlbum = [UIImage]()
     var isPhotoChoosen = false
     var cityName : String?
+    var incomeImage : String?
     var incomeBrand :String?
     var incomeCategory:String?
     var incomeSubCategory :String?
@@ -41,7 +43,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var incomeSellerName:String?
     var incomeSellerPhone:String?
     var incomeSellerMail:String?
-
+    let lblNew = UILabel()
     @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,11 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         imagePicker.maximumSelectionsAllowed = 5
         imagePicker.imagePickerDelegate = self
         self.hideKeyboardWhenTappedAround()
-        
+        if isEditProduct
+        {
+            imageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(incomeImage ?? "")"))
+            textToImage(drawText: "change photo", atPoint:CGPoint( x: 0,y: imageView.frame.origin.y + 60))
+        }
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -102,17 +108,17 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         offerAlbum = Array(images[1..<images.count])
         isPhotoChoosen = true
         imagePicker.dismiss(animated: true, completion: nil)
-
+        
         
     }
     func imagePickerDidCancel(_ picker: OpalImagePickerController)
     {
         isPhotoChoosen = false
-
+        
     }
     @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
-  
+        
     }
     func showError(error : String)
     {
@@ -124,8 +130,18 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         present(alertController, animated: true, completion: nil)
     }
     
-  
     
+
+    // Add text to image
+    func textToImage(drawText text: NSString, atPoint point: CGPoint) {
+
+        lblNew.frame = CGRect(x: point.x, y: point.y, width: 203.0, height: 30)
+        lblNew.textAlignment = .center
+        lblNew.text = text as String
+        lblNew.textColor = UIColor.white
+        lblNew.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.5)
+        imageView.addSubview(lblNew)
+    }
     
     
 }
