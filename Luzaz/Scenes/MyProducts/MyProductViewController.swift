@@ -104,7 +104,9 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
              offerId = self.presenter.getOfferId(index:index.row , segmentControlIndex:0)
             sellYourItemVC.modalPresentationStyle = .fullScreen
             sellYourItemVC.isEditProduct = true
-            sellYourItemVC.incomeImage = self.presenter.getOfferImage(index: index.row)
+            sellYourItemVC.incomeImage =
+                self.presenter.getOfferImage(index: index.row)
+            sellYourItemVC.incomeOfferId = self.presenter.getOfferId(index: index.row, segmentControlIndex: 0)
             sellYourItemVC.cityName = self.presenter.getOfferCity(index: index.row)
             self.present(sellYourItemVC, animated: true, completion: nil)
         }

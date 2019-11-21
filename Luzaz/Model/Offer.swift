@@ -31,6 +31,7 @@ class Offer {
     var offerImage : UIImage?
     var contactType : String?
     var governorate : String?
+    var album = [AlbumImage]()
     var appartment = Appartment()
     init(withJSON data: JSON) {
         self.offerId = data[NetworkingConstants.offerId].stringValue
@@ -47,7 +48,13 @@ class Offer {
         self.reseller_id = data[NetworkingConstants.reseller_id].stringValue
         self.contactType = data[NetworkingConstants.contentType].stringValue
         self.governorate = data["governorate"].stringValue
-
+        let incomeAlbum = data["album"].arrayValue
+         
+        for image in incomeAlbum
+        {
+            let imageData = AlbumImage(withJson: image)
+            self.album.append(imageData)
+        }
     }
     
     init() {

@@ -81,7 +81,22 @@ class SellYourItemPresenter {
             }
         }
     }
-    
+    func updateOfferImage(token:String,offferId:String,image:UIImage)
+    {
+        firstView?.showIndicator()
+        sellYourItemInteractor?.updateOfferImage(token: token, offerId: offferId, image: image) { [unowned self] (message, error) in
+            self.firstView?.hideIndicator()
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let message = message else { return }
+            }
+        }
+    }
+    func deleteOfferImage(token :String,image:String)  {
+        sellYourItemInteractor?.deleteOfferAlbumImage(token: token, image: image)
+    }
     func getGovernorates(country: String)
     {
         firstView?.showIndicator()

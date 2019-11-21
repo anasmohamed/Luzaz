@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
+		352F8C25238023880047279D /* AlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F8C24238023880047279D /* AlbumImage.swift */; };
 		3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3576F68D2368CD9600E3AB38 /* Localizable.strings */; };
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
 		3581962123572D390029D669 /*  CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */; };
@@ -16,6 +17,7 @@
 		358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */; };
 		3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
+		35A629F123807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */; };
 		35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
 		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
@@ -195,6 +197,7 @@
 
 /* Begin PBXFileReference section */
 		100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.debug.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.debug.xcconfig"; sourceTree = "<group>"; };
+		352F8C24238023880047279D /* AlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImage.swift; sourceTree = "<group>"; };
 		3576F68C2368CD9600E3AB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		357A152B236B6B5A008EF2D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		357A152C236B6BD9008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -206,7 +209,9 @@
 		35819622235738390029D669 /* LayoutOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOption.swift; sourceTree = "<group>"; };
 		358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
 		358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidePanelVC.swift; sourceTree = "<group>"; };
+		3594FCA92385DAA200FEA604 /* Luzaz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luzaz.entitlements; sourceTree = "<group>"; };
 		35A40FDE2356024C004D5619 /* StackViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackground.swift; sourceTree = "<group>"; };
+		35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectedOfferImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAttributes.swift; sourceTree = "<group>"; };
 		4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -407,6 +412,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352F8C262380450C0047279D /* OfferImagesCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */,
+			);
+			path = OfferImagesCollectionView;
+			sourceTree = "<group>";
+		};
 		A6BCC2E1C359FB1EF78F17DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -907,6 +920,7 @@
 		CC726928233AC613006B61DD /* SellYourItems */ = {
 			isa = PBXGroup;
 			children = (
+				352F8C262380450C0047279D /* OfferImagesCollectionView */,
 				CC726929233AC613006B61DD /* EndViewController */,
 				CC72692E233AC613006B61DD /* FifthViewController */,
 				CC726933233AC613006B61DD /* FirstViewController */,
@@ -1074,6 +1088,7 @@
 		CC8695C122F4F54B00E9F14D /* Luzaz */ = {
 			isa = PBXGroup;
 			children = (
+				3594FCA92385DAA200FEA604 /* Luzaz.entitlements */,
 				CC72689F233AC612006B61DD /* Scenes */,
 				CCD9BE5A233930C8002B9201 /* Network */,
 				CCD9BE2E2339111E002B9201 /* Model */,
@@ -1135,6 +1150,7 @@
 				CC0F0CD6234114BC000F6C4A /* Brands.swift */,
 				35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */,
 				35819622235738390029D669 /* LayoutOption.swift */,
+				352F8C24238023880047279D /* AlbumImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1554,6 +1570,7 @@
 				CC726964233AC613006B61DD /* TextFieldIcon.swift in Sources */,
 				CC1DA8F6234261D700A0C5D9 /* RoundButton.swift in Sources */,
 				CC726989233AC613006B61DD /* CompetitionInteractor.swift in Sources */,
+				352F8C25238023880047279D /* AlbumImage.swift in Sources */,
 				358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */,
 				CCD9BE3B2339111E002B9201 /* Category.swift in Sources */,
 				CC7269A3233AC613006B61DD /* MyProductCellView.swift in Sources */,
@@ -1561,6 +1578,7 @@
 				CC7269C4233AC614006B61DD /* SellYourItemSecondViewController.swift in Sources */,
 				CC726980233AC613006B61DD /* ConversationTableViewCell.swift in Sources */,
 				CC726995233AC613006B61DD /* CountryCellView.swift in Sources */,
+				35A629F123807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift in Sources */,
 				CC726994233AC613006B61DD /* CountryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1649,6 +1667,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: luzaznj@gmail.com (33TZY734HX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1726,12 +1745,13 @@
 			baseConfigurationReference = 100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Luzaz/Luzaz.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Luzaz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.Luzaz;
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaa.Luzaz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -1743,12 +1763,13 @@
 			baseConfigurationReference = FD9E23ED21F7DA46284A61F3 /* Pods-Luzaz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Luzaz/Luzaz.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Luzaz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.Luzaz;
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaa.Luzaz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

@@ -34,6 +34,7 @@ enum LuzazRouter: URLRequestConvertible {
     case getUser(id:String)
     case getGovernorates(country:String)
     case getBrands(gategory: String)
+    case deleteOfferAlbumImage(token:String,image:String)
     case updateOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,lat:String,long:String)
     
     var path: String {
@@ -85,13 +86,15 @@ enum LuzazRouter: URLRequestConvertible {
             return NetworkingConstants.getUser
         case .updateOffer:
             return NetworkingConstants.updateOfferOffer
+        case .deleteOfferAlbumImage:
+            return NetworkingConstants.deleteOfferAlbumImage
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer,.deleteOfferAlbumImage:
             return .get
         case .addToConversation:
             return .post
@@ -222,6 +225,9 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.addUserOfferReseller_phone]  = reseller_phone
             params[NetworkingConstants.addUserOfferReseller_mail] = reseller_mail
             params[NetworkingConstants.addUserOfferContact_type] = contact_type
+        case let .deleteOfferAlbumImage(token, image):
+            params[NetworkingConstants.token] = token
+                       params[NetworkingConstants.image] = image
         default:
             print("Empty Paramter")
             
@@ -239,7 +245,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer,.deleteOfferAlbumImage:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             
