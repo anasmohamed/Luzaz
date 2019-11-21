@@ -61,7 +61,10 @@ class SellYourItemPresenter {
     func  viewDidLoad()  {
         getGovernorates(country:UserDefaults.standard.string(forKey: "country")!)
     }
-    
+    func updateOfferAlbumImages(token:String,offer:String,album:[UIImage])
+    {
+        sellYourItemInteractor?.addOfferAlbumImages(token:token , offer: offer, album: album)
+    }
     func getBrands(gategory: String)
     {
         secondView?.showIndicator()
@@ -94,7 +97,7 @@ class SellYourItemPresenter {
             }
         }
     }
-    func deleteOfferImage(token :String,image:String)  {
+    func deleteOfferAlbumImage(token :String,image:String)  {
         sellYourItemInteractor?.deleteOfferAlbumImage(token: token, image: image)
     }
     func getGovernorates(country: String)

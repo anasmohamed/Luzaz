@@ -45,6 +45,8 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var incomeSellerName:String?
     var incomeSellerPhone:String?
     var incomeSellerMail:String?
+    var incomeOfferId:String?
+
     var brand : String?
     var attributeList : [CategoryAttributes]?
     var offerAlbum = [UIImage]()

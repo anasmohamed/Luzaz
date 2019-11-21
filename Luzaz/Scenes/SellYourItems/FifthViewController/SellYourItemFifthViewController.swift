@@ -33,6 +33,8 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var incomeDiscount:String?
     var incomeSellerName:String?
     var incomeSellerPhone:String?
+    var incomeOfferId:String?
+
     var incomeSellerMail:String?
     var attributeValues : [String]?
     var attributeIds: [String]?

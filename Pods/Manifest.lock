@@ -1,7 +1,10 @@
 PODS:
   - Alamofire (4.8.1)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
   - DLRadioButton (1.4.12)
   - FaveButton (3.2.0)
+  - FSPagerView (0.8.3)
   - MOLH (1.0)
   - OpalImagePicker (1.7.2)
   - SDWebImage (4.4.6):
@@ -11,8 +14,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - AlamofireImage (~> 3.5)
   - DLRadioButton (~> 1.4)
   - FaveButton
+  - FSPagerView
   - MOLH
   - OpalImagePicker (~> 1.7.1)
   - SDWebImage
@@ -21,8 +26,10 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireImage
     - DLRadioButton
     - FaveButton
+    - FSPagerView
     - MOLH
     - OpalImagePicker
     - SDWebImage
@@ -30,13 +37,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   MOLH: 2492e7f8fe3400580832312dc0fb9e05d7e92726
   OpalImagePicker: 770b495a9700fa1d02a5a3c7c8303f1ac4e6c54d
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: f7fe8562066a12a67bbd084389c07dd3c018a581
+PODFILE CHECKSUM: 81967addc575c122ba30eed2fb668aafd86537a6
 
 COCOAPODS: 1.8.4

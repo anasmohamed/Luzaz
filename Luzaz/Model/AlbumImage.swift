@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-class AlbumImage {
+class ImagesAlbum {
     var image : String?
     var id : String?
     
@@ -18,7 +18,6 @@ class AlbumImage {
       init(withJson data: JSON) {
           self.image = data["image"].stringValue
           self.id = data["id"].stringValue
-        let answers =  data["answers"].arrayValue
          
       
       }

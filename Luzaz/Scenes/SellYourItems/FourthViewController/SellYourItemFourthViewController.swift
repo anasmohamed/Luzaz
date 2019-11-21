@@ -48,6 +48,8 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     var lat : String = ""
     var attributeValues : [String]?
     var attributeIds: [String]?
+    var incomeOfferId:String?
+
     var offerAlbum = [UIImage]()
     override func viewDidLoad() {
         

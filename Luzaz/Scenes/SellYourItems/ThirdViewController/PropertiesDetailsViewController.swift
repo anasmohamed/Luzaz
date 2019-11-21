@@ -33,7 +33,8 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     var incomeSellerName:String?
     var incomeSellerPhone:String?
     var incomeSellerMail:String?
-    
+    var incomeOfferId:String?
+
     var attributeList : [CategoryAttributes]?
     var attributeValues = [String]()
     var attributeIds = [String]()

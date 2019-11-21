@@ -67,7 +67,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         imagePicker.imagePickerDelegate = self
         sellectdOfferImagesCollectionView.delegate = self
         sellectdOfferImagesCollectionView.dataSource = self
-        sellectdOfferImagesCollectionView.layer.borderWidth = 10
+        sellectdOfferImagesCollectionView.layer.borderWidth = 1
         sellectdOfferImagesCollectionView.layer.borderColor = UIColor.black.cgColor
 
         self.hideKeyboardWhenTappedAround()
@@ -119,6 +119,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
                 sellYourItemSecondVC.incomeDiscription = incomeDiscription
                 sellYourItemSecondVC.incomeYoutubelink = incomeYoutubelink
                 sellYourItemSecondVC.incomeSubCategory = incomeSubCategory
+                
                 sellYourItemSecondVC.isEditProduct = isEditProduct
                 
             }
@@ -221,7 +222,7 @@ extension SellYourItemViewController: UICollectionViewDelegate,UICollectionViewD
           offerAlbum.remove(at: i)
         if isEditProduct
         {
-            presenter.deleteOfferImage(token: token!, image: "")
+            presenter.deleteOfferAlbumImage(token: token!, image: "")
         }
           sellectdOfferImagesCollectionView.reloadData()
       }

@@ -25,6 +25,8 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     var isEditProduct : Bool = false
     var finished :String?
     var level : String?
+    var incomeOfferId:String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)

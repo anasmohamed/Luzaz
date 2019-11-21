@@ -162,7 +162,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MOLH/MOLH.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework"
@@ -171,7 +173,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MOLH/MOLH.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework"
