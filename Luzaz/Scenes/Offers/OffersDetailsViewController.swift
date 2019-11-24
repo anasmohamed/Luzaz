@@ -76,7 +76,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerImageSlider.dataSource = self
         print("desci\(offer.description!)")
         presenter = OfferDetailesPresenter(view: self)
-        
+        print(offer.album)
 //        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
@@ -185,17 +185,6 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         print("anas")
 
         makePhoneCall(phoneNumber: offer.reseller_phone!)
-//           UIApplication.shared.canOpenURL(url) {
-//              if #available(iOS 10, *) {
-//                UIApplication.shared.open(url, options: [:], completionHandler:nil)
-//               } else {
-//                   UIApplication.shared.openURL(url)
-//               }
-//           } else {
-//                    // add error message here
-//           }
-//        }
-//
     }
       func makePhoneCall(phoneNumber: String) {
 
@@ -210,23 +199,5 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
                   self.present(alert, animated: true, completion: nil)
               }
           }
-//        if let url = URL(string: "tel://\(String(describing: offer.reseller_phone))"), UIApplication.shared.canOpenURL(url) {
-//            if #available(iOS 10, *) {
-//                UIApplication.shared.open(url)
-//            } else {
-//                UIApplication.shared.openURL(url)
-//            }
-//        }
-//    }
-        //    @IBAction func callBtnWasPressed(_ sender: Any) {
-        //        print("anas")
-        //        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
-        //            if #available(iOS 10, *) {
-        //                UIApplication.shared.open(url)
-        //            } else {
-        //                UIApplication.shared.openURL(url)
-        //            }
-        //    }
-        
-        //       }
+
 }

@@ -90,6 +90,12 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
       
         textField.delegate = self
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+          dismiss(animated: true, completion: nil)
+    }
+    
+    
     func createLabel(stackView : UIStackView,title : String) {
         let label = UILabel()
         label.textAlignment = .center
@@ -125,6 +131,7 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.attributeValues = attributeValues
             sellYourItemFourthVC.attributeIds = attributeIds
+            sellYourItemFourthVC.offerAlbum = offerAlbum
             sellYourItemFourthVC.isEditProduct = isEditProduct
             sellYourItemFourthVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemFourthVC,animated:true,completion: nil)

@@ -38,15 +38,19 @@ class SellYourItemInteractor {
         parameters[NetworkingConstants.addUserOfferContact_type] = contact_type
         let imageData = image.jpegData(compressionQuality: 0.6)
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            for (key, value) in parameters {
-                multipartFormData.append(value.data(using: .utf8)!, withName: key)
-            }
-            for (albumImage) in album {
-                if  let imageData = albumImage.jpegData(compressionQuality:0.6) {
-                    multipartFormData.append(imageData, withName: "album", fileName: "album.jpeg", mimeType: "image/jpeg")
-                }
-            }
+
+           for (key, value) in parameters {
+                          multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+                      }
+       
             multipartFormData.append(imageData!, withName: "image", fileName: "offer_image.jpeg", mimeType: "image/jpeg")
+         for i in 0..<album.count{
+                    
+                             let imagesData = album[i].jpegData(compressionQuality: 0.6)
+                             multipartFormData.append(imagesData!, withName: "album[]", fileName: "photo\(i).jpeg" , mimeType: "image/jpeg")
+
+                         }
+
         }, to: pageUrl)
         { (result) in
             switch result {
@@ -74,6 +78,7 @@ class SellYourItemInteractor {
             }
             
         }    }
+    
     
     func addOfferAlbumImages(token :String,offer :String,album:[UIImage])
     {
@@ -115,6 +120,28 @@ class SellYourItemInteractor {
         
         
     }
+//    func uploadAlbum(urlString:String,album:[UIImage])
+//    {
+//        Alamofire.upload(multipartFormData: { multipartFormData in
+//            // import image to request
+//
+//            for (key, value) in parameters {
+//                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+//            }
+//        }, to: urlString,
+//
+//            encodingCompletion: { encodingResult in
+//                switch encodingResult {
+//                case .success(let upload, _, _):
+//                    upload.responseJSON { response in
+//
+//                    }
+//                case .failure(let error):
+//                    print(error)
+//                }
+//
+//        })
+//    }
     func getGovernorates(country: String,
                          completionHandler: @escaping ([Governorates]?, Error?) -> Void) {
         Alamofire.request(LuzazRouter.getGovernorates(country: country)).responseJSON {(response) in

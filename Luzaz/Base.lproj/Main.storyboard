@@ -319,6 +319,7 @@
                                 </constraints>
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
+                                    <action selector="backBtnWasPressed:" destination="nEo-sv-AK4" eventType="touchUpInside" id="O7l-Q5-0D6"/>
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="zcV-Qd-pIP"/>
                                 </connections>
                             </button>
@@ -562,7 +563,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-JJ-u7n">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="XE8-ea-7Cd"/>
                                         </constraints>
@@ -1565,6 +1566,7 @@
                                 </constraints>
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
+                                    <action selector="backBtnWasPressed:" destination="8V6-me-z8t" eventType="touchUpInside" id="2rW-un-fNe"/>
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="7Fu-L5-RmF"/>
                                 </connections>
                             </button>
@@ -1722,7 +1724,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TNK-x3-vw3"/>
                                         </constraints>
@@ -1844,19 +1846,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="iKR-fF-mMP">
-                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
+                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="bom-xn-gFH">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-pr-Y5b">
-                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
+                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="ZvC-xi-JIl">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="ZFY-Vv-D9c">
-                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
+                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-mu-By1">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>
@@ -2255,6 +2257,7 @@
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="cww-0j-Q1o"/>
+                                    <action selector="backBtnWasPressed:" destination="z6w-pi-DUc" eventType="touchUpInside" id="w0R-gq-CPK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe Your Item " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdZ-kA-Xyo">
@@ -2558,6 +2561,7 @@
                                 </constraints>
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
+                                    <action selector="backBrnWasPressed:" destination="XYb-ge-qm2" eventType="touchUpInside" id="XiZ-c1-tkY"/>
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="U9R-2J-JS9"/>
                                 </connections>
                             </button>
@@ -2656,7 +2660,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="C66-jK-JZ2">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x6M-4H-3M8"/>
                                         </constraints>
@@ -2763,6 +2767,7 @@
                                 </constraints>
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
+                                    <action selector="backBtnWasPressed:" destination="tmU-JU-MDu" eventType="touchUpInside" id="3Rr-5U-yce"/>
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="Gap-pc-D0M"/>
                                 </connections>
                             </button>
@@ -2876,7 +2881,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="TVO-D0-5Rp">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="QI2-pi-Abd"/>
                                         </constraints>
@@ -3832,11 +3837,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-hp-dpC">
-                                                <rect key="frame" x="92" y="324" width="136" height="30"/>
+                                                <rect key="frame" x="92" y="324" width="136" height="42"/>
                                                 <color key="backgroundColor" red="0.68581420179999997" green="0.1622108817" blue="0.15795376899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="2g2-YT-WFh"/>
                                                     <constraint firstAttribute="width" constant="136" id="Big-D4-Zf6"/>
+                                                    <constraint firstAttribute="height" constant="42" id="TSX-EB-o7n"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Next">
                                                     <color key="titleColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -3886,8 +3894,8 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="aVZ-Rd-r6J">
                                         <rect key="frame" x="93" y="22" width="134" height="39"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRj-d2-b6g">
-                                        <rect key="frame" x="23" y="21" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRj-d2-b6g">
+                                        <rect key="frame" x="23" y="30" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DTk-G8-n6R"/>
                                             <constraint firstAttribute="width" constant="30" id="dbG-bE-f1F"/>
@@ -3964,7 +3972,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Tyl-WQ-vAH"/>
                                             <constraint firstAttribute="width" constant="30" id="WjZ-LX-I3a"/>
                                         </constraints>
-                                        <state key="normal" image="menuSliderBtn"/>
+                                        <state key="normal" image="back-arrow"/>
                                         <connections>
                                             <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="HhU-Gg-vdZ"/>
                                         </connections>
@@ -4448,6 +4456,7 @@
                                 </constraints>
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
+                                    <action selector="backBtn:" destination="tp2-tR-5tT" eventType="touchUpInside" id="Ypf-n7-FTh"/>
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="GvM-1g-QjZ"/>
                                 </connections>
                             </button>
@@ -4524,7 +4533,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-u3-OTM">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x8p-sK-X8b"/>
                                         </constraints>

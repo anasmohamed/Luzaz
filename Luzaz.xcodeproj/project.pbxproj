@@ -453,10 +453,10 @@
 		CC72689F233AC612006B61DD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CC7268B0233AC612006B61DD /* Categories */,
 				CCE49922233B5B1F0030959D /* ChangePassword */,
 				CC7268A0233AC612006B61DD /* Authentication */,
 				CC726907233AC613006B61DD /* MyProducts */,
-				CC7268B0233AC612006B61DD /* Categories */,
 				CC7268D3233AC612006B61DD /* Chat */,
 				CC7268EB233AC612006B61DD /* Competition */,
 				CC7268F8233AC613006B61DD /* Countries */,

@@ -107,6 +107,10 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         
         if isConditionEnterd &&  !(itemTitleTextView.text?.isEmpty)! && !(itemDescritionTextField.text.isEmpty)

@@ -75,6 +75,10 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         brandPickerView.reloadAllComponents()
         
     }
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+          dismiss(animated: true, completion: nil)
+    }
     func getBrandsEmpty()
     {
         isChooseFrombrandList = true

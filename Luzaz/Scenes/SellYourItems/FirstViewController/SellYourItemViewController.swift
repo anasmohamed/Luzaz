@@ -189,6 +189,9 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         imageView.addSubview(lblNew)
     }
     
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+          dismiss(animated: true, completion: nil)
+    }
     
 }
 extension SellYourItemViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout

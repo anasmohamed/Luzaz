@@ -46,6 +46,10 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
         
     }
     
+    @IBAction func backBrnWasPressed(_ sender: Any) {
+          dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if !(priceTextView.text?.isEmpty)! {
             
