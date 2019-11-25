@@ -189,6 +189,10 @@ class MyProductPresenter {
     {
         return sells[index].image ?? ""
     }
+    func getOfferAlbum(index:Int) ->Array<ImagesAlbum>
+    {
+        return sells[index].album 
+    }
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
         viewController.offer = sells[index]
         

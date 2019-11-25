@@ -107,6 +107,7 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
             sellYourItemVC.incomeImage =
                 self.presenter.getOfferImage(index: index.row)
             sellYourItemVC.incomeOfferId = self.presenter.getOfferId(index: index.row, segmentControlIndex: 0)
+            sellYourItemVC.incomeOfferAlbum = self.presenter.getOfferAlbum(index: index.row)
             sellYourItemVC.cityName = self.presenter.getOfferCity(index: index.row)
             self.present(sellYourItemVC, animated: true, completion: nil)
         }

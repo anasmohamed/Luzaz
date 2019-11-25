@@ -97,8 +97,8 @@ class SellYourItemPresenter {
             }
         }
     }
-    func deleteOfferAlbumImage(token :String,image:String)  {
-        sellYourItemInteractor?.deleteOfferAlbumImage(token: token, image: image)
+    func deleteOfferAlbumImage(token :String,album:String)  {
+        sellYourItemInteractor?.deleteOfferAlbumImage(token: token, album: album)
     }
     func getGovernorates(country: String)
     {

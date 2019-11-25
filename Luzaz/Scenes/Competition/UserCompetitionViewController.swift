@@ -7,23 +7,63 @@
 //
 
 import UIKit
-
-class UserCompetitionViewController: UIViewController {
+import SDWebImage
+class UserCompetitionViewController: UIViewController ,CompetitionView{
+    func showIndicator() {
+        
+    }
+    
+    func hideIndicator() {
+        
+    }
+    
+    func getCompetitionSuccess() {
+        competitionImageView.sd_setImage(with: URL(string:"http://luzaz.com/upload/\(presenter.getImage())"))
+    }
+    
+    func showError(error: String, content: String) {
+        
+    }
+    
+    func displayFirstOption(firstOption: String) {
+        
+    }
+    
+    func displaySecondOption(secondOption: String) {
+        
+    }
+    
+    func displayThreeOption(threeOption: String) {
+        
+    }
+    
+    func displayQuestion(question: String) {
+        
+    }
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
-    
+    private var presenter: CompetitionPresenter!
+
+    @IBOutlet weak var competitionImageView: UIImageView!
     var firstName : String?
     var lastName: String?
     var email : String?
     var phone :String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = CompetitionPresenter(view: self)
+        presenter.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+       
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+     
+    }
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

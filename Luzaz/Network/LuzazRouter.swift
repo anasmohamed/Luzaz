@@ -34,7 +34,7 @@ enum LuzazRouter: URLRequestConvertible {
     case getUser(id:String)
     case getGovernorates(country:String)
     case getBrands(gategory: String)
-    case deleteOfferAlbumImage(token:String,image:String)
+    case deleteOfferAlbumImage(token:String,album:String)
     case updateOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,lat:String,long:String)
     
     var path: String {
@@ -225,9 +225,9 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.addUserOfferReseller_phone]  = reseller_phone
             params[NetworkingConstants.addUserOfferReseller_mail] = reseller_mail
             params[NetworkingConstants.addUserOfferContact_type] = contact_type
-        case let .deleteOfferAlbumImage(token, image):
+        case let .deleteOfferAlbumImage(token, album):
             params[NetworkingConstants.token] = token
-                       params[NetworkingConstants.image] = image
+            params[NetworkingConstants.addUserOfferAlbum] = album
         default:
             print("Empty Paramter")
             

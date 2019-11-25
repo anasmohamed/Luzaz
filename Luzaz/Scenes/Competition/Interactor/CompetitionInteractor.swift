@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 class CompetitionInteractor {
     func getCompetion(
-        completionHandler: @escaping ([Question]?,String?, Error?) -> Void) {
+        completionHandler: @escaping ([Question]?,String?, String,Error?) -> Void) {
         Alamofire.request(LuzazRouter.getCompetition).responseJSON {(response) in
             
             if let response = response.data {
@@ -53,9 +53,9 @@ class CompetitionInteractor {
                 let data = Competation(withJSON: competation)
                 competationList.append(data)
                 
-                completionHandler(competationList[0].enQuestionsList,data.competitionId!, nil)
+                completionHandler(competationList[0].enQuestionsList,data.competitionId!,data.image! ,nil)
             case .failure(let error):
-                completionHandler(nil,nil, error)
+                completionHandler(nil,nil, "",error)
             }
             
         }

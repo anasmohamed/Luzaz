@@ -194,9 +194,9 @@ class SellYourItemInteractor {
             
         }
     }
-    func deleteOfferAlbumImage(token : String,image:String)
+    func deleteOfferAlbumImage(token : String,album:String)
     {
-        Alamofire.request(LuzazRouter.deleteOfferAlbumImage(token: token, image: image)).responseJSON {(response) in
+        Alamofire.request(LuzazRouter.deleteOfferAlbumImage(token: token, album: album)).responseJSON {(response) in
             
             if let response = response.data {
                 print("Response Data: \(response)")

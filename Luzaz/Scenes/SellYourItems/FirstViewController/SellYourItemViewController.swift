@@ -52,6 +52,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var incomeSellerPhone:String?
     var incomeSellerMail:String?
     var incomeOfferId:String?
+    var incomeOfferAlbum:[ImagesAlbum]?
     var token : String?
     let lblNew = UILabel()
 
@@ -78,6 +79,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
             let offerImageGestuer = UITapGestureRecognizer(target: self, action: #selector(changeOfferImage))
             imageView.addGestureRecognizer(offerImageGestuer)
             offerImageGestuer.numberOfTouchesRequired = 1
+            
             
         }
         
@@ -197,6 +199,10 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
 extension SellYourItemViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if isEditProduct
+        {
+            return incomeOfferAlbum!.count
+        }
           return  offerAlbum.count
 
         
@@ -207,7 +213,14 @@ extension SellYourItemViewController: UICollectionViewDelegate,UICollectionViewD
               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SellectedOfferImagesCollectionViewCell", for: indexPath) as!
                 
                 SellectedOfferImagesCollectionViewCell
+        if isEditProduct
+        {
+            cell.offerImage.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(incomeOfferAlbum![indexPath.row].image ?? "")"))
+
+        }else
+        {
         cell.offerImage.image = offerAlbum[indexPath.row]
+        }
         cell.deleteButton?.layer.setValue(indexPath.row, forKey: "index")
                
                
@@ -222,11 +235,14 @@ extension SellYourItemViewController: UICollectionViewDelegate,UICollectionViewD
         }
     @objc func deletePhoto(sender:UIButton) {
         let i : Int = (sender.layer.value(forKey: "index")) as! Int
-          offerAlbum.remove(at: i)
+          
         if isEditProduct
-        {
-            presenter.deleteOfferAlbumImage(token: token!, image: "")
-        }
+        {presenter.deleteOfferAlbumImage(token: token!, album: incomeOfferAlbum![i].id!)
+            incomeOfferAlbum?.remove(at: i)
+            
+        }else{
+        offerAlbum.remove(at: i)
+          }
           sellectdOfferImagesCollectionView.reloadData()
       }
   
