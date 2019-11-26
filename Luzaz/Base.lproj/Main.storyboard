@@ -1128,13 +1128,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5S-ki-LAj">
-                                        <rect key="frame" x="269" y="242" width="42" height="20.5"/>
+                                        <rect key="frame" x="269" y="272" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VB-qS-LC0">
-                                        <rect key="frame" x="8" y="204" width="303" height="30"/>
+                                        <rect key="frame" x="8" y="234" width="303" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="xyu-f9-Bcg"/>
                                         </constraints>
@@ -1143,19 +1143,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZU-Ee-t2r">
-                                        <rect key="frame" x="8" y="175.5" width="303" height="20.5"/>
+                                        <rect key="frame" x="8" y="205.5" width="303" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHK-ZJ-dnb">
-                                        <rect key="frame" x="8" y="299.5" width="145" height="20.5"/>
+                                        <rect key="frame" x="8" y="329.5" width="145" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dX-bP-erv" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
-                                        <rect key="frame" x="203" y="274.5" width="50" height="50"/>
+                                        <rect key="frame" x="203" y="304.5" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4d9-K4-PXp"/>
@@ -1172,13 +1172,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAb-wp-7Iw">
-                                        <rect key="frame" x="8" y="147" width="303" height="20.5"/>
+                                        <rect key="frame" x="8" y="177" width="303" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-O6-1cG" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
-                                        <rect key="frame" x="261" y="274.5" width="50" height="50"/>
+                                        <rect key="frame" x="261" y="304.5" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="pW4-ek-3vb"/>
@@ -1194,9 +1194,21 @@
                                             <action selector="callBtnWasPressed:" destination="Y8y-At-cul" eventType="touchUpInside" id="bZl-ND-tHc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXb-o9-ocA" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                        <rect key="frame" x="284" y="137" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="4qD-bp-5KV"/>
+                                            <constraint firstAttribute="height" constant="30" id="D1i-wk-L2f"/>
+                                        </constraints>
+                                        <state key="normal" image="reportIcon"/>
+                                        <connections>
+                                            <action selector="addReportOfferBtnWasPressed:" destination="Y8y-At-cul" eventType="touchUpInside" id="6hz-1g-Dah"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zZU-Ee-t2r" firstAttribute="top" secondItem="nAb-wp-7Iw" secondAttribute="bottom" constant="8" id="539-pw-yHO"/>
+                                    <constraint firstAttribute="trailing" secondItem="gXb-o9-ocA" secondAttribute="trailing" constant="5" id="9dB-l1-BTX"/>
                                     <constraint firstItem="dHr-dg-4Uy" firstAttribute="leading" secondItem="v8M-Lf-drS" secondAttribute="leading" id="9eM-y8-m85"/>
                                     <constraint firstAttribute="trailing" secondItem="b5S-ki-LAj" secondAttribute="trailing" constant="8" id="Btu-VV-GJn"/>
                                     <constraint firstItem="0VB-qS-LC0" firstAttribute="top" secondItem="zZU-Ee-t2r" secondAttribute="bottom" constant="8" id="C76-y9-GiP"/>
@@ -1207,14 +1219,15 @@
                                     <constraint firstItem="dHr-dg-4Uy" firstAttribute="centerX" secondItem="v8M-Lf-drS" secondAttribute="centerX" id="Nud-VH-r5T"/>
                                     <constraint firstAttribute="bottom" secondItem="6dX-bP-erv" secondAttribute="bottom" constant="20" id="Qa4-hy-klA"/>
                                     <constraint firstItem="0VB-qS-LC0" firstAttribute="leading" secondItem="v8M-Lf-drS" secondAttribute="leading" constant="8" id="W3h-YY-Yvx"/>
+                                    <constraint firstItem="gXb-o9-ocA" firstAttribute="top" secondItem="dHr-dg-4Uy" secondAttribute="bottom" constant="10" id="W8H-0X-FCl"/>
                                     <constraint firstAttribute="trailing" secondItem="zZU-Ee-t2r" secondAttribute="trailing" constant="8" id="YbQ-61-SGU"/>
-                                    <constraint firstItem="nAb-wp-7Iw" firstAttribute="top" secondItem="dHr-dg-4Uy" secondAttribute="bottom" constant="20" id="cYL-6A-25F"/>
                                     <constraint firstItem="GHK-ZJ-dnb" firstAttribute="top" secondItem="b5S-ki-LAj" secondAttribute="bottom" constant="37" id="dJg-3F-vET"/>
                                     <constraint firstAttribute="trailing" secondItem="X4g-O6-1cG" secondAttribute="trailing" constant="8" id="eJ8-HM-QIE"/>
                                     <constraint firstItem="6dX-bP-erv" firstAttribute="leading" secondItem="GHK-ZJ-dnb" secondAttribute="trailing" constant="50" id="eNL-qk-q2p"/>
                                     <constraint firstAttribute="trailing" secondItem="nAb-wp-7Iw" secondAttribute="trailing" constant="8" id="f7J-69-zUz"/>
                                     <constraint firstItem="X4g-O6-1cG" firstAttribute="leading" secondItem="6dX-bP-erv" secondAttribute="trailing" constant="8" id="fJ6-1J-1Bf"/>
                                     <constraint firstAttribute="trailing" secondItem="dHr-dg-4Uy" secondAttribute="trailing" constant="-1" id="h4V-AQ-Oen"/>
+                                    <constraint firstItem="nAb-wp-7Iw" firstAttribute="top" secondItem="gXb-o9-ocA" secondAttribute="bottom" constant="10" id="l4d-RT-54O"/>
                                     <constraint firstAttribute="bottom" secondItem="X4g-O6-1cG" secondAttribute="bottom" constant="20" id="nsG-BD-oZK"/>
                                     <constraint firstAttribute="trailing" secondItem="0VB-qS-LC0" secondAttribute="trailing" constant="8" id="pds-ML-dax"/>
                                     <constraint firstItem="GHK-ZJ-dnb" firstAttribute="centerY" secondItem="6dX-bP-erv" secondAttribute="centerY" constant="10.5" id="qRG-JZ-gdT"/>
@@ -4910,6 +4923,7 @@
         <image name="phone-icon" width="24" height="24"/>
         <image name="phone_number" width="512" height="512"/>
         <image name="priceIcon" width="65" height="66"/>
+        <image name="reportIcon" width="59" height="59"/>
         <image name="sellYourAdd3" width="37" height="38"/>
         <image name="userIcon" width="62" height="63"/>
     </resources>

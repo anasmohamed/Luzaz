@@ -52,7 +52,7 @@ struct NetworkingConstants {
     static let updateOfferImage = "updateOfferImage"
     static let deleteOfferAlbumImage = "deleteOfferAlbumImage"
     static let addOfferAlbumImages = "addOfferAlbumImages"
-
+    static let addReportOffer = "addReportOffer"
 
 
     //get offers pramters
@@ -213,7 +213,13 @@ struct NetworkingConstants {
     
     //GET USER PARAMTERS
     static let  getUserId = "id"
+    //AddReport
+    static let  addReportOfferId = "offer"
+    static let  addReportTitle = "title"
+    static let  addReportMessage = "message"
+    static let  addReportEmail = "email"
 
+    
    
 }
 
