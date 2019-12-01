@@ -58,11 +58,17 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
    func drowImageInTableBackgound()
     {
-        UIGraphicsBeginImageContext(self.tableView.frame.size);
-        UIImage(named: "nothingtoShow")?.draw(in: self.view.bounds)
-        let backImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext();
-        self.tableView.backgroundColor = UIColor(patternImage: backImage)
+        let backgroundImage = UIImage(named: "nothingtoShow")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+        print("Deleted")
+
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
