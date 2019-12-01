@@ -21,11 +21,14 @@ class ChangePasswordViewController: UIViewController {
     }
 
     @IBAction func backBtnWasPressed(_ sender: Any) {
+        AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
         dismiss(animated: true,completion: nil)
     }
     @IBAction func changePasswordBtnWasPressed(_ sender: Any) {
         if !((passwordTextField.text?.isEmpty)! && (rePasswordTextField.text?.isEmpty)!){
             presenter.setPasswordByToken(token:UserDefaults.standard.string(forKey: "token")! , password: passwordTextField.text!, rePassword: rePasswordTextField.text!)
+            AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
+                   dismiss(animated: true,completion: nil)
         }
         else
         {

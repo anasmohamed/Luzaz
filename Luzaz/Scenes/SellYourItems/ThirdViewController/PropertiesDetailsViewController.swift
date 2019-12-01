@@ -21,6 +21,20 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     var subCategory : String?
     var numberOfRooms : String?
     var villa: String?
+    var isEditProduct : Bool = false
+
+    
+    var incomeCodition:String?
+    var incomeDiscription :String?
+    var incomeYoutubelink:String?
+    var incomeTitle:String?
+    var incomePrice :String?
+    var incomeDiscount:String?
+    var incomeSellerName:String?
+    var incomeSellerPhone:String?
+    var incomeSellerMail:String?
+    var incomeOfferId:String?
+
     var attributeList : [CategoryAttributes]?
     var attributeValues = [String]()
     var attributeIds = [String]()
@@ -66,15 +80,22 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     
     func createTextField(stackView : UIStackView) {
         let textField = UITextField()
-        textField.textAlignment = NSTextAlignment.center
-        textField.textColor = UIColor.blue
-        textField.borderStyle = UITextField.BorderStyle.line
         textField.autocapitalizationType = UITextAutocapitalizationType.words
+        textField.layer.cornerRadius = 5
+        textField.layer.borderColor = UIColor.purple.cgColor
+        textField.layer.borderWidth = 1
+        textField.textAlignment = .center
         stackView.addArrangedSubview(textField)
         textField.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
       
         textField.delegate = self
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+          dismiss(animated: true, completion: nil)
+    }
+    
+    
     func createLabel(stackView : UIStackView,title : String) {
         let label = UILabel()
         label.textAlignment = .center
@@ -106,10 +127,13 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
             sellYourItemFourthVC.city = city
             sellYourItemFourthVC.offerImage = offerImage
             sellYourItemFourthVC.category = category
+            sellYourItemFourthVC.isEditProduct = isEditProduct
             sellYourItemFourthVC.subCategory = subCategory
             sellYourItemFourthVC.attributeValues = attributeValues
             sellYourItemFourthVC.attributeIds = attributeIds
-            
+            sellYourItemFourthVC.offerAlbum = offerAlbum
+            sellYourItemFourthVC.isEditProduct = isEditProduct
+            sellYourItemFourthVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemFourthVC,animated:true,completion: nil)
             
         }else

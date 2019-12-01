@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 import QuartzCore
-
+import MOLH
 enum SliderOutState {
     case collapsed
     case leftPanelExpanded
+    case rightPanelExpanded
+
 }
 
 enum ShowWhichVC {
@@ -27,6 +29,7 @@ class ContainerVC: UIViewController {
     var offersViewController : OffersViewController!
     var countriesViewController : CountriesViewController!
     var leftVC : LeftSidePanelVC!
+    var rightVC : RightSidePanelVC!
     var centerController : UIViewController!
     var currentState : SliderOutState = .collapsed {
         didSet{
@@ -37,10 +40,9 @@ class ContainerVC: UIViewController {
     var isHidden = false
     let centerPanelExpandedOffset : CGFloat = 130
     var tap : UITapGestureRecognizer!
-    
+    var language : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initCenter(screen: showVC)
     }
     
@@ -94,10 +96,24 @@ class ContainerVC: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return isHidden
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        language = MOLHLanguage.currentAppleLanguage()
+
+    }
 }
 
 extension ContainerVC : CenterVCDelegate {
-    
+    func togglePane()
+    {
+        if language == "en"
+        {
+            toggleLeftPane()
+        }
+        else{
+            toggleRightPane()
+        }
+    }
     @objc func toggleLeftPane() {
         
         let notAlreadyExpanded = (currentState != .leftPanelExpanded)
@@ -108,7 +124,16 @@ extension ContainerVC : CenterVCDelegate {
         }
         animateLeftPanel(shouldExpand: notAlreadyExpanded)
     }
-    
+    @objc func toggleRightPane() {
+           
+           let notAlreadyExpanded = (currentState != .rightPanelExpanded)
+           
+           if notAlreadyExpanded
+           {
+               addRightPanelViewController()
+           }
+           animateRightPanel(shouldExpand: notAlreadyExpanded)
+       }
     func addLeftPanelViewController() {
         
         if leftVC == nil
@@ -118,7 +143,17 @@ extension ContainerVC : CenterVCDelegate {
         }
     }
     
-    func addChildSidePanelViewController(_ sidePanelController: LeftSidePanelVC) {
+      func addRightPanelViewController() {
+          
+          if rightVC == nil
+          {
+              rightVC = UIStoryboard.rightViewController()
+              addChildSidePanelViewController(rightVC!)
+          }
+      }
+      
+    
+    func addChildSidePanelViewController(_ sidePanelController: UIViewController) {
         
         view.insertSubview(sidePanelController.view, at: 0)
         addChild(sidePanelController)
@@ -149,7 +184,30 @@ extension ContainerVC : CenterVCDelegate {
             })
         }
     }
-    
+    @objc func animateRightPanel(shouldExpand: Bool) {
+        
+        if shouldExpand
+        {
+            isHidden = !isHidden
+            animateStatusBar()
+            setupWhiteCoverView()
+            currentState = .rightPanelExpanded
+            animateCenterPanelXPosition(targetPosition: -centerController.view.frame.width + centerPanelExpandedOffset)
+        }
+        else
+        {
+            isHidden = !isHidden
+            animateStatusBar()
+            hideWhiteCoverView()
+            animateCenterPanelXPosition(targetPosition: 0, completion: { (finished) in
+                if finished == true
+                {
+                    self.currentState = .collapsed
+                    self.rightVC = nil
+                }
+            })
+        }
+    }
     func animateCenterPanelXPosition(targetPosition : CGFloat, completion : ((Bool) -> Void)! = nil) {
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
@@ -172,7 +230,11 @@ extension ContainerVC : CenterVCDelegate {
         {
             whiteCoverView.alpha = 0.75
         }
+        if language == "en"{
         tap = UITapGestureRecognizer(target: self, action:#selector(animateLeftPanel(shouldExpand:)))
+        }else{
+            tap = UITapGestureRecognizer(target: self, action:#selector(animateRightPanel(shouldExpand:)))
+        }
         tap.numberOfTapsRequired = 1
         self.centerController.view.addGestureRecognizer(tap)
     }
@@ -205,7 +267,7 @@ extension ContainerVC : CenterVCDelegate {
         }
         else
         {
-            centerController.view.layer.shadowOpacity = 0.6
+            centerController.view.layer.shadowOpacity = 0
         }
     }
     
@@ -227,6 +289,10 @@ extension UIStoryboard {
     class func leftViewController() -> LeftSidePanelVC? {
         
         return mainStoryboard().instantiateViewController(withIdentifier: "LeftSidePanelVC") as? LeftSidePanelVC
+    }
+    class func rightViewController() -> RightSidePanelVC? {
+        
+        return mainStoryboard().instantiateViewController(withIdentifier: "RightSidePanelVC") as? RightSidePanelVC
     }
     
     class func CountryVC() -> CountriesViewController? {

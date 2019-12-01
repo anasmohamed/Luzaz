@@ -20,8 +20,7 @@ extension SellYourItemViewController : UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        return presenter.getGovernoratesName(row: row)
+        return  presenter.getGovernoratesName(row: row,city: cityName ?? "")
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){

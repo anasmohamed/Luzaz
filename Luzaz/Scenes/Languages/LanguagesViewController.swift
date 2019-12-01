@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MOLH
 class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var isLeftSideController = false
     //var offersViewController : OffersViewController!
@@ -21,9 +21,12 @@ class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewD
         let cell = tableView.cellForRow(at: indexPath)
         
         UserDefaults.standard.set(cell?.textLabel?.text, forKey: "language")
+        MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+        MOLH.reset()
         if isLeftSideController == false {
             
             let  languageVC = ContainerVC()
+            languageVC.modalPresentationStyle = .fullScreen
 //            let languageVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
             
             //languageVC!.delegate = AppDelegate.getAppDelegate().MenuContainerVC

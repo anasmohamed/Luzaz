@@ -9,17 +9,17 @@
 import UIKit
 
 class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
+    func updateOfferSuccessfully(message: String) {
+        showAlert(content:message, title: "Success")
+        
+    }
+    
     func offerAddedSuccessfully(message: String) {
-        showError(error: message)
+        showAlert(content:message, title: "Success")
+        
+        
     }
     
-    func showSpinner() {
-        spinner.startAnimating()
-    }
-    
-    func hideSpinner() {
-      spinner.stopAnimating()
-    }
     
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -27,6 +27,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var fullNameTextView: UITextField!
     var presenter : SellYourItemPresenter!
+    var isEditProduct : Bool = false
     
     var offerImage : UIImage?
     var city : String?
@@ -47,6 +48,12 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     var attributeValues : [String]?
     var offerAlbum = [UIImage]()
     var attributeIds: [String]?
+    var incomeOfferId:String?
+
+    
+    var incomeSellerName:String?
+    var incomeSellerPhone:String?
+    var incomeSellerMail:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
@@ -64,27 +71,69 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
             contactType = "3"
         }
         
-     
+        
         if brand == nil{
             brand = "0"
         }
         
     }
+    func showSpinner() {
+        spinner.startAnimating()
+    }
     
+    func hideSpinner() {
+        spinner.stopAnimating()
+    }
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+          dismiss(animated: true, completion: nil)
+    }
     @IBAction func finishBtnWasPressed(_ sender: Any) {
-        if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text?.isEmpty)! {
-            presenter.addUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:(attributeIds?.joined(separator: ","))!,attr_values:(attributeValues?.joined(separator: ","))!,title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:offerDescription,price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:contactType!,image:offerImage!,album:offerAlbum,lat: lat ?? "",long: long ?? "",spinner: spinner)
-                       
-        }else{
+        if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text!.isEmpty && isEditProduct) {
+            presenter.addUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:(attributeIds?.joined(separator: ","))!,attr_values:(attributeValues?.joined(separator: ","))!,title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:offerDescription,price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:contactType!,image:offerImage!,album:offerAlbum,lat: lat ?? "",long: long ?? "")
+            
+        }else if(!(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text!.isEmpty && isEditProduct))
+        {
+            presenter.updateOfferAlbumImages(token: UserDefaults.standard.string(forKey: "token")!, offer: incomeOfferId!, album: offerAlbum)
+            presenter.updateUserOffer(token:UserDefaults.standard.string(forKey: "token")!,privacy_policy:"1",id_governate:city!,id_category:category!,id_sub_category:subCategory!,attr:(attributeIds?.joined(separator: ","))!,attr_values:(attributeValues?.joined(separator: ","))!,title:offerTitle!,id_brand:brand!,offer_type:condition!,decription:offerDescription,price:price!,discount_prec:discount!,youtube_link:"",reseller_name:fullNameTextView.text!,reseller_phone:mobileNumberTextView.text!,reseller_mail:(emailTextView.text)!,contact_type:contactType!,lat: lat ?? "",long: long ?? "")
+            
+        }
+        else{
             showError(error: "You Should Enter Price")
         }
         
     }
     
     func showError(error: String) {
-        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
+        showAlert(content: error, title: "Error")
+    }
+    
+    func showAlert(content:String,title:String)
+    {
+        //        let alertController = UIAlertController(title: title, message: content, preferredStyle: .alert)
+        //        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        //               alertController.addAction(action)
+        //
+        //        present(alertController, animated: true, completion: {
+        //            let offersVC = ContainerVC()
+        //                         self.present(offersVC,animated:true,completion:nil)
+        //
+        //        })
+        let alert = UIAlertController(title: title, message: content, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                
+                let offersVC = ContainerVC()
+                offersVC.modalPresentationStyle = .fullScreen
+                self.present(offersVC,animated:true,completion:nil)
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+                
+            }}))
+        self.present(alert, animated: true, completion: nil)
     }
 }

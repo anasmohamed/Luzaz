@@ -11,7 +11,7 @@ import UIKit
 class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CountryView {
     private var presenter: CountryPresenter!
     var delegate : CenterVCDelegate?
-
+    
     let prefs = UserDefaults.standard
     var isLeftSideController = false
     var countryImage : UIImageView?
@@ -31,14 +31,28 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UserDefaults.standard.set(indexPath.row + 1 , forKey: "country")
+        switch  presenter.getCountryName(index: indexPath.row){
+        case "Egypt":
+            UserDefaults.standard.set(1 , forKey: "country")
+        case "USA":
+            UserDefaults.standard.set(10 , forKey: "country")
+        case "KSA":
+            UserDefaults.standard.set(2 , forKey: "country")
+        case "UAE":
+            UserDefaults.standard.set(5 , forKey: "country")
+        default:
+            UserDefaults.standard.set(9 , forKey: "country")
+            
+        }
         if isLeftSideController == false{
             let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
+            languageVC.modalPresentationStyle = .fullScreen
             self.present(languageVC, animated: true, completion: nil)
         }else{
             countryImage?.image = UIImage(named: getCountyIcon(countryNum : indexPath.row) )
-           AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
-            dismiss(animated: true, completion: nil)
+            let offerVC = ContainerVC()
+            offerVC.modalPresentationStyle = .fullScreen
+            present(offerVC, animated: true, completion:  nil)
         }
         
     }

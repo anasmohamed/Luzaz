@@ -9,5 +9,5 @@
 import Foundation
 protocol SellYourItemView :class{
     func showError(error : String)
-    
+  
 }

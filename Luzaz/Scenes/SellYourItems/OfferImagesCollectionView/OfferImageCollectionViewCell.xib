@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OfferImageCollectionViewCell" id="gTV-IL-0wX" customClass="OfferImageCollectionViewCell" customModule="Luzaz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="85" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="85" height="77"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBj-TL-Vdc">
+                        <rect key="frame" x="0.0" y="0.0" width="85" height="77"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIC-sT-Kd2">
+                        <rect key="frame" x="61" y="0.0" width="24" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="QFp-MT-P9d"/>
+                            <constraint firstAttribute="width" constant="24" id="zHe-5c-b7e"/>
+                        </constraints>
+                        <state key="normal" image="cancel"/>
+                        <connections>
+                            <action selector="deleteButttonWasPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="JSx-24-NMl"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="top" secondItem="eBj-TL-Vdc" secondAttribute="top" id="1As-nr-XuK"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="eBj-TL-Vdc" secondAttribute="bottom" id="C5k-eP-oqv"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="eBj-TL-Vdc" secondAttribute="trailing" id="JSN-Le-PnY"/>
+                <constraint firstItem="eBj-TL-Vdc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LpZ-z6-p33"/>
+                <constraint firstItem="eBj-TL-Vdc" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="mf2-2F-OSr"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="hIC-sT-Kd2" secondAttribute="top" constant="44" id="pa4-B9-oZg"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="hIC-sT-Kd2" secondAttribute="trailing" id="uE9-WG-o8e"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="85" height="77"/>
+            <connections>
+                <outlet property="offerImage" destination="eBj-TL-Vdc" id="IfP-jQ-tTD"/>
+            </connections>
+            <point key="canvasLocation" x="119.56521739130436" y="138.95089285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cancel" width="50" height="50"/>
+    </resources>
+</document>

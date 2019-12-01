@@ -15,7 +15,7 @@ class MyProductPresenter {
     private var sell: Offer?
     private var sells: [Offer]
     private var orders: [Order]
-
+    
     init(view: MyProductView) {
         self.view = view
         myProductInteractor = MyProductInteractor()
@@ -25,11 +25,11 @@ class MyProductPresenter {
     
     func viewDidLoad() {
         
-       
+        
         getSells(countryId:UserDefaults.standard.string(forKey: "country")!, userId:UserDefaults.standard.string(forKey: "userId")!)
         
         getOrders(token: UserDefaults.standard.string(forKey: "token")!)
-    
+        
     }
     func getOrders(token: String)
     {
@@ -45,7 +45,7 @@ class MyProductPresenter {
                 self.view?.getMyOrdersSuccess()
             }
         }
-
+        
         
     }
     func getSells(countryId: String,userId:String) {
@@ -62,6 +62,19 @@ class MyProductPresenter {
             }
         }
     }
+    func deleteOffer(token: String , offer: String)  {
+        myProductInteractor.deleteOffer(token: token, offer: offer){
+            [unowned self] (message, error) in
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard message != nil else { return }
+                self.view?.offerDeletedSuccessfuly(message:message ?? "")
+            }
+            
+        }
+    }
     func getSellsCount() -> Int {
         return sells.count
     }
@@ -69,13 +82,25 @@ class MyProductPresenter {
         return orders.count
     }
     
+    func deleteItem(index:Int,selectedSegmentIndex:Int)
+    {
+        if selectedSegmentIndex == 0
+            
+        {
+            sells.remove(at: index)
+        }
+        else
+        {
+            orders.remove(at: index)
+        }
+    }
     func configure(cell: MyProductCellView, for index: Int) {
         let sell = sells[index]
-      
+        
         guard let quntity = sell.price
             ,let image = sell.image,
             let title = sell.title,
-        let date = sell.date
+            let date = sell.date
             else { return }
         cell.displayProductQuntity(quntity: quntity)
         cell.displayDate(date: date)
@@ -92,12 +117,82 @@ class MyProductPresenter {
             
             else { return }
         cell.displayProductPrice(price: price)
-//        cell.displayDate(date: date)
+        //        cell.displayDate(date: date)
         cell.displayProductTotalPrice(productTotalPrice:totalPrice )
         cell.displayProductQuntity(quntity: quntity)
         
     }
+    func getOfferCity(index:Int) -> String
+    {
+        return sells[index].governorate!
+    }
+    func getCategory(index:Int) -> String
+    {
+        return sells[index].category ?? ""
+    }
+    func getSubCategory(index:Int)-> String
+    {
+        return sells[index].subCateogry ?? ""
+    }
+    func getBrand(index:Int)-> String
+    {
+        return sells[index].brand ?? ""
+    }
+    func getCondition(index:Int)-> String
+    {
+        return sells[index].condition ?? ""
+    }
+    func getTitle(index:Int)-> String
+    {
+        return sells[index].title ?? ""
+    }
     
+    func getDescription(index:Int) ->String
+    {
+        return sells[index].description ?? ""
+    }
+    
+    func getPrice(index:Int) ->String
+    {
+        return sells[index].price ?? ""
+    }
+    
+     func getDescount(index:Int) ->String
+     {
+         return sells[index].discount_prec ?? ""
+     }
+    
+     func getSellerMail(index:Int) ->String
+     {
+         return sells[index].reseller_mail ?? ""
+     }
+    
+     func getSellerPhone(index:Int) ->String
+     {
+         return sells[index].reseller_phone ?? ""
+     }
+    
+     func getSellerName(index:Int) ->String
+     {
+         return sells[index].reseller_name ?? ""
+     }
+    func getOfferId(index: Int,segmentControlIndex : Int) -> String{
+        if segmentControlIndex == 0
+        {
+            return sells[index].offerId ?? ""
+        }else{
+            return orders[index].offreId ?? ""
+            
+        }
+    }
+    func getOfferImage(index : Int) -> String
+    {
+        return sells[index].image ?? ""
+    }
+    func getOfferAlbum(index:Int) ->Array<ImagesAlbum>
+    {
+        return sells[index].album 
+    }
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
         viewController.offer = sells[index]
         

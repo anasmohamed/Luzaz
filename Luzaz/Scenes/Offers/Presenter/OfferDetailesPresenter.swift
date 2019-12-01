@@ -16,17 +16,27 @@ class OfferDetailesPresenter {
         offersInteractor = OffersInteractor()
       
     }
-    
+    func addReportOffer(offer:String,title:String,message:String,email:String) {
+           offersInteractor.addReportOffre(offer: offer, title: title, message: message, email: email) { [unowned self] (message, error) in
+               
+               if let error = error {
+                   self.view?.showError(error: error.localizedDescription)
+               } else {
+                   guard message != nil else { return }
+                 
+                   self.view?.addProductToFavoriteSuccess(message: message ?? "")
+               }
+           }
+       }
     func addProductToFavorite(token:String,offerId:String) {
         offersInteractor.addProductToFavorite(token:token,offerId: offerId) { [unowned self] (message, error) in
             
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-              //  guard let message = message
-                //    else { return }
+                guard message != nil else { return }
               
-                self.view?.addProductToFavoriteSuccess(message: message)
+                self.view?.addProductToFavoriteSuccess(message: message ?? "")
             }
         }
     }

@@ -46,8 +46,13 @@ struct NetworkingConstants {
     static let addUserOffer = "addUserOffer"
     static let getGovernorates = "getGovernorates"
     static let getBrands = "getBrands"
-    
-
+    static let deleteOffer = "deleteOffer"
+    static let getUser = "getUser"
+    static let updateOfferOffer = "updateOfferOffer"
+    static let updateOfferImage = "updateOfferImage"
+    static let deleteOfferAlbumImage = "deleteOfferAlbumImage"
+    static let addOfferAlbumImages = "addOfferAlbumImages"
+    static let addReportOffer = "addReportOffer"
 
 
     //get offers pramters
@@ -121,13 +126,13 @@ struct NetworkingConstants {
     static let senderAttachmentsArray = "attachmentsArray"
     
     //ADDUSERFAVORITES
-    static let favoriteUserToken = "Token"
+    static let favoriteUserToken = "token"
     static let favoriteUserOffer = "offer"
     
     
     
     //GET USER ORDER
-    static let userOrderToken = "Token"
+    static let userOrderToken = "token"
     static let userOrderId = "id"
     static let getOrderUserId = "id_user"
     static let resellerId = "id_reseller"
@@ -153,7 +158,7 @@ struct NetworkingConstants {
 
     
     //DELETE OFFER PARAMTERS
-    static let offerToken = "Token"
+    static let offerToken = "token"
     static let deleteOfferId = "offer"
     
     
@@ -164,7 +169,7 @@ struct NetworkingConstants {
     
     
     //setPasswordByToken Parameter
-    static let changePasswordToken = "Token"
+    static let changePasswordToken = "token"
     static let changePasswordNewPassword = "password"
     static let changePasswordConPassword = "re_password"
 
@@ -201,6 +206,20 @@ struct NetworkingConstants {
     //getBrands Parameter
     static let  getBrandsCategory = "category"
 
+  
+    //deleteUserFavorite parameter
+    static let  deleteFavriteOfferToken = "token"
+    static let  deleteFavriteOfferId = "offer"
+    
+    //GET USER PARAMTERS
+    static let  getUserId = "id"
+    //AddReport
+    static let  addReportOfferId = "offer"
+    static let  addReportTitle = "title"
+    static let  addReportMessage = "message"
+    static let  addReportEmail = "email"
 
+    
+   
 }
 

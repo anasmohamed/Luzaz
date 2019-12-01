@@ -14,6 +14,11 @@ class CompetitionViewController: UIViewController, CompetitionView{
     @IBOutlet weak var optionOneBtn: UIButton!
     @IBOutlet weak var quetionsNumber: UILabel!
     @IBOutlet weak var optionThreeBtn: UIButton!
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     private var presenter: CompetitionPresenter!
     var questionId : [String] = []
     var questionCounter: Int = 0
@@ -66,8 +71,10 @@ class CompetitionViewController: UIViewController, CompetitionView{
         }else{
             presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:"en",questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName:
                 
-                "anas",lastName: "mohamed",phone: "0112233444",email: "anasmohamed@gmail.com")
-
+                userFristName ?? "",lastName: userLastName ?? "",phone: userPhone ?? "",email: userEmail ?? "")
+            let offerVC = ContainerVC()
+            self.present(offerVC,animated: true,completion: nil)
+ 
 
         }
         
@@ -101,13 +108,23 @@ class CompetitionViewController: UIViewController, CompetitionView{
     
     
     
-    func showError(error: String) {
-        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(action)
-        
-        present(alertController, animated: true, completion: nil)
+    func showError(error: String,content : String) {
+         let alert = UIAlertController(title: title, message: content, preferredStyle: .alert)
+                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                     switch action.style{
+                     case .default:
+                      
+                      let offersVC = ContainerVC()
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+                     case .cancel:
+                         print("cancel")
+
+                     case .destructive:
+                         print("destructive")
+
+                     }}))
+                 self.present(alert, animated: true, completion: nil)
     }
     
     

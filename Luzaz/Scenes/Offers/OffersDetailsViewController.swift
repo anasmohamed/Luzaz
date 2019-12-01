@@ -9,7 +9,8 @@
 import UIKit
 import SDWebImage
 import FaveButton
-
+import AlamofireImage
+import FSPagerView
 func color(_ rgbColor: Int) -> UIColor{
     return UIColor(
         red:   CGFloat((rgbColor & 0xFF0000) >> 16) / 255.0,
@@ -19,7 +20,30 @@ func color(_ rgbColor: Int) -> UIColor{
     )
 }
 
-class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate{
+class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate,FSPagerViewDelegate,FSPagerViewDataSource{
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        if offer.album.count == 0
+        {
+            return 1
+        }
+        return offer.album.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", at: index)
+        
+        if offer.album.count == 0
+        {
+            cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(offer.image!)"))
+        }
+        else{
+            let album = offer.album[index] as ImagesAlbum
+
+            cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(offer.image!)"))
+            cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(album.image!)"))
+        }
+          return cell    }
+    
     var offer : Offer!
     @IBOutlet var heartButton: FaveButton?
     @IBOutlet weak var sellerNameLbl: UILabel!
@@ -28,31 +52,47 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBOutlet weak var offerDescriptionLabel: UILabel!
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var offerTitleLabel: UILabel!
-    @IBOutlet weak var offerImageView: UIImageView!
     var presenter: OfferDetailesPresenter!
     var token : String?
     
     
+    @IBOutlet weak var offerFavotriteBtn: FaveButton!
+    
+    @IBOutlet weak var offerImageSlider: FSPagerView!{
+        didSet {
+            self.offerImageSlider.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "imageSliderCell")
+        }
+    }
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.heartButton?.setSelected(selected: true, animated: false)
         imageLable()
+        offerImageSlider.delegate = self
+        offerImageSlider.dataSource = self
         print("desci\(offer.description!)")
         presenter = OfferDetailesPresenter(view: self)
-        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
+        print(offer.album)
+//        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
         dateLbl.text = offer.date
+        locationLbl.text = offer.governorate
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
           token =  UserDefaults.standard.string(forKey: "token")!
+            offerFavotriteBtn.isHidden = false
+            
         }
         else
         {
             token = ""
+            offerFavotriteBtn.isHidden = false
+
         }
         if offer.contactType == "1"
         {
@@ -60,6 +100,9 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         }
         
         // Do any additional setup after loading the view.
+    }
+   
+    @IBAction func addReportOfferBtnWasPressed(_ sender: Any) {
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
@@ -79,13 +122,17 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         return nil
     }
     
+    @IBAction func addToFavorite(_ sender: Any) {
+        presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
+    }
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         presenter.addProductToFavorite(token:token! , offerId:offer.offerId!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+700)
+        
+//        contentView.size.height = UIScreen.main.bounds.height+offerDescriptionLabel.frame.height + 100
         sellerNameLbl.text = offer.reseller_name
         
     }
@@ -130,6 +177,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBAction func chatWithSellerBtnWasPressed(_ sender: Any) {
         let conversationVC = storyboard?.instantiateViewController(withIdentifier: "ConverstionVC") as! ConverstionViewController
         conversationVC.id = offer.reseller_id
+        conversationVC.modalPresentationStyle = .fullScreen
         self.present(conversationVC, animated: true, completion: nil)
         
     }
@@ -137,24 +185,21 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBAction func callBtnWasPressed(_ sender: Any) {
         
         print("anas")
-        //        print("anas")
-        if let url = URL(string: "tel://\(String(describing: offer.reseller_phone))"), UIApplication.shared.canOpenURL(url) {
-            if #available(iOS 10, *) {
-                UIApplication.shared.open(url)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
+
+        makePhoneCall(phoneNumber: offer.reseller_phone!)
     }
-        //    @IBAction func callBtnWasPressed(_ sender: Any) {
-        //        print("anas")
-        //        if let url = URL(string: "tel://\(offer.reseller_phone)"), UIApplication.shared.canOpenURL(url) {
-        //            if #available(iOS 10, *) {
-        //                UIApplication.shared.open(url)
-        //            } else {
-        //                UIApplication.shared.openURL(url)
-        //            }
-        //    }
-        
-        //       }
+      func makePhoneCall(phoneNumber: String) {
+
+              if let phoneURL = NSURL(string: ("tel//:" + phoneNumber)) {
+
+                  let alert = UIAlertController(title: ("Call " + phoneNumber + "?"), message: nil, preferredStyle: .alert)
+                  alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
+                      UIApplication.shared.open(phoneURL as URL, options: [:], completionHandler: nil)
+                  }))
+
+                  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                  self.present(alert, animated: true, completion: nil)
+              }
+          }
+
 }

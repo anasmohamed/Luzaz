@@ -13,13 +13,13 @@ class SellYourItemPresenter {
     private weak var firstView: SellYourItemFirstView?
     private weak var secondView: SellYourItemSecondView?
     private weak var endView: SellYourItemEndView?
-
+    
     private let sellYourItemInteractor: SellYourItemInteractor?
     private var sellItem : Offer?
     private var governorates : [Governorates]?
     private var gategories : [Category]?
     private var brands : [Brands]?
-    
+    var isFirst = true
     init(view: SellYourItemView) {
         self.view = view
         sellItem = Offer()
@@ -38,7 +38,7 @@ class SellYourItemPresenter {
         governorates = [Governorates]()
         
     }
-  
+    
     init(view:SellYourItemEndView) {
         self.endView = view
         sellYourItemInteractor = SellYourItemInteractor()
@@ -46,7 +46,7 @@ class SellYourItemPresenter {
         
     }
     
-  
+    
     func getOfferCity()->String
     {
         return (sellItem?.city)!
@@ -61,7 +61,10 @@ class SellYourItemPresenter {
     func  viewDidLoad()  {
         getGovernorates(country:UserDefaults.standard.string(forKey: "country")!)
     }
-    
+    func updateOfferAlbumImages(token:String,offer:String,album:[UIImage])
+    {
+        sellYourItemInteractor?.addOfferAlbumImages(token:token , offer: offer, album: album)
+    }
     func getBrands(gategory: String)
     {
         secondView?.showIndicator()
@@ -74,14 +77,29 @@ class SellYourItemPresenter {
                 guard let brands = brands else { return }
                 self.brands = brands
                 if !brands.isEmpty{
-                self.secondView?.getBrandsSuccess()
+                    self.secondView?.getBrandsSuccess()
                 }else{
                     self.secondView?.getBrandsEmpty()
                 }
             }
         }
     }
-    
+    func updateOfferImage(token:String,offferId:String,image:UIImage)
+    {
+        firstView?.showIndicator()
+        sellYourItemInteractor?.updateOfferImage(token: token, offerId: offferId, image: image) { [unowned self] (message, error) in
+            self.firstView?.hideIndicator()
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let message = message else { return }
+            }
+        }
+    }
+    func deleteOfferAlbumImage(token :String,album:String)  {
+        sellYourItemInteractor?.deleteOfferAlbumImage(token: token, album: album)
+    }
     func getGovernorates(country: String)
     {
         firstView?.showIndicator()
@@ -100,6 +118,23 @@ class SellYourItemPresenter {
         
         
     }
+    func updateUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,lat:String,long : String)
+    {
+        endView?.showSpinner()
+        sellYourItemInteractor?.updateOffer(token: token, privacy_policy:privacy_policy , id_governate: id_governate, id_category:id_category , id_sub_category: id_sub_category, attr: attr, attr_values:attr_values , title:title , id_brand: id_brand, offer_type: offer_type, decription:decription , price:price , discount_prec:discount_prec , youtube_link: youtube_link, reseller_name: reseller_name, reseller_phone:reseller_phone , reseller_mail:reseller_mail , contact_type:contact_type , lat:lat , long:long ){
+            [unowned self] (message, error) in
+            self.endView?.hideSpinner()
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let message = message else { return }
+                self.endView?.updateOfferSuccessfully(message:message)
+            }
+        }
+        
+        
+    }
     func getBrandsCount() ->Int  {
         return (brands?.count)!
     }
@@ -112,15 +147,30 @@ class SellYourItemPresenter {
     func getGovernoratesCount() ->Int {
         return (governorates?.count)!
     }
-    func getGovernoratesName(row : Int) -> String  {
+   
+    func getGovernoratesName(row : Int,city:String) -> String  {
+        if city != "" && isFirst{
+            var id : String = "0"
+            if governorates![row].name == city
+            {
+                id = governorates![row].id!
+                self.governorates?.remove(at: row)
+                
+            }
+            isFirst = false
+            let newGovernorate = Governorates(id: id,name: city)
+            governorates?.insert(newGovernorate, at: 0)
+        }
         return governorates![row].name!
     }
+
     func getGovernoratesId(row: Int)-> String
     {
         return governorates![row].id!
         
     }
-    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage],lat:String,long : String,spinner :UIActivityIndicatorView)
+    
+    func addUserOffer(token:String,privacy_policy:String,id_governate:String,id_category:String,id_sub_category:String,attr:String,attr_values:String,title:String,id_brand:String,offer_type:String,decription:String,price:String,discount_prec:String,youtube_link:String,reseller_name:String,reseller_phone:String,reseller_mail:String,contact_type:String,image: UIImage,album:[UIImage],lat:String,long : String)
     {
         self.endView?.showSpinner()
         sellYourItemInteractor?.addUserOffer(token:token , privacy_policy: privacy_policy, id_governate:id_governate, id_category: id_category, id_sub_category: id_sub_category, attr: attr, attr_values:attr_values, title: title, id_brand: id_brand, offer_type:offer_type , decription: decription, price: price, discount_prec: discount_prec, youtube_link: "", reseller_name: reseller_name, reseller_phone: reseller_phone, reseller_mail: reseller_mail, contact_type: contact_type, image: image, album: album,lat:lat,long:long ){

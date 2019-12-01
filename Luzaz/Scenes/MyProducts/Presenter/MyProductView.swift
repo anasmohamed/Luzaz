@@ -13,4 +13,6 @@ protocol MyProductView : class{
     func getMySellingProductsSuccess()
     func getMyOrdersSuccess()
     func showError(error: String)
+    func offerDeletedSuccessfuly(message:String)
+    
 }

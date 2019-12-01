@@ -14,6 +14,7 @@ class CompetitionPresenter {
     private var competations: [Competation]
     private var competitonId : String?
     private var qustions : [Question]
+    private var image : String?
     init(view: CompetitionView) {
         self.view = view
         competitionInteractor = CompetitionInteractor()
@@ -31,9 +32,9 @@ class CompetitionPresenter {
             [unowned self] (percentage,code, error) in
             self.view?.hideIndicator()
             if let error = error {
-                self.view?.showError(error: error.localizedDescription)
+                self.view?.showError(error: "Error",content : error.localizedDescription)
             } else {
-                self.view?.showError(error:percentage!)
+                self.view?.showError(error:"Success",content :percentage!)
             }
             
             
@@ -41,15 +42,16 @@ class CompetitionPresenter {
     }
     func getQuestions() {
         view?.showIndicator()
-        competitionInteractor.getCompetion() { [unowned self] (qustions,competitionId, error) in
+        competitionInteractor.getCompetion() { [unowned self] (qustions,competitionId,image, error) in
             
             self.view?.hideIndicator()
             if let error = error {
-                self.view?.showError(error: error.localizedDescription)
+                self.view?.showError(error: "Error",content:error.localizedDescription )
             } else {
                 guard let qustions = qustions else { return }
                 self.qustions = qustions
                 self.competitonId = competitionId
+                self.image = image
                 self.view?.getCompetitionSuccess()
             }
         }
@@ -91,6 +93,10 @@ class CompetitionPresenter {
         cell.displayThirdAnswer(thirdAnswer: answers[2].answer!)
         cell.displayQuestion(question: questionText)
         
+    }
+    func getImage() -> String
+    {
+        return image ?? ""
     }
     //    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
     //        viewController.offer = offers[index]

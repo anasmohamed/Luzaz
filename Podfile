@@ -12,7 +12,10 @@ target 'Luzaz' do
   pod 'FaveButton'
   pod 'DLRadioButton', '~> 1.4'
   pod 'OpalImagePicker', '~> 1.7.1'
-  
+  pod 'MOLH'
+  pod 'FSPagerView'
+
+  pod 'AlamofireImage', '~> 3.5'
 
   target 'LuzazTests' do
     inherit! :search_paths

@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
+		352F8C25238023880047279D /* AlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F8C24238023880047279D /* AlbumImage.swift */; };
+		3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3576F68D2368CD9600E3AB38 /* Localizable.strings */; };
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
 		3581962123572D390029D669 /*  CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */; };
 		35819623235738390029D669 /* LayoutOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35819622235738390029D669 /* LayoutOption.swift */; };
 		358A4DFB235A7B1000ABB014 /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */; };
+		358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */; };
 		3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
+		35A629F123807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */; };
 		35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
 		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
@@ -21,7 +25,6 @@
 		CC0F0CD22340F663000F6C4A /* SellYourItemFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */; };
 		CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */; };
 		CC0F0CD7234114BC000F6C4A /* Brands.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD6234114BC000F6C4A /* Brands.swift */; };
-		CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */; };
 		CC1DA8F6234261D700A0C5D9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */; };
 		CC726958233AC613006B61DD /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A2233AC612006B61DD /* UserInteractor.swift */; };
 		CC726959233AC613006B61DD /* LoginViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */; };
@@ -194,12 +197,21 @@
 
 /* Begin PBXFileReference section */
 		100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.debug.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.debug.xcconfig"; sourceTree = "<group>"; };
+		352F8C24238023880047279D /* AlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImage.swift; sourceTree = "<group>"; };
+		3576F68C2368CD9600E3AB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		357A152B236B6B5A008EF2D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		357A152C236B6BD9008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		357A152D236B6BDA008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		357A152E236B6BDA008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		357A200723534566003BBF36 /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesDetailsViewController.swift; sourceTree = "<group>"; };
 		3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CustomCollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
 		35819622235738390029D669 /* LayoutOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOption.swift; sourceTree = "<group>"; };
 		358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
+		358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidePanelVC.swift; sourceTree = "<group>"; };
+		3594FCA92385DAA200FEA604 /* Luzaz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luzaz.entitlements; sourceTree = "<group>"; };
 		35A40FDE2356024C004D5619 /* StackViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackground.swift; sourceTree = "<group>"; };
+		35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectedOfferImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAttributes.swift; sourceTree = "<group>"; };
 		4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,7 +221,6 @@
 		CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SellYourItemFirstView.swift; path = ../EndViewController/Presenter/SellYourItemFirstView.swift; sourceTree = "<group>"; };
 		CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
 		CC0F0CD6234114BC000F6C4A /* Brands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brands.swift; sourceTree = "<group>"; };
-		CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		CC7268A2233AC612006B61DD /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		CC7268A3233AC612006B61DD /* LoginViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
@@ -401,6 +412,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352F8C262380450C0047279D /* OfferImagesCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */,
+			);
+			path = OfferImagesCollectionView;
+			sourceTree = "<group>";
+		};
 		A6BCC2E1C359FB1EF78F17DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,10 +453,10 @@
 		CC72689F233AC612006B61DD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CC7268B0233AC612006B61DD /* Categories */,
 				CCE49922233B5B1F0030959D /* ChangePassword */,
 				CC7268A0233AC612006B61DD /* Authentication */,
 				CC726907233AC613006B61DD /* MyProducts */,
-				CC7268B0233AC612006B61DD /* Categories */,
 				CC7268D3233AC612006B61DD /* Chat */,
 				CC7268EB233AC612006B61DD /* Competition */,
 				CC7268F8233AC613006B61DD /* Countries */,
@@ -789,6 +808,7 @@
 				CC726904233AC613006B61DD /* CenterVCDelegate.swift */,
 				CC726905233AC613006B61DD /* ContainerVC.swift */,
 				CC726906233AC613006B61DD /* LeftSidePanelVC.swift */,
+				358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */,
 			);
 			path = LeftSidePanel;
 			sourceTree = "<group>";
@@ -900,6 +920,7 @@
 		CC726928233AC613006B61DD /* SellYourItems */ = {
 			isa = PBXGroup;
 			children = (
+				352F8C262380450C0047279D /* OfferImagesCollectionView */,
 				CC726929233AC613006B61DD /* EndViewController */,
 				CC72692E233AC613006B61DD /* FifthViewController */,
 				CC726933233AC613006B61DD /* FirstViewController */,
@@ -1067,6 +1088,7 @@
 		CC8695C122F4F54B00E9F14D /* Luzaz */ = {
 			isa = PBXGroup;
 			children = (
+				3594FCA92385DAA200FEA604 /* Luzaz.entitlements */,
 				CC72689F233AC612006B61DD /* Scenes */,
 				CCD9BE5A233930C8002B9201 /* Network */,
 				CCD9BE2E2339111E002B9201 /* Model */,
@@ -1085,7 +1107,7 @@
 				CC8695C922F4F54B00E9F14D /* Assets.xcassets */,
 				CC8695CB22F4F54B00E9F14D /* LaunchScreen.storyboard */,
 				CC8695CE22F4F54B00E9F14D /* Info.plist */,
-				CC1CE17E230B1CF500FCFFC0 /* Localizable.strings */,
+				3576F68D2368CD9600E3AB38 /* Localizable.strings */,
 				CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */,
 				CCCD733C23315B97005823D6 /* FavImage.swift */,
 				CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */,
@@ -1128,6 +1150,7 @@
 				CC0F0CD6234114BC000F6C4A /* Brands.swift */,
 				35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */,
 				35819622235738390029D669 /* LayoutOption.swift */,
+				352F8C24238023880047279D /* AlbumImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1263,6 +1286,7 @@
 				English,
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = CC8695B622F4F54B00E9F14D;
 			productRefGroup = CC8695C022F4F54B00E9F14D /* Products */;
@@ -1286,7 +1310,7 @@
 				CC726966233AC613006B61DD /* MainCateoriesCollectionViewCell.xib in Resources */,
 				CC7269A7233AC614006B61DD /* OffersCell.xib in Resources */,
 				CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */,
-				CC1CE17F230B1CF500FCFFC0 /* Localizable.strings in Resources */,
+				3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */,
 				CC726997233AC613006B61DD /* CountryTableViewCell.xib in Resources */,
 				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
 				CC7269D0233AC614006B61DD /* FavoriteOffersTableViewCell.xib in Resources */,
@@ -1340,8 +1364,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Luzaz/Pods-Luzaz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
+				"${BUILT_PRODUCTS_DIR}/MOLH/MOLH.framework",
 				"${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -1349,8 +1376,11 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MOLH.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpalImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -1544,12 +1574,15 @@
 				CC726964233AC613006B61DD /* TextFieldIcon.swift in Sources */,
 				CC1DA8F6234261D700A0C5D9 /* RoundButton.swift in Sources */,
 				CC726989233AC613006B61DD /* CompetitionInteractor.swift in Sources */,
+				352F8C25238023880047279D /* AlbumImage.swift in Sources */,
+				358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */,
 				CCD9BE3B2339111E002B9201 /* Category.swift in Sources */,
 				CC7269A3233AC613006B61DD /* MyProductCellView.swift in Sources */,
 				CC726958233AC613006B61DD /* UserInteractor.swift in Sources */,
 				CC7269C4233AC614006B61DD /* SellYourItemSecondViewController.swift in Sources */,
 				CC726980233AC613006B61DD /* ConversationTableViewCell.swift in Sources */,
 				CC726995233AC613006B61DD /* CountryCellView.swift in Sources */,
+				35A629F123807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift in Sources */,
 				CC726994233AC613006B61DD /* CountryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1586,10 +1619,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3576F68D2368CD9600E3AB38 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3576F68C2368CD9600E3AB38 /* en */,
+				357A152E236B6BDA008EF2D5 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CC8695C622F4F54B00E9F14D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CC8695C722F4F54B00E9F14D /* Base */,
+				357A152B236B6B5A008EF2D5 /* en */,
+				357A152C236B6BD9008EF2D5 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1598,6 +1642,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CC8695CC22F4F54B00E9F14D /* Base */,
+				357A152D236B6BDA008EF2D5 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1626,6 +1671,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: luzaznj@gmail.com (33TZY734HX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1651,7 +1697,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1693,7 +1739,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1703,10 +1749,15 @@
 			baseConfigurationReference = 100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Luzaz/Luzaz.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Luzaz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.Luzaz;
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaa.Luzaz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -1716,10 +1767,15 @@
 			baseConfigurationReference = FD9E23ED21F7DA46284A61F3 /* Pods-Luzaz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Luzaz/Luzaz.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Luzaz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.Luzaz;
+				PRODUCT_BUNDLE_IDENTIFIER = Luzaa.Luzaz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -1734,7 +1790,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luzaz.app/Luzaz";
 			};
 			name = Debug;
@@ -1749,7 +1805,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luzaz.app/Luzaz";
 			};
 			name = Release;
@@ -1763,7 +1819,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Luzaz;
 			};
 			name = Debug;
@@ -1777,7 +1833,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Luzaz.LuzazUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Luzaz;
 			};
 			name = Release;

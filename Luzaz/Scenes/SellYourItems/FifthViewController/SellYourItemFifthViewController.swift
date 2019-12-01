@@ -9,9 +9,10 @@
 import UIKit
 
 class SellYourItemFifthViewController: UIViewController , SellYourItemView{
-  
+    
+    
     @IBOutlet weak var priceTextView: UITextField!
-
+    
     @IBOutlet weak var discountTextView: UITextField!
     var presenter : SellYourItemPresenter!
     var offerImage : UIImage?
@@ -25,6 +26,16 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     var level : String?
     var long : String?
     var lat : String?
+    var isEditProduct : Bool = false
+    var incomeDiscription :String?
+    var incomeYoutubelink:String?
+    var incomePrice :String?
+    var incomeDiscount:String?
+    var incomeSellerName:String?
+    var incomeSellerPhone:String?
+    var incomeOfferId:String?
+
+    var incomeSellerMail:String?
     var attributeValues : [String]?
     var attributeIds: [String]?
     var offerAlbum = [UIImage]()
@@ -32,12 +43,16 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
         self.hideKeyboardWhenTappedAround()
-
+        
     }
- 
+    
+    @IBAction func backBrnWasPressed(_ sender: Any) {
+          dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextBtnWasPressed(_ sender: Any) {
         if !(priceTextView.text?.isEmpty)! {
-           
+            
             let sellYourItemEndVC = storyboard?.instantiateViewController(withIdentifier:"SellYourItemEndVC")as! SellYourItemEndViewController
             sellYourItemEndVC.brand = brand
             sellYourItemEndVC.category = category
@@ -53,12 +68,21 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
             sellYourItemEndVC.condition = condition
             sellYourItemEndVC.offerDescription = offerDescription
             sellYourItemEndVC.offerAlbum = offerAlbum
+            sellYourItemEndVC.isEditProduct = isEditProduct
+            if isEditProduct{
+                sellYourItemEndVC.incomeSellerPhone = incomeSellerPhone
+                sellYourItemEndVC.incomeSellerName = incomeSellerName
+                sellYourItemEndVC.incomeSellerMail = incomeSellerMail
+                sellYourItemEndVC.isEditProduct = isEditProduct
+
+            }
             if !(attributeIds?.isEmpty)!
             {
                 sellYourItemEndVC.attributeIds = attributeIds
                 sellYourItemEndVC.attributeValues = attributeValues
-               
+                
             }
+            sellYourItemEndVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemEndVC,animated:true,completion: nil)
         }else{
             showError(error: "You Should Enter Price")
@@ -70,5 +94,5 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
     }
-
+    
 }

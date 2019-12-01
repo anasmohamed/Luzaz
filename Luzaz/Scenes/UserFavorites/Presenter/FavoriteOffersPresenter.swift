@@ -22,7 +22,7 @@ class FavoriteOffersPresneter {
     
     func viewDidLoad() {
         
-      
+        
         getFavoriteOffers(token:UserDefaults.standard.string(forKey: "token")!)
         
     }
@@ -43,11 +43,30 @@ class FavoriteOffersPresneter {
         
         
     }
-   
+    
     func getFavoriteOffersCount() -> Int {
         return favoriteOffers.count
     }
-  
+    func getFavoriteOfferID(index:Int)->String
+    {
+        return favoriteOffers[index].offerId ?? ""
+    }
+    func deleteFavoriteOfferFromArray(index: Int)  {
+        favoriteOffers.remove(at: index)
+    }
+    func deleteFavoriteOffer(token:String,offer:String)  {
+        favoriteOffersInteractor.deleteUserFavorite(token: token, offer: offer){
+            [unowned self] (message, error) in
+            
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard message != nil else { return }
+                self.view?.offerDeletedSuccessfuly(message:message ?? "")
+            }
+            
+        }
+    }
     func configure(cell:
         FavoriteOffersCellView, for index: Int) {
         let favoriteOffer = self.favoriteOffers[index]
@@ -64,9 +83,9 @@ class FavoriteOffersPresneter {
         
     }
     
-//    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-//        viewController.offer = sells[index]
-//        
-//    }
-
+    //    func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
+    //        viewController.offer = sells[index]
+    //
+    //    }
+    
 }

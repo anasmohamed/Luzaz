@@ -21,9 +21,12 @@ extension LoginViewController: LoginView {
     func loginSuccess(user:User) {
 //        let homeViewController = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
 //        homeViewController.delegate = ContainerVC()
+        print(user.email)
+        print(user.fullName)
         let homeViewController = ContainerVC()
         let encodeData:Data = NSKeyedArchiver.archivedData(withRootObject: user)
         UserDefaults.standard.set(encodeData, forKey:"user")
+        homeViewController.modalPresentationStyle = .fullScreen
         present(homeViewController, animated: true, completion: nil)
         
      
