@@ -14,6 +14,7 @@ target 'Luzaz' do
   pod 'OpalImagePicker', '~> 1.7.1'
   pod 'MOLH'
   pod 'FSPagerView'
+  pod 'KMPlaceholderTextView', '~> 1.4.0'
 
   pod 'AlamofireImage', '~> 3.5'
 

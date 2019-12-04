@@ -563,7 +563,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-JJ-u7n">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="XE8-ea-7Cd"/>
                                         </constraints>
@@ -814,7 +814,7 @@
         <!--Report View Controller-->
         <scene sceneID="Ccw-cj-IIt">
             <objects>
-                <viewController id="yT6-Iw-uHg" customClass="ReportViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportViewController" id="yT6-Iw-uHg" customClass="ReportViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R1H-OU-wJ6"/>
                         <viewControllerLayoutGuide type="bottom" id="krK-Ys-hkR"/>
@@ -827,40 +827,59 @@
                                 <rect key="frame" x="40" y="174" width="240" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8u5-U9-xQb">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8u5-U9-xQb">
                                         <rect key="frame" x="8" y="8" width="224" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ybX-vw-89x">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ybX-vw-89x" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                         <rect key="frame" x="8" y="50" width="232" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="message"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnB-qo-3uK">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnB-qo-3uK">
                                         <rect key="frame" x="12" y="147" width="217" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6w-rG-gzK">
-                                        <rect key="frame" x="12" y="195" width="102" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Send Report"/>
-                                        <connections>
-                                            <action selector="sendReportBtnWasPressed:" destination="yT6-Iw-uHg" eventType="touchUpInside" id="jXi-CK-AMg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld8-R3-2Rs">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld8-R3-2Rs" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                         <rect key="frame" x="138" y="195" width="94" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Cancel"/>
+                                        <color key="backgroundColor" red="0.75686274509803919" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="cancelBtnWasPressed:" destination="yT6-Iw-uHg" eventType="touchUpInside" id="0Bz-XP-2l9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6w-rG-gzK" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="195" width="102" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.75686274509999996" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Send Report">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendReportBtnWasPressed:" destination="yT6-Iw-uHg" eventType="touchUpInside" id="jXi-CK-AMg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -870,8 +889,11 @@
                         <color key="backgroundColor" white="0.67091181506849318" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="cancelBtn" destination="ld8-R3-2Rs" id="94h-tU-RVl"/>
                         <outlet property="emailTextField" destination="QnB-qo-3uK" id="Mzy-cV-7Ny"/>
                         <outlet property="messageTextView" destination="ybX-vw-89x" id="gsw-65-oNQ"/>
+                        <outlet property="reportBtn" destination="Q6w-rG-gzK" id="Hvg-RY-xXV"/>
+                        <outlet property="reportView" destination="abM-0Y-UoD" id="JPg-Xg-SFq"/>
                         <outlet property="titleTextField" destination="8u5-U9-xQb" id="ltH-56-9Xx"/>
                     </connections>
                 </viewController>
@@ -2741,7 +2763,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="C66-jK-JZ2">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x6M-4H-3M8"/>
                                         </constraints>
@@ -2962,7 +2984,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="TVO-D0-5Rp">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="QI2-pi-Abd"/>
                                         </constraints>
@@ -4615,7 +4637,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-u3-OTM">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x8p-sK-X8b"/>
                                         </constraints>

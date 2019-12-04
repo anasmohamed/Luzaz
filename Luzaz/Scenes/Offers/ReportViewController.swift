@@ -17,6 +17,10 @@ class ReportViewController: UIViewController,OfferDetailesView {
         
     }
     
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    @IBOutlet weak var reportBtn: UIButton!
+    @IBOutlet weak var reportView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var messageTextView: UITextView!
@@ -26,6 +30,10 @@ class ReportViewController: UIViewController,OfferDetailesView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = OfferDetailesPresenter(view :self)
+        reportView.layer.cornerRadius = 10
+        messageTextView.layer.borderWidth = 0.5
+        messageTextView.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
     }
     
@@ -34,7 +42,9 @@ class ReportViewController: UIViewController,OfferDetailesView {
     }
     @IBAction func sendReportBtnWasPressed(_ sender: Any) {
         if !titleTextField.text!.isEmpty && !messageTextView.text.isEmpty && !emailTextField.text!.isEmpty {
-            presenter.addReportOffer(offer:offerId , title: titleTextField.text, message:messageTextView.text, email:emailTextField.text)
+            presenter.addReportOffer(offer:offerId! , title: titleTextField.text!, message:messageTextView.text, email:emailTextField.text!)
+        }else{
+            showError(error: "you should enter title , meeage and email")
         }
     }
     

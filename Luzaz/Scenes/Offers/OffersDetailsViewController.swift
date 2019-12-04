@@ -38,11 +38,11 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         }
         else{
             let album = offer.album[index] as ImagesAlbum
-
+            
             cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(offer.image!)"))
             cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(album.image!)"))
         }
-          return cell    }
+        return cell    }
     
     var offer : Offer!
     @IBOutlet var heartButton: FaveButton?
@@ -77,14 +77,14 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         print("desci\(offer.description!)")
         presenter = OfferDetailesPresenter(view: self)
         print(offer.album)
-//        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
+        //        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
         dateLbl.text = offer.date
         locationLbl.text = offer.governorate
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
-          token =  UserDefaults.standard.string(forKey: "token")!
+            token =  UserDefaults.standard.string(forKey: "token")!
             offerFavotriteBtn.isHidden = false
             
         }
@@ -92,7 +92,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         {
             token = ""
             offerFavotriteBtn.isHidden = false
-
+            
         }
         if offer.contactType == "1"
         {
@@ -101,8 +101,12 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         
         // Do any additional setup after loading the view.
     }
-   
+    
     @IBAction func addReportOfferBtnWasPressed(_ sender: Any) {
+        let reportVC = storyboard?.instantiateViewController(withIdentifier: "ReportViewController") as! ReportViewController
+        reportVC.modalPresentationStyle = .fullScreen
+        reportVC.offerId = offer.offerId
+        self.present(reportVC,animated:true,completion:nil)
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
@@ -132,7 +136,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        contentView.size.height = UIScreen.main.bounds.height+offerDescriptionLabel.frame.height + 100
+        //        contentView.size.height = UIScreen.main.bounds.height+offerDescriptionLabel.frame.height + 100
         sellerNameLbl.text = offer.reseller_name
         
     }
@@ -185,21 +189,21 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBAction func callBtnWasPressed(_ sender: Any) {
         
         print("anas")
-
+        
         makePhoneCall(phoneNumber: offer.reseller_phone!)
     }
-      func makePhoneCall(phoneNumber: String) {
-
-              if let phoneURL = NSURL(string: ("tel//:" + phoneNumber)) {
-
-                  let alert = UIAlertController(title: ("Call " + phoneNumber + "?"), message: nil, preferredStyle: .alert)
-                  alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
-                      UIApplication.shared.open(phoneURL as URL, options: [:], completionHandler: nil)
-                  }))
-
-                  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                  self.present(alert, animated: true, completion: nil)
-              }
-          }
-
+    func makePhoneCall(phoneNumber: String) {
+        
+        if let phoneURL = NSURL(string: ("tel//:" + phoneNumber)) {
+            
+            let alert = UIAlertController(title: ("Call " + phoneNumber + "?"), message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
+                UIApplication.shared.open(phoneURL as URL, options: [:], completionHandler: nil)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
 }
