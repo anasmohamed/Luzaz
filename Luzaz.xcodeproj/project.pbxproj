@@ -14,6 +14,7 @@
 		3581962123572D390029D669 /*  CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */; };
 		35819623235738390029D669 /* LayoutOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35819622235738390029D669 /* LayoutOption.swift */; };
 		358A4DFB235A7B1000ABB014 /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */; };
+		358AA50C23983A6800235FBE /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AA50B23983A6700235FBE /* ReportViewController.swift */; };
 		358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */; };
 		3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
@@ -208,6 +209,7 @@
 		3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CustomCollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
 		35819622235738390029D669 /* LayoutOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOption.swift; sourceTree = "<group>"; };
 		358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
+		358AA50B23983A6700235FBE /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidePanelVC.swift; sourceTree = "<group>"; };
 		3594FCA92385DAA200FEA604 /* Luzaz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luzaz.entitlements; sourceTree = "<group>"; };
 		35A40FDE2356024C004D5619 /* StackViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackground.swift; sourceTree = "<group>"; };
@@ -872,6 +874,7 @@
 				CC72691D233AC613006B61DD /* OffersViewController+PresenterDelagate.swift */,
 				CC72691E233AC613006B61DD /* OffersViewController.swift */,
 				CC72691F233AC613006B61DD /* Presenter */,
+				358AA50B23983A6700235FBE /* ReportViewController.swift */,
 			);
 			path = Offers;
 			sourceTree = "<group>";
@@ -1473,6 +1476,7 @@
 				CC7269A4233AC613006B61DD /* MyProductTableViewCell.swift in Sources */,
 				CC72699F233AC613006B61DD /* OrderTableViewCell.swift in Sources */,
 				CC8695C522F4F54B00E9F14D /* ViewController.swift in Sources */,
+				358AA50C23983A6800235FBE /* ReportViewController.swift in Sources */,
 				CC726960233AC613006B61DD /* RegistrationView.swift in Sources */,
 				CCD9BE5D233930C8002B9201 /* LuzazRouter.swift in Sources */,
 				35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */,
