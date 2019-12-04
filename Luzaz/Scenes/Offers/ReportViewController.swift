@@ -8,20 +8,34 @@
 
 import UIKit
 
-class ReportViewController: UIViewController {
+class ReportViewController: UIViewController,OfferDetailesView {
+    func addProductToFavoriteSuccess(message: String) {
+        
+    }
+    
+    func showError(error: String) {
+        
+    }
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var titleTextField: UITextField!
+    var presenter: OfferDetailesPresenter!
+    var offerId : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter = OfferDetailesPresenter(view :self)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func cancelBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func sendReportBtnWasPressed(_ sender: Any) {
+        if !titleTextField.text!.isEmpty && !messageTextView.text.isEmpty && !emailTextField.text!.isEmpty {
+            presenter.addReportOffer(offer:offerId , title: titleTextField.text, message:messageTextView.text, email:emailTextField.text)
+        }
     }
     
     /*
