@@ -21,7 +21,7 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
         setupTableView()
         presenter = CountryPresenter(view: self)
         presenter.viewDidLoad()
-        
+        tableView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     

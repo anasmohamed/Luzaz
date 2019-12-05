@@ -11,9 +11,10 @@ import MOLH
 class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var isLeftSideController = false
     //var offersViewController : OffersViewController!
+    @IBOutlet weak var langaugeTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        langaugeTableView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     
