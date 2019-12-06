@@ -55,6 +55,8 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     var presenter: OfferDetailesPresenter!
     var token : String?
     
+    @IBOutlet weak var moreFromThisSellerLbl: UILabel!
+    
     
     @IBOutlet weak var offerFavotriteBtn: FaveButton!
     
