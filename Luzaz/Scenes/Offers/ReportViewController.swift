@@ -8,7 +8,27 @@
 
 import UIKit
 
-class ReportViewController: UIViewController,OfferDetailesView {
+class ReportViewController: UIViewController,OfferDetailesView ,MyProductView{
+    func showIndicator() {
+        
+    }
+    
+    func hideIndicator() {
+        
+    }
+    
+    func getMySellingProductsSuccess() {
+        
+    }
+    
+    func getMyOrdersSuccess() {
+        
+    }
+    
+    func offerDeletedSuccessfuly(message: String) {
+        
+    }
+    
     func addProductToFavoriteSuccess(message: String) {
         
     }
@@ -29,7 +49,7 @@ class ReportViewController: UIViewController,OfferDetailesView {
     var offerId : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = OfferDetailesPresenter(view :self)
+        presenter = OfferDetailesPresenter(view :self, productView: self)
         reportView.layer.cornerRadius = 10
         messageTextView.layer.borderWidth = 0.5
         messageTextView.layer.cornerRadius = 10

@@ -9,13 +9,20 @@
 import Foundation
 class OfferDetailesPresenter {
     private weak var view: OfferDetailesView?
+    private weak var productView : MyProductView?
     private let offersInteractor: OffersInteractor
-   
-    init(view: OfferDetailesView?) {
+    private let productInteractopr: MyProductInteractor
+    private var sells: [Offer]?
+    init(view: OfferDetailesView?,productView:MyProductView) {
         self.view = view
+        self.productView = productView
         offersInteractor = OffersInteractor()
-      
+      productInteractopr = MyProductInteractor()
     }
+    
+    func getSellsCount() -> Int {
+           return sells!.count
+         }
     func addReportOffer(offer:String,title:String,message:String,email:String) {
            offersInteractor.addReportOffre(offer: offer, title: title, message: message, email: email) { [unowned self] (message, error) in
                
@@ -28,6 +35,35 @@ class OfferDetailesPresenter {
                }
            }
        }
+    func configure(cell: MyProductCellView, for index: Int) {
+        let sell = sells![index]
+         
+         guard let quntity = sell.price
+             ,let image = sell.image,
+             let title = sell.title,
+             let date = sell.date
+             else { return }
+         cell.displayProductQuntity(quntity: quntity)
+         cell.displayDate(date: date)
+         cell.displayProductImage(image: image)
+         cell.displayProductName(productName: title)
+         
+     }
+    func getMoreFromThisSeller(country:String,user:String)  {
+       productView?.showIndicator()
+        productInteractopr.getUserSelling(countryId:country , userId:user) { [unowned self] (sells, error) in
+            
+            self.productView?.hideIndicator()
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let sells = sells else { return }
+                self.sells = sells
+                self.productView?.getMySellingProductsSuccess()
+            }
+        }
+    }
+   
     func addProductToFavorite(token:String,offerId:String) {
         offersInteractor.addProductToFavorite(token:token,offerId: offerId) { [unowned self] (message, error) in
             

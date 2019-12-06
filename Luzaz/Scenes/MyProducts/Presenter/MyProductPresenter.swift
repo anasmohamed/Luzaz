@@ -78,10 +78,10 @@ class MyProductPresenter {
     func getSellsCount() -> Int {
         return sells.count
     }
+   
     func getOrdersCount() -> Int {
         return orders.count
     }
-    
     func deleteItem(index:Int,selectedSegmentIndex:Int)
     {
         if selectedSegmentIndex == 0

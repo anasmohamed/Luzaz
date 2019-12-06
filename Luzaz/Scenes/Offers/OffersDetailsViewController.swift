@@ -20,7 +20,27 @@ func color(_ rgbColor: Int) -> UIColor{
     )
 }
 
-class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate,FSPagerViewDelegate,FSPagerViewDataSource{
+class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate,FSPagerViewDelegate,FSPagerViewDataSource,MyProductView{
+    func showIndicator() {
+        
+    }
+    
+    func hideIndicator() {
+        
+    }
+    
+    func getMySellingProductsSuccess() {
+        setTableView()
+    }
+    
+    func getMyOrdersSuccess() {
+        
+    }
+    
+    func offerDeletedSuccessfuly(message: String) {
+        
+    }
+    
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         if offer.album.count == 0
         {
@@ -54,7 +74,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     @IBOutlet weak var offerTitleLabel: UILabel!
     var presenter: OfferDetailesPresenter!
     var token : String?
-    
+    var tableView = UITableView()
     @IBOutlet weak var moreFromThisSellerLbl: UILabel!
     
     
@@ -74,20 +94,23 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         super.viewDidLoad()
         self.heartButton?.setSelected(selected: true, animated: false)
         imageLable()
+
         offerImageSlider.delegate = self
         offerImageSlider.dataSource = self
         print("desci\(offer.description!)")
-        presenter = OfferDetailesPresenter(view: self)
+        presenter = OfferDetailesPresenter(view: self,productView: self)
         print(offer.album)
         //        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
         offerDescriptionLabel.text = offer.description!
         dateLbl.text = offer.date
         locationLbl.text = offer.governorate
+
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
             token =  UserDefaults.standard.string(forKey: "token")!
             offerFavotriteBtn.isHidden = false
+            
             
         }
         else
@@ -100,10 +123,27 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         {
             callBtn.isHidden = true
         }
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(moreFromThisSeller))
+        moreFromThisSellerLbl.addGestureRecognizer(tap)
+
         // Do any additional setup after loading the view.
     }
+    @objc func moreFromThisSeller()  {
+        presenter.getMoreFromThisSeller(country:UserDefaults.standard.string(forKey: "country")! , user: offer.reseller_id!)
+        
+
+    }
     
+     func setTableView() {
+         tableView.frame = self.view.frame
+         tableView.backgroundColor = UIColor.clear
+         tableView.delegate = self
+         tableView.dataSource = self
+         tableView.separatorColor = UIColor.clear
+         self.view.addSubview(tableView)
+         
+         tableView.register(UINib(nibName: "MyProductTableViewCell", bundle: nil), forCellReuseIdentifier: "MyProductTableViewCell")
+     }
     @IBAction func addReportOfferBtnWasPressed(_ sender: Any) {
         let reportVC = storyboard?.instantiateViewController(withIdentifier: "ReportViewController") as! ReportViewController
         reportVC.modalPresentationStyle = .fullScreen
@@ -207,5 +247,24 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+}
+extension OffersDetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.getSellsCount()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as? MyProductTableViewCell else {fatalError("Unabel to create cell")}
+       
+        presenter.configure(cell:cell , for:indexPath.row)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     
 }
