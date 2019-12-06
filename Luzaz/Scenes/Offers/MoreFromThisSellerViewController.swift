@@ -14,16 +14,18 @@ class MoreFromThisSellerViewController: UIViewController ,UITableViewDelegate, U
     }
     
     var presenter: OfferDetailesPresenter!
-    
+    var reseller_id:String?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = OfferDetailesPresenter(productView:self)
-        setupTableView()
+      presenter.getMoreFromThisSeller(country:UserDefaults.standard.string(forKey: "country")! , user: reseller_id!)
+        tableView.delegate = self
+                     tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     func setupTableView() {
-        
+       
         tableView.register(UINib(nibName: "MyProductTableViewCell", bundle: nil), forCellReuseIdentifier: "MyProductTableViewCell")
         
     }
@@ -51,6 +53,8 @@ class MoreFromThisSellerViewController: UIViewController ,UITableViewDelegate, U
     }
     
     func getMySellingProductsSuccess() {
+        setupTableView()
+
         tableView.reloadData()
     }
     

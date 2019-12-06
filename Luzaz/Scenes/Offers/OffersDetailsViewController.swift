@@ -111,10 +111,10 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         // Do any additional setup after loading the view.
     }
     @objc func moreFromThisSeller()  {
-        presenter.getMoreFromThisSeller(country:UserDefaults.standard.string(forKey: "country")! , user: offer.reseller_id!)
+        
         let moreFromThisSellerVC = storyboard?.instantiateViewController(withIdentifier: "MoreFromThisSellerViewController") as! MoreFromThisSellerViewController
             moreFromThisSellerVC.modalPresentationStyle = .fullScreen
-          
+        moreFromThisSellerVC.reseller_id = offer.reseller_id
             self.present(moreFromThisSellerVC,animated:true,completion:nil)
 
     }
