@@ -49,7 +49,7 @@ class ReportViewController: UIViewController,OfferDetailesView ,MyProductView{
     var offerId : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = OfferDetailesPresenter(view :self, productView: self)
+        presenter = OfferDetailesPresenter(view :self)
         reportView.layer.cornerRadius = 10
         messageTextView.layer.borderWidth = 0.5
         messageTextView.layer.cornerRadius = 10

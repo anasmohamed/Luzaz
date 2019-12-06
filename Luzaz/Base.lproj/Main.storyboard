@@ -563,7 +563,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-JJ-u7n">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="XE8-ea-7Cd"/>
                                         </constraints>
@@ -1580,6 +1580,68 @@
             </objects>
             <point key="canvasLocation" x="-4610.625" y="633.80281690140851"/>
         </scene>
+        <!--More From This Seller View Controller-->
+        <scene sceneID="lC5-E6-hL8">
+            <objects>
+                <viewController storyboardIdentifier="MoreFromThisSellerViewController" id="1a9-bZ-Spc" customClass="MoreFromThisSellerViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sgs-1Y-GO6"/>
+                        <viewControllerLayoutGuide type="bottom" id="GbA-zf-COu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wvz-XA-3yX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cej-VA-eRp">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjU-P5-qMz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="x3w-XV-1rH">
+                                        <rect key="frame" x="93" y="22" width="134" height="39"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfT-E2-RC0">
+                                        <rect key="frame" x="23" y="30" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="1KX-oX-jmR"/>
+                                            <constraint firstAttribute="width" constant="30" id="p7X-sq-mfC"/>
+                                        </constraints>
+                                        <state key="normal" image="back-arrow"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="0ze-ov-NgA"/>
+                                    <constraint firstItem="mfT-E2-RC0" firstAttribute="top" secondItem="rjU-P5-qMz" secondAttribute="top" constant="30" id="KQQ-Mk-Cyn"/>
+                                    <constraint firstItem="x3w-XV-1rH" firstAttribute="top" secondItem="rjU-P5-qMz" secondAttribute="top" constant="22" id="TuX-j8-9ZX"/>
+                                    <constraint firstItem="x3w-XV-1rH" firstAttribute="leading" secondItem="mfT-E2-RC0" secondAttribute="trailing" constant="40" id="WTR-5K-TKS"/>
+                                    <constraint firstItem="mfT-E2-RC0" firstAttribute="leading" secondItem="rjU-P5-qMz" secondAttribute="leading" constant="23" id="WoA-T2-tVr"/>
+                                    <constraint firstItem="x3w-XV-1rH" firstAttribute="centerX" secondItem="rjU-P5-qMz" secondAttribute="centerX" id="ZeS-yC-aW9"/>
+                                    <constraint firstAttribute="bottom" secondItem="x3w-XV-1rH" secondAttribute="bottom" constant="11" id="ldz-Kp-MVh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rjU-P5-qMz" secondAttribute="trailing" id="BCu-FM-qBN"/>
+                            <constraint firstItem="Cej-VA-eRp" firstAttribute="leading" secondItem="Wvz-XA-3yX" secondAttribute="leading" id="DCT-wY-hLC"/>
+                            <constraint firstItem="Cej-VA-eRp" firstAttribute="top" secondItem="rjU-P5-qMz" secondAttribute="bottom" id="Pcz-nj-Lp7"/>
+                            <constraint firstItem="GbA-zf-COu" firstAttribute="top" secondItem="Cej-VA-eRp" secondAttribute="bottom" id="QPc-0Y-Wip"/>
+                            <constraint firstItem="rjU-P5-qMz" firstAttribute="top" secondItem="Sgs-1Y-GO6" secondAttribute="bottom" id="dqc-VJ-hsS"/>
+                            <constraint firstItem="rjU-P5-qMz" firstAttribute="leading" secondItem="Wvz-XA-3yX" secondAttribute="leading" id="s2v-mm-hk1"/>
+                            <constraint firstAttribute="trailing" secondItem="Cej-VA-eRp" secondAttribute="trailing" id="vtd-xG-Xgl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Cej-VA-eRp" id="zTu-hP-rDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVG-Yy-zJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3641.25" y="626.4084507042254"/>
+        </scene>
         <!--Sub Category Offers View Controller-->
         <scene sceneID="2zz-VD-5gO">
             <objects>
@@ -1859,7 +1921,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TNK-x3-vw3"/>
                                         </constraints>
@@ -2795,7 +2857,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="C66-jK-JZ2">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x6M-4H-3M8"/>
                                         </constraints>

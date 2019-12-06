@@ -13,6 +13,7 @@
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
 		3581962123572D390029D669 /*  CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */; };
 		35819623235738390029D669 /* LayoutOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35819622235738390029D669 /* LayoutOption.swift */; };
+		35823C11239AD8D400879A30 /* MoreFromThisSellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35823C10239AD8D400879A30 /* MoreFromThisSellerViewController.swift */; };
 		358A4DFB235A7B1000ABB014 /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */; };
 		358AA50C23983A6800235FBE /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AA50B23983A6700235FBE /* ReportViewController.swift */; };
 		358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */; };
@@ -208,6 +209,7 @@
 		357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesDetailsViewController.swift; sourceTree = "<group>"; };
 		3581962023572D380029D669 /*  CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CustomCollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
 		35819622235738390029D669 /* LayoutOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOption.swift; sourceTree = "<group>"; };
+		35823C10239AD8D400879A30 /* MoreFromThisSellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreFromThisSellerViewController.swift; sourceTree = "<group>"; };
 		358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
 		358AA50B23983A6700235FBE /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidePanelVC.swift; sourceTree = "<group>"; };
@@ -875,6 +877,7 @@
 				CC72691E233AC613006B61DD /* OffersViewController.swift */,
 				CC72691F233AC613006B61DD /* Presenter */,
 				358AA50B23983A6700235FBE /* ReportViewController.swift */,
+				35823C10239AD8D400879A30 /* MoreFromThisSellerViewController.swift */,
 			);
 			path = Offers;
 			sourceTree = "<group>";
@@ -1498,6 +1501,7 @@
 				CC72698F233AC613006B61DD /* CompetionTableViewCell.swift in Sources */,
 				CC726967233AC613006B61DD /* MainCategoriesInteractor.swift in Sources */,
 				CC726968233AC613006B61DD /* MainCategoriesViewController+PresenterDelegate.swift in Sources */,
+				35823C11239AD8D400879A30 /* MoreFromThisSellerViewController.swift in Sources */,
 				CC7269AF233AC614006B61DD /* OffersPresenter.swift in Sources */,
 				CC86961122F4F61C00E9F14D /* ImageCollectionViewCell.swift in Sources */,
 				CC7269A9233AC614006B61DD /* OffersDetailsViewController.swift in Sources */,

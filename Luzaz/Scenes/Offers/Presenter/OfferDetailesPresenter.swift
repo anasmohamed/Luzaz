@@ -13,13 +13,17 @@ class OfferDetailesPresenter {
     private let offersInteractor: OffersInteractor
     private let productInteractopr: MyProductInteractor
     private var sells: [Offer]?
-    init(view: OfferDetailesView?,productView:MyProductView) {
+    init(view: OfferDetailesView?) {
         self.view = view
-        self.productView = productView
         offersInteractor = OffersInteractor()
-      productInteractopr = MyProductInteractor()
+        productInteractopr = MyProductInteractor()
     }
     
+    init(productView:MyProductView?) {
+        self.productView = productView
+        offersInteractor = OffersInteractor()
+        productInteractopr = MyProductInteractor()
+    }
     func getSellsCount() -> Int {
            return sells!.count
          }

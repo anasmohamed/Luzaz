@@ -20,26 +20,8 @@ func color(_ rgbColor: Int) -> UIColor{
     )
 }
 
-class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate,FSPagerViewDelegate,FSPagerViewDataSource,MyProductView{
-    func showIndicator() {
-        
-    }
-    
-    func hideIndicator() {
-        
-    }
-    
-    func getMySellingProductsSuccess() {
-        setTableView()
-    }
-    
-    func getMyOrdersSuccess() {
-        
-    }
-    
-    func offerDeletedSuccessfuly(message: String) {
-        
-    }
+class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate,FSPagerViewDelegate,FSPagerViewDataSource{
+ 
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         if offer.album.count == 0
@@ -98,7 +80,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerImageSlider.delegate = self
         offerImageSlider.dataSource = self
         print("desci\(offer.description!)")
-        presenter = OfferDetailesPresenter(view: self,productView: self)
+        presenter = OfferDetailesPresenter(view: self)
         print(offer.album)
         //        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), placeholderImage: UIImage(named: "back.png"))
         offerTitleLabel.text = offer.title!
@@ -130,20 +112,14 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     }
     @objc func moreFromThisSeller()  {
         presenter.getMoreFromThisSeller(country:UserDefaults.standard.string(forKey: "country")! , user: offer.reseller_id!)
-        
+        let moreFromThisSellerVC = storyboard?.instantiateViewController(withIdentifier: "MoreFromThisSellerViewController") as! MoreFromThisSellerViewController
+            moreFromThisSellerVC.modalPresentationStyle = .fullScreen
+          
+            self.present(moreFromThisSellerVC,animated:true,completion:nil)
 
     }
     
-     func setTableView() {
-         tableView.frame = self.view.frame
-         tableView.backgroundColor = UIColor.clear
-         tableView.delegate = self
-         tableView.dataSource = self
-         tableView.separatorColor = UIColor.clear
-         self.view.addSubview(tableView)
-         
-         tableView.register(UINib(nibName: "MyProductTableViewCell", bundle: nil), forCellReuseIdentifier: "MyProductTableViewCell")
-     }
+    
     @IBAction func addReportOfferBtnWasPressed(_ sender: Any) {
         let reportVC = storyboard?.instantiateViewController(withIdentifier: "ReportViewController") as! ReportViewController
         reportVC.modalPresentationStyle = .fullScreen
@@ -249,22 +225,4 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     }
     
 }
-extension OffersDetailsViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.getSellsCount()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyProductTableViewCell", for: indexPath) as? MyProductTableViewCell else {fatalError("Unabel to create cell")}
-       
-        presenter.configure(cell:cell , for:indexPath.row)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
-    
-    
-}
+
