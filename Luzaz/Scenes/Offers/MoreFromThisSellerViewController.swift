@@ -44,6 +44,14 @@ class MoreFromThisSellerViewController: UIViewController ,UITableViewDelegate, U
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
+              offersDetailsVC.modalPresentationStyle = .fullScreen
+              presenter.pushToDetails(viewController: offersDetailsVC, indexPath.row)
+              self.present(offersDetailsVC,animated:true,completion:nil)
+
+    }
     func showIndicator() {
         
     }
@@ -67,4 +75,7 @@ class MoreFromThisSellerViewController: UIViewController ,UITableViewDelegate, U
     }
     
     
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

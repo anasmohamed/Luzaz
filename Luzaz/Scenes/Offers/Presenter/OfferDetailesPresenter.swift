@@ -67,7 +67,10 @@ class OfferDetailesPresenter {
             }
         }
     }
-   
+   func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
+    viewController.offer = sells![index]
+         
+     }
     func addProductToFavorite(token:String,offerId:String) {
         offersInteractor.addProductToFavorite(token:token,offerId: offerId) { [unowned self] (message, error) in
             
