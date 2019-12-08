@@ -512,7 +512,7 @@
                                     <constraint firstItem="uaw-lh-kf1" firstAttribute="width" secondItem="p3T-V4-3i3" secondAttribute="width" multiplier="0.8" id="xeQ-L3-aWy"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-iv-JDb">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-iv-JDb" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                 <rect key="frame" x="92" y="468" width="136" height="42"/>
                                 <color key="backgroundColor" red="0.68581420183181763" green="0.16221088171005249" blue="0.15795376896858215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -522,6 +522,11 @@
                                 <state key="normal" title="Next ">
                                     <color key="titleColor" red="0.94334117863815337" green="0.94803288323129054" blue="0.98500951776649748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonWasPressed:" destination="nEo-sv-AK4" eventType="touchUpInside" id="C0U-x7-hlF"/>
                                 </connections>
@@ -529,7 +534,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbf-jh-55a">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo Icon" translatesAutoresizingMaskIntoConstraints="NO" id="916-cU-5QH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo Icon on Footer" translatesAutoresizingMaskIntoConstraints="NO" id="916-cU-5QH">
                                         <rect key="frame" x="5" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="agq-JO-NbC"/>
@@ -542,7 +547,7 @@
                                             <constraint firstAttribute="width" constant="41" id="2t1-Z3-kHc"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="zLW-C1-WfC">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="zLW-C1-WfC">
                                         <rect key="frame" x="104" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3Qt-Jd-MKK"/>
@@ -1934,7 +1939,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TNK-x3-vw3"/>
                                         </constraints>
@@ -2215,7 +2220,7 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2B-ix-RMa">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2B-ix-RMa" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                                 <rect key="frame" x="92" y="378" width="136" height="42"/>
                                                 <color key="backgroundColor" red="0.68581420179999997" green="0.1622108817" blue="0.15795376899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -2226,6 +2231,11 @@
                                                 <state key="normal" title="Next ">
                                                     <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="nextBtnWasPressed:" destination="nrc-ux-lm0" eventType="touchUpInside" id="PS1-KF-tV9"/>
                                                 </connections>
@@ -2312,9 +2322,8 @@
                                             <constraint firstAttribute="width" constant="30" id="Zzm-AF-EFZ"/>
                                             <constraint firstAttribute="height" constant="30" id="bAd-Tu-D1a"/>
                                         </constraints>
-                                        <state key="normal" image="menuSliderBtn"/>
+                                        <state key="normal" image="back-arrow"/>
                                         <connections>
-                                            <action selector="backBtnWasPressed:" destination="Z4o-56-0eC" eventType="touchUpInside" id="Nrp-0E-TvC"/>
                                             <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="Qx2-S3-LAl"/>
                                         </connections>
                                     </button>
@@ -2334,27 +2343,40 @@
                                 <rect key="frame" x="0.0" y="51" width="320" height="517"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-tK-av1">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="8" width="320" height="560"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sX-bZ-Pa7">
-                                                <rect key="frame" x="30" y="261" width="260" height="30"/>
-                                                <color key="backgroundColor" red="0.052483819389999999" green="0.58824852750000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerBtnWasPressed:" destination="Z4o-56-0eC" eventType="touchUpInside" id="jA4-rZ-fZp"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOh-iS-cE7">
-                                                <rect key="frame" x="30" y="207" width="260" height="30"/>
-                                                <color key="backgroundColor" red="0.052483819389999999" green="0.58824852750000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <button opaque="NO" alpha="0.59999999999999998" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sX-bZ-Pa7" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="271" width="260" height="40"/>
+                                                <color key="backgroundColor" red="0.75686274509999996" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Ip2-fn-ggi"/>
+                                                    <constraint firstAttribute="height" constant="40" id="u22-Uf-GGE"/>
                                                 </constraints>
                                                 <state key="normal">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerBtnWasPressed:" destination="Z4o-56-0eC" eventType="touchUpInside" id="jA4-rZ-fZp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOh-iS-cE7" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="207" width="260" height="40"/>
+                                                <color key="backgroundColor" red="0.75686274509999996" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Ip2-fn-ggi"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="answerBtnWasPressed:" destination="Z4o-56-0eC" eventType="touchUpInside" id="rfE-Db-kO8"/>
                                                 </connections>
@@ -2368,12 +2390,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsq-Yz-1Xj">
-                                                <rect key="frame" x="30" y="315" width="260" height="30"/>
-                                                <color key="backgroundColor" red="0.052483819389999999" green="0.58824852750000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <button opaque="NO" alpha="0.5" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsq-Yz-1Xj" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="335" width="260" height="40"/>
+                                                <color key="backgroundColor" red="0.75686274509999996" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="HO5-6U-h2N"/>
+                                                </constraints>
                                                 <state key="normal">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="answerBtnWasPressed:" destination="Z4o-56-0eC" eventType="touchUpInside" id="4Ci-I5-Ft4"/>
                                                 </connections>
@@ -2411,14 +2441,14 @@
                                 <constraints>
                                     <constraint firstItem="Qno-tK-av1" firstAttribute="leading" secondItem="Vsm-3D-Dv2" secondAttribute="leading" id="Ns0-OL-e1h"/>
                                     <constraint firstAttribute="trailing" secondItem="Qno-tK-av1" secondAttribute="trailing" id="Zis-Ly-enX"/>
-                                    <constraint firstAttribute="bottom" secondItem="Qno-tK-av1" secondAttribute="bottom" id="rPi-gB-cSh"/>
-                                    <constraint firstItem="Qno-tK-av1" firstAttribute="top" secondItem="Vsm-3D-Dv2" secondAttribute="top" id="yZ8-TY-9Li"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qno-tK-av1" secondAttribute="bottom" constant="-51" id="rPi-gB-cSh"/>
+                                    <constraint firstItem="Qno-tK-av1" firstAttribute="top" secondItem="Vsm-3D-Dv2" secondAttribute="top" constant="8" id="yZ8-TY-9Li"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qno-tK-av1" firstAttribute="height" secondItem="ZQy-93-DPG" secondAttribute="height" id="8Fb-T9-OxT"/>
+                            <constraint firstItem="Qno-tK-av1" firstAttribute="height" secondItem="ZQy-93-DPG" secondAttribute="height" constant="-8" id="8Fb-T9-OxT"/>
                             <constraint firstItem="Vsm-3D-Dv2" firstAttribute="bottom" secondItem="drc-Oq-Hbj" secondAttribute="top" id="D2p-w0-piG"/>
                             <constraint firstItem="Vsm-3D-Dv2" firstAttribute="centerX" secondItem="3cX-hn-g4D" secondAttribute="centerX" id="FxZ-3K-Tet"/>
                             <constraint firstItem="Qno-tK-av1" firstAttribute="width" secondItem="ZQy-93-DPG" secondAttribute="width" id="J6A-Tw-s88"/>
@@ -2481,7 +2511,7 @@
                                 <color key="textColor" red="0.68581420179999997" green="0.1622108817" blue="0.15795376899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhD-ji-HjJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhD-ji-HjJ" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                 <rect key="frame" x="92" y="468" width="136" height="42"/>
                                 <color key="backgroundColor" red="0.68581420179999997" green="0.1622108817" blue="0.15795376899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -2492,6 +2522,11 @@
                                 <state key="normal" title="Next ">
                                     <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtnWasPressed:" destination="z6w-pi-DUc" eventType="touchUpInside" id="33Q-1f-wCz"/>
                                 </connections>
@@ -2780,7 +2815,7 @@
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="U9R-2J-JS9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6X-Al-7ZW" userLabel="Next">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6X-Al-7ZW" userLabel="Next" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                 <rect key="frame" x="92" y="468" width="136" height="42"/>
                                 <color key="backgroundColor" red="0.68581420179999997" green="0.1622108817" blue="0.15795376899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -2790,6 +2825,11 @@
                                 <state key="normal" title="Next ">
                                     <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextBtnWasPressed:" destination="XYb-ge-qm2" eventType="touchUpInside" id="ZH8-0f-xyb"/>
                                 </connections>
@@ -2854,7 +2894,7 @@
                                             <constraint firstAttribute="width" constant="41" id="vfw-EL-WGR"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="xPL-oY-PPb">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="xPL-oY-PPb">
                                         <rect key="frame" x="104" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ovm-5Q-dmf"/>
@@ -2867,7 +2907,7 @@
                                             <constraint firstAttribute="width" constant="35" id="cvP-nC-Wrp"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="VhX-TG-h7X">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="priceIconClicked" translatesAutoresizingMaskIntoConstraints="NO" id="VhX-TG-h7X">
                                         <rect key="frame" x="192" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="SQg-Ye-eu2"/>
@@ -2986,7 +3026,7 @@
                                     <action selector="backBtnWasPressed:" destination="OIU-46-ISU" eventType="touchUpInside" id="Gap-pc-D0M"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x66-vq-fSM" userLabel="Finish">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x66-vq-fSM" userLabel="Finish" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                 <rect key="frame" x="92" y="468" width="136" height="42"/>
                                 <color key="backgroundColor" red="0.68581420179999997" green="0.1622108817" blue="0.15795376899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -2997,6 +3037,11 @@
                                 <state key="normal" title="Finish ">
                                     <color key="titleColor" red="0.9433411786" green="0.94803288320000001" blue="0.98500951780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="finishBtnWasPressed:" destination="tmU-JU-MDu" eventType="touchUpInside" id="qlB-tx-ogz"/>
                                 </connections>
@@ -3075,7 +3120,7 @@
                                             <constraint firstAttribute="width" constant="41" id="JyW-ta-5mX"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="YGZ-yi-ch2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="YGZ-yi-ch2">
                                         <rect key="frame" x="104" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="0e5-U6-qMV"/>
@@ -3101,7 +3146,7 @@
                                             <constraint firstAttribute="width" constant="35" id="QI2-pi-Abd"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="eY8-my-27F">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finish" translatesAutoresizingMaskIntoConstraints="NO" id="eY8-my-27F">
                                         <rect key="frame" x="285" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kNe-sH-W7d"/>
@@ -4054,7 +4099,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-hp-dpC">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-hp-dpC" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                                 <rect key="frame" x="92" y="324" width="136" height="42"/>
                                                 <color key="backgroundColor" red="0.68581420179999997" green="0.1622108817" blue="0.15795376899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -4066,6 +4111,11 @@
                                                 <state key="normal" title="Next">
                                                     <color key="titleColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="nextBtnWasPressed:" destination="GJz-JW-j9H" eventType="touchUpInside" id="coX-18-HNe"/>
                                                 </connections>
@@ -4757,7 +4807,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-u3-OTM">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x8p-sK-X8b"/>
                                         </constraints>
@@ -5118,6 +5168,7 @@
         <image name="Home Icon" width="66" height="60"/>
         <image name="Logo" width="445" height="106"/>
         <image name="Photo Icon" width="86" height="64"/>
+        <image name="Photo Icon on Footer" width="86" height="64"/>
         <image name="Price Icon active color" width="65" height="66"/>
         <image name="Price Icon on footer" width="65" height="66"/>
         <image name="back-arrow" width="13" height="21"/>
@@ -5125,6 +5176,7 @@
         <image name="catago" width="128" height="128"/>
         <image name="email-icon-1" width="285" height="299"/>
         <image name="favIconClicked" width="67" height="58"/>
+        <image name="finish" width="512" height="512"/>
         <image name="gift_icon" width="128" height="128"/>
         <image name="heart" width="128" height="128"/>
         <image name="menuSliderBtn" width="30" height="24"/>
@@ -5133,6 +5185,7 @@
         <image name="phone-icon" width="24" height="24"/>
         <image name="phone_number" width="512" height="512"/>
         <image name="priceIcon" width="65" height="66"/>
+        <image name="priceIconClicked" width="65" height="66"/>
         <image name="reportIcon" width="59" height="59"/>
         <image name="sellYourAdd3" width="37" height="38"/>
         <image name="userIcon" width="62" height="63"/>
