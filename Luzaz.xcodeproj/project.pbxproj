@@ -18,6 +18,7 @@
 		358AA50C23983A6800235FBE /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AA50B23983A6700235FBE /* ReportViewController.swift */; };
 		358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */; };
 		3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
+		359D0B4F239FD9F200AA4C94 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D0B4E239FD9F200AA4C94 /* ForgetPasswordViewController.swift */; };
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
 		35A629F123807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */; };
 		35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */; };
@@ -214,6 +215,7 @@
 		358AA50B23983A6700235FBE /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidePanelVC.swift; sourceTree = "<group>"; };
 		3594FCA92385DAA200FEA604 /* Luzaz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luzaz.entitlements; sourceTree = "<group>"; };
+		359D0B4E239FD9F200AA4C94 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		35A40FDE2356024C004D5619 /* StackViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackground.swift; sourceTree = "<group>"; };
 		35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectedOfferImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAttributes.swift; sourceTree = "<group>"; };
@@ -1177,6 +1179,7 @@
 				CCE49924233B5B1F0030959D /* Presenter */,
 				CCE4992D233B5F0A0030959D /* ChangePasswordViewController+PresenterDelegate.swift */,
 				CCE49925233B5B430030959D /* ChangePasswordViewController.swift */,
+				359D0B4E239FD9F200AA4C94 /* ForgetPasswordViewController.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -1529,6 +1532,7 @@
 				CC72698D233AC613006B61DD /* QuestionsViewController.swift in Sources */,
 				CC726959233AC613006B61DD /* LoginViewController+PresenterDelegate.swift in Sources */,
 				CC72697F233AC613006B61DD /* ConversationCellView.swift in Sources */,
+				359D0B4F239FD9F200AA4C94 /* ForgetPasswordViewController.swift in Sources */,
 				CC7269B0233AC614006B61DD /* OffersVC+SearchDelegate.swift in Sources */,
 				CC7269C1233AC614006B61DD /* SellYourItemInteractor.swift in Sources */,
 				CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */,

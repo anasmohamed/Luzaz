@@ -821,6 +821,100 @@
             </objects>
             <point key="canvasLocation" x="-5850" y="-1214.7887323943662"/>
         </scene>
+        <!--Forget Password View Controller-->
+        <scene sceneID="Zge-sl-HPn">
+            <objects>
+                <viewController id="Kcd-bN-iIS" customClass="ForgetPasswordViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fcK-me-JCi"/>
+                        <viewControllerLayoutGuide type="bottom" id="ExA-US-pCv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o5E-RR-pWz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqy-Bh-SgY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PUa-Ck-cIa">
+                                        <rect key="frame" x="93" y="22" width="160" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="hZf-pR-J8D"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HF4-Et-54H">
+                                        <rect key="frame" x="23" y="30" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="jiT-eS-4S5"/>
+                                            <constraint firstAttribute="width" constant="30" id="sPV-kG-jid"/>
+                                        </constraints>
+                                        <state key="normal" image="back-arrow"/>
+                                        <connections>
+                                            <action selector="backBtnWasPressed:" destination="gXq-Fe-ZYv" eventType="touchUpInside" id="ndE-CS-ckd"/>
+                                            <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="dkC-x9-5oS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="PUa-Ck-cIa" firstAttribute="top" secondItem="Wqy-Bh-SgY" secondAttribute="top" constant="22" id="BGs-Mi-n8Z"/>
+                                    <constraint firstItem="PUa-Ck-cIa" firstAttribute="leading" secondItem="HF4-Et-54H" secondAttribute="trailing" constant="40" id="IYq-wQ-UUm"/>
+                                    <constraint firstAttribute="height" constant="72" id="XVk-4r-tx1"/>
+                                    <constraint firstAttribute="bottom" secondItem="PUa-Ck-cIa" secondAttribute="bottom" constant="11" id="jdJ-oy-f85"/>
+                                    <constraint firstItem="HF4-Et-54H" firstAttribute="top" secondItem="Wqy-Bh-SgY" secondAttribute="top" constant="30" id="qYB-Vr-N4B"/>
+                                    <constraint firstItem="HF4-Et-54H" firstAttribute="leading" secondItem="Wqy-Bh-SgY" secondAttribute="leading" constant="23" id="u2F-XX-N3D"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8c8-IR-ejv">
+                                <rect key="frame" x="10" y="194" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="a7g-Ch-Uq5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvG-rN-rXf" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                <rect key="frame" x="60" y="264" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.16078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0dN-mP-P1e"/>
+                                    <constraint firstAttribute="height" constant="40" id="5zZ-5V-Fq6"/>
+                                </constraints>
+                                <state key="normal" title="forget password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changePasswordBtnWasPressed:" destination="gXq-Fe-ZYv" eventType="touchUpInside" id="4eA-xn-LNB"/>
+                                    <action selector="forgetPasswordBtnWasPressed:" destination="Kcd-bN-iIS" eventType="touchUpInside" id="Zcx-SV-C6Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WvG-rN-rXf" firstAttribute="centerY" secondItem="o5E-RR-pWz" secondAttribute="centerY" id="73j-xq-0Zv"/>
+                            <constraint firstAttribute="trailing" secondItem="8c8-IR-ejv" secondAttribute="trailing" constant="10" id="Fto-YU-huX"/>
+                            <constraint firstItem="8c8-IR-ejv" firstAttribute="leading" secondItem="o5E-RR-pWz" secondAttribute="leading" constant="10" id="Jt1-ll-eyi"/>
+                            <constraint firstItem="8c8-IR-ejv" firstAttribute="centerX" secondItem="o5E-RR-pWz" secondAttribute="centerX" id="N8j-de-tf0"/>
+                            <constraint firstItem="WvG-rN-rXf" firstAttribute="centerX" secondItem="o5E-RR-pWz" secondAttribute="centerX" id="YWW-Rj-WJy"/>
+                            <constraint firstAttribute="trailing" secondItem="Wqy-Bh-SgY" secondAttribute="trailing" id="ac5-Yq-szM"/>
+                            <constraint firstItem="WvG-rN-rXf" firstAttribute="top" secondItem="8c8-IR-ejv" secondAttribute="bottom" constant="30" id="gaB-a8-YIX"/>
+                            <constraint firstItem="Wqy-Bh-SgY" firstAttribute="top" secondItem="fcK-me-JCi" secondAttribute="bottom" id="h0M-DN-XEY"/>
+                            <constraint firstItem="Wqy-Bh-SgY" firstAttribute="leading" secondItem="o5E-RR-pWz" secondAttribute="leading" id="noI-Gr-vkQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="8c8-IR-ejv" id="R3w-EX-LsC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OS5-rT-6sc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7029.375" y="-215.49295774647888"/>
+        </scene>
         <!--Report View Controller-->
         <scene sceneID="Ccw-cj-IIt">
             <objects>
@@ -3476,13 +3570,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM9-GB-pzR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM9-GB-pzR" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
                                 <rect key="frame" x="60" y="315" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.16078431372549018" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="iVA-SS-jeK"/>
                                     <constraint firstAttribute="height" constant="40" id="oop-Ue-n6E"/>
                                 </constraints>
-                                <state key="normal" title="Change Password"/>
+                                <state key="normal" title="Change Password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="changePasswordBtnWasPressed:" destination="gXq-Fe-ZYv" eventType="touchUpInside" id="np9-X4-jIi"/>
                                 </connections>
