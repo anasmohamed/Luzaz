@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var forgetPasswordLbl: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
         {
         didSet {
