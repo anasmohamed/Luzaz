@@ -53,7 +53,7 @@ struct NetworkingConstants {
     static let deleteOfferAlbumImage = "deleteOfferAlbumImage"
     static let addOfferAlbumImages = "addOfferAlbumImages"
     static let addReportOffer = "addReportOffer"
-
+    static let getResetPasswordTokenByEmail = "getResetPasswordTokenByEmail"
 
     //get offers pramters
     static let country = "country"

@@ -43,10 +43,15 @@ class LoginViewController: UIViewController {
         scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         scroller.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         scroller.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(forgetPasswordWasPressed))
+             forgetPasswordLbl.addGestureRecognizer(tap)
     }
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-    
+    @objc func forgetPasswordWasPressed()
+    {
+        
+    }
     
 }
