@@ -10,22 +10,31 @@ import UIKit
 
 class ForgetPasswordViewController: UIViewController, ChangePasswordView{
     func showIndicator() {
-        
-    }
-    
-    func hideIndicator() {
-        
-    }
-    
-    func changePasswordSuccess(message: String) {
-        
-    }
-    
-    func showError(error: String) {
-        
-    }
-    
+          spinner.startAnimating()
+      }
+      
+      func hideIndicator() {
+          spinner.stopAnimating()
+      }
+      
+      func changePasswordSuccess(message:String) {
+          showError(error:message)
+          let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+          present(loginVC, animated: true, completion: nil)
+      }
+      
+      
+      
+      func showError(error: String) {
+          let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+          
+          let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+          alertController.addAction(action)
+          
+          present(alertController, animated: true, completion: nil)
+      }
 
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     var peresnter : ChangePasswordPresenter?
     override func viewDidLoad() {

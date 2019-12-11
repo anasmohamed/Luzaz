@@ -833,6 +833,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zt4-Qj-jQf">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqy-Bh-SgY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                 <subviews>
@@ -897,6 +900,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="WvG-rN-rXf" firstAttribute="centerY" secondItem="o5E-RR-pWz" secondAttribute="centerY" id="73j-xq-0Zv"/>
+                            <constraint firstItem="zt4-Qj-jQf" firstAttribute="centerY" secondItem="o5E-RR-pWz" secondAttribute="centerY" id="7Pn-gM-vhg"/>
                             <constraint firstAttribute="trailing" secondItem="8c8-IR-ejv" secondAttribute="trailing" constant="10" id="Fto-YU-huX"/>
                             <constraint firstItem="8c8-IR-ejv" firstAttribute="leading" secondItem="o5E-RR-pWz" secondAttribute="leading" constant="10" id="Jt1-ll-eyi"/>
                             <constraint firstItem="8c8-IR-ejv" firstAttribute="centerX" secondItem="o5E-RR-pWz" secondAttribute="centerX" id="N8j-de-tf0"/>
@@ -905,10 +909,12 @@
                             <constraint firstItem="WvG-rN-rXf" firstAttribute="top" secondItem="8c8-IR-ejv" secondAttribute="bottom" constant="30" id="gaB-a8-YIX"/>
                             <constraint firstItem="Wqy-Bh-SgY" firstAttribute="top" secondItem="fcK-me-JCi" secondAttribute="bottom" id="h0M-DN-XEY"/>
                             <constraint firstItem="Wqy-Bh-SgY" firstAttribute="leading" secondItem="o5E-RR-pWz" secondAttribute="leading" id="noI-Gr-vkQ"/>
+                            <constraint firstItem="zt4-Qj-jQf" firstAttribute="centerX" secondItem="o5E-RR-pWz" secondAttribute="centerX" id="rCV-W1-HLo"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="8c8-IR-ejv" id="R3w-EX-LsC"/>
+                        <outlet property="spinner" destination="zt4-Qj-jQf" id="qHf-VB-eZ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OS5-rT-6sc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2038,7 +2044,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TNK-x3-vw3"/>
                                         </constraints>
@@ -2165,19 +2171,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="iKR-fF-mMP">
-                                        <rect key="frame" x="47" y="13" width="37.5" height="24"/>
+                                        <rect key="frame" x="47" y="1" width="37.5" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="bom-xn-gFH">
                                         <rect key="frame" x="94.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-pr-Y5b">
-                                        <rect key="frame" x="141.5" y="13" width="37" height="24"/>
+                                        <rect key="frame" x="141.5" y="1" width="37" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="ZvC-xi-JIl">
                                         <rect key="frame" x="188.5" y="0.0" width="37" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="ZFY-Vv-D9c">
-                                        <rect key="frame" x="235.5" y="13" width="37.5" height="24"/>
+                                        <rect key="frame" x="235.5" y="1" width="37.5" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-mu-By1">
                                         <rect key="frame" x="283" y="0.0" width="37" height="50"/>
