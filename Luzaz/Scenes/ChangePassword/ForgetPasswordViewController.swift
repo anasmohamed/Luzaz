@@ -8,17 +8,41 @@
 
 import UIKit
 
-class ForgetPasswordViewController: ViewController {
+class ForgetPasswordViewController: UIViewController, ChangePasswordView{
+    func showIndicator() {
+        
+    }
+    
+    func hideIndicator() {
+        
+    }
+    
+    func changePasswordSuccess(message: String) {
+        
+    }
+    
+    func showError(error: String) {
+        
+    }
+    
 
     @IBOutlet weak var emailTextField: UITextField!
+    var peresnter : ChangePasswordPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        peresnter = ChangePasswordPresenter(view:self)
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func forgetPasswordBtnWasPressed(_ sender: Any) {
+        if !emailTextField.text!.isEmpty
+        {
+            peresnter?.forgetPassword(email:emailTextField.text!)
+        }else
+        {
+            showError(error: "you should enter your email")
+        }
     }
     /*
     // MARK: - Navigation

@@ -37,5 +37,21 @@ class ChangePasswordPresenter {
         
     }
     
-
+    
+    func forgetPassword(email: String)
+    {
+        view?.showIndicator()
+        changePasswordInteractor?.forgetPassword(email: email) { [unowned self] (message, error) in
+            self.view?.hideIndicator()
+            if let error = error {
+                self.view?.showError(error: error.localizedDescription)
+            } else {
+                guard let message = message else { return }
+                self.message = message
+                self.view?.changePasswordSuccess(message: message)
+            }
+        }
+        
+        
+    }
 }
