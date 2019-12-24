@@ -20,10 +20,19 @@ class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        
+        switch indexPath.row {
+        case 0:
+            MOLH.setLanguageTo("en")
+                  MOLH.reset()
+        case 1:
+            MOLH.setLanguageTo("ar")
+                  MOLH.reset()
+        default:
+            break
+        }
         UserDefaults.standard.set(cell?.textLabel?.text, forKey: "language")
-        MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
-        MOLH.reset()
+        
+      
         if isLeftSideController == false {
             
             let  languageVC = ContainerVC()

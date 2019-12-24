@@ -15,7 +15,11 @@ target 'Luzaz' do
   pod 'MOLH'
   pod 'FSPagerView'
   pod 'KMPlaceholderTextView', '~> 1.4.0'
+  # Add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
 
+  # Add the pod for Firebase Cloud Messaging
+  pod 'Firebase/Messaging'
   pod 'AlamofireImage', '~> 3.5'
 
   target 'LuzazTests' do

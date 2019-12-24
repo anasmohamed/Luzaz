@@ -83,5 +83,9 @@ class ProfileViewController: UIViewController,ProfileView {
  
         }
     }
-
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
