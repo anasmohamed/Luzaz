@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController,ProfileView {
         
     }
     @IBAction func logutBtnWasPressed(_ sender: Any) {
+        
         presenter.logoutUser(user:UserDefaults.standard.string(forKey: "userId")!)
         
     }

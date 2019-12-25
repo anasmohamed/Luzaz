@@ -91,7 +91,7 @@ class SellYourItemInteractor {
             }
             for (albumImage) in album {
                 if  let imageData = albumImage.jpegData(compressionQuality:0.6) {
-                    multipartFormData.append(imageData, withName: "album", fileName: "album.jpeg", mimeType: "image/jpeg")
+                    multipartFormData.append(imageData, withName: "album[]", fileName: "album.jpeg", mimeType: "image/jpeg")
                 }
             }
             

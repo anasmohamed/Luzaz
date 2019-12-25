@@ -71,7 +71,7 @@ class LeftSidePanelVC: UIViewController {
             self.present(competitionVC, animated: true, completion: nil)
         }else{
             appDelegate.MenuContainerVC.toggleLeftPane()
-            showError(error: "you should login")
+            showError(error: "you should login".localiz())
         }
     }
     @IBAction func sellYourItemsWasPressed(_ sender: Any) {
@@ -83,7 +83,7 @@ class LeftSidePanelVC: UIViewController {
         else{
             appDelegate.MenuContainerVC.toggleLeftPane()
             
-            showError(error: "you should login")
+            showError(error: "you should login".localiz())
             
         }
     }
@@ -95,7 +95,7 @@ class LeftSidePanelVC: UIViewController {
         }else
         {            appDelegate.MenuContainerVC.toggleLeftPane()
             
-            showError(error: "you should login")
+            showError(error: "you should login".localiz())
         }
     }
     @IBAction func chatBtnWasPressed(_ sender: Any) {
@@ -107,7 +107,7 @@ class LeftSidePanelVC: UIViewController {
         else{
             appDelegate.MenuContainerVC.toggleLeftPane()
             
-            showError(error: "you should login")
+            showError(error: "you should login".localiz())
         }
     }
     @IBAction func myProductWasPressed(_ sender: Any) {
@@ -119,7 +119,7 @@ class LeftSidePanelVC: UIViewController {
             else{
                 appDelegate.MenuContainerVC.toggleLeftPane()
                 
-                showError(error: "you should login")
+                showError(error: "you should login".localiz())
             }
     }
     @IBAction func categoriesBtnWasPressed(_ sender: Any) {
@@ -149,7 +149,7 @@ class LeftSidePanelVC: UIViewController {
     }
     
     func showError(error: String) {
-        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: error.localiz(), preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
         

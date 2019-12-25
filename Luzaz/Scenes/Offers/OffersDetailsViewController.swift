@@ -110,6 +110,18 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func shareBtnWasPressed(_ sender: Any) {
+        let infoToShare = [offer?.description,offer.image,offer.reseller_name]
+        let activityViewController = UIActivityViewController(activityItems: infoToShare as [Any], applicationActivities: nil)
+              activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+
+              // exclude some activity types from the list (optional)
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+
+              // present the view controller
+              self.present(activityViewController, animated: true, completion: nil)
+    }
     @objc func moreFromThisSeller()  {
         
         let moreFromThisSellerVC = storyboard?.instantiateViewController(withIdentifier: "MoreFromThisSellerViewController") as! MoreFromThisSellerViewController
