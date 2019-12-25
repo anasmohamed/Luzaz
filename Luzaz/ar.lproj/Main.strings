@@ -57,7 +57,7 @@
 "Ae4-nh-Tgg.text" = "Bedrooms";
 
 /* Class = "UILabel"; text = "POST OFFER"; ObjectID = "Aoi-XR-GXM"; */
-"Aoi-XR-GXM.text" = "POST OFFER";
+"Aoi-XR-GXM.text" = "تفاصيل العرض";
 
 /* Class = "UIButton"; normalTitle = "Have Account Login"; ObjectID = "Bdz-Fz-bP1"; */
 "Bdz-Fz-bP1.normalTitle" = "لديك حساب سجل دخول";
@@ -84,7 +84,7 @@
 "FlB-yX-Se7.segmentTitles[0]" = "البيع";
 
 /* Class = "UISegmentedControl"; FlB-yX-Se7.segmentTitles[1] = "Buying"; ObjectID = "FlB-yX-Se7"; */
-"FlB-yX-Se7.segmentTitles[1]" = "الشرا";
+"FlB-yX-Se7.segmentTitles[1]" = "الشراء";
 
 /* Class = "UIButton"; normalTitle = "Next "; ObjectID = "GCh-YC-HrO"; */
 "GCh-YC-HrO.normalTitle" = "التالي";
@@ -102,7 +102,7 @@
 "GPR-74-qan.normalTitle" = "تغير كلمة السر";
 
 /* Class = "UIButton"; normalTitle = "Products"; ObjectID = "GyO-71-WzT"; */
-"GyO-71-WzT.normalTitle" = "Products";
+"GyO-71-WzT.normalTitle" = "المنتجات";
 
 /* Class = "UILabel"; text = "Forget Your Password"; ObjectID = "IA0-1g-7kL"; */
 "IA0-1g-7kL.text" = "نسيت الباسورد";

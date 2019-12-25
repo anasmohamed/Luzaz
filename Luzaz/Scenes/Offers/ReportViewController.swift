@@ -34,7 +34,11 @@ class ReportViewController: UIViewController,OfferDetailesView ,MyProductView{
     }
     
     func showError(error: String) {
+        let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
+        alertController.addAction(action)
         
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBOutlet weak var cancelBtn: UIButton!
@@ -64,7 +68,7 @@ class ReportViewController: UIViewController,OfferDetailesView ,MyProductView{
         if !titleTextField.text!.isEmpty && !messageTextView.text.isEmpty && !emailTextField.text!.isEmpty {
             presenter.addReportOffer(offer:offerId! , title: titleTextField.text!, message:messageTextView.text, email:emailTextField.text!)
         }else{
-            showError(error: "you should enter title , meeage and email")
+            showError(error: "you should enter title , meeage and email".localiz())
         }
     }
     

@@ -171,17 +171,17 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         
     }
     func showError(error: String) {
-        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error".localiz(), message: error, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
         alertController.addAction(action)
         
         present(alertController, animated: true, completion: nil)
     }
     func addProductToFavoriteSuccess(message: String) {
-        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Success".localiz(), message: message, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
         alertController.addAction(action)
         
         present(alertController, animated: true, completion: nil)
@@ -231,7 +231,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
                 UIApplication.shared.open(phoneURL as URL, options: [:], completionHandler: nil)
             }))
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel".localiz(), style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
