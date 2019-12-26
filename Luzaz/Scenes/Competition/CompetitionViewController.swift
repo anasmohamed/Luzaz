@@ -109,8 +109,8 @@ class CompetitionViewController: UIViewController, CompetitionView{
     
     
     func showError(error: String,content : String) {
-         let alert = UIAlertController(title: title, message: content, preferredStyle: .alert)
-                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+        let alert = UIAlertController(title: title!.localiz(), message: content.localiz(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK".localiz(), style: .default, handler: { action in
                      switch action.style{
                      case .default:
                       

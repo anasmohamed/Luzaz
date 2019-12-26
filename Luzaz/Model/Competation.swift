@@ -21,6 +21,8 @@ class Competation {
     var enQuestions : [JSON]?
     var arQuestions: [JSON]?
     var enQuestionsList: [Question]
+    var arQuestionsList : [Question]
+
     init(withJSON data: JSON) {
         self.competitionId = data["id"].stringValue
         self.date = data["date"].stringValue
@@ -33,7 +35,7 @@ class Competation {
         self.arQuestions = questions?["ar"].arrayValue
         
         self.enQuestionsList = [Question]()
-        var arQuestionsList = [Question]()
+        self.arQuestionsList = [Question]()
 
         for question in enQuestions!
         {
