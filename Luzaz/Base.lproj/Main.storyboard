@@ -3705,26 +3705,6 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-fE-CnQ" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
-                                        <rect key="frame" x="137.5" y="392" width="100" height="40"/>
-                                        <color key="backgroundColor" red="0.58824852750000001" green="0.054192789249999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="1hL-cY-PjR"/>
-                                            <constraint firstAttribute="width" constant="100" id="21C-t5-h2a"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="loginBtnWasPressed:" destination="fbp-fG-y5G" eventType="touchUpInside" id="N0U-14-Odp"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Your Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA0-1g-7kL">
                                         <rect key="frame" x="103.5" y="442" width="168" height="21"/>
                                         <constraints>
@@ -3799,6 +3779,26 @@
                                             </mask>
                                         </variation>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-fE-CnQ" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                        <rect key="frame" x="115" y="394" width="144" height="40"/>
+                                        <color key="backgroundColor" red="0.58824852750000001" green="0.054192789249999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1hL-cY-PjR"/>
+                                            <constraint firstAttribute="width" constant="144" id="21C-t5-h2a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginBtnWasPressed:" destination="fbp-fG-y5G" eventType="touchUpInside" id="N0U-14-Odp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -3830,7 +3830,7 @@
                                     <constraint firstItem="SHm-kG-hys" firstAttribute="centerX" secondItem="EUv-KH-97K" secondAttribute="centerX" id="8br-4m-tvI">
                                         <variation key="heightClass=regular-widthClass=regular" constant="-1"/>
                                     </constraint>
-                                    <constraint firstItem="IA0-1g-7kL" firstAttribute="top" secondItem="JIe-fE-CnQ" secondAttribute="bottom" constant="10" id="8eV-em-ZX4"/>
+                                    <constraint firstItem="IA0-1g-7kL" firstAttribute="top" secondItem="JIe-fE-CnQ" secondAttribute="bottom" constant="8" id="8eV-em-ZX4"/>
                                     <constraint firstItem="SHm-kG-hys" firstAttribute="trailing" secondItem="DIx-uh-6E1" secondAttribute="trailing" id="Afp-Jf-sSz"/>
                                     <constraint firstItem="JIe-fE-CnQ" firstAttribute="centerX" secondItem="EUv-KH-97K" secondAttribute="centerX" id="D0A-sM-apr"/>
                                     <constraint firstItem="DIx-uh-6E1" firstAttribute="top" secondItem="SHm-kG-hys" secondAttribute="bottom" constant="8" symbolic="YES" id="Fnp-Eq-FTp">
@@ -3859,7 +3859,7 @@
                                     </constraint>
                                     <constraint firstAttribute="height" constant="510" id="lX2-Qw-smM"/>
                                     <constraint firstItem="qif-6w-54j" firstAttribute="centerX" secondItem="EUv-KH-97K" secondAttribute="centerX" id="m9C-sq-ToT"/>
-                                    <constraint firstItem="JIe-fE-CnQ" firstAttribute="top" secondItem="DIx-uh-6E1" secondAttribute="bottom" constant="20" id="q6P-g7-tbb"/>
+                                    <constraint firstItem="JIe-fE-CnQ" firstAttribute="top" secondItem="DIx-uh-6E1" secondAttribute="bottom" constant="22" id="q6P-g7-tbb"/>
                                     <constraint firstItem="JIe-fE-CnQ" firstAttribute="centerX" secondItem="EUv-KH-97K" secondAttribute="centerX" id="xAg-di-oM1"/>
                                     <constraint firstItem="qif-6w-54j" firstAttribute="top" secondItem="IA0-1g-7kL" secondAttribute="bottom" constant="6" id="ysn-U9-Mfm"/>
                                 </constraints>
@@ -3935,7 +3935,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-6851.25" y="-1213.7323943661972"/>
+            <point key="canvasLocation" x="-6852" y="-1213.9430284857572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ViN-d1-p5j">

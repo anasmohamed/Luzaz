@@ -100,13 +100,13 @@ class UserCompetitionViewController: UIViewController ,CompetitionView{
             questionVC.userEmail = emailTextField.text
             questionVC.userFristName = firstNameTextField.text
             questionVC.userLastName = lastNameTextField.text
-            
+            questionVC.modalPresentationStyle = .fullScreen
             self.present(questionVC, animated: true, completion: nil)
         }else
         {
-            let alertController = UIAlertController(title: "Error", message: "you should enter all data ", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error".localiz(), message: "you should enter all data ".localiz(), preferredStyle: .alert)
                    
-                   let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                   let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
                    alertController.addAction(action)
                    
                    present(alertController, animated: true, completion: nil)

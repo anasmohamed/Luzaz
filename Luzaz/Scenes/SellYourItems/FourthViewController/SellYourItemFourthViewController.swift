@@ -17,7 +17,7 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     @IBOutlet weak var itemDescritionTextField: UITextView!
     @IBOutlet weak var itemTitleTextView: UITextField!
     @IBOutlet weak var conditionList: UIPickerView!
-    var conditionsList = ["New","Used"]
+    var conditionsList = ["New".localiz(),"Used".localiz()]
     var isConditionEnterd = false
     var presenter : SellYourItemPresenter!
     var offerImage : UIImage?
