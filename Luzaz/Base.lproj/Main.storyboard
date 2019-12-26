@@ -3543,10 +3543,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counrtyStackView" destination="bhu-Ur-tTA" id="y18-zx-sms"/>
+                        <outlet property="counrtyVerticalSpace" destination="Ytb-cf-7pc" id="cV3-Px-0RS"/>
                         <outlet property="countryLbl" destination="4Mo-FT-Bct" id="Vz3-7M-Yxo"/>
                         <outlet property="countyImageView" destination="MAC-K5-87g" id="NZv-Eu-51Q"/>
                         <outlet property="emailLbl" destination="3i0-BI-jox" id="ts4-6B-Zg9"/>
+                        <outlet property="emailStackView" destination="rEr-SS-WAf" id="J2I-Sc-wsB"/>
+                        <outlet property="emailVerticalSpace" destination="xJB-H7-bsP" id="tVc-Et-F5T"/>
+                        <outlet property="fullNameStackView" destination="sIz-O5-ahh" id="CFJ-6b-R8R"/>
                         <outlet property="phoneLbl" destination="Re6-r7-Rt1" id="UMG-AH-ZUX"/>
+                        <outlet property="phoneStackView" destination="aiR-Za-9iL" id="RYL-FE-JOC"/>
+                        <outlet property="phoneVerticalConstrain" destination="oRl-V8-DzO" id="ZG2-MQ-qvK"/>
                         <outlet property="userNameLbl" destination="AAg-e9-d2b" id="8Ek-1f-a4p"/>
                     </connections>
                 </viewController>

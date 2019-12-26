@@ -21,6 +21,15 @@ class ProfileViewController: UIViewController,ProfileView {
     var userName : String?
     var email :String?
     var phone :String?
+    
+    @IBOutlet weak var fullNameStackView: UIStackView!
+    @IBOutlet weak var counrtyVerticalSpace: NSLayoutConstraint!
+    @IBOutlet weak var emailVerticalSpace: NSLayoutConstraint!
+    @IBOutlet weak var phoneVerticalConstrain: NSLayoutConstraint!
+    @IBOutlet weak var counrtyStackView: UIStackView!
+    @IBOutlet weak var emailStackView: UIStackView!
+    
+    @IBOutlet weak var phoneStackView: UIStackView!
     var prefs = UserDefaults.standard
     internal func logoutSuccess() {
      prefs.removeObject(forKey:"userId")
@@ -58,12 +67,21 @@ class ProfileViewController: UIViewController,ProfileView {
         phone = UserDefaults.standard.string(forKey: "phone")!
         if email!.isEmpty{
             emailLbl.isHidden = true
+            emailStackView.isHidden = true
+            emailVerticalSpace.isActive = false
+            counrtyVerticalSpace.isActive = false
+            counrtyStackView.topAnchor.constraint(equalTo: phoneStackView.bottomAnchor, constant: 20).isActive = true
         }else{
         emailLbl.text = email
     }
         userNameLbl.text = userName
         if phone!.isEmpty {
             phoneLbl.isHidden = true
+            phoneStackView.isHidden = true
+            phoneVerticalConstrain.isActive = false
+            emailVerticalSpace.isActive = false
+            emailStackView.topAnchor.constraint(equalTo: fullNameStackView.bottomAnchor, constant: 20).isActive = true
+
         }else{
         phoneLbl.text = phone
         }
