@@ -60,6 +60,7 @@ class RightSidePanelVC: UIViewController {
         countryVC.isLeftSideController = true
         countryVC.countryImage = countryImageView
         countryVC.modalPresentationStyle = .fullScreen
+        countryBtn.setTitle(getArbicNameCounty(countryNum: UserDefaults.standard.string(forKey: "country")!), for:.normal)
         self.present(countryVC, animated: true, completion: nil)
     }
     
@@ -168,5 +169,18 @@ class RightSidePanelVC: UIViewController {
             return "libya"
         }
     }
-    
+    func getArbicNameCounty(countryNum : String) -> String {
+           switch countryNum {
+           case "1":
+               return "مصر"
+           case "2":
+               return "الولايات المتحده"
+           case "3":
+               return "الامارات"
+           case "4":
+               return "السعوديه"
+           default:
+               return "ليبيا"
+           }
+       }
 }
