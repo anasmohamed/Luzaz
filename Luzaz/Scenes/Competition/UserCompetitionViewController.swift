@@ -9,6 +9,10 @@
 import UIKit
 import SDWebImage
 class UserCompetitionViewController: UIViewController ,CompetitionView{
+    func displayQuestion(question: String, arQuesetion: String) {
+        
+    }
+    
     func showIndicator() {
         
     }

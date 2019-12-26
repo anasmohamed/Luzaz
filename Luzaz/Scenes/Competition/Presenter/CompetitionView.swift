@@ -15,7 +15,7 @@ protocol CompetitionView:class {
     func displayFirstOption(firstOption: String)
     func displaySecondOption(secondOption: String)
     func displayThreeOption(threeOption: String)
-    func displayQuestion(question: String)
+    func displayQuestion(question: String,arQuesetion:String)
 
     
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 protocol CompetionCellView :class{
-    func displayQuestion(question: String)
+    func displayQuestion(question: String,arQuestion:String)
     func displayFirstAnswer(firstAnswer : String)
     func displaySecondAnswer(secondAnswer : String)
     func displayThirdAnswer(thirdAnswer : String)

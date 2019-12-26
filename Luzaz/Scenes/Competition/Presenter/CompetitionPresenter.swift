@@ -14,12 +14,15 @@ class CompetitionPresenter {
     private var competations: [Competation]
     private var competitonId : String?
     private var qustions : [Question]
+    private var arQustions : [Question]
+
     private var image : String?
     init(view: CompetitionView) {
         self.view = view
         competitionInteractor = CompetitionInteractor()
         competations = [Competation]()
         qustions =  [Question]()
+        arQustions = [Question]()
     }
     
     func viewDidLoad() {
@@ -42,7 +45,7 @@ class CompetitionPresenter {
     }
     func getQuestions() {
         view?.showIndicator()
-        competitionInteractor.getCompetion() { [unowned self] (qustions,competitionId,image, error) in
+        competitionInteractor.getCompetion() { [unowned self] (qustions,arQustions,competitionId,image, error) in
             
             self.view?.hideIndicator()
             if let error = error {
@@ -50,6 +53,7 @@ class CompetitionPresenter {
             } else {
                 guard let qustions = qustions else { return }
                 self.qustions = qustions
+                self.arQustions = arQustions ?? []
                 self.competitonId = competitionId
                 self.image = image
                 self.view?.getCompetitionSuccess()
@@ -74,6 +78,9 @@ class CompetitionPresenter {
     func getQuestions(index : Int) -> String {
         return qustions[index].question!
     }
+    func getArabicQuestions(index : Int) -> String? {
+        return arQustions[index].question ?? ""
+    }
     func getAnswer(index:Int) -> [Answer]
     {
         return qustions[index].answersList
@@ -83,15 +90,16 @@ class CompetitionPresenter {
     }
     func configure(cell: CompetionCellView, for index: Int) {
         let question = qustions[index]
-        let answers = question.answersList
+        let arQuestion = arQustions[index]
+         let answers = question.answersList
         guard let questionText = question.question
-            
+           
             else { return }
         
         cell.displayFirstAnswer(firstAnswer: answers[0].answer!)
         cell.displaySecondAnswer(secondAnswer: answers[1].answer!)
         cell.displayThirdAnswer(thirdAnswer: answers[2].answer!)
-        cell.displayQuestion(question: questionText)
+        cell.displayQuestion(question: questionText,arQuestion: arQuestion.question ?? "")
         
     }
     func getImage() -> String

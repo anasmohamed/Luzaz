@@ -23,14 +23,17 @@ class LanguagesViewController: UIViewController,UITableViewDelegate,UITableViewD
         switch indexPath.row {
         case 0:
             MOLH.setLanguageTo("en")
+            UserDefaults.standard.set("en", forKey: "language")
+
                   MOLH.reset()
         case 1:
             MOLH.setLanguageTo("ar")
+            UserDefaults.standard.set("ar", forKey: "language")
+
                   MOLH.reset()
         default:
             break
         }
-        UserDefaults.standard.set(cell?.textLabel?.text, forKey: "language")
         
       
         if isLeftSideController == false {

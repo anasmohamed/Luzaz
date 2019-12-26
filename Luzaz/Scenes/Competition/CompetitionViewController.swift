@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class CompetitionViewController: UIViewController, CompetitionView{
     @IBOutlet weak var questionLbl: UILabel!
@@ -27,6 +28,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
     var userEmail : String?
     var userFristName : String?
     var userLastName : String?
+    var language : String?
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -35,6 +37,8 @@ class CompetitionViewController: UIViewController, CompetitionView{
         presenter = CompetitionPresenter(view: self)
         answerId = [String]()
         questionId = [String]()
+    
+        language = UserDefaults.standard.string(forKey: "language")
     }
     func displayFirstOption(firstOption: String)
     {
@@ -53,14 +57,26 @@ class CompetitionViewController: UIViewController, CompetitionView{
         optionThreeBtn.setTitle(threeOption, for: UIControl.State.normal)
     }
     
-    func displayQuestion(question: String)
+    func displayQuestion(question: String,arQuesetion :String)
     {
+        if language == "en"
+        {
+        
         questionLbl.text = question
+        }else
+        {
+            if arQuesetion.isEmpty{
+                questionLbl.text = question
+
+            }else{
+                questionLbl.text = arQuesetion
+            }
+        }
     }
     func updateQuestion(){
         if questionCounter < presenter.getQuestionsCount()
         {
-            displayQuestion(question: presenter.getQuestions(index: questionCounter))
+            displayQuestion(question: presenter.getQuestions(index: questionCounter), arQuesetion: presenter.getArabicQuestions(index: questionCounter) ?? "")
             
             displayFirstOption(firstOption:presenter.getAnswer(index: questionCounter)[0].answer!)
             displaySecondOption(secondOption:presenter.getAnswer(index: questionCounter)[1].answer!)
@@ -69,7 +85,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
             questionId.append(presenter.getQuestionId(index: questionCounter))
            // questionId.joined(separator: ",")
         }else{
-            presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:"en",questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName:
+            presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:language!,questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName:
                 
                 userFristName ?? "",lastName: userLastName ?? "",phone: userPhone ?? "",email: userEmail ?? "")
             let offerVC = ContainerVC()
@@ -91,7 +107,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
         
     }
     func getCompetitionSuccess() {
-        displayQuestion(question: presenter.getQuestions(index: questionCounter))
+        displayQuestion(question: presenter.getQuestions(index: questionCounter), arQuesetion: presenter.getArabicQuestions(index: questionCounter) ?? "")
         displayFirstOption(firstOption:presenter.getAnswer(index: questionCounter)[0].answer!)
         displaySecondOption(secondOption:presenter.getAnswer(index: questionCounter)[1].answer!)
      displayThreeOption(threeOption:presenter.getAnswer(index: questionCounter)[2].answer!)
