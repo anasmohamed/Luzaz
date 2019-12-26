@@ -38,6 +38,8 @@ class LoginPresenter {
                     }
                     
                     self.user = user
+                    self.user?.email = email
+                    
                     self.view?.loginSuccess(user: self.user!)
                     
 //                    guard let userId = user.userId,let token = user.token else { return }

@@ -29,6 +29,7 @@ class ProfileViewController: UIViewController,ProfileView {
         prefs.removeObject(forKey:"email")
         prefs.removeObject(forKey:"password")
         let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
         present(loginVC, animated: true, completion: nil)
     }
     func showError(error: String) {
@@ -49,6 +50,8 @@ class ProfileViewController: UIViewController,ProfileView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = ProfilePresenter(view : self)
+       
+        
         counrty = UserDefaults.standard.string(forKey: "country")!
         userName = UserDefaults.standard.string(forKey: "fullName")!
         email = UserDefaults.standard.string(forKey: "email")!
@@ -63,25 +66,27 @@ class ProfileViewController: UIViewController,ProfileView {
         if counrty == "1"{
             
             countyImageView.image = UIImage(named:"egypt")
-        
+            countryLbl.text = "Egypt"
         }else if counrty == "2"
         {
             countyImageView.image = UIImage(named:"united-states-of-america-flag-round-icon-16")
-
+             countryLbl.text = "USA"
         }
         else if counrty == "3"
         {
             countyImageView.image = UIImage(named:"emirates")
-            
+            countryLbl.text = "Emirates"
         }
         else if counrty == "4"
         {
             countyImageView.image = UIImage(named:"saudi_arabia")
-            
+                        countryLbl.text = "SaudiArabia"
+
         }
         else{
             countyImageView.image = UIImage(named:"libya-flag-round-icon-16")
- 
+            countryLbl.text = "Libya"
+
         }
     }
     

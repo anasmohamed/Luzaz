@@ -61,6 +61,7 @@ class LeftSidePanelVC: UIViewController {
         countryVC.isLeftSideController = true
         countryVC.countryImage = countryImageView
         countryVC.modalPresentationStyle = .fullScreen
+        countryBtn.setTitle(getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!), for:.normal)
         self.present(countryVC, animated: true, completion: nil)
     }
     

@@ -91,7 +91,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
             token =  UserDefaults.standard.string(forKey: "token")!
-            offerFavotriteBtn.isHidden = false
+            offerFavotriteBtn.isHidden = true
             
             
         }
