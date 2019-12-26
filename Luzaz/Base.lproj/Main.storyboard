@@ -852,8 +852,7 @@
                                         </constraints>
                                         <state key="normal" image="back-arrow"/>
                                         <connections>
-                                            <action selector="backBtnWasPressed:" destination="gXq-Fe-ZYv" eventType="touchUpInside" id="ndE-CS-ckd"/>
-                                            <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="dkC-x9-5oS"/>
+                                            <action selector="backBtnWasPressed:" destination="Kcd-bN-iIS" eventType="touchUpInside" id="aqM-R0-Mim"/>
                                         </connections>
                                     </button>
                                 </subviews>

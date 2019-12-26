@@ -53,6 +53,9 @@ class ForgetPasswordViewController: UIViewController, ChangePasswordView{
             showError(error: "you should enter your email")
         }
     }
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
