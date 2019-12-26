@@ -99,7 +99,7 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
             
         }
         else{
-            showError(error: "You Should Enter Price")
+            showError(error: "You Should Enter Name ,email and mobile")
         }
         
     }
@@ -119,8 +119,8 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
         //                         self.present(offersVC,animated:true,completion:nil)
         //
         //        })
-        let alert = UIAlertController(title: title, message: content, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+        let alert = UIAlertController(title: title.localiz(), message: content.localiz(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK".localiz(), style: .default, handler: { action in
             switch action.style{
             case .default:
                 
