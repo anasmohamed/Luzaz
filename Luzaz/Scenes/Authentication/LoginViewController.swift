@@ -51,7 +51,9 @@ class LoginViewController: UIViewController {
     }
     @objc func forgetPasswordWasPressed()
     {
-        
+        let forgetPasswordVC = storyboard?.instantiateViewController(withIdentifier: "ForgetPasswordViewController")
+        forgetPasswordVC?.modalPresentationStyle = .fullScreen
+        self.present(forgetPasswordVC!,animated: true,completion: nil)
     }
     
 }
