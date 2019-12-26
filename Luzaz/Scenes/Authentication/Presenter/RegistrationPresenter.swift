@@ -50,6 +50,7 @@ class RegistrationPresenter {
                 if let error = error {
                     self.view?.showError(error: error.localizedDescription)
                 } else {
+                    self.saveUserIntoUserDefaults(user: user)
                     self.view?.registrationSuccess()
                 }
             }
@@ -109,7 +110,16 @@ class RegistrationPresenter {
     private func isValidPassword(password: String) -> Bool {
         return !(password.isEmpty)
     }
-    
+    private func saveUserIntoUserDefaults(user: User) {
+           let userDefaults = UserDefaults.standard
+           
+           userDefaults.set(user.userId, forKey: "userId")
+           userDefaults.set(user.token, forKey: "token")
+           userDefaults.set(user.fullName, forKey:"fullName")
+           userDefaults.set(user.email, forKey: "email")
+           userDefaults.set(user.phoneNumber, forKey: "phone")
+           
+       }
     private func isValidConfrimPassword(password: String, confirmPassword: String) -> Bool {
         return password == confirmPassword
     }

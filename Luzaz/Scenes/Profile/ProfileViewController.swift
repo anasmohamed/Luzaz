@@ -56,9 +56,17 @@ class ProfileViewController: UIViewController,ProfileView {
         userName = UserDefaults.standard.string(forKey: "fullName")!
         email = UserDefaults.standard.string(forKey: "email")!
         phone = UserDefaults.standard.string(forKey: "phone")!
+        if email!.isEmpty{
+            emailLbl.isHidden = true
+        }else{
         emailLbl.text = email
+    }
         userNameLbl.text = userName
+        if phone!.isEmpty {
+            phoneLbl.isHidden = true
+        }else{
         phoneLbl.text = phone
+        }
         getCountryImage()
     }
     func getCountryImage()
@@ -66,26 +74,26 @@ class ProfileViewController: UIViewController,ProfileView {
         if counrty == "1"{
             
             countyImageView.image = UIImage(named:"egypt")
-            countryLbl.text = "Egypt"
+            countryLbl.text = "Egypt".localiz()
         }else if counrty == "2"
         {
             countyImageView.image = UIImage(named:"united-states-of-america-flag-round-icon-16")
-             countryLbl.text = "USA"
+             countryLbl.text = "USA".localiz()
         }
         else if counrty == "3"
         {
             countyImageView.image = UIImage(named:"emirates")
-            countryLbl.text = "Emirates"
+            countryLbl.text = "Emirates".localiz()
         }
         else if counrty == "4"
         {
             countyImageView.image = UIImage(named:"saudi_arabia")
-                        countryLbl.text = "SaudiArabia"
+                        countryLbl.text = "SaudiArabia".localiz()
 
         }
         else{
             countyImageView.image = UIImage(named:"libya-flag-round-icon-16")
-            countryLbl.text = "Libya"
+            countryLbl.text = "Libya".localiz()
 
         }
     }
