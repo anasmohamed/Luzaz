@@ -18,9 +18,9 @@ extension FavoriteOffersViewController : FavoriteOffersView{
     }
     func showALert(message : String,title: String)
       {
-          let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title.localiz(), message: message.localiz(), preferredStyle: .alert)
           
-          let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+          let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
           alertController.addAction(action)
           
           present(alertController, animated: true, completion: nil)
