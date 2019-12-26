@@ -881,7 +881,7 @@
                                     <constraint firstAttribute="width" constant="200" id="0dN-mP-P1e"/>
                                     <constraint firstAttribute="height" constant="40" id="5zZ-5V-Fq6"/>
                                 </constraints>
-                                <state key="normal" title="forget password">
+                                <state key="normal" title="Send Email">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -3589,8 +3589,7 @@
                                         </constraints>
                                         <state key="normal" image="back-arrow"/>
                                         <connections>
-                                            <action selector="backBtnWasPressed:" destination="gXq-Fe-ZYv" eventType="touchUpInside" id="dLy-7h-bgx"/>
-                                            <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="zgW-Ee-IeI"/>
+                                            <action selector="backBtnWasPressed:" destination="gXq-Fe-ZYv" eventType="touchUpInside" id="Y43-tB-G7T"/>
                                         </connections>
                                     </button>
                                 </subviews>

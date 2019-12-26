@@ -61,26 +61,26 @@ class ProfileViewController: UIViewController,ProfileView {
         presenter = ProfilePresenter(view : self)
        
         
-        counrty = UserDefaults.standard.string(forKey: "country")!
-        userName = UserDefaults.standard.string(forKey: "fullName")!
-        email = UserDefaults.standard.string(forKey: "email")!
-        phone = UserDefaults.standard.string(forKey: "phone")!
-        if email!.isEmpty{
-            emailLbl.isHidden = true
-            emailStackView.isHidden = true
-            emailVerticalSpace.isActive = false
-            counrtyVerticalSpace.isActive = false
-            counrtyStackView.topAnchor.constraint(equalTo: phoneStackView.bottomAnchor, constant: 20).isActive = true
+        counrty = UserDefaults.standard.string(forKey: "country") ?? ""
+        userName = UserDefaults.standard.string(forKey: "fullName") ?? ""
+        email = UserDefaults.standard.string(forKey: "email") ?? ""
+        phone = UserDefaults.standard.string(forKey: "phone") ?? ""
+        if email!.isEmpty {
+            //emailLbl.isHidden = true
+            //emailStackView.isHidden = true
+            //emailVerticalSpace.isActive = false
+            //counrtyVerticalSpace.isActive = false
+            //counrtyStackView.topAnchor.constraint(equalTo: phoneStackView.bottomAnchor, constant: 20).isActive = true
         }else{
         emailLbl.text = email
     }
         userNameLbl.text = userName
         if phone!.isEmpty {
-            phoneLbl.isHidden = true
-            phoneStackView.isHidden = true
-            phoneVerticalConstrain.isActive = false
-            emailVerticalSpace.isActive = false
-            emailStackView.topAnchor.constraint(equalTo: fullNameStackView.bottomAnchor, constant: 20).isActive = true
+           // phoneLbl.isHidden = true
+           // phoneStackView.isHidden = true
+            //phoneVerticalConstrain.isActive = false
+//            //emailVerticalSpace.isActive = false
+            //emailStackView.topAnchor.constraint(equalTo: fullNameStackView.bottomAnchor, constant: 20).isActive = true
 
         }else{
         phoneLbl.text = phone
@@ -117,6 +117,7 @@ class ProfileViewController: UIViewController,ProfileView {
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
+        
         dismiss(animated: true, completion: nil)
     }
     
