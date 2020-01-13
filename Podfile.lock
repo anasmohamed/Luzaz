@@ -1,8 +1,5 @@
 PODS:
   - Alamofire (4.8.1)
-  - AlamofireImage (3.5.2):
-    - Alamofire (~> 4.8)
-  - DLRadioButton (1.4.12)
   - FaveButton (3.2.0)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -94,8 +91,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
-  - AlamofireImage (~> 3.5)
-  - DLRadioButton (~> 1.4)
   - FaveButton
   - Firebase/Analytics
   - Firebase/Messaging
@@ -109,8 +104,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AlamofireImage
-    - DLRadioButton
     - FaveButton
     - Firebase
     - FirebaseAnalytics
@@ -135,8 +128,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
-  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
@@ -159,6 +150,6 @@ SPEC CHECKSUMS:
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 003571ff124ec8f424897e92984eaf54be634d15
+PODFILE CHECKSUM: 4e6bbe61f4f3dcf9b528d33da04f15897ee26e17
 
 COCOAPODS: 1.8.4

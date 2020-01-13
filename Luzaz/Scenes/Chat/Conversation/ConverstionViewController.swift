@@ -66,6 +66,10 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
     func moveToBottom()  {
         presenter.moveToBottom(tableView: tableView)
     }
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoversationCell", for: indexPath) as! ConversationTableViewCell

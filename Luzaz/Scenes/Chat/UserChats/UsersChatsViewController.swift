@@ -36,6 +36,7 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
 //        navigationItem.backBarButtonItem = backItem
         let conversationVC = storyboard?.instantiateViewController(withIdentifier: "ConverstionVC") as! ConverstionViewController
         presenter.pushToDetails(viewController: conversationVC, indexPath.row)
+        conversationVC.modalPresentationStyle = .fullScreen
         self.present(conversationVC, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(conversationVC, animated: true)
         
@@ -60,5 +61,8 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
         return 1
     }
     
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }

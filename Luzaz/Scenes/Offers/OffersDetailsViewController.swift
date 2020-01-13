@@ -9,7 +9,6 @@
 import UIKit
 import SDWebImage
 import FaveButton
-import AlamofireImage
 import FSPagerView
 func color(_ rgbColor: Int) -> UIColor{
     return UIColor(

@@ -6,11 +6,10 @@ target 'Luzaz' do
   use_frameworks!
 
   # Pods for Luzaz
-  pod ‘Alamofire’, ‘~>4.0’
+  pod 'Alamofire', '~>4.0'
   pod 'SDWebImage'
   pod 'SwiftyJSON', '3.0.0'
   pod 'FaveButton'
-  pod 'DLRadioButton', '~> 1.4'
   pod 'OpalImagePicker', '~> 1.7.1'
   pod 'MOLH'
   pod 'FSPagerView'
@@ -20,7 +19,6 @@ target 'Luzaz' do
 
   # Add the pod for Firebase Cloud Messaging
   pod 'Firebase/Messaging'
-  pod 'AlamofireImage', '~> 3.5'
 
   target 'LuzazTests' do
     inherit! :search_paths
