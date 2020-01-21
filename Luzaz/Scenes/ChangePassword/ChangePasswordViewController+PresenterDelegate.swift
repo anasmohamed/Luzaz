@@ -27,9 +27,9 @@ extension ChangePasswordViewController : ChangePasswordView
     
     
     func showError(error: String) {
-        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
         alertController.addAction(action)
         
         present(alertController, animated: true, completion: nil)

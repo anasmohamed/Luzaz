@@ -48,7 +48,7 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SubCategoryOfferCell", for: indexPath) as! SubCategoryOffersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubCategoryOffersTableViewCell", for: indexPath) as! SubCategoryOffersTableViewCell
         presenter.configure(cell: cell, for: indexPath.row)
         
         return cell

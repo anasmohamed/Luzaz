@@ -17,7 +17,7 @@ class ChangePasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = ChangePasswordPresenter(view:self)
+       presenter = ChangePasswordPresenter(view:self)
     }
 
     @IBAction func backBtnWasPressed(_ sender: Any) {
