@@ -48,14 +48,14 @@ class RegistrationPresenter {
                 
                 self.view?.hideIndicator()
                 if let error = error {
-                    self.view?.showError(error: error.localizedDescription)
+                    self.view?.showError(error: error.localizedDescription,title: "Error")
                 } else {
                     self.saveUserIntoUserDefaults(user: user)
-                    self.view?.registrationSuccess()
+                    self.view?.registrationSuccess(message: message ?? "")
                 }
             }
         } else {
-            view?.showError(error: "Invalid Credentials")
+            view?.showError(error: "Invalid Credentials",title: "Error")
         }
     }
     

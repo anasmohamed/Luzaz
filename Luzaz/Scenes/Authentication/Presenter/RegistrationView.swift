@@ -10,6 +10,6 @@ import Foundation
 protocol RegistrationView: class {
     func showIndicator()
     func hideIndicator()
-    func registrationSuccess()
-    func showError(error: String)
+    func registrationSuccess(message:String)
+    func showError(error: String,title:String)
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C56528155AF5CA19D92F859 /* Pods_LuzazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D247A977BEF427E2F2481396 /* Pods_LuzazTests.framework */; };
 		35058A4C23B247A00008AB01 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058A4B23B247A00008AB01 /* Localization.swift */; };
+		350AD39523DC4836009DA335 /* StringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AD39423DC4836009DA335 /* StringError.swift */; };
 		352F8C25238023880047279D /* AlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F8C24238023880047279D /* AlbumImage.swift */; };
 		3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3576F68D2368CD9600E3AB38 /* Localizable.strings */; };
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
@@ -203,6 +204,7 @@
 /* Begin PBXFileReference section */
 		100670FC2F7EE42B7821D67F /* Pods-Luzaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luzaz.debug.xcconfig"; path = "Target Support Files/Pods-Luzaz/Pods-Luzaz.debug.xcconfig"; sourceTree = "<group>"; };
 		35058A4B23B247A00008AB01 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		350AD39423DC4836009DA335 /* StringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringError.swift; sourceTree = "<group>"; };
 		352F8C24238023880047279D /* AlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImage.swift; sourceTree = "<group>"; };
 		3576F68C2368CD9600E3AB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		357A152C236B6BD9008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -1116,6 +1118,7 @@
 				CC98EF4B2327F50300BB750F /* UIViewController+HideKeyboardDelagate.swift */,
 				CCCD733C23315B97005823D6 /* FavImage.swift */,
 				CC1DA8F5234261D700A0C5D9 /* RoundButton.swift */,
+				350AD39423DC4836009DA335 /* StringError.swift */,
 			);
 			path = Luzaz;
 			sourceTree = "<group>";
@@ -1501,6 +1504,7 @@
 				CC72696D233AC613006B61DD /* SubCategoriesInteractor.swift in Sources */,
 				CC72696C233AC613006B61DD /* MainCategoriesView.swift in Sources */,
 				CC72696F233AC613006B61DD /* SubCategoriesView.swift in Sources */,
+				350AD39523DC4836009DA335 /* StringError.swift in Sources */,
 				35058A4C23B247A00008AB01 /* Localization.swift in Sources */,
 				CC72698F233AC613006B61DD /* CompetionTableViewCell.swift in Sources */,
 				CC726967233AC613006B61DD /* MainCategoriesInteractor.swift in Sources */,
@@ -1766,7 +1770,7 @@
 				CODE_SIGN_ENTITLEMENTS = Luzaz/Luzaz.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 5SKBXMQNXT;
 				INFOPLIST_FILE = Luzaz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1786,7 +1790,7 @@
 				CODE_SIGN_ENTITLEMENTS = Luzaz/Luzaz.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 5SKBXMQNXT;
 				INFOPLIST_FILE = Luzaz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -111,11 +111,11 @@ class UserInteractor {
                 print(json)
                 
                 if json["code"].stringValue == "1" {
-                    completionHandler(nil, nil)
+                    completionHandler(nil,json["description"].stringValue.errorDescription)
                 } else {
                     let jsonUser = json["data"].object
                     print(jsonUser)}
-                completionHandler("",nil)
+                completionHandler(json["description"].stringValue,nil)
             case .failure(let error):
                 completionHandler("",error)
             }

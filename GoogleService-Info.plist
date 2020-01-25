@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>727471874453-eqtrhjd3govdr9pi49a1rf5r4i6kdl3s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.727471874453-eqtrhjd3govdr9pi49a1rf5r4i6kdl3s</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBMrXyidxnx5Z6W23MkF0Fay8GTwA07ozA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>727471874453</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Luzaz.uslivenet</string>
+	<key>PROJECT_ID</key>
+	<string>luzaz-e0094</string>
+	<key>STORAGE_BUCKET</key>
+	<string>luzaz-e0094.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:727471874453:ios:fe209bef1d9e2d4fd0569c</string>
+	<key>DATABASE_URL</key>
+	<string>https://luzaz-e0094.firebaseio.com</string>
+</dict>
+</plist>
