@@ -26,7 +26,6 @@ class RegistrationPresenter {
                   confirmPassword: String) {
         
         if !isEmpty(string: fullName),
-           
             !isEmpty(string: password),
             !isEmpty(string: confirmPassword),
             isValidEmailAddress(emailAddressString: email),

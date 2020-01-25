@@ -51,4 +51,6 @@
 
 "should enter password and comfirm password" = "يجب ان تدخل كلمة السر وتاكيد كلمه السر";
 
-"You Should Give Permission" = "يجب ان تعطيني الاذن لفتح الاستوديو";
+"You Should Give Permission" = "يجب ان تعطي التطبيق الاذن لفتح الاستوديو";
+
+"Invalid Credentials" = "هناك بيانات غير صحيحة";
