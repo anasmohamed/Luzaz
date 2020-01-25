@@ -9,7 +9,7 @@
 import UIKit
 import OpalImagePicker
 import SDWebImage
-
+import Photos
 protocol ImageDeletable {
    func deleteImage(imageId: String)
 }
@@ -183,7 +183,17 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         
     }
     @IBAction func selectPhotoBtnWasPressed(_ sender: Any) {
-        present(imagePicker, animated: true, completion: nil)
+       let status =  PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            present(imagePicker, animated: true, completion: nil)
+
+        case .denied:
+             showError(error :"You Should Give Permission")
+
+        default:
+            break
+        }
         
     }
     func showError(error : String)

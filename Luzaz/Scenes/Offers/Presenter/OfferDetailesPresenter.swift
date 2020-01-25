@@ -25,8 +25,11 @@ class OfferDetailesPresenter {
         productInteractopr = MyProductInteractor()
     }
     func getSellsCount() -> Int {
-           return sells!.count
-         }
+        guard let sellsCount = sells?.count else{
+           return 0
+        }
+        return sellsCount
+    }
     func addReportOffer(offer:String,title:String,message:String,email:String) {
            offersInteractor.addReportOffre(offer: offer, title: title, message: message, email: email) { [unowned self] (message, error) in
                
