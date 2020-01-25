@@ -24,14 +24,13 @@ extension RegisterViewController: RegistrationView {
         showError(error: message,title : "Success")
         UserDefaults.standard.set(userNameTextField.text, forKey: "fullName")
       
-       // dismiss(animated: true, completion: nil)
     }
     
     func showError(error: String,title :String) {
         let alertController = UIAlertController(title: title.localiz(), message: error.localiz(), preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK".localiz(), style: .default){
-             dismiss(animated: true, completion: nil)
+        let action = UIAlertAction(title: "OK".localiz(), style: .default){ UIAlertAction in
+            self.dismiss(animated: true, completion: nil)
 
         }
         alertController.addAction(action)

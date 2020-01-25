@@ -13,7 +13,7 @@ import SDWebImage
 protocol ImageDeletable {
    func deleteImage(imageId: String)
 }
-class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,SellYourItemFirstView,OpalImagePickerControllerDelegate{
+class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,SellYourItemFirstView,OpalImagePickerControllerDelegate,UIImagePickerControllerDelegate{
     
     @IBOutlet weak var sellectdOfferImagesCollectionView: UICollectionView!
     internal func showIndicator() {
@@ -56,6 +56,13 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var token : String?
     let lblNew = UILabel()
 
+    @IBAction func takePhotoBtnWasPressed(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
+    }
     @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,6 +165,17 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         imagePicker.dismiss(animated: true, completion: nil)
         }
         
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+
+        guard let image = info[.editedImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+
+        // print out the image size as a test
+        print(image.size)
     }
     func imagePickerDidCancel(_ picker: OpalImagePickerController)
     {
