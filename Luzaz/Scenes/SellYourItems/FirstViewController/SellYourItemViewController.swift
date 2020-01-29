@@ -188,14 +188,22 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         case .authorized:
             present(imagePicker, animated: true, completion: nil)
 
-        case .denied:
-             showError(error :"You Should Give Permission")
+        case .denied,.restricted,.notDetermined:
+            PHPhotoLibrary.requestAuthorization{status in
+             switch status {
+                          case .authorized:
+                            self.present(self.imagePicker, animated: true, completion: nil)
 
-        default:
-            break
+             case .denied, .restricted,.notDetermined:
+                DispatchQueue.main.async {
+                    self.alertToEncouragePhotoLibraryAccessWhenApplicationStarts()
+
+                }
+            }
+
         }
         
-    }
+        }}
     func showError(error : String)
     {
         let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)
@@ -206,7 +214,22 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         present(alertController, animated: true, completion: nil)
     }
     
-    
+    func alertToEncouragePhotoLibraryAccessWhenApplicationStarts()
+    {
+        //Photo Library not available - Alert
+        let cameraUnavailableAlertController = UIAlertController (title: "Photo Library Unavailable", message: "Please check to see if device settings doesn't allow photo library access", preferredStyle: .alert)
+
+        let settingsAction = UIAlertAction(title: "Settings", style: .destructive) { (_) -> Void in
+            let settingsUrl = NSURL(string:UIApplication.openSettingsURLString)
+            if let url = settingsUrl {
+                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        cameraUnavailableAlertController .addAction(settingsAction)
+        cameraUnavailableAlertController .addAction(cancelAction)
+        self.present(cameraUnavailableAlertController , animated: true, completion: nil)
+    }
 
     // Add text to image
     func textToImage(drawText text: NSString, atPoint point: CGPoint) {
