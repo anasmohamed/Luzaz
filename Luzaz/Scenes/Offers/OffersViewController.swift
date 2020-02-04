@@ -22,31 +22,34 @@ UISearchBarDelegate,UISearchControllerDelegate{
         }
     }
     var language : String?
+    var countryId : String?
+     var pageNumber = 0;
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        countryId = UserDefaults.standard.string(forKey: "country")!
         presenter = OffersPresenter(view: self)
         searchBar.delegate = self
-        setupLayout(with: view.bounds.size)
+       setupLayout(with: view.bounds.size)
         self.hideKeyboardWhenTappedAround()
         language = MOLHLanguage.currentAppleLanguage()
-        
+       
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         if UIDevice.current.orientation.isLandscape {
             self.layoutOption = .smallGrid
-            
+
         } else {
             self.layoutOption = .largeGrid
-            
+
         }
         setupLayout(with: size)
     }
+ 
     
-    
-    
+ 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         setupLayout(with: view.bounds.size)
@@ -55,36 +58,34 @@ UISearchBarDelegate,UISearchControllerDelegate{
         guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
             return
         }
-        
+
         switch layoutOption {
-            
-            
+
+
         case .largeGrid, .smallGrid:
             let minItemWidth: CGFloat
             if layoutOption == .smallGrid {
-                minItemWidth = 120
+                minItemWidth = 50
             } else {
-                minItemWidth = 160
+                minItemWidth = 100
             }
-            
+
             let numberOfCell = containerSize.width / minItemWidth
             let width = floor((numberOfCell / floor(numberOfCell)) * minItemWidth)
-            let height = ceil(width * (4.0 / 3.0))
-            
+            let height = ceil(width * 10)
             flowLayout.minimumInteritemSpacing = 10
             flowLayout.minimumLineSpacing = 10
             flowLayout.itemSize = CGSize(width: width, height: height)
             flowLayout.sectionInset = .zero
         }
-        
+
         collectionView.reloadData()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.viewDidLoad()
+        presenter.viewDidLoad(countryId: countryId ?? "1", page: String(pageNumber))
     }
-    
-    
+
     func setupCollectionView() {
         collectionView.register(UINib(nibName: "OffersCell", bundle: nil), forCellWithReuseIdentifier: "OffersCell")
         
@@ -97,6 +98,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         }
         else
         {
+           
             return presenter.getOffersCount()
             
         }
@@ -122,13 +124,13 @@ UISearchBarDelegate,UISearchControllerDelegate{
         }
         
     }
-    
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //        let cellsAcross: CGFloat = 2
-    //        let spaceBetweenCells: CGFloat = 1
-    //        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-    //        return CGSize(width: dim, height: dim)
-    //    }
+   
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let cellsAcross: CGFloat = 3
+            let spaceBetweenCells: CGFloat = 10
+            let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
+            return CGSize(width: dim, height: 300)
+        }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
@@ -137,6 +139,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         self.present(offersDetailsVC,animated:true,completion:nil)
         
     }
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         collectionView.reloadData()
     }
@@ -153,3 +156,4 @@ UISearchBarDelegate,UISearchControllerDelegate{
         delegate?.togglePane()
     }
 }
+

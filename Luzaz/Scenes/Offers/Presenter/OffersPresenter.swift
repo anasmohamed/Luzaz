@@ -22,16 +22,16 @@ class OffersPresenter{
         filteredOffers = offers
     }
 
-    func viewDidLoad() {
+    func viewDidLoad(countryId:String,page:String) {
         
 //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
-            getOffers(countryId: UserDefaults.standard.string(forKey: "country")!)
+        getOffers(countryId:countryId ,page:page)
 // )
     }
     
-    func getOffers(countryId: String) {
+    func getOffers(countryId: String,page:String) {
         view?.showIndicator()
-        offersInteractor.getOffers(countryId: countryId) { [unowned self] (offers, error) in
+        offersInteractor.getOffers(countryId: countryId,page: page) { [unowned self] (offers, error) in
             
             self.view?.hideIndicator()
             if let error = error {

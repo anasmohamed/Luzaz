@@ -14,7 +14,9 @@ class OffersCell: UICollectionViewCell,OffersCellView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 10 //customize yourself
-        self.layer.masksToBounds = true
+        self.layoutMargins.top = 10
+        self.layoutMargins.bottom = 100
+        //self.layer.masksToBounds = true
         // Initialization code
     }
     func displayOfferImage(offerImage: String) {

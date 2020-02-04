@@ -58,6 +58,7 @@ struct NetworkingConstants {
     //get offers pramters
     static let country = "country"
     static let nopaging = "nopaging"
+    static let page = "page"
     static let title = "title"
     static let description = "description"
     static let price = "price"

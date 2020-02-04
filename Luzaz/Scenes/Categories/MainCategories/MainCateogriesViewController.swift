@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UISearchBarDelegate ,UISearchControllerDelegate{
+class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UISearchBarDelegate ,UISearchControllerDelegate,UICollectionViewDelegateFlowLayout{
     
     
     
@@ -34,8 +34,12 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
         super.viewWillAppear(animated)
         presenter.viewDidLoad()
     }
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
     func setupCollectionView() {
         collectionView.register(UINib(nibName: "MainCateoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainCateoriesCollectionViewCell")
         
@@ -72,7 +76,7 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellsAcross: CGFloat = 2
-        let spaceBetweenCells: CGFloat = 1
+        let spaceBetweenCells: CGFloat = 10
         let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
         return CGSize(width: dim, height: dim)
     }

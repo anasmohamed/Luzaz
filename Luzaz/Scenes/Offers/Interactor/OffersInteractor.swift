@@ -13,9 +13,9 @@ import SwiftyJSON
 class OffersInteractor {
     
     
-    func getOffers(countryId: String,
+    func getOffers(countryId: String,page:String,
                    completionHandler: @escaping ([Offer]?, Error?) -> Void) {
-        Alamofire.request(LuzazRouter.getOffers(country: countryId)).responseJSON {(response) in
+        Alamofire.request(LuzazRouter.getOffers(country: countryId,page:page)).responseJSON {(response) in
             
             if let response = response.data {
                 print("Response Data: \(response)")
@@ -66,7 +66,7 @@ class OffersInteractor {
         }
     }
     func getMoreFromThisSeller(id : String,completionHandler :@escaping ([Offer]?, Error?) -> Void)  {
-        Alamofire.request(LuzazRouter.getOffers(country: id)).responseJSON {(response) in
+        Alamofire.request(LuzazRouter.getMoreFromThisSeller(country: id)).responseJSON {(response) in
                    
                               if let response = response.data {
                                   print("Response Data: \(response)")
