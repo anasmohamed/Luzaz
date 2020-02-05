@@ -38,10 +38,11 @@ class OffersPresenter{
                 self.view?.showError(error: error.localizedDescription)
             } else {
                 guard let offers = offers else { return }
-                self.offers = offers
+                if offers.count != 0{
+                self.offers += offers
                 self.filteredOffers = offers
                 self.view?.getOffersSuccess()
-            }
+                }}
         }
     }
     func getOffersCount() -> Int {

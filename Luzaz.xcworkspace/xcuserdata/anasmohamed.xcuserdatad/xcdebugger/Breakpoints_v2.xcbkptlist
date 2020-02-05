@@ -70,17 +70,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D965764-D1E6-4AFF-9C97-E7DE2610873F"
+            uuid = "93913707-0CE9-46A9-A228-9809D9B78DFB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Luzaz/Scenes/Offers/Presenter/OffersPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getOffers(countryId:page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D2344D6-48D7-474B-B4BE-819736CC1F79"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Luzaz/Scenes/Offers/Interactor/OffersInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "getOffers(countryId:page:completionHandler:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D2344D6-48D7-474B-B4BE-819736CC1F79 - a9e4409c2c591b65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Luzaz.OffersInteractor.getOffers(countryId: Swift.String, page: Swift.String, completionHandler: (Swift.Optional&lt;Swift.Array&lt;Luzaz.Offer&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Luzaz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anasmohamed/Desktop/Luzaz/Luzaz/Scenes/Offers/Interactor/OffersInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "8207">
+               </Location>
+               <Location
+                  uuid = "7D2344D6-48D7-474B-B4BE-819736CC1F79 - 792e09b7aaabd486"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;__C.NSURLSessionDataTask&gt;, Swift.Array&lt;__C.NSURLSessionUploadTask&gt;, Swift.Array&lt;__C.NSURLSessionDownloadTask&gt;) -&gt; () in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Luzaz.OffersInteractor.getOffers(countryId: Swift.String, page: Swift.String, completionHandler: (Swift.Optional&lt;Swift.Array&lt;Luzaz.Offer&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Luzaz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anasmohamed/Desktop/Luzaz/Luzaz/Scenes/Offers/Interactor/OffersInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "7D2344D6-48D7-474B-B4BE-819736CC1F79 - 64404d7de3b1775d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSURLSessionDataTask) -&gt; () in closure #1 (Swift.Array&lt;__C.NSURLSessionDataTask&gt;, Swift.Array&lt;__C.NSURLSessionUploadTask&gt;, Swift.Array&lt;__C.NSURLSessionDownloadTask&gt;) -&gt; () in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Luzaz.OffersInteractor.getOffers(countryId: Swift.String, page: Swift.String, completionHandler: (Swift.Optional&lt;Swift.Array&lt;Luzaz.Offer&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Luzaz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anasmohamed/Desktop/Luzaz/Luzaz/Scenes/Offers/Interactor/OffersInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
