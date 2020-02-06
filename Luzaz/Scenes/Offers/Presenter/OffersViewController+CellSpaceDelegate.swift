@@ -14,17 +14,13 @@ extension OffersViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if (indexPath.row == presenter.getOffersCount() - 1 ) { //it's your last cell
+        if (indexPath.row == presenter.getOffersCount() - 1 &&  !presenter.isOfferEmpty) { //it's your last cell
             pageNumber += 1
-            presenter.getOffers(countryId:countryId ?? "1" ,page: String(1000000000))
-           DispatchQueue.global().async {
-                           // Fake background loading task for 2 seconds
-                           sleep(2)
-                           // Download more data here
+            presenter.getOffers(countryId:countryId ?? "1" ,page: String(pageNumber))
                            DispatchQueue.main.async {
                                self.collectionView.reloadData()
                            }
-                       }
+                       
          }
     }
     

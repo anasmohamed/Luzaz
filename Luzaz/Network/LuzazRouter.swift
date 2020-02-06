@@ -264,7 +264,6 @@ enum LuzazRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: baseURL.appendingPathComponent(path))
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = httpHeaders
-        
         switch self {
         case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer,.deleteOfferAlbumImage,.addReportOffer,.getResetPasswordTokenByEmail,.getMoreFromThisSeller:
             

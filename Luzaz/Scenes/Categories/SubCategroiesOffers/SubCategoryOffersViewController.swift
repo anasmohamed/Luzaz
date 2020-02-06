@@ -32,9 +32,10 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserDefaults.standard.set(indexPath.row + 1 , forKey: "country")
-        
-        let languageVC = storyboard?.instantiateViewController(withIdentifier: "LangaugesVC") as! LanguagesViewController
-        self.present(languageVC, animated: true, completion: nil)
+         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
+               offersDetailsVC.modalPresentationStyle = .fullScreen
+               presenter.pushToDetails(viewController: offersDetailsVC, indexPath.row)
+               self.present(offersDetailsVC,animated:true,completion:nil)
         
         
         

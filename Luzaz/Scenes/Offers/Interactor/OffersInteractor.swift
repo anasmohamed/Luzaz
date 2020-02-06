@@ -53,7 +53,7 @@ class OffersInteractor {
                 print(json)
                 var offersList = [Offer]()
                 let offers = json["data"].arrayValue
-                if json["data"] != "null" {
+                if json["data"].arrayValue.count != 0{
                     for offer in offers
                     {
                         let data = Offer(withJSON: offer)
@@ -63,14 +63,9 @@ class OffersInteractor {
                     completionHandler(offersList, nil)
                     
                 }else{
-                    let sessionManager = Alamofire.SessionManager.default
-                    sessionManager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in dataTasks.forEach { $0.cancel()
-                        
-                        }
-                        uploadTasks.forEach { $0.cancel() }
-                        downloadTasks.forEach { $0.cancel() }
-                        
-                    }
+                   
+                   completionHandler(nil, nil)
+
                 }
             case .failure(let error):
                 completionHandler(nil, error)

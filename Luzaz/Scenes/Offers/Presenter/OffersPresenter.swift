@@ -15,6 +15,7 @@ class OffersPresenter{
     private var offer: Offer?
     private var offers: [Offer]
     private var filteredOffers : [Offer]
+    public var isOfferEmpty : Bool = false
     init(view: OffersView) {
         self.view = view
         offersInteractor = OffersInteractor()
@@ -37,12 +38,16 @@ class OffersPresenter{
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-                guard let offers = offers else { return }
-                if offers.count != 0{
-                self.offers += offers
-                self.filteredOffers = offers
+                if offers != nil{
+                    if offers!.count != 0{
+                        self.offers += offers!
+                        self.filteredOffers = offers!
                 self.view?.getOffersSuccess()
-                }}
+                    }}
+                else{
+                    self.isOfferEmpty = true
+                }
+                }
         }
     }
     func getOffersCount() -> Int {

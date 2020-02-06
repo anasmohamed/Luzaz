@@ -45,6 +45,7 @@ class SubCategoryOffersPresenter {
         guard let image = subCategoryoffer.image
             ,let productName = subCategoryoffer.title
             ,let productPrice = subCategoryoffer.price
+            
             else { return }
         
         cell.showProductImage(image: image)
