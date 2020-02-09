@@ -19,10 +19,18 @@ extension OffersViewController: OffersView {
     }
     
     func getOffersSuccess() {
-        collectionView.reloadData()
+        
+       
+        presenter.configure{
+            finish in
+            if finish{
+                self.collectionView.reloadData()
+
+            }
+        }
     }
     
-   
+    
     
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
@@ -33,4 +41,4 @@ extension OffersViewController: OffersView {
         present(alertController, animated: true, completion: nil)
     }
 }
- 
+

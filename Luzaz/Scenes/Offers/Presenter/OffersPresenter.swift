@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 class OffersPresenter{
     
     private weak var view: OffersView?
@@ -16,18 +17,21 @@ class OffersPresenter{
     private var offers: [Offer]
     private var filteredOffers : [Offer]
     public var isOfferEmpty : Bool = false
+    public var imageHeight : CGFloat?
+    var offersImagesList =  [CGFloat]()
     init(view: OffersView) {
         self.view = view
         offersInteractor = OffersInteractor()
         offers = [Offer]()
         filteredOffers = offers
+        
     }
-
+    
     func viewDidLoad(countryId:String,page:String) {
         
-//        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
+        //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
         getOffers(countryId:countryId ,page:page)
-// )
+        // )
     }
     
     func getOffers(countryId: String,page:String) {
@@ -42,12 +46,12 @@ class OffersPresenter{
                     if offers!.count != 0{
                         self.offers += offers!
                         self.filteredOffers = offers!
-                self.view?.getOffersSuccess()
+                        self.view?.getOffersSuccess()
                     }}
                 else{
                     self.isOfferEmpty = true
                 }
-                }
+            }
         }
     }
     func getOffersCount() -> Int {
@@ -57,14 +61,14 @@ class OffersPresenter{
         return filteredOffers.count
     }
     func getSearchedOffer(searchText : String) {
-     filteredOffers =  offers.filter({( offer : Offer) -> Bool in
+        filteredOffers =  offers.filter({( offer : Offer) -> Bool in
             return (offer.title?.lowercased().contains(searchText.lowercased()))!
         })
-
-      
+        
+        
     }
     
-    func configure(cell: OffersCellView, for index: Int,isFiltering : Bool) {
+    func configure(cell: OffersCellView, for index: Int,isFiltering : Bool,collectionView:UICollectionView) {
         let offer : Offer
         if isFiltering {
             offer = filteredOffers[index]
@@ -72,13 +76,60 @@ class OffersPresenter{
             offer = offers[index]
         }
         guard let image = offer.image
-             else { return }
+            else { return }
         
-        cell.displayOfferImage(offerImage: image)
+        cell.displayOfferImage(offerImage: image,collectionView:collectionView){height in
+            
+            self.imageHeight = height
+        }
+        
     }
+    func configure( complition: @escaping (Bool) -> Void) {
+        for offer in offers{
+            
+            SDWebImageManager.shared().loadImage(
+                with: URL(string: "http://luzaz.com/upload/\(offer.image!)"),
+                options: .highPriority, // or .highPriority
+                progress: nil,
+                completed: { [weak self] (image, data, error, cacheType, finished, url) in
+                    guard let sself = self else { return }
+
+                    if let err = error {
+                        // Do something with the error
+                        return
+                    }
+
+                    guard let img = image else {
+                        // No image handle this error
+                        return
+                    }
+                    self!.imageHeight = img.size.height
+                    self!.offersImagesList.append(self.self!.imageHeight ?? 0)
+                    if self!.offersImagesList.count == self!.offers.count
+                    {
+                        complition(true)
+                    }
+                    // Do something with image
+                }
+            )
+//            SDWebImageManager.shared().imageDownloader?.downloadImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), options: .highPriority, progress: nil, completed: {(image:UIImage?, data:Data?, error:Error?, finished:Bool) in
+//
+//
+//
+//
+//            })
+        }}
+    
+    
+    
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
-       viewController.offer = offers[index]
+        viewController.offer = offers[index]
         
+    }
+    
+    func getImageHeight() ->CGFloat
+    {
+        return imageHeight ?? 0
     }
 }
 

@@ -7,7 +7,10 @@
 //
 
 import Foundation
-
+import UIKit
 protocol OffersCellView {
-    func displayOfferImage(offerImage : String)
+    func displayOfferImage(offerImage : String,collectionView : UICollectionView, completion: @escaping (CGFloat) -> Void)
+    func displayOfferImage(offerImage : String, completion: @escaping (CGFloat) -> Void)
+    func getImageHeight(image:UIImage) -> CGFloat
+    func getHeight() -> CGFloat
 }

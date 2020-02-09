@@ -90,14 +90,14 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
             token =  UserDefaults.standard.string(forKey: "token")!
-            offerFavotriteBtn.isHidden = true
+            offerFavotriteBtn.isHidden = false
             
             
         }
         else
         {
             token = ""
-            offerFavotriteBtn.isHidden = false
+            offerFavotriteBtn.isHidden = true
             
         }
         if offer.contactType == "1"
