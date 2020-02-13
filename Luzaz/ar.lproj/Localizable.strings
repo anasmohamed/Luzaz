@@ -54,3 +54,9 @@
 "You Should Give Permission" = "يجب ان تعطي التطبيق الاذن لفتح الاستوديو";
 
 "Invalid Credentials" = "هناك بيانات غير صحيحة";
+
+"Log out" =  "تسجيل الخروج";
+
+"Are You Sure You Want To Log out?" = "هل انت متاكد من تسجيل الخروج؟";
+"Yes" = "نعم";
+"No" = "لا";
