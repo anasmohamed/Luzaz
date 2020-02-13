@@ -52,8 +52,21 @@ class ProfileViewController: UIViewController,ProfileView {
         
     }
     @IBAction func logutBtnWasPressed(_ sender: Any) {
+
+        let alertController = UIAlertController(title: NSLocalizedString("Log out", comment: ""), message: NSLocalizedString("Are You Sure You Want To Log out?", comment: ""), preferredStyle: .alert)
+        let action1 = UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default) { (_: UIAlertAction) in
+            self.presenter.logoutUser(user:UserDefaults.standard.string(forKey: "userId")!)
+
+            print("You've pressed Yes")
+        }
         
-        presenter.logoutUser(user:UserDefaults.standard.string(forKey: "userId")!)
+        let action2 = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { (_: UIAlertAction) in
+            print("You've pressed cancel")
+        }
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        self.present(alertController, animated: true, completion: nil)
+        
         
     }
     override func viewDidLoad() {

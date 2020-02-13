@@ -28,6 +28,7 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
         searchBar.delegate = self
         self.hideKeyboardWhenTappedAround()
         
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

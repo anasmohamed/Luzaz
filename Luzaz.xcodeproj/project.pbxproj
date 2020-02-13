@@ -468,7 +468,6 @@
 				CC7268A0233AC612006B61DD /* Authentication */,
 				CC726907233AC613006B61DD /* MyProducts */,
 				CC7268D3233AC612006B61DD /* Chat */,
-				CC7268EB233AC612006B61DD /* Competition */,
 				CC7268F8233AC613006B61DD /* Countries */,
 				CC726901233AC613006B61DD /* Languages */,
 				CC726903233AC613006B61DD /* LeftSidePanel */,
@@ -815,6 +814,7 @@
 		CC726903233AC613006B61DD /* LeftSidePanel */ = {
 			isa = PBXGroup;
 			children = (
+				CC7268EB233AC612006B61DD /* Competition */,
 				CC726904233AC613006B61DD /* CenterVCDelegate.swift */,
 				CC726905233AC613006B61DD /* ContainerVC.swift */,
 				CC726906233AC613006B61DD /* LeftSidePanelVC.swift */,

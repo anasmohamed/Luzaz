@@ -9,13 +9,17 @@
 import UIKit
 
 class MainCateoriesCollectionViewCell: UICollectionViewCell,MainCategoriesCellView {
+    @IBOutlet weak var categoryNameLabel: UILabel!
     
     @IBOutlet weak var mainCategoryImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layer.cornerRadius = 10
+
         // Initialization code
     }
     func displayMainCategoriesImage(mainCategoriesImage: String) {
+          categoryNameLabel.text = mainCategoriesImage
         if mainCategoriesImage == "Vehicles" || mainCategoriesImage == "نقل واتوبيسات"
         {
             mainCategoryImageView.image = UIImage(named:"car.jpg")
@@ -24,6 +28,7 @@ class MainCateoriesCollectionViewCell: UICollectionViewCell,MainCategoriesCellVi
         {
             mainCategoryImageView.image = UIImage(named:"real_state.jpg")
         }
+        
         if mainCategoriesImage == "Mobiles & Accessories" || mainCategoriesImage == "موبايلات واكسسواراتها"
         {
             mainCategoryImageView.image = UIImage(named:"phones")

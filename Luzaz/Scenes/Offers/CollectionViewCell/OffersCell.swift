@@ -15,18 +15,21 @@ class OffersCell: UICollectionViewCell,OffersCellView {
     var imageHieght : CGFloat?
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 10 //customize yourself
+        self.layer.cornerRadius = 10
+        indicator.startAnimating()
+//customize yourself
         
         //self.layer.masksToBounds = true
         // Initialization code
     }
     func displayOfferImage(offerImage: String)  {
-        indicator.startAnimating()
          offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), completed: {  (image, error, cacheType, url) in
           if image  != nil
           {
+            DispatchQueue.main.async {
+                self.indicator.stopAnimating()
+            }
             
-            self.indicator.stopAnimating()
             }
              
          })
