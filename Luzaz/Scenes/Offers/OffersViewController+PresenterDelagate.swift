@@ -20,7 +20,7 @@ extension OffersViewController: OffersView {
     
     func getOffersSuccess() {
         
-       
+        presenter.isOfferEmpty = false
         presenter.configure{
             finish in
             if finish{

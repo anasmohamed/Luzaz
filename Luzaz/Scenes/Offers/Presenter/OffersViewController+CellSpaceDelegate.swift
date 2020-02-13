@@ -17,11 +17,12 @@ extension OffersViewController: UICollectionViewDelegateFlowLayout{
         if (indexPath.row == presenter.getOffersCount() - 1 &&  !presenter.isOfferEmpty) { //it's your last cell
             pageNumber += 1
             presenter.getOffers(countryId:countryId ?? "1" ,page: String(pageNumber))
-                           DispatchQueue.main.async {
-                               self.collectionView.reloadData()
-                           }
-                       
-         }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                self.presenter.isOfferEmpty = true
+            }
+            
+        }
     }
     
     

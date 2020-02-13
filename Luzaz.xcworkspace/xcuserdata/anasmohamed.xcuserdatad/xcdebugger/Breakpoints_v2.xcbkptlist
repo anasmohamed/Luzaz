@@ -70,16 +70,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EA5C67BC-2690-471E-8F9F-7C560B4CE79D"
+            uuid = "B1EFA8C1-10EE-4B1B-8201-ED013529E846"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Luzaz/Scenes/Offers/OffersViewController.swift"
+            filePath = "Luzaz/Scenes/Offers/OffersLayout.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "prepare()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -40,6 +40,7 @@ class OffersLayout: UICollectionViewLayout {
       
       override func prepare() {
         // 1
+        cache.removeAll()
         guard
           cache.isEmpty == true,
           let collectionView = collectionView

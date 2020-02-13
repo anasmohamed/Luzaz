@@ -95,9 +95,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
 
     func setupCollectionView() {
         collectionView.register(UINib(nibName: "OffersCell", bundle: nil), forCellWithReuseIdentifier: "OffersCell")
-        self.collectionView.register(UINib(nibName: "CollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier:
-        "CollectionReusableView")
-
+      
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
@@ -106,73 +104,12 @@ UISearchBarDelegate,UISearchControllerDelegate{
         }
         return CGSize(width: collectionView.bounds.size.width, height: 55)
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
-//    }
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionFooter {
-               let aFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
-               self.footerView = aFooterView
-               self.footerView?.backgroundColor = UIColor.clear
-               return aFooterView
-           } else {
-               let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"CollectionReusableView" , for: indexPath)
-               return headerView
-           }
-       }
+
     
-       func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
-        if elementKind == UICollectionView.elementKindSectionFooter {
-               self.footerView?.prepareInitialAnimation()
-           }
-       }
+     
        
-       func collectionView(_ collectionView: UICollectionView, didEndDisplayingSupplementaryView view: UICollectionReusableView, forElementOfKind elementKind: String, at indexPath: IndexPath) {
-        if elementKind == UICollectionView.elementKindSectionFooter {
-               self.footerView?.stopAnimate()
-           }
-       }
-    //compute the scroll value and play witht the threshold to get desired effect
-      func scrollViewDidScroll(_ scrollView: UIScrollView) {
-          let threshold   = 100.0 ;
-          let contentOffset = scrollView.contentOffset.y;
-          let contentHeight = scrollView.contentSize.height;
-          let diffHeight = contentHeight - contentOffset;
-          let frameHeight = scrollView.bounds.size.height;
-          var triggerThreshold  = Float((diffHeight - frameHeight))/Float(threshold);
-          triggerThreshold   =  min(triggerThreshold, 0.0)
-        let pullRatio  = min(abs(triggerThreshold),1.0);
-          self.footerView?.setTransform(inTransform: CGAffineTransform.identity, scaleFactor: CGFloat(pullRatio))
-          if pullRatio >= 1 {
-              self.footerView?.animateFinal()
-          }
-          print("pullRation:\(pullRatio)")
-      }
       
-//      //compute the offset and call the load method
-//      func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//          let contentOffset = scrollView.contentOffset.y;
-//          let contentHeight = scrollView.contentSize.height;
-//          let diffHeight = contentHeight - contentOffset;
-//          let frameHeight = scrollView.bounds.size.height;
-//        let pullHeight  = abs(diffHeight - frameHeight);
-//          print("pullHeight:\(pullHeight)");
-//          if pullHeight == 0.0
-//          {
-//              if (self.footerView?.isAnimatingFinal)! {
-//                  print("load more trigger")
-//                  self.isLoading = true
-//                  self.footerView?.startAnimate()
-//                  Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (timer:Timer) in
-//                      for i:Int in self.items.count + 1...self.items.count + 25 {
-//                          self.items.append(i)
-//                      }
-//                      self.collectionView.reloadData()
-//                      self.isLoading = false
-//                  })
-//              }
-//          }
-//      }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if !searchBarIsEmpty() {
             return presenter.getFilteredOffersCount()
@@ -209,15 +146,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         
     }
    
-//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//            if indexPath.item % 2 != 0{
-//
-//            }
-//            let cellsAcross: CGFloat = 3
-//            let spaceBetweenCells: CGFloat = 10
-//            let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-//            return CGSize(width: dim, height: 300)
-//        }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
        return CGSize(width: itemSize, height: itemSize)

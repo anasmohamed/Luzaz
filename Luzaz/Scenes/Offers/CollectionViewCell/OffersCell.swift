@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 class OffersCell: UICollectionViewCell,OffersCellView {
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     @IBOutlet weak var offerImageView: UIImageView!
     var imageHieght : CGFloat?
@@ -19,40 +20,24 @@ class OffersCell: UICollectionViewCell,OffersCellView {
         //self.layer.masksToBounds = true
         // Initialization code
     }
-    func displayOfferImage(offerImage: String,collectionView:UICollectionView,completion : @escaping (CGFloat) -> Void)  {
-        //        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), placeholderImage: UIImage(named: "back.png"))
-        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), completed: {  (image, error, cacheType, url) in
-            UIView.animate(withDuration:0.3, animations: {
-                
-                self.imageHieght =  self.getImageHeight(image: image!)
-                completion(self.imageHieght!)
-                collectionView.collectionViewLayout.invalidateLayout()
-            }
-            )
+    func displayOfferImage(offerImage: String)  {
+        indicator.startAnimating()
+         offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), completed: {  (image, error, cacheType, url) in
+          if image  != nil
+          {
             
-        })
-        
+            self.indicator.stopAnimating()
+            }
+             
+         })
+         
     }
-    func displayOfferImage(offerImage: String,completion : @escaping (CGFloat) -> Void)  {
-           //        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), placeholderImage: UIImage(named: "back.png"))
     
-//           offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), completed: {  (image, error, cacheType, url) in
-//               UIView.animate(withDuration:0.3, animations: {
-//
-//                   self.imageHieght =  self.getImageHeight(image: image!)
-//                   completion(self.imageHieght!)
-//               }
-//               )
-//
-//           })
-           
-       }
-    func getHeight() -> CGFloat
-    {
-        return imageHieght!
-    }
-    func getImageHeight(image: UIImage) -> CGFloat {
-        return image.size.height
-    }
 }
+    
+        
+    
+
+
+
 

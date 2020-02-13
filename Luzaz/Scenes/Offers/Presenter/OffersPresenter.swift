@@ -17,6 +17,7 @@ class OffersPresenter{
     private var offers: [Offer]
     private var filteredOffers : [Offer]
     public var isOfferEmpty : Bool = false
+    var offersNumber = 0
     public var imageHeight : CGFloat?
     var offersImagesList =  [CGFloat]()
     init(view: OffersView) {
@@ -78,46 +79,31 @@ class OffersPresenter{
         guard let image = offer.image
             else { return }
         
-        cell.displayOfferImage(offerImage: image,collectionView:collectionView){height in
-            
-            self.imageHeight = height
-        }
+        cell.displayOfferImage(offerImage: image)
         
     }
     func configure( complition: @escaping (Bool) -> Void) {
-        for offer in offers{
+        for i in offersNumber..<offers.count{
             
             SDWebImageManager.shared().loadImage(
-                with: URL(string: "http://luzaz.com/upload/\(offer.image!)"),
+                with: URL(string: "http://luzaz.com/upload/\(offers[i].image!)"),
                 options: .highPriority, // or .highPriority
                 progress: nil,
                 completed: { [weak self] (image, data, error, cacheType, finished, url) in
-                    guard let sself = self else { return }
-
-                    if let err = error {
-                        // Do something with the error
-                        return
-                    }
-
+            
                     guard let img = image else {
-                        // No image handle this error
                         return
                     }
                     self!.imageHeight = img.size.height
                     self!.offersImagesList.append(self.self!.imageHeight ?? 0)
                     if self!.offersImagesList.count == self!.offers.count
                     {
+                        self!.offersNumber += 35
                         complition(true)
                     }
-                    // Do something with image
                 }
             )
-//            SDWebImageManager.shared().imageDownloader?.downloadImage(with: URL(string: "http://luzaz.com/upload/\(offer.image!)"), options: .highPriority, progress: nil, completed: {(image:UIImage?, data:Data?, error:Error?, finished:Bool) in
-//
-//
-//
-//
-//            })
+
         }}
     
     
