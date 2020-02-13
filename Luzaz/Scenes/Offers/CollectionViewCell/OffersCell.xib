@@ -19,10 +19,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-r6-HXS">
                         <rect key="frame" x="0.0" y="0.0" width="143" height="117"/>
                     </imageView>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RXd-Lj-SN3">
-                        <rect key="frame" x="62" y="49" width="20" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
@@ -33,7 +29,6 @@
             </constraints>
             <size key="customSize" width="143" height="117"/>
             <connections>
-                <outlet property="indicator" destination="RXd-Lj-SN3" id="Agf-sx-2yf"/>
                 <outlet property="offerImageView" destination="JX7-r6-HXS" id="F3F-ou-vtE"/>
             </connections>
             <point key="canvasLocation" x="71.200000000000003" y="85.007496251874073"/>

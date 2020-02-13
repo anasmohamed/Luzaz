@@ -35,12 +35,7 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
         super.viewWillAppear(animated)
         presenter.viewDidLoad()
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
+  
     func setupCollectionView() {
         collectionView.register(UINib(nibName: "MainCateoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainCateoriesCollectionViewCell")
         

@@ -9,17 +9,24 @@
 import UIKit
 import SDWebImage
 class OffersCell: UICollectionViewCell,OffersCellView {
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+   var indicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet weak var offerImageView: UIImageView!
     var imageHieght : CGFloat?
     override func awakeFromNib() {
+        
         super.awakeFromNib()
+        self.layer.masksToBounds = true
+
         self.layer.cornerRadius = 10
+        indicator.center = self.center
+indicator.hidesWhenStopped = true
+        indicator.style = UIActivityIndicatorView.Style.gray
+        self.addSubview(indicator)
+
         indicator.startAnimating()
 //customize yourself
         
-        //self.layer.masksToBounds = true
         // Initialization code
     }
     func displayOfferImage(offerImage: String)  {

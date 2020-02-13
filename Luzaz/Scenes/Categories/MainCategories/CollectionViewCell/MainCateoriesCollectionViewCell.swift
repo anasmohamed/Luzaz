@@ -15,7 +15,7 @@ class MainCateoriesCollectionViewCell: UICollectionViewCell,MainCategoriesCellVi
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 10
-
+      
         // Initialization code
     }
     func displayMainCategoriesImage(mainCategoriesImage: String) {
