@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OffersCell" id="gTV-IL-0wX" customClass="OffersCell" customModule="Luzaz" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="143" height="117"/>
+            <rect key="frame" x="0.0" y="0.0" width="179" height="117"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="143" height="117"/>
+                <rect key="frame" x="0.0" y="0.0" width="179" height="117"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-r6-HXS">
-                        <rect key="frame" x="0.0" y="0.0" width="143" height="117"/>
+                        <rect key="frame" x="0.0" y="0.0" width="179" height="117"/>
                     </imageView>
                 </subviews>
             </view>
@@ -27,11 +27,11 @@
                 <constraint firstItem="JX7-r6-HXS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a0q-B2-3aP"/>
                 <constraint firstItem="JX7-r6-HXS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ioj-Bo-LF8"/>
             </constraints>
-            <size key="customSize" width="143" height="117"/>
+            <size key="customSize" width="179" height="117"/>
             <connections>
                 <outlet property="offerImageView" destination="JX7-r6-HXS" id="F3F-ou-vtE"/>
             </connections>
-            <point key="canvasLocation" x="71.200000000000003" y="85.007496251874073"/>
+            <point key="canvasLocation" x="100" y="85.007496251874073"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -17,7 +17,7 @@ class OffersLayout: UICollectionViewLayout {
       weak var delegate: OffersLayoutDelegate?
       // 2
       private let numberOfColumns = 3
-      private let cellPadding: CGFloat = 6
+      private let cellPadding: CGFloat = 3
 
       // 3
       private var cache: [UICollectionViewLayoutAttributes] = []
@@ -30,6 +30,7 @@ class OffersLayout: UICollectionViewLayout {
           return 0
         }
         let insets = collectionView.contentInset
+        print("left instes  \(insets.left ) right instets \(insets.right)")
         return collectionView.bounds.width - (insets.left + insets.right)
       }
 
@@ -48,7 +49,7 @@ class OffersLayout: UICollectionViewLayout {
             return
         }
         // 2
-        let columnWidth = contentWidth / CGFloat(numberOfColumns)
+        let columnWidth = contentWidth   /   CGFloat(numberOfColumns)
         var xOffset: [CGFloat] = []
         for column in 0..<numberOfColumns {
           xOffset.append(CGFloat(column) * columnWidth)
