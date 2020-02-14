@@ -16,6 +16,7 @@ target 'Luzaz' do
   pod 'KMPlaceholderTextView', '~> 1.4.0'
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
+  pod 'IHProgressHUD'
 
   # Add the pod for Firebase Cloud Messaging
   pod 'Firebase/Messaging'

@@ -75,6 +75,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.4.0):
     - GoogleUtilities/Logger
+  - IHProgressHUD (0.1.4)
   - KMPlaceholderTextView (1.4.0)
   - MOLH (1.0)
   - nanopb (0.3.9011):
@@ -95,6 +96,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Messaging
   - FSPagerView
+  - IHProgressHUD
   - KMPlaceholderTextView (~> 1.4.0)
   - MOLH
   - OpalImagePicker (~> 1.7.1)
@@ -118,6 +120,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - IHProgressHUD
     - KMPlaceholderTextView
     - MOLH
     - nanopb
@@ -142,6 +145,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 8e9b210c97d55fbff306cc5468ff91b9cb32dcf5
   GoogleDataTransportCCTSupport: 202d7cdf9c4a7d81a2bb7f7e7e1ba6faa421b1f2
   GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
+  IHProgressHUD: a01846bfbb581c761c79747c67b08387c3bdfae3
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
   MOLH: 2492e7f8fe3400580832312dc0fb9e05d7e92726
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -150,6 +154,6 @@ SPEC CHECKSUMS:
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 4e6bbe61f4f3dcf9b528d33da04f15897ee26e17
+PODFILE CHECKSUM: c6f1756238951f65dd0d4ac4cacfa8fa827fe669
 
 COCOAPODS: 1.8.4

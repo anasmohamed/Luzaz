@@ -7,14 +7,20 @@
 //
 
 import UIKit
-
+import IHProgressHUD
 extension OffersViewController: OffersView {
     
     func showIndicator() {
+        IHProgressHUD.show()
+
         spinner.startAnimating()
     }
     
     func hideIndicator() {
+        DispatchQueue.global(qos: .default).async(execute: {
+        // time-consuming task
+        IHProgressHUD.dismiss()
+        })
         spinner.stopAnimating()
     }
     

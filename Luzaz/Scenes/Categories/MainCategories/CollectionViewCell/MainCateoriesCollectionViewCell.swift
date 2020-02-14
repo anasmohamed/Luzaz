@@ -19,6 +19,7 @@ class MainCateoriesCollectionViewCell: UICollectionViewCell,MainCategoriesCellVi
         // Initialization code
     }
     func displayMainCategoriesImage(mainCategoriesImage: String) {
+        
           categoryNameLabel.text = mainCategoriesImage
         if mainCategoriesImage == "Vehicles" || mainCategoriesImage == "نقل واتوبيسات"
         {
