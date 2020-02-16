@@ -17,7 +17,7 @@ class OffersLayout: UICollectionViewLayout {
       weak var delegate: OffersLayoutDelegate?
       // 2
       private let numberOfColumns = 3
-      private let cellPadding: CGFloat = 3
+      private let cellPadding: CGFloat = 6
 
       // 3
       private var cache: [UICollectionViewLayoutAttributes] = []
