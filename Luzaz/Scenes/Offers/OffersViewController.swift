@@ -40,6 +40,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
        setupLayout(with: view.bounds.size)
         self.hideKeyboardWhenTappedAround()
         language = MOLHLanguage.currentAppleLanguage()
+        
        
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

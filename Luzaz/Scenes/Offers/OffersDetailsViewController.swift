@@ -20,8 +20,8 @@ func color(_ rgbColor: Int) -> UIColor{
 }
 
 class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate,FSPagerViewDelegate,FSPagerViewDataSource{
- 
-    
+
+    var imageAlbum = ImagesAlbum()
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         if offer.album.count == 0
         {
@@ -32,17 +32,15 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "imageSliderCell", at: index)
+        imageAlbum.image = offer.image
+        imageAlbum.id = "0"
         
-        if offer.album.count == 0
-        {
-            cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(offer.image!)"))
-        }
-        else{
+        offer .album.insert(imageAlbum, at: 0)
             let album = offer.album[index] as ImagesAlbum
             
-            cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(offer.image!)"))
+//            cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(offer.image!)"))
             cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(album.image!)"))
-        }
+        
         return cell    }
     
     var offer : Offer!
@@ -67,6 +65,14 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         }
     }
     
+    @IBOutlet weak var pageControl: FSPageControl! {
+          didSet {
+            self.pageControl.numberOfPages = self.offer.album.count
+              self.pageControl.contentHorizontalAlignment = .right
+              self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+              self.pageControl.hidesForSinglePage = false
+          }
+      }
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
@@ -75,9 +81,11 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         super.viewDidLoad()
         self.heartButton?.setSelected(selected: true, animated: false)
         imageLable()
-
+        
         offerImageSlider.delegate = self
         offerImageSlider.dataSource = self
+        pageControl.setStrokeColor(.green, for: .normal)
+        pageControl.setStrokeColor(.yellow, for: .selected)
         print("desci\(offer.description!)")
         presenter = OfferDetailesPresenter(view: self)
         print(offer.album)
@@ -86,7 +94,6 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         offerDescriptionLabel.text = offer.description!
         dateLbl.text = offer.date
         locationLbl.text = offer.governorate
-
         if ((UserDefaults.standard.string(forKey: "token")) != nil)
         {
             token =  UserDefaults.standard.string(forKey: "token")!
@@ -138,6 +145,13 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         self.present(reportVC,animated:true,completion:nil)
     }
     
+     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+         self.pageControl.currentPage = targetIndex
+     }
+     
+     func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
+         self.pageControl.currentPage = pagerView.currentIndex
+     }
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
