@@ -94,7 +94,7 @@ class OffersPresenter{
                     guard let img = image else {
                         return
                     }
-                    self!.imageHeight = img.size.height / 10
+                    self!.imageHeight = img.size.height / 7
                     self!.offersImagesList.append(self.self!.imageHeight ?? 0)
                     if self!.offersImagesList.count == self!.offers.count
                     {
