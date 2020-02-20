@@ -115,11 +115,11 @@ class OffersPresenter{
                 options: .highPriority, // or .highPriority
                 progress: nil,
                 completed: { [weak self] (image, data, error, cacheType, finished, url) in
-                    print(error)
-                    if  image == nil  {
-                        self!.offersImagesList.append(100)
-                    }else{
-                    self!.imageHeight = image!.size.height / 6
+            
+                    guard let img = image else {
+                        return
+                    }
+                    self!.imageHeight = img.size.height / 7
                     self!.offersImagesList.append(self.self!.imageHeight ?? 0)
                     print("offer image count\(self!.offersImagesList.count)")
                     print("offer  count\(self!.offers.count)")
