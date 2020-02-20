@@ -11,7 +11,6 @@ import UIKit
 class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CountryView {
     private var presenter: CountryPresenter!
     var delegate : CenterVCDelegate?
-    
     let prefs = UserDefaults.standard
     var isLeftSideController = false
     var countryImage : UIImageView?
@@ -22,6 +21,7 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
         presenter = CountryPresenter(view: self)
         presenter.viewDidLoad()
         tableView.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,14 +31,16 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch  presenter.getCountryName(index: indexPath.row){
-        case "Egypt":
+        print("counrty name \(presenter.getCountryName(index: indexPath.row))")
+
+        switch  presenter.getCountryName(index: indexPath.row).localiz(){
+        case "Egypt".localiz():
             UserDefaults.standard.set(1 , forKey: "country")
-        case "USA":
+        case "USA".localiz():
             UserDefaults.standard.set(10 , forKey: "country")
-        case "KSA":
+        case "Emirates".localiz():
             UserDefaults.standard.set(2 , forKey: "country")
-        case "UAE":
+        case "Saudi Arabia".localiz():
             UserDefaults.standard.set(5 , forKey: "country")
         default:
             UserDefaults.standard.set(9 , forKey: "country")
@@ -49,6 +51,7 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
             languageVC.modalPresentationStyle = .fullScreen
             self.present(languageVC, animated: true, completion: nil)
         }else{
+            print("index path \(getCountyIcon(countryNum : indexPath.row))")
             countryImage?.image = UIImage(named: getCountyIcon(countryNum : indexPath.row) )
             let offerVC = ContainerVC()
             offerVC.modalPresentationStyle = .fullScreen

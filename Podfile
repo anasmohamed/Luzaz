@@ -7,13 +7,15 @@ target 'Luzaz' do
 
   # Pods for Luzaz
   pod 'Alamofire', '~>4.0'
-  pod 'SDWebImage'
+  pod 'SDWebImage', :git => 'https://github.com/SDWebImage/SDWebImage.git'
   pod 'SwiftyJSON', '3.0.0'
   pod 'FaveButton'
   pod 'OpalImagePicker', '~> 1.7.1'
   pod 'MOLH'
   pod 'FSPagerView'
   pod 'KMPlaceholderTextView', '~> 1.4.0'
+  pod 'Kingfisher', '~> 5.0'
+
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   pod 'IHProgressHUD', :git => 'https://github.com/Swiftify-Corp/IHProgressHUD.git'

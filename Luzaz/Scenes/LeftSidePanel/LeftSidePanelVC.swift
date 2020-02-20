@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LeftSidePanelVC: UIViewController {
+class LeftSidePanelVC: UIViewController{
+    
+    
     @IBOutlet weak var favoriteBtn: UIButton!
     @IBOutlet weak var counrtyImage: UIImageView!
     @IBOutlet weak var registerBtn: UIButton!
@@ -22,11 +24,12 @@ class LeftSidePanelVC: UIViewController {
     let appDelegate = AppDelegate.getAppDelegate()
     var token : String = ""
     @IBOutlet weak var countryImageView: UIImageView!
-    
+    var countries = CountriesViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         countryImageView.image = UIImage(named:getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
+        
         if UserDefaults.standard.string(forKey: "token") != nil
         {
             token = UserDefaults.standard.string(forKey: "token")!
@@ -41,6 +44,11 @@ class LeftSidePanelVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("nubmer \(UserDefaults.standard.string(forKey: "country")!)")
+
+        print("nubmer \(getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))")
+        countryImageView.image = UIImage(named:getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
+        countryBtn.setTitle(getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!), for: .normal)
         if (token.isEmpty){
             registerBtn.setTitle("Register/Login", for: .normal)
         }
@@ -160,11 +168,11 @@ class LeftSidePanelVC: UIViewController {
         switch countryNum {
         case "1":
             return "egypt"
-        case "2":
+        case "10":
             return "usa"
-        case "3":
+        case "2":
             return "emirates"
-        case "4":
+        case "5":
             return "saudi_arabia"
         default:
             return "libya"

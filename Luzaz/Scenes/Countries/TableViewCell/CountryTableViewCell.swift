@@ -18,7 +18,7 @@ class CountryTableViewCell: UITableViewCell,CountryCellView {
     }
 
     func displayCountryName(name: String) {
-        countryNameLable.text = name
+        countryNameLable.text = name.localiz()
     }
     func displayCountryImage(image: String) {
         countryImageView.image = UIImage(named: image)

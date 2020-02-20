@@ -26,8 +26,7 @@ class OffersCell: UICollectionViewCell,OffersCellView {
         // Initialization code
     }
     func displayOfferImage(offerImage: String)  {
-        offerImageView.sd_setShowActivityIndicatorView(true)
-        offerImageView.sd_setIndicatorStyle(.gray)
+        offerImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
         offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), placeholderImage: UIImage(named: "placeholder"))
     }
     

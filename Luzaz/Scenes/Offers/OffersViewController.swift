@@ -112,7 +112,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         }
         else
         {
-           
+           print(presenter.getOffersCount())
             return presenter.getOffersCount()
             
         }

@@ -39,6 +39,8 @@ class RightSidePanelVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        countryImageView.image = UIImage(named:getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
+             countryBtn.setTitle(getArbicNameCounty(countryNum: UserDefaults.standard.string(forKey: "country")!), for:.normal)
         if (token.isEmpty){
             registerBtn.setTitle("تسجيل الدخول", for: .normal)
         }
@@ -155,29 +157,29 @@ class RightSidePanelVC: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    func getCountyIcon(countryNum : String) -> String {
-        switch countryNum {
-        case "1":
-            return "egypt"
-        case "2":
-            return "usa"
-        case "3":
-            return "emirates"
-        case "4":
-            return "saudi_arabia"
-        default:
-            return "libya"
-        }
-    }
+      func getCountyIcon(countryNum : String) -> String {
+          switch countryNum {
+          case "1":
+              return "egypt"
+          case "10":
+              return "usa"
+          case "2":
+              return "emirates"
+          case "5":
+              return "saudi_arabia"
+          default:
+              return "libya"
+          }
+      }
     func getArbicNameCounty(countryNum : String) -> String {
            switch countryNum {
            case "1":
                return "مصر"
-           case "2":
+           case "10":
                return "الولايات المتحده"
-           case "3":
+           case "2":
                return "الامارات"
-           case "4":
+           case "5":
                return "السعوديه"
            default:
                return "ليبيا"
