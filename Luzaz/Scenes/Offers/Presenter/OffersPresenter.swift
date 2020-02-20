@@ -85,58 +85,29 @@ class OffersPresenter{
         
     }
     func configure( complition: @escaping (Bool) -> Void) {
-        for i in offersNumber..<offers.count{
-            IHProgressHUD.show()
-//            KingfisherManager.shared.retrieveImage(with:URL(string: "http://luzaz.com/upload/\(offers[i].image!)")! , options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
-//               print(error)
-//                 if  image == nil  {
-//                                        self.offersImagesList.append(100)
-//                                    }else{
-//                                    self.imageHeight = image!.size.height / 6
-//                                    self.offersImagesList.append(self.self.imageHeight ?? 0)
-//                                    print("offer image count\(self.offersImagesList.count)")
-//                                    print("offer  count\(self.offers.count)")
-//
-//                                    if self.offersImagesList.count == self.offers.count
-//                                    {
-//                                        DispatchQueue.global(qos: .default).async(execute: {
-//                                        // time-consuming task
-//                                        IHProgressHUD.dismiss()
-//                                        })
-//                                        self.offersNumber += 35
-//                                        complition(true)
-//                                        }}
-//                                }
-//                            )
-
-           
+          for i in offersNumber..<offers.count{
+              
             SDWebImageManager.shared.loadImage(
-                with: URL(string: "http://luzaz.com/upload/\(offers[i].image!)"),
-                options: .highPriority, // or .highPriority
-                progress: nil,
-                completed: { [weak self] (image, data, error, cacheType, finished, url) in
-            
-                    guard let img = image else {
-                        return
-                    }
-                    self!.imageHeight = img.size.height / 7
-                    self!.offersImagesList.append(self.self!.imageHeight ?? 0)
-                    print("offer image count\(self!.offersImagesList.count)")
-                    print("offer  count\(self!.offers.count)")
+                  with: URL(string: "http://luzaz.com/upload/\(offers[i].image!)"),
+                  options: .highPriority, // or .highPriority
+                  progress: nil,
+                  completed: { [weak self] (image, data, error, cacheType, finished, url) in
+              
+                      guard let img = image else {
+                          return
+                      }
+                      self!.imageHeight = img.size.height / 7
+                      self!.offersImagesList.append(self.self!.imageHeight ?? 0)
+                      if self!.offersImagesList.count == self!.offers.count
+                      {
+                          self!.offersNumber += 35
+                          complition(true)
+                      }
+                  }
+              )
 
-                    if self!.offersImagesList.count == self!.offers.count
-                    {
-                       
-                        self!.offersNumber += 35
-                        complition(true)
-                        
-                        }}
-                }
-            )
-
-        }
-        
-    }
+          }}
+      
     
     
     
