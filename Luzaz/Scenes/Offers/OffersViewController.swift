@@ -8,6 +8,7 @@
 
 import UIKit
 import MOLH
+import SDWebImage
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,
 UISearchBarDelegate,UISearchControllerDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
@@ -37,7 +38,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         countryId = UserDefaults.standard.string(forKey: "country")!
         presenter = OffersPresenter(view: self)
         searchBar.delegate = self
-       setupLayout(with: view.bounds.size)
+        setupLayout(with: view.bounds.size)
         self.hideKeyboardWhenTappedAround()
         language = MOLHLanguage.currentAppleLanguage()
         
@@ -130,12 +131,13 @@ UISearchBarDelegate,UISearchControllerDelegate{
         switch layoutOption {
         case .largeGrid:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
-            
+            cell.offerImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
             presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty(),collectionView: collectionView)
             
             return cell
         case .smallGrid:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
+             cell.offerImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
             presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty(),collectionView: collectionView)
             return cell
         }

@@ -85,28 +85,42 @@ class OffersPresenter{
         
     }
     func configure( complition: @escaping (Bool) -> Void) {
+        IHProgressHUD.show()
           for i in offersNumber..<offers.count{
-              
+    
             SDWebImageManager.shared.loadImage(
                   with: URL(string: "http://luzaz.com/upload/\(offers[i].image!)"),
                   options: .highPriority, // or .highPriority
                   progress: nil,
                   completed: { [weak self] (image, data, error, cacheType, finished, url) in
-              
-                      guard let img = image else {
-                          return
-                      }
-                      self!.imageHeight = img.size.height / 7
+print(url)
+                    print(error)
+                    
+                      if error != nil || image == nil
+                      {
+                        self!.offersImagesList.append(0)
+                        if self!.offersImagesList.count == self!.offers.count
+                        {
+                            self!.offersNumber += 35
+                            complition(true)
+                        }
+                      }else{
+                    self!.imageHeight = image!.size.height / 5
                       self!.offersImagesList.append(self.self!.imageHeight ?? 0)
+                    print("offers images list count \(self!.offersImagesList.count)")
+                    print("offers list count \(self!.offers.count)")
+
                       if self!.offersImagesList.count == self!.offers.count
                       {
                           self!.offersNumber += 35
                           complition(true)
                       }
-                  }
+                    }   }
               )
 
-          }}
+          }
+            
+        }
       
     
     

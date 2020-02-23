@@ -13,15 +13,14 @@ extension OffersViewController: OffersView {
     func showIndicator() {
         IHProgressHUD.show()
         
-        spinner.startAnimating()
+      //  spinner.startAnimating()
     }
     
     func hideIndicator() {
         DispatchQueue.global(qos: .default).async(execute: {
-            // time-consuming task
             IHProgressHUD.dismiss()
         })
-        spinner.stopAnimating()
+       // spinner.stopAnimating()
     }
     
     func getOffersSuccess() {
@@ -30,11 +29,10 @@ extension OffersViewController: OffersView {
         presenter.configure{
             finish in
             if finish{
+                self.collectionView.reloadData()
                 DispatchQueue.global(qos: .default).async(execute: {
-                    // time-consuming task
                     IHProgressHUD.dismiss()
                 })
-                self.collectionView.reloadData()
                 
             }
         }
