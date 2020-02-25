@@ -77,6 +77,7 @@ class MainCategoriesPresenter {
         }else{
             category = categories[index]
         }
+        
         guard let name = category.nameEng
             else { return }
 
