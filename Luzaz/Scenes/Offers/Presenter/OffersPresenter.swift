@@ -105,10 +105,16 @@ print(url)
                             complition(true)
                         }
                       }else{
-                    self!.imageHeight = image!.size.height / 5
+                        if !(image!.size.height < 200) {
+                    self!.imageHeight = image!.size.height / 4
+                        }else{
+                            self!.imageHeight = image!.size.height * 1.5
+
+                        }
                       self!.offersImagesList.append(self.self!.imageHeight ?? 0)
                     print("offers images list count \(self!.offersImagesList.count)")
                     print("offers list count \(self!.offers.count)")
+                        print("image height \(self!.imageHeight)")
 
                       if self!.offersImagesList.count == self!.offers.count
                       {
