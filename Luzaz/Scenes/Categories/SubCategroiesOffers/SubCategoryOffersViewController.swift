@@ -9,7 +9,7 @@
 import UIKit
 
 class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    private var presenter: SubCategoryOffersPresenter!
+    var presenter: SubCategoryOffersPresenter!
     
     @IBOutlet weak var tableView: UITableView!
     var country : String?
@@ -64,7 +64,7 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
         tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if (indexPath.row == presenter.getSubCategoryOffersCount() - 1) { //it's your last cell
+        if (indexPath.row == presenter.getSubCategoryOffersCount() - 1 &&  !presenter.isOfferEmpty) { //it's your last cell
                   pageNumber += 1
              presenter.viewDidLoad(subCategoryId : subCategoryId!,country:country! ,perPage:"10",page:String(pageNumber))
                   DispatchQueue.main.async {

@@ -13,7 +13,10 @@ extension SubCategoryOffersViewController:SubCategoryOffersView
 {
     
     func getSubCategoryOffersSuccess() {
+        presenter.isOfferEmpty = false
+
         tableView.reloadData()
+        
     }
     
     
