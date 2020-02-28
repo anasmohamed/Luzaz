@@ -22,7 +22,7 @@ enum LuzazRouter: URLRequestConvertible {
     case getConversationBuddies(userId : String)
     case getConversation(id: String,paging:String)
     case addToConversation(user :String ,with : String, speech: String)
-    case getSubCategoryOffers(mainCategoryId : String)
+    case getSubCategoryOffers(subCategoryId : String,country:String,perPage:String,page:String)
     case addUserFavorites(token : String, offerId : String)
     case getUserSelling(countryId : String,userId : String)
     case getCompetition
@@ -163,7 +163,6 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.password] = password
         case let .getSubCategories(mainCategoryid):
             params[NetworkingConstants.category] = mainCategoryid
-            
         case let .getConversationBuddies(userId):
             params[NetworkingConstants.user] = userId
         case let .getConversation(id,nopaging):
@@ -174,8 +173,12 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.messangerId] = user
             params[NetworkingConstants.with] = with
             params[NetworkingConstants.senderSpeech] = speech
-        case let .getSubCategoryOffers(mainCategoryId):
-            params[NetworkingConstants.mainCategoriesId] = mainCategoryId
+        case let .getSubCategoryOffers(subCategoryId,country,perPage,page):
+            params[NetworkingConstants.subcategories] = subCategoryId
+            params[NetworkingConstants.country] = country
+            params[NetworkingConstants.perPage] = perPage
+            params[NetworkingConstants.page] = page
+
         case let .addUserFavorites(token,offerId):
             params[NetworkingConstants.favoriteUserToken] = token
             params[NetworkingConstants.favoriteUserOffer] = offerId

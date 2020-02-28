@@ -25,10 +25,11 @@ struct NetworkingConstants {
     static let accept = "Accept"
     static let contentTypeJSON = "application/json"
     
-    
+//    http://api.luzaz.com/ar/mobile/getOffers?subcategories=YOUR_SUB_CAT_ID&country=COUNTRY_ID&perpage=10&page=PAGE_NUMBER
     static let getOffers = "getOffers"
     static let register = "register"
     static let login = "login"
+    
     static let getCategories = "getCategories"
     static let getSubCategories = "getSubCategories"
     static let getConversationBuddies = "getConversationBuddies"
@@ -59,6 +60,8 @@ struct NetworkingConstants {
     static let country = "country"
     static let nopaging = "nopaging"
     static let page = "page"
+    static let perPage = "perpage"
+
     static let title = "title"
     static let description = "description"
     static let price = "price"
@@ -103,7 +106,8 @@ struct NetworkingConstants {
     static let category = "category"
     static let categoryAttributes = "attributes"
     static let subcategoryId = "subcategory"
-    
+    static let subcategories = "subcategories"
+
     
     
     //Chat Parameter

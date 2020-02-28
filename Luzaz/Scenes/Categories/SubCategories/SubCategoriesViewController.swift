@@ -31,7 +31,7 @@ class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let subCategoryOffersVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoryOffersVC") as! SubCategoryOffersViewController
-        presenter.pushToDetails(viewController: subCategoryOffersVC,mainCategoryId!)
+        presenter.pushToDetails(viewController: subCategoryOffersVC,presenter.getSubCategoriesId(row: indexPath.row))
         subCategoryOffersVC.modalPresentationStyle = .fullScreen
 
         self.present(subCategoryOffersVC, animated: true, completion: nil)

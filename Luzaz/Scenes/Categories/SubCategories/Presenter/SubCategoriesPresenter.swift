@@ -12,6 +12,7 @@ class SubCategoriesPresenter {
     private weak var view: SubCategoriesView?
     private let subCategoriesInteractor: SubCategoriesInteractor!
     private var subCategories: [Category]
+    var language : String?
     init(view: SubCategoriesView) {
         self.view = view
         subCategoriesInteractor = SubCategoriesInteractor()
@@ -19,6 +20,8 @@ class SubCategoriesPresenter {
     }
     
     func viewDidLoad(mainCategoryId : String) {
+        language = UserDefaults.standard.string(forKey: "language")
+
         getSubCategories(mainCategoryId:mainCategoryId)
     }
     
@@ -55,14 +58,17 @@ class SubCategoriesPresenter {
     
     func configure(cell: UITableViewCell, for index: Int) {
         let category = subCategories[index]
+        if language == "en" {
+        cell.textLabel?.text =  category.nameEng
+        }else
+        {
+            cell.textLabel?.text =  category.name
+
+        }
         
-        guard let name = category.name
-            else { return }
-        
-        cell.textLabel?.text = name
     }
-    func pushToDetails(viewController : SubCategoryOffersViewController, _ mainCategoryId : String) {
-        viewController.mainCategoryId = mainCategoryId
+    func pushToDetails(viewController : SubCategoryOffersViewController, _ subCategoryId : String) {
+        viewController.subCategoryId = subCategoryId
         
     }
 

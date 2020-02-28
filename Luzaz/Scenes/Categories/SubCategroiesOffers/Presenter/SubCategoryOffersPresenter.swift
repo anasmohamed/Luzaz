@@ -18,14 +18,14 @@ class SubCategoryOffersPresenter {
         subCategoryOffers = [Offer]()
     }
     
-    func viewDidLoad(mainCategoryId:String) {
+    func viewDidLoad(subCategoryId : String,country: String,perPage:String,page:String) {
         
         //        getOffers(countryId:UserDefaults.standard.string(forKey: "country")!
-        getSubCategoryOffers(mainCategoryId:mainCategoryId)
+        getSubCategoryOffers(subCategoryId: subCategoryId, country: country, perPage:perPage , page: page)
     }
     
-    func getSubCategoryOffers(mainCategoryId : String) {
-        subCategoryoffersInteractor.getSubCategoryOffers(mainCategoryId:mainCategoryId) { [unowned self] (subCategoryOffers, error) in
+    func getSubCategoryOffers(subCategoryId : String,country: String,perPage:String,page:String) {
+        subCategoryoffersInteractor.getSubCategoryOffers(subCategoryId: subCategoryId, country: country, perPage:perPage , page: page){ [unowned self] (subCategoryOffers, error) in
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
