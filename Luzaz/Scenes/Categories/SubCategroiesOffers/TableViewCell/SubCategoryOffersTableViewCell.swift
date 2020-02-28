@@ -39,7 +39,9 @@ class SubCategoryOffersTableViewCell: UITableViewCell,SubCategoryOffersCellView 
         dateLbl.text = date
     }
     func showProductImage(image: String) {
-        productImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(image)"), placeholderImage: UIImage(named: "back.png"))
+        productImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
+
+        productImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(image)"))
     }
     func showProductNumber(number: String) {
         numberLbl.text = number
