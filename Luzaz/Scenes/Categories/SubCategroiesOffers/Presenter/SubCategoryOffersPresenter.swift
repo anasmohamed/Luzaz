@@ -12,6 +12,8 @@ class SubCategoryOffersPresenter {
     private let subCategoryoffersInteractor: SubCategoryOffersInteractor
     private var subCategoryoffer: Offer?
     private var subCategoryOffers: [Offer]
+    public var isOfferEmpty : Bool = false
+    
     init(view: SubCategoryOffersView) {
         self.view = view
         subCategoryoffersInteractor = SubCategoryOffersInteractor()
@@ -29,9 +31,16 @@ class SubCategoryOffersPresenter {
             if let error = error {
                 self.view?.showError(error: error.localizedDescription)
             } else {
-                guard let subCategoryOffers = subCategoryOffers else { return }
-                self.subCategoryOffers = subCategoryOffers
-                self.view?.getSubCategoryOffersSuccess()
+                if subCategoryOffers != nil{
+                    if subCategoryOffers!.count != 0{
+                        guard let subCategoryOffers = subCategoryOffers else { return }
+                        self.subCategoryOffers += subCategoryOffers
+                        self.view?.getSubCategoryOffersSuccess()
+                    }}
+                else{
+                    self.isOfferEmpty = true
+                }
+                
             }
         }
     }

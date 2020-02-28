@@ -16,20 +16,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="331" height="151"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6G-7d-8O4">
-                        <rect key="frame" x="139" y="39" width="42.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6G-7d-8O4">
+                        <rect key="frame" x="139" y="39" width="183" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oX-2u-NuO">
-                        <rect key="frame" x="139" y="75" width="38.5" height="20.5"/>
+                        <rect key="frame" x="139" y="74.5" width="38.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYx-uA-cy4">
-                        <rect key="frame" x="139" y="107" width="177" height="28"/>
+                        <rect key="frame" x="139" y="106.5" width="177" height="28.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxt-XZ-2cX">
-                        <rect key="frame" x="141" y="101" width="181" height="1"/>
+                        <rect key="frame" x="141" y="100.5" width="181" height="1"/>
                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="DUJ-sz-Y9h"/>
@@ -67,6 +67,7 @@
                     <constraint firstItem="k6G-7d-8O4" firstAttribute="leading" secondItem="uIK-EI-kq3" secondAttribute="leading" id="Pkq-e2-rWM"/>
                     <constraint firstItem="4oX-2u-NuO" firstAttribute="top" secondItem="k6G-7d-8O4" secondAttribute="bottom" constant="15" id="RxC-Sv-6Qx"/>
                     <constraint firstItem="BzY-9V-L2Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="TP1-GM-mip"/>
+                    <constraint firstAttribute="trailing" secondItem="k6G-7d-8O4" secondAttribute="trailing" constant="9" id="aSB-ge-9is"/>
                     <constraint firstItem="k6G-7d-8O4" firstAttribute="leading" secondItem="BzY-9V-L2Z" secondAttribute="trailing" constant="8" id="bce-Qx-u8e"/>
                     <constraint firstItem="Gxt-XZ-2cX" firstAttribute="leading" secondItem="BzY-9V-L2Z" secondAttribute="trailing" constant="10" id="gjU-Fz-G8X"/>
                     <constraint firstAttribute="bottom" secondItem="BzY-9V-L2Z" secondAttribute="bottom" constant="8" id="hT7-cH-cnm"/>

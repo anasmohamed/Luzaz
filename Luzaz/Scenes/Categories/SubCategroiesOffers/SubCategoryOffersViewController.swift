@@ -63,7 +63,17 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
     func getCountries() {
         tableView.reloadData()
     }
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (indexPath.row == presenter.getSubCategoryOffersCount() - 1) { //it's your last cell
+                  pageNumber += 1
+             presenter.viewDidLoad(subCategoryId : subCategoryId!,country:country! ,perPage:"10",page:String(pageNumber))
+                  DispatchQueue.main.async {
+                      self.tableView.reloadData()
+                      self.presenter.isOfferEmpty = true
+                  }
+                  
+              }
+    }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
