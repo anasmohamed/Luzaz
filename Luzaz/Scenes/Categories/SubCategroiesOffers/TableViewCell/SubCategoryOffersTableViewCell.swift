@@ -9,8 +9,14 @@
 import UIKit
 import SDWebImage
 class SubCategoryOffersTableViewCell: UITableViewCell,SubCategoryOffersCellView {
+    func setProductId(productId: String) {
+        productIdLabel.text = "#" + productId
+
+    }
+    
     @IBOutlet weak var productNameLbl: UILabel!
 
+    @IBOutlet weak var productIdLabel: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var numberLbl: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
@@ -35,4 +41,5 @@ class SubCategoryOffersTableViewCell: UITableViewCell,SubCategoryOffersCellView 
     func showProductNumber(number: String) {
         numberLbl.text = number
     }
+   
 }

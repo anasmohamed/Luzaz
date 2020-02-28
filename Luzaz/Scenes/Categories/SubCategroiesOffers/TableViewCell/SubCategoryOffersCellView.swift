@@ -12,5 +12,7 @@ protocol SubCategoryOffersCellView {
     func showProductName(name : String)
     func showProductNumber(number : String)
     func showProductDate(date : String)
+    func setProductId(productId:String)
+    
 
 }

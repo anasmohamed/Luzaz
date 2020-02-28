@@ -45,13 +45,15 @@ class SubCategoryOffersPresenter {
         guard let image = subCategoryoffer.image
             ,let productName = subCategoryoffer.title
             ,let productPrice = subCategoryoffer.price
-            
+            ,let productId = subCategoryoffer.offerId
+            ,let productDate = subCategoryoffer.date
             else { return }
         
         cell.showProductImage(image: image)
         cell.showProductNumber(number: productPrice)
         cell.showProductName(name: productName)
-        
+        cell.setProductId(productId: productId)
+        cell.showProductDate(date: productDate)
     }
     func pushToDetails(viewController : OffersDetailsViewController, _ index : Int) {
         viewController.offer = subCategoryOffers[index]
