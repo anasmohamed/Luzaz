@@ -1629,10 +1629,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="neD-e1-YYP">
-                                        <rect key="frame" x="93" y="22" width="228" height="39"/>
+                                        <rect key="frame" x="93" y="22" width="228" height="28"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="792-YG-8sp" customClass="FaveButton" customModule="FaveButton">
+                                        <rect key="frame" x="376" y="21" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="L1B-5Y-7M8"/>
+                                            <constraint firstAttribute="width" constant="30" id="ro1-Oi-Usy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="heart"/>
+                                        <connections>
+                                            <action selector="addToFavorite:" destination="Y8y-At-cul" eventType="touchUpInside" id="Bf1-1l-b21"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-vY-FeF">
-                                        <rect key="frame" x="23" y="30" width="30" height="30"/>
+                                        <rect key="frame" x="21" y="21" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="vYd-gk-G3M"/>
                                             <constraint firstAttribute="height" constant="30" id="voT-R6-fN9"/>
@@ -1640,32 +1651,20 @@
                                         <state key="normal" image="back-arrow"/>
                                         <connections>
                                             <action selector="backBtnWasPressed:" destination="Y8y-At-cul" eventType="touchUpInside" id="vHy-VF-55M"/>
-                                            <action selector="menuBtnWasPressed:" destination="wFT-1i-NGK" eventType="touchUpInside" id="fYx-ye-5qT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="792-YG-8sp" customClass="FaveButton" customModule="FaveButton">
-                                        <rect key="frame" x="366" y="20" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="L1B-5Y-7M8"/>
-                                            <constraint firstAttribute="width" constant="40" id="ro1-Oi-Usy"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="heart"/>
-                                        <connections>
-                                            <action selector="addToFavorite:" destination="Y8y-At-cul" eventType="touchUpInside" id="Bf1-1l-b21"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="neD-e1-YYP" firstAttribute="leading" secondItem="Imc-vY-FeF" secondAttribute="trailing" constant="40" id="0Fj-ez-P0v"/>
-                                    <constraint firstAttribute="bottom" secondItem="neD-e1-YYP" secondAttribute="bottom" constant="11" id="1hg-xI-hJF"/>
-                                    <constraint firstItem="Imc-vY-FeF" firstAttribute="top" secondItem="oXq-Ev-w5A" secondAttribute="top" constant="30" id="7xF-6a-U6w"/>
+                                    <constraint firstItem="neD-e1-YYP" firstAttribute="leading" secondItem="Imc-vY-FeF" secondAttribute="trailing" constant="42" id="0Fj-ez-P0v"/>
+                                    <constraint firstItem="neD-e1-YYP" firstAttribute="centerY" secondItem="oXq-Ev-w5A" secondAttribute="centerY" id="0pX-7w-eEa"/>
+                                    <constraint firstItem="Imc-vY-FeF" firstAttribute="centerY" secondItem="oXq-Ev-w5A" secondAttribute="centerY" id="Bm7-U7-nVY"/>
                                     <constraint firstItem="neD-e1-YYP" firstAttribute="top" secondItem="oXq-Ev-w5A" secondAttribute="top" constant="22" id="DC4-F7-SqR"/>
-                                    <constraint firstItem="792-YG-8sp" firstAttribute="bottom" secondItem="Imc-vY-FeF" secondAttribute="bottom" id="Dra-lg-IDm"/>
                                     <constraint firstAttribute="height" constant="72" id="Gom-DT-oFE"/>
-                                    <constraint firstItem="Imc-vY-FeF" firstAttribute="leading" secondItem="oXq-Ev-w5A" secondAttribute="leading" constant="23" id="K9i-3y-Oqf"/>
+                                    <constraint firstItem="Imc-vY-FeF" firstAttribute="leading" secondItem="oXq-Ev-w5A" secondAttribute="leading" constant="21" id="K9i-3y-Oqf"/>
                                     <constraint firstItem="neD-e1-YYP" firstAttribute="centerX" secondItem="oXq-Ev-w5A" secondAttribute="centerX" id="gd3-YB-dt1"/>
                                     <constraint firstItem="792-YG-8sp" firstAttribute="trailing" secondItem="oXq-Ev-w5A" secondAttribute="trailingMargin" id="klM-lX-lxO"/>
+                                    <constraint firstItem="792-YG-8sp" firstAttribute="centerY" secondItem="oXq-Ev-w5A" secondAttribute="centerY" id="pt9-BJ-Smz"/>
                                 </constraints>
                             </view>
                         </subviews>
