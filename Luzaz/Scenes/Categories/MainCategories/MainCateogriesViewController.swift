@@ -35,9 +35,9 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
        {
-           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
-                      offersVC.modalPresentationStyle = .fullScreen
-                      self.present(offersVC,animated:true,completion:nil)
+          let homeViewController = ContainerVC()
+           homeViewController.modalPresentationStyle = .fullScreen
+                 present(homeViewController, animated: true, completion: nil)
        }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

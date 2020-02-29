@@ -51,9 +51,9 @@ UISearchBarDelegate,UISearchControllerDelegate{
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
        {
-           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
-                      offersVC.modalPresentationStyle = .fullScreen
-                      self.present(offersVC,animated:true,completion:nil)
+          let homeViewController = ContainerVC()
+           homeViewController.modalPresentationStyle = .fullScreen
+                 present(homeViewController, animated: true, completion: nil)
        }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)

@@ -94,9 +94,9 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
        {
-           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
-                      offersVC.modalPresentationStyle = .fullScreen
-                      self.present(offersVC,animated:true,completion:nil)
+          let homeViewController = ContainerVC()
+           homeViewController.modalPresentationStyle = .fullScreen
+                 present(homeViewController, animated: true, completion: nil)
        }
     @IBAction func finishBtnWasPressed(_ sender: Any) {
         if !(emailTextView.text?.isEmpty)! && !(fullNameTextView.text?.isEmpty)! && !(mobileNumberTextView.text!.isEmpty && isEditProduct) {
