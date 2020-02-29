@@ -18,12 +18,23 @@ class ForgetPasswordViewController: UIViewController, ChangePasswordView{
       }
       
       func changePasswordSuccess(message:String) {
-          showError(error:message)
-          let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        showToast(controller: self,message:message,seconds: 2.0)
+          let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "NewPasswordViewController") as! NewPasswordViewController
           present(loginVC, animated: true, completion: nil)
       }
       
-      
+      func showToast(controller: UIViewController, message : String, seconds: Double) {
+          let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+          alert.view.backgroundColor = UIColor.black
+          alert.view.alpha = 0.6
+          alert.view.layer.cornerRadius = 15
+
+          controller.present(alert, animated: true)
+
+          DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+              alert.dismiss(animated: true)
+          }
+      }
       
       func showError(error: String) {
         let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)

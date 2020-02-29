@@ -13,6 +13,9 @@
 		350BD34823EC9F0C00498A1E /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350BD34623EC9F0B00498A1E /* CollectionReusableView.swift */; };
 		350BD34923EC9F0C00498A1E /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 350BD34723EC9F0C00498A1E /* CollectionReusableView.xib */; };
 		3510AC2123EDB2F600D1E3A7 /* OffersLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510AC2023EDB2F600D1E3A7 /* OffersLayout.swift */; };
+		3510F891240A82CE0066E875 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510F890240A82CE0066E875 /* NewPasswordViewController.swift */; };
+		3510F893240A872D0066E875 /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510F892240A872D0066E875 /* ResetPasswordPresenter.swift */; };
+		3510F895240A87A10066E875 /* RestetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510F894240A87A10066E875 /* RestetPasswordView.swift */; };
 		352F8C25238023880047279D /* AlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F8C24238023880047279D /* AlbumImage.swift */; };
 		3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3576F68D2368CD9600E3AB38 /* Localizable.strings */; };
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
@@ -211,6 +214,9 @@
 		350BD34623EC9F0B00498A1E /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		350BD34723EC9F0C00498A1E /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		3510AC2023EDB2F600D1E3A7 /* OffersLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersLayout.swift; sourceTree = "<group>"; };
+		3510F890240A82CE0066E875 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		3510F892240A872D0066E875 /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
+		3510F894240A87A10066E875 /* RestetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestetPasswordView.swift; sourceTree = "<group>"; };
 		352F8C24238023880047279D /* AlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImage.swift; sourceTree = "<group>"; };
 		3576F68C2368CD9600E3AB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		357A152C236B6BD9008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -1189,6 +1195,7 @@
 				CCE4992D233B5F0A0030959D /* ChangePasswordViewController+PresenterDelegate.swift */,
 				CCE49925233B5B430030959D /* ChangePasswordViewController.swift */,
 				359D0B4E239FD9F200AA4C94 /* ForgetPasswordViewController.swift */,
+				3510F890240A82CE0066E875 /* NewPasswordViewController.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -1206,6 +1213,8 @@
 			children = (
 				CCE49929233B5CE30030959D /* ChangePasswordPresenter.swift */,
 				CCE4992B233B5D040030959D /* ChangePasswordView.swift */,
+				3510F892240A872D0066E875 /* ResetPasswordPresenter.swift */,
+				3510F894240A87A10066E875 /* RestetPasswordView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1557,6 +1566,7 @@
 				CC7269B0233AC614006B61DD /* OffersVC+SearchDelegate.swift in Sources */,
 				CC7269C1233AC614006B61DD /* SellYourItemInteractor.swift in Sources */,
 				CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */,
+				3510F895240A87A10066E875 /* RestetPasswordView.swift in Sources */,
 				CC72698A233AC613006B61DD /* CompetitionPresenter.swift in Sources */,
 				CC7269C8233AC614006B61DD /* SellYourItemThirdViewController.swift in Sources */,
 				CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */,
@@ -1591,8 +1601,10 @@
 				35819623235738390029D669 /* LayoutOption.swift in Sources */,
 				CCCD733D23315B97005823D6 /* FavImage.swift in Sources */,
 				CC86961922F4F61C00E9F14D /* ProductViewController.swift in Sources */,
+				3510F891240A82CE0066E875 /* NewPasswordViewController.swift in Sources */,
 				CC726977233AC613006B61DD /* SubCategoryOffersCellView.swift in Sources */,
 				CC7269CE233AC614006B61DD /* FavoriteOffersCellView.swift in Sources */,
+				3510F893240A872D0066E875 /* ResetPasswordPresenter.swift in Sources */,
 				CC7269AE233AC614006B61DD /* OffersDetailesView.swift in Sources */,
 				CC726996233AC613006B61DD /* CountryTableViewCell.swift in Sources */,
 				CC726961233AC613006B61DD /* RegisterViewController.swift in Sources */,

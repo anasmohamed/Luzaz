@@ -14,7 +14,7 @@ enum LuzazRouter: URLRequestConvertible {
     
     case getOffers(country:String,page: String)
     case getMoreFromThisSeller(country:String)
-
+    
     case login(email: String, password: String)
     case register(user: User)
     case getMainCategories()
@@ -31,6 +31,8 @@ enum LuzazRouter: URLRequestConvertible {
     case logoutUser(user : String)
     case getUserFavorites(token : String)
     case setPasswordByToken(token:String,password : String,rePassword:String)
+    case setPasswordByEmailToken(token:String,password : String,rePassword:String)
+    
     case deleteOffer(token : String , offer: String)
     case deleteFavoriteOffer(token : String , offer: String)
     case getUser(id:String)
@@ -45,8 +47,8 @@ enum LuzazRouter: URLRequestConvertible {
         switch self {
         case .getOffers:
             return NetworkingConstants.getOffers
-    case .getMoreFromThisSeller:
-                       return NetworkingConstants.getOffers
+        case .getMoreFromThisSeller:
+            return NetworkingConstants.getOffers
         case .login:
             return NetworkingConstants.login
         case .register:
@@ -97,13 +99,15 @@ enum LuzazRouter: URLRequestConvertible {
             return  NetworkingConstants.addReportOffer
         case .getResetPasswordTokenByEmail:
             return NetworkingConstants.getResetPasswordTokenByEmail
+        case .setPasswordByEmailToken:
+            return NetworkingConstants.getResetPasswordTokenByEmail
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer,.deleteOfferAlbumImage,.addReportOffer,.getResetPasswordTokenByEmail,.getMoreFromThisSeller:
+        case .getOffers,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,. getGovernorates,.getBrands,.register,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer,.deleteOfferAlbumImage,.addReportOffer,.getResetPasswordTokenByEmail,.getMoreFromThisSeller,.setPasswordByEmailToken:
             return .get
         case .addToConversation:
             return .post
@@ -150,7 +154,7 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.page] = page
         case let .getMoreFromThisSeller(country):
             params[NetworkingConstants.country] = country
-
+            
         case let .register(user):
             params[NetworkingConstants.countryId] = user.countryId
             params[NetworkingConstants.fullName] = user.fullName
@@ -178,7 +182,7 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.country] = country
             params[NetworkingConstants.perPage] = perPage
             params[NetworkingConstants.page] = page
-
+            
         case let .addUserFavorites(token,offerId):
             params[NetworkingConstants.favoriteUserToken] = token
             params[NetworkingConstants.favoriteUserOffer] = offerId
@@ -207,6 +211,11 @@ enum LuzazRouter: URLRequestConvertible {
             params[NetworkingConstants.changePasswordToken] = token
             params[NetworkingConstants.changePasswordNewPassword] = password
             params[NetworkingConstants.changePasswordConPassword] = rePassword
+        case let .setPasswordByEmailToken(token, password, rePassword):
+            params[NetworkingConstants.changePasswordToken] = token
+            params[NetworkingConstants.changePasswordNewPassword] = password
+            params[NetworkingConstants.changePasswordConPassword] = rePassword
+            
         case let .getGovernorates(country):
             params[NetworkingConstants.getGovernoratesCountry] = country
         case let .getBrands(gategory):
@@ -268,7 +277,7 @@ enum LuzazRouter: URLRequestConvertible {
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = httpHeaders
         switch self {
-        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer,.deleteOfferAlbumImage,.addReportOffer,.getResetPasswordTokenByEmail,.getMoreFromThisSeller:
+        case .getOffers,.register,.login,.getMainCategories,.getSubCategories,.getConversationBuddies,.getConversation,.addToConversation,.getSubCategoryOffers,.addUserFavorites,.getUserSelling,.getCompetition,.addCompetitionEnrolment,.getUserOrders,.getUserFavorites,.logoutUser,.setPasswordByToken,.getGovernorates,.getBrands,.deleteOffer,.deleteFavoriteOffer,.getUser,.updateOffer,.deleteOfferAlbumImage,.addReportOffer,.getResetPasswordTokenByEmail,.getMoreFromThisSeller,.setPasswordByEmailToken:
             
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
             
