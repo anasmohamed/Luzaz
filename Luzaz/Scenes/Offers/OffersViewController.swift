@@ -28,9 +28,14 @@ UISearchBarDelegate,UISearchControllerDelegate{
     var language : String?
     var countryId : String?
      var pageNumber = 0;
+    
+    @IBOutlet weak var logoImageView: UIImageView!
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
         setupCollectionView()
         if let layout = collectionView.collectionViewLayout as? OffersLayout {
                       layout.delegate = self
@@ -44,6 +49,12 @@ UISearchBarDelegate,UISearchControllerDelegate{
         
        
     }
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         if UIDevice.current.orientation.isLandscape {

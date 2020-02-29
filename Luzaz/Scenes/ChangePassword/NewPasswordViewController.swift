@@ -19,14 +19,23 @@ class NewPasswordViewController: UIViewController ,ResetPasswordView{
     
     @IBOutlet weak var confirmPasswordTextFiled: UITextField!
     
+    @IBOutlet weak var logoImageView: UIImageView!
     var email : String?
     var presenter: ResetPasswordPresenter!
 
        override func viewDidLoad() {
            super.viewDidLoad()
           presenter = ResetPasswordPresenter(view:self)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
        }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     @IBAction func resetPasswordBtnWasPressed(_ sender: Any) {
         
         if !passwordTextField.text!.isEmpty && !confirmPasswordTextFiled.text!.isEmpty

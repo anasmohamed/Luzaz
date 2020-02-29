@@ -13,6 +13,8 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
     @IBOutlet weak var levelsTextView: UITextField!
     @IBOutlet weak var areaTextView: UITextField!
     @IBOutlet weak var bathroomsNumberTextView: UITextField!
+    
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var bedroomsNumberTextView: UITextField!
     var presenter : SellYourItemPresenter!
     var offerImage : UIImage?
@@ -31,10 +33,17 @@ class SellYourItemThirdViewController: UIViewController,SellYourItemView {
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
         self.hideKeyboardWhenTappedAround()
-
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)

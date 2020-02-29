@@ -13,6 +13,7 @@ import CoreLocation
 class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLocationManagerDelegate{
     let locationManager = CLLocationManager()
     
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var itemDescritionTextField: UITextView!
     @IBOutlet weak var itemTitleTextView: UITextField!
@@ -55,6 +56,9 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
         
         super.viewDidLoad()
         presenter = SellYourItemPresenter(view: self)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
         self.hideKeyboardWhenTappedAround()
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
@@ -97,7 +101,12 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
         long = String(locValue.longitude)
         lat = String(locValue.latitude)
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         

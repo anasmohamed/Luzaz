@@ -15,6 +15,8 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     var presenter: ChangePasswordPresenter!
 
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        presenter = ChangePasswordPresenter(view:self)

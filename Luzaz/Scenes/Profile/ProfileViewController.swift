@@ -29,6 +29,7 @@ class ProfileViewController: UIViewController,ProfileView {
     @IBOutlet weak var counrtyStackView: UIStackView!
     @IBOutlet weak var emailStackView: UIStackView!
     
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var phoneStackView: UIStackView!
     var prefs = UserDefaults.standard
     internal func logoutSuccess() {
@@ -72,7 +73,9 @@ class ProfileViewController: UIViewController,ProfileView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = ProfilePresenter(view : self)
-       
+       let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                 logoImageView.isUserInteractionEnabled = true
+                 logoImageView.addGestureRecognizer(tapGestureRecognizer)
         
         counrty = UserDefaults.standard.string(forKey: "country") ?? ""
         userName = UserDefaults.standard.string(forKey: "fullName") ?? ""
@@ -100,6 +103,7 @@ class ProfileViewController: UIViewController,ProfileView {
         }
         getCountryImage()
     }
+    
     func getCountryImage()
     {
         if counrty == "1"{
@@ -133,5 +137,10 @@ class ProfileViewController: UIViewController,ProfileView {
         
         dismiss(animated: true, completion: nil)
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
 }

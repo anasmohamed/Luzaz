@@ -18,6 +18,7 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
     var isChooseFromCategoryList = false
     var isChooseFromSubCategoryList = false
     var isChooseFrombrandList = false
+    @IBOutlet weak var logoImageView: UIImageView!
     
     @IBOutlet weak var brandStackView: UIStackView!
     @IBOutlet weak var subCategoryStackView: UIStackView!
@@ -60,12 +61,20 @@ class SellYourItemSecondViewController: UIViewController,MainCategoriesView,SubC
         brandsPresenter = SellYourItemPresenter(view :self)
         presenter.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     func getMainCategoriesSuccess() {
         categoryDropList.reloadAllComponents()
         
     }
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     func getSubCategoriesSuccess() {
         subCategoryPickerView.reloadAllComponents()
     }

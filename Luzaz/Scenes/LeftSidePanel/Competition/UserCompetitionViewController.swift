@@ -9,6 +9,9 @@
 import UIKit
 import SDWebImage
 class UserCompetitionViewController: UIViewController ,CompetitionView{
+    
+    
+    @IBOutlet weak var logoImageView: UIImageView!
     func displayQuestion(question: String, arQuesetion: String) {
         
     }

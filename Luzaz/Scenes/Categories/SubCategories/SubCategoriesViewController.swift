@@ -10,14 +10,24 @@ import UIKit
 
 class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var presenter : SubCategoriesPresenter!
+    
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     var mainCategoryId : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SubCategoriesPresenter(view : self)
-     
+     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+               logoImageView.isUserInteractionEnabled = true
+               logoImageView.addGestureRecognizer(tapGestureRecognizer)
     }
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewDidLoad(mainCategoryId: mainCategoryId!)

@@ -13,6 +13,7 @@ class MoreFromThisSellerViewController: UIViewController ,UITableViewDelegate, U
         
     }
     
+    @IBOutlet weak var logoImageView: UIImageView!
     var presenter: OfferDetailesPresenter!
     var reseller_id:String?
     @IBOutlet weak var tableView: UITableView!

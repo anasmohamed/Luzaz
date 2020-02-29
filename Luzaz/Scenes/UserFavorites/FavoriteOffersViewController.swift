@@ -19,12 +19,18 @@ class FavoriteOffersViewController: UIViewController,UITableViewDelegate,UITable
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     var presenter: FavoriteOffersPresneter!
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     var token : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         presenter = FavoriteOffersPresneter(view: self)
         token = UserDefaults.standard.string(forKey: "token")!
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -44,7 +50,12 @@ class FavoriteOffersViewController: UIViewController,UITableViewDelegate,UITable
     func setupTableView() {
         tableView.register(UINib(nibName: "FavoriteOffersTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoriteOffersTableViewCell")
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.getFavoriteOffersCount()
     }

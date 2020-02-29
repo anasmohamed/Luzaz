@@ -16,14 +16,23 @@ class SubCategoryOffersViewController: UIViewController,UITableViewDelegate,UITa
     var subCategoryId : String?
     var pageNumber = 0;
 
+    @IBOutlet weak var logoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
       country = UserDefaults.standard.string(forKey: "country")
         presenter = SubCategoryOffersPresenter(view: self)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view.
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewDidLoad(subCategoryId : subCategoryId!,country:country! ,perPage:"10",page:String(pageNumber))

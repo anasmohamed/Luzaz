@@ -10,6 +10,7 @@ import UIKit
 
 class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var logoImageView: UIImageView!
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -31,11 +32,20 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         presenter = MyProductPresenter(view : self)
         displayBackground()
         token = UserDefaults.standard.string(forKey: "token")!
+             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                       logoImageView.isUserInteractionEnabled = true
+                       logoImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.viewDidLoad()
     }
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     func setupTableView() {
         
         tableView.register(UINib(nibName: "MyProductTableViewCell", bundle: nil), forCellReuseIdentifier: "MyProductTableViewCell")

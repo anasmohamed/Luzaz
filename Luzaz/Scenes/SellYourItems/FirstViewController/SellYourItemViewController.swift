@@ -15,6 +15,7 @@ protocol ImageDeletable {
 }
 class SellYourItemViewController: UIViewController ,UINavigationControllerDelegate,SellYourItemFirstView,OpalImagePickerControllerDelegate,UIImagePickerControllerDelegate{
     
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var sellectdOfferImagesCollectionView: UICollectionView!
     internal func showIndicator() {
         spinner.startAnimating()
@@ -77,7 +78,9 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         sellectdOfferImagesCollectionView.dataSource = self
         sellectdOfferImagesCollectionView.layer.borderWidth = 1
         sellectdOfferImagesCollectionView.layer.borderColor = UIColor.black.cgColor
-
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
         self.hideKeyboardWhenTappedAround()
         if isEditProduct
         {
@@ -141,6 +144,12 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         }
         
     }
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     func getGovernoratesSuccess() {
         cityPickerView.reloadAllComponents()
     }

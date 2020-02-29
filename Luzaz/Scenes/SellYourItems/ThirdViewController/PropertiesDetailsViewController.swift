@@ -23,6 +23,7 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     var villa: String?
     var isEditProduct : Bool = false
 
+    @IBOutlet weak var logoImageView: UIImageView!
     
     var incomeCodition:String?
     var incomeDiscription :String?

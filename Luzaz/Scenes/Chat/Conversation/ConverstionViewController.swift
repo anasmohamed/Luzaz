@@ -11,6 +11,9 @@ import UIKit
 class ConverstionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UITextFieldDelegate{
     @IBOutlet weak var messageTextView: UITextField!
     var presenter : ConversationPresenter!
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     @IBOutlet weak var tableView: UITableView!
     var id : String?
     var userId : String?
@@ -21,7 +24,9 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         self.hideKeyboardWhenTappedAround()
         userId = UserDefaults.standard.string(forKey: "userId")
         tableView.rowHeight = UITableView.automaticDimension
-        
+             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                       logoImageView.isUserInteractionEnabled = true
+                       logoImageView.addGestureRecognizer(tapGestureRecognizer)
         tableView.estimatedRowHeight = 300
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
@@ -32,6 +37,13 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         }
         
     }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewDidLoad(id: id!,paging: "nopaging")

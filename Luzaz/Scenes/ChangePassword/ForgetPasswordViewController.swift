@@ -9,6 +9,8 @@
 import UIKit
 
 class ForgetPasswordViewController: UIViewController, ChangePasswordView{
+    
+    @IBOutlet weak var logoImageView: UIImageView!
     func showIndicator() {
           spinner.startAnimating()
       }
@@ -51,10 +53,18 @@ class ForgetPasswordViewController: UIViewController, ChangePasswordView{
     override func viewDidLoad() {
         super.viewDidLoad()
         peresnter = ChangePasswordPresenter(view:self)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                  logoImageView.isUserInteractionEnabled = true
+                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     @IBAction func forgetPasswordBtnWasPressed(_ sender: Any) {
         if !emailTextField.text!.isEmpty
         {

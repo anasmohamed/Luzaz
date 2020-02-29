@@ -21,6 +21,7 @@ func color(_ rgbColor: Int) -> UIColor{
 
 class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButtonDelegate,FSPagerViewDelegate,FSPagerViewDataSource{
 
+    @IBOutlet weak var logoImageView: UIImageView!
     var imageAlbum = ImagesAlbum()
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         if offer.album.count == 0
@@ -79,6 +80,9 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+           logoImageView.isUserInteractionEnabled = true
+           logoImageView.addGestureRecognizer(tapGestureRecognizer)
         self.heartButton?.setSelected(selected: true, animated: false)
         imageLable()
         
@@ -116,7 +120,13 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
 
         // Do any additional setup after loading the view.
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                   offersVC.modalPresentationStyle = .fullScreen
+                   self.present(offersVC,animated:true,completion:nil)
+    }
+
     @IBAction func shareBtnWasPressed(_ sender: Any) {
         let infoToShare = [offer?.description,offer.image,offer.reseller_name]
         let activityViewController = UIActivityViewController(activityItems: infoToShare as [Any], applicationActivities: nil)

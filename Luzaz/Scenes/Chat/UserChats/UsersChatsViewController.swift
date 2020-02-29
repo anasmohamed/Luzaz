@@ -11,13 +11,16 @@ import UIKit
 class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     private var presenter: UsersChatsPresenter!
     
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         presenter = UsersChatsPresenter(view: self)
-        
+             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                       logoImageView.isUserInteractionEnabled = true
+                       logoImageView.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view.
     }
     
@@ -25,7 +28,12 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
         super.viewWillAppear(animated)
         presenter.viewDidLoad()
     }
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+       {
+           let offersVC = storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+                      offersVC.modalPresentationStyle = .fullScreen
+                      self.present(offersVC,animated:true,completion:nil)
+       }
     func setupTableView() {
         tableView.register(UINib(nibName: "UserChatsTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatsTableViewCell")
     }
