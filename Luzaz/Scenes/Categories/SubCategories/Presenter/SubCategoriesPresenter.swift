@@ -62,6 +62,8 @@ class SubCategoriesPresenter {
         cell.textLabel?.text =  category.nameEng
         }else
         {
+            cell.textLabel?.textAlignment = .right
+
             cell.textLabel?.text =  category.name
 
         }

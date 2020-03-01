@@ -2361,7 +2361,7 @@
                         <outlet property="CategoryDropList" destination="r9K-pN-qeD" id="4Tu-RN-LAH"/>
                         <outlet property="brandPickerView" destination="dNh-mb-Kxm" id="1cP-vS-Quh"/>
                         <outlet property="brandStackView" destination="8s3-r0-ICD" id="Jgg-20-Zpe"/>
-                        <outlet property="logoImageView" destination="4Av-L0-VxL" id="H7d-hR-2rx"/>
+                        <outlet property="logoImageView" destination="4Av-L0-VxL" id="boK-8d-6iF"/>
                         <outlet property="nextBtn" destination="GCh-YC-HrO" id="yhJ-GP-dl1"/>
                         <outlet property="spinner" destination="DKs-nV-fpG" id="8JE-Xo-bHu"/>
                         <outlet property="subCategoryPickerView" destination="mGx-3h-jDT" id="oVH-cK-Ww2"/>
@@ -5099,7 +5099,7 @@
                                 <rect key="frame" x="0.0" y="71" width="414" height="665"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubCategoryCell" rowHeight="70" id="net-eG-hCF">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubCategoryCell" rowHeight="70" id="net-eG-hCF">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="net-eG-hCF" id="LB4-J6-h1o">
@@ -5246,7 +5246,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-u3-OTM">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x8p-sK-X8b"/>
                                         </constraints>

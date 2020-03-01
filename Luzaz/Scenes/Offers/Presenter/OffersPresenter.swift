@@ -93,9 +93,6 @@ class OffersPresenter{
                   options: .highPriority, // or .highPriority
                   progress: nil,
                   completed: { [weak self] (image, data, error, cacheType, finished, url) in
-print(url)
-                    print(error)
-                    
                       if error != nil || image == nil
                       {
                         self!.offersImagesList.append(0)
@@ -105,8 +102,8 @@ print(url)
                             complition(true)
                         }
                       }else{
-                        if !(image!.size.height < 200) {
-                    self!.imageHeight = image!.size.height / 4
+                        if !(image!.size.height < 150) {
+                    self!.imageHeight = image!.size.height / 5
                         }else{
                             self!.imageHeight = image!.size.height * 1.5
 
