@@ -18,16 +18,16 @@ class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SubCategoriesPresenter(view : self)
-     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-               logoImageView.isUserInteractionEnabled = true
-               logoImageView.addGestureRecognizer(tapGestureRecognizer)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        logoImageView.isUserInteractionEnabled = true
+        logoImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-       {
-           let homeViewController = ContainerVC()
-           homeViewController.modalPresentationStyle = .fullScreen
-                 present(homeViewController, animated: true, completion: nil)
-       }
+    {
+        let homeViewController = ContainerVC()
+        homeViewController.modalPresentationStyle = .fullScreen
+        present(homeViewController, animated: true, completion: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewDidLoad(mainCategoryId: mainCategoryId!)
@@ -43,7 +43,7 @@ class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableV
         let subCategoryOffersVC = storyboard?.instantiateViewController(withIdentifier: "SubCategoryOffersVC") as! SubCategoryOffersViewController
         presenter.pushToDetails(viewController: subCategoryOffersVC,presenter.getSubCategoriesId(row: indexPath.row))
         subCategoryOffersVC.modalPresentationStyle = .fullScreen
-
+        
         self.present(subCategoryOffersVC, animated: true, completion: nil)
     }
     
@@ -57,7 +57,7 @@ class SubCategoriesViewController: UIViewController,UITableViewDelegate,UITableV
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     @IBAction func backBtnWasPressed(_ sender: Any) {
         AppDelegate.getAppDelegate().MenuContainerVC.toggleLeftPane()
         dismiss(animated: true, completion: nil)

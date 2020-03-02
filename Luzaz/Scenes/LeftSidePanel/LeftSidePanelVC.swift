@@ -173,7 +173,7 @@ class LeftSidePanelVC: UIViewController{
         case "2":
             return "emirates"
         case "5":
-            return "saudi_arabia"
+            return "saudi arabia"
         default:
             return "libya"
         }

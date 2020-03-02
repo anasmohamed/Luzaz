@@ -58,13 +58,21 @@ class SubCategoriesPresenter {
     
     func configure(cell: UITableViewCell, for index: Int) {
         let category = subCategories[index]
+        cell.textLabel?.textAlignment = .natural
         if language == "en" {
         cell.textLabel?.text =  category.nameEng
+            
         }else
         {
-            cell.textLabel?.textAlignment = .right
 
             cell.textLabel?.text =  category.name
+
+        }
+        if !((cell.textLabel?.text!.isArabic)!)
+        {
+            cell.textLabel?.textAlignment = .left
+        }else{
+            cell.textLabel?.textAlignment = .right
 
         }
         
@@ -75,3 +83,10 @@ class SubCategoriesPresenter {
     }
 
 }
+extension String {
+    var isArabic: Bool {
+        let predicate = NSPredicate(format: "SELF MATCHES %@", "(?s).*\\p{Arabic}.*")
+        return predicate.evaluate(with: self)
+    }
+}
+
