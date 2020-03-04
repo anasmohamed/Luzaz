@@ -60,3 +60,9 @@
 "Are You Sure You Want To Log out?" = "هل انت متاكد من تسجيل الخروج؟";
 "Yes" = "نعم";
 "No" = "لا";
+
+"please fill all texts" = "من فضلك اكتب البيانات المطلوبة";
+
+"please enter valid data" = "من تاكد ان البيانات صحيحة";
+
+"you should enter valid email" = "من فضلك ادخل ايميل صحيح";

@@ -573,7 +573,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-JJ-u7n">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="XE8-ea-7Cd"/>
                                         </constraints>
@@ -1086,7 +1086,7 @@
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="tN6-zx-3d2"/>
@@ -1107,7 +1107,7 @@
                                     <constraint firstAttribute="height" constant="40" id="tIl-Fk-S3O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="dQh-tF-hU5"/>
@@ -1128,7 +1128,7 @@
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="R8R-be-oAl"/>
@@ -1147,7 +1147,7 @@
                                     <constraint firstAttribute="width" constant="200" id="fn1-h4-Qoi"/>
                                     <constraint firstAttribute="height" constant="40" id="lf9-1u-Xnc"/>
                                 </constraints>
-                                <state key="normal" title="Send Email">
+                                <state key="normal" title="Rest Password">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1190,9 +1190,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="LogoImageView" destination="hTT-kV-RUR" id="uph-Zh-zp1"/>
                         <outlet property="confirmPasswordTextFiled" destination="Nhp-dL-3Ky" id="Mux-au-DB0"/>
                         <outlet property="emailTextField" destination="lp4-JO-hC7" id="YFh-T7-L5B"/>
+                        <outlet property="logoImageView" destination="hTT-kV-RUR" id="g9k-Rr-jNt"/>
                         <outlet property="passwordTextField" destination="0QH-HZ-4qw" id="Wan-mF-gYD"/>
                         <outlet property="spinner" destination="OqW-ah-3TZ" id="YWG-SF-ofa"/>
                         <outlet property="tekenTextField" destination="fRt-OG-Ju0" id="sTQ-5J-gbq"/>
@@ -2404,19 +2404,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="iKR-fF-mMP">
-                                        <rect key="frame" x="60.666666666666657" y="13" width="50.333333333333343" height="24"/>
+                                        <rect key="frame" x="60.666666666666657" y="1" width="50.333333333333343" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="bom-xn-gFH">
                                         <rect key="frame" x="121.00000000000001" y="0.0" width="50.666666666666671" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-pr-Y5b">
-                                        <rect key="frame" x="181.66666666666666" y="13" width="50.666666666666657" height="24"/>
+                                        <rect key="frame" x="181.66666666666666" y="1" width="50.666666666666657" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="ZvC-xi-JIl">
                                         <rect key="frame" x="242.33333333333334" y="0.0" width="50.666666666666657" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="ZFY-Vv-D9c">
-                                        <rect key="frame" x="303" y="13" width="50.333333333333314" height="24"/>
+                                        <rect key="frame" x="303" y="1" width="50.333333333333314" height="48"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-mu-By1">
                                         <rect key="frame" x="363.33333333333331" y="0.0" width="50.666666666666686" height="50"/>
@@ -3043,7 +3043,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="atP-2G-cKd">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="cBz-HZ-Gfy"/>
                                         </constraints>

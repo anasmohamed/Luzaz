@@ -20,9 +20,10 @@ class ForgetPasswordViewController: UIViewController, ChangePasswordView{
       }
       
       func changePasswordSuccess(message:String) {
-        showToast(controller: self,message:message,seconds: 2.0)
-          let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "NewPasswordViewController") as! NewPasswordViewController
-          present(loginVC, animated: true, completion: nil)
+          let newPasswordVC = self.storyboard?.instantiateViewController(withIdentifier: "NewPasswordViewController") as! NewPasswordViewController
+        newPasswordVC.email = emailTextField.text
+        newPasswordVC.modalPresentationStyle = .fullScreen
+          present(newPasswordVC, animated: true, completion: nil)
       }
       
       func showToast(controller: UIViewController, message : String, seconds: Double) {
@@ -67,13 +68,40 @@ class ForgetPasswordViewController: UIViewController, ChangePasswordView{
        }
     @IBAction func forgetPasswordBtnWasPressed(_ sender: Any) {
         if !emailTextField.text!.isEmpty
+            
         {
-            peresnter?.forgetPassword(email:emailTextField.text!)
+            if  isValidEmailAddress(emailAddressString: emailTextField.text!){
+                peresnter?.forgetPassword(email:emailTextField.text!)}
+            else{
+                showError(error: "you should enter valid email")
+
+            }
         }else
         {
             showError(error: "you should enter your email")
         }
     }
+    private func isValidEmailAddress(emailAddressString: String) -> Bool {
+           
+           var returnValue = true
+           let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+           
+           do {
+               let regex = try NSRegularExpression(pattern: emailRegEx)
+               let nsString = emailAddressString as NSString
+               let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+               
+               if results.count == 0 {
+                   returnValue = false
+               }
+               
+           } catch let error as NSError {
+               print("Invalid regex: \(error.localizedDescription)")
+               returnValue = false
+           }
+           
+           return returnValue
+       }
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismiss(animated: false, completion: nil)
     }

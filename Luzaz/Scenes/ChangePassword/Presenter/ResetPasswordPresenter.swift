@@ -28,7 +28,7 @@ class ResetPasswordPresenter {
             self.view?.hideIndicator()
 
             if let error = error {
-                self.view?.showError(error: error.localizedDescription)
+                self.view?.showError(error: message!)
             } else {
                 guard let message = message else { return }
                 self.message = message
