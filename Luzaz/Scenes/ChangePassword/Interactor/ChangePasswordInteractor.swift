@@ -11,7 +11,7 @@ import SwiftyJSON
 import Alamofire
 class ChangePasswordInteractor {
     func setPasswordByToken(token: String,password : String,rePassword : String,
-                         completionHandler: @escaping (String?, Error?) -> Void) {
+                            completionHandler: @escaping (String?, Error?) -> Void) {
         Alamofire.request(LuzazRouter.setPasswordByToken(token: token,password : password,rePassword: rePassword)).responseJSON {(response) in
             let result = response.result
             if let response = response.data {
@@ -45,17 +45,21 @@ class ChangePasswordInteractor {
             case .success :
                 let json = JSON(result.value!)
                 print(json)
-                let message = json["data"].stringValue
-              
+                let message = json["description"].stringValue
+                
                 completionHandler(message, nil)
             case .failure(let error):
-                completionHandler("", error)
+                let json = JSON(result.value!)
+                print(json)
+                let message = json["description"].stringValue
+                completionHandler(message, error)
+                
             }
             
         }
     }
     func setPasswordByEmailToken(token: String,password : String,rePassword : String,
-                         completionHandler: @escaping (String?, Error?) -> Void) {
+                                 completionHandler: @escaping (String?, Error?) -> Void) {
         Alamofire.request(LuzazRouter.setPasswordByEmailToken(token: token,password : password,rePassword: rePassword)).responseJSON {(response) in
             let result = response.result
             if let response = response.data {
@@ -86,20 +90,24 @@ class ChangePasswordInteractor {
                 print("Response Error Code: nil")
             }
             switch result {
+                
             case .success :
                 let json = JSON(result.value!)
                 print(json)
-                let message = json["data"].stringValue
-              
+                let message = json["description"].stringValue
+                
                 completionHandler(message, nil)
             case .failure(let error):
-                completionHandler("", error)
+                let json = JSON(result.value!)
+                print(json)
+                let message = json["description"].stringValue
+                completionHandler(message, error)
             }
             
         }
     }
     func forgetPassword(email: String,
-                         completionHandler: @escaping (String?, Error?) -> Void) {
+                        completionHandler: @escaping (String?, Error?) -> Void) {
         Alamofire.request(LuzazRouter.getResetPasswordTokenByEmail(email: email)).responseJSON {(response) in
             let result = response.result
             if let response = response.data {

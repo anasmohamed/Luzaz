@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class ForgetPasswordViewController: UIViewController, ChangePasswordView{
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -20,6 +20,7 @@ class ForgetPasswordViewController: UIViewController, ChangePasswordView{
       }
       
       func changePasswordSuccess(message:String) {
+
           let newPasswordVC = self.storyboard?.instantiateViewController(withIdentifier: "NewPasswordViewController") as! NewPasswordViewController
         newPasswordVC.email = emailTextField.text
         newPasswordVC.modalPresentationStyle = .fullScreen

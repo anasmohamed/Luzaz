@@ -92,6 +92,7 @@ PODS:
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
   - SwiftyJSON (3.0.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -106,6 +107,7 @@ DEPENDENCIES:
   - OpalImagePicker (~> 1.7.1)
   - SDWebImage (from `https://github.com/SDWebImage/SDWebImage.git`)
   - SwiftyJSON (= 3.0.0)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
@@ -131,6 +133,7 @@ SPEC REPOS:
     - OpalImagePicker
     - Protobuf
     - SwiftyJSON
+    - Toast-Swift
 
 EXTERNAL SOURCES:
   IHProgressHUD:
@@ -171,7 +174,8 @@ SPEC CHECKSUMS:
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 65629aa2e352a4740593e6d171e0c2632fcdf046
+PODFILE CHECKSUM: 5d832bfb82d737885def7e16da82f10fd71b5b16
 
 COCOAPODS: 1.8.4

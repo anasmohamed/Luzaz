@@ -19,7 +19,7 @@ target 'Luzaz' do
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   pod 'IHProgressHUD', :git => 'https://github.com/Swiftify-Corp/IHProgressHUD.git'
-
+  pod 'Toast-Swift', '~> 5.0.1'
   # Add the pod for Firebase Cloud Messaging
   pod 'Firebase/Messaging'
 

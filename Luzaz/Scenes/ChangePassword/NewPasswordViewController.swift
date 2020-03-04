@@ -42,6 +42,8 @@ class NewPasswordViewController: UIViewController ,ResetPasswordView{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.makeToast("تم ارسال كود التفعيل. يرجى مراجعة البريد الالكترونى", duration: 3.0, position: .bottom)
+
         presenter = ResetPasswordPresenter(view:self)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         logoImageView.isUserInteractionEnabled = true
