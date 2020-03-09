@@ -58,11 +58,12 @@ class RegisterViewController: UIViewController {
             let password = passwordTextField.text,
             let phoneNumber = mobileTextField.text,
             let confirmPassword = conPassTextField.text else { return }
-        if agreeCheckBoc.isSelected {
+        
+        if agreeCheckBoc.on {
         presenter.register(fullName: fullName, phone: phoneNumber, email: email, password: password, confirmPassword: confirmPassword)
         }
         else{
-             self.view.makeToast("", duration: 3.0, position: .bottom)
+            self.view.makeToast("please accept terms & conditions".localiz(), duration: 3.0, position: .bottom)
         }
     }
     override func viewDidLoad() {

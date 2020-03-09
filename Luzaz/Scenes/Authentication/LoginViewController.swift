@@ -38,6 +38,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = LoginPresenter(view: self)
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Back", style: .plain, target: nil, action: nil)
         scroller.translatesAutoresizingMaskIntoConstraints = false
         scroller.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
