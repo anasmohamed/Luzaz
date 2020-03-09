@@ -31,6 +31,12 @@ class LoginViewController: UIViewController {
     private var presenter: LoginPresenter!
     @IBOutlet weak var scroller: UIScrollView!
     
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     @IBAction func loginBtnWasPressed(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         presenter.login(email: email, password: password)
