@@ -85,8 +85,8 @@ class NewPasswordViewController: UIViewController ,ResetPasswordView{
     
     
     func resetPasswordSuccess(message: String) {
-        showError(error:message)
         let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
         present(loginVC, animated: true, completion: nil)
     }
     private func isValidEmailAddress(emailAddressString: String) -> Bool {

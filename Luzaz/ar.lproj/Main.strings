@@ -162,7 +162,7 @@
 "Re6-r7-Rt1.text" = "Label";
 
 /* Class = "UITextView"; text = "Agree to Terms and Conditions "; ObjectID = "S3s-oz-7Hm"; */
-"S3s-oz-7Hm.text" = "موافق علي الشروط و الاحكام";
+"KaE-Zn-vAF.text" = ".الموافقة علي الشروط و الاحكام";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "SHm-kG-hys"; */
 "SHm-kG-hys.placeholder" = "البريد الالكتروني";
@@ -270,7 +270,7 @@
 "qTC-iF-2oc.text" = "رابط اليوتيوب";
 
 /* Class = "UIButton"; normalTitle = "Create New Account"; ObjectID = "qif-6w-54j"; */
-"qif-6w-54j.normalTitle" = "انشا حساب جديد";
+"qif-6w-54j.normalTitle" = "إنشاء حساب جديد";
 
 /* Class = "UIButton"; normalTitle = "التصنيفات"; ObjectID = "qn8-Ec-hq6"; */
 "qn8-Ec-hq6.normalTitle" = "التصنيفات";

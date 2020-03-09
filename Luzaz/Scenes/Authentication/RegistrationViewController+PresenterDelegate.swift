@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import Toast_Swift
 extension RegisterViewController: RegistrationView {
   
     
@@ -21,18 +21,17 @@ extension RegisterViewController: RegistrationView {
     }
     
     func registrationSuccess(message: String) {
-        showError(error: message,title : "Success")
+        self.view.makeToast(message, duration: 3.0, position: .bottom)
         UserDefaults.standard.set(userNameTextField.text, forKey: "fullName")
+    let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+    present(loginVC, animated: true, completion: nil)
       
     }
     
     func showError(error: String,title :String) {
         let alertController = UIAlertController(title: title.localiz(), message: error.localiz(), preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK".localiz(), style: .default){ UIAlertAction in
-            self.dismiss(animated: true, completion: nil)
-
-        }
+        let action = UIAlertAction(title: "OK".localiz(), style: .default)
         alertController.addAction(action)
         
         present(alertController, animated: true, completion: nil)

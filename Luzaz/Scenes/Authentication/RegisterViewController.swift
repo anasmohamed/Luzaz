@@ -8,8 +8,10 @@
 
 import UIKit
 import Alamofire
-
+import BEMCheckBox
+import Toast_Swift
 class RegisterViewController: UIViewController {
+    @IBOutlet weak var agreeCheckBoc: BEMCheckBox!
     
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var mobileTextField: UITextField!
@@ -56,12 +58,16 @@ class RegisterViewController: UIViewController {
             let password = passwordTextField.text,
             let phoneNumber = mobileTextField.text,
             let confirmPassword = conPassTextField.text else { return }
-        
+        if agreeCheckBoc.isSelected {
         presenter.register(fullName: fullName, phone: phoneNumber, email: email, password: password, confirmPassword: confirmPassword)
-        
+        }
+        else{
+             self.view.makeToast("", duration: 3.0, position: .bottom)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        agreeCheckBoc.boxType = .square
         presenter = RegistrationPresenter(view: self)
         scroller.translatesAutoresizingMaskIntoConstraints = false
         scroller.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true

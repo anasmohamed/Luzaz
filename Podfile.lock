@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.1)
+  - BEMCheckBox (1.4.1)
   - FaveButton (3.2.0)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -96,6 +97,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - BEMCheckBox
   - FaveButton
   - Firebase/Analytics
   - Firebase/Messaging
@@ -112,6 +114,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - BEMCheckBox
     - FaveButton
     - Firebase
     - FirebaseAnalytics
@@ -151,6 +154,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
@@ -176,6 +180,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 5d832bfb82d737885def7e16da82f10fd71b5b16
+PODFILE CHECKSUM: 15ff517f7d042ee05935e552dc15943aa7545a30
 
 COCOAPODS: 1.8.4

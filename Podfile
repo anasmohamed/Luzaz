@@ -15,6 +15,7 @@ target 'Luzaz' do
   pod 'FSPagerView'
   pod 'KMPlaceholderTextView', '~> 1.4.0'
   pod 'Kingfisher', '~> 5.0'
+  pod 'BEMCheckBox'
 
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
