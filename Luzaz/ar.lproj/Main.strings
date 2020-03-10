@@ -106,7 +106,7 @@
 
 /* Class = "UILabel"; text = "Forget Your Password"; ObjectID = "IA0-1g-7kL"; */
 "IA0-1g-7kL.text" = "نسيت الباسورد";
-
+"5rO-tU-OJt.text" = "مستخدم جديد؟";
 /* Class = "UILabel"; text = "Win With US"; ObjectID = "Idn-nd-sdh"; */
 "Idn-nd-sdh.text" = "اربح معنا";
 
@@ -164,6 +164,7 @@
 /* Class = "UITextView"; text = "Agree to Terms and Conditions "; ObjectID = "S3s-oz-7Hm"; */
 "KaE-Zn-vAF.text" = ".الموافقة علي الشروط و الاحكام";
 
+"t2X-ow-3L4.text" = "المزيد من هذا البائع"
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "SHm-kG-hys"; */
 "SHm-kG-hys.placeholder" = "البريد الالكتروني";
 
@@ -270,11 +271,15 @@
 "qTC-iF-2oc.text" = "رابط اليوتيوب";
 
 /* Class = "UIButton"; normalTitle = "Create New Account"; ObjectID = "qif-6w-54j"; */
-"qif-6w-54j.normalTitle" = "إنشاء حساب جديد";
+"qif-6w-54j.normalTitle" = "انشيء حساب";
 
+"nli-BO-BBT.normalTitle" = "رجوع";
 /* Class = "UIButton"; normalTitle = "التصنيفات"; ObjectID = "qn8-Ec-hq6"; */
 "qn8-Ec-hq6.normalTitle" = "التصنيفات";
 
+"wm8-Ir-SlX.text" = "لديك حساب بالفعل؟";
+
+"SLn-W2-HmA.text" = "بتسجيلك الدخول فأنت توافق على الأحكام والشروط وسياسة الإستخدام الخاصة بنا";
 /* Class = "UITextField"; placeholder = "Discount Precentage (Optional)"; ObjectID = "rnW-8A-Sgw"; */
 "rnW-8A-Sgw.placeholder" = "نسبة الخصم(اختياري)";
 

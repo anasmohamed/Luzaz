@@ -9,6 +9,7 @@
 import UIKit
 import MOLH
 import SDWebImage
+
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,
 UISearchBarDelegate,UISearchControllerDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
@@ -33,6 +34,8 @@ UISearchBarDelegate,UISearchControllerDelegate{
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  setupSideMenu()
+
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
                   logoImageView.isUserInteractionEnabled = true
                   logoImageView.addGestureRecognizer(tapGestureRecognizer)
@@ -73,6 +76,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         super.traitCollectionDidChange(previousTraitCollection)
         setupLayout(with: view.bounds.size)
     }
+  
     private func setupLayout(with containerSize: CGSize) {
         guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
             return
@@ -181,6 +185,12 @@ UISearchBarDelegate,UISearchControllerDelegate{
     }
     @IBAction func menuBtnWasPressed(_ sender: Any)
     {
+        // Define the menu
+       // let menu = SideMenuNavigationController(rootViewController: self)
+        // SideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
+    //    let menu = storyboard!.instantiateViewController(withIdentifier: "RightMenu") as! SideMenuNavigationController
+     //   present(menu, animated: true, completion: nil)
         delegate?.togglePane()
     }
 }
