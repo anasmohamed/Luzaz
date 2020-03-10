@@ -32,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
         window?.makeKeyAndVisible()
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
-
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self

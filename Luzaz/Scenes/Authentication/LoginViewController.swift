@@ -11,19 +11,20 @@ import Alamofire
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var forgetPasswordLbl: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
         {
         didSet {
             emailTextField.tintColor = UIColor.lightGray
-            emailTextField.setIcon(UIImage(named: "userIcon")!)
+            emailTextField.setIcon(UIImage(named: "user")!)
         }
     }
     @IBOutlet weak var passwordTextField: UITextField!
         {
         didSet {
             passwordTextField.tintColor = UIColor.lightGray
-            passwordTextField.setIcon(UIImage(named: "userIcon")!)
+            passwordTextField.setIcon(UIImage(named: "lock")!)
         }
     }
     

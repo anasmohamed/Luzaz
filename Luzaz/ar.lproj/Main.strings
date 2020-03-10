@@ -144,7 +144,7 @@
 "Oyo-5G-uc5.text" = "الفئة";
 
 /* Class = "UITextField"; placeholder = "Enter Your Name "; ObjectID = "P9j-zU-lvS"; */
-"P9j-zU-lvS.placeholder" = "ادخل الاسم";
+"P9j-zU-lvS.placeholder" = "الإسم بالكامل";
 
 /* Class = "UILabel"; text = "CONDITION"; ObjectID = "PGU-hM-Xe6"; */
 "PGU-hM-Xe6.text" = "الحالة";
@@ -164,9 +164,9 @@
 /* Class = "UITextView"; text = "Agree to Terms and Conditions "; ObjectID = "S3s-oz-7Hm"; */
 "KaE-Zn-vAF.text" = ".الموافقة علي الشروط و الاحكام";
 
-"t2X-ow-3L4.text" = "المزيد من هذا البائع"
+"t2X-ow-3L4.text" = "المزيد من هذا البائع";
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "SHm-kG-hys"; */
-"SHm-kG-hys.placeholder" = "البريد الالكتروني";
+"SHm-kG-hys.placeholder" = "ادخل البريد الالكتروني";
 
 /* Class = "UIButton"; normalTitle = "المراسلات"; ObjectID = "SLG-ep-JsT"; */
 "SLG-ep-JsT.normalTitle" = "المراسلات";
