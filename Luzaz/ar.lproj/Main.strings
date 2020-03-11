@@ -24,7 +24,7 @@
 "4Mo-FT-Bct.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Choose Language"; ObjectID = "5oF-Lt-CHS"; */
-"5oF-Lt-CHS.normalTitle" = "اختار اللغة";
+/*"5oF-Lt-CHS.normalTitle" = "اختار اللغة";
 
 /* Class = "UITabBarItem"; title = "Item"; ObjectID = "67H-Ri-EtT"; */
 "67H-Ri-EtT.title" = "المنتج";
@@ -93,7 +93,7 @@
 "GHK-ZJ-dnb.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "اختز اللغة"; ObjectID = "GKL-Zh-sGr"; */
-"GKL-Zh-sGr.normalTitle" = "اختز اللغة";
+/*"GKL-Zh-sGr.normalTitle" = "اختار اللغة";
 
 /* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "GM9-GB-pzR"; */
 "GM9-GB-pzR.normalTitle" = "تغير كلمة السر";
@@ -250,7 +250,7 @@
 "ky1-RJ-hbV.text" = "النهاية";
 
 /* Class = "UIButton"; normalTitle = "Select Photos "; ObjectID = "l1i-tC-vvT"; */
-"l1i-tC-vvT.normalTitle" = "اختر الصور";
+/*"l1i-tC-vvT.normalTitle" = "اختار اللغة";
 
 /* Class = "UILabel"; text = "DESCRIPTION"; ObjectID = "lKS-so-CiJ"; */
 "lKS-so-CiJ.text" = "الوصف";

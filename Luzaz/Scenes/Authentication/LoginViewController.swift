@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
+    
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: LoginPresenter!
     @IBOutlet weak var scroller: UIScrollView!
