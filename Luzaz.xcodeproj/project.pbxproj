@@ -16,6 +16,7 @@
 		3510F891240A82CE0066E875 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510F890240A82CE0066E875 /* NewPasswordViewController.swift */; };
 		3510F893240A872D0066E875 /* ResetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510F892240A872D0066E875 /* ResetPasswordPresenter.swift */; };
 		3510F895240A87A10066E875 /* RestetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3510F894240A87A10066E875 /* RestetPasswordView.swift */; };
+		3528B17224194C19002B865C /* VersionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528B17124194C19002B865C /* VersionChecker.swift */; };
 		352F8C25238023880047279D /* AlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F8C24238023880047279D /* AlbumImage.swift */; };
 		3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3576F68D2368CD9600E3AB38 /* Localizable.strings */; };
 		357A200823534566003BBF36 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A200723534566003BBF36 /* MapViewDelegate.swift */; };
@@ -217,6 +218,7 @@
 		3510F890240A82CE0066E875 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		3510F892240A872D0066E875 /* ResetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordPresenter.swift; sourceTree = "<group>"; };
 		3510F894240A87A10066E875 /* RestetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestetPasswordView.swift; sourceTree = "<group>"; };
+		3528B17124194C19002B865C /* VersionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionChecker.swift; sourceTree = "<group>"; };
 		352F8C24238023880047279D /* AlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImage.swift; sourceTree = "<group>"; };
 		3576F68C2368CD9600E3AB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		357A152C236B6BD9008EF2D5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
@@ -1183,6 +1185,7 @@
 			children = (
 				CCD9BE5B233930C8002B9201 /* LuzazRouter.swift */,
 				CCD9BE5C233930C8002B9201 /* NetworkConstants.swift */,
+				3528B17124194C19002B865C /* VersionChecker.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1404,6 +1407,7 @@
 				"${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -1422,6 +1426,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpalImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -1518,6 +1523,7 @@
 				358AA50C23983A6800235FBE /* ReportViewController.swift in Sources */,
 				CC726960233AC613006B61DD /* RegistrationView.swift in Sources */,
 				CCD9BE5D233930C8002B9201 /* LuzazRouter.swift in Sources */,
+				3528B17224194C19002B865C /* VersionChecker.swift in Sources */,
 				35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */,
 				CC8148FE233AC99100F71A2B /* ProfilePresenter.swift in Sources */,
 				CC86961822F4F61C00E9F14D /* ProductScreendetailsViewController.swift in Sources */,

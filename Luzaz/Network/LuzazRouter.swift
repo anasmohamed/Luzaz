@@ -152,6 +152,8 @@ enum LuzazRouter: URLRequestConvertible {
         case let .getOffers(country,page):
             params[NetworkingConstants.country] = country
             params[NetworkingConstants.page] = page
+            params["perpage"] = "20"
+
         case let .getMoreFromThisSeller(country):
             params[NetworkingConstants.country] = country
             

@@ -48,7 +48,7 @@
 "9mg-Hx-oSu.placeholder" = "بحث";
 
 /* Class = "UIButton"; normalTitle = "تسجيل الدخول"; ObjectID = "A89-06-C1f"; */
-"A89-06-C1f.normalTitle" = "تسجيل الدخول";
+"A89-06-C1f.normalTitle" = "تسجيل الدخول / انشاء حساب";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "AAg-e9-d2b"; */
 "AAg-e9-d2b.text" = "Label";

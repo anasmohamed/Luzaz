@@ -30,7 +30,7 @@ class RightSidePanelVC: UIViewController {
             token = UserDefaults.standard.string(forKey: "token")!
         }
         if (token.isEmpty){
-            registerBtn.setTitle("تسجيل الدخول", for: .normal)
+            registerBtn.setTitle("تسجيل الدخول / انشاء حساب", for: .normal)
         }
         else{
             registerBtn.setTitle("الصفحة الشخصية", for: .normal)
@@ -42,7 +42,7 @@ class RightSidePanelVC: UIViewController {
         countryImageView.image = UIImage(named:getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
              countryBtn.setTitle(getArbicNameCounty(countryNum: UserDefaults.standard.string(forKey: "country")!), for:.normal)
         if (token.isEmpty){
-            registerBtn.setTitle("تسجيل الدخول", for: .normal)
+            registerBtn.setTitle("تسجيل الدخول / انشاء حساب", for: .normal)
         }
         else{
             registerBtn.setTitle("الصفحة الشخصية", for: .normal)

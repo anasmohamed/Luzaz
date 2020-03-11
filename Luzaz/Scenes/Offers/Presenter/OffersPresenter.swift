@@ -98,7 +98,7 @@ class OffersPresenter{
                         self!.offersImagesList.append(0)
                         if self!.offersImagesList.count == self!.offers.count
                         {
-                            self!.offersNumber += 35
+                            self!.offersNumber += 10
                             complition(true)
                         }
                       }else{
@@ -115,7 +115,7 @@ class OffersPresenter{
 
                       if self!.offersImagesList.count == self!.offers.count
                       {
-                          self!.offersNumber += 35
+                          self!.offersNumber += 10
                           complition(true)
                       }
                     }   }

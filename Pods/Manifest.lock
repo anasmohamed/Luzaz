@@ -92,6 +92,7 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
+  - Siren (5.1.2)
   - SwiftyJSON (3.0.0)
   - Toast-Swift (5.0.1)
 
@@ -108,6 +109,7 @@ DEPENDENCIES:
   - MOLH
   - OpalImagePicker (~> 1.7.1)
   - SDWebImage (from `https://github.com/SDWebImage/SDWebImage.git`)
+  - Siren (from `https://github.com/ArtSabintsev/Siren.git`, branch `swift5.0`)
   - SwiftyJSON (= 3.0.0)
   - Toast-Swift (~> 5.0.1)
 
@@ -143,6 +145,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/Swiftify-Corp/IHProgressHUD.git
   SDWebImage:
     :git: https://github.com/SDWebImage/SDWebImage.git
+  Siren:
+    :branch: swift5.0
+    :git: https://github.com/ArtSabintsev/Siren.git
 
 CHECKOUT OPTIONS:
   IHProgressHUD:
@@ -151,6 +156,9 @@ CHECKOUT OPTIONS:
   SDWebImage:
     :commit: bbfe6908455f083e3cf1f73ba75335dcf7750bf2
     :git: https://github.com/SDWebImage/SDWebImage.git
+  Siren:
+    :commit: ef6d9ffa4226ced10d1b46d03c38c1b794b22788
+    :git: https://github.com/ArtSabintsev/Siren.git
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -177,9 +185,10 @@ SPEC CHECKSUMS:
   OpalImagePicker: 770b495a9700fa1d02a5a3c7c8303f1ac4e6c54d
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  Siren: ee674e4ab57f5cc23186202a11313bc50a661a61
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 15ff517f7d042ee05935e552dc15943aa7545a30
+PODFILE CHECKSUM: c81afa7d34741f39d9d928a051b0775c2195de70
 
 COCOAPODS: 1.8.4

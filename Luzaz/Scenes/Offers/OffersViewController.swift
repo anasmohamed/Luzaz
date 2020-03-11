@@ -9,7 +9,7 @@
 import UIKit
 import MOLH
 import SDWebImage
-
+import Siren
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,
 UISearchBarDelegate,UISearchControllerDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
@@ -35,7 +35,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
       //  setupSideMenu()
-
+      
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
                   logoImageView.isUserInteractionEnabled = true
                   logoImageView.addGestureRecognizer(tapGestureRecognizer)
@@ -49,7 +49,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         setupLayout(with: view.bounds.size)
         self.hideKeyboardWhenTappedAround()
         language = MOLHLanguage.currentAppleLanguage()
-        
+         Siren.shared.wail()
        
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)

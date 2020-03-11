@@ -167,7 +167,7 @@ class LeftSidePanelVC: UIViewController{
     func getCountyIcon(countryNum : String) -> String {
         switch countryNum {
         case "1":
-            return "egypt"
+            return "ِِِegypt"
         case "10":
             return "usa"
         case "2":

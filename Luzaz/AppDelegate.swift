@@ -10,7 +10,7 @@ import UIKit
 import MOLH
 import Firebase
 import UserNotifications
-
+import Siren
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
     
@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
         window?.makeKeyAndVisible()
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
+        
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
@@ -45,11 +46,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
           UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
           application.registerUserNotificationSettings(settings)
         }
-
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) {
+            (granted, error) in
+            if granted {
+                print("yes")
+            } else {
+                print("No")
+            }
+        }
         application.registerForRemoteNotifications()
-
+       VersionChecker.shared.isUpdateAvailable() { hasUpdates in
+        if hasUpdates{
+            self.showError(error:"there is new verstion you can update now")        }
+       }
         return true
     }
+    func showError(error: String) {
+        let alertController = UIAlertController(title: "Update".localiz(), message: error.localiz(), preferredStyle: .alert)
+           
+        let okAction = UIAlertAction(title: "Update".localiz(), style: .default) {(_) -> Void in
+            UIApplication.shared.openURL(NSURL(string: "https://apps.apple.com/us/app/luzaz-online-store/id1494681890")! as URL)
+
+        }
+        let cancelAction = UIAlertAction(title: "Cancel".localiz(), style: .default, handler: nil)
+
+           alertController.addAction(okAction)
+           alertController.addAction(cancelAction)
+
+        self.window?.rootViewController!.present(alertController, animated: true, completion: nil)
+       }
+ 
     func reset() {
 //        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
 //        let stry = UIStoryboard(name: "Main", bundle: nil)
