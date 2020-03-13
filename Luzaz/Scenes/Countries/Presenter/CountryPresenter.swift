@@ -45,10 +45,18 @@ class CountryPresenter {
             let name = country.name
             else { return }
         
-        cell.displayCountryImage(image: image)
+        //cell.displayCountryImage(image: image.capitalizingFirstLetter())
         cell.displayCountryName(name: name)
     }
     func  getCountryName(index : Int) -> String {
         return countries[index].name ?? "1"
     }
 }
+extension String {
+func capitalizingFirstLetter() -> String {
+  return prefix(1).uppercased() + self.lowercased().dropFirst()
+}
+
+mutating func capitalizeFirstLetter() {
+  self = self.capitalizingFirstLetter()
+    }}

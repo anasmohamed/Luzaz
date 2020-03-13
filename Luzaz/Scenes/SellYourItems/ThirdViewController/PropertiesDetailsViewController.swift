@@ -35,7 +35,24 @@ class PropertiesDetailsViewController: UIViewController,SellYourItemView ,UIText
     var incomeSellerPhone:String?
     var incomeSellerMail:String?
     var incomeOfferId:String?
-
+    
+    @IBOutlet weak var firstArrowImage: UIImageView!{
+        didSet {
+            firstArrowImage.image = firstArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var secondArrowImage: UIImageView!{
+        didSet {
+            secondArrowImage.image = secondArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var thirdArrowImage: UIImageView!{
+        didSet {
+            thirdArrowImage.image = thirdArrowImage.image?.flipIfNeeded()
+        }
+    }
     var attributeList : [CategoryAttributes]?
     var attributeValues = [String]()
     var attributeIds = [String]()

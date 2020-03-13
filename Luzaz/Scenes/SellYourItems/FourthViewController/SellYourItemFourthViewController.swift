@@ -18,6 +18,25 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
     @IBOutlet weak var itemDescritionTextField: UITextView!
     @IBOutlet weak var itemTitleTextView: UITextField!
     @IBOutlet weak var conditionList: UIPickerView!
+    
+    
+    @IBOutlet weak var firstArrowImage: UIImageView!{
+        didSet {
+            firstArrowImage.image = firstArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var secondArrowImage: UIImageView!{
+        didSet {
+            secondArrowImage.image = secondArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var thirdArrowImage: UIImageView!{
+        didSet {
+            thirdArrowImage.image = thirdArrowImage.image?.flipIfNeeded()
+        }
+    }
     var conditionsList = ["New".localiz(),"Used".localiz()]
     var isConditionEnterd = false
     var presenter : SellYourItemPresenter!

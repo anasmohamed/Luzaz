@@ -10,7 +10,8 @@ import UIKit
 import Alamofire
 
 class LoginViewController: UIViewController {
-    
+    let appDelegate = AppDelegate.getAppDelegate()
+
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var forgetPasswordLbl: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
@@ -37,6 +38,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        appDelegate.MenuContainerVC.toggleLeftPane()
+
     }
     
     

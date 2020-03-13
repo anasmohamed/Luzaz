@@ -72,6 +72,7 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryTableViewCell", for: indexPath) as! CountryTableViewCell
+        cell.displayCountryImage(image: getCountyIcon(countryNum: indexPath.row))
         presenter.configure(cell: cell, for: indexPath.row)
         
         return cell
@@ -85,15 +86,15 @@ class CountriesViewController: UIViewController,UITableViewDelegate,UITableViewD
     func getCountyIcon(countryNum : Int) -> String {
         switch countryNum {
         case 0:
-            return "egypt"
+            return "Egypt"
         case 1:
-            return "usa"
+            return "USA"
         case 2:
-            return "emirates"
+            return "Emirates"
         case 3:
-            return "saudi_arabia"
+            return "Saudi Arabia"
         default:
-            return "libya"
+            return "Libya"
         }
     }
 }

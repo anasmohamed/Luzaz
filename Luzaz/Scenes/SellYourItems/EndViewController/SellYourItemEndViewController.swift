@@ -21,6 +21,23 @@ class SellYourItemEndViewController: UIViewController,SellYourItemEndView {
     }
     
     
+    @IBOutlet weak var firstArrowImage: UIImageView!{
+        didSet {
+            firstArrowImage.image = firstArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var secondArrowImage: UIImageView!{
+        didSet {
+            secondArrowImage.image = secondArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var thirdArrowImage: UIImageView!{
+        didSet {
+            thirdArrowImage.image = thirdArrowImage.image?.flipIfNeeded()
+        }
+    }
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var mobileNumberTextView: UITextField!

@@ -15,6 +15,24 @@ class SellYourItemFifthViewController: UIViewController , SellYourItemView{
     @IBOutlet weak var priceTextView: UITextField!
     
     @IBOutlet weak var discountTextView: UITextField!
+    
+    @IBOutlet weak var firstArrowImage: UIImageView!{
+        didSet {
+            firstArrowImage.image = firstArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var secondArrowImage: UIImageView!{
+        didSet {
+            secondArrowImage.image = secondArrowImage.image?.flipIfNeeded()
+        }
+    }
+    
+    @IBOutlet weak var thirdArrowImage: UIImageView!{
+        didSet {
+            thirdArrowImage.image = thirdArrowImage.image?.flipIfNeeded()
+        }
+    }
     var presenter : SellYourItemPresenter!
     var offerImage : UIImage?
     var city : String?
