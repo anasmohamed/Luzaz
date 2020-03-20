@@ -21,6 +21,7 @@
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="JX7-r6-HXS" secondAttribute="trailing" id="CKs-5i-va9"/>
                 <constraint firstAttribute="bottom" secondItem="JX7-r6-HXS" secondAttribute="bottom" id="Gvr-gf-sau"/>

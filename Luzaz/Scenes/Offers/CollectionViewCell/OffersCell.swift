@@ -18,7 +18,9 @@ class OffersCell: UICollectionViewCell,OffersCellView {
         super.awakeFromNib()
         self.layer.masksToBounds = true
         
-        self.layer.cornerRadius = 10
+       self.layer.cornerRadius = 10
+    
+       
       //  self.addSubview(actInd!)
     //    actInd!.startAnimating()
         //customize yourself
@@ -26,8 +28,10 @@ class OffersCell: UICollectionViewCell,OffersCellView {
         // Initialization code
     }
     func displayOfferImage(offerImage: String)  {
+        
         offerImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
-        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"), placeholderImage: UIImage(named: "placeholder"))
+        offerImageView.sd_imageIndicator = SDWebImageProgressIndicator.default
+        offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"))
     }
     
 }

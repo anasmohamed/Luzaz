@@ -17,9 +17,9 @@ extension OffersViewController: OffersView {
     }
     
     func hideIndicator() {
-//        DispatchQueue.global(qos: .default).async(execute: {
-//            IHProgressHUD.dismiss()
-//        })
+        DispatchQueue.global(qos: .default).async(execute: {
+            IHProgressHUD.dismiss()
+        })
        // spinner.stopAnimating()
     }
     

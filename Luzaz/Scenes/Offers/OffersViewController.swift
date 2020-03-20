@@ -146,7 +146,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
         switch layoutOption {
         case .largeGrid:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OffersCell", for: indexPath) as! OffersCell
-            cell.offerImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
+         
             presenter.configure(cell: cell, for: indexPath.row,isFiltering:!searchBarIsEmpty(),collectionView: collectionView)
             
             return cell

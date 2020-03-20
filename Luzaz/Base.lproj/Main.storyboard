@@ -591,7 +591,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-JJ-u7n">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="XE8-ea-7Cd"/>
                                         </constraints>
@@ -1826,7 +1826,7 @@
                                 <rect key="frame" x="0.0" y="4" width="375" height="72"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0RB-f0-s7i">
-                                        <rect key="frame" x="93" y="22" width="890" height="39"/>
+                                        <rect key="frame" x="93" y="22" width="445" height="39"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09m-P9-rDx">
                                         <rect key="frame" x="23" y="30" width="30" height="30"/>
@@ -2320,7 +2320,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TNK-x3-vw3"/>
                                         </constraints>
@@ -2451,19 +2451,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="iKR-fF-mMP">
-                                        <rect key="frame" x="60.666666666666657" y="1" width="50.333333333333343" height="48"/>
+                                        <rect key="frame" x="60.666666666666657" y="13" width="50.333333333333343" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Details Icon on footer" translatesAutoresizingMaskIntoConstraints="NO" id="bom-xn-gFH">
                                         <rect key="frame" x="121.00000000000001" y="0.0" width="50.666666666666671" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-pr-Y5b">
-                                        <rect key="frame" x="181.66666666666666" y="1" width="50.666666666666657" height="48"/>
+                                        <rect key="frame" x="181.66666666666666" y="13" width="50.666666666666657" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Price Icon active color" translatesAutoresizingMaskIntoConstraints="NO" id="ZvC-xi-JIl">
                                         <rect key="frame" x="242.33333333333334" y="0.0" width="50.666666666666657" height="50"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="ZFY-Vv-D9c">
-                                        <rect key="frame" x="303" y="1" width="50.333333333333314" height="48"/>
+                                        <rect key="frame" x="303" y="13" width="50.333333333333314" height="24"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finish Icon" translatesAutoresizingMaskIntoConstraints="NO" id="uBM-mu-By1">
                                         <rect key="frame" x="363.33333333333331" y="0.0" width="50.666666666666686" height="50"/>
@@ -3535,8 +3535,8 @@
                                             <constraint firstAttribute="width" constant="30" id="y4D-sV-rFm"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="TVO-D0-5Rp">
-                                        <rect key="frame" x="236" y="13" width="35" height="27"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="TVO-D0-5Rp">
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="QI2-pi-Abd"/>
                                         </constraints>
@@ -3555,12 +3555,12 @@
                                     <constraint firstItem="wCx-It-geI" firstAttribute="top" secondItem="F5C-Lz-SjD" secondAttribute="top" constant="13" id="8gK-fC-q0b"/>
                                     <constraint firstItem="2r9-6d-c1b" firstAttribute="top" secondItem="F5C-Lz-SjD" secondAttribute="top" constant="10" id="Eea-Dn-HD5"/>
                                     <constraint firstItem="2r9-6d-c1b" firstAttribute="centerY" secondItem="WSq-BL-Ztj" secondAttribute="centerY" id="FR2-2m-jVV"/>
-                                    <constraint firstItem="TVO-D0-5Rp" firstAttribute="centerY" secondItem="2r9-6d-c1b" secondAttribute="centerY" constant="1.5" id="IIw-TL-hAb"/>
+                                    <constraint firstItem="TVO-D0-5Rp" firstAttribute="centerY" secondItem="2r9-6d-c1b" secondAttribute="centerY" id="IIw-TL-hAb"/>
                                     <constraint firstItem="WSq-BL-Ztj" firstAttribute="leading" secondItem="YGZ-yi-ch2" secondAttribute="trailing" constant="14" id="Il7-o3-QuR"/>
                                     <constraint firstItem="WSq-BL-Ztj" firstAttribute="top" secondItem="F5C-Lz-SjD" secondAttribute="top" constant="13" id="KB1-Us-IAz"/>
                                     <constraint firstItem="wCx-It-geI" firstAttribute="centerY" secondItem="wte-Ja-nGJ" secondAttribute="centerY" id="M9P-T5-p9t"/>
                                     <constraint firstItem="eY8-my-27F" firstAttribute="leading" secondItem="TVO-D0-5Rp" secondAttribute="trailing" constant="14" id="NYX-lK-BKr"/>
-                                    <constraint firstItem="eY8-my-27F" firstAttribute="centerY" secondItem="TVO-D0-5Rp" secondAttribute="centerY" constant="-1.5" id="aF6-zI-Gkh"/>
+                                    <constraint firstItem="eY8-my-27F" firstAttribute="centerY" secondItem="TVO-D0-5Rp" secondAttribute="centerY" id="aF6-zI-Gkh"/>
                                     <constraint firstItem="wte-Ja-nGJ" firstAttribute="top" secondItem="F5C-Lz-SjD" secondAttribute="top" constant="10" id="kQj-qi-PAa"/>
                                     <constraint firstAttribute="trailing" secondItem="eY8-my-27F" secondAttribute="trailing" constant="5" id="lXT-u9-Uc5"/>
                                     <constraint firstItem="wte-Ja-nGJ" firstAttribute="leading" secondItem="F5C-Lz-SjD" secondAttribute="leading" constant="5" id="nQl-Dw-3tY"/>
@@ -4451,7 +4451,7 @@
                             </searchBar>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jNf-DO-Phg">
                                 <rect key="frame" x="0.0" y="112" width="414" height="624"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="xXP-gT-yYD" customClass="OffersLayout" customModule="Luzaz" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OffersCell" id="OzQ-f5-Cyd">
@@ -4461,6 +4461,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -5305,7 +5306,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-u3-OTM">
-                                        <rect key="frame" x="236" y="15.666666666666629" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="3.6666666666666288" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="x8p-sK-X8b"/>
                                         </constraints>

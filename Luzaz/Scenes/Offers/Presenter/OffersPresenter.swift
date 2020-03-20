@@ -98,16 +98,22 @@ class OffersPresenter{
                         self!.offersImagesList.append(0)
                         if self!.offersImagesList.count == self!.offers.count
                         {
-                            self!.offersNumber += 10
+                            self!.offersNumber += 20
                             complition(true)
                         }
                       }else{
-                        if !(image!.size.height < 150) {
-                    self!.imageHeight = image!.size.height / 5
-                        }else{
+                        print("before image height \(image!.size.height)")
+
+                        if (image!.size.height < 150) {
                             self!.imageHeight = image!.size.height * 1.5
 
+                        }else if image!.size.height >= 1000 {
+                            self!.imageHeight = image!.size.height / 20
+
+                        }else{
+                           self!.imageHeight = image!.size.height / 5
                         }
+                        
                       self!.offersImagesList.append(self.self!.imageHeight ?? 0)
                     print("offers images list count \(self!.offersImagesList.count)")
                     print("offers list count \(self!.offers.count)")
@@ -115,7 +121,7 @@ class OffersPresenter{
 
                       if self!.offersImagesList.count == self!.offers.count
                       {
-                          self!.offersNumber += 10
+                          self!.offersNumber += 20
                           complition(true)
                       }
                     }   }
