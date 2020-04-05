@@ -17,6 +17,7 @@ target 'Luzaz' do
   pod 'Kingfisher', '~> 5.0'
   pod 'BEMCheckBox'
   pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift5.0' # Swift 5.0
+  pod 'NVActivityIndicatorView'
 
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'

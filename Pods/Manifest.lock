@@ -87,6 +87,9 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
   - OpalImagePicker (1.7.2)
   - Protobuf (3.11.2)
   - SDWebImage (5.5.2):
@@ -107,6 +110,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - KMPlaceholderTextView (~> 1.4.0)
   - MOLH
+  - NVActivityIndicatorView
   - OpalImagePicker (~> 1.7.1)
   - SDWebImage (from `https://github.com/SDWebImage/SDWebImage.git`)
   - Siren (from `https://github.com/ArtSabintsev/Siren.git`, branch `swift5.0`)
@@ -135,6 +139,7 @@ SPEC REPOS:
     - KMPlaceholderTextView
     - MOLH
     - nanopb
+    - NVActivityIndicatorView
     - OpalImagePicker
     - Protobuf
     - SwiftyJSON
@@ -182,6 +187,7 @@ SPEC CHECKSUMS:
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
   MOLH: 2492e7f8fe3400580832312dc0fb9e05d7e92726
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   OpalImagePicker: 770b495a9700fa1d02a5a3c7c8303f1ac4e6c54d
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
@@ -189,6 +195,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: c81afa7d34741f39d9d928a051b0775c2195de70
+PODFILE CHECKSUM: b1fdfb2d5b48fe5c1e6faeb0fd79560fe74d08ad
 
 COCOAPODS: 1.8.4

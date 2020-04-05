@@ -19,17 +19,28 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-r6-HXS">
                         <rect key="frame" x="0.0" y="0.0" width="179" height="117"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJ5-oi-Xb3" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                        <rect key="frame" x="74.5" y="43.5" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="QUM-GT-sge"/>
+                            <constraint firstAttribute="width" constant="30" id="sC2-1a-tQ1"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="JX7-r6-HXS" secondAttribute="trailing" id="CKs-5i-va9"/>
                 <constraint firstAttribute="bottom" secondItem="JX7-r6-HXS" secondAttribute="bottom" id="Gvr-gf-sau"/>
+                <constraint firstItem="fJ5-oi-Xb3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LBD-hC-ytv"/>
                 <constraint firstItem="JX7-r6-HXS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a0q-B2-3aP"/>
                 <constraint firstItem="JX7-r6-HXS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ioj-Bo-LF8"/>
+                <constraint firstItem="fJ5-oi-Xb3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="mcO-S6-D8O"/>
             </constraints>
             <size key="customSize" width="179" height="117"/>
             <connections>
+                <outlet property="activityIndicator" destination="fJ5-oi-Xb3" id="kGO-hk-ZmN"/>
                 <outlet property="offerImageView" destination="JX7-r6-HXS" id="F3F-ou-vtE"/>
             </connections>
             <point key="canvasLocation" x="100" y="85.007496251874073"/>

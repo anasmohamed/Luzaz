@@ -50,6 +50,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = LoginPresenter(view: self)
+        emailTextField.placeholderColor(.darkGray)
+        passwordTextField.placeholderColor(.darkGray)
         navigationItem.backBarButtonItem = UIBarButtonItem(
         title: "Back", style: .plain, target: nil, action: nil)
         scroller.translatesAutoresizingMaskIntoConstraints = false

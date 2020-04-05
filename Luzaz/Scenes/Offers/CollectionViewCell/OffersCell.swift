@@ -8,16 +8,20 @@
 
 import UIKit
 import SDWebImage
+import NVActivityIndicatorView
 class OffersCell: UICollectionViewCell,OffersCellView {
     
+    @IBOutlet weak var activityIndicator: NVActivityIndicatorView!
     @IBOutlet weak var offerImageView: UIImageView!
     var actInd: UIActivityIndicatorView?
     var imageHieght : CGFloat?
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        activityIndicator.color = .black
+
+       // activityIndicator.startAnimating()
         self.layer.masksToBounds = true
-        
        self.layer.cornerRadius = 10
     
        
@@ -28,9 +32,6 @@ class OffersCell: UICollectionViewCell,OffersCellView {
         // Initialization code
     }
     func displayOfferImage(offerImage: String)  {
-        
-        offerImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
-        offerImageView.sd_imageIndicator = SDWebImageProgressIndicator.default
         offerImageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(offerImage)"))
     }
     

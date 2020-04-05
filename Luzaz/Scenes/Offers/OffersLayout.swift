@@ -78,6 +78,7 @@ class OffersLayout: UICollectionViewLayout {
           // 5
           let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
           attributes.frame = insetFrame
+            
           cache.append(attributes)
             
           // 6

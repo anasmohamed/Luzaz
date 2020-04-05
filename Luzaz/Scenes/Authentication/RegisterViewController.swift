@@ -13,6 +13,7 @@ import Toast_Swift
 class RegisterViewController: UIViewController {
     @IBOutlet weak var agreeCheckBoc: BEMCheckBox!
     
+    @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var mobileTextField: UITextField!
         {
@@ -51,7 +52,7 @@ class RegisterViewController: UIViewController {
     }
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: RegistrationPresenter!
-    
+    var language : String?
     @IBAction func registerBtn(_ sender: UITextField) {
         guard let fullName = userNameTextField.text,
             let email = emailTextField.text,
@@ -69,12 +70,21 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         agreeCheckBoc.boxType = .square
+        userNameTextField.placeholderColor(.darkGray)
+        mobileTextField.placeholderColor(.darkGray)
+        emailTextField.placeholderColor(.darkGray)
+        conPassTextField.placeholderColor(.darkGray)
+        passwordTextField.placeholderColor(.darkGray)
+
         presenter = RegistrationPresenter(view: self)
-        scroller.translatesAutoresizingMaskIntoConstraints = false
-        scroller.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        scroller.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scroller.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+       // language = UserDefaults.standard.string(forKey: "language")
+//        if language == "en"{
+//            signinBtn.titleLabel?.textAlignment = .left
+//        } else{
+//            signinBtn.titleLabel?.textAlignment = .right
+//
+//        }
+
     }
     
     

@@ -14,6 +14,7 @@ extension OffersViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
         if (indexPath.row == presenter.getOffersCount() - 1 &&  !presenter.isOfferEmpty) { //it's your last cell
             pageNumber += 1
             presenter.getOffers(countryId:countryId ?? "1" ,page: String(pageNumber))

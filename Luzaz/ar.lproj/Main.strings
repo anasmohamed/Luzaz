@@ -60,8 +60,8 @@
 "Aoi-XR-GXM.text" = "تفاصيل العرض";
 
 /* Class = "UIButton"; normalTitle = "Have Account Login"; ObjectID = "Bdz-Fz-bP1"; */
-"Bdz-Fz-bP1.normalTitle" = "لديك حساب سجل دخول";
-
+"Bdz-Fz-bP1.normalTitle" = "سجل دخول";
+"WU6-c6-Wik.text" = "سجل دخول";
 /* Class = "UILabel"; text = "Win With US"; ObjectID = "CBL-jY-owI"; */
 "CBL-jY-owI.text" = "اربج معنا";
 
