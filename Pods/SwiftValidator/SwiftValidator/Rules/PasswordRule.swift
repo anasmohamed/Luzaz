@@ -21,7 +21,7 @@ public class PasswordRule : RegexRule {
     // static let regex = "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z]).*?$"
     
     /// Regular express string to be used in validation.
-    static let regex = "^(?=.*?[A-Z]).{8,}$"
+    static let regex = "^[A-Za-z\\d$@$#!%*?&]{5,}"
     
     /**
      Initializes a `PasswordRule` object that will validate a field is a valid password.
@@ -29,7 +29,7 @@ public class PasswordRule : RegexRule {
      - parameter message: String of error message.
      - returns: An initialized `PasswordRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public convenience init(message : String = "Must be 8 characters with 1 uppercase") {
+    public convenience init(message : String = "Must be 5 characters") {
         self.init(regex: PasswordRule.regex, message : message)
     }
 }

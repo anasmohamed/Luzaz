@@ -95,7 +95,7 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
         // You can pass in custom error messages to regex rules (such as ZipCodeRule and EmailRule)
         validator.registerField(emailTextField, errorLabel: emailErrorLabel, rules: [RequiredRule(), EmailRule()])
         
-        validator.registerField(passwordTextField, errorLabel: passwordErrorLabel, rules: [RequiredRule(), PasswordRule(regex: "^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{5}$")])
+        validator.registerField(passwordTextField, errorLabel: passwordErrorLabel, rules: [RequiredRule(), PasswordRule(regex:"^[A-Za-z\\d$@$#!%*?&]{5,}")])
         
         
         

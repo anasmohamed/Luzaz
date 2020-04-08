@@ -71,3 +71,10 @@
 
 "there is new verstion you can update now" = "هنالك نسخة جديدة من التطبيق";
 "Update" = "تجديث";
+"This field is required" = "هذه الحقل مطلوب";
+"Enter valid numeric characters" = "أدخل أحرفًا رقمية صالحة";
+
+"Must be 5 characters" = " يجب أن يكون 5 أحرف علي الاقل";
+
+"Must be a valid email address" = "يجب أن يكون عنوان بريد إلكتروني صالح";
+"Enter a valid phone number" = "أدخل رقم هاتف صالح";
