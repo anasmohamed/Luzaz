@@ -11,6 +11,7 @@ import MOLH
 import Firebase
 import UserNotifications
 import Siren
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
     
@@ -29,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]
         window?.rootViewController = containerVC
+
         window?.makeKeyAndVisible()
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
@@ -61,6 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
        }
         return true
     }
+ 
+   
     func showError(error: String) {
         let alertController = UIAlertController(title: "Update".localiz(), message: error.localiz(), preferredStyle: .alert)
            
