@@ -13,7 +13,7 @@ import Foundation
  */
 open class RegexRule : Rule {
     /// Regular express string to be used in validation.
-    private var REGEX: String = "^(?=.*?[A-Z]).{8,}$"
+    private var REGEX: String = "^(?=.*?[A-Z]).{5,}$"
     /// String that holds error message.
     private var message : String
     

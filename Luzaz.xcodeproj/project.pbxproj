@@ -50,7 +50,6 @@
 		CC726960233AC613006B61DD /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268AB233AC612006B61DD /* RegistrationView.swift */; };
 		CC726961233AC613006B61DD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268AC233AC612006B61DD /* RegisterViewController.swift */; };
 		CC726962233AC613006B61DD /* RegistrationViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268AD233AC612006B61DD /* RegistrationViewController+PresenterDelegate.swift */; };
-		CC726963233AC613006B61DD /* RegistrationViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268AE233AC612006B61DD /* RegistrationViewController+TextFieldDelegate.swift */; };
 		CC726964233AC613006B61DD /* TextFieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268AF233AC612006B61DD /* TextFieldIcon.swift */; };
 		CC726965233AC613006B61DD /* MainCateoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7268B3233AC612006B61DD /* MainCateoriesCollectionViewCell.swift */; };
 		CC726966233AC613006B61DD /* MainCateoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC7268B4233AC612006B61DD /* MainCateoriesCollectionViewCell.xib */; };
@@ -258,7 +257,6 @@
 		CC7268AB233AC612006B61DD /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CC7268AC233AC612006B61DD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ../RegisterViewController.swift; sourceTree = "<group>"; };
 		CC7268AD233AC612006B61DD /* RegistrationViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
-		CC7268AE233AC612006B61DD /* RegistrationViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		CC7268AF233AC612006B61DD /* TextFieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIcon.swift; sourceTree = "<group>"; };
 		CC7268B3233AC612006B61DD /* MainCateoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCateoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC7268B4233AC612006B61DD /* MainCateoriesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCateoriesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -498,7 +496,6 @@
 				CC7268AA233AC612006B61DD /* RegistrationPresenter.swift */,
 				CC7268A7233AC612006B61DD /* Presenter */,
 				CC7268AD233AC612006B61DD /* RegistrationViewController+PresenterDelegate.swift */,
-				CC7268AE233AC612006B61DD /* RegistrationViewController+TextFieldDelegate.swift */,
 				CC7268AF233AC612006B61DD /* TextFieldIcon.swift */,
 			);
 			path = Authentication;
@@ -1537,7 +1534,6 @@
 				CC726981233AC613006B61DD /* UsersChatsInteractor.swift in Sources */,
 				3581962123572D390029D669 /*  CustomCollectionViewFlowLayout.swift in Sources */,
 				CC72695B233AC613006B61DD /* LoginViewController+TextFieldDelegate.swift in Sources */,
-				CC726963233AC613006B61DD /* RegistrationViewController+TextFieldDelegate.swift in Sources */,
 				CC72699D233AC613006B61DD /* MyProductViewController+PresenterDelegate.swift in Sources */,
 				CC72696D233AC613006B61DD /* SubCategoriesInteractor.swift in Sources */,
 				CC72696C233AC613006B61DD /* MainCategoriesView.swift in Sources */,

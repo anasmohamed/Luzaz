@@ -78,3 +78,4 @@
 
 "Must be a valid email address" = "يجب أن يكون عنوان بريد إلكتروني صالح";
 "Enter a valid phone number" = "أدخل رقم هاتف صالح";
+"Invalid Regular Expression" = "غير صحيح";
