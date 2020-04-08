@@ -96,6 +96,7 @@ PODS:
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
   - Siren (5.1.2)
+  - SwiftValidator (4.0.0)
   - SwiftyJSON (3.0.0)
   - Toast-Swift (5.0.1)
 
@@ -114,6 +115,7 @@ DEPENDENCIES:
   - OpalImagePicker (~> 1.7.1)
   - SDWebImage (from `https://github.com/SDWebImage/SDWebImage.git`)
   - Siren (from `https://github.com/ArtSabintsev/Siren.git`, branch `swift5.0`)
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.2.0`)
   - SwiftyJSON (= 3.0.0)
   - Toast-Swift (~> 5.0.1)
 
@@ -153,6 +155,9 @@ EXTERNAL SOURCES:
   Siren:
     :branch: swift5.0
     :git: https://github.com/ArtSabintsev/Siren.git
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
 
 CHECKOUT OPTIONS:
   IHProgressHUD:
@@ -164,6 +169,9 @@ CHECKOUT OPTIONS:
   Siren:
     :commit: ef6d9ffa4226ced10d1b46d03c38c1b794b22788
     :git: https://github.com/ArtSabintsev/Siren.git
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -192,9 +200,10 @@ SPEC CHECKSUMS:
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   Siren: ee674e4ab57f5cc23186202a11313bc50a661a61
+  SwiftValidator: 249b6b3ae3b294266c5b9de134d94f18f2d5aa47
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: b1fdfb2d5b48fe5c1e6faeb0fd79560fe74d08ad
+PODFILE CHECKSUM: 2a97092f3813f704fe381ec75fadf532a049ec0e
 
 COCOAPODS: 1.8.4

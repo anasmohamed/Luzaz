@@ -13,6 +13,11 @@ import Toast_Swift
 class RegisterViewController: UIViewController {
     @IBOutlet weak var agreeCheckBoc: BEMCheckBox!
     
+    @IBOutlet weak var phoneErrorLabel: UILabel!
+    @IBOutlet weak var confirmPasswordErrorLabel: UILabel!
+    @IBOutlet weak var passwordErrorLabel: UILabel!
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    @IBOutlet weak var fullNameErrorLabel: UILabel!
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var mobileTextField: UITextField!

@@ -50,7 +50,7 @@ class LoginPresenter {
         }
     }
     
-    private func isValidEmail(email: String) -> Bool {
+   public func isValidEmail(email: String) -> Bool {
         return !(email.isEmpty)
     }
     
