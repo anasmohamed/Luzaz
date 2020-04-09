@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController,ProfileView {
         super.viewDidLoad()
         presenter = ProfilePresenter(view : self)
        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-                 logoImageView.isUserInteractionEnabled = true
+             //    logoImageView.isUserInteractionEnabled = true
                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
         
         counrty = UserDefaults.standard.string(forKey: "country") ?? ""

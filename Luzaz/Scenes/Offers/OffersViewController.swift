@@ -29,8 +29,9 @@ UISearchBarDelegate,UISearchControllerDelegate{
     var language : String?
     var countryId : String?
     var pageNumber = 0;
-    let tabBarController1 = FluidTabBarController()
-
+    override func loadView() {
+        super.loadView()
+    }
     @IBOutlet weak var logoImageView: UIImageView!
     // MARK: View life cycle
     override func viewDidLoad() {

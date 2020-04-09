@@ -14,6 +14,7 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    var token : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -26,7 +27,13 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.viewDidLoad()
+        if !(token.isEmpty){
+                  presenter.viewDidLoad()
+
+               }else{
+    
+                   showError(error: "you should login".localiz())
+               }
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
        {

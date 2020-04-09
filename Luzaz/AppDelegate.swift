@@ -11,25 +11,68 @@ import MOLH
 import Firebase
 import UserNotifications
 import Siren
-
+import Toast_Swift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-
+    var token = ""
     fileprivate var containerVC = ContainerVC()
     var MenuContainerVC : ContainerVC
     {
         return containerVC
     }
-    
+    let searchVC = OffersViewController()
+  let chatController = UsersChatsViewController()
+    let profileVC = ProfileViewController()
+    let sellYourItemController = SellYourItemViewController()
+    //var mainVC : UINavigationController!
+   // var chatController : UINavigationController!
+    var thirdTabNavigationController : UINavigationController!
+    var fourthTabNavigationControoller : UINavigationController!
+    var fifthTabNavigationController : UINavigationController!
+    let homeItem = UITabBarItem()
+    let chatItem = UITabBarItem()
+    let profileItem = UITabBarItem()
+    let addOfferItem = UITabBarItem()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+     let chatController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+     let profileItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+     let profileItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+     let sellYourItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+    let profileItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+    let profileItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+        if UserDefaults.standard.string(forKey: "token") != nil
+        {
+           token = UserDefaults.standard.string(forKey: "token")!
+        }
+               
+        homeItem.image = UIImage(named: "home-24")
+        containerVC.tabBarItem = homeItem
+        
+        chatItem.image = UIImage(named:"chat-26")
+        chatController.tabBarItem = chatItem
+        
+        addOfferItem.image = UIImage(named:"cameraIcon")
+        sellYourItemController.tabBarItem = addOfferItem
+        
+        profileItem.image = UIImage(named:"profile")
+        profileVC.tabBarItem = profileItem
+        
+        let tabBarController = UITabBarController()
         
 //        MOLHLanguage.setDefaultLanguage("en")
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]
-        window?.rootViewController = containerVC
+     
+            tabBarController.viewControllers = [containerVC,chatController]
+
+        
+        UITabBar.appearance().tintColor = UIColor(red: 0/255.0, green: 146/255.0, blue: 248/255.0, alpha: 1.0)
+        
+        window?.rootViewController = tabBarController
 
         window?.makeKeyAndVisible()
         FirebaseApp.configure()
@@ -64,7 +107,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable  {
         return true
     }
  
-   
+   func show(error: String) {
+         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+         
+         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+         alertController.addAction(action)
+         
+    self.window?.rootViewController!.present(alertController, animated: true, completion: nil)
+     }
     func showError(error: String) {
         let alertController = UIAlertController(title: "Update".localiz(), message: error.localiz(), preferredStyle: .alert)
            

@@ -687,7 +687,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEC-ht-v7D" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
-                                        <rect key="frame" x="138" y="405" width="138" height="40"/>
+                                        <rect key="frame" x="138" y="397" width="138" height="40"/>
                                         <color key="backgroundColor" red="0.75732511280000003" green="0.12879788880000001" blue="0.116728358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="138" id="Zbx-0F-oc8"/>
@@ -705,8 +705,8 @@
                                             <action selector="registerBtn:" destination="UjN-td-Suf" eventType="touchUpInside" id="rLv-YV-G61"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8zJ-6r-Qdn" userLabel="Registeration Stack View">
-                                        <rect key="frame" x="20" y="116" width="374" height="224"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8zJ-6r-Qdn" userLabel="Registeration Stack View">
+                                        <rect key="frame" x="20" y="116" width="374" height="216"/>
                                         <subviews>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23f-r2-tJR">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
@@ -734,13 +734,13 @@ _placeholderLabel.textColor
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTK-EE-eBZ">
-                                                <rect key="frame" x="0.0" y="43" width="374" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="42" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DT-EC-QL0">
-                                                <rect key="frame" x="0.0" y="46" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="44" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Nar-hg-IoA"/>
                                                 </constraints>
@@ -749,13 +749,13 @@ _placeholderLabel.textColor
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtr-fo-vdO">
-                                                <rect key="frame" x="0.0" y="89" width="374" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="86" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dK-Rb-aKu" userLabel="Pass">
-                                                <rect key="frame" x="0.0" y="92" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="88" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="NE2-4c-Uxa"/>
                                                 </constraints>
@@ -764,13 +764,13 @@ _placeholderLabel.textColor
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKR-Ig-gUy">
-                                                <rect key="frame" x="0.0" y="135" width="374" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="130" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Your Password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bab-ih-28T" userLabel="Confirm ">
-                                                <rect key="frame" x="0.0" y="138" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="132" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="aXJ-B8-B0r"/>
                                                 </constraints>
@@ -779,13 +779,13 @@ _placeholderLabel.textColor
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39Q-Ei-fVd">
-                                                <rect key="frame" x="0.0" y="181" width="374" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="174" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mq3-P1-8cb" userLabel="Mobile ">
-                                                <rect key="frame" x="0.0" y="184" width="374" height="40"/>
+                                                <rect key="frame" x="0.0" y="176" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qrm-Cy-exB"/>
                                                 </constraints>
@@ -805,7 +805,7 @@ _placeholderLabel.textColor
                                         <rect key="frame" x="197" y="348" width="20" height="20"/>
                                     </activityIndicatorView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n1f-kZ-rNW">
-                                        <rect key="frame" x="77.666666666666686" y="461" width="259" height="20"/>
+                                        <rect key="frame" x="77.666666666666686" y="453" width="259" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm8-Ir-SlX">
                                                 <rect key="frame" x="0.0" y="0.0" width="196" height="20"/>
@@ -827,13 +827,13 @@ _placeholderLabel.textColor
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree to Terms and Conditions " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaE-Zn-vAF">
-                                        <rect key="frame" x="54" y="354" width="270.33333333333331" height="24"/>
+                                        <rect key="frame" x="54" y="346" width="270.33333333333331" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIR-nb-yXY" customClass="BEMCheckBox">
-                                        <rect key="frame" x="20" y="357" width="29" height="18"/>
+                                        <rect key="frame" x="20" y="349" width="29" height="18"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="29" id="XTa-4E-Hkc"/>
@@ -3674,7 +3674,7 @@ _placeholderLabel.textColor
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKJ-kL-Ake">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-ik-peF">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-ik-peF">
                                         <rect key="frame" x="93" y="22" width="228" height="39"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp9-su-i3M">
@@ -4209,13 +4209,13 @@ _placeholderLabel.textColor
                                             <action selector="backBtnWasPressed:" destination="fbp-fG-y5G" eventType="touchUpInside" id="Tc9-rV-fvb"/>
                                         </connections>
                                     </button>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-v2-00B">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-v2-00B">
                                         <rect key="frame" x="20" y="258" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6R-Dr-Dln">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6R-Dr-Dln">
                                         <rect key="frame" x="20" y="329" width="374" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>

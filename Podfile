@@ -19,8 +19,7 @@ target 'Luzaz' do
   pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift5.0' # Swift 5.0
   pod 'NVActivityIndicatorView'
   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
-  pod 'RAMAnimatedTabBarController'
-
+ pod 'BATabBarController'
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   pod 'IHProgressHUD', :git => 'https://github.com/Swiftify-Corp/IHProgressHUD.git'

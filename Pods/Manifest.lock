@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.8.1)
+  - BATabBarController (0.1.6):
+    - Masonry
   - BEMCheckBox (1.4.1)
   - FaveButton (3.2.0)
   - Firebase/Analytics (6.14.0):
@@ -81,6 +83,7 @@ PODS:
     - Kingfisher/Core (= 5.13.1)
   - Kingfisher/Core (5.13.1)
   - KMPlaceholderTextView (1.4.0)
+  - Masonry (1.1.0)
   - MOLH (1.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -92,7 +95,6 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.8.0)
   - OpalImagePicker (1.7.2)
   - Protobuf (3.11.2)
-  - RAMAnimatedTabBarController (5.1.0)
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
@@ -103,6 +105,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - BATabBarController
   - BEMCheckBox
   - FaveButton
   - Firebase/Analytics
@@ -114,7 +117,6 @@ DEPENDENCIES:
   - MOLH
   - NVActivityIndicatorView
   - OpalImagePicker (~> 1.7.1)
-  - RAMAnimatedTabBarController
   - SDWebImage (from `https://github.com/SDWebImage/SDWebImage.git`)
   - Siren (from `https://github.com/ArtSabintsev/Siren.git`, branch `swift5.0`)
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.2.0`)
@@ -124,6 +126,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - BATabBarController
     - BEMCheckBox
     - FaveButton
     - Firebase
@@ -141,12 +144,12 @@ SPEC REPOS:
     - GoogleUtilities
     - Kingfisher
     - KMPlaceholderTextView
+    - Masonry
     - MOLH
     - nanopb
     - NVActivityIndicatorView
     - OpalImagePicker
     - Protobuf
-    - RAMAnimatedTabBarController
     - SwiftyJSON
     - Toast-Swift
 
@@ -178,6 +181,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  BATabBarController: e03e114180ceb50eafc9e7c5c49987cdd3060a16
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
@@ -196,18 +200,18 @@ SPEC CHECKSUMS:
   IHProgressHUD: 55de0cd62cd65832e0d0047324ab0ca59d0bba11
   Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MOLH: 2492e7f8fe3400580832312dc0fb9e05d7e92726
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   OpalImagePicker: 770b495a9700fa1d02a5a3c7c8303f1ac4e6c54d
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
-  RAMAnimatedTabBarController: b5c821298071fded801532216ad8a24394f89859
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   Siren: ee674e4ab57f5cc23186202a11313bc50a661a61
   SwiftValidator: 249b6b3ae3b294266c5b9de134d94f18f2d5aa47
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 0422aea63c0fe076522ca7b8a7b6f75c1415ab42
+PODFILE CHECKSUM: 81625cc86501e9f0eb2bf65c3b1c25e792071b57
 
 COCOAPODS: 1.8.4
