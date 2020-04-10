@@ -16,7 +16,7 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         dismiss(animated: true, completion: nil)
     }
     var presenter: MyProductPresenter!
-    var token : String!
+    var token : String = ""
     @IBAction func segmentedControlActionChanged(_ sender: Any) {
         tableView.reloadData()
     }
@@ -29,32 +29,63 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         if UserDefaults.standard.string(forKey: "token") != nil
-                        {
-                            token = UserDefaults.standard.string(forKey: "token")!
-                        }
+        {
+            token = UserDefaults.standard.string(forKey: "token")!
+        }
         if !token.isEmpty{
-        setupTableView()
-        presenter = MyProductPresenter(view : self)
-        displayBackground()
-        token = UserDefaults.standard.string(forKey: "token")!
-             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-                       logoImageView.isUserInteractionEnabled = true
+            setupTableView()
+            presenter = MyProductPresenter(view : self)
+            displayBackground()
+            token = UserDefaults.standard.string(forKey: "token")!
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            logoImageView.isUserInteractionEnabled = true
             logoImageView.addGestureRecognizer(tapGestureRecognizer)}
         else{
             
-            
+            if !UIAccessibility.isReduceTransparencyEnabled {
+                view.backgroundColor = .clear
+                
+                let blurEffect = UIBlurEffect(style: .dark)
+                let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                //always fill the view
+                blurEffectView.frame = self.view.bounds
+                blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                
+                view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+            } else {
+                view.backgroundColor = .black
+            }
+            showError(error: "you should login".localiz())
         }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.viewDidLoad()
+        if !token.isEmpty{
+            presenter.viewDidLoad()}
+        else{
+            
+            if !UIAccessibility.isReduceTransparencyEnabled {
+                view.backgroundColor = .clear
+                
+                let blurEffect = UIBlurEffect(style: .dark)
+                let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                //always fill the view
+                blurEffectView.frame = self.view.bounds
+                blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                
+                view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+            } else {
+                view.backgroundColor = .black
+            }
+            showError(error: "you should login".localiz())
+        }
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-       {
-          let homeViewController = ContainerVC()
-           homeViewController.modalPresentationStyle = .fullScreen
-                 present(homeViewController, animated: true, completion: nil)
-       }
+    {
+        let homeViewController = ContainerVC()
+        homeViewController.modalPresentationStyle = .fullScreen
+        present(homeViewController, animated: true, completion: nil)
+    }
     func setupTableView() {
         
         tableView.register(UINib(nibName: "MyProductTableViewCell", bundle: nil), forCellReuseIdentifier: "MyProductTableViewCell")
@@ -100,19 +131,22 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         return true
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        switch segmentedControl.selectedSegmentIndex
+        if !token.isEmpty{
+            switch segmentedControl.selectedSegmentIndex
+            {
+                
+            case 0 :
+                return presenter.getSellsCount()
+            case 1:
+                return presenter.getOrdersCount()
+            default :
+                return presenter.getSellsCount()
+                
+            }
+        }else
         {
-            
-        case 0 :
-            return presenter.getSellsCount()
-        case 1:
-            return presenter.getOrdersCount()
-        default :
-            return presenter.getSellsCount()
-            
+            return 0
         }
-        
         
     }
     
@@ -120,7 +154,7 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
         var offerId : String!
         let more = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             let sellYourItemVC = self.storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
-             offerId = self.presenter.getOfferId(index:index.row , segmentControlIndex:0)
+            offerId = self.presenter.getOfferId(index:index.row , segmentControlIndex:0)
             sellYourItemVC.modalPresentationStyle = .fullScreen
             sellYourItemVC.isEditProduct = true
             sellYourItemVC.incomeImage =

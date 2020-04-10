@@ -31,7 +31,21 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
                   presenter.viewDidLoad()
 
                }else{
-    
+
+    if !UIAccessibility.isReduceTransparencyEnabled {
+        view.backgroundColor = .clear
+        
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        //always fill the view
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+    } else {
+        view.backgroundColor = .black
+    }
+    showError(error: "you should login".localiz())
                    showError(error: "you should login".localiz())
                }
     }
