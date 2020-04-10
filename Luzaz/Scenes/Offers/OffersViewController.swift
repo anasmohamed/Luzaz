@@ -166,7 +166,7 @@ UISearchBarDelegate,UISearchControllerDelegate{
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let offersDetailsVC = storyboard?.instantiateViewController(withIdentifier: "OffersDetailsVC") as! OffersDetailsViewController
-        offersDetailsVC.modalPresentationStyle = .fullScreen
+        offersDetailsVC.modalPresentationStyle = .overCurrentContext
         presenter.pushToDetails(viewController: offersDetailsVC, indexPath.row)
         self.present(offersDetailsVC,animated:true,completion:nil)
         

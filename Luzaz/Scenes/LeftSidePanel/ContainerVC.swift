@@ -41,10 +41,12 @@ class ContainerVC: UIViewController {
     let centerPanelExpandedOffset : CGFloat = 130
     var tap : UITapGestureRecognizer!
     var language : String?
+    var isFromLogin : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.delegate = UIApplication.shared.delegate as? UITabBarControllerDelegate
-
+        if isFromLogin{
+        AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()
+        }
         initCenter(screen: showVC)
     }
     

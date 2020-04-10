@@ -37,9 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable ,UITabBarCon
     let profileItem = UITabBarItem()
     let addOfferItem = UITabBarItem()
     let myProductsItem = UITabBarItem()
-
+    var offerDetails = OffersDetailsViewController()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
         
         
         //     let profileItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
@@ -47,45 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable ,UITabBarCon
         //    let profileItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
         //    let profileItem = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
         
-        if UserDefaults.standard.string(forKey: "token") != nil
-        {
-            token = UserDefaults.standard.string(forKey: "token")!
-        }
-        homeItem.image = UIImage(named: "home-24")
-        containerVC.tabBarItem = homeItem
         
-        
-        
-      
-        
-        
-        let chatController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
-        let profileController = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
-        let sellYourItemController = storyboard.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
-         let myProductsController = storyboard.instantiateViewController(withIdentifier: "MyProductsVC") as! MyProductViewController
-        
-        chatItem.image = UIImage(named:"chat-26")
-        chatController.tabBarItem = chatItem
-        
-        profileItem.image = UIImage(named:"profile")
-        profileController.tabBarItem = profileItem
-        
-        addOfferItem.image = UIImage(named:"camera-25")
-        sellYourItemController.tabBarItem = addOfferItem
-        
-        myProductsItem.image = UIImage(named:"price_tag")
-        myProductsController.tabBarItem = myProductsItem
-        
-        let tabBarController = UITabBarController()
         MOLHLanguage.setDefaultLanguage("en")
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]
-        tabBarController.viewControllers = [containerVC,chatController,profileController,sellYourItemController,myProductsController]
+        
         
         
         UITabBar.appearance().tintColor = UIColor(red: 0/255.0, green: 146/255.0, blue: 248/255.0, alpha: 1.0)
         
-        window?.rootViewController = tabBarController
+        window?.rootViewController = showTabBar()
         
         window?.makeKeyAndVisible()
         FirebaseApp.configure()
@@ -119,7 +91,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable ,UITabBarCon
         }
         return true
     }
-    
+    func showTabBar() -> UITabBarController{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if UserDefaults.standard.string(forKey: "token") != nil
+        {
+            token = UserDefaults.standard.string(forKey: "token")!
+        }
+        homeItem.image = UIImage(named: "home-24")
+        containerVC.tabBarItem = homeItem
+        
+        
+        
+        
+        
+        
+        let chatController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+        let profileController = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+        let sellYourItemController = storyboard.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
+        let myProductsController = storyboard.instantiateViewController(withIdentifier: "MyProductsVC") as! MyProductViewController
+        
+        chatItem.image = UIImage(named:"chat-26")
+        chatController.tabBarItem = chatItem
+        
+        profileItem.image = UIImage(named:"profile")
+        profileController.tabBarItem = profileItem
+        
+        addOfferItem.image = UIImage(named:"camera-25")
+        sellYourItemController.tabBarItem = addOfferItem
+        
+        myProductsItem.image = UIImage(named:"price_tag")
+        myProductsController.tabBarItem = myProductsItem
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [containerVC,chatController,profileController,sellYourItemController,myProductsController]
+        return tabBarController
+    }
     func show(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         

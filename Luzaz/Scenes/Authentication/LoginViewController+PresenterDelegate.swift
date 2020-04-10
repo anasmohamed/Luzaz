@@ -25,8 +25,9 @@ extension LoginViewController: LoginView {
         let homeViewController = ContainerVC()
         let encodeData:Data = NSKeyedArchiver.archivedData(withRootObject: user)
         UserDefaults.standard.set(encodeData, forKey:"user")
-         
-        homeViewController.modalPresentationStyle = .fullScreen
+        homeViewController.isFromLogin = true
+        homeViewController.modalPresentationStyle = .overCurrentContext
+        
         present(homeViewController, animated: true, completion: nil)
         
      
