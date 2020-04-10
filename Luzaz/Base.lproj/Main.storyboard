@@ -21,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swl-Gf-ZSp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek3-3C-VnN">
                                         <rect key="frame" x="0.0" y="10.000000000000004" width="321" height="60.333333333333343"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="LqM-sI-5YA">
-                                                <rect key="frame" x="30" y="6.6666666666666679" width="130" height="47"/>
+                                                <rect key="frame" x="30" y="6.6666666666666643" width="130" height="47"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="Tq1-3v-K89"/>
                                                     <constraint firstAttribute="height" constant="47" id="slH-Z2-JPD"/>
@@ -201,7 +201,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UwG-I2-ppX">
-                                                <rect key="frame" x="0.0" y="413" width="174" height="40"/>
+                                                <rect key="frame" x="0.0" y="413.00000000000006" width="174" height="40"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift_icon" translatesAutoresizingMaskIntoConstraints="NO" id="99m-wQ-mSb">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
@@ -304,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8771.0144927536239" y="-216.03260869565219"/>
+            <point key="canvasLocation" x="-7947.826086956522" y="-208.69565217391306"/>
         </scene>
         <!--Sell Your Item View Controller-->
         <scene sceneID="HPE-13-2Ej">
@@ -1015,7 +1015,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OS5-rT-6sc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7180" y="-215"/>
+            <point key="canvasLocation" x="-6273.913043478261" y="-215.21739130434784"/>
         </scene>
         <!--Report View Controller-->
         <scene sceneID="Ccw-cj-IIt">
@@ -1788,7 +1788,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X13-2i-kB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1998.5507246376812" y="-216.03260869565219"/>
+            <point key="canvasLocation" x="-1091.304347826087" y="-216.03260869565219"/>
         </scene>
         <!--Sub Categories View Controller-->
         <scene sceneID="v6L-D5-JJK">
@@ -1911,7 +1911,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNm-iR-saz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1179.7101449275362" y="-218.47826086956525"/>
+            <point key="canvasLocation" x="-272.46376811594206" y="-218.47826086956525"/>
         </scene>
         <!--My Product View Controller-->
         <scene sceneID="VkH-4q-K67">
@@ -2168,7 +2168,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEz-wF-1eJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-382.60869565217394" y="-217.66304347826087"/>
+            <point key="canvasLocation" x="524.63768115942037" y="-217.66304347826087"/>
         </scene>
         <!--Sell Your Item Second View Controller-->
         <scene sceneID="fNf-RB-q0N">
@@ -2778,13 +2778,14 @@ _placeholderLabel.textColor
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-tK-av1">
                                         <rect key="frame" x="0.0" y="8" width="414" height="728"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.59999999999999998" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sX-bZ-Pa7" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="271" width="354" height="40"/>
-                                                <color key="backgroundColor" red="0.75686274509999996" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" alpha="0.80000000000000004" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sX-bZ-Pa7" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="291" width="354" height="60"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="u22-Uf-GGE"/>
+                                                    <constraint firstAttribute="height" constant="60" id="u22-Uf-GGE"/>
                                                 </constraints>
-                                                <state key="normal">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="anas">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -2796,14 +2797,15 @@ _placeholderLabel.textColor
                                                     <action selector="answerBtnWasPressed:" destination="Z4o-56-0eC" eventType="touchUpInside" id="jA4-rZ-fZp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOh-iS-cE7" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="207" width="354" height="40"/>
-                                                <color key="backgroundColor" red="0.75686274509999996" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOh-iS-cE7" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="207" width="354" height="60"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Ip2-fn-ggi"/>
+                                                    <constraint firstAttribute="height" constant="60" id="Ip2-fn-ggi"/>
                                                 </constraints>
-                                                <state key="normal">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="anas">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRedius">
@@ -2823,13 +2825,15 @@ _placeholderLabel.textColor
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" alpha="0.5" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsq-Yz-1Xj" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="335" width="354" height="40"/>
-                                                <color key="backgroundColor" red="0.75686274509999996" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" alpha="0.80000000000000004" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsq-Yz-1Xj" customClass="RoundButton" customModule="Luzaz" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="375" width="354" height="60"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="HO5-6U-h2N"/>
+                                                    <constraint firstAttribute="height" constant="60" id="HO5-6U-h2N"/>
                                                 </constraints>
-                                                <state key="normal">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" red="0.58824852750000001" green="0.054192789249999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <state key="normal" title="anas">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -4439,7 +4443,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FE-dD-0YN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7888.4057971014499" y="-216.03260869565219"/>
+            <point key="canvasLocation" x="-6981.1594202898559" y="-216.03260869565219"/>
         </scene>
         <!--Languages View Controller-->
         <scene sceneID="YUP-f3-HIe">
@@ -4489,7 +4493,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMq-LW-xN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6252" y="346"/>
+            <point key="canvasLocation" x="-5344.9275362318849" y="345.6521739130435"/>
         </scene>
         <!--Offers View Controller-->
         <scene sceneID="uhM-rk-tgr">
@@ -4591,7 +4595,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqt-hm-Bvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2797.1014492753625" y="-218.47826086956525"/>
+            <point key="canvasLocation" x="-1889.8550724637682" y="-218.47826086956525"/>
         </scene>
         <!--User Competition View Controller-->
         <scene sceneID="skp-hc-Oqg">
@@ -5785,6 +5789,24 @@ _placeholderLabel.textColor
                 </view>
             </objects>
             <point key="canvasLocation" x="-8770.3999999999996" y="-1033.1334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cy8-Yv-rbw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0aw-LZ-oDU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HhI-lP-99C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FEV-Lr-nOu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5E-Ps-e9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8855.072463768116" y="-208.69565217391306"/>
         </scene>
     </scenes>
     <resources>

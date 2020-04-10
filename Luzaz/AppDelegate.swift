@@ -97,18 +97,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable ,UITabBarCon
         {
             token = UserDefaults.standard.string(forKey: "token")!
         }
-        homeItem.image = UIImage(named: "home-24")
-        containerVC.tabBarItem = homeItem
+       
         
         
         
-        
+//let containerVCTabBar = storyboard.instantiateViewController(withIdentifier: "ContainerVC") as! ContainerVC
         
         
         let chatController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
         let profileController = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
         let sellYourItemController = storyboard.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
         let myProductsController = storyboard.instantiateViewController(withIdentifier: "MyProductsVC") as! MyProductViewController
+        
+        homeItem.image = UIImage(named: "home-24")
+        containerVC.tabBarItem = homeItem
         
         chatItem.image = UIImage(named:"chat-26")
         chatController.tabBarItem = chatItem
