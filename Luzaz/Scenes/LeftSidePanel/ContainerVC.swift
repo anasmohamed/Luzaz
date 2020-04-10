@@ -43,6 +43,8 @@ class ContainerVC: UIViewController {
     var language : String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.delegate = UIApplication.shared.delegate as? UITabBarControllerDelegate
+
         initCenter(screen: showVC)
     }
     

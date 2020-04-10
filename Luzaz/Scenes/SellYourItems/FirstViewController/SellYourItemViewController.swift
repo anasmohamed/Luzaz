@@ -73,7 +73,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     var incomeSellerMail:String?
     var incomeOfferId:String?
     var incomeOfferAlbum:[ImagesAlbum]?
-    var token : String?
+    var token : String = ""
     let lblNew = UILabel()
 
     @IBAction func takePhotoBtnWasPressed(_ sender: Any) {
@@ -89,28 +89,47 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         cityPickerView.dataSource = self
         cityPickerView.delegate = self
         //setupCollectionView()
-        token = UserDefaults.standard.string(forKey: "token")!
-        presenter = SellYourItemPresenter(view: self)
-        imagePicker.maximumSelectionsAllowed = 5
-        imagePicker.imagePickerDelegate = self
-        sellectdOfferImagesCollectionView.delegate = self
-        sellectdOfferImagesCollectionView.dataSource = self
-        sellectdOfferImagesCollectionView.layer.borderWidth = 1
-        sellectdOfferImagesCollectionView.layer.borderColor = UIColor.black.cgColor
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-                  logoImageView.isUserInteractionEnabled = true
-                  logoImageView.addGestureRecognizer(tapGestureRecognizer)
-        self.hideKeyboardWhenTappedAround()
-        if isEditProduct
-        {
-            imageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(incomeImage ?? "")"))
-            textToImage(drawText: "change photo", atPoint:CGPoint( x: 0,y: imageView.frame.origin.y + 60))
-            let offerImageGestuer = UITapGestureRecognizer(target: self, action: #selector(changeOfferImage))
-            imageView.addGestureRecognizer(offerImageGestuer)
-            offerImageGestuer.numberOfTouchesRequired = 1
-            
-            
-        }
+        if !(token.isEmpty){
+            token = UserDefaults.standard.string(forKey: "token")!
+                   presenter = SellYourItemPresenter(view: self)
+                   imagePicker.maximumSelectionsAllowed = 5
+                   imagePicker.imagePickerDelegate = self
+                   sellectdOfferImagesCollectionView.delegate = self
+                   sellectdOfferImagesCollectionView.dataSource = self
+                   sellectdOfferImagesCollectionView.layer.borderWidth = 1
+                   sellectdOfferImagesCollectionView.layer.borderColor = UIColor.black.cgColor
+                   let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                             logoImageView.isUserInteractionEnabled = true
+                             logoImageView.addGestureRecognizer(tapGestureRecognizer)
+                   self.hideKeyboardWhenTappedAround()
+                   if isEditProduct
+                   {
+                       imageView.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(incomeImage ?? "")"))
+                       textToImage(drawText: "change photo", atPoint:CGPoint( x: 0,y: imageView.frame.origin.y + 60))
+                       let offerImageGestuer = UITapGestureRecognizer(target: self, action: #selector(changeOfferImage))
+                       imageView.addGestureRecognizer(offerImageGestuer)
+                       offerImageGestuer.numberOfTouchesRequired = 1
+                       
+                       
+                   }
+                     }else{
+          //only apply the blur if the user hasn't disabled transparency effects
+          if !UIAccessibility.isReduceTransparencyEnabled {
+              view.backgroundColor = .clear
+
+              let blurEffect = UIBlurEffect(style: .dark)
+              let blurEffectView = UIVisualEffectView(effect: blurEffect)
+              //always fill the view
+              blurEffectView.frame = self.view.bounds
+              blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+              view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+          } else {
+              view.backgroundColor = .black
+          }
+                         showError(error: "you should login".localiz())
+                     }
+       
         
     }
     func setupCollectionView()
@@ -119,7 +138,9 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.viewDidLoad()
+         if !(token.isEmpty){
+            presenter.viewDidLoad()}
+        
     }
     @objc func changeOfferImage()
     {
@@ -182,7 +203,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
 
             imagePicker.dismiss(animated: true, completion: nil)
 
-            presenter.updateOfferImage(token: token!, offferId:incomeOfferId!,image: updatedOfferImage!)
+            presenter.updateOfferImage(token: token, offferId:incomeOfferId!,image: updatedOfferImage!)
         }else{
         offerImage = images[0]
         imageView.image = images[0]
@@ -314,16 +335,17 @@ extension SellYourItemViewController: UICollectionViewDelegate,UICollectionViewD
         }
     @objc func deletePhoto(sender:UIButton) {
         let i : Int = (sender.layer.value(forKey: "index")) as! Int
-          
         if isEditProduct
-        {presenter.deleteOfferAlbumImage(token: token!, album: incomeOfferAlbum![i].id!)
+        {presenter.deleteOfferAlbumImage(token: token, album: incomeOfferAlbum![i].id!)
             incomeOfferAlbum?.remove(at: i)
             
         }else{
         offerAlbum.remove(at: i)
           }
           sellectdOfferImagesCollectionView.reloadData()
-      }
+        
+        
+    }
   
 }
 

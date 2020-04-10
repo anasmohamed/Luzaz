@@ -28,13 +28,22 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UserDefaults.standard.string(forKey: "token") != nil
+                        {
+                            token = UserDefaults.standard.string(forKey: "token")!
+                        }
+        if !token.isEmpty{
         setupTableView()
         presenter = MyProductPresenter(view : self)
         displayBackground()
         token = UserDefaults.standard.string(forKey: "token")!
              let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
                        logoImageView.isUserInteractionEnabled = true
-                       logoImageView.addGestureRecognizer(tapGestureRecognizer)
+            logoImageView.addGestureRecognizer(tapGestureRecognizer)}
+        else{
+            
+            
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

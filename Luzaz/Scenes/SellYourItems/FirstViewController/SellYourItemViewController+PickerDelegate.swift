@@ -15,8 +15,12 @@ extension SellYourItemViewController : UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-       
+        if !token.isEmpty{
         return presenter.getGovernoratesCount()
+        }else
+        {
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

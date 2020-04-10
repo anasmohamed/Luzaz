@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController,ProfileView {
+class ProfileViewController: UIViewController,ProfileView,UITabBarControllerDelegate {
     @IBOutlet weak var countyImageView: UIImageView!
     
     @IBOutlet weak var countryLbl: UILabel!
@@ -28,12 +28,13 @@ class ProfileViewController: UIViewController,ProfileView {
     @IBOutlet weak var phoneVerticalConstrain: NSLayoutConstraint!
     @IBOutlet weak var counrtyStackView: UIStackView!
     @IBOutlet weak var emailStackView: UIStackView!
+    var token : String = ""
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var phoneStackView: UIStackView!
     var prefs = UserDefaults.standard
     internal func logoutSuccess() {
-     prefs.removeObject(forKey:"userId")
+        prefs.removeObject(forKey:"userId")
         prefs.removeObject(forKey:"token")
         prefs.removeObject(forKey:"fullName")
         prefs.removeObject(forKey:"email")
@@ -43,21 +44,26 @@ class ProfileViewController: UIViewController,ProfileView {
         present(loginVC, animated: true, completion: nil)
     }
     func showError(error: String) {
-        
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+              
+              let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+              alertController.addAction(action)
+              
+              present(alertController, animated: true, completion: nil)
     }
-
+    
     @IBAction func changePasswordBtnWasPressed(_ sender: Any) {
         let changePasswordVC = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordViewController
         changePasswordVC.modalPresentationStyle = .fullScreen
-    present(changePasswordVC, animated: true, completion: nil)
+        present(changePasswordVC, animated: true, completion: nil)
         
     }
     @IBAction func logutBtnWasPressed(_ sender: Any) {
-
+        
         let alertController = UIAlertController(title: NSLocalizedString("Log out", comment: ""), message: NSLocalizedString("Are You Sure You Want To Log out?", comment: ""), preferredStyle: .alert)
         let action1 = UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default) { (_: UIAlertAction) in
             self.presenter.logoutUser(user:UserDefaults.standard.string(forKey: "userId")!)
-
+            
             print("You've pressed Yes")
         }
         
@@ -70,38 +76,64 @@ class ProfileViewController: UIViewController,ProfileView {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+      
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = ProfilePresenter(view : self)
-       let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-             //    logoImageView.isUserInteractionEnabled = true
-                 logoImageView.addGestureRecognizer(tapGestureRecognizer)
-        
-        counrty = UserDefaults.standard.string(forKey: "country") ?? ""
-        userName = UserDefaults.standard.string(forKey: "fullName") ?? ""
-        email = UserDefaults.standard.string(forKey: "email") ?? ""
-        phone = UserDefaults.standard.string(forKey: "phone") ?? ""
-        if email!.isEmpty {
-            //emailLbl.isHidden = true
-            //emailStackView.isHidden = true
-            //emailVerticalSpace.isActive = false
-            //counrtyVerticalSpace.isActive = false
-            //counrtyStackView.topAnchor.constraint(equalTo: phoneStackView.bottomAnchor, constant: 20).isActive = true
-        }else{
-        emailLbl.text = email
-    }
-        userNameLbl.text = userName
-        if phone!.isEmpty {
-           // phoneLbl.isHidden = true
-           // phoneStackView.isHidden = true
-            //phoneVerticalConstrain.isActive = false
-//            //emailVerticalSpace.isActive = false
-            //emailStackView.topAnchor.constraint(equalTo: fullNameStackView.bottomAnchor, constant: 20).isActive = true
+      if UserDefaults.standard.string(forKey: "token") != nil
+                  {
+                      token = UserDefaults.standard.string(forKey: "token")!
+                  }
+                  if !(token.isEmpty){
+                      presenter = ProfilePresenter(view : self)
+                      let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+                      //    logoImageView.isUserInteractionEnabled = true
+                      logoImageView.addGestureRecognizer(tapGestureRecognizer)
+                      
+                      counrty = UserDefaults.standard.string(forKey: "country") ?? ""
+                      userName = UserDefaults.standard.string(forKey: "fullName") ?? ""
+                      email = UserDefaults.standard.string(forKey: "email") ?? ""
+                      phone = UserDefaults.standard.string(forKey: "phone") ?? ""
+                      if email!.isEmpty {
+                          //emailLbl.isHidden = true
+                          //emailStackView.isHidden = true
+                          //emailVerticalSpace.isActive = false
+                          //counrtyVerticalSpace.isActive = false
+                          //counrtyStackView.topAnchor.constraint(equalTo: phoneStackView.bottomAnchor, constant: 20).isActive = true
+                      }else{
+                          emailLbl.text = email
+                      }
+                      userNameLbl.text = userName
+                      if phone!.isEmpty {
+                          // phoneLbl.isHidden = true
+                          // phoneStackView.isHidden = true
+                          //phoneVerticalConstrain.isActive = false
+                          //            //emailVerticalSpace.isActive = false
+                          //emailStackView.topAnchor.constraint(equalTo: fullNameStackView.bottomAnchor, constant: 20).isActive = true
+                          
+                      }else{
+                          phoneLbl.text = phone
+                      }
+                      getCountryImage()
+                  }else{
+                      if !UIAccessibility.isReduceTransparencyEnabled {
+                              view.backgroundColor = .clear
 
-        }else{
-        phoneLbl.text = phone
-        }
-        getCountryImage()
+                              let blurEffect = UIBlurEffect(style: .dark)
+                              let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                              //always fill the view
+                              blurEffectView.frame = self.view.bounds
+                              blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+                              view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+                          } else {
+                              view.backgroundColor = .black
+                          }
+                      showError(error: "you should login".localiz())
+                  }
+        print("view did load profile")
     }
     
     func getCountryImage()
@@ -113,7 +145,7 @@ class ProfileViewController: UIViewController,ProfileView {
         }else if counrty == "2"
         {
             countyImageView.image = UIImage(named:"united-states-of-america-flag-round-icon-16")
-             countryLbl.text = "USA".localiz()
+            countryLbl.text = "USA".localiz()
         }
         else if counrty == "3"
         {
@@ -123,13 +155,13 @@ class ProfileViewController: UIViewController,ProfileView {
         else if counrty == "4"
         {
             countyImageView.image = UIImage(named:"saudi_arabia")
-                        countryLbl.text = "SaudiArabia".localiz()
-
+            countryLbl.text = "SaudiArabia".localiz()
+            
         }
         else{
             countyImageView.image = UIImage(named:"libya-flag-round-icon-16")
             countryLbl.text = "Libya".localiz()
-
+            
         }
     }
     
@@ -138,9 +170,9 @@ class ProfileViewController: UIViewController,ProfileView {
         dismiss(animated: true, completion: nil)
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-       {
-          let homeViewController = ContainerVC()
-           homeViewController.modalPresentationStyle = .fullScreen
-                 present(homeViewController, animated: true, completion: nil)
-       }
+    {
+        let homeViewController = ContainerVC()
+        homeViewController.modalPresentationStyle = .fullScreen
+        present(homeViewController, animated: true, completion: nil)
+    }
 }
