@@ -23,11 +23,14 @@ class LeftSidePanelVC: UIViewController{
     @IBOutlet weak var homeBtn: UIButton!
     let appDelegate = AppDelegate.getAppDelegate()
     var token : String = ""
+    let navController = UINavigationController()
+
     @IBOutlet weak var countryImageView: UIImageView!
     var countries = CountriesViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         countryImageView.image = UIImage(named:getCountyIcon(countryNum: UserDefaults.standard.string(forKey: "country")!))
         
         if UserDefaults.standard.string(forKey: "token") != nil
@@ -86,6 +89,7 @@ class LeftSidePanelVC: UIViewController{
     @IBAction func sellYourItemsWasPressed(_ sender: Any) {
         if !(token.isEmpty){
             let sellYourItemVC = storyboard?.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
+            
             sellYourItemVC.modalPresentationStyle = .fullScreen
             self.present(sellYourItemVC, animated: true, completion: nil)
         }
@@ -99,6 +103,8 @@ class LeftSidePanelVC: UIViewController{
     @IBAction func favoriteBtnWasPressed(_ sender: Any) {
         if !(token.isEmpty) {
             let favoriteVC = storyboard?.instantiateViewController(withIdentifier: "FavoriteVC") as! FavoriteOffersViewController
+            favoriteVC.shouldShowTabBar = true
+
             favoriteVC.modalPresentationStyle = .fullScreen
             self.present(favoriteVC, animated: true, completion: nil)
         }else
@@ -110,6 +116,8 @@ class LeftSidePanelVC: UIViewController{
     @IBAction func chatBtnWasPressed(_ sender: Any) {
         if !(token.isEmpty){
             let userBuddiesVC = storyboard?.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+            userBuddiesVC.shouldShowTabBar = true
+
             userBuddiesVC.modalPresentationStyle = .fullScreen
             self.present(userBuddiesVC, animated: true, completion: nil)
         }
@@ -122,6 +130,8 @@ class LeftSidePanelVC: UIViewController{
     @IBAction func myProductWasPressed(_ sender: Any) {
         if !(token.isEmpty){
                 let myProductsVC = storyboard?.instantiateViewController(withIdentifier: "MyProductsVC") as! MyProductViewController
+            myProductsVC.shouldShowTabBar = true
+
             myProductsVC.modalPresentationStyle = .fullScreen
                 self.present(myProductsVC, animated: true, completion: nil)
             }
@@ -132,14 +142,24 @@ class LeftSidePanelVC: UIViewController{
             }
     }
     @IBAction func categoriesBtnWasPressed(_ sender: Any) {
-        let categoriesVC = storyboard?.instantiateViewController(withIdentifier: "MainCategoriesVC") as! MainCateogriesViewController
-        categoriesVC.modalPresentationStyle = .fullScreen
-        self.present(categoriesVC, animated: true, completion: nil)
+       // let categoriesVC = storyboard?.instantiateViewController(withIdentifier: "MainCategoriesVC") as! MainCateogriesViewController
+       // categoriesVC.shouldShowTabBar = true
+        self.definesPresentationContext = true
+        appDelegate.MenuContainerVC.toggleLeftPane()
+       // categoriesVC.modalPresentationStyle = .overFullScreen
+        let categoryVC = MainCateogriesViewController()
+        navController.viewControllers = [categoryVC]
+        navController.pushViewController(categoryVC, animated: false)
+       // self.show(categoriesVC, sender: self)
+     //   self.present(categoriesVC, animated: false, completion: nil)
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
         let homeViewController = ContainerVC()
-        homeViewController.modalPresentationStyle = .fullScreen
-              present(homeViewController, animated: true, completion: nil)
+        //homeViewController.isFromLogin = true
+        appDelegate.MenuContainerVC.toggleLeftPane()
+        self.definesPresentationContext = true
+        homeViewController.modalPresentationStyle = .overCurrentContext
+        present(homeViewController, animated: false, completion: nil)
     }
     
     @IBAction func regiterLoginBtnWasPressed(_ sender: Any) {

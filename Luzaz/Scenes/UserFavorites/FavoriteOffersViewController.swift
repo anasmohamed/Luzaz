@@ -21,10 +21,13 @@ class FavoriteOffersViewController: UIViewController,UITableViewDelegate,UITable
     var presenter: FavoriteOffersPresneter!
     
     @IBOutlet weak var logoImageView: UIImageView!
-    
+    var shouldShowTabBar : Bool = false
     var token : String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if shouldShowTabBar {
+             AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()
+        }
         setupTableView()
         presenter = FavoriteOffersPresneter(view: self)
         token = UserDefaults.standard.string(forKey: "token")!

@@ -39,9 +39,9 @@ class ProfileViewController: UIViewController,ProfileView,UITabBarControllerDele
         prefs.removeObject(forKey:"fullName")
         prefs.removeObject(forKey:"email")
         prefs.removeObject(forKey:"password")
-        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-        loginVC.modalPresentationStyle = .fullScreen
-        present(loginVC, animated: true, completion: nil)
+        let homeViewController = ContainerVC()
+        homeViewController.modalPresentationStyle = .fullScreen
+        present(homeViewController, animated: true, completion: nil)        
     }
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)

@@ -25,9 +25,13 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     @IBAction func switchCustomeTableViews(_ sender: Any) {
         
     }
-    
+    var shouldShowTabBar : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        if shouldShowTabBar{
+            AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()
+        }
+        
         if UserDefaults.standard.string(forKey: "token") != nil
         {
             token = UserDefaults.standard.string(forKey: "token")!

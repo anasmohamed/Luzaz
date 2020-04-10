@@ -20,10 +20,13 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     var presenter: MainCategoriesPresenter!
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate : CenterVCDelegate?
-    
+    var shouldShowTabBar : Bool = false
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if shouldShowTabBar {
+            AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()}
         setupCollectionView()
         presenter = MainCategoriesPresenter(view: self)
         searchBar.delegate = self

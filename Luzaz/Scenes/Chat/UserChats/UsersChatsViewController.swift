@@ -15,8 +15,13 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     var token : String = ""
+    var shouldShowTabBar : Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        if shouldShowTabBar{
+              AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()
+              }
         setupTableView()
         presenter = UsersChatsPresenter(view: self)
              let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
