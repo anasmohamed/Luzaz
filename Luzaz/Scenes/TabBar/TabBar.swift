@@ -37,6 +37,8 @@ class TabBar: UIView {
      override init(frame: CGRect) {
          super.init(frame: frame)
          commonInit()
+        homeBtn.contentMode = .center
+        homeBtn.imageView?.contentMode = .scaleAspectFit
      }
      
      func commonInit() {
@@ -47,6 +49,7 @@ class TabBar: UIView {
      
      func loadViewFromNib() -> UIView? {
          let nib = UINib(nibName: nibName, bundle: nil)
+        
          return nib.instantiate(withOwner: self, options: nil).first as? UIView
      }
 
