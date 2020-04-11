@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable ,UITabBarCon
         
         UITabBar.appearance().tintColor = UIColor(red: 0/255.0, green: 146/255.0, blue: 248/255.0, alpha: 1.0)
         
-        window?.rootViewController = showTabBar()
+        window?.rootViewController = containerVC
         
         window?.makeKeyAndVisible()
         FirebaseApp.configure()

@@ -32,6 +32,8 @@
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
 		35A629F123807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */; };
 		35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */; };
+		35E397ED24424CC200555C81 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E397EC24424CC200555C81 /* TabBar.swift */; };
+		35E397EF24424CD700555C81 /* TabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E397EE24424CD700555C81 /* TabBar.xib */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
 		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
 		CC0F0CD02340F356000F6C4A /* Governorates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CCF2340F356000F6C4A /* Governorates.swift */; };
@@ -237,6 +239,8 @@
 		35A40FDE2356024C004D5619 /* StackViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackground.swift; sourceTree = "<group>"; };
 		35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectedOfferImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAttributes.swift; sourceTree = "<group>"; };
+		35E397EC24424CC200555C81 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		35E397EE24424CD700555C81 /* TabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBar.xib; sourceTree = "<group>"; };
 		4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -443,6 +447,15 @@
 			path = OfferImagesCollectionView;
 			sourceTree = "<group>";
 		};
+		35E397EB244243A900555C81 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				35E397EC24424CC200555C81 /* TabBar.swift */,
+				35E397EE24424CD700555C81 /* TabBar.xib */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		A6BCC2E1C359FB1EF78F17DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +482,7 @@
 		CC72689F233AC612006B61DD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				35E397EB244243A900555C81 /* TabBar */,
 				CC7268B0233AC612006B61DD /* Categories */,
 				CCE49922233B5B1F0030959D /* ChangePassword */,
 				CC7268A0233AC612006B61DD /* Authentication */,
@@ -1339,6 +1353,7 @@
 				CC8695CD22F4F54B00E9F14D /* LaunchScreen.storyboard in Resources */,
 				3576F68B2368CD9600E3AB38 /* Localizable.strings in Resources */,
 				CC726997233AC613006B61DD /* CountryTableViewCell.xib in Resources */,
+				35E397EF24424CD700555C81 /* TabBar.xib in Resources */,
 				CC8695CA22F4F54B00E9F14D /* Assets.xcassets in Resources */,
 				CC7269D0233AC614006B61DD /* FavoriteOffersTableViewCell.xib in Resources */,
 				CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */,
@@ -1619,6 +1634,7 @@
 				CC726977233AC613006B61DD /* SubCategoryOffersCellView.swift in Sources */,
 				CC7269CE233AC614006B61DD /* FavoriteOffersCellView.swift in Sources */,
 				3510F893240A872D0066E875 /* ResetPasswordPresenter.swift in Sources */,
+				35E397ED24424CC200555C81 /* TabBar.swift in Sources */,
 				CC7269AE233AC614006B61DD /* OffersDetailesView.swift in Sources */,
 				CC726996233AC613006B61DD /* CountryTableViewCell.swift in Sources */,
 				CC726961233AC613006B61DD /* RegisterViewController.swift in Sources */,
