@@ -128,7 +128,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     }
 
     @IBAction func shareBtnWasPressed(_ sender: Any) {
-        let infoToShare = [offer?.description,offer.image,offer.reseller_name]
+        let infoToShare = [offer?.description,offer.image,offer.reseller_name,offer.reseller_phone,offer.reseller_mail]
         let activityViewController = UIActivityViewController(activityItems: infoToShare as [Any], applicationActivities: nil)
               activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
 
