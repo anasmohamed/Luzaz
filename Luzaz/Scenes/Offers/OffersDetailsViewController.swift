@@ -36,7 +36,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         imageAlbum.image = offer.image
         imageAlbum.id = "0"
         
-        offer .album.insert(imageAlbum, at: 0)
+        offer.album.insert(imageAlbum, at: 0)
             let album = offer.album[index] as ImagesAlbum
             
 //            cell.imageView?.sd_setImage(with:URL(string: "http://luzaz.com/upload/\(offer.image!)"))
@@ -80,6 +80,7 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print( "count \(imageAlbum)")
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
            logoImageView.isUserInteractionEnabled = true
            logoImageView.addGestureRecognizer(tapGestureRecognizer)
@@ -244,6 +245,15 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         print("anas")
         
         makePhoneCall(phoneNumber: offer.reseller_phone!)
+    }
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+     let image  =  offer.album[index] as ImagesAlbum
+        print(image.image)
+        let popUpViewController = storyboard?.instantiateViewController(withIdentifier: "PopUpViewController") as! PopupImageViewViewController
+        
+                 popUpViewController.modalPresentationStyle = .fullScreen
+        popUpViewController.imageURL = image.image!
+                 self.present(popUpViewController,animated:true,completion:nil)
     }
     func makePhoneCall(phoneNumber: String) {
         

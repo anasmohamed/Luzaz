@@ -3898,6 +3898,51 @@ _placeholderLabel.textColor
             </objects>
             <point key="canvasLocation" x="-5394" y="1520"/>
         </scene>
+        <!--Popup Image View View Controller-->
+        <scene sceneID="4XV-Bc-hgz">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4kT-A5-Ua8" customClass="PopupImageViewViewController" customModule="Luzaz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rAw-ZS-YuW"/>
+                        <viewControllerLayoutGuide type="bottom" id="pq3-cT-MGn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WY6-Gm-uPm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEi-me-oAM">
+                                <rect key="frame" x="54" y="256" width="306" height="224"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEP-pV-hLv">
+                                        <rect key="frame" x="0.0" y="0.0" width="306" height="224"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tEP-pV-hLv" firstAttribute="top" secondItem="OEi-me-oAM" secondAttribute="top" id="JHZ-j7-Tb7"/>
+                                    <constraint firstItem="tEP-pV-hLv" firstAttribute="leading" secondItem="OEi-me-oAM" secondAttribute="leading" id="YHo-gL-ZbL"/>
+                                    <constraint firstAttribute="trailing" secondItem="tEP-pV-hLv" secondAttribute="trailing" id="YJy-hx-v7k"/>
+                                    <constraint firstAttribute="bottom" secondItem="tEP-pV-hLv" secondAttribute="bottom" id="rHG-ur-daY"/>
+                                    <constraint firstAttribute="height" constant="224" id="rQl-cT-Yo3"/>
+                                    <constraint firstAttribute="width" constant="306" id="sHb-hz-333"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.50353167808219179" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OEi-me-oAM" firstAttribute="centerX" secondItem="WY6-Gm-uPm" secondAttribute="centerX" id="DPm-gy-Ald"/>
+                            <constraint firstItem="OEi-me-oAM" firstAttribute="centerY" secondItem="WY6-Gm-uPm" secondAttribute="centerY" id="SXB-tG-7Ih"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popView" destination="OEi-me-oAM" id="2sG-oA-Txe"/>
+                        <outlet property="popupImageView" destination="tEP-pV-hLv" id="vxL-SJ-IM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rah-Mr-5sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5397.1014492753629" y="2231.25"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="AhV-B8-18A">
             <objects>
@@ -4523,7 +4568,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMq-LW-xN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5344.9275362318849" y="345.6521739130435"/>
+            <point key="canvasLocation" x="-5394" y="-215"/>
         </scene>
         <!--Offers View Controller-->
         <scene sceneID="uhM-rk-tgr">

@@ -32,6 +32,7 @@
 		35A40FDF2356024C004D5619 /* StackViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A40FDE2356024C004D5619 /* StackViewBackground.swift */; };
 		35A629F123807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */; };
 		35A7D8B123546AE900BB26C8 /* CategoryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */; };
+		35D2DC362443327100315C02 /* PopupImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D2DC352443327100315C02 /* PopupImageViewViewController.swift */; };
 		35E397ED24424CC200555C81 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E397EC24424CC200555C81 /* TabBar.swift */; };
 		35E397EF24424CD700555C81 /* TabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E397EE24424CD700555C81 /* TabBar.xib */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
@@ -239,6 +240,7 @@
 		35A40FDE2356024C004D5619 /* StackViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackground.swift; sourceTree = "<group>"; };
 		35A629F023807390005E74DB /* SellectedOfferImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectedOfferImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		35A7D8B023546AE900BB26C8 /* CategoryAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAttributes.swift; sourceTree = "<group>"; };
+		35D2DC352443327100315C02 /* PopupImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupImageViewViewController.swift; sourceTree = "<group>"; };
 		35E397EC24424CC200555C81 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		35E397EE24424CD700555C81 /* TabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBar.xib; sourceTree = "<group>"; };
 		4DF2B521000D8C5E179AD6D5 /* Pods-LuzazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazTests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazTests/Pods-LuzazTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -447,6 +449,14 @@
 			path = OfferImagesCollectionView;
 			sourceTree = "<group>";
 		};
+		35D2DC342443322500315C02 /* PopupImage */ = {
+			isa = PBXGroup;
+			children = (
+				35D2DC352443327100315C02 /* PopupImageViewViewController.swift */,
+			);
+			path = PopupImage;
+			sourceTree = "<group>";
+		};
 		35E397EB244243A900555C81 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +492,7 @@
 		CC72689F233AC612006B61DD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				35D2DC342443322500315C02 /* PopupImage */,
 				35E397EB244243A900555C81 /* TabBar */,
 				CC7268B0233AC612006B61DD /* Categories */,
 				CCE49922233B5B1F0030959D /* ChangePassword */,
@@ -1597,6 +1608,7 @@
 				CCAB2DCA233BD4CC00F6F82A /* CompetitionViewController.swift in Sources */,
 				3510F895240A87A10066E875 /* RestetPasswordView.swift in Sources */,
 				CC72698A233AC613006B61DD /* CompetitionPresenter.swift in Sources */,
+				35D2DC362443327100315C02 /* PopupImageViewViewController.swift in Sources */,
 				CC7269C8233AC614006B61DD /* SellYourItemThirdViewController.swift in Sources */,
 				CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */,
 				CC8695C322F4F54B00E9F14D /* AppDelegate.swift in Sources */,
