@@ -59,7 +59,7 @@ class TabBar: UIView {
                }
                if !(token.isEmpty){
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-        let vc: SellYourItemViewController = storyboard.instantiateViewController(withIdentifier: "OffersVC") as! SellYourItemViewController
+        let vc: SellYourItemViewController = storyboard.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
         let currentController = self.getCurrentViewController()
                 currentController?.present(vc, animated: false, completion: nil)}else{
                 appDelegate.MenuContainerVC.toggleLeftPane()
@@ -86,8 +86,15 @@ class TabBar: UIView {
         super.init(coder: aDecoder)
         commonInit()
         
+        
     }
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("awak")
+        homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
+    print(getCurrentViewController())
+
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         
