@@ -28,6 +28,7 @@
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-UZ-ceR">
                             <rect key="frame" x="0.0" y="0.0" width="83" height="63"/>
                             <state key="normal" image="home-24"/>
+                            <state key="selected" image="home-24red"/>
                             <connections>
                                 <action selector="homeBtnWasPressed:" destination="-1" eventType="touchUpInside" id="8jT-7Y-Vdc"/>
                             </connections>
@@ -80,6 +81,7 @@
         <image name="camera-25" width="25" height="25"/>
         <image name="chat-26" width="26" height="26"/>
         <image name="home-24" width="24" height="24"/>
+        <image name="home-24red" width="24" height="24"/>
         <image name="price_tag" width="26" height="26"/>
         <image name="profile" width="18" height="18"/>
     </resources>

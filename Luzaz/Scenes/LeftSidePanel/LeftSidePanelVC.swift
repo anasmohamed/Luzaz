@@ -161,7 +161,7 @@ class LeftSidePanelVC: UIViewController{
         //homeViewController.isFromLogin = true
         appDelegate.MenuContainerVC.toggleLeftPane()
         self.definesPresentationContext = true
-        homeViewController.modalPresentationStyle = .overCurrentContext
+        homeViewController.modalPresentationStyle = .fullScreen
         present(homeViewController, animated: false, completion: nil)
     }
     
