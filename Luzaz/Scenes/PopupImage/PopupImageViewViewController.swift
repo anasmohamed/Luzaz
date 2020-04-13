@@ -21,7 +21,10 @@ class PopupImageViewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func closeBtnWasPressed(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

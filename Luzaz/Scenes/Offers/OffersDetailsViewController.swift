@@ -251,7 +251,6 @@ class OffersDetailsViewController: UIViewController,OfferDetailesView,FaveButton
         print(image.image)
         let popUpViewController = storyboard?.instantiateViewController(withIdentifier: "PopUpViewController") as! PopupImageViewViewController
         
-                 popUpViewController.modalPresentationStyle = .fullScreen
         popUpViewController.imageURL = image.image!
                  self.present(popUpViewController,animated:true,completion:nil)
     }
