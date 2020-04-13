@@ -144,17 +144,8 @@ class LeftSidePanelVC: UIViewController{
     @IBAction func categoriesBtnWasPressed(_ sender: Any) {
         let categoriesVC = storyboard?.instantiateViewController(withIdentifier: "MainCategoriesVC") as! MainCateogriesViewController
         categoriesVC.shouldShowTabBar = true
-        
-    //    self.definesPresentationContext = true
-        //appDelegate.MenuContainerVC.toggleLeftPane()
-     //   categoriesVC.modalPresentationStyle = .F
-       // let categoryVC = MainCateogriesViewController()
-       // navController.viewControllers = [categoryVC]
-        //navController.pushViewController(categoryVC, animated: false)
-       // self.show(categoriesVC, sender: self)
-        let nav = appDelegate.window?.rootViewController as! UINavigationController
-        self.navigationController?.pushViewController(nav, animated: false)
-      //self.present(categoriesVC, animated: false, completion: nil)
+        appDelegate.MenuContainerVC.toggleLeftPane()
+      self.present(categoriesVC, animated: false, completion: nil)
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
         let homeViewController = ContainerVC()
