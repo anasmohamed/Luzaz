@@ -9,7 +9,8 @@
 import UIKit
 
 class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
+    @IBOutlet weak var tabBarView: TabBar!
+    var delgate : ButtonIconDelegate?
     @IBOutlet weak var logoImageView: UIImageView!
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
@@ -28,61 +29,27 @@ class MyProductViewController: UIViewController,UITableViewDelegate,UITableViewD
     var shouldShowTabBar : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        if shouldShowTabBar{
-            AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()
-        }
-        
+       delgate = tabBarView
+        delgate?.changeMyProductBtnIcon()
         if UserDefaults.standard.string(forKey: "token") != nil
         {
             token = UserDefaults.standard.string(forKey: "token")!
         }
-        if !token.isEmpty{
+        
             setupTableView()
             presenter = MyProductPresenter(view : self)
             displayBackground()
             token = UserDefaults.standard.string(forKey: "token")!
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
             logoImageView.isUserInteractionEnabled = true
-            logoImageView.addGestureRecognizer(tapGestureRecognizer)}
-        else{
-            
-            if !UIAccessibility.isReduceTransparencyEnabled {
-                view.backgroundColor = .clear
-                
-                let blurEffect = UIBlurEffect(style: .dark)
-                let blurEffectView = UIVisualEffectView(effect: blurEffect)
-                //always fill the view
-                blurEffectView.frame = self.view.bounds
-                blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                
-                view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
-            } else {
-                view.backgroundColor = .black
-            }
-            showError(error: "you should login".localiz())
-        }
+            logoImageView.addGestureRecognizer(tapGestureRecognizer)
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !token.isEmpty{
-            presenter.viewDidLoad()}
-        else{
-            
-            if !UIAccessibility.isReduceTransparencyEnabled {
-                view.backgroundColor = .clear
-                
-                let blurEffect = UIBlurEffect(style: .dark)
-                let blurEffectView = UIVisualEffectView(effect: blurEffect)
-                //always fill the view
-                blurEffectView.frame = self.view.bounds
-                blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                
-                view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
-            } else {
-                view.backgroundColor = .black
-            }
-            showError(error: "you should login".localiz())
-        }
+       
+            presenter.viewDidLoad()
+       
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {

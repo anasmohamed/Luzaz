@@ -9,6 +9,7 @@
 import UIKit
 public protocol ButtonIconDelegate {
     func changeBtnIcon()
+    func changeMyProductBtnIcon()
 }
 class TabBar: UIView ,ButtonIconDelegate{
     
@@ -124,8 +125,17 @@ class TabBar: UIView ,ButtonIconDelegate{
     }
     func changeBtnIcon()
     {
+        homeBtn.setImage(UIImage(named: "home-24"), for: .normal)
+
         categoryBtn.setImage(UIImage(named: "chat-red"), for: .normal)
     }
+   func changeMyProductBtnIcon(){
+    homeBtn.setImage(UIImage(named: "home-24"), for: .normal)
+
+        myProductBtn.setImage(UIImage(named: "pric_tag_red"), for: .normal)
+
+    }
+    
     func commonInit() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds

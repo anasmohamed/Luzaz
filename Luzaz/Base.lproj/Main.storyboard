@@ -2037,6 +2037,7 @@ _placeholderLabel.textColor
                     <connections>
                         <outlet property="logoImageView" destination="eq4-B6-nco" id="U5g-VV-gcO"/>
                         <outlet property="segmentedControl" destination="FlB-yX-Se7" id="HVU-us-HFd"/>
+                        <outlet property="tabBarView" destination="zXI-ga-2Go" id="ABn-Em-Upe"/>
                         <outlet property="tableView" destination="oyy-rG-cN6" id="b3k-gb-NT0"/>
                     </connections>
                 </viewController>
