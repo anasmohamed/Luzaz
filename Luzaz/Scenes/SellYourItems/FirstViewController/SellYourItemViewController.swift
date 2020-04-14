@@ -224,7 +224,8 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
             PHPhotoLibrary.requestAuthorization{status in
              switch status {
                           case .authorized:
-                            self.present(self.imagePicker, animated: true, completion: nil)
+                             DispatchQueue.main.async {
+                                self.present(self.imagePicker, animated: true, completion: nil)}
 
              case .denied, .restricted,.notDetermined:
                 DispatchQueue.main.async {

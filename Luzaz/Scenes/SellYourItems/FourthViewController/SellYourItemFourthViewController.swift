@@ -79,6 +79,8 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
                   logoImageView.isUserInteractionEnabled = true
                   logoImageView.addGestureRecognizer(tapGestureRecognizer)
         self.hideKeyboardWhenTappedAround()
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -95,6 +97,28 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
         let longTapGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap))
         mapView.addGestureRecognizer(longTapGesture)
     }
+    @objc func keyboardWillShow(notify: NSNotification) {
+        
+        if let keyboardSize = (notify.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if self.view.frame.origin.y == 0 {
+                
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notify: NSNotification) {
+        
+        if let keyboardSize = (notify.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            if self.view.frame.origin.y != 0 {
+                
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
     @objc func longTap(sender: UIGestureRecognizer){
         if sender.state == .began {
             let locationInView = sender.location(in: mapView)
