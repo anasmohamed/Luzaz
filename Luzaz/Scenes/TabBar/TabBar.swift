@@ -19,7 +19,7 @@ class TabBar: UIView {
     @IBOutlet weak var profileBtn: UIButton!
     let appDelegate = AppDelegate.getAppDelegate()
     var token : String = ""
-
+    var isProfileBtnPressed = false
     @IBAction func categoryBtnWasPressed(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "token") != nil
                {
@@ -69,6 +69,7 @@ class TabBar: UIView {
     }
     
     @IBAction func profileBtnWasPressed(_ sender: Any) {
+        isProfileBtnPressed = true
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "OffersVC") as! ProfileViewController
         let currentController = self.getCurrentViewController()
@@ -91,6 +92,10 @@ class TabBar: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         print("awak")
+        if isProfileBtnPressed{
+            profileBtn.setImage(UIImage(named: "profile_red"), for: .normal)
+
+        }
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
     print(getCurrentViewController())
 
