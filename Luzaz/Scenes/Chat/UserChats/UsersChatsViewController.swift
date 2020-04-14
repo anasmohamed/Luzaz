@@ -10,16 +10,18 @@ import UIKit
 
 class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     private var presenter: UsersChatsPresenter!
-    
+    var delegat : ButtonIconDelegate?
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     var token : String = ""
     var shouldShowTabBar : Bool = false
 
+    @IBOutlet weak var tabBarView: TabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        self.delegat = tabBarView
+        delegat?.changeBtnIcon()
         setupTableView()
         presenter = UsersChatsPresenter(view: self)
              let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))

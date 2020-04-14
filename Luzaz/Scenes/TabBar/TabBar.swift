@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
-class TabBar: UIView {
+public protocol ButtonIconDelegate {
+    func changeBtnIcon()
+}
+class TabBar: UIView ,ButtonIconDelegate{
     
     let nibName = "TabBar"
     @IBOutlet weak var homeBtn: UIButton!
@@ -120,7 +122,10 @@ class TabBar: UIView {
         commonInit()
         
     }
-    
+    func changeBtnIcon()
+    {
+        categoryBtn.setImage(UIImage(named: "chat-red"), for: .normal)
+    }
     func commonInit() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds

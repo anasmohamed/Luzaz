@@ -1385,6 +1385,7 @@ _placeholderLabel.textColor
                     <connections>
                         <outlet property="logoImageView" destination="jzI-Fi-eIe" id="0mr-vY-2ze"/>
                         <outlet property="spinner" destination="nbJ-Wt-UdR" id="vdK-e7-Tvc"/>
+                        <outlet property="tabBarView" destination="L6S-hW-xu5" id="wZ9-2c-zle"/>
                         <outlet property="tableView" destination="d1k-ga-H1o" id="749-Jw-b1n"/>
                     </connections>
                 </viewController>
