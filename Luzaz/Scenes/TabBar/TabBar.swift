@@ -22,8 +22,7 @@ class TabBar: UIView ,ButtonIconDelegate{
     @IBOutlet weak var profileBtn: UIButton!
     let appDelegate = AppDelegate.getAppDelegate()
     var token : String = ""
-    var isProfileBtnPressed = false
-    var isUserChatsBtnPressed = false
+    
 
     @IBAction func categoryBtnWasPressed(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "token") != nil
@@ -31,7 +30,6 @@ class TabBar: UIView ,ButtonIconDelegate{
                    token = UserDefaults.standard.string(forKey: "token")!
                }
                if !(token.isEmpty){
-                isUserChatsBtnPressed = true
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: UsersChatsViewController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
                 vc.modalPresentationStyle = .fullScreen
@@ -79,13 +77,26 @@ class TabBar: UIView ,ButtonIconDelegate{
     }
     
     @IBAction func profileBtnWasPressed(_ sender: Any) {
-        isProfileBtnPressed = true
+        if UserDefaults.standard.string(forKey: "token") != nil
+                    {
+                        token = UserDefaults.standard.string(forKey: "token")!
+                    }
+                    if !(token.isEmpty){
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
         vc.modalPresentationStyle = .fullScreen
 
         let currentController = self.getCurrentViewController()
-        currentController?.present(vc, animated: false, completion: nil)
+                        currentController?.present(vc, animated: false, completion: nil)}else{
+                        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+                           let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! ProfileViewController
+                           vc.modalPresentationStyle = .fullScreen
+
+                           let currentController = self.getCurrentViewController()
+                                           currentController?.present(vc, animated: false, completion: nil)
+                        
+        }
+                        
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
@@ -106,15 +117,8 @@ class TabBar: UIView ,ButtonIconDelegate{
     override func awakeFromNib() {
         super.awakeFromNib()
         print("awak")
-        if isProfileBtnPressed{
-            profileBtn.setImage(UIImage(named: "profile_red"), for: .normal)
-
-        }else if isUserChatsBtnPressed{
-            categoryBtn.setImage(UIImage(named: "chat-red"), for: .normal)
-
-        }
+       
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
-    print(getCurrentViewController())
 
     }
     override init(frame: CGRect) {
