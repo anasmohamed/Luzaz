@@ -31,6 +31,7 @@ class TabBar: UIView {
                 isUserChatsBtnPressed = true
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: UsersChatsViewController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+                vc.modalPresentationStyle = .fullScreen
         let currentController = self.getCurrentViewController()
                 currentController?.present(vc, animated: false, completion: nil)}else{
                     appDelegate.MenuContainerVC.toggleLeftPane()

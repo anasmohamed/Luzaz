@@ -1355,7 +1355,7 @@ _placeholderLabel.textColor
                                     <outlet property="delegate" destination="dpN-qW-vso" id="Wp6-8x-dlc"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-hW-xu5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-hW-xu5" customClass="TabBar" customModule="Luzaz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
