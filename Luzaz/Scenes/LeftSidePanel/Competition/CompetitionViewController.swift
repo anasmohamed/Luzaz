@@ -34,11 +34,11 @@ class CompetitionViewController: UIViewController, CompetitionView{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         presenter = CompetitionPresenter(view: self)
         answerId = [String]()
         questionId = [String]()
-    
+        
         language = UserDefaults.standard.string(forKey: "language")
     }
     func displayFirstOption(firstOption: String)
@@ -62,13 +62,13 @@ class CompetitionViewController: UIViewController, CompetitionView{
     {
         if language == "en"
         {
-        
-        questionLbl.text = question
+            
+            questionLbl.text = question
         }else
         {
             if arQuesetion.isEmpty{
                 questionLbl.text = question
-
+                
             }else{
                 questionLbl.text = arQuesetion
             }
@@ -84,23 +84,23 @@ class CompetitionViewController: UIViewController, CompetitionView{
             displayThreeOption(threeOption:presenter.getAnswer(index: questionCounter)[2].answer!)
             updateUI()
             questionId.append(presenter.getQuestionId(index: questionCounter))
-           // questionId.joined(separator: ",")
+            // questionId.joined(separator: ",")
         }else{
             presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:language!,questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName:
                 
                 userFristName ?? "",lastName: userLastName ?? "",phone: userPhone ?? "",email: userEmail ?? "")
-          //  let offerVC = ContainerVC()
-          //  self.present(offerVC,animated: true,completion: nil)
- 
-
+            //  let offerVC = ContainerVC()
+            //  self.present(offerVC,animated: true,completion: nil)
+            
+            
         }
         
     }
     @IBAction func answerBtnWasPressed(_ sender: UIButton) {
         answerId.append(presenter.getAnswer(index: questionCounter)[sender.tag].answerId!)
-
+        
         questionCounter += 1
-
+        
         updateQuestion()
     }
     func updateUI(){
@@ -111,7 +111,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
         displayQuestion(question: presenter.getQuestions(index: questionCounter), arQuesetion: presenter.getArabicQuestions(index: questionCounter) ?? "")
         displayFirstOption(firstOption:presenter.getAnswer(index: questionCounter)[0].answer!)
         displaySecondOption(secondOption:presenter.getAnswer(index: questionCounter)[1].answer!)
-     displayThreeOption(threeOption:presenter.getAnswer(index: questionCounter)[2].answer!)
+        displayThreeOption(threeOption:presenter.getAnswer(index: questionCounter)[2].answer!)
         updateUI()
     }
     
@@ -125,23 +125,28 @@ class CompetitionViewController: UIViewController, CompetitionView{
     
     
     
-    func showError(error: String,content : String) {
+    func showError(error: String,content : String,code : String) {
         let alert = UIAlertController(title: error.localiz(), message: content.localiz(), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK".localiz(), style: .default, handler: { action in
-                     switch action.style{
-                     case .default:
-                      
-                      let offersVC = ContainerVC()
-                      offersVC.modalPresentationStyle = .fullScreen
-                      self.present(offersVC,animated:true,completion:nil)
-                     case .cancel:
-                         print("cancel")
-
-                     case .destructive:
-                         print("destructive")
-
-                     }}))
-                 self.present(alert, animated: true, completion: nil)
+            switch action.style{
+            case .default:
+                if code == "0"{
+                    let offersVC = ContainerVC()
+                    offersVC.modalPresentationStyle = .fullScreen
+                    self.present(offersVC,animated:true,completion:nil)
+                }else{
+                    let competitionVC = self.storyboard?.instantiateViewController(withIdentifier: "UserCompetitionVC") as! UserCompetitionViewController
+                    competitionVC.modalPresentationStyle = .fullScreen
+                    self.present(competitionVC,animated:true,completion:nil)
+                }
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+                
+            }}))
+        self.present(alert, animated: true, completion: nil)
     }
     
     

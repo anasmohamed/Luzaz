@@ -11,7 +11,7 @@ protocol CompetitionView:class {
     func showIndicator()
     func hideIndicator()
     func getCompetitionSuccess()
-    func showError(error: String,content: String)
+    func showError(error: String,content: String,code :String)
     func displayFirstOption(firstOption: String)
     func displaySecondOption(secondOption: String)
     func displayThreeOption(threeOption: String)

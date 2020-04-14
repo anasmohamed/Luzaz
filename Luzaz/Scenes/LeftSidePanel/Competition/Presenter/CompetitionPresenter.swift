@@ -35,9 +35,13 @@ class CompetitionPresenter {
             [unowned self] (percentage,code, error) in
             self.view?.hideIndicator()
             if let error = error {
-                self.view?.showError(error: "Error".localiz(),content : error.localizedDescription)
+                self.view?.showError(error: "Error".localiz(),content : error.localizedDescription,code:code!)
             } else {
-                self.view?.showError(error:"Success".localiz(),content :percentage!)
+                if code == "0"{
+                    self.view?.showError(error:"Success".localiz(),content :percentage!,code: code!)}
+                else{
+                    self.view?.showError(error:"Fail".localiz(),content :percentage!,code:code!)}
+                
             }
             
             
@@ -49,7 +53,7 @@ class CompetitionPresenter {
             
             self.view?.hideIndicator()
             if let error = error {
-                self.view?.showError(error: "Error",content:error.localizedDescription )
+                self.view?.showError(error: "Error",content:error.localizedDescription ,code :"")
             } else {
                 guard let qustions = qustions else { return }
                 self.qustions = qustions

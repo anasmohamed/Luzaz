@@ -9,6 +9,10 @@
 import UIKit
 import SDWebImage
 class UserCompetitionViewController: UIViewController ,CompetitionView{
+    func showError(error: String, content: String, code: String) {
+    
+    }
+    
     
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -72,7 +76,10 @@ class UserCompetitionViewController: UIViewController ,CompetitionView{
      
     }
     @IBAction func backBtnWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let homeViewController = ContainerVC()
+        self.definesPresentationContext = true
+        homeViewController.modalPresentationStyle = .fullScreen
+        present(homeViewController, animated: false, completion: nil)
     }
     @objc func keyboardWillShow(notify: NSNotification) {
         

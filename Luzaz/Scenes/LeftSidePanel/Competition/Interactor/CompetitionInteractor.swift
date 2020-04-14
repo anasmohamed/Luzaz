@@ -102,7 +102,8 @@ class CompetitionInteractor {
 //                let data = Competation(withJSON: competation)
 //                competationList.append(data)
 let description = json["description"].stringValue
-                completionHandler(description,"", nil)
+                let code = json["code"].stringValue
+                completionHandler(description ,code, nil)
             case .failure(let error):
                 completionHandler(nil,nil, error)
             }
