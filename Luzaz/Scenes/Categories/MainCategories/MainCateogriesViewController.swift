@@ -25,8 +25,7 @@ class MainCateogriesViewController: UIViewController,UICollectionViewDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if shouldShowTabBar {
-            AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()}
+     
         setupCollectionView()
         presenter = MainCategoriesPresenter(view: self)
         searchBar.delegate = self

@@ -106,7 +106,7 @@ class TabBar: UIView ,ButtonIconDelegate{
         homeViewController.modalPresentationStyle = .fullScreen
        let currentController = self.getCurrentViewController()
         if !(currentController is ContainerVC){
-            homeViewController.present(homeViewController, animated: false, completion: nil)}
+            currentController?.present(homeViewController, animated: false, completion: nil)}
         
     }
     required init?(coder aDecoder: NSCoder) {

@@ -89,7 +89,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
         cityPickerView.dataSource = self
         cityPickerView.delegate = self
         //setupCollectionView()
-        if !(token.isEmpty){
+        
             token = UserDefaults.standard.string(forKey: "token")!
                    presenter = SellYourItemPresenter(view: self)
                    imagePicker.maximumSelectionsAllowed = 5
@@ -112,24 +112,7 @@ class SellYourItemViewController: UIViewController ,UINavigationControllerDelega
                        
                        
                    }
-                     }else{
-          //only apply the blur if the user hasn't disabled transparency effects
-          if !UIAccessibility.isReduceTransparencyEnabled {
-              view.backgroundColor = .clear
-
-              let blurEffect = UIBlurEffect(style: .dark)
-              let blurEffectView = UIVisualEffectView(effect: blurEffect)
-              //always fill the view
-              blurEffectView.frame = self.view.bounds
-              blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
-              view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
-          } else {
-              view.backgroundColor = .black
-          }
-                         showError(error: "you should login".localiz())
-                     }
-       
+                     
         
     }
     func setupCollectionView()
