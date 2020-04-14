@@ -20,14 +20,17 @@ class TabBar: UIView {
     let appDelegate = AppDelegate.getAppDelegate()
     var token : String = ""
     var isProfileBtnPressed = false
+    var isUserChatsBtnPressed = false
+
     @IBAction func categoryBtnWasPressed(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "token") != nil
                {
                    token = UserDefaults.standard.string(forKey: "token")!
                }
                if !(token.isEmpty){
+                isUserChatsBtnPressed = true
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-        let vc: MainCateogriesViewController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! MainCateogriesViewController
+        let vc: UsersChatsViewController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
         let currentController = self.getCurrentViewController()
                 currentController?.present(vc, animated: false, completion: nil)}else{
                     appDelegate.MenuContainerVC.toggleLeftPane()
@@ -44,6 +47,7 @@ class TabBar: UIView {
         if !(token.isEmpty){
             let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
             let vc: MyProductViewController = storyboard.instantiateViewController(withIdentifier: "MyProductsVC") as! MyProductViewController
+            vc.modalPresentationStyle = .fullScreen
             let currentController = self.getCurrentViewController()
             currentController?.present(vc, animated: false, completion: nil)
         }else{
@@ -60,10 +64,12 @@ class TabBar: UIView {
                if !(token.isEmpty){
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: SellYourItemViewController = storyboard.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
+                vc.modalPresentationStyle = .fullScreen
+
         let currentController = self.getCurrentViewController()
-                currentController?.present(vc, animated: false, completion: nil)}else{
-                appDelegate.MenuContainerVC.toggleLeftPane()
-                       
+                currentController?.present(vc, animated: false, completion: nil)}
+               else{
+               // appDelegate.MenuContainerVC.toggleLeftPane()
                        showError(error: "you should login".localiz())
         }
     }
@@ -71,7 +77,9 @@ class TabBar: UIView {
     @IBAction func profileBtnWasPressed(_ sender: Any) {
         isProfileBtnPressed = true
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-        let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "OffersVC") as! ProfileViewController
+        let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+        vc.modalPresentationStyle = .fullScreen
+
         let currentController = self.getCurrentViewController()
         currentController?.present(vc, animated: false, completion: nil)
     }
@@ -79,6 +87,8 @@ class TabBar: UIView {
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let vc: OffersViewController = storyboard.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
+        vc.modalPresentationStyle = .fullScreen
+
         let currentController = self.getCurrentViewController()
         currentController?.present(vc, animated: false, completion: nil)
         
@@ -94,6 +104,9 @@ class TabBar: UIView {
         print("awak")
         if isProfileBtnPressed{
             profileBtn.setImage(UIImage(named: "profile_red"), for: .normal)
+
+        }else if isUserChatsBtnPressed{
+            categoryBtn.setImage(UIImage(named: "chat-red"), for: .normal)
 
         }
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)

@@ -10,10 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBar" customModule="Luzaz" customModuleProvider="target">
             <connections>
-                <outlet property="categoryBtn" destination="bUZ-be-vVj" id="enB-GI-wLg"/>
+                <outlet property="categoryBtn" destination="Aem-Sn-bvX" id="Dcp-kp-BLq"/>
                 <outlet property="homeBtn" destination="VLj-UZ-ceR" id="Nid-AC-c0i"/>
                 <outlet property="myProductBtn" destination="RpX-Ok-3xH" id="Xy9-wD-01r"/>
-                <outlet property="profileBtn" destination="Aem-Sn-bvX" id="ejl-zd-gq6"/>
+                <outlet property="profileBtn" destination="bUZ-be-vVj" id="f8b-ZP-D7S"/>
                 <outlet property="sellYourItemsBtn" destination="eD3-i8-uuL" id="kS2-ld-Fyz"/>
             </connections>
         </placeholder>
@@ -37,7 +37,7 @@
                             <rect key="frame" x="83" y="0.0" width="82.5" height="63"/>
                             <state key="normal" image="chat-26"/>
                             <connections>
-                                <action selector="profileBtnWasPressed:" destination="-1" eventType="touchUpInside" id="PAV-Rp-zuT"/>
+                                <action selector="categoryBtnWasPressed:" destination="-1" eventType="touchUpInside" id="fQ4-jg-HeS"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD3-i8-uuL">
@@ -58,7 +58,7 @@
                             <rect key="frame" x="331" y="0.0" width="83" height="63"/>
                             <state key="normal" image="profile-1"/>
                             <connections>
-                                <action selector="categoryBtnWasPressed:" destination="-1" eventType="touchUpInside" id="S85-Yr-8wO"/>
+                                <action selector="profileBtnWasPressed:" destination="-1" eventType="touchUpInside" id="r7F-vP-gLl"/>
                             </connections>
                         </button>
                     </subviews>

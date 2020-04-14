@@ -19,9 +19,7 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if shouldShowTabBar{
-              AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()
-              }
+      
         setupTableView()
         presenter = UsersChatsPresenter(view: self)
              let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
@@ -32,27 +30,27 @@ class UsersChatsViewController: UIViewController,UITableViewDelegate,UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if !(token.isEmpty){
+       // if !(token.isEmpty){
                   presenter.viewDidLoad()
 
-               }else{
+//               }else{
 
-    if !UIAccessibility.isReduceTransparencyEnabled {
-        view.backgroundColor = .clear
-        
-        let blurEffect = UIBlurEffect(style: .dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        //always fill the view
-        blurEffectView.frame = self.view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
-    } else {
-        view.backgroundColor = .black
-    }
-    showError(error: "you should login".localiz())
-                   showError(error: "you should login".localiz())
-               }
+//    if !UIAccessibility.isReduceTransparencyEnabled {
+//        view.backgroundColor = .clear
+//
+//        let blurEffect = UIBlurEffect(style: .dark)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        //always fill the view
+//        blurEffectView.frame = self.view.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//
+//        view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+//    } else {
+//        view.backgroundColor = .black
+//    }
+                    //showError(error: "you should login".localiz())
+     //              showError(error: "you should login".localiz())
+            //   }
     }
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
        {
