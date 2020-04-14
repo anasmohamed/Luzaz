@@ -23,21 +23,20 @@ class TabBar: UIView ,ButtonIconDelegate{
     let appDelegate = AppDelegate.getAppDelegate()
     var token : String = ""
     
-
+    
     @IBAction func categoryBtnWasPressed(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "token") != nil
-               {
-                   token = UserDefaults.standard.string(forKey: "token")!
-               }
-               if !(token.isEmpty){
-        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-        let vc: UsersChatsViewController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
-                vc.modalPresentationStyle = .fullScreen
-        let currentController = self.getCurrentViewController()
-                currentController?.present(vc, animated: false, completion: nil)}else{
-                    appDelegate.MenuContainerVC.toggleLeftPane()
-                    
-                    showError(error: "you should login".localiz())
+        {
+            token = UserDefaults.standard.string(forKey: "token")!
+        }
+        if !(token.isEmpty){
+            let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+            let vc: UsersChatsViewController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
+            vc.modalPresentationStyle = .fullScreen
+            let currentController = self.getCurrentViewController()
+            currentController?.present(vc, animated: false, completion: nil)}else{
+            
+            showError(error: "you should login".localiz())
         }
     }
     
@@ -53,59 +52,55 @@ class TabBar: UIView ,ButtonIconDelegate{
             let currentController = self.getCurrentViewController()
             currentController?.present(vc, animated: false, completion: nil)
         }else{
-            appDelegate.MenuContainerVC.toggleLeftPane()
             
             showError(error: "you should login".localiz())
         }
     }
     @IBAction func sellYourItemWasPressed(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "token") != nil
-               {
-                   token = UserDefaults.standard.string(forKey: "token")!
-               }
-               if !(token.isEmpty){
-        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-        let vc: SellYourItemViewController = storyboard.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
-                vc.modalPresentationStyle = .fullScreen
-
-        let currentController = self.getCurrentViewController()
-                currentController?.present(vc, animated: false, completion: nil)}
-               else{
-               // appDelegate.MenuContainerVC.toggleLeftPane()
-                       showError(error: "you should login".localiz())
+        {
+            token = UserDefaults.standard.string(forKey: "token")!
+        }
+        if !(token.isEmpty){
+            let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+            let vc: SellYourItemViewController = storyboard.instantiateViewController(withIdentifier: "SellYourItemFirstVC") as! SellYourItemViewController
+            vc.modalPresentationStyle = .fullScreen
+            
+            let currentController = self.getCurrentViewController()
+            currentController?.present(vc, animated: false, completion: nil)}
+        else{
+            showError(error: "you should login".localiz())
         }
     }
     
     @IBAction func profileBtnWasPressed(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "token") != nil
-                    {
-                        token = UserDefaults.standard.string(forKey: "token")!
-                    }
-                    if !(token.isEmpty){
-        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-        let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
-        vc.modalPresentationStyle = .fullScreen
-
-        let currentController = self.getCurrentViewController()
-                        currentController?.present(vc, animated: false, completion: nil)}else{
-                        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-                           let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! ProfileViewController
-                           vc.modalPresentationStyle = .fullScreen
-
-                           let currentController = self.getCurrentViewController()
-                                           currentController?.present(vc, animated: false, completion: nil)
-                        
+        {
+            token = UserDefaults.standard.string(forKey: "token")!
         }
-                        
+        if !(token.isEmpty){
+            let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+            let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+            vc.modalPresentationStyle = .fullScreen
+            
+            let currentController = self.getCurrentViewController()
+            currentController?.present(vc, animated: false, completion: nil)}else{
+            let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+            let vc: LoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            vc.modalPresentationStyle = .fullScreen
+            
+            let currentController = self.getCurrentViewController()
+            currentController?.present(vc, animated: false, completion: nil)
+            
+        }
+        
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
-        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-        let vc: OffersViewController = storyboard.instantiateViewController(withIdentifier: "OffersVC") as! OffersViewController
-        vc.modalPresentationStyle = .fullScreen
-
+        let homeViewController = ContainerVC()
+        homeViewController.modalPresentationStyle = .fullScreen
         let currentController = self.getCurrentViewController()
-        currentController?.present(vc, animated: false, completion: nil)
+        currentController?.present(homeViewController, animated: false, completion: nil)
         
     }
     required init?(coder aDecoder: NSCoder) {
@@ -117,9 +112,9 @@ class TabBar: UIView ,ButtonIconDelegate{
     override func awakeFromNib() {
         super.awakeFromNib()
         print("awak")
-       
+        
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
-
+        
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -130,14 +125,14 @@ class TabBar: UIView ,ButtonIconDelegate{
     func changeBtnIcon()
     {
         homeBtn.setImage(UIImage(named: "home-24"), for: .normal)
-
+        
         categoryBtn.setImage(UIImage(named: "chat-red"), for: .normal)
     }
-   func changeMyProductBtnIcon(){
-    homeBtn.setImage(UIImage(named: "home-24"), for: .normal)
-
+    func changeMyProductBtnIcon(){
+        homeBtn.setImage(UIImage(named: "home-24"), for: .normal)
+        
         myProductBtn.setImage(UIImage(named: "pric_tag_red"), for: .normal)
-
+        
     }
     
     func commonInit() {
@@ -164,11 +159,11 @@ class TabBar: UIView ,ButtonIconDelegate{
         
     }
     func showError(error: String) {
-          let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)
-          let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
-          alertController.addAction(action)
+        let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
+        alertController.addAction(action)
         self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
-
-         // present(alertController, animated: true, completion: nil)
-      }
+        
+        // present(alertController, animated: true, completion: nil)
+    }
 }

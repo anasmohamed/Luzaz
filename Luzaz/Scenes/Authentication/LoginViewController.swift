@@ -45,7 +45,7 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        appDelegate.MenuContainerVC.toggleLeftPane()
+      //  appDelegate.MenuContainerVC.toggleLeftPane()
         
     }
     func validationSuccessful() {
