@@ -89,8 +89,8 @@ class CompetitionViewController: UIViewController, CompetitionView{
             presenter.addCompetitionEnrolment(id:presenter.getCompetitionId()!,lang:language!,questions: questionId.joined(separator: ","),answers: answerId.joined(separator: ","),firstName:
                 
                 userFristName ?? "",lastName: userLastName ?? "",phone: userPhone ?? "",email: userEmail ?? "")
-            let offerVC = ContainerVC()
-            self.present(offerVC,animated: true,completion: nil)
+          //  let offerVC = ContainerVC()
+          //  self.present(offerVC,animated: true,completion: nil)
  
 
         }
@@ -126,7 +126,7 @@ class CompetitionViewController: UIViewController, CompetitionView{
     
     
     func showError(error: String,content : String) {
-        let alert = UIAlertController(title: title!.localiz(), message: content.localiz(), preferredStyle: .alert)
+        let alert = UIAlertController(title: error.localiz(), message: content.localiz(), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK".localiz(), style: .default, handler: { action in
                      switch action.style{
                      case .default:

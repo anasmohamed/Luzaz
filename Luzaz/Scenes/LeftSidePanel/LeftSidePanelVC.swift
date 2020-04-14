@@ -144,6 +144,7 @@ class LeftSidePanelVC: UIViewController{
     @IBAction func categoriesBtnWasPressed(_ sender: Any) {
         let categoriesVC = storyboard?.instantiateViewController(withIdentifier: "MainCategoriesVC") as! MainCateogriesViewController
         categoriesVC.shouldShowTabBar = true
+        categoriesVC.modalPresentationStyle = .fullScreen
         appDelegate.MenuContainerVC.toggleLeftPane()
       self.present(categoriesVC, animated: false, completion: nil)
     }

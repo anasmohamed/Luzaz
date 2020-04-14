@@ -1896,7 +1896,7 @@ _placeholderLabel.textColor
                                 <rect key="frame" x="0.0" y="4" width="375" height="72"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0RB-f0-s7i">
-                                        <rect key="frame" x="93" y="22" width="445" height="39"/>
+                                        <rect key="frame" x="93" y="22" width="890" height="39"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09m-P9-rDx">
                                         <rect key="frame" x="23" y="30" width="30" height="30"/>
@@ -2401,7 +2401,7 @@ _placeholderLabel.textColor
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
+                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TNK-x3-vw3"/>
                                         </constraints>
