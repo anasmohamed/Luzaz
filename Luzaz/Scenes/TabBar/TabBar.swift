@@ -11,16 +11,18 @@ public protocol ButtonIconDelegate {
     func changeBtnIcon()
     func changeMyProductBtnIcon()
 }
+
 class TabBar: UIView ,ButtonIconDelegate{
     
     let nibName = "TabBar"
     @IBOutlet weak var homeBtn: UIButton!
-    
+    var delegate : OffersReloadDelegate?
     @IBOutlet weak var categoryBtn: UIButton!
     @IBOutlet weak var myProductBtn: UIButton!
     @IBOutlet weak var sellYourItemsBtn: UIButton!
     @IBOutlet weak var profileBtn: UIButton!
     let appDelegate = AppDelegate.getAppDelegate()
+    var offersVC: OffersViewController?
     var token : String = ""
     
     
@@ -34,7 +36,9 @@ class TabBar: UIView ,ButtonIconDelegate{
             let vc: UsersChatsViewController = storyboard.instantiateViewController(withIdentifier: "UserBuddiesVC") as! UsersChatsViewController
             vc.modalPresentationStyle = .fullScreen
             let currentController = self.getCurrentViewController()
-            currentController?.present(vc, animated: false, completion: nil)}else{
+            if !(currentController is UsersChatsViewController){
+                currentController?.present(vc, animated: false, completion: nil)}}
+        else{
             
             showError(error: "you should login".localiz())
         }
@@ -50,7 +54,8 @@ class TabBar: UIView ,ButtonIconDelegate{
             let vc: MyProductViewController = storyboard.instantiateViewController(withIdentifier: "MyProductsVC") as! MyProductViewController
             vc.modalPresentationStyle = .fullScreen
             let currentController = self.getCurrentViewController()
-            currentController?.present(vc, animated: false, completion: nil)
+            if !(currentController is MyProductViewController){
+                currentController?.present(vc, animated: false, completion: nil)}
         }else{
             
             showError(error: "you should login".localiz())
@@ -96,11 +101,12 @@ class TabBar: UIView ,ButtonIconDelegate{
         
     }
     @IBAction func homeBtnWasPressed(_ sender: Any) {
-        homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
         let homeViewController = ContainerVC()
+    
         homeViewController.modalPresentationStyle = .fullScreen
-        let currentController = self.getCurrentViewController()
-        currentController?.present(homeViewController, animated: false, completion: nil)
+       let currentController = self.getCurrentViewController()
+        if !(currentController is ContainerVC){
+            homeViewController.present(homeViewController, animated: false, completion: nil)}
         
     }
     required init?(coder aDecoder: NSCoder) {
@@ -113,6 +119,8 @@ class TabBar: UIView ,ButtonIconDelegate{
         super.awakeFromNib()
         print("awak")
         
+     
+
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
         
     }

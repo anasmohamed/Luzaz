@@ -10,8 +10,11 @@ import UIKit
 import MOLH
 import SDWebImage
 import Siren
+public protocol OffersReloadDelegate {
+    func reloadOffersCollectionView()
+}
 class OffersViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,
-UISearchBarDelegate,UISearchControllerDelegate{
+UISearchBarDelegate,UISearchControllerDelegate,OffersReloadDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
     // MARK: Outlets
     var footerView:CollectionReusableView?
@@ -121,7 +124,9 @@ UISearchBarDelegate,UISearchControllerDelegate{
     
     
     
-    
+    func reloadOffersCollectionView() {
+        self.collectionView.reloadData()
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if !searchBarIsEmpty() {
             return presenter.getFilteredOffersCount()

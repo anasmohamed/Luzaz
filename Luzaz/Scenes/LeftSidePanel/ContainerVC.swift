@@ -44,12 +44,13 @@ class ContainerVC: UIViewController {
     var isFromLogin : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        if isFromLogin{
-        AppDelegate.getAppDelegate().window?.rootViewController = AppDelegate.getAppDelegate().showTabBar()
-        }
-        initCenter(screen: showVC)
+       initCenter(screen: showVC)
+
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+    }
     func initCenter(screen : ShowWhichVC) {
         
         var presentingController : UIViewController
