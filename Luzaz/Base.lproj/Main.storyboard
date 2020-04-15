@@ -440,7 +440,7 @@
                                                 </cells>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Acf-Tj-BkV">
-                                                <rect key="frame" x="10" y="406" width="394" height="130"/>
+                                                <rect key="frame" x="10" y="382" width="394" height="130"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoA-Xn-XMV">
                                                         <rect key="frame" x="0.0" y="0.0" width="43" height="27.333333333333332"/>
@@ -449,7 +449,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <pickerView contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="Bai-04-2xV">
-                                                        <rect key="frame" x="0.0" y="27.333333333333378" width="394" height="102.66666666666669"/>
+                                                        <rect key="frame" x="0.0" y="27.333333333333321" width="394" height="102.66666666666669"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
                                                             <outlet property="dataSource" destination="nEo-sv-AK4" id="LyX-pR-zwV"/>
@@ -495,7 +495,7 @@
                                             <constraint firstItem="hRj-66-Zb7" firstAttribute="centerX" secondItem="pZq-oA-VL3" secondAttribute="centerX" id="cFR-E5-WHh"/>
                                             <constraint firstItem="hRj-66-Zb7" firstAttribute="leading" secondItem="pZq-oA-VL3" secondAttribute="leading" constant="77" id="k6z-dc-75p"/>
                                             <constraint firstItem="hRj-66-Zb7" firstAttribute="centerX" secondItem="pZq-oA-VL3" secondAttribute="centerX" id="pFl-1O-k0r"/>
-                                            <constraint firstItem="Acf-Tj-BkV" firstAttribute="top" secondItem="uaw-lh-kf1" secondAttribute="bottom" constant="34" id="pTx-6y-SOK"/>
+                                            <constraint firstItem="Acf-Tj-BkV" firstAttribute="top" secondItem="uaw-lh-kf1" secondAttribute="bottom" constant="10" id="pTx-6y-SOK"/>
                                             <constraint firstItem="hRj-66-Zb7" firstAttribute="leading" secondItem="pZq-oA-VL3" secondAttribute="leading" constant="86" id="qob-0b-mkb"/>
                                             <constraint firstItem="Acf-Tj-BkV" firstAttribute="leading" secondItem="pZq-oA-VL3" secondAttribute="leading" constant="10" id="r5x-2S-4On"/>
                                             <constraint firstItem="hRj-66-Zb7" firstAttribute="centerX" secondItem="o7b-vy-uLk" secondAttribute="centerX" id="rVS-e4-Hh2"/>
@@ -591,7 +591,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-JJ-u7n">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="XE8-ea-7Cd"/>
                                         </constraints>
@@ -2254,7 +2254,7 @@ _placeholderLabel.textColor
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="8s3-r0-ICD">
-                                                <rect key="frame" x="5" y="248.33333333333331" width="404" height="87"/>
+                                                <rect key="frame" x="5" y="308" width="404" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRAND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drO-PY-DEs">
                                                         <rect key="frame" x="0.0" y="0.0" width="143" height="35"/>
@@ -2267,11 +2267,8 @@ _placeholderLabel.textColor
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNh-mb-Kxm">
-                                                        <rect key="frame" x="0.0" y="35" width="404" height="52"/>
+                                                        <rect key="frame" x="0.0" y="35" width="404" height="85"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="TK1-Ol-Nbd"/>
-                                                        </constraints>
                                                         <connections>
                                                             <outlet property="dataSource" destination="8V6-me-z8t" id="mqd-wR-0fK"/>
                                                             <outlet property="delegate" destination="8V6-me-z8t" id="AOC-xO-Tfg"/>
@@ -2281,12 +2278,13 @@ _placeholderLabel.textColor
                                                 <constraints>
                                                     <constraint firstItem="drO-PY-DEs" firstAttribute="top" secondItem="8s3-r0-ICD" secondAttribute="top" id="4Eb-k2-X0t"/>
                                                     <constraint firstAttribute="trailing" secondItem="dNh-mb-Kxm" secondAttribute="trailing" id="CeO-aZ-oO9"/>
+                                                    <constraint firstAttribute="height" constant="120" id="L36-XY-e6S"/>
                                                     <constraint firstAttribute="bottom" secondItem="dNh-mb-Kxm" secondAttribute="bottom" id="a15-cd-BjT"/>
                                                     <constraint firstItem="drO-PY-DEs" firstAttribute="leading" secondItem="8s3-r0-ICD" secondAttribute="leading" id="oqH-tE-hVk"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="m1X-T1-3wa">
-                                                <rect key="frame" x="5" y="131.33333333333334" width="404" height="87"/>
+                                                <rect key="frame" x="5" y="180" width="404" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUB CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-Aa-sqc">
                                                         <rect key="frame" x="0.0" y="0.0" width="143" height="35"/>
@@ -2299,11 +2297,8 @@ _placeholderLabel.textColor
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGx-3h-jDT">
-                                                        <rect key="frame" x="0.0" y="35" width="404" height="52"/>
+                                                        <rect key="frame" x="0.0" y="35" width="404" height="85"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="3UU-Lj-IvG"/>
-                                                        </constraints>
                                                         <connections>
                                                             <outlet property="dataSource" destination="8V6-me-z8t" id="yoH-Mz-gEV"/>
                                                             <outlet property="delegate" destination="8V6-me-z8t" id="agd-bA-6iC"/>
@@ -2311,27 +2306,22 @@ _placeholderLabel.textColor
                                                     </pickerView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="A4x-m3-uGY"/>
                                                     <constraint firstAttribute="trailing" secondItem="mGx-3h-jDT" secondAttribute="trailing" id="oC7-yf-PQe"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lvn-zs-P6G">
-                                                <rect key="frame" x="5" y="28.999999999999993" width="404" height="72.333333333333314"/>
+                                                <rect key="frame" x="5" y="30" width="404" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-5G-uc5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="20.333333333333332"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="gmE-BA-Cwv"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-pN-qeD">
-                                                        <rect key="frame" x="0.0" y="20.333333333333343" width="404" height="52"/>
+                                                    <pickerView tag="1" contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-pN-qeD">
+                                                        <rect key="frame" x="0.0" y="20.33333333333335" width="404" height="99.666666666666686"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="BaB-2Q-3mt"/>
-                                                        </constraints>
                                                         <connections>
                                                             <outlet property="dataSource" destination="8V6-me-z8t" id="APT-b3-wAZ"/>
                                                             <outlet property="delegate" destination="8V6-me-z8t" id="Uii-LG-iNW"/>
@@ -2339,6 +2329,7 @@ _placeholderLabel.textColor
                                                     </pickerView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="EIa-pm-JCg"/>
                                                     <constraint firstAttribute="trailing" secondItem="r9K-pN-qeD" secondAttribute="trailing" id="jPj-zz-UXW"/>
                                                 </constraints>
                                             </stackView>
@@ -2346,9 +2337,9 @@ _placeholderLabel.textColor
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="m1X-T1-3wa" firstAttribute="top" secondItem="lvn-zs-P6G" secondAttribute="bottom" constant="30" id="Ca9-fm-Dsa"/>
-                                            <constraint firstItem="lvn-zs-P6G" firstAttribute="top" secondItem="oQr-o3-vaz" secondAttribute="top" constant="29" id="G6C-83-Gcm"/>
+                                            <constraint firstItem="lvn-zs-P6G" firstAttribute="top" secondItem="oQr-o3-vaz" secondAttribute="top" constant="30" id="G6C-83-Gcm"/>
+                                            <constraint firstItem="8s3-r0-ICD" firstAttribute="top" secondItem="m1X-T1-3wa" secondAttribute="bottom" constant="8" symbolic="YES" id="Iw2-Ka-Eml"/>
                                             <constraint firstItem="m1X-T1-3wa" firstAttribute="leading" secondItem="oQr-o3-vaz" secondAttribute="leading" constant="5" id="KVZ-7u-zn7"/>
-                                            <constraint firstItem="8s3-r0-ICD" firstAttribute="top" secondItem="m1X-T1-3wa" secondAttribute="bottom" constant="30" id="MS7-pt-HYC"/>
                                             <constraint firstItem="8s3-r0-ICD" firstAttribute="centerX" secondItem="oQr-o3-vaz" secondAttribute="centerX" id="XYP-ke-R5F"/>
                                             <constraint firstItem="lvn-zs-P6G" firstAttribute="centerX" secondItem="oQr-o3-vaz" secondAttribute="centerX" id="ege-Lx-Suk"/>
                                             <constraint firstItem="lvn-zs-P6G" firstAttribute="leading" secondItem="oQr-o3-vaz" secondAttribute="leading" constant="5" id="fHY-lj-rGo"/>
@@ -2401,7 +2392,7 @@ _placeholderLabel.textColor
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow on footer between icons" translatesAutoresizingMaskIntoConstraints="NO" id="J46-6b-Ryf">
-                                        <rect key="frame" x="236" y="1" width="35" height="48"/>
+                                        <rect key="frame" x="236" y="13" width="35" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="TNK-x3-vw3"/>
                                         </constraints>
@@ -2498,7 +2489,7 @@ _placeholderLabel.textColor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flz-yX-H7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10417.5" y="1508.4507042253522"/>
+            <point key="canvasLocation" x="-10418.840579710146" y="1508.1521739130435"/>
         </scene>
         <!--Sell Your Item Third View Controller-->
         <scene sceneID="A52-x4-FI0">
