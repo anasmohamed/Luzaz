@@ -21,7 +21,8 @@ class UserChatsTableViewCell: UITableViewCell,UsersChatsCellView {
     }
     func displayUserImage(image: String) {
         DispatchQueue.main.async {
-              self.friendImage.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(image)"))
+            self.friendImage.sd_setImage(with: URL(string: "http://luzaz.com/upload/\(image)"),placeholderImage:UIImage(named:"Logo"))
+            
         }
         
     }
