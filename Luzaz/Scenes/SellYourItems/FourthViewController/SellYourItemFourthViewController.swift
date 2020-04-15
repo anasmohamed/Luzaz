@@ -80,6 +80,8 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
                   logoImageView.addGestureRecognizer(tapGestureRecognizer)
         self.hideKeyboardWhenTappedAround()
         locationManager.requestWhenInUseAuthorization()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -106,7 +108,27 @@ class SellYourItemFourthViewController: UIViewController,SellYourItemView ,CLLoc
             
         }
     }
-    
+    @objc func keyboardWillShow(notify: NSNotification) {
+           
+           if let keyboardSize = (notify.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+               
+               if self.view.frame.origin.y == 0 {
+                   
+                   self.view.frame.origin.y -= keyboardSize.height
+               }
+           }
+       }
+       
+       @objc func keyboardWillHide(notify: NSNotification) {
+           
+           if let keyboardSize = (notify.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+               
+               if self.view.frame.origin.y != 0 {
+                   
+                   self.view.frame.origin.y += keyboardSize.height
+               }
+           }
+       }
     func addAnnotation(location: CLLocationCoordinate2D){
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
