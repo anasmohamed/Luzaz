@@ -146,7 +146,7 @@ class RegisterViewController: UIViewController ,ValidationDelegate, UITextFieldD
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+900)
+//        scroller.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+900)
     }
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)

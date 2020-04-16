@@ -852,9 +852,6 @@ _placeholderLabel.textColor
                                     </constraint>
                                     <constraint firstItem="Bsj-As-u7O" firstAttribute="centerX" secondItem="gEh-0y-HFz" secondAttribute="centerX" id="8O1-1O-541"/>
                                     <constraint firstItem="VIR-nb-yXY" firstAttribute="leading" secondItem="Mq3-P1-8cb" secondAttribute="leading" id="DUM-H0-vTY"/>
-                                    <constraint firstAttribute="bottom" secondItem="Bsj-As-u7O" secondAttribute="bottom" constant="460" id="F9Z-B1-ZdS">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="486"/>
-                                    </constraint>
                                     <constraint firstItem="ZEC-ht-v7D" firstAttribute="top" secondItem="KaE-Zn-vAF" secondAttribute="bottom" constant="27" id="HPP-j6-qIW"/>
                                     <constraint firstItem="8zJ-6r-Qdn" firstAttribute="leading" secondItem="gEh-0y-HFz" secondAttribute="leading" constant="20" id="I9A-98-UyR">
                                         <variation key="heightClass=compact-widthClass=compact" constant="60"/>
@@ -870,6 +867,7 @@ _placeholderLabel.textColor
                                         <variation key="heightClass=compact-widthClass=compact" constant="131"/>
                                     </constraint>
                                     <constraint firstItem="KaE-Zn-vAF" firstAttribute="top" secondItem="Mq3-P1-8cb" secondAttribute="bottom" constant="14" id="WMK-fv-z0P"/>
+                                    <constraint firstAttribute="bottom" secondItem="n1f-kZ-rNW" secondAttribute="bottom" constant="243" id="aCy-lr-O7i"/>
                                     <constraint firstItem="Bsj-As-u7O" firstAttribute="top" secondItem="gEh-0y-HFz" secondAttribute="top" constant="20" id="j60-eh-BuT"/>
                                     <constraint firstItem="zs3-RG-nwz" firstAttribute="centerX" secondItem="gEh-0y-HFz" secondAttribute="centerX" id="kQz-tB-kWt"/>
                                     <constraint firstItem="Bsj-As-u7O" firstAttribute="centerX" secondItem="ZEC-ht-v7D" secondAttribute="centerX" id="rM4-7S-QXw"/>
@@ -1337,15 +1335,15 @@ _placeholderLabel.textColor
                                     <constraint firstAttribute="bottom" secondItem="jzI-Fi-eIe" secondAttribute="bottom" constant="11" id="uRT-ch-rx1"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-ga-H1o">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-ga-H1o">
                                 <rect key="frame" x="0.0" y="68" width="414" height="610"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserChatsTableViewCell" id="uo6-9i-tc8">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserChatsTableViewCell" rowHeight="84" id="uo6-9i-tc8">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uo6-9i-tc8" id="Xci-aT-bvP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -4379,6 +4377,7 @@ _placeholderLabel.textColor
                                     <constraint firstItem="qif-6w-54j" firstAttribute="centerX" secondItem="EUv-KH-97K" secondAttribute="centerX" id="m9C-sq-ToT"/>
                                     <constraint firstItem="5rO-tU-OJt" firstAttribute="top" secondItem="JIe-fE-CnQ" secondAttribute="bottom" constant="8" id="o9y-hN-yFj"/>
                                     <constraint firstItem="5rO-tU-OJt" firstAttribute="centerX" secondItem="EUv-KH-97K" secondAttribute="centerX" id="uzi-QS-oE9"/>
+                                    <constraint firstAttribute="bottom" secondItem="SLn-W2-HmA" secondAttribute="bottom" constant="125.33333333333337" id="weK-pP-rNA"/>
                                     <constraint firstItem="JIe-fE-CnQ" firstAttribute="centerX" secondItem="EUv-KH-97K" secondAttribute="centerX" id="xAg-di-oM1"/>
                                 </constraints>
                                 <variation key="default">

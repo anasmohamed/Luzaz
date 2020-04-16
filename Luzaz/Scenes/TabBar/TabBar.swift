@@ -24,7 +24,7 @@ class TabBar: UIView ,ButtonIconDelegate{
     let appDelegate = AppDelegate.getAppDelegate()
     var offersVC: OffersViewController?
     var token : String = ""
-    
+    var gradinatLayer : CAGradientLayer?
     
     @IBAction func categoryBtnWasPressed(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "token") != nil
@@ -173,5 +173,9 @@ class TabBar: UIView ,ButtonIconDelegate{
         self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
         
         // present(alertController, animated: true, completion: nil)
+    }
+    func createGradiantLayer()  {
+        gradinatLayer = CAGradientLayer()
+        
     }
 }

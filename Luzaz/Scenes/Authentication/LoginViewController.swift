@@ -102,11 +102,11 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
         // You can unregister a text field if you no longer want to validate it
         navigationItem.backBarButtonItem = UIBarButtonItem(
             title: "Back", style: .plain, target: nil, action: nil)
-        scroller.translatesAutoresizingMaskIntoConstraints = false
-        scroller.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        scroller.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scroller.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+       // scroller.translatesAutoresizingMaskIntoConstraints = false
+        //scroller.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        //scroller.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        //scroller.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        //scroller.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
     }
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
