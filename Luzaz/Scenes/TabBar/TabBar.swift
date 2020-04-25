@@ -118,7 +118,6 @@ class TabBar: UIView ,ButtonIconDelegate{
     override func awakeFromNib() {
         super.awakeFromNib()
         print("awak")
-        
      
 
         homeBtn.setImage(UIImage(named: "home-24red"), for: .normal)
@@ -146,13 +145,20 @@ class TabBar: UIView ,ButtonIconDelegate{
     func commonInit() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
+        let gradientLayer = CAGradientLayer()
+             gradientLayer.colors = [UIColor.black, UIColor.white]
+                   gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+                   gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+                   gradientLayer.locations = [0, 1]
+        gradientLayer.frame = view.bounds
+
+                   view.layer.insertSublayer(gradientLayer, at: 0)
         addSubview(view)
         
     }
-    
     func loadViewFromNib() -> UIView? {
         let nib = UINib(nibName: nibName, bundle: nil)
-        
+     
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     func getCurrentViewController() -> UIViewController? {
@@ -166,6 +172,13 @@ class TabBar: UIView ,ButtonIconDelegate{
         return nil
         
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.setGradientBackground(colorTop: .clear, colorBottom: .darkGray)
+
+        
+    }
     func showError(error: String) {
         let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)
         let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
@@ -174,8 +187,7 @@ class TabBar: UIView ,ButtonIconDelegate{
         
         // present(alertController, animated: true, completion: nil)
     }
-    func createGradiantLayer()  {
-        gradinatLayer = CAGradientLayer()
-        
+    func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) {
+      
     }
 }

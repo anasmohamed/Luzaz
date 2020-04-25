@@ -65,7 +65,8 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
         presenter = LoginPresenter(view: self)
         emailTextField.placeholderColor(.darkGray)
         passwordTextField.placeholderColor(.darkGray)
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(forgetPasswordWasPressed))
+        forgetPasswordLbl.addGestureRecognizer(tap)
         validator.styleTransformers(success:{ (validationRule) -> Void in
             print("here")
             // clear error label
