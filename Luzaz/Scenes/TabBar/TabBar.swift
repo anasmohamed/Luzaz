@@ -183,7 +183,7 @@ class TabBar: UIView ,ButtonIconDelegate{
         let alertController = UIAlertController(title: "Error".localiz(), message: error.localiz(), preferredStyle: .alert)
         let action = UIAlertAction(title: "OK".localiz(), style: .default, handler: nil)
         alertController.addAction(action)
-        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+        getCurrentViewController()!.present(alertController, animated: true, completion: nil)
         
         // present(alertController, animated: true, completion: nil)
     }
