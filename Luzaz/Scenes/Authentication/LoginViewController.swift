@@ -44,7 +44,9 @@ class LoginViewController: UIViewController, ValidationDelegate, UITextFieldDele
     
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let homeViewController = ContainerVC()
+            homeViewController.modalPresentationStyle = .fullScreen
+            present(homeViewController, animated: false, completion: nil)
       //  appDelegate.MenuContainerVC.toggleLeftPane()
         
     }
