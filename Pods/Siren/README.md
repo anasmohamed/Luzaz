@@ -2,7 +2,9 @@
 
 ### Notify users when a new version of your app is available and prompt them to upgrade.
 
-[![Travis CI Status](https://travis-ci.org/ArtSabintsev/Siren.svg?branch=master)](https://travis-ci.org/ArtSabintsev/Siren) ![Documentation](https://github.com/ArtSabintsev/Siren/blob/master/docs/badge.svg) ![Swift Support](https://img.shields.io/badge/Swift-5.0%2C%204.2%2C%204.1%2C%203.2%2C%203.1%202.3-orange.svg) [![CocoaPods](https://img.shields.io/cocoapods/v/Siren.svg)](https://cocoapods.org/pods/Siren)  [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Accio supported](https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat)](https://github.com/JamitLabs/Accio) [![SwiftPM Compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+[![Travis CI Status](https://travis-ci.org/ArtSabintsev/Siren.svg?branch=master)](https://travis-ci.org/ArtSabintsev/Siren) ![Documentation](https://github.com/ArtSabintsev/Siren/blob/master/docs/badge.svg) ![Swift Support](https://img.shields.io/badge/Swift-5.1%2C%205.0%2C%204.2%2C%204.1%2C%203.2%2C%203.1%202.3-orange.svg)
+
+[![CocoaPods](https://img.shields.io/cocoapods/v/Siren.svg)](https://cocoapods.org/pods/Siren)  [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Accio supported](https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat)](https://github.com/JamitLabs/Accio) [![SwiftPM Compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 
 ---
 
@@ -84,17 +86,18 @@ A list of future development work can be found on [Siren's Kanban Board](https:/
 
 | Swift Version |  Branch Name  | Will Continue to Receive Updates?
 | ------------- | ------------- |  -------------
-| 5.1 | swift5.1 | **Yes**
-| 5.0 | master | **Yes**
-| 4.2  | swift4.2 | No
-| 4.1  | swift4.1 | No
-| 3.2  | swift3.2 | No
-| 3.1  | swift3.1 | No
-| 2.3  | swift2.3 | No  
+| 5.1 | master | **Yes**
+| 5.0 | swift5.0 | No
+| 4.2 | swift4.2 | No
+| 4.1 | swift4.1 | No
+| 3.2 | swift3.2 | No
+| 3.1 | swift3.1 | No
+| 2.3 | swift2.3 | No  
 
 ### CocoaPods
 ```ruby
-pod 'Siren' # Swift 5.0
+pod 'Siren' # Swift 5.1
+pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift5.0' # Swift 5.0
 pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift4.2' # Swift 4.2
 pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift4.1' # Swift 4.1
 pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift3.2' # Swift 3.2
@@ -104,7 +107,8 @@ pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'sw
 
 ### Carthage
 ```swift
-github "ArtSabintsev/Siren" // Swift 5.0
+github "ArtSabintsev/Siren" // Swift 5.1
+github "ArtSabintsev/Siren" "swift5.0" // Swift 5.0
 github "ArtSabintsev/Siren" "swift4.2" // Swift 4.2
 github "ArtSabintsev/Siren" "swift4.1" // Swift 4.1
 github "ArtSabintsev/Siren" "swift3.2" // Swift 3.2
@@ -118,8 +122,9 @@ github "ArtSabintsev/Siren" "swift2.3" // Swift 2.3
 ```
 
 ## Implementation Examples
-Implementing Siren is as easy as adding two lines of code to your app: 
+Implementing Siren is as easy as adding two lines of code to your app in **either** `AppDelegate.swift` or `SceneDelegate.swift`:
 
+### AppDelegate.swift Example
 ```swift
 import Siren // Line 1
 import UIKit
@@ -129,6 +134,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        window?.makeKeyAndVisible()
+
+	Siren.shared.wail() // Line 2
+
+        return true
+    }
+}
+```
+
+### SceneDelegate.swift Example
+```swift
+import Siren // Line 1
+import UIKit
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         window?.makeKeyAndVisible()
 
 	Siren.shared.wail() // Line 2

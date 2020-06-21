@@ -16,7 +16,7 @@ target 'Luzaz' do
   pod 'KMPlaceholderTextView', '~> 1.4.0'
   pod 'Kingfisher', '~> 5.0'
   pod 'BEMCheckBox'
-  pod 'Siren', :git => 'https://github.com/ArtSabintsev/Siren.git', :branch => 'swift5.0' # Swift 5.0
+  pod 'Siren'
   pod 'NVActivityIndicatorView'
   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
  pod 'BATabBarController'
