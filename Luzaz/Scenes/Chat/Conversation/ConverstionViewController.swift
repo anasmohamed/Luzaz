@@ -98,6 +98,7 @@ class ConverstionViewController: UIViewController,UITableViewDelegate,UITableVie
         if messageTextView.text != nil && messageTextView.text != ""
         {
             presenter.sendMessage(user:userId! , with:receiverId! , message: messageTextView.text!)
+            messageTextView.text = ""
         }else{
             showError(error: "You Shoulde Write a Message")
         }

@@ -25,7 +25,6 @@
 		35823C11239AD8D400879A30 /* MoreFromThisSellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35823C10239AD8D400879A30 /* MoreFromThisSellerViewController.swift */; };
 		358A4DFB235A7B1000ABB014 /* SellYourItemEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */; };
 		358AA50C23983A6800235FBE /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358AA50B23983A6700235FBE /* ReportViewController.swift */; };
-		358CFE7723B3E0060031F1EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 358CFE7623B3E0050031F1EA /* GoogleService-Info.plist */; };
 		358F8DF22366DE3200A9584F /* RightSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */; };
 		3599F83323566F05000AE182 /* PropertiesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357EDF6F2353B6D100FF55B3 /* PropertiesDetailsViewController.swift */; };
 		359D0B4F239FD9F200AA4C94 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D0B4E239FD9F200AA4C94 /* ForgetPasswordViewController.swift */; };
@@ -37,6 +36,7 @@
 		35E397EF24424CD700555C81 /* TabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E397EE24424CD700555C81 /* TabBar.xib */; };
 		37519FBFD3D8A2D3F8B11DF8 /* Pods_Luzaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EBA106D88C342C3A092D61 /* Pods_Luzaz.framework */; };
 		75FA5624498EF303E4A5E88E /* Pods_LuzazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */; };
+		A8D440162489811B00DC2572 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8D440152489811B00DC2572 /* GoogleService-Info.plist */; };
 		CC0F0CD02340F356000F6C4A /* Governorates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CCF2340F356000F6C4A /* Governorates.swift */; };
 		CC0F0CD22340F663000F6C4A /* SellYourItemFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */; };
 		CC0F0CD5234101AF000F6C4A /* SellYourItemSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */; };
@@ -233,7 +233,6 @@
 		35823C10239AD8D400879A30 /* MoreFromThisSellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreFromThisSellerViewController.swift; sourceTree = "<group>"; };
 		358A4DFA235A7B1000ABB014 /* SellYourItemEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellYourItemEndView.swift; sourceTree = "<group>"; };
 		358AA50B23983A6700235FBE /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
-		358CFE7623B3E0050031F1EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		358F8DF12366DE3200A9584F /* RightSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSidePanelVC.swift; sourceTree = "<group>"; };
 		3594FCA92385DAA200FEA604 /* Luzaz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luzaz.entitlements; sourceTree = "<group>"; };
 		359D0B4E239FD9F200AA4C94 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +246,7 @@
 		56BDBA5BF56B31B6330EC880 /* Pods-LuzazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.release.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E56E4FA24B2B696BB1F3AFC /* Pods-LuzazUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuzazUITests.debug.xcconfig"; path = "Target Support Files/Pods-LuzazUITests/Pods-LuzazUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A572FCD7502747F2B33B2A7B /* Pods_LuzazUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuzazUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D440152489811B00DC2572 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CC0F0CCF2340F356000F6C4A /* Governorates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Governorates.swift; sourceTree = "<group>"; };
 		CC0F0CD12340F663000F6C4A /* SellYourItemFirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SellYourItemFirstView.swift; path = ../EndViewController/Presenter/SellYourItemFirstView.swift; sourceTree = "<group>"; };
 		CC0F0CD4234101AF000F6C4A /* SellYourItemSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellYourItemSecondView.swift; sourceTree = "<group>"; };
@@ -1130,7 +1130,7 @@
 		CC8695C122F4F54B00E9F14D /* Luzaz */ = {
 			isa = PBXGroup;
 			children = (
-				358CFE7623B3E0050031F1EA /* GoogleService-Info.plist */,
+				A8D440152489811B00DC2572 /* GoogleService-Info.plist */,
 				3594FCA92385DAA200FEA604 /* Luzaz.entitlements */,
 				CC72689F233AC612006B61DD /* Scenes */,
 				CCD9BE5A233930C8002B9201 /* Network */,
@@ -1369,10 +1369,10 @@
 				CC7269D0233AC614006B61DD /* FavoriteOffersTableViewCell.xib in Resources */,
 				CC8695C822F4F54B00E9F14D /* Main.storyboard in Resources */,
 				350BD34923EC9F0C00498A1E /* CollectionReusableView.xib in Resources */,
+				A8D440162489811B00DC2572 /* GoogleService-Info.plist in Resources */,
 				CC726985233AC613006B61DD /* UserChatsTableViewCell.xib in Resources */,
 				CC726979233AC613006B61DD /* SubCategoryOffersTableViewCell.xib in Resources */,
 				CC7269A0233AC613006B61DD /* OrderTableViewCell.xib in Resources */,
-				358CFE7723B3E0060031F1EA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
